@@ -5,23 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 31 Oct 2026 21:01:43 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-110530 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110530</link>
-    <guid isPermaLink="false">1789cc14ca114425518e1486cdf91fe3</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 7.2 | The FeedWordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to, and including, 2026.0517 via syndicated RSS/Atom feed content. The plugin's SyndicatedPost::sanitize_content() function only strips the 'target' attribute (the lines that would strip 'style' and 'on[a-z]+' event-handler attributes are commented out), and SyndicatedPost::insert_post() deliberately removes WordPress's wp_filter_kses and wp_filter_post_kses filters from content_save_pre before persisting imported feed items via wp_insert_post(). This makes it possible for unauthenticated attackers who control an external feed that a site has already subscribed to to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114217 - NVD - CVSS Score v3.1: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114217</link>
-    <guid isPermaLink="false">fcb3111d39d9ab62626699131017449f</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 8.6 | A flaw was found in konflux-ci. Continuous Integration (CI) automation scripts store sensitive GitHub access tokens in plaintext on the runner without cleaning them up after execution. A local attacker with access to the CI environment can read these stored credentials to gain unauthorized repository access, potentially allowing them to modify source code or release artifacts.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 31 Oct 2026 22:02:19 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-116086 - NVD - CVSS Score v3.1: 8.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116086</link>
@@ -369,6 +353,37 @@ A remote attacker can read the application's Perl code, including the __PERL__ b
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118147</link>
     <guid isPermaLink="false">7118f0f1e342bc6926f7a267c1ae566a</guid>
     <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 7.4 | Improper certificate validation in Visual Studio allows an unauthorized attacker to perform spoofing over a network.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118636 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118636</link>
+    <guid isPermaLink="false">1259012e63d24a98d2b197b171a2beb5</guid>
+    <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 9.8 | **UNSUPPORTED WHEN ASSIGNED** 
+
+JavaNativeMessageDecoder in the MINA 3.0 codec module calls ObjectInputStream.readObject() on frame bytes with no class filter, so an
+application that puts it in front of an untrusted peer is open to gadget-chain RCE.
+
+As the 3.0.0 branch is inactive, we do not plan to release a version that fixes this issue. 
+
+Users are recommended to use the latest Apache MINA 2.2.X branch.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120135 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120135</link>
+    <guid isPermaLink="false">600ffb78ec7eb65025d31fb3db55f40d</guid>
+    <description>Saturday 31 October 2026 | NVD | CVSS Score v4.0: 8.2 | Uncontrolled Recursion vulnerability in Apache Thrift Java bindings.
+
+
+
+This issue affects Apache Thrift: before 0.24.0.
+
+
+
+Users are recommended to upgrade to version 0.24.0, which fixes the issue.</description>
     <category>NVD</category>
     <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
   </item>
