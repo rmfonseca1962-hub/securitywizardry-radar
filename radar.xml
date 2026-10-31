@@ -5,55 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 31 Oct 2026 15:01:04 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2025-11455 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-11455</link>
-    <guid isPermaLink="false">4e0511ba03494dee26a2754de819a389</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 4.3 | The Perfect Images plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the /wp-json/wp-retina-2x/v1/replace REST API in all versions up to, and including, 7.2.0 This makes it possible for authenticated attackers, with Author-level access and above, to replace files that do not belong to them.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-9462 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-9462</link>
-    <guid isPermaLink="false">f8346489baf6a3fa7441507ce0957bfb</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 6.5 | The WP2LEADS plugin for WordPress is vulnerable to time-based SQL Injection via the ‘order’ parameter in all versions up to, and including, 3.5.6 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers, with Subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-103898 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103898</link>
-    <guid isPermaLink="false">e5d52bc0246437fc3ace3bd320b546fd</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 8.1 | The Wp Social Login and Register Social Counter plugin for WordPress is vulnerable to Authentication Bypass in all versions up to, and including, 3.2.2. This is due to the social login REST callback registered at `/wp-json/wslu-social-login/type/{provider}/` with `permission_callback =&gt; __return_true` locating an existing WordPress account solely by the email string returned from the OAuth provider and calling `wp_set_auth_cookie()` without a password check, while the only verification guard — `!empty($getProfile-&gt;emailVerified)` in `inc/admin-create-user.php` — is a no-op for the bundled Hybridauth Facebook and Twitter adapters, both of which assign the raw email string rather than a boolean verified flag to `emailVerified`. This makes it possible for unauthenticated attackers to obtain a fully authenticated session as any existing WordPress user, including Administrators, whose registered email address can be presented through a configured Facebook or Twitter login on the target site. Exploitation requires only that the attacker control an OAuth account whose provider-returned email matches the target account's registered WordPress email address; no local credentials, nonce, or prior foothold is needed.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-103962 - NVD - CVSS Score v3.1: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103962</link>
-    <guid isPermaLink="false">c66efac2a39bed323866ef3868c6fe3f</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 6.1 | The User Frontend – Membership, User Registration, User Profile, User Directory &amp; Content Restriction with Frontend Post Submission plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'field_attr[required]' parameter in all versions up to, and including, 4.3.13 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. The nonce check on the wpuf_get_child_cat AJAX action is not an effective security barrier because the wpuf_nonce value is publicly localized to every anonymous visitor of any page containing a WPUF shortcode, making it freely harvestable by an unauthenticated attacker.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-103997 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103997</link>
-    <guid isPermaLink="false">46a162287ec759dbe755061964dd78f9</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 6.5 | The Redux Framework plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 4.5.15. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to view the entire Redux options payload — including plaintext password field values, API keys, license keys, and SMTP credentials — exposed in the inline redux_&amp;lt;opt_name&amp;gt; JavaScript block on wp-admin/profile.php. The Users extension is loaded automatically for every Redux instance registered by any installed theme or plugin, meaning any site running Redux Framework is affected regardless of whether the developer explicitly configured the Users extension.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104012 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104012</link>
-    <guid isPermaLink="false">ccf3c641e7ffb6ebd1d8f671b21e32c7</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 8.8 | The Rox Appointment Booking – Appointment Booking Scheduling Solution plugin for WordPress is vulnerable to Privilege Escalation via Mass Assignment in all versions up to, and including, 1.3.1 This is due to the public `/rox-appointment-booking/v1/public/booking` REST endpoint performing mass-assignment of the raw request body into a new customer row while `CustomerModel::$fillable` includes the internal `wp_user_id` column, allowing an unauthenticated attacker to persist an arbitrary WordPress user ID alongside an attacker-controlled email address with no authorization check. When an administrator subsequently opens the poisoned customer record and clicks Update Customer, `SaveCustomer::handleRequest()` passes the stored `wp_user_id` and attacker-supplied email to `wp_update_user()` — succeeding because `LinkedAccount::canChange()` unconditionally returns true when the acting user holds the `edit_users` capability — thereby overwriting the targeted administrator's email address and enabling full account takeover via a standard WordPress password-reset request. Successful exploitation requires an administrator to open and save the poisoned record, and the attacker must know or guess a valid administrator user ID (such as the default user ID 1).</description>
-    <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 31 Oct 2026 17:00:18 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-107759 - NVD - CVSS Score v3.1: 7.2</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107759</link>
@@ -349,6 +301,74 @@ Reporter acknowledgment: Fernando Munoz</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15272</link>
     <guid isPermaLink="false">6c78f0a8308a04df21c912decf937913</guid>
     <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 6.5 | The Web 2.0 Directory plugin for WordPress is vulnerable to time-based SQL Injection via the 'w2dc_level_filter' parameter in all versions up to, and including, 2.10.12 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. Because the parameter is used in integer context without surrounding quotes, WordPress's built-in addslashes/magic_quotes escaping provides no protection against time-based payloads such as SLEEP-based conditionals.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-78188 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78188</link>
+    <guid isPermaLink="false">3f4542f308bc56877631c0b1ba1d6228</guid>
+    <description>Saturday 31 October 2026 | NVD | CVSS: não informado | WebDyne versions from 2.014 before 3.022 for Perl issue session cookies without the Secure, HttpOnly and SameSite attributes.
+
+WebDyne::Session sets its session cookie with only a name, value and path.
+
+Browsers then send the session ID over plain HTTP and with cross-site requests, and expose it to page scripts. A network attacker or an injected script can steal the session, and another site can make requests that carry it.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-78189 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78189</link>
+    <guid isPermaLink="false">87e289403c4cb42948d0d7b47b9a3f21</guid>
+    <description>Saturday 31 October 2026 | NVD | CVSS: não informado | WebDyne versions from 3.007 before 3.022 for Perl execute .psp files outside the document root via path traversal in the PSGI API route fallback.
+
+When a request matches no file, the PSGI handler retries it as an API route through api_filename. That keeps .. segments in the request path and only checks that the joined path starts with the document root, which a request for /../private passes.
+
+A remote attacker can run the embedded Perl in any .psp file the server can read, such as one uploaded to a directory outside the document root.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-78190 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78190</link>
+    <guid isPermaLink="false">7696ed2dd8e697aa4e6ddb75d545fea1</guid>
+    <description>Saturday 31 October 2026 | NVD | CVSS: não informado | WebDyne versions from 2.014 before 3.022 for Perl reflect request parameters unescaped into form field values, allowing cross-site scripting.
+
+The textfield, password_field and filefield tags fill their value attribute from the request parameter of the same name. WEBDYNE_CGI_AUTOESCAPE, which controls escaping of these values, defaults to off. From 2.022, WebDyne::HTML::Tiny also replaced its entity_encode method with one that returns its input unchanged, so enabling WEBDYNE_CGI_AUTOESCAPE has no effect.
+
+A remote attacker can inject script into any page using these tags through a crafted link.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-78191 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78191</link>
+    <guid isPermaLink="false">50e21160f03f25ecd9aa7b2df5b28e1e</guid>
+    <description>Saturday 31 October 2026 | NVD | CVSS: não informado | WebDyne versions from 2.031 before 3.022 for Perl execute files with .psp anywhere in the name as Perl pages.
+
+WebDyne decides whether to run a requested file as a page by matching its name against WEBDYNE_PSP_EXT_RE, which has no end anchor.
+
+An application that accepts uploads by checking only the final extension lets a remote attacker upload a file such as report.psp.pdf and run its embedded Perl by requesting it.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-78192 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78192</link>
+    <guid isPermaLink="false">b1007bd22ce6a6d1bff8506fc497dbd7</guid>
+    <description>Saturday 31 October 2026 | NVD | CVSS: não informado | WebDyne versions from 2.022 before 3.022 for Perl disclose application source to unauthenticated clients via the viewer in the default index page.
+
+WebDyne's wrapper scripts, such as webdyne.psgi, enable the built-in index page by default. Its source viewer returns files under the document root named in the source parameter of an HTMX request, including .psp, .pm and .pl files.
+
+A remote attacker can read the application's Perl code, including the __PERL__ blocks of .psp pages and any credentials they hold.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-102212 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102212</link>
+    <guid isPermaLink="false">a1b462f1cd6b35d3c832ba621a51e07e</guid>
+    <description>Saturday 31 October 2026 | NVD | CVSS Score v4.0: 8.4 | Heap-based buffer overflow in Opengear IM72XX, CM71XX, and ACM70XX firmware versions 4.8.0 through 5.5.2 on console server appliances allows an unauthenticated remote attacker to crash the index.cgi process via a crafted multipart/form-data POST request containing an overlong Content-Disposition name field.</description>
     <category>NVD</category>
     <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
   </item>
