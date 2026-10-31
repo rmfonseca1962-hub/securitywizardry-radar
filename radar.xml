@@ -5,22 +5,32 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 31 Oct 2026 00:01:45 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 01:02:49 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-62968 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62968</link>
-    <guid isPermaLink="false">9b62792d98ff46812a4e3b61a33adf38</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 8.7 | Dream Displays provides in-game screens for streaming videos in Minecraft. From 1.5.0 until 1.8.2, user-controlled input can influence arguments passed to `yt-dlp` under specific conditions. Unintended command-line options may be interpreted by `yt-dlp`, potentially altering its behavior. This issue is fixed in version 1.8.2.</description>
+    <title>CVE-2026-117656 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117656</link>
+    <guid isPermaLink="false">14ad786a5cd29ce19d818d179d980750</guid>
+    <description>Saturday 31 October 2026 | NVD | CVSS Score v4.0: 9.3 | Acceptance of Extraneous Untrusted Data With Trusted Data vulnerability in the Sign in with Apple strategy in pow-auth Assent allows an unauthenticated remote attacker to impersonate another user via the user parameter of the authorization callback.
+
+Apple posts the user's name to the callback endpoint in a user form parameter that the browser submits and the client controls. Assent.Strategy.Apple.callback/2 in lib/assent/strategies/apple.ex decodes that parameter, and fetch_user/2 merges it over the claims of the verified ID token, so the unverified map wins. An attacker who completes a Sign in with Apple login with their own Apple ID and edits the user parameter can replace sub, email, and any other claim. Applications that look up, link, or authorize accounts by the returned subject or email then act on the attacker's values.
+
+This issue affects assent: from 0.1.25 before 0.3.2.</description>
     <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-62979 - NVD - CVSS Score v4.0: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62979</link>
-    <guid isPermaLink="false">2c45f7feff4bd8a4aa962df869cedba8</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 8.4 | jack lets users share media libraries through their Radarr/Sonarr stack, peer-to-peer. Prior to 0.1.0, `middleware/handle-error.ts` serializes raw `FetchError` objects into HTTP responses. `lib/servers/base.ts` attaches outbound request headers on upstream non-success responses and schema-validation failures; the public `extras` field in `lib/errors/FetchError.ts` remains enumerable and is emitted by JSON serialization. These headers include the internal Radarr/Sonarr `X-Api-Key` and custom connector headers such as `CF-Access-Client-Secret`. `lib/redact.ts` redacts logs and spans but not this response path. Any client with the shared peer API key, plus Cloudflare Access credentials if required by the deployment, can force an error without a race or user interaction. `GET /peer/items/:id` and `GET /servers/health` can expose the internal media-server key, while `GET /torznab/download/:id` can expose another peer's key and Cloudflare Access secrets. The /peer/search and /items routes catch these errors and are not affected. Disclosed internal keys grant full administrative control of the corresponding Radarr/Sonarr instance, crossing the intended boundary between friends' shared peer access and private backend credentials. This issue is fixed in version 0.1.0.</description>
+    <title>CVE-2026-77152 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77152</link>
+    <guid isPermaLink="false">407a2c77aef2983159339e2f6dd612a8</guid>
+    <description>Saturday 31 October 2026 | NVD | CVSS Score v4.0: 5.3 | Improper Authorization vulnerability in Drupal Field Collection for Drupal 7 allows a user with the &quot;edit field collections&quot; permission to bypass access control on the parent (host) entity.
+
+The access check for field collection items (field_collection_item_access()) granted edit and delete access to any user holding the &quot;edit field collections&quot; permission without verifying the user's access to the host entity. As a result, a user with &quot;edit field collections&quot; but without edit/update access to the host entity (for example a node they cannot edit) could edit or delete field collection items attached to that entity, bypassing the intended entity/node access restrictions. The fix requires access to the parent entity in addition to the field collection permission.
+
+
+
+This issue affects Field Collection for Drupal 7: version 7.x-1.0 up to and including 7.x-1.2.</description>
     <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-62989 - NVD - CVSS Score v3.1: 8.1</title>
