@@ -5,159 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Oct 2026 23:02:06 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-40573 - NVD - CVSS Score v3.1: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40573</link>
-    <guid isPermaLink="false">858f97c2b72b6adfaa4ea3b46ff841e4</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 8.6 | NovumOS is a custom 32-bit operating system written in Zig and x86 Assembly. Prior to version 0.25-beta.1, the `Nova` interpreter runs in Ring 0 with unrestricted kernel-memory access. Loading a malicious `.nv` script through the shell permits a local user to execute code with kernel privileges without security checks. The advisory identifies VM initialization in `zig/nova/vm.zig` as the affected component; script execution is not isolated in a restricted Ring 3 privilege domain. This issue is fixed in version 0.25-beta.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-54610 - NVD - CVSS Score v3.1: 3.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54610</link>
-    <guid isPermaLink="false">8dc9bd0cd673ba4cc805d8704baa0c41</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 3.3 | LibreDWG is a free C library to read and write DWG files. Prior to 0.14, `bit_TV_to_utf8()` in `src/bits.c` can write to the caller-provided `src` buffer despite accepting const input. On an `iconv()` error other than `E2BIG`, the function frees its output buffer and passes the original input alias to `bit_u_expand()`, which expands or shrinks Unicode and multibyte escape sequences in place. If the input is a string literal, read-only mapping, or other immutable buffer, the write can cause a segmentation fault and denial of service; mutable caller-owned input can be unexpectedly modified before being returned. This affects applications that expose the conversion API to untrusted input under those conditions. Direct file-triggered exploitability through normal DWG decode/export paths remains unconfirmed because many TV strings are heap allocated by bit_read_TV(). This issue is fixed in version 0.14.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-58412 - NVD - CVSS Score v3.1: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58412</link>
-    <guid isPermaLink="false">70568289057265332f11d97d5bbab526</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 8.2 | Filecoin Pin is an IPFS Pinning Service API implementation that pins to Filecoin's PDP service. Prior to 1.1.0, the upload GitHub Action's fork detection in `upload-action/src/build.js` checks only `event.pull_request`. In the documented two-workflow pattern, an untrusted fork pull-request workflow produces an artifact and a privileged `workflow_run` workflow downloads and uploads it. Because `workflow_run` has no `event.pull_request`, `isForkPR` becomes false and `uploadStatus` becomes `pending-upload`. The action later resolves `workflow_run.pull_requests` without repeating the fork check before initializing the wallet with `walletPrivateKey` and uploading the artifact. An external contributor can therefore cause attacker-controlled artifacts to be stored using the repository owner's Filecoin wallet, incurring unauthorized storage expenditure, dataset pollution and consumption of configured wallet funds. Disclosure of the wallet private key is not required. The 0.x action line is not receiving a backport and must be migrated to a fixed 1.x release. This issue is fixed in version 1.1.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-59993 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59993</link>
-    <guid isPermaLink="false">e4e22a67daf4fcb397137b643be4cec3</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 6.5 | Picotls is a TLS protocol library that allows users select different crypto backends based on their use case. In affected revisions through 44bc503, when picotls is used as a `client-side TLS stack`, a peer can send a `HelloRetryRequest` followed by a `spoofed Hello message` that causes a null-pointer dereference. This can terminate the consuming process, including a process performing other work, resulting in denial of service. This issue is fixed in commit a06ca41.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62250 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62250</link>
-    <guid isPermaLink="false">664bcde49724c7b2331415704d600cfa</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 5.5 | LibreDWG is a free C library to read and write DWG files. Prior to 0.14.8413, a crafted pre-R13 DWG can make `decode_preR13_entities()` in `src/decode.c` enter a nonterminating loop that allocates a new object each iteration. `decode_preR13` in `src/decode_r11.c` computes `size` from the raw file-controlled `entities_start` and `entities_end` header bounds; the callee clamps `end` to `dat-&gt;size` but never recalculates `size`. At `end` of input, `bit_read_RC` and `bit_read_RS` stop advancing `dat-&gt;byte`, the overflow guard fails because `end` equals `dat-&gt;size`, and the no-advance check compares against `oldpos` saved before the loop instead of the previous iteration. This leaves repeated allocation of `dwg-&gt;object` entries until allocation fails or the process is OOM-killed, not merely a constant-memory CPU hang. The defect remains after the clamping and no-progress changes associated with the earlier issue 1131. Applications and tools calling `dwg_read_file()` on untrusted files, including `dwg2dxf`, `dwgread` and `dwg2svg`, can suffer denial of service when a user or automated pipeline opens a malformed file; no attacker credentials are required. This issue is fixed in repository nightly version 0.14.8413.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62254 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62254</link>
-    <guid isPermaLink="false">18310cfbac44216128ff3d0daaf10ed1</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 5.5 | LibreDWG is a free C library to read and write DWG files. Prior to 0.14, a specially crafted R13-R2000 DWG can trigger algorithmic resource exhaustion in `decode_R13_R2000` in `src/decode.c`. The class-decoding loop performs `realloc` on every iteration without a sanity check on `num_classes`. Manipulating that field forces an extremely slow allocation loop and denial of service when the file is parsed. Running the parser in a sandbox with memory limits is a workaround rather than a remediation. This issue is fixed in version 0.14.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62297 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62297</link>
-    <guid isPermaLink="false">aa6c5ed8956d0348e261d41caddabeaa</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 7.5 | ag-psd is a JavaScript library for reading and writing Photoshop Document files. Before the allocation-limit remediation attempt in version 31.0.0, `readPsd()` commits image and layer buffers from attacker-declared PSD geometry before validating the declarations against the actual available data or sane allocation limits. The `psdReader.js` implementation sizes off-heap typed arrays using `width`, `height`, `channels`, `depth` and `per-layer rectangles`, so a tiny PSD declaring enormous geometry can force multi-gigabyte memory allocation before a later bounds error. The reported 52-byte input on Node 24 produced approximately 3.17 GB peak RSS before a RangeError; under memory pressure the process can be terminated before the error can be caught, and concurrent inputs can exhaust memory. Services reading untrusted PSDs are exposed to denial of service. This differs from genuinely large PSD files whose memory demand is proportional to real input content. Version 31.0.0 adds a composite-image allocation limit, but complete coverage of the separately described layer-rectangle allocation path is not established and requires curator residual/scope review.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62300 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62300</link>
-    <guid isPermaLink="false">e754743be9e9d3295d3650597c051494</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 6.5 | Filecoin Pin is an IPFS Pinning Service API implementation that pins to Filecoin's PDP service. In daemon deployments up to and including version 1.1.0, `POST /pins` in `src/filecoin-pinning-server.ts` checks a caller-supplied CID with `CID.parse` and passes it to `pinStore.pin`, but does not enforce request rate limits or per-user quotas. In `src/filecoin-pin-store.ts`, each pin independently schedules `_processPinInBackground` with `setTimeout` without a queue, semaphore or concurrency cap, then recursively traverses the full DAG using `helia.pins.add(cid)`. The per-pin Helia/Bitswap node in `src/create-pinning-helia.ts` has no application-level byte, block or traversal-time limits. Blocks are written under `carStoragePath` by `src/core/car/car-blockstore-base.ts` and `src/core/car/car-file-backend.ts`, with `stats.totalSize` updated only after writing. An authenticated caller, or an anonymous caller when `ALLOW_NO_AUTH=true`, can submit large DAGs and exhaust disk, network, CPU, memory and libp2p resources, causing service degradation or host/process failure and leaving partial CAR files requiring recovery. The default localhost binding and token requirement reduce exposure. Because nodes have no bootstrap or mDNS configuration, a CID alone may not be fetchable, but caller-supplied `origins` can point to a reachable attacker-controlled libp2p source; concurrent requests accelerate resource pressure. Version 1.1.1 documents operational mitigations but does not implement the missing resource controls.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62847 - NVD - CVSS Score v3.1: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62847</link>
-    <guid isPermaLink="false">7037b191e4eb52df6f1f7342aa7f52f4</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 8.2 | Metalama is a Roslyn-based open-source patterns and architecture toolkit for C#. Prior to 2025.1.18, 2026.0.25 and 2026.1.19, Metalama.Framework and Metalama.Tool load and execute compile-time assemblies, auxiliary executable tools and embedded helper assemblies from predictable temporary directories. On `Linux` and `macOS`, the default `Path.GetTempPath()` location is world-writable, and existing artifacts are trusted based on sentinel or `.completed` marker files rather than integrity verification. A local unprivileged user on a shared machine or CI/build agent can pre-create the deterministic directory structure and plant a malicious DLL with the matching sentinel. When a higher-privileged developer or build account subsequently builds, Metalama skips regeneration and executes the planted artifact in the compiler, IDE or MSBuild process as the building user. This permits cross-user privilege escalation, reading source and secrets, supply-chain tampering with build output, or disrupting builds. Default Windows per-user temporary directories are protected by ACLs and are not affected. Deployer-selected insecure cache locations are outside the vulnerability's scope. This issue is fixed in versions 2025.1.18, 2026.0.25 and 2026.1.19.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62848 - NVD - CVSS Score v3.1: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62848</link>
-    <guid isPermaLink="false">8ec214a1f5c3639c33f439a3fe2a8a80</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 7.3 | Metalama is a Roslyn-based open-source patterns and architecture toolkit for C#. From 2023.0.101-rc until 2025.1.18, 2026.0.25 and 2026.1.19, the Windows Visual Studio integration deserializes local named-pipe messages without restricting which CLR types can be instantiated. The pipe connects `devenv`, the out-of-process Roslyn code-analysis process and the `CodeLens` process, and has the predictable name `Metalama_{role}_{processId}_{hash(PackageVersion)}`. Releases from the first public 2023.0 line through 2026.0.x use Newtonsoft.Json with `TypeNameHandling.All`; the later `SerializationBinder` only remaps assembly names, and `BindToType` resolves arbitrary wire-supplied types without an allow-list. Releases 2026.1.0 through 2026.1.18 use typeless MessagePack with `TypelessObjectResolver` and likewise instantiate arbitrary types. A same-user local process able to write to the pipe can send crafted messages that lead to arbitrary code execution with confidentiality, integrity and availability impacts inside the affected Visual Studio process. Default Windows pipe ACLs limit writers to the same logged-in user, so this does not escalate privileges or cross a security boundary; command-line and MSBuild-only builds do not use the channel. The maintained Metalama + PostSharp extension is affected from 2024.1 through 2026.1.4, while earlier Metalama-free PostSharp versions are unaffected. The retired Metalama and Caravela extensions remain affected and require removal or migration. The framework issue is fixed in versions 2025.1.18, 2026.0.25 and 2026.1.19; the maintained Metalama + PostSharp Visual Studio extension is fixed in version 2026.1.5. The retired Metalama and Caravela extensions require removal or migration.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62849 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62849</link>
-    <guid isPermaLink="false">70a1888c766044ac1ae50a2e46ac52e5</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 9.1 | ThingLinks is an enterprise IoT platform. Prior to 1.4.0, an unauthenticated SQL injection vulnerability in the `TDengine TDS APIs` allows request-controlled JSON field values submitted to `/anyUser/tds/insertTableData` to reach unsafe SQL construction in the `TDS mapper`. A remote unauthenticated attacker can tamper with TDengine time-series data, including inserting unintended rows or overwriting existing readings. The affected surface is the TDS module's insert-table-data flow and TDengine mapper SQL generation. This issue is fixed in version 1.4.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62853 - NVD - CVSS Score v3.1: 9.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62853</link>
-    <guid isPermaLink="false">caa3f8f79337676463a6c0fa8507b35d</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 9.9 | ThingLinks is an enterprise IoT platform. Prior to 1.4.0, the `/groovyScriptTest/registerScript` endpoint accepts user-supplied Groovy script content and passes it to an unsandboxed `Groovy compilation and loading` flow. An authenticated attacker can provide code that is compiled and instantiated on the server, resulting in arbitrary server-side code execution. The issue affects the `rule engine`'s Groovy script test/register flow. This issue is fixed in version 1.4.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62860 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62860</link>
-    <guid isPermaLink="false">34833a8cebb969b4a48f4d3338d04097</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 5.3 | Picsou is a self-hosted personal finance dashboard. In the affected login implementation, the `/api/auth/login` endpoint reveals whether a username exists through a timing discrepancy. In `backend/src/main/java/com/picsou/controller/AuthController.java`, `AuthController.login()` throws `BadCredentialsException` immediately for an unknown username, before `passwordEncoder.matches(...)`, whereas an existing username with an incorrect password incurs the `bcrypt` comparison cost. Both cases return the same generic `HTTP 401` response, but repeated latency measurements disclose valid usernames without credentials. Login rate limiting, a small user population, and deployments inaccessible from outside the local network limit practical exposure; the weakness does not itself read or modify account data, though enumerated usernames can assist credential stuffing or brute-force attacks. This issue is fixed in repository release 1.0.8.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62863 - NVD - CVSS Score v3.1: 9.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62863</link>
-    <guid isPermaLink="false">6782e192ffa7a3b21fe1951844fff107</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 9.6 | MoLing is a computer-use and browser-use based MCP server. Prior to 0.5.0, when MoLing runs in SSE mode using `-l`, its `/sse` and `/message` HTTP endpoints do not authenticate requests and the `mcp-go` dependency sets `Access-Control-Allow-Origin: *`. A malicious web page can open a cross-origin `EventSource` to `/sse`, including a loopback listener, and read the `endpoint` event to obtain `sessionId`. After a victim running SSE mode visits that page, the attacker can use the disclosed `sessionId` against `/message` to send unauthorized MCP tool calls. Depending on the configured tools, those calls can read or write local files, execute commands or perform other actions. Binding only to loopback does not prevent this browser-mediated attack. This issue is fixed in version 0.5.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62864 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62864</link>
-    <guid isPermaLink="false">22552e4d388e7f86735777454491d430</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 7.5 | Ring is a Clojure web applications library inspired by Python's WSGI and Ruby's Rack. Prior to 1.15.5, `wrap-nested-params` in the `ring.middleware.nested-params` namespace uses a backtracking regular expression to match parameter names from URL query strings and HTTP request bodies. An attacker can craft a parameter name that drives quadratic O(n^2) matching work, causing regular-expression denial of service in applications using the middleware. `Ring-Defaults` users are also exposed because nested-params is enabled by default. Applications omitting the middleware do not expose this parsing path. This issue is fixed in version 1.15.5.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62958 - NVD - CVSS Score v3.1: 7.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62958</link>
-    <guid isPermaLink="false">ea78896d29651ac7dfeb493b9876ba4d</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 7.9 | libriscv is a RISC-V sandbox and emulator. Prior to 1.18, a crafted ELF binary can cause out-of-bounds reads in the host emulator. `Memory&lt;W&gt;::binary_loader` checks `PT_LOAD` program-header bounds, but `Memory&lt;W&gt;::serialize_execute_segment` trusts section-header `sh_offset` and `sh_size` when locating `.text` without verifying the file range against `m_binary.size()`; `Memory&lt;W&gt;::lookup()` has a similar section-table problem. Malformed `.text` or `.symtab` offsets can therefore bypass the program-header checks and point outside the binary buffer, crashing rvlinux. With suitable memory layout or integer overflow, out-of-buffer host heap memory may instead be mapped into the guest by `create_execute_segment()`, potentially exposing host memory. The reported reproducer demonstrates a host SIGSEGV, while memory disclosure through grooming is described as possible rather than demonstrated. This issue is fixed in version 1.18.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62965 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62965</link>
-    <guid isPermaLink="false">54ac9eb8b7a4a2f929cbd1f9554f2905</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 7.0 | SABnzbd is an open source automated Usenet download tool. Prior to 5.1.0Beta3, orphan-job management in `sabnzbd/api.py` accepts the user-controlled `value` parameter without path confinement before `os.path.join()` with `download_dir`. An absolute path discards that base directory. An attacker with a valid API key can invoke `mode=status` with `name=delete_orphan` to reach `_api_delete_orphan` and `remove_all()` in `sabnzbd/filesystem.py`, which uses `shutil.rmtree()` for recursive deletion. The advisory also identifies `_api_add_orphan` and `_api_delete_all_orphan` as affected by the path-validation issue, while its concrete arbitrary-deletion trace is through `_api_delete_orphan`. The API key is stored in plaintext in `sabnzbd.ini`. The attacker can delete files or directories writable by the SABnzbd process, including configuration, queue data, and downloads, but system files outside the regular user's ownership are not affected. This issue is fixed in version 5.1.0Beta3.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62966 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62966</link>
-    <guid isPermaLink="false">7925a7adb98267aa52f917fd7bf49072</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 7.5 | ESPAsyncWebServer is an asynchronous HTTP and WebSocket server library for ESP32, ESP8266, RP2040 and RP2350. Prior to version 3.11.2, the multipart parser in `src/WebRequest.cpp` frees `_itemBuffer` and sets it to NULL when `BOUNDARY_OR_DATA` matches the closing boundary of a file part, before confirming the following terminator, while leaving `_itemIsFile` true. If the next byte is neither the final closing dashes nor a clean CRLF, the `DASH3_OR_RETURN2` or `EXPECT_FEED2` rewind branch re-injects provisionally consumed bytes through `itemWriteByte`. Because `_itemIsFile` remains true, `_itemBuffer`[`_itemBufferIndex`++] writes through a null pointer. On ESP32 this causes a `StoreProhibited` exception, panic and device reboot, producing remote denial of service. A route with a non-trivial body/upload handler, such as a file-upload or web-OTA endpoint, must be present. This issue is fixed in version 3.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62967 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62967</link>
-    <guid isPermaLink="false">043c388acf304734c005923dec03364d</guid>
-    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 8.1 | ZTNET is a ZeroTier web UI for private controllers with multiuser and organization support. Prior to 0.8.0, any authenticated low-privilege user can permanently deactivate another account, including an administrator, through `POST /api/auth/user/invalidateUser`. In `src/pages/api/auth/user/invalidateUser.ts`, `getServerSession` checks only that a session exists and does not compare `session.user.id` with the client-supplied `userId`. Supplying a victim's `userId` and a `deviceId` for which no matching pair exists in `UserDevice` makes the handler set the target account's `isActive` to false. Login is then refused by `src/server/auth.ts` with `account-expired`. An attacker needs only a normal authenticated account and the victim's user ID, which may be obtainable from member lists, UI responses, logs, or other application metadata. This can lock administrators out, disrupt organization management, and deny access to any targeted user. This issue is fixed in version 0.8.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 31 Oct 2026 00:01:45 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-62968 - NVD - CVSS Score v4.0: 8.7</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62968</link>
@@ -323,6 +171,158 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63224</link>
     <guid isPermaLink="false">4f5502474513f8cc0729afd5d6b63a82</guid>
     <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 7.2 | OpenRemote is an open-source internet-of-things platform. Prior to 1.26.0, the `datapoint export` API constructs `CSV crosstab` SQL by concatenating an `asset name` and `attribute name` into a `COPY` query that uses `crosstab` and streams `TO STDOUT`. The `asset name` enters both a double-quoted column identifier and a category query enclosed by the fixed `$cat$` delimiter. Escaping single quotes in one string context does not escape embedded double quotes in identifiers or protect that dollar-quote boundary. An authenticated user permitted to create or rename an asset and read/export datapoints for one of its attributes can store SQL metacharacters in the name and request a `crosstab` export, causing injected SELECT output to be returned in the normal ZIP/CSV response. This enables database exfiltration without direct database or filesystem access or token forgery. In a multi-tenant deployment it can expose other tenants' data if the manager's database role can read shared tables; integrity and availability effects are not established by the demonstrated read primitive. This issue is fixed in version 1.26.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111477 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111477</link>
+    <guid isPermaLink="false">5cbc1d0e8faf7526e45b06573cdba282</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS: não informado | Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-61725 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61725</link>
+    <guid isPermaLink="false">70a70dadfbc13b70a72eb6cbad8d948f</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 6.1 | sevenz-rust2 is a Rust-native 7z compressor and `decompress`or. Prior to 0.21.1, extracting an attacker-supplied 7z archive can write or overwrite files outside the destination directory. In `src/util/decompress.rs`, `decompress_impl` computes each destination with `dest.join(entry.name())` without normalizing the archive's UTF-16 entry name or verifying containment, and `default_entry_extract_fn` writes to it with `File::create`. Parent-directory components escape the extraction root, and an absolute entry path makes the join discard the destination entirely. The convenience entry points `decompress`, `decompress_file`, `decompress_with_password`, and `decompress_file_with_password` all use this default path. Overwriting writable configuration, startup, cron, or build files can lead to code execution or persistence. The archive bytes are the attacker-controlled trust boundary, including for applications that automatically unpack uploaded or otherwise untrusted archives. This issue is fixed in version 0.21.1.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63338 - NVD - CVSS Score v3.1: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63338</link>
+    <guid isPermaLink="false">1e5ab72d203482a356dd5e4eeba78dba</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 8.3 | IXP Manager is a full-stack web application for managing Internet Exchange Points. Prior to version 7.3.0, an authenticated user can view and edit a resource belonging to another user without authorization. The API-key edit/update path in `ApiKeyController` selects records by identifier without checking that `user_id` matches the caller, allowing access to another user's API-key record. This issue is fixed in version 7.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63339 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63339</link>
+    <guid isPermaLink="false">4db0bbfaffd1c4c0723e791d7fbfa863</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 8.8 | IXP Manager is a full-stack web application for managing Internet Exchange Points. Prior to version 7.3.0, an authenticated, non-administrative user can elevate their privileges to administrator status. Restricting administrative functions reduces exposure but is not a complete fix. This issue is fixed in version 7.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63341 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63341</link>
+    <guid isPermaLink="false">e17b2ca10c23e1ec163256c7cd0eb597</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 7.5 | Aedes is an MQTT broker that can run on any stream server. Prior to 1.1.1, the MQTT broker does not bound topic depth or structural complexity before passing topics through `mqemitter` into `qlobber`. A `PUBLISH`, `SUBSCRIBE`, or registered `Will` message containing an excessively deep topic can reach `qlobber._split_words` in `lib/qlobber.js` and trigger an uncaught `too many words` exception. Calls from `handlers/subscribe.js` and the publishing logic are not protected against that exception, so it escapes to the `Node.js event loop` and terminates the entire broker. The `Will` path is independently reachable when a client disconnects ungracefully: it calls `broker.publish` directly and bypasses the `PUBLISH` handler. An attacker must be able to establish an `MQTT session`, authenticated or unauthenticated according to broker configuration. A successful attack disconnects all legitimate clients and prevents reconnection until the broker process restarts. This issue is fixed in version 1.1.1.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63344 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63344</link>
+    <guid isPermaLink="false">16f1b34d22fa5cbc3ff21e04cea09acc</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 8.6 | Refitter is a tool for generating a C# REST API client using the Refit library. Prior to 2.1.2, content-type keys in the content maps of `requestBody/responses` are emitted verbatim into a Refit `[Headers(&quot;Accept: &lt;ct&gt;&quot;, &quot;Content-Type: &lt;ct&gt;&quot;)]` attribute string without escaping quotation marks. A crafted content-type key in an attacker-influenced OpenAPI description survives default validation without `--skip-validation`, breaks out of the attribute string and enclosing interface and namespace, and can introduce a top-level file class while leaving valid generated C#. A `[ModuleInitializer]` method in that class executes attacker code when the generated assembly is loaded at application startup, without requiring a call to the client. The behavior was verified with Refitter 2.0.0 and .NET 8. This issue is fixed in version 2.1.2.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63345 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63345</link>
+    <guid isPermaLink="false">d4157843060a0c1190979543a16a8c2a</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 8.6 | Refitter is a tool for generating a C# REST API client using the Refit library. Prior to 2.1.2, OpenAPI `paths`-object keys are emitted verbatim into Refit route attributes such as `[Get(&quot;&lt;path&gt;&quot;)]` without escaping quotation marks or restricting characters. An attacker-influenced single-line, slash-prefixed path survives default validation without `--skip-validation` and can close the attribute string, interface, and namespace while introducing a top-level file class and reopening the generated structure to keep valid C#. A `[ModuleInitializer]` method executes attacker code when an application compiles and loads the generated assembly at startup, even without calling the generated client. The enum and default value sinks are escaped and are not the vulnerable path-emission sink. The behavior was verified on Refitter 2.0.0 with .NET 8. This issue is fixed in version 2.1.2.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63346 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63346</link>
+    <guid isPermaLink="false">138a06c5a004596c537263f6a5a85c79</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 8.6 | Refitter is a tool for generating a C# REST API client using the Refit library. Prior to 2.1.2, the header parameter name in `parameters[].name` with `in: header` is emitted verbatim into a Refit `[Header(&quot;&lt;name&gt;&quot;)]` attribute string without escaping quotation marks. An attacker-influenced OpenAPI description can pass default validation without `--skip-validation` and break out from the parameter-list position by closing the parameter and method syntax, attribute, interface, and namespace. The generated file can remain valid C# while containing a top-level file class with a `[ModuleInitializer]` method, which executes attacker code when the compiled assembly is loaded at application startup, even if the client is never called. Query `AliasAs` and enum/default value sinks are escaped; this flaw is in header-name attribute-string emission. The behavior was verified with Refitter 2.0.0 and .NET 8. This issue is fixed in version 2.1.2.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63377 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63377</link>
+    <guid isPermaLink="false">5acedf445bed72d88dde7f6dee79ae52</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 9.8 | TAKO AI Agent for Okta is a local-first AI agent that helps Okta administrators query tenant data using natural language. Prior to 3.0.1-beta, `POST /api/auth/setup` in `src/api/routers/auth.py` allows an unauthenticated network attacker to create the first administrator account before the legitimate owner completes initial setup. The `initial_setup` function checks only the `is_setup` completion flag and requires no authentication, one-time bootstrap token, or network restriction. The default `docker-compose.yml` publishes port 8001 on all interfaces, the `Dockerfile` starts the listener on 0.0.0.0, and `src/api/main.py` mounts the authentication router without a global authentication guard. The endpoint invokes `create_auth_user` with `UserRole.ADMIN` and `set_auth_cookie`, issuing a valid `fctr_session` JWT cookie. Localhost-only CORS rules do not restrict non-browser HTTP clients, and the setup operation does not require access to a real Okta tenant. The attacker becomes the sole administrator and prevents legitimate first-run setup, can read Okta-synced user data, API tokens, chat history, and application configuration, modify users and Okta integration credentials, and lock out administrators or disable the service. Already completed setup is rejected. This issue is fixed in version 3.0.1-beta.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63378 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63378</link>
+    <guid isPermaLink="false">41506348fdeca0540b61a22773656a2b</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 8.8 | TAKO AI Agent for Okta is a local-first AI agent that helps Okta administrators query tenant data using natural language. Prior to 3.0.1-beta, any authenticated user with a valid `fctr_session` cookie can submit arbitrary Python source in the `script_code` field of `POST /api/react/execute-script`, without administrator privilege. In `src/api/routers/react_stream.py`, the source is stored with `skip_discovery=True`, bypassing AI-based content filtering, and is passed to `validate_generated_code` in `src/utils/security_config.py`. `BLOCKED_PATTERNS` recognizes direct `__import__` calls but misses the import name passed as a string, `getattr` is in `ALLOWED_BUILTINS`, and the AST checker handles `ast.Name` and `ast.Attribute` targets but fails to handle `ast.Call` targets. Dynamic `getattr` call chains through `__builtins__` therefore evade validation. The `_write_temp_script` helper writes the accepted code to disk, and `asyncio.create_subprocess_exec()` executes it as the application process user, which is root in the default container. Command output is returned as Server-Sent Events through `GET /api/react/stream-react-updates?process_id=&lt;id&gt;`. The resulting container compromise can disclose environment secrets including Okta API tokens and the JWT key, expose the SQLite database, and permit backend-service pivoting and persistence. This issue is fixed in version 3.0.1-beta.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63393 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63393</link>
+    <guid isPermaLink="false">47f6a0d6e641161d427ba6e6e1ca74f1</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 8.7 | OpenSearch SQL supports querying OpenSearch data using SQL and Piped Processing Language. In the 2.x line from 2.8.0.0 until 2.19.6.0, and the 3.x line prior to 3.7.0.0, a remote authenticated user with basic read/search permissions can provide a crafted `cursor` parameter to the `plugins/sql` endpoint and trigger unsafe deserialization of untrusted data, resulting in arbitrary code execution on the server. This issue is fixed in repository releases 2.19.6.0 and 3.7.0.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63396 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63396</link>
+    <guid isPermaLink="false">be5eea00e2bf514ba42215284fa9a823</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 8.7 | Coop is an open source review and moderation tool from ROOST. Prior to 1.0.0, an unauthenticated actor can query `Query.allOrgs` through `/api/v1/graphql` on a publicly accessible deployment and obtain data for all organizations, including organization IDs, names, email addresses, website URLs and on-call alert email addresses. The `usersWhoCanReviewEveryQueue` field also exposes reviewing users' IDs, email addresses, first and last names, roles, permissions and creation dates. Running the service on an authenticated private network prevents outside actors from directly querying the GraphQL API. This issue is fixed in version 1.0.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63398 - NVD - CVSS Score v4.0: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63398</link>
+    <guid isPermaLink="false">9fb5953418178d8d48926d7973bb7162</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 7.4 | Coop is an open source review and moderation tool from ROOST. Prior to 1.0.2, the SAML strategy's verify callback resolved the authenticated user by email alone using `kyselyUserFindByEmail`, without binding the lookup to the organization in `/saml/login/:orgId/callback`. An attacker who administers an organization and controls its SAML IdP signing key can submit an assertion for a victim email to another organization's callback when that target organization has registered the same signing certificate. The assertion verifies against the target certificate, and the email resolves to the target user, creating a session as that user and allowing full cross-tenant account takeover without privileges in the target organization. Exploitation requires the unusual configuration in which the target certificate matches a signing key controlled by the attacker. This issue is fixed in version 1.0.2.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63399 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63399</link>
+    <guid isPermaLink="false">c4bcf8effec33afcf0da94828f490b5a</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 6.9 | Coop is an open source review and moderation tool from ROOST. Prior to 1.0.0, the `GraphQL` `Mutation.createOrg` operation allows an unauthenticated actor to create arbitrary organizations on a publicly accessible instance. In addition to creating noise in the logs, the lack of rate limiting could potentially lead to database exhaustion. Running the service on an authenticated private network prevents outside actors from directly querying the `GraphQL` API. This issue is fixed in version 1.0.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63400 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63400</link>
+    <guid isPermaLink="false">b7e669d9857f24a28bcd5c59154008ef</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 2.3 | Coop is an open source review and moderation tool from ROOST. Prior to 1.0.2, `resetPasswordForToken` updates the password row without invalidating database-backed sessions. An attacker who has acquired a password and established a session retains access even after the legitimate user resets the password, leaving the compromised account under attacker control until the session expires at its `30-day` maximum age. This issue is fixed in version 1.0.2.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63401 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63401</link>
+    <guid isPermaLink="false">82416e0d909d70f0c8cee40248246f4c</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 5.3 | Coop is an open source review and moderation tool from ROOST. Prior to 1.0.2, `addAccessibleQueuesForUser` and `removeAccessibleQueuesForUser` accepted arbitrary `queueId` and `userId` values without organization scoping. An authenticated user belonging to one organization and holding MRT queue-edit permission could grant or revoke another organization's users' access to manual review queues. The existing queue-edit permission check did not bind the supplied identifiers to the caller's organization. The attacker could not read the other organization's queues or jobs, so this issue did not disclose confidential data. This issue is fixed in version 1.0.2.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63402 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63402</link>
+    <guid isPermaLink="false">9723f96dbe31e8c9563243d9a0eb2bdf</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 5.9 | i18next is an internationalization framework for JavaScript. Prior to version 26.3.4, `deepExtend` in `src/utils.js` checks property existence with the in operator and recurses into inherited built-ins reached through `Object.prototype`. An application must explicitly pass attacker-controlled resource data to `addResourceBundle(lng, ns, data, deep, overwrite)` with both `deep: true` and `overwrite: true`. Source keys such as `hasOwnProperty`, `toString` and `valueOf` can then select shared inherited built-in function objects, and a nested value can overwrite a property of those objects process-wide. For example, making `Object.prototype.hasOwnProperty.call` non-callable causes subsequent uses, including i18next internals, to throw TypeError, resulting in unrecoverable denial of service and limited integrity impact. The `__proto__`/`constructor` guard does not prevent this mechanism because the corruption target is an inherited built-in function rather than the prototype object itself. Default calls without deep merging or with overwrite falsy are unaffected, and no standard i18next backend or integration uses the vulnerable configuration. This issue is distinct from the setPath/key-walking prototype-pollution flaws in i18next-fs-backend (CVE-2026-48713) and i18next-http-middleware (CVE-2026-48714). This issue is fixed in version 26.3.4.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63410 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63410</link>
+    <guid isPermaLink="false">998cb58c1f2bfed000978b4bf85ee7db</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v3.1: 5.9 | secp256k1-native is a native C secp256k1 implementation for Ruby. In affected native builds, native constant-time scalar multiplication through `Point#mul` or `scalar_multiply_ct` can leak timing information about a secret scalar when compiled by a toolchain that reconstructs branchless selection into a branch. The `Montgomery ladder` uses `uint256_select` with an all-zeros or all-ones mask, but affected GCC builds at `-O2` recover the original condition and emit secret-dependent `je` or `jne` jumps whose timing correlates with scalar bits. This defeats the assumption behind the 0.17.0 `jp_add_internal` infinity-branch fix. A consumer must multiply a secret private key or nonce in a context where an attacker can observe timing; repeated measurements can statistically recover scalar bits. The defect is in the compiled binary, so source review or `ctgrind` on a non-reconstructing toolchain may miss it. GCC 14.3.0, 15.1.0, and 15.2.0 reproduced the branch reconstruction, and `extconf.rb` appends `-O2`. Tested GCC versions through 12.4.0 used bitwise operations and GCC 13.3.0 used constant-time `cmov`; the pure-Ruby path is not affected by this flaw and separately makes no constant-time claim. GCC 16 and clang were untested, and point releases, targets, and flag combinations were not exhaustively bisected. `Earlier pre-0.17.0 versions had different constant-time issues rather than this introduced select idiom.` Version 0.18.0 contains the verified fix. The advisory's broad pre-0.18.0 guidance also covers earlier, different constant-time issues; whether this CVE groups those issues or only the select idiom introduced in 0.17.0 remains unresolved.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63414 - NVD - CVSS Score v4.0: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63414</link>
+    <guid isPermaLink="false">44cdb081937a6b11f62e9aec8e95335f</guid>
+    <description>Friday 30 October 2026 | NVD | CVSS Score v4.0: 7.6 | Shopify App is a Rails engine for building Shopify applications. From 22.1.0 until 23.0.3, `token-exchange` authenticated controllers can expose a request-derived `shop` context instead of the identity from a verified Shopify ID token or active Shopify session. `current_shopify_domain` can resolve to the sanitized `shop` query parameter, so a request authenticated for one `shop` can cause application code to treat a different requested `shop` as current. Affected applications use `shopify_app` `token-exchange` authentication, accept authenticated requests with a `shop` query parameter, and rely on `current_shopify_domain` or `params[:shop]` for authorization, tenant lookup, stored access-token selection or `shop`-scoped data access. An attacker with a valid Shopify session token for one `shop` can supply another `shop` in that parameter and potentially obtain unauthorized application data or perform `shop`-scoped actions, depending on the application's authorization model. This issue is fixed in version 23.0.3.</description>
     <category>NVD</category>
     <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
   </item>
