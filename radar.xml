@@ -5,15 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 12:01:29 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-120249 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120249</link>
-    <guid isPermaLink="false">15726a8a966972fb0e2eeb1e7b6f84a3</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 6.9 | Thelia Back-office Default Twig Template before 1.1.1 contains a cross-site request forgery vulnerability in the /admin/product/combinations/update and /admin/product/default-price/update routes, which accept GET requests without anti-CSRF token checks. Attackers can lure a logged-in administrator into following a crafted link to rewrite product combination prices, stock, weight, EAN and sale flags, zeroing omitted prices.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 01 Nov 2026 13:01:13 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-120250 - NVD - CVSS Score v4.0: 6.0</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120250</link>
@@ -327,6 +319,14 @@
 The session id from the client's cookie reaches the CHI cache unchanged. The sibling HTTP::Session::Store::Memcached rejects ids that contain control characters, but the CHI store has no such check, and CHI does not escape keys for its memcached drivers.
 
 With a memcached driver, a CR and LF in the session id end the cache command early, and the server reads the bytes after them as further commands.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120226 - NVD - CVSS Score v4.0: 1.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120226</link>
+    <guid isPermaLink="false">e4dfcdce631da3c0311a9ea18170fa3d</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 1.9 | A security vulnerability has been detected in Hangzhou Xiongmai Technology P2PAPI.dll 1.3.3.32 on Windows. Affected by this issue is the function P2PAPI_Connect of the component P2P SDK. Such manipulation of the argument input as part of String leads to buffer overflow. An attack has to be approached locally. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
     <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
