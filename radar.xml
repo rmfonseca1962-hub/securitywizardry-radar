@@ -5,31 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 18:02:10 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-116474 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116474</link>
-    <guid isPermaLink="false">c3bbb460d44c446770e2d49aeed33e43</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | The `GITEA_TOKEN` of a Gitea Actions job authenticates as the `gitea-actions` system user, and the `/api/v1/user` email and GPG key endpoints accepted that user, so a job could register an email address and a GPG key on it; without required email confirmation (the default) the address is stored as activated. Commit verification treats a key without a real owner as the instance signing key, so any user who can run a workflow job could make commits signed with their own key show as trusted and signed by the instance in every repository where they appear, including pull requests to repositories the user cannot write to. The impact is limited to the displayed signature status: enforcement such as required signed commits only checks that a signature is verified and is unaffected, and no access is gained. The `/api/v1/user` routes now reject system users.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-117635 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117635</link>
-    <guid isPermaLink="false">baec17ef54225871e8ac587df6a69250</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | The `/api/v1/admin` route group did not enforce the `public-only` restriction of personal access tokens. A public-only token with admin scope issued by a site administrator could therefore list private organizations and the email addresses of all users, create organizations, obtain runner registration tokens and create new site administrator accounts, the last of which persists after the token is revoked. Tokens of users who are not site administrators cannot reach these routes; public-only tokens are now rejected on the admin API.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-117646 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117646</link>
-    <guid isPermaLink="false">98d6a00af8b849359b1358c814a78536</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | The repositories, stars and watching tabs of user profiles and the repository list of organization home pages included private repositories for every signed-in request without checking whether the request used a personal access token restricted to public resources (`public-only`). A holder of such a token could list the private repositories visible to the token's owner, and that user's stars and watches of private repositories. The API and the profile activity tab already applied the restriction. The impact is disclosure of repository names and metadata, not of repository content.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 01 Nov 2026 19:01:47 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-117649 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117649</link>
@@ -339,6 +315,30 @@ Any caller that builds credentials from a configuration it does not fully contro
 The gcloud-auth login and application-default login commands send a state parameter with the authorization request, then take the code from the first request to reach their loopback listener without comparing the returned state.
 
 A local attacker can submit an authorization code for their own Google account. The CLI exchanges it and stores the refresh token as the user's credentials, so the user's tools then act as the attacker's account.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120237 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120237</link>
+    <guid isPermaLink="false">04d51d18e2e1e186e98c42ef3175b105</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 2.1 | A flaw has been found in ag-ui-protocol ag-ui up to 0.0.58. Affected by this issue is the function isInterruptExpired of the file sdks/typescript/packages/client/src/interrupts/index.ts of the component Interrupt expiry. This manipulation causes resource consumption. Remote exploitation of the attack is possible. The exploit has been published and may be used. The pull request to fix this issue awaits acceptance.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120238 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120238</link>
+    <guid isPermaLink="false">c48c4b872611b317c739d751d18a8b59</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.6 | A vulnerability has been found in WAVLINK WN553X1-B 260403_2.0.0. This affects the function sub_4162A8 of the file /bin/ioos of the component ovpn_file Handler. Such manipulation of the argument file_id leads to os command injection. The attack can be executed remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120239 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120239</link>
+    <guid isPermaLink="false">34d431b1ca376a280780bb0cb54dca2b</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.6 | A vulnerability was found in WAVLINK WN553X1-B V260403_2.0.0. This vulnerability affects the function sub_419DA8 of the file /bin/ioos of the component WireGuard CLI Handler. Performing a manipulation of the argument file_id results in os command injection. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure.</description>
     <category>NVD</category>
     <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
