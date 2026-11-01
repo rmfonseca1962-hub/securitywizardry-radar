@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 06:00:57 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 07:02:57 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-115946 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115946</link>
@@ -155,72 +155,52 @@ XS::libbrotli has no Perl interface, so the decoder is reached through any depen
     <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-78188 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78188</link>
-    <guid isPermaLink="false">3f4542f308bc56877631c0b1ba1d6228</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS: não informado | WebDyne versions from 2.014 before 3.022 for Perl issue session cookies without the Secure, HttpOnly and SameSite attributes.
-
-WebDyne::Session sets its session cookie with only a name, value and path.
-
-Browsers then send the session ID over plain HTTP and with cross-site requests, and expose it to page scripts. A network attacker or an injected script can steal the session, and another site can make requests that carry it.</description>
+    <title>CVE-2026-107342 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107342</link>
+    <guid isPermaLink="false">2288b1b7cf14b245031c85be2767d1b1</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | The Kali Forms — Contact Form &amp; Drag-and-Drop Builder WordPress plugin before 2.4.30 does not perform a capability check when its test-email handler resolves and returns a user's email address, relying only on a nonce that is available to any logged-in user, allowing authenticated users with minimal privileges (Subscriber and above) to disclose the email address of any registered user, including administrators.</description>
     <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-78189 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78189</link>
-    <guid isPermaLink="false">87e289403c4cb42948d0d7b47b9a3f21</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS: não informado | WebDyne versions from 3.007 before 3.022 for Perl execute .psp files outside the document root via path traversal in the PSGI API route fallback.
-
-When a request matches no file, the PSGI handler retries it as an API route through api_filename. That keeps .. segments in the request path and only checks that the joined path starts with the document root, which a request for /../private passes.
-
-A remote attacker can run the embedded Perl in any .psp file the server can read, such as one uploaded to a directory outside the document root.</description>
+    <title>CVE-2026-107343 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107343</link>
+    <guid isPermaLink="false">4658926c366f49fdbd3edc1fd53f135d</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | The Kali Forms — Contact Form &amp; Drag-and-Drop Builder WordPress plugin before 2.4.30 does not perform a capability check on its test-email handler, relying only on a nonce that is available to any logged-in user, so a low-privileged user such as a Subscriber can make the site send email to an arbitrary recipient with a spoofed sender address.</description>
     <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-78190 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78190</link>
-    <guid isPermaLink="false">7696ed2dd8e697aa4e6ddb75d545fea1</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS: não informado | WebDyne versions from 2.014 before 3.022 for Perl reflect request parameters unescaped into form field values, allowing cross-site scripting.
-
-The textfield, password_field and filefield tags fill their value attribute from the request parameter of the same name. WEBDYNE_CGI_AUTOESCAPE, which controls escaping of these values, defaults to off. From 2.022, WebDyne::HTML::Tiny also replaced its entity_encode method with one that returns its input unchanged, so enabling WEBDYNE_CGI_AUTOESCAPE has no effect.
-
-A remote attacker can inject script into any page using these tags through a crafted link.</description>
+    <title>CVE-2026-113481 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113481</link>
+    <guid isPermaLink="false">f8a6ec690c19576490d6f18b36bc7ce0</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | The Media Library Assistant WordPress plugin before 3.44 does not check that the requesting user is allowed to view a post before disclosing which taxonomy terms are assigned to it, allowing any authenticated user, such as a subscriber, to learn the term assignments of private attachments and posts.</description>
     <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-78191 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78191</link>
-    <guid isPermaLink="false">50e21160f03f25ecd9aa7b2df5b28e1e</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS: não informado | WebDyne versions from 2.031 before 3.022 for Perl execute files with .psp anywhere in the name as Perl pages.
-
-WebDyne decides whether to run a requested file as a page by matching its name against WEBDYNE_PSP_EXT_RE, which has no end anchor.
-
-An application that accepts uploads by checking only the final extension lets a remote attacker upload a file such as report.psp.pdf and run its embedded Perl by requesting it.</description>
+    <title>CVE-2026-113482 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113482</link>
+    <guid isPermaLink="false">4927cbeabc099fb386946a63f15dbcde</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | The Media Library Assistant WordPress plugin before 3.44 does not escape one of its shortcode attributes before outputting it in an attribute of generated links, allowing users with the Contributor role and above to perform Stored Cross-Site Scripting attacks.</description>
     <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-78192 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78192</link>
-    <guid isPermaLink="false">b1007bd22ce6a6d1bff8506fc497dbd7</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS: não informado | WebDyne versions from 2.022 before 3.022 for Perl disclose application source to unauthenticated clients via the viewer in the default index page.
-
-WebDyne's wrapper scripts, such as webdyne.psgi, enable the built-in index page by default. Its source viewer returns files under the document root named in the source parameter of an HTMX request, including .psp, .pm and .pl files.
-
-A remote attacker can read the application's Perl code, including the __PERL__ blocks of .psp pages and any credentials they hold.</description>
+    <title>CVE-2026-118168 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118168</link>
+    <guid isPermaLink="false">b2fe53c7de5c772727a51301f7471c66</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | The MapPress  WordPress plugin before 2.97.15 does not restrict which user's data its front-end map embed handler renders, allowing unauthenticated visitors to retrieve the email address and display name of any user on the site by enumerating user IDs.</description>
     <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-102212 - NVD - CVSS Score v4.0: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102212</link>
-    <guid isPermaLink="false">a1b462f1cd6b35d3c832ba621a51e07e</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS Score v4.0: 8.4 | Heap-based buffer overflow in Opengear IM72XX, CM71XX, and ACM70XX firmware versions 4.8.0 through 5.5.2 on console server appliances allows an unauthenticated remote attacker to crash the index.cgi process via a crafted multipart/form-data POST request containing an overlong Content-Disposition name field.</description>
+    <title>CVE-2026-120198 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120198</link>
+    <guid isPermaLink="false">e83c90fa48470cc64f54216b9e38ded8</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 9.3 | A vulnerability has been found in WAVLINK WL-WN530BE1-A V251117. Affected is the function con_check_read_finish of the file /protocol.csp. Such manipulation of the argument group_name/IP-FROM leads to command injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure.</description>
     <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-120199 - NVD - CVSS Score v4.0: 5.3</title>
