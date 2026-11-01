@@ -5,31 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 19:01:47 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-117649 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117649</link>
-    <guid isPermaLink="false">1a6c2fe96de882d89ca461fc2cb9dd77</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | The issue timeline API and the web issue page hid cross-reference events that point at issues the reader cannot access, but not &quot;dependency added&quot; and &quot;dependency removed&quot; events. When a readable issue had been linked as a dependency to an issue in a repository the reader cannot access, for example a private repository, any reader of the first issue, including anonymous users of a public repository, received the linked issue's current title, body, state, labels, poster and attachment names through the API, and its repository, number and title on the web page. Creating the link requires access to both issues; comments and attachment downloads of the linked issue stayed protected. Dependency events are now filtered with the same read permission check; a related exposure of unlinked attachment metadata through hidden dependency placeholders was already fixed in 28.2.0.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-117677 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117677</link>
-    <guid isPermaLink="false">504ea8a3571f2c8a4a6b8ddec50c2a2b</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | When parsing an uploaded Helm chart, Gitea decompressed the archive and read every tar entry while looking for `Chart.yaml` without limiting the decompressed size, and did so before the package size quota was checked; the quota only considers the compressed upload size. A user with package write access to an owner, for example their own account on an instance with open registration, could repeatedly upload small, highly compressed archives that make the server spend CPU time proportional to the decompressed size, degrading the availability of the Gitea instance. The issue does not allow code execution or data access.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-117685 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117685</link>
-    <guid isPermaLink="false">3b076e1d7149f636240a47cbd55e73b6</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | The OCI registry's cross-repository blob mount checked the target package against the token's `public-only` restriction, but checked the source blob only against the full account permissions of the token owner. A `public-only` token with `write:package` scope, whose owner can read a private package and write to a public package namespace, could mount a blob of the private package into the public package. The private blob, such as a container layer, could then be downloaded by anyone through the public package.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 01 Nov 2026 20:00:53 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-118386 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118386</link>
@@ -339,6 +315,30 @@ A local attacker can submit an authorization code for their own Google account. 
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120239</link>
     <guid isPermaLink="false">34d431b1ca376a280780bb0cb54dca2b</guid>
     <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.6 | A vulnerability was found in WAVLINK WN553X1-B V260403_2.0.0. This vulnerability affects the function sub_419DA8 of the file /bin/ioos of the component WireGuard CLI Handler. Performing a manipulation of the argument file_id results in os command injection. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120240 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120240</link>
+    <guid isPermaLink="false">97fb516d08d65ad9014168351a685a50</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.6 | A vulnerability was determined in WAVLINK WN553X1-B V260403_2.0.0. This issue affects the function sub_41A748 of the file /bin/ioos of the component WireGuard CLI Group Handler. Executing a manipulation of the argument group_id/group_name can lead to os command injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120241 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120241</link>
+    <guid isPermaLink="false">3a8a6e9ff9129c0d31c8d2f163d50c18</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 7.7 | A vulnerability was identified in Ruijie RG-ES205GC, RG-ES206GC-P, RG-ES208GC, RG-ES210GC-LP and RG-ES210GS-P ESW_1.0(1)B1P48. Impacted is an unknown function of the file httpupg.cgi of the component Local Firmware Upgrade Interface. The manipulation leads to buffer overflow. It is possible to initiate the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120242 - NVD - CVSS Score v4.0: 1.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120242</link>
+    <guid isPermaLink="false">f1401d5f1ca26c2bdb466c2cff972c6a</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 1.9 | A security flaw has been discovered in Ruijie RG-ES205GC, RG-ES206GC-P, RG-ES208GC, RG-ES210GC-LP and RG-ES210GS-P ESW_1.0(1)B1P48. The affected element is an unknown function of the file set_cloud_serverUrl.cgi of the component Cloud Management. The manipulation of the argument url results in cross site scripting. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
     <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
