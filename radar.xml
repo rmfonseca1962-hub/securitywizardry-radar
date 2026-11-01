@@ -5,14 +5,18 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 00:02:26 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 01:03:03 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-116964 - NVD - CVSS Score v3.1: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116964</link>
-    <guid isPermaLink="false">23183700df200213815fdc9f0cb17aee</guid>
-    <description>Saturday 31 October 2026 | NVD | CVSS Score v3.1: 8.4 | A flaw was found in konflux-ci. An attacker with repository write access can achieve arbitrary code execution within the Continuous Integration and Continuous Delivery (CI/CD) workflow environment. By injecting shell commands into environment export scripts, the attacker causes manifest synchronization scripts to dynamically evaluate unvalidated script output. Successful exploitation allows the attacker to compromise CI/CD pipelines, steal sensitive authentication tokens and deployment credentials, and gain unauthorized access to production systems.</description>
+    <title>CVE-2026-115946 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115946</link>
+    <guid isPermaLink="false">a4849169cb19328d0b7b09fd826c95e7</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | XS::libbrotli versions before 1.2.1.0 for Perl bundle a brotli library with an out-of-bounds write in the decoder.
+
+Affected versions compile a bundled brotli into static archives that dependent XS modules link against at build time, rather than using the system library. The bundled copy, 1.0.7 or 1.1.0 across the range, carries the decoder out-of-bounds write described in CVE-2026-111497. Version 1.2.1.0 updates it to brotli 1.2.1.
+
+XS::libbrotli has no Perl interface, so the decoder is reached through any dependent module that decompresses untrusted data with it. An attacker supplying a crafted brotli stream can corrupt decoder state, disclose memory, crash the process, or potentially execute arbitrary code. Upgrading the system brotli does not remediate this.</description>
     <category>NVD</category>
-    <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-117681 - NVD - CVSS Score v3.1: 8.0</title>
