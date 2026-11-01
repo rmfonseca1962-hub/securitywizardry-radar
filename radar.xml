@@ -5,31 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 17:03:11 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-114199 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114199</link>
-    <guid isPermaLink="false">45f70eb04b4b652cb157d1b7eb5cd4f9</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | `GET /api/v1/users/{username}/heatmap` computed the contribution heatmap with the repository access of the token owner and ignored the public-only restriction of the access token, unlike the activity feed endpoints. A holder of a user's public-only token could read contribution counts and their 15-minute time buckets that stem from that user's activity in private repositories. Repository names and contents were not disclosed. For public-only tokens the heatmap now only counts activity visible to anonymous users.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116289 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116289</link>
-    <guid isPermaLink="false">cbbee4b207c302e8e00284be402432cf</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | Gitea did not reject personal access tokens restricted to public resources (`public-only`) on the organization Actions runner registration-token endpoint, and the runner registered with the resulting token was not limited to public repositories. Holding only such a token with `write:organization` that belongs to an owner of a public organization, an attacker could register an organization-level runner and receive jobs of the organization's private repositories that have Actions enabled, including the workflow content, Actions secrets and variables, and a task token with access to the private repository. The issue widens what the restricted token can reach; it gives nothing beyond what the owner's full account can already do.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116296 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116296</link>
-    <guid isPermaLink="false">a39333ea48e6098ccd70f632c23587aa</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | The API routes for releases, release assets, milestones and repository labels did not reject changes to archived repositories. A user with write access to an archived repository, or a holder of such a user's write-scoped token, could replace or delete release assets while keeping their download URLs, delete releases and tags, and create, edit or delete milestones and labels of a repository that is meant to be read-only. Changing requests on these routes now return 423 Locked for archived repositories.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 01 Nov 2026 18:02:10 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-116474 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116474</link>
@@ -331,6 +307,38 @@ This issue affects jsv: from 0.1.0 before 0.26.2.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-66570</link>
     <guid isPermaLink="false">633458b05e17185cef2843cb5178674d</guid>
     <description>Sunday 1 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Nickboss WordPress File Upload wp-file-upload allows Stored XSS.This issue affects WordPress File Upload: from n/a through 5.2.1.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120236 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120236</link>
+    <guid isPermaLink="false">35e6b5ef20e3d80ba95732a7dfa341c5</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was detected in ag-ui-protocol ag-ui up to 0.0.58. Affected by this vulnerability is an unknown functionality of the component Transport Decoder Handler. The manipulation results in improper input validation. The attack may be launched remotely. The exploit is now public and may be used. The patch is identified as 660182b973a44b8eda5484b14b88eb9cc251edc4. It is suggested to upgrade the affected component.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-74759 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-74759</link>
+    <guid isPermaLink="false">0b7e45117ec20ae8c79ae3816f84f6e9</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | Google::Auth versions 0.12 for Perl allow server side request forgery via unvalidated credential_source URLs in AWS external account credentials.
+
+An external_account configuration with the AWS subject token type selects Google::Auth::ExternalAccountCredentials::Aws. Its retrieve_subject_token sends requests to the imdsv2_session_token_url, url and region_url fields of credential_source without the host check that the other credential classes apply.
+
+Any caller that builds credentials from a configuration it does not fully control issues GET and PUT requests to hosts the configuration names, including internal services and link-local metadata endpoints.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-74760 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-74760</link>
+    <guid isPermaLink="false">6b8a948a576718a2cdfec92a6c6c2c5e</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | Google::Auth versions from 0.11 through 0.12 for Perl accept an authorization code from any local process because the gcloud-auth login callback does not check the OAuth state.
+
+The gcloud-auth login and application-default login commands send a state parameter with the authorization request, then take the code from the first request to reach their loopback listener without comparing the returned state.
+
+A local attacker can submit an authorization code for their own Google account. The CLI exchanges it and stores the refresh token as the user's credentials, so the user's tools then act as the attacker's account.</description>
     <category>NVD</category>
     <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
