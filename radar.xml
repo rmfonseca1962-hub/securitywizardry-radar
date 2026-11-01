@@ -5,31 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 11:00:22 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-120246 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120246</link>
-    <guid isPermaLink="false">b8736d7c91f48290fe2bc8d73d063e17</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg 4.4 through 9.0.2 contains a use of uninitialized variable vulnerability in the CDXL decoder that leaks stack memory into decoded pixels via unfilled HAM palette entries. Attackers can craft a type-0 CDXL file whose HAM pixels select unfilled new_palette entries in cdxl_decode_ham8() or cdxl_decode_ham6(), exposing stack bytes and pointer fragments in the BGR24 output.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120247 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120247</link>
-    <guid isPermaLink="false">8f00fb772d6763b0c4d9ae0d1bb00e20</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg 2.3 through 9.0.2 contains a use of uninitialized resource vulnerability in the Huffyuv decoder that allows attackers to leak heap memory into decoded pixels via short packed-BGR bitstreams. Attackers can craft a Huffyuv BGR24/BGRA video whose entropy data ends early, causing decode_slice() to add uninitialized s-&gt;temp[0] bytes into output frames, exposing heap contents.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120248 - NVD - CVSS Score v4.0: 4.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120248</link>
-    <guid isPermaLink="false">177c14171bf2ce30ca6e1f0a6004a778</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 4.6 | Thelia before 3.1.1 contains a stored cross-site scripting vulnerability that allows authenticated back-office administrators with store update permission to inject scripts by uploading unsanitized SVG logo_file or banner_file images. Attackers can upload an SVG with an onload payload served from /admin/store-media/logo or the public cache/images/store/ directory to execute scripts against visitors and higher-privileged administrators.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 01 Nov 2026 12:01:29 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-120249 - NVD - CVSS Score v4.0: 6.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120249</link>
@@ -323,6 +299,34 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120263</link>
     <guid isPermaLink="false">5016cb67967882da65f049b8d47c32ce</guid>
     <description>Sunday 1 November 2026 | NVD | CVSS: não informado | When `[oauth2_client].ACCOUNT_LINKING` is set to `auto` (not the default) and registration is enabled, the link-account sign-up form looked up the existing account to link by the user name or email submitted in the form instead of the identity asserted by the OAuth2 provider. An attacker with an account on a configured OAuth2 provider could submit another user's name, link their external identity to that Gitea account and be signed in as it without its password, including as an administrator. The link persisted for later sign-ins. Automatic linking now only happens when the existing account matches the provider's email or provider-derived user name; otherwise the account password is required.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120224 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120224</link>
+    <guid isPermaLink="false">f8f5b64494684876d5038e17787d8e9f</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.6 | A security flaw has been discovered in Oray Pugongying X5 Pro up to 7.6.1. Affected is the function run_apis_by_json/run_async_task of the component API Authorization. The manipulation results in improper authorization. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120225 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120225</link>
+    <guid isPermaLink="false">825c5a205d18a94a1e4abd76687c76a2</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.5 | A weakness has been identified in Oray Pugongying X5 Pro up to 7.6.1. Affected by this vulnerability is the function config_restore_ex of the file /etc/openwrt_release. This manipulation of the argument filename causes relative path traversal. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-13575 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13575</link>
+    <guid isPermaLink="false">96e3160b27e51ec8ef43c4ac58d42ba6</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | HTTP::Session versions before 0.54 for Perl allow memcached command injection via unfiltered session ids in HTTP::Session::Store::CHI.
+
+The session id from the client's cookie reaches the CHI cache unchanged. The sibling HTTP::Session::Store::Memcached rejects ids that contain control characters, but the CHI store has no such check, and CHI does not escape keys for its memcached drivers.
+
+With a memcached driver, a CR and LF in the session id end the cache command early, and the server reads the bytes after them as further commands.</description>
     <category>NVD</category>
     <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
