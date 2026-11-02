@@ -5,324 +5,1002 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 16:02:56 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 17:00:39 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-120430 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120430</link>
-    <guid isPermaLink="false">3515a9c03772eb271a414713228a72aa</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.3 | Camaleon CMS before 2.9.2 contains an insecure direct object reference vulnerability in Admin::CategoriesController that allows authenticated users to modify unauthorized categories by referencing arbitrary category IDs. Users authorized for one post type can send update or destroy requests pairing another category ID with their authorized post_type_id to rename or delete categories.</description>
+    <title>CVE-2026-115653 - NVD - CVSS Score v4.0: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115653</link>
+    <guid isPermaLink="false">b0734c847ba6235b02f5616f82fe0646</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 7.0 | In Eclipse ThreadX versions 6.0.1 through 6.5.2.202603, the PendSV handler of the Cortex-M module ports saves a preempted user-mode module thread's registers in privileged mode at addresses taken from the thread's stack pointer, without checking that pointer against the thread's stack. A user-mode, memory-protected module can thereby write up to nine words, eight of its choosing, or 25 with floating-point state, into memory immediately below any region it may write, and read back what is stored there.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120431 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120431</link>
-    <guid isPermaLink="false">6112f54e936b505fb011ad2102737530</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.x before 11.02.29, and 11.03 before 11.15.07 contains a heap-based buffer overflow in sgitopnm's readChannels() function when processing RLE-compressed SGI images. Attackers can supply crafted SGI files with oversized offset table lengths to write controlled data past the heap buffer, causing crashes or potential code execution.</description>
+    <title>CVE-2026-115654 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115654</link>
+    <guid isPermaLink="false">4290c94c34921b34005b6df1e2b816bf</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | In Eclipse ThreadX versions 6.0.1 through 6.5.2.202603, the Module Manager's thread-control services do not check that a thread passed by a user-mode, memory-protected module belongs to that module. Any loaded module can suspend, resume, terminate, reset or re-prioritise application threads and other modules' threads and abort their waits, denying service or changing how the system schedules them.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120432 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120432</link>
-    <guid isPermaLink="false">038396348c8c7592428e17cf3a1062e9</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.02.30, and 11.15.08 contains an integer overflow vulnerability in winicontopam that allows attackers to corrupt heap memory via oversized ICO/CUR dimensions. Attackers can supply a crafted icon file with width or height above 32767, wrapping int16_t loop counters into negative row buffer indices to cause crashes or potential code execution.</description>
+    <title>CVE-2026-120500 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120500</link>
+    <guid isPermaLink="false">75a3aa1244f4d4dedf963d46b6477616</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.3 | An Otter Wiki before 2.26.2 contains a stored cross-site scripting vulnerability in OtterwikiMdRenderer.block_code that allows attackers who can edit pages, including anonymous users under the default configuration, to inject arbitrary script. Attackers can place HTML inside a math fenced code block, which is rendered unescaped and executes for every viewer of the page.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120433 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120433</link>
-    <guid isPermaLink="false">ddcf4ca076034c139ed1569384bc0c68</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.x before 11.02.30, and 11.03 before 11.15.08 contains a stack-based buffer overflow in the picttoppm paintPoly() function due to an unbounded polygon point count. Attackers can supply a crafted PICT file with a polygon exceeding 100 points to overwrite the fixed pts array, causing crashes or potentially code execution.</description>
+    <title>CVE-2026-120501 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120501</link>
+    <guid isPermaLink="false">b448b34941ad08cfbc9156b4aedaea40</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | An Otter Wiki 2.20.1 before 2.26.2 contains a file disclosure vulnerability in the DataTable embedding that allows attackers who can edit pages, including anonymous users under the default configuration, to read repository-internal files. Attackers can set an absolute src such as /.git/config to render the file as a table, exposing any stored remote credentials.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120434 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120434</link>
-    <guid isPermaLink="false">ebded4fe9c3ac2230e80c969ae5b70da</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.x before 11.02.30, and 11.03 before 11.15.08 contains a stack-based buffer overflow in picttoppm's scanPoly() function in converter/ppm/picttoppm.c. Attackers can supply a crafted PICT file whose polygon edges produce more than 5000 points, overflowing the coord stack array to crash the converter or potentially execute code.</description>
+    <title>CVE-2026-16306 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16306</link>
+    <guid isPermaLink="false">1fff61c1ee7040e9962acf082b670da4</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Remote Code Execution in the `IModular.exe` URI handler in INFINITT Healthcare Co., Ltd. INFINITT PACS allows a remote unauthenticated attacker to invoke unintended application functionality and potentially execute arbitrary code via a crafted `imodular:// URI` containing attacker-controlled command and argument parameters.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120435 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120435</link>
-    <guid isPermaLink="false">d7e928f53c925e04acc1ced65376f916</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.x before 11.02.30, and 11.03 before 11.15.08 contains a heap buffer overflow in xpmtoppm caused by an unvalidated characters-per-pixel value in the XPM header. Attackers can supply a crafted XPM file with characters-per-pixel greater than 3 to overrun fixed 3-byte colorName hash entries, causing crashes or potentially code execution.</description>
+    <title>CVE-2026-2102 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-2102</link>
+    <guid isPermaLink="false">7b337839c10d8064c834cdf900ca7485</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 6.1 | wrensec-commons contains a reflected cross-site scripting (XSS) vulnerability in the CREST framework's HTTP binding. The HttpUtils.prepareResponse() method used the _mimeType request parameter to set the Content-Type response header without proper sanitization. By sending a GET request with _mimeType=text/html, an attacker could cause the browser to interpret a CREST JSON response as HTML, enabling execution of arbitrary JavaScript in the victim's browser. The vulnerability is exploitable by tricking a user into visiting a crafted URL targeting any deployed CREST endpoint. The issue is fixed in versions 22.6.2 and 23.0.0.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120436 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120436</link>
-    <guid isPermaLink="false">0a63f3bcd023a46637b85e88fa2e09c1</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.x before 11.02.30, and 11.03 before 11.15.08 contains an integer overflow in jbigtopnm that causes heap buffer overflow when computing output buffer size. Attackers can supply a crafted multi-plane JBIG file with large header dimensions so jbg_dec_merge_planes() overflows the undersized buffer, causing crashes or potentially code execution.</description>
+    <title>CVE-2026-77876 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77876</link>
+    <guid isPermaLink="false">82fe4680046b2d55ce7646af92d1c8a0</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.3 | Control Web Panel (CWP) before webpanel_version 1.16 contains an OS command injection vulnerability in the protected_directory user panel module that allows attackers to execute arbitrary commands by submitting unescaped input through the file POST parameter in the acc=deletedp action. Attackers can exploit this flaw, which passes attacker-controlled input directly into a shell_exec call, to achieve code execution in the user panel context.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120437 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120437</link>
-    <guid isPermaLink="false">21e59c92cc5322a32d2cc0114e45f9d5</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | Netpbm before 10.86.51, 11.x before 11.02.30, and 11.03 before 11.15.08 contains an out-of-bounds read vulnerability in the tgatoppm converter's get_pixel() function that uses unchecked pixel values as color map indexes. Attackers can supply a crafted color-mapped Targa file whose pixel values exceed the declared color map bounds to crash the converter or leak adjacent memory into the output image.</description>
+    <title>CVE-2026-77877 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77877</link>
+    <guid isPermaLink="false">fbba04211463cc59f75925d794ee1680</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.6 | Control Web Panel (CWP) before webpanel_version 1.30 contains a missing authentication vulnerability that allows attackers able to reach the loopback API service to invoke root-privileged API routes without presenting an access token. Attackers can access endpoints such as /v1/restoredatabase/, /generaluser/, /last_access/, /valid_user/, /valid_token/, and /user_panel_dashboard/ to perform unauthorized actions with root privileges.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120438 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120438</link>
-    <guid isPermaLink="false">6a1213e379c0b75f0be86c80ee531a07</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | QuickJS-NG before 0.16.0 contains an integer overflow in js_proxy_get_own_property_names() in quickjs.c that causes a heap buffer overflow on 32-bit hosts. Attackers running JavaScript can return a large array-like object from a Proxy ownKeys trap to wrap the allocation size, causing crashes or potential code execution.</description>
+    <title>CVE-2026-77878 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77878</link>
+    <guid isPermaLink="false">896b0590d96db41c4b8c31d634853f90</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.6 | Control Web Panel (CWP) before webpanel_version 1.30 contains an OS command injection vulnerability in the loopback API database restore route /v1/restoredatabase/, where the restoreDBBackup() handler passes an attacker-controlled file path from the POST body into a shell command without proper escaping. An attacker able to reach the route can inject arbitrary OS commands that execute as root.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120439 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120439</link>
-    <guid isPermaLink="false">8bb3cbd0a2886757dda1ffdccbfe2a9b</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.3 | QuickJS-NG before 0.16.0 contains an integer overflow in js_typed_array_sort() in quickjs.c that allows attackers to cause a heap buffer overflow on 32-bit hosts. Attackers who can run JavaScript can call TypedArray.prototype.sort with a comparator on a typed array near 2^30 elements, wrapping the allocation size and writing indices past the buffer to crash or potentially execute code.</description>
+    <title>CVE-2026-77879 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77879</link>
+    <guid isPermaLink="false">48fa7d468d98d66c98dd2decc7a24da2</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Control Web Panel (CWP) before webpanel_version 1.16 contains a SQL injection vulnerability in the loopback API authentication gate access_token(), which connects to MySQL as root and interpolates attacker-controlled values directly into its query. Attackers can inject SQL through the authorization_code and client_id parameters to read arbitrary database contents and forge the authentication result, bypassing the API's authentication check.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120440 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120440</link>
-    <guid isPermaLink="false">d46682c9fb47e79a7e2aea0c07e033ea</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | QuickJS-NG before 0.16.0 contains a memory leak vulnerability in js_atomics_store() in quickjs.c that fails to free the converted value when returning a RangeError. Attackers running JavaScript can repeatedly call Atomics.store with a valueOf that detaches or shrinks the buffer to exhaust heap memory and cause denial of service.</description>
+    <title>CVE-2026-77880 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77880</link>
+    <guid isPermaLink="false">bf6b878553e0077430fe8d0681130b4f</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.6 | Control Web Panel (CWP) before webpanel_version 1.16 contains an OS command injection vulnerability in the loopback API password change route /newpass/, which runs as root. An attacker can inject arbitrary OS commands by manipulating the POST 'user' parameter that is passed unescaped into a shell command, achieving remote code execution with root privileges.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120441 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120441</link>
-    <guid isPermaLink="false">16cbe6b2e1d9583c8d7e58301e7e6b3d</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | OwnTone Server through 29.3 contains an sql injection vulnerability in mpd_sticker_find() in src/mpd.c that allows unauthenticated remote attackers to inject SQL via the URI argument. Attackers can send a crafted 'sticker find song' command to the MPD listener on TCP port 6600 to bypass path restrictions and enumerate all media files with filesystem paths and metadata.</description>
+    <title>CVE-2026-77881 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77881</link>
+    <guid isPermaLink="false">c2959c65f0f70dd4ce794cd893fc51e1</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | Control Web Panel (CWP) before webpanel_version 1.30 contains a blind SQL injection vulnerability in an unauthenticated loopback API route that connects to MySQL as root, where the 'user' parameter is interpolated directly into a query against the oauth_clients table. Attackers can send crafted requests to the unauthenticated route (originally /user_panel_dashboard/, later /valid_token/) to perform time-based blind SQL injection and extract arbitrary database contents.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120442 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120442</link>
-    <guid isPermaLink="false">e88429be93d69a330571c1e593e6a001</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.3 | ape-volo-admin before 3.6.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge administrator tokens using a hardcoded JWT signing key in appsettings.json. Attackers can sign tokens offline with the jti claim set to the seeded administrator id to gain full API control over users, roles, permissions and data.</description>
+    <title>CVE-2026-88809 - NVD - CVSS Score v3.1: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88809</link>
+    <guid isPermaLink="false">78b4cf201d4c250e79f384d672556345</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.6 | A security vulnerability exists in the SUSE Rancher Manager meta proxy endpoint (/meta/proxy). This endpoint is intended to forward requests only to  destinations that appear on a configured allowlist. The allowlist decision was evaluated in a  place where it could not stop a request from being forwarded, so a rejected destination was logged but the request was still handed to the proxy's transport. This affects SUSE Rancher 2.15.0 up to 2.15.3, 2.14.0 up to 2.14.7, 2.13.0 up to 2.13.11, 2.12.0 up to 2.12.15, 2.11.0 up to 2.11.19 and potentially older EOL versions.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120443 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120443</link>
-    <guid isPermaLink="false">da0ccccc4472f0948541807a913d4c92</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.1 | GoFound through 1.4.1 contains a stored cross-site scripting vulnerability that allows unauthenticated attackers to inject scripts by submitting document text to /api/index. Attackers can index malicious HTML that searcher/engine.go returns unescaped and dashboard.vue renders with v-html, executing script in an administrator's browser when an admin search matches the document.</description>
+    <title>CVE-2026-94290 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94290</link>
+    <guid isPermaLink="false">923b80f68fcbb769bfe18aea7c6dba99</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 9.1 | SUSE Rancher Fleet clusters reference a kubeconfig secret that the controller uses to install and manage a Fleet agent on the target cluster. The controller did not sufficiently restrict which kubeconfig secrets a Fleet Cluster object was allowed to reference. As a result, a Fleet cluster defined in a namespace an ordinary user controls could be associated with administrative credentials for the management cluster itself, causing the controller to manage the management cluster on that user's behalf and to run that user's Fleet content there with elevated privileges. This affects SUSE Rancher Fleet 0.16.0 up to 0.16.3, 0.15.0 up to 0.15.8, 0.14.0 up to 0.14.12, 0.13.0 up to 0.13.17 and possible older versions.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120444 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120444</link>
-    <guid isPermaLink="false">c250ee4250a76bcf21e9ba20de07f228</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 7.2 | GoFound through 1.4.1 contains a path traversal vulnerability that allows unauthenticated attackers to delete arbitrary directories by supplying ../ sequences in the database parameter. Attackers can send GET requests to /api/db/create and /api/db/drop, directly or via a victim's browser, triggering os.RemoveAll on directories outside the data directory.</description>
+    <title>CVE-2026-99217 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99217</link>
+    <guid isPermaLink="false">4b592fd2996d8b124c96e01e935d38a7</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+fork: release the files of a failed fork after sched_cancel_fork()
+
+Reorder copy_process() cleanup so sched_fork() taking scx_fork_rwsem
+scx_pre_fork() is safe and isn't held around exiting files. Right now, a
+fork that fails while another thread closed the bpf link fd will
+deadlock against its own read side. It also blocks every fork on the
+system:
+
+    copy_process()                  holds scx_fork_rwsem for read
+      exit_files()
+        close_files()
+          filp_close_sync()
+            bpf_scx_unreg()
+              kthread_flush_work()  waits for the disable work
+                scx_root_disable()
+                  percpu_down_write(&amp;scx_fork_rwsem)
+
+Simply release the child's files after sched_cancel_fork() dropped the
+lock. The task starts out as a copy of its parent so p-&gt;files points to
+the parent's table until copy_files() replaces it. exit_files() must not
+run for a fork that failed before that. Clear p-&gt;files up front so
+exit_files() is a no-op for those and make copy_files() set it
+explicitly for CLONE_FILES.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120445 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120445</link>
-    <guid isPermaLink="false">a876b9bd7b251bb8e77db3ebaea2ec27</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.7 | madong-admin-saas through 5.1.4 contains an incorrect authorization vulnerability in AccessTokenMiddleware that allows authenticated tenant users to access the platform management API in multi-tenant mode. Attackers can reuse a tenant login JWT against /platformapi controllers to create platform administrator accounts, read tenant database settings, and take control of every tenant.</description>
+    <title>CVE-2026-99218 - NVD - CVSS Score v3.1: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99218</link>
+    <guid isPermaLink="false">efa7d74c41af0bbcd418032a8ecb6fb0</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.0 | In the Linux kernel, the following vulnerability has been resolved:
+
+coredump: hold RCU while releasing parked threads
+
+coredump_finish() releases the parked threads by clearing -&gt;task in
+their core_thread entry and calling wake_up_process() on each of them.
+It does that without holding a reference on the task and without being
+inside rcu.
+
+But calling wake_up_process(task) without rcu here isn't safe. A parked
+thread doesn't need that wakeup to leave. A spurious wakeup or a
+preemption after the store is enough for the task to go away.
+
+So if the coredump client is preempted between the store and
+wake_up_process() the thread can exit and be freed in the meantime and
+try_to_wake_up() takes pi_lock in freed memory.
+
+Hold rcu across the loop.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120446 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120446</link>
-    <guid isPermaLink="false">6e6ab2de274230f72caca52b3db04404</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.8 | madong-admin-saas through 5.1.4 contains a missing authentication vulnerability in the platform tenant management API because the 'platformapi' middleware key never matches the 'platform' application. Unauthenticated remote attackers can call /platformapi/tenant/account, bind-plan and sync-data endpoints to list, create, modify, disable or delete tenants and bind subscription plans.</description>
+    <title>CVE-2026-99219 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99219</link>
+    <guid isPermaLink="false">ede926fd2122db2f8bea85fb37e5863d</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ftrace: Initialize modname and offset in print_rec()
+
+print_rec() leaves 'modname' and 'offset' uninitialized and
+kallsyms_lookup() only sets them on success. When the lookup fails like
+when a module is being loaded or unloaded, 'modname' holds a garbage
+value, passes the 'if (modname)' check, and is dereferenced by
+seq_printf().
+
+  Oops: general protection fault
+  RIP: 0010:string+0x48/0xe0
+  Call Trace:
+   vsnprintf+0x1f5/0x650
+   seq_printf+0x8e/0xb0
+   print_rec+0x6c/0xc0
+   t_show+0x4c/0x440
+   seq_read_iter+0x119/0x480
+
+This can be triggered by reading available_filter_functions while a
+module is being loaded or unloaded.
+
+Initialize both variables so a failed lookup skips the module name.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120447 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120447</link>
-    <guid isPermaLink="false">5810faa09b6d52b4937fc7e69d21347e</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.2 | HotGo through 2.15.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to choose the SMS login verification code by supplying the Code field to /admin/sms/send. Attackers who know a user's mobile number can set a known code and sign in through /admin/site/mobileLogin to take over accounts, including administrators.</description>
+    <title>CVE-2026-99220 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99220</link>
+    <guid isPermaLink="false">48a59b1841b0077978e9272a1e1bfe6c</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+asymmetric_keys: reject trust keys without IDs
+
+The PKCS#8 parser deliberately leaves the asym_key_ids payload slot
+empty. key_or_keyring_common() unconditionally dereferences that slot
+when a PKCS#8 key is supplied to a key_or_keyring restriction. Both the
+plain and :chain forms reach this branch, allowing an unprivileged caller
+to trigger a NULL pointer dereference through KEYCTL_RESTRICT_KEYRING
+followed by add_key().
+
+ Oops: general protection fault, probably for non-canonical address 0xdffffc0000000000
+ KASAN: null-ptr-deref in range [0x0000000000000000-0x0000000000000007]
+ RIP: 0010:key_or_keyring_common (crypto/asymmetric_keys/restrict.c:205 crypto/asymmetric_keys/restrict.c:279)
+ Call Trace:
+  &lt;TASK&gt;
+  __key_create_or_update (security/keys/key.c:884)
+  key_create_or_update (security/keys/key.c:1021)
+  __do_sys_add_key (security/keys/keyctl.c:134)
+  do_syscall_64 (arch/x86/entry/common.c:52 arch/x86/entry/common.c:83)
+  entry_SYSCALL_64_after_hwframe (arch/x86/entry/entry_64.S:130)
+  &lt;/TASK&gt;
+ Kernel panic - not syncing: Fatal exception
+
+Reject an asymmetric restriction key without key IDs. A PKCS#8 private
+key cannot identify the signer of a candidate certificate and is not a
+valid trust anchor.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120448 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120448</link>
-    <guid isPermaLink="false">b97aa8824c850cb5d8202b455b49612e</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.6 | DoraCMS through 3.1.0 contains a mass assignment vulnerability in the PUT /api/v1/user/api-keys/:id endpoint that allows authenticated low-privileged users to rebind their API key to another user's account. Attackers can set the userId field on their own key to a victim's id, then act as that victim to modify profiles and publish or delete content.</description>
+    <title>CVE-2026-99221 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99221</link>
+    <guid isPermaLink="false">d9379f9022ef6a06979834ffaefaf02d</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+keys/trusted_keys: return immediately after TPM unseal failure
+
+trusted_tpm_unseal() proceeds to pcrlock() when the TPM unseal operation
+fails. If pcrlock() succeeds, its return value overwrites the unseal error,
+causing key instantiation to succeed.
+
+Return immediately when unseal fails to preserve the original error.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120449 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120449</link>
-    <guid isPermaLink="false">a595c6abfab7219b518590cf93894160</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | Outline before 1.12.0 contains an improper access control vulnerability that allows unauthenticated users to read unpublished documents because the share loader ignores unpublished status. Attackers holding an existing share link can query shares.info, documents.info, or the /s/ share routes to read withdrawn content, while shares.revoke returns 404 and blocks revocation.</description>
+    <title>CVE-2026-99222 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99222</link>
+    <guid isPermaLink="false">ba1ad4f632b9178a84578ae4c61b4955</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+keys: Protect the read method check against type removal
+
+keyctl_read_key() checks key-&gt;type-&gt;read without holding key-&gt;sem.
+A reference keeps the key alive, but does not pin the module containing
+its type. A surviving RxRPC key can therefore be read while AF_RXRPC
+is being unloaded:
+
+  KEYCTL_READ task                    Module unload and key GC
+  ----------------                   ------------------------
+  lookup_user_key()
+  permission / possession checks
+  load key-&gt;type
+                                     af_rxrpc_exit()
+                                       unregister_key_type()
+                                         GC: down_write(key-&gt;sem)
+                                         GC: retype to key_type_dead
+                                         GC: up_write(key-&gt;sem)
+                                       unregister_key_type() returns
+                                     free_module()
+  read saved type's read member
+
+The final access can read freed module storage. The read invocation in
+__keyctl_read_key() is already protected by key-&gt;sem, but the earlier
+method check is outside that critical section.
+
+Move the method check into __keyctl_read_key(), after key_validate() and
+under its existing read hold on key-&gt;sem. The check and invocation then
+use the same protected type for length queries and every read retry.
+The GC cannot retype the key until the semaphore is released, and type
+unregistration waits for that GC pass before the module can be freed.
+
+Return -EOPNOTSUPP when validation succeeds and the type has no read
+method. A temporary buffer may now be allocated before this result;
+allocation and copying to userspace remain outside the semaphore.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120450 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120450</link>
-    <guid isPermaLink="false">f19c9be94fd38e251c1e47ff0ce43a94</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.3 | LaraDashboard 1.4.0 before 1.4.9 contains an improper authorization vulnerability that allows authenticated users with read-only email_template.view permission to send arbitrary emails via the MCP send-email tool. Attackers can mint an MCP token and call send-email with any recipient, subject, and raw HTML body to deliver phishing or spam from the site's mailer.</description>
+    <title>CVE-2026-99223 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99223</link>
+    <guid isPermaLink="false">a8c864afee1f29be5adcd527c95f2131</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+keys: make keyring indexes independent of kernel addresses
+
+KEYCTL_READ returns the serial numbers in a keyring in associative-array
+traversal order.  The first word of the index is a public, deterministic
+hash of the type pointer, domain pointer and description.  An unprivileged
+user can therefore insert keys with known descriptions, predict their
+order for each possible KASLR slide, and recover the kernel image address.
+On an x86-64 build with 16 MiB alignment, 45 user keys suffice to
+distinguish the candidate slides.
+
+Remove the addresses from the whole index, not just its first hash word.
+Assign each key type and domain a nonzero 64-bit ID and hash those IDs and
+the description with a once-initialized SipHash key.  Use the full IDs in
+the later index chunks as well.  Truncating or hashing the IDs there would
+lose the guarantee that distinct type/domain/description tuples have a
+differing index bit.
+
+Allocate IDs lazily since private key types need not be registered.  Cache
+them in the index key so tree walks and copies of an existing index do not
+need to dereference a type descriptor that may have been unregistered.
+Keep the 32-bit chunk layout and diff_objects() bit offsets consistent,
+and retain the separate root slot for keyrings used by recursive search.
+The key comparison, permissions and userspace data format are unchanged;
+only the address-dependent in-memory ordering is replaced.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120451 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120451</link>
-    <guid isPermaLink="false">de8d6f2435986c7c3a73de33acd44ca9</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 7.0 | libgphoto2 through 2.5.34 contains stack-based and heap-based buffer overflow vulnerabilities in jl2005c_init() that allow malicious USB devices to corrupt memory by supplying an unbounded allocation table entry count. Attackers can connect a spoofed Jeilin JL2005B/C/D camera reporting 1022 or more entries to overwrite the saved return address and heap data, potentially achieving code execution.</description>
+    <title>CVE-2026-99224 - NVD - CVSS Score v3.1: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99224</link>
+    <guid isPermaLink="false">9a3fe1e8c1d224d33ddbc8dd97eaf137</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.0 | In the Linux kernel, the following vulnerability has been resolved:
+
+keys: Protect the type name while describing a key
+
+keyctl_describe_key() must keep the key type's name alive until
+kasprintf() has consumed it. The retained key reference keeps the key
+and its description alive, but does not pin the module providing its
+type. The name is passed to kasprintf() without holding key-&gt;sem.
+
+kvasprintf() uses the saved name pointer in two formatting passes, with
+a GFP_KERNEL allocation between them. With AF_RXRPC=m, a task that
+passes View permission before type retirement can overlap a privileged
+module unload in this order:
+
+1. KEYCTL_DESCRIBE looks up the key, saves key-&gt;type-&gt;name in the
+   kasprintf() arguments and completes the first formatting pass.
+2. While the formatter is delayed before its second pass,
+   af_rxrpc_exit() calls unregister_key_type(), which removes the type
+   from the registry and waits for key_gc_keytype().
+3. The collector takes key-&gt;sem for writing, retypes the retained key
+   to key_type_dead and completes retirement. Unregistration and module
+   exit return, allowing free_module() to release the type and name.
+4. The formatter resumes its second pass and reads the saved name from
+   released module storage, which can fault in string().
+
+Hold key-&gt;sem for reading across kasprintf(). The collector then cannot
+retype the key or complete retirement until both formatting passes have
+finished. If retirement wins the lock first, formatting uses the core
+key_type_dead name instead. Release the semaphore immediately after
+kasprintf(), including on allocation failure, before copying to
+userspace.
+
+Oops report as below:
+
+    BUG: unable to handle page fault for address: fffffbfff8054794
+    #PF: supervisor read access in kernel mode
+    #PF: error_code(0x0000) - not-present page
+    RIP: 0010:string+0x23f/0x470
+    Call Trace:
+     vsnprintf+0x330/0x1110</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120452 - NVD - CVSS Score v4.0: 5.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120452</link>
-    <guid isPermaLink="false">96705b9cc03fb961d07c51fa99c00442</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.2 | libgphoto2 through 2.5.34 contains a heap out-of-bounds read and write vulnerability in jl2005bcd_decompress() that allows malicious USB cameras to corrupt heap memory via oversized thumbnail processing. Attackers can supply small allocation-table values and a thumbnail header byte so in-place byte-swapping exceeds the buffer by about 30 KB, leaking heap contents in preview images.</description>
+    <title>CVE-2026-99225 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99225</link>
+    <guid isPermaLink="false">536db12eaf8039ad21b675c5466acb2c</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+keys: Check the authorization payload in process keyring searches
+
+An authorization payload and its saved credentials must remain valid
+while search_process_keyrings_rcu() searches the requestor's keyrings.
+The function validates the authorization key, then separately loads
+payload.data[0] and unconditionally reads rka-&gt;cred. Validation does
+not prevent request_key_auth_revoke() from clearing the payload.
+
+A request-key helper can assume authority and fork a descendant that
+inherits the authorization key. If the descendant misses in its own
+keyrings, it falls back to the saved requestor credentials. Successful
+target instantiation invalidates the authorization key without clearing
+the payload. After the helper exits, UMH_WAIT_PROC returns to the
+requester, which calls complete_request_key() and revokes that key.
+
+With the descendant paused after validation, the paths can interleave
+as follows:
+
+  1. The descendant enters search_process_keyrings_rcu() under RCU and
+     key_validate() succeeds.
+  2. The helper instantiates the target, invalidates the authorization
+     key, and exits.
+  3. The requester resumes from UMH_WAIT_PROC, calls
+     complete_request_key(), and revokes the authorization key.
+     request_key_auth_revoke() sets its payload pointer to NULL.
+  4. The descendant loads NULL and dereferences rka-&gt;cred.
+
+This NULL dereference can oops the kernel. RCU delays payload disposal
+but does not prevent the pointer from being cleared.
+
+Load the payload with dereference_key_rcu() and require a non-NULL
+result before validating the authorization key and searching its saved
+credentials. A non-NULL payload and its credentials remain alive for
+the caller's RCU read-side section; a cleared payload skips the fallback
+search and follows the existing error selection.
+
+KASAN report as below:
+
+    Oops: general protection fault, probably for non-canonical address 0xdffffc0000000005: 0000 [#1] SMP KASAN NOPTI
+    KASAN: null-ptr-deref in range [0x0000000000000028-0x000000000000002f]
+    RIP: 0010:search_process_keyrings_rcu+0x32b/0x790</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120453 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120453</link>
-    <guid isPermaLink="false">0735d4790007e0f4b8eabaabe5e7918c</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 4.8 | The Sleuth Kit through 4.15.0 contains a heap out-of-bounds read vulnerability in hfs_load_extended_attrs() in tsk/fs/hfs.c that reads the decmpfs header without checking attribute length. Attackers can supply a crafted HFS+ image with a com.apple.decmpfs attr_size of 1 to 15 to read past the allocation and crash analysis tools like istat or icat.</description>
+    <title>CVE-2026-99226 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99226</link>
+    <guid isPermaLink="false">f3cc04dbced7ed5abded1762f8d99973</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+keys: Avoid the owner account dereference in named keyring lookup
+
+Named keyring lookup must keep the storage containing the owner UID
+alive through the namespace mapping check.  find_keyring_by_name()
+reads keyring-&gt;user-&gt;uid under keyring_name_lock, but that lock protects
+the keyring's name entry and allocation, not its separate key_user.
+
+A named session-keyring join can overlap a privileged KEYCTL_CHOWN on
+another CPU.  If the keyring holds the last reference to its old dynamic
+key_user and the ownership transfer succeeds, the following ordering is
+possible:
+
+    Named join                         Chown
+    find_keyring_by_name()              keyctl_chown_key()
+      read_lock(keyring_name_lock)       down_write(key-&gt;sem)
+      load old keyring-&gt;user
+                                         replace key-&gt;user and key-&gt;uid
+                                         up_write(key-&gt;sem)
+                                         key_put(key)
+                                         key_user_put(old user): free
+      read old user-&gt;uid
+      read_unlock(keyring_name_lock)
+
+Chown neither takes keyring_name_lock nor key_session_mutex, so it can
+free the old account between the pointer load and the UID read.  The
+lookup then reads freed memory even though the keyring itself is alive.
+
+Use keyring-&gt;uid for the mapping check.  key_alloc() initializes this
+inline owner UID and keyctl_chown_key() updates it on chown.
+The existing name lock keeps its containing keyring allocated throughout
+the check, so lookup no longer depends on the account's lifetime.  This
+also matches the owner UID used by the permission check.
+
+KASAN report as below:
+
+    BUG: KASAN: slab-use-after-free in find_keyring_by_name+0x577/0x5d0
+    Read of size 4 at addr ffff8881128ae2ec by task keycase/500</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120454 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120454</link>
-    <guid isPermaLink="false">554155e15859db48378070a35c239fbc</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.8 | The Sleuth Kit through 4.15.0 contains a NULL pointer dereference vulnerability in decmpfs_decompress_lzvn_attr() that allows attackers to crash the tool by supplying a crafted HFS+ image. Attackers can set a huge uncompressed_size in an LZVN inline com.apple.decmpfs attribute so allocation fails and the decoder writes through NULL, causing denial of service.</description>
+    <title>CVE-2026-99227 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99227</link>
+    <guid isPermaLink="false">35b8bfbbc707266232809d74f6bbac5e</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.8 | In the Linux kernel, the following vulnerability has been resolved:
+
+io_uring/waitid: prevent cancel reference wrap
+
+io_waitid packs the cancellation state into bit 31 of -&gt;refs and uses
+bits 30:0 as a 31-bit reference counter:
+
+  #define IO_WAITID_CANCEL_FLAG BIT(31)
+  #define IO_WAITID_REF_MASK    GENMASK(30, 0)
+
+__io_waitid_cancel() marks a request canceled, then increments the low
+bits of -&gt;refs to claim completion ownership. When another path owns the
+request, the increment remains even though cancellation returns false.
+The request remains discoverable by cancellation, so repeated failed
+attempts can wrap the 31-bit reference field to zero. A later
+cancellation can claim ownership and complete the request a second time.
+
+Use atomic_fetch_or() when setting the cancel flag and inspect the old
+flag value. The first cancel attempt continues to the existing ownership
+increment, preserving its wake and issuer handoff semantics. Later
+attempts see the cancel flag and return without incrementing the
+reference field.
+
+This makes repeated failed cancellation attempts idempotent while
+leaving the first-cancel state transitions unchanged.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120455 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120455</link>
-    <guid isPermaLink="false">266e1a1c70af785a63b931f23f8c94d4</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | rapidyaml through 0.16.0 contains an out-of-bounds write vulnerability in ParseEngine::_add_annotation() that allows attackers to corrupt memory by supplying YAML with excess anchors or tags. Attackers can submit YAML with consecutive anchors or tags to overflow the fixed two-element annotation array in release builds, corrupting stack memory and crashing the process.</description>
+    <title>CVE-2026-99228 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99228</link>
+    <guid isPermaLink="false">b486ef4f0a424f463a169269ca657042</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+io_uring/io-wq: don't lose the signal that ends work
+
+When a thread exits, only its tracked requests are cancelled. Then its
+io-wq is torn down. io_wq_exit_workers() signals every worker, to get it
+out of an interruptible sleep, and waits for all of them to exit. Before
+they do, they go through the work that is left. Unbounded work is
+cancelled. Bounded work is run, as it is expected to end by itself.
+
+Not all of it does. An open has no file yet, so it counts as bounded, and
+the open of a FIFO waits for the other end. That is what the signal is for.
+But the workers are signalled once, and a worker that hasn't started the
+work by then loses the signal:
+
+  io_wq_exit_workers()               io_worker_handle_work()
+    io_wq_worker_wake()
+      set TIF_NOTIFY_SIGNAL
+                                       io_assign_current_work()
+                                         io_run_task_work()
+                                           clear TIF_NOTIFY_SIGNAL
+                                       io_wq_submit_work()
+                                         fifo_open()
+                                           wait_for_partner()
+    wait_for_completion_timeout()
+
+The thread never gets out of do_exit():
+
+  IORING_OP_OPENAT of a FIFO without a writer, IOSQE_ASYNC
+  exit of the thread that has submitted it
+
+hangs in more than 9 of 10 attempts (4 CPUs, KVM), until the process is
+killed.
+
+Set TIF_NOTIFY_SIGNAL for bounded work that is started with IO_WQ_BIT_EXIT
+set. The bit is set before the workers are signalled, and it is tested
+after the flag has been cleared, with clear_notify_signal() providing the
+barrier. So either the flag stays, or the bit is seen.
+
+Work that is started while the io-wq exits is treated like work that is
+being run at that time: it isn't interrupted unless it waits
+interruptibly.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120456 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120456</link>
-    <guid isPermaLink="false">20335a682175c9c1ecc9b807f0f9bb36</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | L-SMASH through 2.14.5 contains a heap out-of-bounds write vulnerability in isom_read_hdlr() and isom_read_dref_entry() in core/read.c triggered by oversized box sizes. Attackers can supply crafted MP4 or MOV files declaring hdlr or url box sizes larger than remaining data, stalling the stream position and corrupting heap memory to crash applications.</description>
+    <title>CVE-2026-99229 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99229</link>
+    <guid isPermaLink="false">a4ae8cb1e1584bb12939a595b7185ed1</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+io_uring/wait: don't spin on a stuck overflow list
+
+As long as IO_CHECK_CQ_OVERFLOW_BIT is set, io_cqring_wait_schedule()
+returns right away, before it gets to look at signals or arms the timeout,
+for io_cqring_wait() to flush the overflow list. If that doesn't empty the
+list, and the CQ ring doesn't hold the number of events the caller wants,
+the loop starts over, with the same result. The task spins in the kernel,
+and can't be killed.
+
+The assumption is that this can't happen: if CQEs can't be flushed, the
+ring is full, and min_events is capped to the size of the ring. But:
+
+- With IORING_SETUP_CQE_MIXED a 32b CQE needs two contiguous entries. It
+  is stuck on the list if a single one is free, and then the ring holds
+  less than cq_entries events. A single threaded application that asks
+  for as many events as the ring has entries never gets out of
+  io_uring_enter().
+
+- Whether the ring is full is up to the CQ head, which the application
+  can write to. While one thread waits for events on an empty ring,
+  another one can move the head back so that the ring looks full and
+  have a CQE overflow. The waiter can't be stopped any more, not even by
+  SIGKILL.
+
+Only the application can make room in the CQ ring. Return to it if the
+list could not be flushed.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120457 - NVD - CVSS Score v4.0: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120457</link>
-    <guid isPermaLink="false">6c04012356885cf55c2c422901c70289</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.8 | libaec through 1.1.7 contains an out-of-bounds read vulnerability in m_se_decode() in src/decode.c that allows attackers to bypass a signed bounds check via an overlong fundamental sequence. Attackers can supply a crafted CCSDS 121.0/SZIP stream with 2^31 or more zero bits to crash the decoder or leak adjacent memory into decoded samples.</description>
+    <title>CVE-2026-99230 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99230</link>
+    <guid isPermaLink="false">fa5e1dcdad4b4905fdc6d4b47d813f03</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+io_uring/cmd: don't leave list poison in -&gt;hash_node
+
+io_uring_cmd_del_cancelable() uses hlist_del() to take a command off
+-&gt;cancelable_uring_cmd, which leaves LIST_POISON1/2 behind in
+-&gt;hash_node. Requests are recycled through the request cache without
+being reinitialised, and not every user of -&gt;hash_node sets it up before
+it is used:
+
+If a vectored futex wait is woken while futex_wait_multiple_setup() is
+still queueing the futexes, io_futexv_wait() doesn't add the request to
+-&gt;futex_list, and leaves the completion to the task_work queued by the
+wake up. io_futexv_complete() ends in __io_futex_complete(), whose
+hlist_del_init() is fine for a request that is unhashed, which is how all
+other users of the node leave it. If the request was a cancelable
+uring_cmd in its previous life, e.g. a ublk FETCH_REQ, it writes through
+LIST_POISON2:
+
+  Oops: general protection fault, probably for non-canonical address
+  KASAN: maybe wild-memory-access in range [0xdead000000000120-...]
+  RIP: 0010:io_futexv_complete+0x219/0x420
+  Call Trace:
+   tctx_task_work_run+0x804/0x950
+   tctx_task_work+0x71/0xa0
+   task_work_run+0x118/0x200
+
+Leave the node unhashed.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120458 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120458</link>
-    <guid isPermaLink="false">1d4b1c94d3be70920bdb13cc8d8eed74</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.8 | Kvazaar through 2.3.2 contains an infinite loop vulnerability in read_header() in src/encmain.c that allows attackers to hang the command-line encoder by supplying a truncated Y4M header. Attackers can provide a crafted .y4m file lacking a terminating newline, causing unchecked EOF reads that hang the process indefinitely while consuming a full CPU core.</description>
+    <title>CVE-2026-99231 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99231</link>
+    <guid isPermaLink="false">57f40b1987376b58c273c99c5f215081</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.8 | In the Linux kernel, the following vulnerability has been resolved:
+
+io_uring/waitid: own the request before clearing -&gt;head
+
+io_waitid_remove_wq() only takes the wait queue lock if -&gt;head is set.
+io_waitid_wait() clears -&gt;head first thing, before it tries to become the
+owner of the request by bumping -&gt;refs. If somebody else owns the request
+at that point, nothing keeps it from completing the request while the
+wake up handler is still going to touch it:
+
+CPU0 (io_waitid_wait)                 CPU1 (io_waitid, holds a ref)
+list_del_init(&amp;wait-&gt;entry)
+smp_store_release(&amp;iw-&gt;head, NULL)
+                                      __do_wait() finds another child
+                                      io_waitid_remove_wq()
+                                        // -&gt;head == NULL, no locking
+                                      io_waitid_finish(), IOU_COMPLETE
+                                      // request freed and reused
+atomic_fetch_inc(&amp;iw-&gt;refs)
+
+The same goes for __io_waitid_cancel() if it claims the request in that
+window. -&gt;refs is part of the per opcode data of the request, so this
+increments whatever the next user of the request keeps there. If that
+happens to be zero, the handler concludes that it owns the request, and
+queues io_waitid_cb() for it. With the window held open by a delay, and
+the request reused for a receive that is waiting for data:
+
+  BUG: KASAN: slab-use-after-free in __wake_up_common+0x1ca/0x1f0
+   __wake_up_sync_key+0x36/0x50
+   sock_def_readable+0xf1/0x420
+   unix_stream_sendmsg+0x60b/0x1110
+  Allocated by task 87:
+   io_arm_apoll+0x1ed/0x940
+  Freed by task 87:
+   __io_submit_flush_completions+0x118d/0x1a10
+   tctx_task_work_run+0x327/0x950
+
+Only clear -&gt;head once the handler owns the request. If it doesn't, the
+owner finds -&gt;head set and has to wait for the lock, which is held by the
+caller of the handler. Deleting the already deleted entry again is
+harmless.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120459 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120459</link>
-    <guid isPermaLink="false">6b00ff0ac0eee760d803fc0a9bf2ccec</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.1 | python-jose through 3.5.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge JWTs because HMACKey and CryptographyHMACKey accept zero-length HMAC secrets. When an application's HS256/HS384/HS512 verification key resolves to empty, such as an oct JWK with empty k, attackers can forge tokens with arbitrary claims that jwt.decode accepts.</description>
+    <title>CVE-2026-99232 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99232</link>
+    <guid isPermaLink="false">940210bb2c3a6f2d54d51be2503865d1</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+tracing/syscalls: Use copy_from_user for the faultable syscall buffer
+
+syscall_copy_user_array() copies the buffer argument of faultable
+syscalls (write, pwrite64, ...) with __copy_from_user(), which skips
+access_ok(). Use copy_from_user() instead so a non-user address is
+rejected and the entry is recorded as faulted.
+
+It could be a security concern for machines that trust perf a bit too
+much.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120460 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120460</link>
-    <guid isPermaLink="false">58084a894b9cccad939ba601b49f3880</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.7 | Jpom through 2.11.12 contains a cross-workspace authorization bypass vulnerability that allows authenticated users to manage other workspaces' Docker hosts by supplying foreign Docker asset ids. Attackers with Docker permission in any workspace can control containers, images, volumes and networks, including creating privileged containers with host bind mounts.</description>
+    <title>CVE-2026-99233 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99233</link>
+    <guid isPermaLink="false">cfbbbb3d0552543720a303cca3f5a247</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.8 | In the Linux kernel, the following vulnerability has been resolved:
+
+tracing/histograms: Verify event_call identity when updating synth_event refcount
+
+In event_hist_trigger_parse() and hist_unreg_all(), the histogram
+registration and unregistration paths look up find_synth_event() using
+trace_event_name(file-&gt;event_call) and adjust se-&gt;ref if a match is
+found.
+
+Because find_synth_event() only compares the event basename, registering
+or removing a histogram on a non-synthetic trace event whose basename
+matches a synthetic event erroneously modifies the synthetic event's
+reference count.  If a histogram is registered on the non-synthetic
+event before the synthetic event is created and removed afterwards,
+se-&gt;ref is decremented without a matching increment, allowing the
+synthetic event to be freed while an active histogram action still holds
+a pointer to it.
+
+Introduce find_synth_event_call() to verify that &amp;se-&gt;call matches
+file-&gt;event_call before adjusting se-&gt;ref.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120461 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120461</link>
-    <guid isPermaLink="false">f52b0fda432fe815fe4a8d58afbf009b</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.7 | Jpom through 2.11.12 contains a cross-workspace authorization bypass in POST /node/ssh_command/batch that resolves command templates and SSH nodes by ID without workspace filtering. Authenticated users with SSH command execute permission in one workspace can supply foreign template and node IDs to run commands on other workspaces' SSH hosts using their stored credentials.</description>
+    <title>CVE-2026-99234 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99234</link>
+    <guid isPermaLink="false">8f102861c7289a5173325b681e8ba08f</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+tracing: Unregister field variable histograms when the command fails
+
+An action that names a field on another event needs that field as a
+variable, so create_field_var_hist() registers a second hist trigger on
+that event to provide it, and records it in
+target_hist_data-&gt;field_var_hists[].
+
+If a later part of the same command fails, create_actions() returns an
+error and event_hist_trigger_parse() jumps to out_free. The write fails
+with -EINVAL and sched_switch gets no trigger, but:
+
+  # echo 'hist:keys=pid:ts0=common_timestamp.usecs' &gt;&gt; \
+      events/sched/sched_waking/trigger
+  # echo 'my_synth u64 lat; int a; int b' &gt;&gt; synthetic_events
+  # echo 'hist:keys=next_pid:wakeup_lat=common_timestamp.usecs-$ts0:\
+      onmatch(sched.sched_waking).my_synth($wakeup_lat,prio,nosuchfld)'\
+      &gt;&gt; events/sched/sched_switch/trigger
+  # cat events/sched/sched_waking/trigger
+  hist:keys=pid:vals=hitcount:ts0=common_timestamp.usecs:sort=hitcount:size=2048:clock=global [active]
+  hist:keys=pid:vals=hitcount:synthetic_prio=prio:sort=hitcount:size=2048 [active]
+
+The second histogram is the one created for 'prio'. It is still active and
+still counting.
+
+out_free reaches destroy_field_var_hists(), which frees the
+field_var_hists[] entries, but never unregister_field_var_hists(), which is
+what removes the triggers and runs only from event_hist_trigger_free(). The
+entry is freed and the trigger is left with nothing tracking it.
+
+Unregister the field variable histograms in out_free as well, and record
+each one as soon as its trigger is registered rather than after the lookup
+that follows it, so no exit can leave a registered trigger untracked. The
+entry then belongs to field_var_hists[] and is released by
+destroy_field_var_hists(), so freeing it on that exit would be a double
+free.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120487 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120487</link>
-    <guid isPermaLink="false">f096345d7650ff48d8ede033ac31fd27</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.6 | LaraDashboard before 1.4.5 contains an incorrect authorization vulnerability in SettingPolicy::manageCoreUpgrades() that allows non-Superadmin administrators with settings.edit to access Superadmin-only core-upgrade operations. Attackers can use the /admin/settings/core-upgrades backup, download, restore and upgrade actions to obtain database dumps containing password hashes and restore or upgrade the site.</description>
+    <title>CVE-2026-99235 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99235</link>
+    <guid isPermaLink="false">5ff72b6fbfdcbecfaf99e75a3c6fe4b2</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.8 | In the Linux kernel, the following vulnerability has been resolved:
+
+tracing: Save the event file instead of the compatible histogram
+
+create_field_var_hist() creates a histogram on the matched event to
+supply a field variable, and records it on the target so it can be torn
+down later:
+
+	hist_data = find_compatible_hist(target_hist_data, file);
+	...
+	/* Save the compatible histogram information */
+	var_hist-&gt;hist_data = hist_data;
+
+hist_data is not the histogram it creates. It is one that was already
+there, whose keys the new one copies. The saved pointer has a single
+user, unregister_field_var_hists(), which runs when the target is
+removed:
+
+	file = hist_data-&gt;field_var_hists[i]-&gt;hist_data-&gt;event_file;
+
+find_compatible_hist() matches on keys alone, so it can pick one with no
+variables of its own. check_var_refs() then returns false and the user
+can remove it while the target still points at it:
+
+ BUG: KASAN: slab-use-after-free in event_hist_trigger_free+0x2b2/0x320
+ Read of size 8 at addr ffff8880093b90e0 by task init/1
+
+ Freed by task 1:
+  kfree+0x154/0x420
+  event_hist_trigger_free+0x1d5/0x320
+  event_hist_trigger_parse+0x35f3/0x69e0
+  trigger_process_regex+0x1a6/0x250
+
+Save the event file instead. It is all the dereference ever wanted, and
+it does not go away when the user removes a trigger.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120488 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120488</link>
-    <guid isPermaLink="false">580a3233889431db362ea0f55a3e4dc3</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.1 | LaraDashboard before 1.4.9 contains a stored cross-site scripting vulnerability that allows authenticated users with post.create or post.edit permission to inject scripts via unsanitized LaraBuilder design_json block content. Attackers can save text-editor, HTML, text or heading blocks containing script or event-handler markup that executes in administrator or Superadmin sessions viewing the builder, preview or page.</description>
+    <title>CVE-2026-99236 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99236</link>
+    <guid isPermaLink="false">c02b68acf8cb8ab49acec28160c4d1f1</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.8 | In the Linux kernel, the following vulnerability has been resolved:
+
+tracing: Reject incomplete event filter expressions
+
+A non-empty expression normally finishes in predicate_parse()'s inner
+loop, which resolves the pending logical operators before jumping to
+finalization. If the input ends after an operator, possibly followed by
+unary '!' tokens, the outer loop instead falls through with unresolved
+operator state.
+
+For example, &quot;common_pid == 1 || common_pid == 2 &amp;&amp;&quot; leaves
+prog[0].target equal to -1. The second pass then reads prog[-1] before
+the forward-jump check can reject it. Depending on adjacent slab
+contents, it can also copy an out-of-bounds word into a branch target
+that passes the forward-only check. A self-targeted perf tracepoint
+counting event can reach this path through PERF_EVENT_IOC_SET_FILTER.
+
+Reject the outer-loop fallthrough when a predicate has already been
+parsed. This ensures that non-empty expressions only reach finalization
+after the inner loop has resolved their operators. Keep the existing
+no-filter error for input that has no predicates. Add a regression test
+for trailing logical operators and unary negations.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120489 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120489</link>
-    <guid isPermaLink="false">5fc766988bcb2fa94d02fc7a2d7ed4b1</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.3 | Outline before 1.12.0 contains an incorrect authorization vulnerability in authorizeDocumentPublish() that allows authenticated members to publish documents into private collections without write access. Attackers can detach a child document via documents.unpublish, retaining parentDocumentId, then call documents.update with a private collection UUID to inject phishing content.</description>
+    <title>CVE-2026-99237 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99237</link>
+    <guid isPermaLink="false">25848def279410d3c19b4a35590e6016</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.8 | In the Linux kernel, the following vulnerability has been resolved:
+
+tracing: Hold trace_types_lock when resetting last boot data from readers
+
+update_last_data_if_empty() is called from tracing_open() with O_TRUNC,
+tracing_read_pipe() and tracing_buffers_read() without trace_types_lock.
+Two readers can both pass the LAST_BOOT test and free module_delta
+twice, and a module notifier can update module_delta while it is being
+freed.
+
+Take trace_types_lock in those paths and keep the callers that already
+hold it on an unlocked variant.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120491 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120491</link>
-    <guid isPermaLink="false">c4a7d6941d0562c9831b3f7cb05f4c85</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.1 | Wing FTP Server before 8.2.6 contains a stored cross-site scripting vulnerability that allows authenticated web-client users to inject script by sending a crafted nowpath parameter to webclient/makethumb.html. Attackers can break out of the directory CDATA section in admin_get_lastconn.html XML to forge a connection id, which executes in administrators' browsers when admin_connection_list.html auto-refreshes, enabling Lua console abuse.</description>
+    <title>CVE-2026-99238 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99238</link>
+    <guid isPermaLink="false">40a714b78f23758bb37878d576bfd18f</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.8 | In the Linux kernel, the following vulnerability has been resolved:
+
+tracing: Hold trace_types_lock when updating modules in persistent instances
+
+trace_module_record() walks ftrace_trace_arrays from the module notifier
+without trace_types_lock. A concurrent rmdir of an instance removes it
+from the list and frees it under that lock, so a module load or unload
+can walk into a freed trace_array.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120492 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120492</link>
-    <guid isPermaLink="false">b8060c016181f0b5cb852915d7f8e49e</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.3 | Chainlit 2.12.0 contains a server-side request forgery vulnerability that allows unauthenticated attackers to bypass path-scoped MCP allowed_urls entries because validate_mcp_url does not reject the semicolon character. Attackers can submit MCP URLs with '..;' segments to the /mcp endpoint, causing requests to paths outside the operator's grant on origins that strip semicolon path parameters.</description>
+    <title>CVE-2026-99239 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99239</link>
+    <guid isPermaLink="false">298dbe99ff96d2a2d6b9ee5b38aec4ec</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.8 | In the Linux kernel, the following vulnerability has been resolved:
+
+Bluetooth: L2CAP: refuse __l2cap_chan_add if chan already has conn
+
+l2cap_chan may be linked to l2cap_conn at most once. This is assumed in
+several places, eg l2cap_chan_del cleanup.
+
+There is a TOCTOU race where the invariant is violated:
+
+    [Task 1]                          [Task 2]
+    l2cap_chan_connect                l2cap_sock_bind
+      l2cap_chan_lock                   lock_sock
+      l2cap_state_change                if (sk-&gt;sk_state != BT_OPEN)
+        chan-&gt;state = BT_CONNECT
+        l2cap_sock_state_change_cb      chan-&gt;state = BT_BOUND
+                                        sk-&gt;sk_state = BT_BOUND
+          lock_sock &lt;------------------ release_sock
+          sk-&gt;sk_state = BT_CONNECT
+
+l2cap_sock_connect() does not check sk-&gt;sk_state, so since chan-&gt;state
+is now BT_BOUND, subsequent connect() ends up with second
+__l2cap_chan_add.
+
+Explicitly document and check the invariant in __l2cap_chan_add with
+WARN_ON_ONCE. The only callsite where it could be hit is
+l2cap_chan_connect, so add pre-check there to avoid relying on
+chan-&gt;state. chan-&gt;state read/write is not properly guarded currently so
+there can be other TOCTOUC problems.
+
+Add l2cap_lock_chan in l2cap_sock_bind() to guard chan-&gt;state write.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-73695 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73695</link>
-    <guid isPermaLink="false">54b2eb79712d0462313806e3e1499063</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.3 | Control Web Panel (CWP) before webpanel_version 1.16 contains a path traversal vulnerability in services/users/index.php, where an attacker-supplied module name is concatenated directly into an include path with no allowlist, basename(), or traversal sanitization. An attacker can supply directory traversal sequences in the module name to include arbitrary local .php files, resulting in local PHP file inclusion.</description>
+    <title>CVE-2026-99240 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99240</link>
+    <guid isPermaLink="false">71e5b40524bc8d952a0d985262be34ab</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+mm/damon/core: error damos_commit_quota_goal() for zero target_value
+
+Patch series &quot;mm/damon: move zero damos quota target_value handling to the
+core layer&quot;.
+
+Having zero DAMOS quota target value can cause division by zero.  DAMON
+API callers are checking the target value parameters to avoid that.  It is
+easy to make mistakes in some of the multiple API callers.  Move that to
+the core layer.
+
+Patch 1 adds the corner case handling into the core layer DAMON parameters
+validation logic.  Patches 2 and 3 remove no more needed DAMON API callers
+side handling of the corner case in DAMON_LRU_SORT and DMON_SAMPLIE_MTIER,
+respectively.
+
+
+This patch (of 3):
+
+If a DAMOS scheme has a damos_quota_goal of zero target_value,
+damos_quota_goal() could trigger division-by-zero error.  Hence each DAMON
+API callers should do the zero target_value validation.  It is easy to
+make mistakes.  Actually such bugs in DAMON_LRU_SORT and
+DAMON_SAMPLE_MTIER were found and fixed [1].
+
+It is better to handle the corner case only once in the core layer,
+instead of multiple places in all DAMON API callers.  One straightforward
+option is using an alternative denominator for the corner case in the
+damos_quota_goal().  However, the zero target_value is meaningless.  In
+this case, the quota goal is always evaluated as achieved or
+over-achieved.  The quota will only keep being reduced.
+
+Simply avoid using zero target_value by adding a check in the core layer
+DAMOS quota goal parameters validation/commit path,
+damos_commit_quota_goal().  Update it to return an error in the case. 
+Also update its caller to propagate the error.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-73696 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73696</link>
-    <guid isPermaLink="false">27b0c6f89ce6d0894a6c1275095d6f9d</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.3 | Control Web Panel (CWP) before webpanel_version 1.12 contains an execution after redirect vulnerability in the user panel authentication flow, where CWPUserIndex's unauthenticatedFlow() calls toLoginWithIntendedUri() which emits a redirect header without exit(), allowing PHP execution to continue and the module dispatcher include to run without authentication. Attackers with nothing more than a valid hosting username can bypass authentication to reach user-panel module code paths, enabling a pre-authentication chain to root access.</description>
+    <title>CVE-2026-99241 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99241</link>
+    <guid isPermaLink="false">36965f2f920c7aa648fd2cd2d72ee80d</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ntfs: take invalidate_lock in ntfs_filemap_page_mkwrite()
+
+ntfs_filemap_page_mkwrite() calls iomap_page_mkwrite() without holding
+mapping-&gt;invalidate_lock, so a concurrent truncate or fallocate can be
+in the middle of invalidating pagecache and rewriting the runlist while
+the write fault maps blocks and dirties the folio.  This races with
+ntfs_attr_fallocate(), which merges clusters into the in-memory
+runlist, drops the runlist lock, and only afterwards zeroes the newly
+allocated clusters on disk; and with the punch-hole/insert/collapse
+paths that free clusters after truncating the cache.
+
+Per Documentation/filesystems/locking.rst, -&gt;page_mkwrite() must ensure
+there are no truncate/invalidate races, &quot;usually mapping-&gt;invalidate_lock
+is suitable for proper serialization&quot;.  xfs takes its mmaplock (= the
+invalidate_lock rwsem) shared in exactly this path.
+
+Take invalidate_lock shared around iomap_page_mkwrite().  The read-only
+fault path is already covered because filemap_fault() itself grabs
+invalidate_lock shared on instantiation/read paths; only page_mkwrite
+was bypassing it in this driver.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-73697 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73697</link>
-    <guid isPermaLink="false">512711e54081b6b1ae9a8b1797a85c67</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.3 | Control Web Panel (CWP) before webpanel_version 1.16 contains an arbitrary file write and OS command injection vulnerability in the phpini_editor user panel module. The acc=update action writes attacker-controlled content to an attacker-supplied path via file_put_contents with no path confinement, and the acc=addlabelphpiniadv action passes unsanitized attacker input into shell_exec without escaping. An attacker with access to the module can write arbitrary files and execute arbitrary OS commands, resulting in remote code execution.</description>
+    <title>CVE-2026-99242 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99242</link>
+    <guid isPermaLink="false">fd9b5eb8b104aff14219cc72090e3847</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ntfs: fix race between fallocate and mmap reads
+
+The fallocate implementation only takes invalidate_lock for punch hole,
+collapse range, and insert range operations. For standard allocation modes
+(mode == 0, FALLOC_FL_KEEP_SIZE), the lock is not held.
+
+During ntfs_attr_fallocate(), new clusters are mapped to the runlist via
+ntfs_attr_map_cluster() before being zeroed by ntfs_dio_zero_range(). This
+creates a window where concurrent mmap page faults can read uninitialized
+disk data.
+
+Since mmap uses filemap_fault() which takes invalidate_lock in shared mode,
+it can fault in pages during this window and expose old disk contents to
+userspace. This is an information leak and data integrity issue.
+
+Fix by taking invalidate_lock for all fallocate operations, not just for
+punch/collapse/insert modes. This prevents concurrent page faults from
+accessing unzeroed clusters during the allocation window.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
