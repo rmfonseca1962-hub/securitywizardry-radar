@@ -5,111 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2026 23:02:02 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-120263 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120263</link>
-    <guid isPermaLink="false">5016cb67967882da65f049b8d47c32ce</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | When `[oauth2_client].ACCOUNT_LINKING` is set to `auto` (not the default) and registration is enabled, the link-account sign-up form looked up the existing account to link by the user name or email submitted in the form instead of the identity asserted by the OAuth2 provider. An attacker with an account on a configured OAuth2 provider could submit another user's name, link their external identity to that Gitea account and be signed in as it without its password, including as an administrator. The link persisted for later sign-ins. Automatic linking now only happens when the existing account matches the provider's email or provider-derived user name; otherwise the account password is required.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120224 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120224</link>
-    <guid isPermaLink="false">f8f5b64494684876d5038e17787d8e9f</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.6 | A security flaw has been discovered in Oray Pugongying X5 Pro up to 7.6.1. Affected is the function run_apis_by_json/run_async_task of the component API Authorization. The manipulation results in improper authorization. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120225 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120225</link>
-    <guid isPermaLink="false">825c5a205d18a94a1e4abd76687c76a2</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.5 | A weakness has been identified in Oray Pugongying X5 Pro up to 7.6.1. Affected by this vulnerability is the function config_restore_ex of the file /etc/openwrt_release. This manipulation of the argument filename causes relative path traversal. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-13575 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13575</link>
-    <guid isPermaLink="false">96e3160b27e51ec8ef43c4ac58d42ba6</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS: não informado | HTTP::Session versions before 0.54 for Perl allow memcached command injection via unfiltered session ids in HTTP::Session::Store::CHI.
-
-The session id from the client's cookie reaches the CHI cache unchanged. The sibling HTTP::Session::Store::Memcached rejects ids that contain control characters, but the CHI store has no such check, and CHI does not escape keys for its memcached drivers.
-
-With a memcached driver, a CR and LF in the session id end the cache command early, and the server reads the bytes after them as further commands.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120226 - NVD - CVSS Score v4.0: 1.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120226</link>
-    <guid isPermaLink="false">e4dfcdce631da3c0311a9ea18170fa3d</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 1.9 | A security vulnerability has been detected in Hangzhou Xiongmai Technology P2PAPI.dll 1.3.3.32 on Windows. Affected by this issue is the function P2PAPI_Connect of the component P2P SDK. Such manipulation of the argument input as part of String leads to buffer overflow. An attack has to be approached locally. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120227 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120227</link>
-    <guid isPermaLink="false">81d47831e3c5089b226440e9ac30bf34</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.6 | A vulnerability was detected in WAVLINK WN701AE M01AE_V260105. This affects the function del_staticrule of the file static_route_setting.sh of the component ioos Web Backend. Performing a manipulation of the argument rule_name results in os command injection. Remote exploitation of the attack is possible. The exploit is now public and may be used. The vendor was contacted early about this disclosure.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120306 - NVD - CVSS Score v3.1: 9.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120306</link>
-    <guid isPermaLink="false">d2a108b064a6701447bcbfc94965cc54</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v3.1: 9.9 | Beta9 turns each shell command in a tenant image definition into a Dockerfile RUN line and executes it with Buildah on the build worker. The worker image sets BUILDAH_ISOLATION=chroot, and no buildah invocation passes --isolation, so the step only changes its filesystem root. It keeps the worker pod's PID, network, IPC, and user namespaces, runs as uid 0, and holds CAP_DAC_OVERRIDE. PID 1 in that procfs is the worker entrypoint, so /proc/1/root is the worker container's filesystem and is writable. That filesystem contains the runc, buildah, and runsc binaries the worker uses to start tenant containers, the worker's Kubernetes service account token, and the host directories mounted into the pod. Worker pods are privileged. Clip v2 layered builds are the default, so a tenant with a workspace token reaches this by submitting one image build. The read-only proof confirmed the shared namespaces, CAP_DAC_OVERRIDE, and that the worker's runc binary is visible at /proc/1/root. Fixed in worker 0.1.756: Buildah RUN steps, including the WORKDIR mkdir, use OCI isolation with private PID, IPC, and network namespaces, and tenant ARG values are passed only into the build container.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120307 - NVD - CVSS Score v3.1: 9.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120307</link>
-    <guid isPermaLink="false">0e03941c224c76f74edc39982af10fce</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v3.1: 9.9 | The Beta9 worker serves the sandbox file API from outside the container. getHostPathFromContainerPath turns the tenant's container path into a worker path. If the unresolved path starts with a mount destination, including the default upload mount at /tmp/.beta9, the remainder is joined onto that mount's source with filepath.Join, which cleans parent-directory segments after the prefix check. A long enough run of those segments names any absolute path on the worker. A path that matches no mount is joined onto the container root and opened in the worker's own filesystem, so an absolute symbolic link such as /var/run pointing at /run is followed against the worker root. Upload, download, stat, list, find-in-files, replace-in-files, and delete-file all call this helper. A tenant with a workspace token and one running sandbox can read, write, list, and delete files on the hosting worker as root, including files of other tenants on that machine. A read-only proof downloaded the worker pod's Kubernetes service account token through the file API for a path that did not exist inside the sandbox. In the shipped remote-node manifests that service account is bound to cluster-admin. Fixed in worker 0.1.756: sandbox file operations and workspace sync open paths with os.OpenRoot, so parent-directory and symlink lookups stay inside the container root or the mount source.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120308 - NVD - CVSS Score v3.1: 9.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120308</link>
-    <guid isPermaLink="false">3e606a0df745c6e4cd912964f6c0dc7f</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v3.1: 9.9 | A Beta9 tenant can attach a volume when deploying a function, endpoint, or task queue. The gateway builds the host path by joining the shared volumes root, the workspace name, and the volume identifier from the stub configuration. Nothing checks that the identifier names a volume that workspace owns. Parent-directory segments in the identifier collapse the joined path to the worker's filesystem root, and the worker bind-mounts that path into the sandbox read-write unless the volume was explicitly marked read-only. A tenant with a workspace token can therefore read and write the worker's files, including other tenants' volumes stored on that machine. Confirmed against gateway 0.1.769 and worker 0.1.745. Fixed in gateway 0.1.776 and worker 0.1.756: volume identifiers and mount paths are validated before a mount is built, including for stubs saved before the check existed, and the gateway rejects a volume that does not exist or is not owned by the workspace.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-117680 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117680</link>
-    <guid isPermaLink="false">fb4e666da69274aaff940297843c09fb</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 2.1 | Improper Check for Unusual or Exceptional Conditions vulnerability in the pattern and patternProperties keywords in lud jsv allows an unauthenticated remote attacker to bypass schema validation via a string that matches a schema regex only after heavy backtracking. JSV.Helpers.RegexExt.bounded_match?/2 runs schema regexes with a backtracking budget but calls :re.run/3 without :report_errors, so a match that exhausts the budget returns the same :nomatch as a real non-match. A key that matches a patternProperties regex is then checked against additionalProperties or not at all, and a string that matches a not subschema with a pattern is accepted. Before the budget existed, Regex.match?/2 failed the same way at Erlang's default match limit.
-
-Only schemas whose regex explores a catastrophic branch before the branch that matches are affected. The attacker controls the data, not the schema, and linear patterns never exhaust the budget.
-
-This issue affects jsv: from 0.1.0 before 0.26.2.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120228 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120228</link>
-    <guid isPermaLink="false">ff7c563a5edaf240a931f23395b91389</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.6 | A flaw has been found in WAVLINK WN553X1-B V260403_2.0.0. This vulnerability affects the function sub_416D88 of the file /bin/ioos of the component ioos Service. Executing a manipulation of the argument group_id/group_name can lead to os command injection. The attack can be executed remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120229 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120229</link>
-    <guid isPermaLink="false">ae65335f06121fcd87e5aa8c17e345d1</guid>
-    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.5 | A vulnerability has been found in WAVLINK WN553X1-B 260403_2.0.0. This issue affects the function sub_416B50 of the file /bin/ioos. The manipulation of the argument file_id leads to os command injection. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Mon, 02 Nov 2026 00:01:23 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-120230 - NVD - CVSS Score v4.0: 8.6</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120230</link>
@@ -415,6 +311,238 @@ This issue affects Apache Wicket: from 9.1.0 through 9.24.0, from 10.0.0 through
 Releases before 9.1.0, which is every 8.x release and 9.0.0, are not affected, because the resource isolation this issue concerns was introduced in 9.1.0. They are not protected either. Their only cross-origin defence is org.apache.wicket.protocol.http.CsrfPreventionRequestCycleListener, which works out where a request came from by reading its Origin header and falling back to its Referer header. Neither header need arrive: a browser does not send Origin on the plain GET a link uses, and the document on the other origin decides through its own referrer policy whether a Referer reaches the application at all. That mechanism therefore never made the guarantee the Fetch Metadata based policy makes, and on those releases a listener invocation from another origin is not reliably refused in the first place. Anyone on a release before 9.1.0 who wants this protection should upgrade to 9.x or 10.x and register ResourceIsolationRequestCycleListener.
 
 Users are recommended to upgrade to version 9.25.0 or 10.12.0, which fix the issue.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111089 - NVD - CVSS Score v4.0: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111089</link>
+    <guid isPermaLink="false">375b0d00a82fbd747e3b3730c92f94d6</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 7.6 | Apache Wicket reads texts from the application's resource bundles — a localized label, a css class name — and writes some of them into the JavaScript and the markup it generates for a component. Those texts are placed inside single-quoted JavaScript string literals and inside quoted attribute values without being escaped for that context, so a text containing a quote ends the literal or the attribute, and what follows is parsed as script or as markup in the application's origin when the page loads.
+
+A resource bundle entry is authored for the application and does not say where the framework will write it. The same key is read by the framework into element text, where Wicket escapes it, and into the contexts below, where it did not. A text containing an apostrophe, which is ordinary in several languages, is enough to break the page; a text under the influence of another party is enough to run script.
+
+In org.apache.wicket:wicket-core, org.apache.wicket.markup.html.form.upload.MultiFileUploadField writes the org.apache.wicket.mfu.delete message into a JavaScript string literal, and org.apache.wicket.markup.html.form.Form writes the hidden-fields css class into the class attribute of the container it renders for its hidden fields; on 8.0.0 through 8.19.0 and 9.0.0 through 9.24.0 Form#appendDefaultButtonField writes the same css class into a second container. In org.apache.wicket:wicket-extensions, UploadProgressBar writes its UploadProgressBar.starting text into a JavaScript string literal, FilterForm writes the hidden-fields css class into the class attribute of its hidden input markup, and on 9.0.0 through 9.24.0 and 10.0.0 through 10.11.0 TrapFocusBehavior writes its current css class into a JavaScript string literal.
+
+The Content-Security-Policy that Apache Wicket 9.x and 10.x send by default does not prevent the JavaScript cases: the generated script is written into a script element carrying the per-response nonce, so the injected code is part of a script the policy admits. It does prevent an inline event handler injected through the attribute cases.
+
+This issue affects Apache Wicket: from 8.0.0 through 8.19.0, from 9.0.0 through 9.24.0, from 10.0.0 through 10.11.0. Users of Apache Wicket 7.x or older, which are no longer supported, should upgrade to a supported version. Users are recommended to upgrade to version 8.20.0, 9.25.0 or 10.12.0, which fix the issue.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120275 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120275</link>
+    <guid isPermaLink="false">35b665ddb73bf75a8d65506858950183</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 5.1 | A security flaw has been discovered in Shanghai Xi Yu Ji Zhi Technology Minimax Code 0.5.8. This affects an unknown part of the component Find Command Handler. The manipulation of the argument -exec results in os command injection. The attack may be performed from remote. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-82956 - NVD - CVSS Score v4.0: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82956</link>
+    <guid isPermaLink="false">baee1512da731813c3ad1a003ad8df38</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 7.6 | Improper neutralization of input during web page generation in Apache Wicket.
+
+org.apache.wicket.ajax.AjaxNewWindowNotifyingBehavior notices that a page instance has been opened in a second browser window or tab. It asks the browser for the value of window.name, which reaches the server as the request parameter windowName, and remembers what the browser reported in a field of the behaviour. That field is part of the page's serialized state, so the remembered value stays in the page store for as long as the page instance does.
+
+On every later render of that page instance the behaviour builds the precondition of its Ajax call by substituting the remembered value into a single-quoted JavaScript string literal, and Wicket writes that precondition into the page as raw JavaScript, because the precondition of an Ajax call listener is script supplied by the caller and is emitted without quoting or escaping. Nothing on that path escapes the value. The window name is client-supplied and Wicket applies no validation to it, so a remembered name containing a single quote ends the literal and the rest of it runs as script in the application's origin, every time that page instance is rendered.
+
+An application is affected only where it has explicitly added AjaxNewWindowNotifyingBehavior to a component. No part of the framework installs the behaviour, so an application that does not use it is not affected. The name the behaviour generates for itself, when the browser reports no name at all, is a random UUID and is not client-supplied.
+
+This issue affects Apache Wicket: from 8.0.0 through 8.19.0, from 9.0.0 through 9.24.0, from 10.0.0 through 10.11.0.
+
+Users are recommended to upgrade to version 8.20.0, 9.25.0 or 10.12.0, which fix the issue.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-83539 - NVD - CVSS Score v4.0: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83539</link>
+    <guid isPermaLink="false">7f6924aa34180dd1b8701102a558c285</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 7.4 | Improper neutralization of input during web page generation in Apache Wicket.
+
+org.apache.wicket.extensions.markup.html.basic.SmartLinkLabel and org.apache.wicket.extensions.markup.html.basic.SmartLinkMultiLineLabel display a text value and turn any URL they find in it into a hyperlink. Both escape the model value and then hand the escaped text to org.apache.wicket.extensions.markup.html.basic.DefaultLinkParser, which searches it for anything of the form scheme://rest and wraps each match in an anchor whose href is the matched text, copied in as it is. The pattern accepts any scheme, and there is no list of permitted schemes anywhere on the path. A text value naming a scheme that executes script therefore becomes an anchor that executes it, in the application's origin and in the reader's own session, when the reader clicks the link. Rendering the page is not enough on its own; the link has to be activated. Escaping does not prevent this and is not the issue: the characters the payload needs are all valid in a URL and are ones that org.apache.wicket.util.string.Strings#escapeMarkup() leaves alone, and the value ends up in a URL rather than in element text, which is a context that escaping model data does not make safe.
+
+An application is affected where it renders text it received through either of these two components. That is what they are for: they exist to linkify email addresses and web URLs found in the data an application is displaying, so untrusted input is the purpose of the feature rather than a misuse of it, and no unusual configuration is involved. No other component uses this parser, and an application that uses neither SmartLinkLabel nor SmartLinkMultiLineLabel is not affected.
+
+On 9.x and 10.x the Content-Security-Policy Wicket sends by default admits script only from a source carrying a per-response nonce, and a URL whose scheme executes script cannot carry one, so that default policy stops the script from running. This is a property of the default policy and not of these components. An application that has weakened or disabled its Content-Security-Policy, for this or for any unrelated reason, is affected in full. Wicket 8.x has no Content-Security-Policy support at all and is affected as it stands.
+
+This issue affects Apache Wicket: from 8.0.0 through 8.19.0, from 9.0.0 through 9.24.0, from 10.0.0 through 10.11.0. Users of Apache Wicket 7.x or older, which are no longer supported, should upgrade to a supported version. Users are recommended to upgrade to version 8.20.0, 9.25.0 or 10.12.0, which fix the issue.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-83559 - NVD - CVSS Score v4.0: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83559</link>
+    <guid isPermaLink="false">980d300ed6a79402a798e6d91847f330</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 7.4 | Improper encoding or escaping of output in Apache Wicket.
+
+org.apache.wicket.core.util.string.JavaScriptUtils#escapeQuotes() replaces each single quote in its input with a backslash and a single quote, and each double quote with a backslash and a double quote, so that the value can be placed inside a JavaScript string literal. It does not escape the backslash, which is the character that has to be escaped, and escaped first, for the rest of that escaping to hold. A value that already holds a backslash immediately before a quote therefore ends up with two backslashes in front of that quote: the first escapes the second, the quote itself is left unescaped, and it closes the literal. Whatever the value carries after that point is no longer text but JavaScript, and it runs in the application's origin and in the session of the user looking at the page. The method is public, is not deprecated, and its documentation states that its result can be part of a JavaScript call such as an alert; the only limitation it notes concerns JSON values, which need different escaping.
+
+An application is affected wherever it calls the method itself and places the result inside a JavaScript string literal, from its own code or from a component of its own or of a third party, and the value it escapes holds data an attacker can influence. There is no further condition, and no component of Wicket has to be involved: the application is using the method for what its documentation offers, and the method does not deliver it.
+
+Two components shipped with Wicket Extensions pass a value through the method. org.apache.wicket.extensions.ajax.markup.html.AjaxEditableLabel writes the editor's first error feedback message into a single-quoted JavaScript string literal in the Ajax response, so an application is affected through that component where the message shown for a failed edit holds data an attacker can influence, whether that is the submitted value itself or another variable the application sets on the validation error. A validation message can carry the submitted value, because input is a message variable that every form component supplies for its own validation errors, and the documentation shows overriding a validator's message to include it; none of the message bundles shipped with Wicket interpolates it, so an application that has not written such a message is not affected through this component. org.apache.wicket.extensions.ajax.markup.html.repeater.AjaxListPanel passes the serialized markup tag of an appended component through the method and is not affected: the tag comes from the panel's own markup file, and a quote in any of its attribute values, the component's markup id included, is written as a character reference by the tag serialization and cannot close the literal.
+
+This issue affects Apache Wicket: from 8.0.0 through 8.19.0, from 9.0.0 through 9.24.0, from 10.0.0 through 10.11.0. Users of Apache Wicket 7.x or older, which are no longer supported, should upgrade to a supported version.
+
+Users are recommended to upgrade to version 8.20.0, 9.25.0 or 10.12.0, which fix the issue.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-83594 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83594</link>
+    <guid isPermaLink="false">36f9de15cdb0e8623da92ad7c993b35a</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.3 | Memory allocation with an excessive size value in Apache Wicket.
+
+org.apache.wicket.markup.html.form.upload.resource.FileUploadToResourceField uploads files to a separately mounted resource rather than through a form, and is told the outcome afterwards over its own Ajax callback. That callback reads the request parameter filesInfo, a JSON array carrying a client file name, a size and a content type for each file, and turns it into the list of FileUploadToResourceField.UploadInfo that onUploadSuccess() receives. Nothing binds that JSON to an upload the resource performed and nothing re-derives it from the stored files, so the number of entries and every value in them are whatever the request supplied. The callback URL is rendered into the page, no prior upload is required, and both GET and POST reach it, so any client that can load the page can have the component report files that were never uploaded, without authenticating beyond whatever the page itself requires and without any user interaction.
+
+UploadInfo#get(), which the class offers as the way to obtain the bytes of an upload, allocates a byte array from UploadInfo#getSize() before it opens the file. The array is therefore sized by the number the request supplied, and the allocation happens even for a file that was never stored. One small request can cost the server close to two gigabytes of heap, and the request is trivially repeatable, so a few of them exhaust the heap for every request the Java virtual machine is serving. A size that the conversion to int turns negative instead throws NegativeArraySizeException, which the exception handler inside that method does not cover, so it escapes into the application.
+
+An application is affected where it uses FileUploadToResourceField, which is not the ordinary upload path through FileUploadField and Form and has to be extended and mounted deliberately. The allocation additionally requires the application to call UploadInfo#get() rather than reading UploadInfo#getFile() itself. Where the application denies the ENABLE action on the field through its authorization strategy, the callback is refused like any other listener. The 8.x line does not contain this component and is not affected.
+
+This issue affects Apache Wicket: from 9.14.0 through 9.24.0, from 10.0.0 through 10.11.0. Users are recommended to upgrade to version 9.25.0 or 10.12.0, which fix the issue.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84170 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84170</link>
+    <guid isPermaLink="false">14742ac18b494e1561557c88a683516e</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 8.3 | Allocation of resources without limits or throttling in Apache Wicket.
+
+org.apache.wicket.markup.html.form.upload.resource.AbstractFileUploadResource is the server side of the form-less upload offered by FileUploadToResourceField, which posts the selected files to a separately mounted resource rather than through a Form. The resource is an application-wide singleton with no component to consult, so newResourceResponse() takes the three limits that bound the upload - the total request size, the maximum size of a single part and the maximum number of parts - from the request parameters maxSize, fileMaxSize and fileCountMax, and hands them to the multipart parser as they arrive. Nothing binds those numbers to the field that is supposed to be uploading. A request naming a very large maxSize is therefore parsed with no effective ceiling on the total size, and omitting fileMaxSize and fileCountMax leaves the per-part and part-count limits unset as well. The values the application configured through FileUploadToResourceField#setMaxSize(), #setFileMaxSize() and #setFileCountMax() are consulted only when the client omits the corresponding parameter, so against a client that supplies one they have no effect at all.
+
+Parts above the parser's in-memory threshold are spooled to the container's temporary directory, and the file parts are then copied into the folder the application's IUploadsFileManager owns, under a sub-folder the request names, where they remain. A part that is not a file is read into the heap in full while the request is parsed. One request, repeatable, can therefore consume as much disk or as much heap as the client chooses to send. The resource carries no authorization annotation and the default authorization strategy permits every resource request, so unless the application authorizes the resource itself the request needs no authentication, no session, no prior page view and no user interaction.
+
+An application is affected where it uses FileUploadToResourceField, or mounts FileUploadResourceReference itself. This is not the ordinary upload path: the resource is a singleton that has to be created and mounted deliberately. An application that configures no upload limit at all loses nothing, because Wicket applies no total-size limit of its own by default; what the defect removes is a limit the application set. Uploads through Form with FileUploadField, and through AjaxFileDropBehavior, are not affected, because both read their limits from the component rather than from the request. The upload resource does not exist in the 8.x line.
+
+This issue affects Apache Wicket: from 9.14.0 through 9.24.0, from 10.0.0 through 10.9.1. Users are recommended to upgrade to version 9.25.0 or 10.12.0, which fix the issue.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84172 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84172</link>
+    <guid isPermaLink="false">3564caf943b80ba0160e5adc40c6ded8</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 6.3 | Files accessible to external parties in Apache Wicket.
+
+org.apache.wicket.markup.html.PackageResourceGuard decides whether a file on the classpath may be streamed to a client as a package resource. HTML is on the default allow list, so the only thing that separates a static HTML file, which may be served, from a component's markup template, which may not, is a check for a class file of the same name beside it. That check calls getResource() on the class loader that loaded wicket-core. The resource itself is reached through different class loaders: the scope class is resolved through the application's IClassResolver, which uses the thread context class loader, and org.apache.wicket.core.util.resource.ClassPathResourceFinder#find() then tries the scope class' own loader, the context class loader, and the wicket-core loader last.
+
+Where wicket-core is loaded by a class loader that cannot see the application's classes, the check finds no class file, concludes the file is not a component markup template, and serves it. A request for the package resource URL of a component class then returns that component's markup template with status 200. What is disclosed is developer-authored template content: component structure, developer comments, markup that is rendered only under some conditions, inline script, and the endpoints a template names. Access is read-only, and no user data, credential or session material is reachable this way.
+
+Such a deployment is rare. The ordinary packaging, a web archive with wicket-core in WEB-INF/lib, puts the framework and the application in one class loader, so the check finds the class file and the template is refused; those deployments are not affected. The exposure is confined to deployments that give wicket-core a class loader which cannot see the application's component classes: wicket-core placed in a servlet container's shared library directory, in an enterprise archive library directory with the application in the web archive, as an application server global module, or as an OSGi bundle, where wicket-core's bundle cannot resolve a class held by an application bundle. Markup shipped by Wicket's own modules, and by any other code sharing a class loader with wicket-core, remains protected. An attacker has to name a component class, and Wicket writes fully qualified class names into the URL of every package resource it renders.
+
+This issue affects Apache Wicket: from 8.0.0 through 8.19.0, from 9.0.0 through 9.24.0, from 10.0.0 through 10.11.0. Users of Apache Wicket 7.x or older, which are no longer supported, should upgrade to a supported version. Users are recommended to upgrade to version 8.20.0, 9.25.0 or 10.12.0, which fix the issue.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84177 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84177</link>
+    <guid isPermaLink="false">3a8654e443830a66ae7127599ef0bf0a</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 6.3 | Incorrect behavior order in Apache Wicket: a file path is validated before the framework appends the attributes that complete it.
+
+org.apache.wicket.request.resource.PackageResource asks the configured package resource guard about a path built from the scope class' package and the file name in the request URL, and then hands that same path to the resource stream locator together with a style, a variation and a locale. Those three attributes are decoded from the name of the first query parameter and never appear in the string the guard was given. org.apache.wicket.core.util.resource.locator.ResourceNameIterator appends them to that path, each preceded by an underscore, in the order variation, style, locale, before the file extension, so the file that is opened is not the file the guard approved.
+
+org.apache.wicket.markup.html.PackageResourceGuard decides whether an HTML file is a component's markup template by looking for a class file of the same name beside it, stripping one underscore-delimited suffix at a time as it goes. HTML is on the default allow list, so that check is the only thing separating a static HTML file, which may be served, from a markup template, which may not. Asked about the name of a template, the guard refuses it correctly. Asked about a shorter name for which no class exists, it accepts, and a style supplied in the URL then completes that name into the markup template of a component class, which is written to the response.
+
+An application is affected if the simple name of any of its component classes contains an underscore and no shorter part of that name is itself a class, such as Report_v2 or Wizard_Step1; an application with no such class name is not affected. No unusual deployment, packaging or configuration is required, and running in deployment rather than development mode does not prevent it. Java naming conventions discourage underscores in class names and no module Wicket ships has one, so no framework markup is exposed; what an application exposes this way is its own. A component whose class name has no underscore is not reachable, and neither is its localized or styled markup, because the guard finds the class file under the base name and refuses the request. The attributes cannot change the file extension and cannot leave the component's package, so nothing beyond HTML files in that package is reachable. Access is read-only, and what is disclosed is developer-authored template content: component structure, developer comments, markup that is rendered only under some conditions, inline script, and the endpoints a template names. No user data, credential or session material is reachable this way. An attacker has to name a class in the target package and the component itself, and Wicket writes fully qualified class names into the URL of every package resource it renders.
+
+This issue affects Apache Wicket: from 8.0.0 through 8.19.0, from 9.0.0 through 9.24.0, from 10.0.0 through 10.11.0. Users of Apache Wicket 7.x or older, which are no longer supported, should upgrade to a supported version. Users are recommended to upgrade to version 8.20.0, 9.25.0 or 10.12.0, which fix the issue.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84231 - NVD - CVSS Score v4.0: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84231</link>
+    <guid isPermaLink="false">d3d048f7516a204595e8fa605862d7ec</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 7.4 | Improper neutralization of input during web page generation in Apache Wicket.
+
+org.apache.wicket.markup.html.link.ExternalLink builds a JavaScript click handler and writes it into the tag's onclick attribute whenever the markup tag the component is bound to is not an a, link or area element. The URL held in the component's model is concatenated into a single-quoted JavaScript string literal in that handler without being escaped for that context. The same happens on the neighbouring branch, taken when popup settings are attached, where the value is concatenated into the window.open() call built by org.apache.wicket.markup.html.link.PopupSettings#getPopupJavaScript(). The only escaping applied is the markup escaping that every attribute value receives as the tag is written, which replaces an apostrophe with a character reference. A browser decodes character references in an attribute value before it compiles the event handler, so the apostrophe is restored, closes the string literal, and the rest of the model value is executed as script in the application's origin.
+
+An application is affected where it binds an ExternalLink to a markup tag that is not an anchor, such as a button or a span, and the URL in the model holds data an attacker can influence, which is the ordinary use of the component rather than a misuse of it. Nothing runs until a user activates the element.
+
+This issue affects Apache Wicket: from 8.0.0 through 8.19.0. Users of Apache Wicket 7.x or older, which are no longer supported, should upgrade to a supported version.
+
+Users are recommended to upgrade to version 8.20.0, which fixes the issue.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-87718 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87718</link>
+    <guid isPermaLink="false">478927ee2184010462d84a5d8cfa2e39</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 2.3 | Apache Wicket 10.10.0, 10.11.0 and 9.24.0 do not set the Content-Security-Policy headers on a page whose render request handler is wrapped in more than one IRequestHandlerDelegate. The framework unwraps only a single delegate level when deciding whether a request renders a page, so with a deeper chain, for example an application-provided delegating request mapper combined with CryptoMapper, the page is served without any CSP header even though CSP is enabled, and no error or warning is raised. The nonce-based protection Wicket applies to inline scripts and styles, together with any other CSP directives configured by the application, is thereby lost for those pages, exposing them to content injection the policy was meant to prevent. Applications on stock Wicket that do not wrap request handlers themselves are not affected. Versions before 10.10.0 and 9.24.0 handled nested delegates correctly. Users are recommended to upgrade to version 10.12.0 or 9.25.0, which fix the issue.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-95863 - NVD - CVSS Score v4.0: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95863</link>
+    <guid isPermaLink="false">0642b9684eea55661b8d4851a680232b</guid>
+    <description>Sunday 1 November 2026 | NVD | CVSS Score v4.0: 7.6 | Improper neutralization of input during web page generation in Apache Wicket.
+
+Apache Wicket generates JavaScript that refers to the elements it renders, and
+writes into that JavaScript two values it derives itself: a component's markup
+id, and the input name of a form component, which is built from component ids.
+Both are placed inside single-quoted JavaScript string literals without being
+escaped for that context, so a value containing a single quote or a backslash
+ends the literal, and what follows is parsed as script and runs in the
+application's origin when the page loads.
+
+A markup id is the value passed to org.apache.wicket.Component#setMarkupId(String),
+or the id attribute written in the component's markup, or an id Wicket
+generates, in that order. The first two are supplied by the application in an
+HTML context, where both characters are legal and where Wicket escapes them
+correctly when it writes the same value into the id attribute of the element; a
+generated id cannot contain either. An input name is derived from the ids of the
+components between the form and the form component, and a component id was
+rejected only for ':' and '~'.
+
+In org.apache.wicket:wicket-core on 9.x and 10.x,
+org.apache.wicket.markup.head.OnEventHeaderItem#forMarkupId(String, String,
+CharSequence) quotes the id it is given into a Wicket.Event.add call, and
+components in both wicket-core and wicket-extensions reach it through
+#forComponent(Component, String, CharSequence). On every affected version,
+org.apache.wicket.markup.html.form.Form writes its markup id and the id of its
+hidden-fields container into such literals,
+org.apache.wicket.markup.html.form.FormComponentUpdatingBehavior writes an input
+name, and org.apache.wicket.markup.html.form.upload.MultiFileUploadField writes
+two markup ids and an input name. On 8.x, Form also writes an input name into the
+action of a submitting link, and on 8.x and 9.x Form#appendDefaultButtonField
+writes an input name into a name attribute with no escaping at all, so a value
+containing a double quote escapes the attribute into markup.
+
+org.apache.wicket:wicket-extensions is affected in its own right and not only
+through wicket-core: AjaxEditableLabel, AjaxIndicatorAppender,
+AjaxDisableComponentListener, UploadProgressBar, KittenCaptchaPanel, Palette,
+FilterForm and, on 9.x and 10.x, TrapFocusBehavior and AjaxListPanel each build
+their own JavaScript containing a markup id.
+
+An application is affected where a markup id or a component id carries one of
+those characters. Wicket does not put one there itself, so the value comes from
+the application: an id set on a component, an id attribute in a template, or a
+component id derived from data. None of those is a JavaScript context from the
+application's point of view.
+
+The Content-Security-Policy that Apache Wicket 9.x and 10.x send by default does
+not prevent this. The generated script is written into a script element carrying
+the per-response nonce, so the injected code is part of a script the policy
+admits.
+
+The fixed versions check an id where it enters instead of escaping each place it
+is written. A component id and a markup id may no longer contain a quote, a
+backquote, a backslash, braces, angle brackets, a semicolon, an ampersand or a
+control character, and a markup id may not contain parentheses or square
+brackets either; a component constructed with such an id, or given such a markup
+id, fails with an exception.
+
+This issue affects Apache Wicket: from 8.0.0 through 8.19.0, from 9.0.0 through
+9.24.0, from 10.0.0 through 10.11.0. Users of Apache Wicket 7.x or older, which
+are no longer supported, should upgrade to a supported version. Users are
+recommended to upgrade to version 8.20.0, 9.25.0 or 10.12.0, which fix the issue.</description>
     <category>NVD</category>
     <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
   </item>
