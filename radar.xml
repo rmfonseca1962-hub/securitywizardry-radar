@@ -5,340 +5,326 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 20:00:22 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 21:02:29 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-65059 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65059</link>
-    <guid isPermaLink="false">006e3a061ed38b2fdd18d5c758c1a801</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Furl versions through 3.15 for Perl allow memory exhaustion via unbounded decompression of HTTP responses.
-
-Furl inflates a response body sent with a gzip, x-gzip or deflate Content-Encoding and appends the output to the response string with no size limit. It does this whether or not the request asked for compression, and no option caps the decompressed size. Responses read with write_file or write_code are streamed rather than held in memory.
-
-A malicious server, or an attacker on a plain HTTP connection, can send a small compressed response that expands to exhaust the client's memory and end the process.</description>
+    <title>CVE-2026-58995 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58995</link>
+    <guid isPermaLink="false">4d71435349941ca9b149497266e96545</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In getEntryFileName of ZipFileRO.cpp, there is a possible memory safety issue due to a heap buffer overflow. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-88810 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88810</link>
-    <guid isPermaLink="false">41a1502ce5f1b16441ac73dd5dba2027</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.2 | A privilege escalation issue was discovered in Rancher Manager's role-based access control. The inheritedNamespacedRules field of a GlobalRole propagates permissions into named namespaces of every downstream cluster managed by the Rancher instance, but it was not subject to the privilege-escalation validation applied to the other permission-carrying fields of a GlobalRole. As a result, a non-administrative user could be granted, through a global role  binding, permissions in downstream clusters that exceed the permissions that user already holds. This affected SUSE Rancher 2.15.2 only, and SUSE Rancher Webhook 0.11.0 up to 0.11.4, and 0.12.0 up to 0.12.1.</description>
+    <title>CVE-2026-58997 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58997</link>
+    <guid isPermaLink="false">a70f4ea7fb4520ad87e6e8bbb455f54b</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In validateImageInfo of Bitmap.cpp, there is a possible out-of-bounds read due to a precondition check failure. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-88811 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88811</link>
-    <guid isPermaLink="false">b0cfc898b6f267bc28a9fc07931248a3</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 9.1 | Missing filtering in the SUSE Rancher Manager meta proxy could cause passed in rancher credentials to be leaked to cloud providers. This affects SUSE Rancher 2.15.0 up to 2.15.3, 2.14.0 up to 2.14.7, 2.13.0 up to 2.13.11,</description>
+    <title>CVE-2026-59000 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59000</link>
+    <guid isPermaLink="false">a55fa6ef2144e4eaed7e794465361319</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple locations, there is a possible permission bypass due to a confused deputy. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2024-12139 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2024-12139</link>
-    <guid isPermaLink="false">fc422fb6e65725ad5b9b9ac724fa0ec1</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 4.3 | The error handling implementation fails to properly sanitize or validate user-supplied input within URL parameters under specific conditions. This allows end-users to manipulate the error messages that are displayed by the application.
-
-By exploiting this vulnerability, malicious actors can inject arbitrary content into error messages. This enables them to perform social engineering attacks, such as phishing or credential theft, by replacing legitimate error messages with malicious content, misleading users into compromising sensitive information or taking harmful actions.</description>
+    <title>CVE-2026-59001 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59001</link>
+    <guid isPermaLink="false">ebfc51e16ecd9bc20a7d5d9ccd55e05d</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In checkQueryPermission of TelephonyProvider.java, there is a possible permission bypass due to a logic error in the code. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-106806 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106806</link>
-    <guid isPermaLink="false">61dcd5ce4ee0d24ece55fe669b22f50b</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | A memory exhaustion issue exists in Open5GS v2.8.0 in the HTTP/2 SBI server. Repeated header names cause previously allocated header strings to be leaked, and HPACK compression allows an unauthenticated remote attacker to trigger tens of thousands of duplicate headers with a small request. Repeated crafted requests can cause persistent heap growth, exhaust process memory, and terminate the affected Open5GS network function, resulting in denial of service.</description>
+    <title>CVE-2026-59002 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59002</link>
+    <guid isPermaLink="false">d4c5ae41c78c80ab9083ae2659d5d473</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In handleMessage of UsbDeviceManager.java, there is a possible lock-screen bypass due to a logic error in the code. This could lead to physical information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-106808 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106808</link>
-    <guid isPermaLink="false">a48d51b579c5fd7b70ec850d475df46c</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.5 | OpenAirInterface Core Network v2.2.1 has a stack-based buffer overflow vulnerability in the OAI CN5G UDM Nudm_UEAU Generate Authentication Data endpoint. The UDM passes attacker-controlled resynchronizationInfo.rand and auts values to conv::hex_str_to_uint8(), which converts arbitrary-length hex strings into fixed-size stack buffers without validating the destination size. An unauthenticated attacker with access to the SBI interface and a valid SUPI can submit an oversized value to overwrite adjacent stack memory, corrupt the stack canary, and terminate the UDM process.</description>
+    <title>CVE-2026-59003 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59003</link>
+    <guid isPermaLink="false">77b6f1d5ee855163c7e5583a2be10d29</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In getSubscriptionProperty of SubscriptionManagerService.java, there is a possible information disclosure due to a missing permission check. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-111048 - NVD - CVSS Score v4.0: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111048</link>
-    <guid isPermaLink="false">342a790ed29b7fde8b0108f9cd5b4b57</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.4 | FOSSBilling is an open source billing and client-management platform. From 0.1.0 until 0.8.9, the admin/support/note_create endpoint stores the note parameter without sanitization in the support_ticket_note table, and src/modules/Support/templates/admin/mod_support_tickets.html.twig renders each stored support ticket note through innerHTML in the admin ticket list. A staff user with only the support.manage_tickets permission can store HTML or JavaScript that executes when another staff member opens the ticket notes. The script runs with the viewing staff member's session and privileges, can read a CSRF token and accessible client or invoice data, and can perform administrative actions available to the viewer, including a Super Administrator. The ticket detail page is not affected because its Twig rendering uses autoescaping. This issue is fixed in version 0.8.9.</description>
+    <title>CVE-2026-59004 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59004</link>
+    <guid isPermaLink="false">9f2626668be10851f73c918212f0e07c</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple locations, there is a possible permission bypass due to an uncaught exception. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-117067 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117067</link>
-    <guid isPermaLink="false">0e9473d94e18be1a44d833a4661d41a4</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | An out-of-bounds memory access vulnerability in the N2 SCTP interface of OpenAirInterface (OAI) CN5G AMF v2.2.1 allows an unauthenticated remote attacker to cause a denial of service (DoS) by repeatedly establishing SCTP associations, resulting in a process crash due to improper file descriptor bounds checking in the FD_SET() operation.</description>
+    <title>CVE-2026-59005 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59005</link>
+    <guid isPermaLink="false">894e301962185074e0da0701905fb269</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In insertInternal of MmsProvider.java, there is a possible multiuser isolation issue due to a missing permission check. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-117068 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117068</link>
-    <guid isPermaLink="false">1cd80443f86e840742e5adbf062a39a1</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | An integer underflow vulnerability in the NAS decoder of OpenAirInterface (OAI) CN5G AMF v2.2.1 allows an unauthenticated remote attacker to cause a denial of service (DoS) via crafted NAS Registration Requests containing a truncated SUCI in the 5GS Mobile Identity IE. Insufficient length validation in the DecodeSuci() function results in an out-of-bounds heap read, causing the AMF process to crash.</description>
+    <title>CVE-2026-59006 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59006</link>
+    <guid isPermaLink="false">f94947d8ec22bbae3f801dbd3e4d4fb9</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In getTouchOcclusionMode of WindowState.java, there is a possible tapjacking issue due to a tapjacking/overlay attack. This could lead to local information disclosure with no additional execution privileges needed. User interaction is needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119085 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119085</link>
-    <guid isPermaLink="false">680a3bc358d8ded3041903dda16e72c4</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.4 | Improper neutralization of special elements used in a template engine in the publishing component of Amazon Virtual Engineering Workbench (VEW) could allow a remote authenticated third party to run arbitrary code with the permissions of the publishing Lambda's IAM role. This could allow access to data and resources across all tenant projects. The code is reachable through a crafted CloudFormation template body containing template engine directives submitted through the product versioning API.
-
-
-
-To remediate this issue, users should redeploy from the latest version of awslabs/virtual-engineering-workbench.</description>
+    <title>CVE-2026-59007 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59007</link>
+    <guid isPermaLink="false">bbc09239682960cde8fbd4dd71844930</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In decode_packed_entry_number of codebook.c, there is a possible out-of-bounds read due to a logic error in the code. This could lead to remote information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120416 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120416</link>
-    <guid isPermaLink="false">36e770d459e0cf11e158f16f04042ea5</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | A security vulnerability has been detected in AndyFactory newspaper4k up to 0.9.6. This affects the function Article.parse of the file newspaper/extractors/image_extractor.py of the component Image Extractor. Such manipulation leads to server-side request forgery. It is possible to launch the attack remotely. Upgrading to version 0.9.6.1 mitigates this issue. The name of the patch is eec5fab21897c14667c98f5ba1831ebd3a692dd4. Upgrading the affected component is advised. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.</description>
+    <title>CVE-2026-59008 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59008</link>
+    <guid isPermaLink="false">c78c166ed929aad4406ce532d1f3a9fe</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In setApplicationRestrictions of DevicePolicyManagerService.java, there is a possible denial of service due to resource exhaustion. This could lead to local denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120627 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120627</link>
-    <guid isPermaLink="false">1d96c46bfb9335e8dfee511a3a2e58fd</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | The Private Internet Access Extension for Firefox contains an unguarded onAuthRequired authentication handler, leading to leakage of PIA proxy credentials when a user visits any malicious website that issues a Basic auth challenge. This issue was fixed in version 3.2.5, but reintroduced in later versions.</description>
+    <title>CVE-2026-59010 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59010</link>
+    <guid isPermaLink="false">6bb9366a99d5e1936bd5edd1d3e24d90</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In deserialize of legacy.rs, there is a possible denial of service due to a missing bounds check. This could lead to local denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120630 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120630</link>
-    <guid isPermaLink="false">c06cfe30dc592b424d728f97add69662</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | CrewAI contains an SSRF vulnerability caused by its SSRF guard and HTTP client, which both miss malicious content in URLs by checking opposite content passed to it, enabling any request that injects a malicious URL to perform SSRF, such as with the ScrapWebsiteTool.</description>
+    <title>CVE-2026-59011 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59011</link>
+    <guid isPermaLink="false">9eaa66eed2ccc9f9887c3869d8e72280</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple locations, there is a possible permission bypass due to a logic error in the code. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-105603 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105603</link>
-    <guid isPermaLink="false">1b4503ce2800c860a63b2ae30bc37f10</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.4 | Joomla Extension - dj-extensions.com - Authenticated arbitrary file upload in DJ-Classifieds &lt; 3.11.3 - The Joomla extension DJ-Classifieds is vulnerable to an unprivileged file upload, leading to full RCE.</description>
+    <title>CVE-2026-59012 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59012</link>
+    <guid isPermaLink="false">89231a2bea4f6adcbd0a7d655165df21</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In checkLastKnownCellIdAccessPermission of TelephonyPermissions.java, there is a possible permission bypass due to a missing permission check. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-105604 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105604</link>
-    <guid isPermaLink="false">ae0f7e13291f1ba10aad45de4db92ebe</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.3 | Joomla Extension - dj-extensions.com - Unauthenticated SQL injection in DJ-Classifieds &lt; 3.11.3 - The Joomla extension DJ-Classifieds is vulnerable to an unauthenticated SQL injection vector in the frontend search.</description>
+    <title>CVE-2026-59014 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59014</link>
+    <guid isPermaLink="false">9623fe8f714b6cf53b7b896e98f13c8d</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple locations, there is a possible out-of-bounds write due to an integer overflow. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-105605 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105605</link>
-    <guid isPermaLink="false">add573838dcab163afad837fae7054f2</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.3 | Joomla Extension - dj-extensions.com - IDOR vulnerability allowing cross-account ad access in DJ-Classifieds &lt; 3.11.3 - A “duplicate my ad” convenience feature on the new-ad form (site/models/additem.php) loaded an existing advert by its raw numeric ID with no check that the ad belonged to the requesting user, and no check of whether it was published, blocked, or still a pending draft. Any logged-in user, regardless of role, could request the new-ad form with another ad’s ID and have that ad’s full content, including the seller’s phone number, address, email, and price, rendered into the response, even for ads that had never been published. Advert IDs are small sequential integers.</description>
+    <title>CVE-2026-59015 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59015</link>
+    <guid isPermaLink="false">6ef69e043a6f5cf47aaee8f1a2cd76d3</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple locations, there is a possible permission bypass due to a confused deputy. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-105606 - NVD - CVSS Score v4.0: 9.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105606</link>
-    <guid isPermaLink="false">676a364150c1898ae71303d195d42224</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.5 | Joomla Extension - joomlaboat.com - Unauthenticated arbitrary file upload in Custom Tables &lt; 3.7.8 - An unauthenticated attacker can upload a polyglot file with an attacker-controlled extension to the web-accessible tmp directory of any Joomla site that exposes a public Custom Tables submission form, and the stored path is disclosed in the response. By default the uploaded file is served as static content, so the primary impact is an unauthenticated arbitrary file write to a web-accessible directory, which allows hosting of attacker-controlled content (for example phishing or malware pages) under the victim's domain.</description>
+    <title>CVE-2026-59016 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59016</link>
+    <guid isPermaLink="false">4a65416a66d62bd125321cc820aaa37a</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In sendAnomalyProfile of ProfilingService.java, there is a possible path traversal issue due to path traversal. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-117069 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117069</link>
-    <guid isPermaLink="false">1ae5c51cf12cb55025eab19f6b11c7a2</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | An integer truncation vulnerability in the NAS decoder of OpenAirInterface (OAI) CN5G AMF v2.2.1 allows an unauthenticated remote attacker to cause a denial of service (DoS) via crafted NAS Registration Requests containing a malformed IMEISV in the 5GS Mobile Identity IE. The Type6NasIe::Validate() function truncates a 32-bit length value to 16 bits, bypassing length validation and causing an out-of-bounds heap read in DecodeImeisv(), which can crash the AMF process.</description>
+    <title>CVE-2026-59020 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59020</link>
+    <guid isPermaLink="false">64d45745a5177b1f1421ccfaa5eb760e</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In removeUserData of DevicePolicyManagerService.java, there is a possible denial of service due to a race condition. This could lead to local denial of service with User execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-117127 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117127</link>
-    <guid isPermaLink="false">470352a23691c1d3bccf5bee7b76bd69</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Directory Traversal vulnerability in Gleez GleezCMS v.1.2.0 allows a remote attacker to obtain sensitive information via the action_serve function in media.php</description>
+    <title>CVE-2026-59021 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59021</link>
+    <guid isPermaLink="false">1b761e3cd687b1c0eb5e06737dda5266</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple locations, there is a possible denial of service due to improper input validation. This could lead to local denial of service with User execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119731 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119731</link>
-    <guid isPermaLink="false">f273b45b49c8c04a4f02f4130e969bb7</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.7 | Munshi (by Petpooja) before 2026-06-30 contained a payment bypass vulnerability in its subscription payment webhook at POST /api/payment/order/webhook, which lacks webhook authentication, cryptographic signature verification, source validation, and independent server-side confirmation with the payment provider. A remote, unauthenticated attacker can submit a forged payment-success notification referencing an order obtained from the payment-status redirect URL, causing the backend to mark the subscription as paid/active and granting paid access without an actual successful payment.</description>
+    <title>CVE-2026-59022 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59022</link>
+    <guid isPermaLink="false">3a2e07d57d14b3e5685357e0fe15f155</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple functions of MediaProvider.java, there is a possible permission bypass due to a logic error in the code. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119732 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119732</link>
-    <guid isPermaLink="false">07a095f8f710f371e164e1bf845de498</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 7.1 | Munshi (by Petpooja) before 2026-07-28 contained a broken object level authorization vulnerability that allows authenticated sub-users to delete invoices belonging to the tenant owner by exploiting the DELETE /api/invoice/{invoice_id} and POST /api/invoices/bulk-delete endpoints, which only verify tenant membership without enforcing object-level ownership or permission checks. Attackers can invoke single or bulk deletion requests with arbitrary invoice identifiers to delete invoices they do not own, resulting in unauthorized data loss.</description>
+    <title>CVE-2026-59028 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59028</link>
+    <guid isPermaLink="false">77fdb47b16d7a5f761c8dc2c87f56cd9</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In resolveAidConflictLocked of RegisteredAidCache.java, there is a possible permission bypass due to a confused deputy. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119733 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119733</link>
-    <guid isPermaLink="false">0edf9d7597088c50c498b93e3820d26b</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 7.2 | Munshi (by Petpooja) before 2026-07-07 contained a missing authorization vulnerability in its company deletion workflow at DELETE /api/companies/{company_id}, where the application fails to enforce the dedicated company_delete permission or verify company ownership. An authenticated invited sub-user with mere access to a company can exploit this flaw to perform a hard delete of the company record, causing irreversible loss of associated business data including invoices, configurations, and chat sessions.</description>
+    <title>CVE-2026-59031 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59031</link>
+    <guid isPermaLink="false">0f23b1e1faa62c5d097b4ad7096b7a2f</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In InputDispatcher::flushSensor of InputDispatcher.cpp, there is a possible denial of service due to a logic error in the code. This could lead to local denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119734 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119734</link>
-    <guid isPermaLink="false">92a24b51a7a2eb5c14568c3d8d7104f3</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 7.1 | Munshi (by Petpooja) before 2026-06-17 contained a broken object level authorization vulnerability that allows authenticated attackers to access another user's purchase inquiry by manipulating the thread identifier in the GET /purchase-inquiry/thread/{thread-id} endpoint. Attackers can modify the thread ID to read supplier communication and quotation-related content belonging to other users, resulting in unauthorized disclosure of sensitive business information outside their access scope.</description>
+    <title>CVE-2026-59042 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59042</link>
+    <guid isPermaLink="false">9eab5ebc8a29086b236984354c2b7873</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In __pkvm_pages_to_ppages of mmu.c, there is a possible out-of-bounds write due to a race condition. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119735 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119735</link>
-    <guid isPermaLink="false">c31ee3076115b22113e696bb9ac92a3f</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.1 | Munshi (by Petpooja) before 2026-07-13 contained a stored cross-site scripting vulnerability that allows authenticated users to inject malicious markup through item descriptions or messages submitted in the Purchase Inquiry thread (/purchase-inquiry/thread/{thread-id}), which is assigned to innerHTML during rendering before text cleaning completes. Attackers can store a payload that executes in the browser of another user who opens the affected thread, achieving JavaScript execution and full-page defacement that re-triggers whenever the thread is reopened.</description>
+    <title>CVE-2026-59043 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59043</link>
+    <guid isPermaLink="false">21011d7d05646717c764fbcec092dce9</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In arm_lpae_split_blk_unmap of io-pgtable-arm-common.c, there is a possible memory corruption due to a race condition. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119736 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119736</link>
-    <guid isPermaLink="false">ef1745bced357e0ca611221bea167a3b</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.8 | Attendo (formerly Petpooja Payroll) Admin Android application version 3.0.13 and earlier contains a hard-coded credentials vulnerability that allows attackers to extract production MQTT broker credentials by decompiling the APK's bundled Flutter configuration assets such as production.json and device-command configuration files. Attackers can use the recovered credentials to authenticate to the production MQTT broker over TCP 1883, access messaging topics containing employee attendance records, personal identifiers, Base64-encoded photographs, device telemetry, and authentication material, and publish messages to those topics, resulting in exposure of sensitive data and potential unauthorized message injection.</description>
+    <title>CVE-2026-59044 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59044</link>
+    <guid isPermaLink="false">5bc8f77fa6572f080d80f75892ebbdfc</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple locations, there is a possible use-after-free due to a logic error in the code. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120057 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120057</link>
-    <guid isPermaLink="false">589907b3d5100910ca5e0f0d3a499420</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.5 | psqlODBC copies the reply to a large-object read (loread) into the application's buffer using the length sent by the server, without comparing it to the buffer size. A server not trusted under current SSL settings, or a man-in-the-middle, can return more bytes than the buffer holds and overwrite adjacent memory in the client process with server-chosen bytes. Fetching any large-object column is sufficient to trigger it. Versions before psqlODBC 18.00.0006 are affected.</description>
+    <title>CVE-2026-59045 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59045</link>
+    <guid isPermaLink="false">f0a11b2659b88289023abe72914a3e0e</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple locations, there is a possible memory corruption due to a race condition. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120058 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120058</link>
-    <guid isPermaLink="false">e931ff39a7c3abf6244621443e96b12b</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.5 | psqlODBC sizes its row cache from the column count of a cursor's first result, but recomputes the column count from each later FETCH reply without checking that it matches. A server not trusted under current SSL settings can answer a later FETCH with more columns and make the driver write tuple records past the end of the heap allocation. A keyset reply with fewer columns than the key fields also underflows the unsigned field count. This is reachable with UseDeclareFetch enabled. Versions before psqlODBC 18.00.0006 are affected.</description>
+    <title>CVE-2026-59046 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59046</link>
+    <guid isPermaLink="false">76a9969946c637298cd8fdcca955e11e</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In __pkvm_guest_relinquish_to_host of mem_protect.c, there is a possible out-of-bounds write due to improper input validation. This could lead to local denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120059 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120059</link>
-    <guid isPermaLink="false">28205ef583404b6ac39985c59742b99a</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 6.8 | For an updatable cursor over a table without OIDs that has an auto-increment int4 column, psqlODBC places that column's name, as reported by the server, into a printf-style format string. It later expands that string with one argument while it builds the WHERE clause of its positioned SELECT, UPDATE, and DELETE statements. A column name that contains format directives makes the driver read unrelated memory, which can crash the application or copy client memory into query text sent to the server. The name can come from a server not trusted under current SSL settings, or from any database user who can create a table that the application reads with an updatable cursor. Versions before psqlODBC 18.00.0006 are affected.</description>
+    <title>CVE-2026-59047 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59047</link>
+    <guid isPermaLink="false">92ea9e129a3412ad58cc126ae4f8c87b</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple locations, there is a possible denial of service due to a logic error in the code. This could lead to local denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120060 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120060</link>
-    <guid isPermaLink="false">2c4fed9d0ecd9eef3f6602009c260ad6</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.9 | psqlODBC trusts counts and lengths in server data in three places. SQLBulkOperations uses a server-supplied row count in a size subtraction that can underflow. SQLStatistics iterates index keys using a server-supplied key count without bounding it to the fixed storage. Bytea octal decoding reads up to two bytes past the end of a truncated escape sequence. A server not trusted under current SSL settings can crash the client or make it read out of bounds. Versions before psqlODBC 18.00.0006 are affected.</description>
+    <title>CVE-2026-59048 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59048</link>
+    <guid isPermaLink="false">4f08ca81b3de58fad4a87db129690e21</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In rb_cpu_init of trace.c, there is a possible out-of-bounds read due to an incorrect bounds check. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120061 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120061</link>
-    <guid isPermaLink="false">b02da3913e0a4d4b7079fa24f23143da</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.5 | The psqlODBC parser for ODBC escape sequences in application SQL text writes the argument offsets of a {fn} escape into a fixed 16-entry stack array without a bound and does not initialize the array. An escape with too many arguments overflows the stack, and a reference to an unsupplied argument copies arbitrary bytes into the query. The copy of a {d}, {t}, {ts}, or {escape} body also writes one byte past a 128-byte stack buffer. An application that forwards untrusted SQL text to the driver exposes its process to memory corruption. Versions before psqlODBC 18.00.0006 are affected.</description>
+    <title>CVE-2026-86365 - NVD - CVSS Score v3.1: 4.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86365</link>
+    <guid isPermaLink="false">6cd18a6c1e1a19e0fad74b77778b7c06</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 4.2 | Dell Alienware Command Center (AWCC), versions prior to 6.14.54.0, contain an Improper Input Validation vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Denial of Service.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120062 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120062</link>
-    <guid isPermaLink="false">36c791367758be4419a3fef5b4e0c0c5</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.5 | SQLSpecialColumns in psqlODBC splices the table and schema names it receives into its catalog query without escaping them, while the other catalog functions escape them. An application that passes an untrusted table or schema name to SQLSpecialColumns lets the caller execute arbitrary SQL with the privileges of the connection. Versions before psqlODBC 18.00.0006 are affected.</description>
+    <title>CVE-2026-91893 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91893</link>
+    <guid isPermaLink="false">aba6df386054ba38079cf9e6e875ab4e</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.8 | Dell Alienware Command Center (AWCC), versions prior to 6.14.54.0, contain an Improper Privilege Management vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privilege.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120063 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120063</link>
-    <guid isPermaLink="false">5f7f4526287c4cf54202495daba070ed</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.9 | When psqlODBC quotes a schema or table name into a 128-byte stack buffer, its length check lets it write up to two bytes past the end of the buffer for a long name. The names come from the application's SQL text: the table of a statement the driver parses to describe its columns, and the target of the last INSERT when the driver rewrites SELECT @@IDENTITY. In the @@IDENTITY rewrite, a column name sent by the server can also write one byte past the buffer. The bytes written past the buffer are a double quote and a NUL. An application that forwards untrusted SQL text to the driver exposes its process to stack corruption. Versions before psqlODBC 18.00.0006 are affected.</description>
+    <title>CVE-2026-91894 - NVD - CVSS Score v3.1: 6.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91894</link>
+    <guid isPermaLink="false">721c36b2119ba130c8082322ac373a50</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 6.7 | Dell Alienware Command Center (AWCC), versions prior to 6.14.54.0, contain a Least Privilege Violation vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privilege, Arbitrary Code Execution and Denial of Service.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120064 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120064</link>
-    <guid isPermaLink="false">756d862af9dffd0c5f66f5a60b095057</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.5 | Several psqlODBC entry points use an application-supplied column number or row index as an array index without validating it. SQLBindCol with a column number above 32767 wraps the binding count negative and a later copy runs off the array. A negative SQL_DESC_COUNT on an application row descriptor unbinds columns at negative indexes. SQLColAttribute with a very large column number uses a negative index. SQLSetPos(SQL_ADD) does not check the row number against the rowset size. An application that forwards untrusted column or row numbers exposes its process to out-of-bounds reads and writes. Versions before psqlODBC 18.00.0006 are affected.</description>
+    <title>CVE-2026-91895 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91895</link>
+    <guid isPermaLink="false">213fb203f9c4d7e4c906e822173eee62</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.1 | Dell Alienware Command Center (AWCC), versions prior to 6.14.54.0, contain an Incorrect Default Permissions vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information Tampering.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120065 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120065</link>
-    <guid isPermaLink="false">5395e165deb839c51e63c4b5c751bb01</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.1 | For an updatable cursor over a table without OIDs that has an auto-increment int4 column, psqlODBC uses that column to identify rows. It places the column's name, as reported by the server, between double quotes in its keyset queries and in the WHERE clause of its positioned SELECT, UPDATE, and DELETE statements, without doubling any double quote in the name. A column name that contains a double quote therefore changes the SQL that the driver runs with the application's privileges, including which rows a positioned UPDATE or DELETE affects. Any database user who can create a table that the application reads with an updatable cursor can choose such a name, and so can a server not trusted under current SSL settings. Versions before psqlODBC 18.00.0006 are affected.</description>
+    <title>CVE-2026-91896 - NVD - CVSS Score v3.1: 3.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91896</link>
+    <guid isPermaLink="false">8fafa75828852e8e20c475ff2930619e</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 3.9 | Dell Alienware Command Center (AWCC), versions prior to 6.14.54.0, contain an Authentication Bypass by Spoofing vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information Tampering, Denial of Service and Spoofing of Application Notifications.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120066 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120066</link>
-    <guid isPermaLink="false">a6cf2d048446e9c7581ec810792daf8d</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.3 | On Unix-like systems, when logging is enabled, psqlODBC creates its log files in /tmp by default, named from the program name, user name, and process ID, with the default permissions, typically world-readable, and follows symbolic links when opening them. A local user can read query text and data from another user's logs, and can place a symbolic link at the predictable path so that the driver appends log data to a file of the attacker's choosing with the victim's privileges. Versions before psqlODBC 18.00.0006 are affected.</description>
+    <title>CVE-2026-91897 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91897</link>
+    <guid isPermaLink="false">c6c43a3d0431f2dbe04e96a0826f7142</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 6.4 | Dell Alienware Command Center (AWCC), versions prior to 6.14.54.0, contain an Improper Certificate Validation vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to Arbitrary Code Execution and Denial of Service.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120067 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120067</link>
-    <guid isPermaLink="false">0ab0eb7621a14385efa18e9a52a29b0b</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.9 | For updatable cursors, which are enabled by default, psqlODBC adds hidden ctid and, for tables with OIDs, oid columns to the query. It copies each value into a 32-byte stack buffer using the length the server sent, without checking it against the buffer size, so a value of 32 bytes or more writes past the buffer. A server not trusted under current SSL settings can send such a value. So can any database user who can create a view with its own column named ctid that the application reads with an updatable cursor. Builds with _FORTIFY_SOURCE abort; other builds overwrite adjacent stack memory. Versions before psqlODBC 18.00.0006 are affected.</description>
+    <title>CVE-2026-91898 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91898</link>
+    <guid isPermaLink="false">4941089723852cade245241151501041</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 8.1 | Dell Alienware Command Center (AWCC), versions prior to 6.14.54.0, contain an Improper Verification of Cryptographic Signature vulnerability. An unauthenticated attacker with adjacent network access could potentially exploit this vulnerability, leading to Arbitrary Code Execution and Elevation of Privilege.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120497 - NVD - CVSS Score v4.0: 4.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120497</link>
-    <guid isPermaLink="false">1b685b7b7c44e0dfa54ec0f31c3487b2</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 4.6 | Stored cross-site scripting (XSS) in the HTML report generator in the aidlc-traceability CLI in AWS AI-DLC Workflows before 2026-07-03 might allow an actor who can modify a project's AI-DLC artifact files to execute arbitrary script in the browser of a user who opens a generated HTML traceability report via crafted artifact titles or descriptions.
-
-
-
-To remediate this issue, users should remove any local copy of the aidlc-traceability CLI obtained before 2026-07-03, or update it to commit 96cf0ea or later. The CLI was removed from the repository on 2026-07-16.</description>
+    <title>CVE-2026-91899 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91899</link>
+    <guid isPermaLink="false">d697f324ed11ce9cf215cf25c4cceb22</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 6.4 | Dell Alienware Command Center (AWCC), versions prior to 6.14.54.0, contain an Improper Verification of Cryptographic Signature vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privilege and Arbitrary Code Execution.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120656 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120656</link>
-    <guid isPermaLink="false">0b9f05af80691f6e512003ad33a77418</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | OpenKruise kruise-manager exposes an unauthenticated ppof endpoint when enabled, opening it on 0.0.0.0:8090, which can enable a DoS attack triggerable by any RBAC pod.</description>
+    <title>CVE-2026-91900 - NVD - CVSS Score v3.1: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91900</link>
+    <guid isPermaLink="false">eaceaebc43dba780593b65e565ae1a55</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.8 | Dell Alienware Command Center (AWCC), version(s) Versions up to and including 6.14.20.0, contain(s) an Improper Authorization in Handler for Custom URL Scheme vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Command execution, Launch of phishing attacks, and Remote execution.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-67186 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-67186</link>
-    <guid isPermaLink="false">b5f89631eb38a289a87590ce69c1bb1c</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</description>
+    <title>CVE-2026-91901 - NVD - CVSS Score v3.1: 3.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91901</link>
+    <guid isPermaLink="false">225f68ed8cacebfbf9750e94c8ff7e24</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 3.5 | Dell Alienware Command Center (AWCC), versions prior to 6.14.54.0, contain an Improper Authorization in Handler for Custom URL Scheme vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Client-Side Request Forgery.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81938 - NVD - CVSS Score v3.1: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81938</link>
-    <guid isPermaLink="false">78c1c5c7d95c2ee793fe69dad9b3cfbf</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.7 | Grafana Mimir's Alertmanager rejects tenant-supplied receiver configurations that reference local files, but the check did not cover two HTTP client settings: http_headers.&lt;name&gt;.files and basic_auth.username_file. A tenant permitted to upload an Alertmanager configuration could point these fields at any file readable by the Alertmanager process. When a notification was sent, Alertmanager read the file and put its contents in a header of the outgoing request. By directing the receiver at a server they control, the tenant could read files from the Alertmanager host, such as credentials and configuration.
-
-Exploitation requires permission to write the tenant's Alertmanager configuration. Grafana Enterprise Metrics (GEM), which is built on Mimir, is also affected. The issue is fixed in Mimir 3.1.7 and 3.2.2 and in GEM 2.17.20. GEM 2.11 through 2.16 will not receive a fix; users on those versions should upgrade to 2.17.20 or later.</description>
+    <title>CVE-2026-97718 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97718</link>
+    <guid isPermaLink="false">22f26c5f9972ef96b050c1449f523272</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.4 | CVE-2026-97718 Is a cross-site request forgery vulnerability
+in version 14.60 of the Secure Access server.  Because of a bypassed security control, an
+attacker can cause an admin to create an account under their control.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
