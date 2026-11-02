@@ -5,393 +5,324 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 15:00:32 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 16:02:56 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-117518 - NVD - CVSS Score v3.1: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117518</link>
-    <guid isPermaLink="false">944dcbafbb6542ae55fcbcf1a79fc8fd</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 8.2 | @fastify/reply-from is a Fastify plugin that forwards requests to an upstream HTTP server. In versions up to and including 12.8.0, the plugin validated proxy paths against forward-slash dot-segments only and then built the target with the WHATWG URL parser, which normalizes a backslash and its percent-encoded form to a forward slash on the http, https, ws, and wss schemes. A path that uses backslash dot-segments therefore bypasses the traversal check and resolves to a different upstream path, so an application that scopes proxying to an upstream prefix, or relies on route guards in front of the forwarding call, can have an unauthenticated request escape the intended prefix and reach other upstream endpoints. The resulting access to unintended upstream resources is primarily a confidentiality impact with limited integrity impact. The issue is fixed in @fastify/reply-from 12.8.1, where the path is normalized and any segment resolving to a single or double dot, along with control characters and ambiguous whitespace, is rejected before the URL is constructed, and users should upgrade to 12.8.1 or later. There is no workaround other than upgrading.</description>
+    <title>CVE-2026-120430 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120430</link>
+    <guid isPermaLink="false">3515a9c03772eb271a414713228a72aa</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.3 | Camaleon CMS before 2.9.2 contains an insecure direct object reference vulnerability in Admin::CategoriesController that allows authenticated users to modify unauthorized categories by referencing arbitrary category IDs. Users authorized for one post type can send update or destroy requests pairing another category ID with their authorized post_type_id to rename or delete categories.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-117531 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117531</link>
-    <guid isPermaLink="false">782f22de477ce1959d409697a4557c07</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.9 | @fastify/multipart is the multipart form-data and file upload plugin for the Fastify web framework. In versions 5.3.0 through 10.1.6, the plugin does not propagate a parser error to the file stream when a request body ends inside a file part with no closing boundary, even though the Content-Length is complete, the client does not abort, and no file size limit is exceeded. The plugin destroys the in-progress file stream without an error, so a handler that iterates the request parts and performs asynchronous work before consuming the file attaches to a stream that never emits an error or end event, and the request never responds while the connection stays open. An unauthenticated remote client can repeat these malformed uploads against such a route to accumulate pending connections and exhaust server resources, so the impact is availability only and exploitation depends on the application using a delayed file consumer. The issue is fixed in @fastify/multipart 10.1.7, where the parser error is propagated to the file stream so a delayed consumer settles with an error instead of hanging, and users should upgrade to 10.1.7 or later. There is no workaround other than upgrading.</description>
+    <title>CVE-2026-120431 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120431</link>
+    <guid isPermaLink="false">6112f54e936b505fb011ad2102737530</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.x before 11.02.29, and 11.03 before 11.15.07 contains a heap-based buffer overflow in sgitopnm's readChannels() function when processing RLE-compressed SGI images. Attackers can supply crafted SGI files with oversized offset table lengths to write controlled data past the heap buffer, causing crashes or potential code execution.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-117549 - NVD - CVSS Score v3.1: 4.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117549</link>
-    <guid isPermaLink="false">fbb4325ecf361d7b868e80e1ff2cc914</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 4.2 | @fastify/secure-session is a session plugin for Fastify that stores an encrypted session in a cookie. In versions 7.5.0 through 8.4.1, when the plugin is configured with the signed cookie option, it calls the cookie unsign routine but, when the signature check reports the value as invalid, still passes the original cookie value to the session decoder, so a session whose signature did not validate is decrypted anyway. The practical effect appears when an application supplies the cookie signing secret independently of the session encryption key and rotates only the signing secret to retire existing sessions while keeping the encryption key active, because a holder of an old session cookie can strip the now obsolete signature and keep using the session. The attacker must already possess an unexpired encrypted session cookie and needs neither secret, and cannot forge session data, extend expiry, or survive rotation of the encryption key. The issue is fixed in @fastify/secure-session 8.4.2, which no longer decodes the session when the signed cookie option is set and the signature check fails, and users should upgrade to 8.4.2 or later. As a workaround, rotate the session encryption key rather than relying on rotation of the cookie signing secret alone.</description>
+    <title>CVE-2026-120432 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120432</link>
+    <guid isPermaLink="false">038396348c8c7592428e17cf3a1062e9</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.02.30, and 11.15.08 contains an integer overflow vulnerability in winicontopam that allows attackers to corrupt heap memory via oversized ICO/CUR dimensions. Attackers can supply a crafted icon file with width or height above 32767, wrapping int16_t loop counters into negative row buffer indices to cause crashes or potential code execution.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120213 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120213</link>
-    <guid isPermaLink="false">b06f789979cd980b2f78dfa1d6d5b5d1</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 9.1 | @fastify/http-proxy is a Fastify plugin that proxies HTTP requests to an upstream server under a configured prefix. In versions 9.0.0 through 11.6.5, when an application uses parameterized prefix and rewritePrefix options to pin clients to a fixed upstream path, the plugin substitutes URL-decoded route parameters into rewritePrefix without re-encoding them. A parameter value that encodes a path separator together with a fragment or query delimiter therefore decodes into real separators and delimiters that inject extra upstream path segments and strip the mandatory suffix the rewritePrefix was meant to enforce, without using any dot-dot traversal. An unauthenticated remote attacker can use this to reach upstream locations outside the intended prefix, leading to path-restriction bypass and, depending on the upstream, server-side request forgery or authorization bypass in the proxied service. The issue is fixed in @fastify/http-proxy 11.6.6, and users should upgrade to 11.6.6 or later. There is no workaround other than upgrading.</description>
+    <title>CVE-2026-120433 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120433</link>
+    <guid isPermaLink="false">ddcf4ca076034c139ed1569384bc0c68</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.x before 11.02.30, and 11.03 before 11.15.08 contains a stack-based buffer overflow in the picttoppm paintPoly() function due to an unbounded polygon point count. Attackers can supply a crafted PICT file with a polygon exceeding 100 points to overwrite the fixed pts array, causing crashes or potentially code execution.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120214 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120214</link>
-    <guid isPermaLink="false">1938ea253cdd62bf4be86826cebc679e</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.9 | @fastify/http-proxy is a Fastify plugin that proxies HTTP requests to an upstream server under a configured prefix. In versions 11.6.0 through 11.6.2, the destination validation normalizes literal backslashes before it percent-decodes the request path, so a path that encodes its backslashes and dot-segments survives the dot-segment check and is only turned into backslash and double-dot sequences after that check has passed. When the upstream resolves on a platform that treats a backslash as a path separator, the forwarded request walks out of the configured proxy prefix and reaches a sibling location on the upstream. An unauthenticated remote attacker can use this to retrieve upstream resources outside the intended prefix, so the impact is confidentiality only, and exploitation depends on the upstream's path handling. The issue is fixed in @fastify/http-proxy 11.6.3, and users should upgrade to 11.6.3 or later. This is a follow-up to the earlier prefix-escape fix, which did not account for the encoded-backslash form.</description>
+    <title>CVE-2026-120434 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120434</link>
+    <guid isPermaLink="false">ebded4fe9c3ac2230e80c969ae5b70da</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.x before 11.02.30, and 11.03 before 11.15.08 contains a stack-based buffer overflow in picttoppm's scanPoly() function in converter/ppm/picttoppm.c. Attackers can supply a crafted PICT file whose polygon edges produce more than 5000 points, overflowing the coord stack array to crash the converter or potentially execute code.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120215 - NVD - CVSS Score v3.1: 3.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120215</link>
-    <guid isPermaLink="false">2992cbd03a0475893ef50cd05ca8f6f8</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 3.7 | @fastify/cors is the CORS plugin for the Fastify web framework. In versions 8.2.0 through 11.3.x, an application that registers the plugin with the non-default onSend hook option crashes on a CORS preflight. On an OPTIONS request that carries the Origin and Access-Control-Request-Method headers, the plugin calls reply.send from inside the onSend hook and re-enters the send pipeline, so a second write of the response headers throws an uncaught ERR_HTTP_HEADERS_SENT that can terminate the Node.js process when no process-level handler is installed. An unauthenticated remote client can trigger this with a single preflight request, so the impact is availability only, and exploitation requires the non-default onSend configuration. The issue is fixed in @fastify/cors 11.4.0, where onSend is no longer an accepted hook value and registration fails with a clear error instead of crashing at request time, and users should upgrade to 11.4.0 or later. As a workaround, use any other hook such as the default onRequest, or set preflight to false.</description>
+    <title>CVE-2026-120435 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120435</link>
+    <guid isPermaLink="false">d7e928f53c925e04acc1ced65376f916</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.x before 11.02.30, and 11.03 before 11.15.08 contains a heap buffer overflow in xpmtoppm caused by an unvalidated characters-per-pixel value in the XPM header. Attackers can supply a crafted XPM file with characters-per-pixel greater than 3 to overrun fixed 3-byte colorName hash entries, causing crashes or potentially code execution.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120216 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120216</link>
-    <guid isPermaLink="false">2498da1b7df1e65b176c3294fa64273e</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.9 | fastify is a web framework for Node.js. In versions 5.8.0 through 5.12.7, when the server is configured with a nonzero handlerTimeout and a route returns a streaming response, a request whose stream has already sent its headers but stays open past the timeout crashes the server. When the timeout fires, Fastify tries to send a new error response on a response that has already started, raising an uncaught ERR_HTTP_HEADERS_SENT that terminates the Node.js process and interrupts any other in-flight requests. An unauthenticated remote client can trigger this with a single request to an affected streaming endpoint, so the impact is availability only, and exploitation requires the non-default handlerTimeout to be set. The default handlerTimeout of 0 is not affected. The issue is fixed in fastify 5.12.8, and users should upgrade to 5.12.8 or later. As a workaround, set handlerTimeout to 0, which disables the affected timeout path.</description>
+    <title>CVE-2026-120436 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120436</link>
+    <guid isPermaLink="false">0a63f3bcd023a46637b85e88fa2e09c1</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | Netpbm before 10.86.51, 11.x before 11.02.30, and 11.03 before 11.15.08 contains an integer overflow in jbigtopnm that causes heap buffer overflow when computing output buffer size. Attackers can supply a crafted multi-plane JBIG file with large header dimensions so jbg_dec_merge_planes() overflows the undersized buffer, causing crashes or potentially code execution.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-2613 - NVD - CVSS Score v3.1: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-2613</link>
-    <guid isPermaLink="false">4d8551c3fd468d0f2321236af2957ce7</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 8.7 | The Admin REST API accepts user-supplied input without adequately sanitizing it, allowing it to be included in the structure of SQL statements.
-
-A user with administrator privileges can exploit this by influencing the structure of executed SQL statements, enabling blind SQL injection to infer database information and potentially impact the availability of the database service.</description>
+    <title>CVE-2026-120437 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120437</link>
+    <guid isPermaLink="false">21e59c92cc5322a32d2cc0114e45f9d5</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | Netpbm before 10.86.51, 11.x before 11.02.30, and 11.03 before 11.15.08 contains an out-of-bounds read vulnerability in the tgatoppm converter's get_pixel() function that uses unchecked pixel values as color map indexes. Attackers can supply a crafted color-mapped Targa file whose pixel values exceed the declared color map bounds to crash the converter or leak adjacent memory into the output image.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-8923 - NVD - CVSS Score v3.1: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-8923</link>
-    <guid isPermaLink="false">0b7c27459c4beb37a5fcc3e97288ab6d</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 8.7 | Zohocorp ManageEngine Eventlog Analyzer and ManageEngine Log360 versions before 13062 are vulnerable to Authenticated Remote Code Execution in Log Forward option.</description>
+    <title>CVE-2026-120438 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120438</link>
+    <guid isPermaLink="false">6a1213e379c0b75f0be86c80ee531a07</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.5 | QuickJS-NG before 0.16.0 contains an integer overflow in js_proxy_get_own_property_names() in quickjs.c that causes a heap buffer overflow on 32-bit hosts. Attackers running JavaScript can return a large array-like object from a Proxy ownKeys trap to wrap the allocation size, causing crashes or potential code execution.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2024-9517 - NVD - CVSS Score v3.1: 4.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2024-9517</link>
-    <guid isPermaLink="false">979209da57c3d74a20511a5f3a4ec72c</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 4.9 | The refresh token grant type in WSO2 products fails to re-validate account status before issuing new access tokens. This weakness allows an attacker to obtain valid access tokens for user accounts even after they have been blocked by the user store, bypassing account lockout mechanisms.
-
-This vulnerability can lead to unauthorized access to user accounts and their associated resources. Attackers can leverage this to perform actions on behalf of blocked users, potentially leading to privilege escalation or data exfiltration depending on the permissions of the compromised account.</description>
+    <title>CVE-2026-120439 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120439</link>
+    <guid isPermaLink="false">8bb3cbd0a2886757dda1ffdccbfe2a9b</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.3 | QuickJS-NG before 0.16.0 contains an integer overflow in js_typed_array_sort() in quickjs.c that allows attackers to cause a heap buffer overflow on 32-bit hosts. Attackers who can run JavaScript can call TypedArray.prototype.sort with a comparator on a typed array near 2^30 elements, wrapping the allocation size and writing indices past the buffer to crash or potentially execute code.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-100140 - NVD - CVSS Score v4.0: 1.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100140</link>
-    <guid isPermaLink="false">75b8e48f535bf32a64898b2ed13c842f</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 1.9 | An integer overflow vulnerability in the Qt XML parsing (Qt5Compat / QXmlSimpleReader) functionality of Qt.</description>
+    <title>CVE-2026-120440 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120440</link>
+    <guid isPermaLink="false">d46682c9fb47e79a7e2aea0c07e033ea</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | QuickJS-NG before 0.16.0 contains a memory leak vulnerability in js_atomics_store() in quickjs.c that fails to free the converted value when returning a RangeError. Attackers running JavaScript can repeatedly call Atomics.store with a valueOf that detaches or shrinks the buffer to exhaust heap memory and cause denial of service.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2024-12141 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2024-12141</link>
-    <guid isPermaLink="false">d7a7e8800e8cb5bb0178a65c8ca98c3d</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 4.3 | The product fails to sufficiently validate callback URLs, allowing them to be manipulated with malicious payloads when processed through a weak regular expression or when validation is omitted.
-
-An attacker can exploit this by crafting a link that appears legitimate but redirects users to an attacker-controlled page. This redirection facilitates phishing attacks, enabling the harvesting of sensitive user information, potentially leading to unauthorized access or data theft.</description>
+    <title>CVE-2026-120441 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120441</link>
+    <guid isPermaLink="false">16cbe6b2e1d9583c8d7e58301e7e6b3d</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | OwnTone Server through 29.3 contains an sql injection vulnerability in mpd_sticker_find() in src/mpd.c that allows unauthenticated remote attackers to inject SQL via the URI argument. Attackers can send a crafted 'sticker find song' command to the MPD listener on TCP port 6600 to bypass path restrictions and enumerate all media files with filesystem paths and metadata.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-111560 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111560</link>
-    <guid isPermaLink="false">899b9979f9912c5f2a66834dba8d85cd</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.6 | Improper neutralization of shell metacharacters in the timezone configuration field in certain Barracuda appliance products using common Barracuda code allows an authenticated administrator to inject OS commands that execute with root privileges when the crafted timezone value is subsequently processed.</description>
+    <title>CVE-2026-120442 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120442</link>
+    <guid isPermaLink="false">e88429be93d69a330571c1e593e6a001</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.3 | ape-volo-admin before 3.6.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge administrator tokens using a hardcoded JWT signing key in appsettings.json. Attackers can sign tokens offline with the jti claim set to the seeded administrator id to gain full API control over users, roles, permissions and data.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-116606 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116606</link>
-    <guid isPermaLink="false">e0a86fc8ea472f613603bf49de21d13b</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.3 | An authentication bypass in Barracuda Email Security Gateway versions earlier than 9.4.0.030 allows an unauthenticated remote attacker to invoke a configuration-import function and restore a crafted, compatible backup archive, resulting in unauthorized modification of the appliance’s global configuration.</description>
+    <title>CVE-2026-120443 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120443</link>
+    <guid isPermaLink="false">da0ccccc4472f0948541807a913d4c92</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.1 | GoFound through 1.4.1 contains a stored cross-site scripting vulnerability that allows unauthenticated attackers to inject scripts by submitting document text to /api/index. Attackers can index malicious HTML that searcher/engine.go returns unescaped and dashboard.vue renders with v-html, executing script in an administrator's browser when an admin search matches the document.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91903 - NVD - CVSS Score v3.1: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91903</link>
-    <guid isPermaLink="false">4771f9c5fdf243f864b676e2e75db292</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 6.1 | Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability. A high privileged attacker with adjacent network access could potentially exploit this vulnerability, leading to Filesystem access for attacker.</description>
+    <title>CVE-2026-120444 - NVD - CVSS Score v4.0: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120444</link>
+    <guid isPermaLink="false">c250ee4250a76bcf21e9ba20de07f228</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 7.2 | GoFound through 1.4.1 contains a path traversal vulnerability that allows unauthenticated attackers to delete arbitrary directories by supplying ../ sequences in the database parameter. Attackers can send GET requests to /api/db/create and /api/db/drop, directly or via a victim's browser, triggering os.RemoveAll on directories outside the data directory.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91904 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91904</link>
-    <guid isPermaLink="false">4c7ac28514b3d6edaebd55db1733ec41</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.5 | Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Incorrect Permission Assignment for Critical Resource vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Protection mechanism bypass.</description>
+    <title>CVE-2026-120445 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120445</link>
+    <guid isPermaLink="false">a876b9bd7b251bb8e77db3ebaea2ec27</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.7 | madong-admin-saas through 5.1.4 contains an incorrect authorization vulnerability in AccessTokenMiddleware that allows authenticated tenant users to access the platform management API in multi-tenant mode. Attackers can reuse a tenant login JWT against /platformapi controllers to create platform administrator accounts, read tenant database settings, and take control of every tenant.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91905 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91905</link>
-    <guid isPermaLink="false">f0d2351ac76264bd76797edc25f15367</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 6.4 | Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Verification of Cryptographic Signature vulnerability. A high privileged attacker with local access could potentially exploit this vulnerability, leading to Filesystem access for attacker.</description>
+    <title>CVE-2026-120446 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120446</link>
+    <guid isPermaLink="false">6e6ab2de274230f72caca52b3db04404</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.8 | madong-admin-saas through 5.1.4 contains a missing authentication vulnerability in the platform tenant management API because the 'platformapi' middleware key never matches the 'platform' application. Unauthenticated remote attackers can call /platformapi/tenant/account, bind-plan and sync-data endpoints to list, create, modify, disable or delete tenants and bind subscription plans.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91906 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91906</link>
-    <guid isPermaLink="false">b3df1cf1a1200140b42c06dece7946ab</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.5 | Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Incorrect Permission Assignment for Critical Resource vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Protection mechanism bypass.</description>
+    <title>CVE-2026-120447 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120447</link>
+    <guid isPermaLink="false">5810faa09b6d52b4937fc7e69d21347e</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.2 | HotGo through 2.15.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to choose the SMS login verification code by supplying the Code field to /admin/sms/send. Attackers who know a user's mobile number can set a known code and sign in through /admin/site/mobileLogin to take over accounts, including administrators.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91907 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91907</link>
-    <guid isPermaLink="false">9dbd7916384b829a382dfec0b3b50479</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 6.8 | Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to Information tampering</description>
+    <title>CVE-2026-120448 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120448</link>
+    <guid isPermaLink="false">b97aa8824c850cb5d8202b455b49612e</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.6 | DoraCMS through 3.1.0 contains a mass assignment vulnerability in the PUT /api/v1/user/api-keys/:id endpoint that allows authenticated low-privileged users to rebind their API key to another user's account. Attackers can set the userId field on their own key to a victim's id, then act as that victim to modify profiles and publish or delete content.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91908 - NVD - CVSS Score v3.1: 5.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91908</link>
-    <guid isPermaLink="false">a7583a7c7303dcd85ead50570480a15a</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.7 | Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Verification of Cryptographic Signature vulnerability. A high privileged attacker with adjacent network access could potentially exploit this vulnerability, leading to Code execution.</description>
+    <title>CVE-2026-120449 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120449</link>
+    <guid isPermaLink="false">a595c6abfab7219b518590cf93894160</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | Outline before 1.12.0 contains an improper access control vulnerability that allows unauthenticated users to read unpublished documents because the share loader ignores unpublished status. Attackers holding an existing share link can query shares.info, documents.info, or the /s/ share routes to read withdrawn content, while shares.revoke returns 404 and blocks revocation.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91909 - NVD - CVSS Score v3.1: 4.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91909</link>
-    <guid isPermaLink="false">464b4f3b6c27e38b379cfb3ac05d8f47</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 4.6 | Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutralization of Argument Delimiters in a Command ('Argument Injection') vulnerability. A low privileged attacker with adjacent network access could potentially exploit this vulnerability, leading to Command execution.</description>
+    <title>CVE-2026-120450 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120450</link>
+    <guid isPermaLink="false">f19c9be94fd38e251c1e47ff0ce43a94</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.3 | LaraDashboard 1.4.0 before 1.4.9 contains an improper authorization vulnerability that allows authenticated users with read-only email_template.view permission to send arbitrary emails via the MCP send-email tool. Attackers can mint an MCP token and call send-email with any recipient, subject, and raw HTML body to deliver phishing or spam from the site's mailer.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91910 - NVD - CVSS Score v3.1: 5.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91910</link>
-    <guid isPermaLink="false">e8f9e83a48690810b5389d301c445d6a</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 5.7 | Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability. A low privileged attacker with adjacent network access could potentially exploit this vulnerability, leading to Information exposure.</description>
+    <title>CVE-2026-120451 - NVD - CVSS Score v4.0: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120451</link>
+    <guid isPermaLink="false">de8d6f2435986c7c3a73de33acd44ca9</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 7.0 | libgphoto2 through 2.5.34 contains stack-based and heap-based buffer overflow vulnerabilities in jl2005c_init() that allow malicious USB devices to corrupt memory by supplying an unbounded allocation table entry count. Attackers can connect a spoofed Jeilin JL2005B/C/D camera reporting 1022 or more entries to overwrite the saved return address and heap data, potentially achieving code execution.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91911 - NVD - CVSS Score v3.1: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91911</link>
-    <guid isPermaLink="false">4dc5e88987678d2a0dc8cfcc69f49f66</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 6.1 | Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability. A high privileged attacker with adjacent network access could potentially exploit this vulnerability, leading to Filesystem access for attacker.</description>
+    <title>CVE-2026-120452 - NVD - CVSS Score v4.0: 5.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120452</link>
+    <guid isPermaLink="false">96705b9cc03fb961d07c51fa99c00442</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.2 | libgphoto2 through 2.5.34 contains a heap out-of-bounds read and write vulnerability in jl2005bcd_decompress() that allows malicious USB cameras to corrupt heap memory via oversized thumbnail processing. Attackers can supply small allocation-table values and a thumbnail header byte so in-place byte-swapping exceeds the buffer by about 30 KB, leaking heap contents in preview images.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-92886 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92886</link>
-    <guid isPermaLink="false">e92eac61a89333f81a39e4a778306c6b</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.8 | Missing Authorization vulnerability in TÜBİTAK BİLGEM Software Technologies Research Institute eta-register allows Privilege Escalation.
-
-This issue affects eta-register: from 2.0.8 before 2.0.9.</description>
+    <title>CVE-2026-120453 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120453</link>
+    <guid isPermaLink="false">0735d4790007e0f4b8eabaabe5e7918c</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 4.8 | The Sleuth Kit through 4.15.0 contains a heap out-of-bounds read vulnerability in hfs_load_extended_attrs() in tsk/fs/hfs.c that reads the decmpfs header without checking attribute length. Attackers can supply a crafted HFS+ image with a com.apple.decmpfs attr_size of 1 to 15 to read past the allocation and crash analysis tools like istat or icat.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-94349 - NVD - CVSS Score v3.1: 8.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94349</link>
-    <guid isPermaLink="false">55ad2fda0f54c57b0c7f7d61dbea79bc</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 8.0 | Dell OpenManage Enterprise, versions prior to 4.8.0, contains an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. A low privileged attacker with adjacent network access could potentially exploit this vulnerability, leading to Command execution.</description>
+    <title>CVE-2026-120454 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120454</link>
+    <guid isPermaLink="false">554155e15859db48378070a35c239fbc</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.8 | The Sleuth Kit through 4.15.0 contains a NULL pointer dereference vulnerability in decmpfs_decompress_lzvn_attr() that allows attackers to crash the tool by supplying a crafted HFS+ image. Attackers can set a huge uncompressed_size in an LZVN inline com.apple.decmpfs attribute so allocation fails and the decoder writes through NULL, causing denial of service.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-102801 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102801</link>
-    <guid isPermaLink="false">b8e99b4846c7c62df088697d4df7be5c</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.1 | Joomla Extension - regularlabs.com - Exposure of Sensitive Information to Unauthorized Actor in Users Anywhere extension for Joomla &lt; 3.0.1 - An administrator can disable output of user email addresses or usernames in Users Anywhere. In affected code, attributes supplied inside a {user} or [email] / [username] tag can change those plugin settings for that render. For example, [email allow_output_email=&quot;1&quot;] can display an email address even when Allow output of email is set to No. This bypasses the personal-data output setting; it does not bypass a separate policy that disallows Users Anywhere tags from the content source altogether.</description>
+    <title>CVE-2026-120455 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120455</link>
+    <guid isPermaLink="false">266e1a1c70af785a63b931f23f8c94d4</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | rapidyaml through 0.16.0 contains an out-of-bounds write vulnerability in ParseEngine::_add_annotation() that allows attackers to corrupt memory by supplying YAML with excess anchors or tags. Attackers can submit YAML with consecutive anchors or tags to overflow the fixed two-element annotation array in release builds, corrupting stack memory and crashing the process.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-102802 - NVD - CVSS Score v4.0: 8.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102802</link>
-    <guid isPermaLink="false">915afebde824410fdb5466048136a3db</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.9 | Joomla Extension - regularlabs.com - PHP code injection vector in Sourcerer extension &lt; 17.0.1 when used with Articles Anywhere extension &lt; 20.1.1 - Sourcerer can restrict PHP in articles according to article-author trust; the exact creator and last-editor rule varies by release. Articles Anywhere can insert the text or full layout of one article into another. In the affected combination, when Articles Anywhere processes an inclusion before Sourcerer and Force Content Triggers is off, the included article's Sourcerer code can be evaluated using the enclosing article's trusted identity rather than the included article's own identity. The resulting gap is between the authority of the article supplying the code and the authority used to decide whether to run it. Ordinary Articles Anywhere output is not itself the issue.</description>
+    <title>CVE-2026-120456 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120456</link>
+    <guid isPermaLink="false">20335a682175c9c1ecc9b807f0f9bb36</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | L-SMASH through 2.14.5 contains a heap out-of-bounds write vulnerability in isom_read_hdlr() and isom_read_dref_entry() in core/read.c triggered by oversized box sizes. Attackers can supply crafted MP4 or MOV files declaring hdlr or url box sizes larger than remaining data, stalling the stream position and corrupting heap memory to crash applications.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-103419 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103419</link>
-    <guid isPermaLink="false">1ec70968f9f57302686daf9105f2b5f9</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.6 | Joomla Extension - joomshaper.com -  Stored Cross-Site Scripting (XSS) in Media Picker in Helix Ultimate &lt; 2.2.11.</description>
+    <title>CVE-2026-120457 - NVD - CVSS Score v4.0: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120457</link>
+    <guid isPermaLink="false">6c04012356885cf55c2c422901c70289</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.8 | libaec through 1.1.7 contains an out-of-bounds read vulnerability in m_se_decode() in src/decode.c that allows attackers to bypass a signed bounds check via an overlong fundamental sequence. Attackers can supply a crafted CCSDS 121.0/SZIP stream with 2^31 or more zero bits to crash the decoder or leak adjacent memory into decoded samples.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-103420 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103420</link>
-    <guid isPermaLink="false">c29275158ecb9a5b7a0fbc561fafdc54</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 7.2 | Joomla Extension - php-web-design.com - CSRF for various actions in StageIt 1.0-5.7.5, 6.0-6.3.5</description>
+    <title>CVE-2026-120458 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120458</link>
+    <guid isPermaLink="false">1d4b1c94d3be70920bdb13cc8d8eed74</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.8 | Kvazaar through 2.3.2 contains an infinite loop vulnerability in read_header() in src/encmain.c that allows attackers to hang the command-line encoder by supplying a truncated Y4M header. Attackers can provide a crafted .y4m file lacking a terminating newline, causing unchecked EOF reads that hang the process indefinitely while consuming a full CPU core.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-105600 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105600</link>
-    <guid isPermaLink="false">d67eb3f313abd49b0c8f28efbf318325</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.6 | Joomla Extension - php-web-design.com - RCE via setting strings in StageIt 1.0-5.7.5, 6.0-6.3.5</description>
+    <title>CVE-2026-120459 - NVD - CVSS Score v4.0: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120459</link>
+    <guid isPermaLink="false">6b00ff0ac0eee760d803fc0a9bf2ccec</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.1 | python-jose through 3.5.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge JWTs because HMACKey and CryptographyHMACKey accept zero-length HMAC secrets. When an application's HS256/HS384/HS512 verification key resolves to empty, such as an oct JWK with empty k, attackers can forge tokens with arbitrary claims that jwt.decode accepts.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-105601 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105601</link>
-    <guid isPermaLink="false">35c64672593ee4166e69ce302568932f</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.3 | Joomla Extension - php-web-design.com - Reflected XSS in StageIt 1.0-5.7.5, 6.0-6.3.5</description>
+    <title>CVE-2026-120460 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120460</link>
+    <guid isPermaLink="false">58084a894b9cccad939ba601b49f3880</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.7 | Jpom through 2.11.12 contains a cross-workspace authorization bypass vulnerability that allows authenticated users to manage other workspaces' Docker hosts by supplying foreign Docker asset ids. Attackers with Docker permission in any workspace can control containers, images, volumes and networks, including creating privileged containers with host bind mounts.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-105602 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105602</link>
-    <guid isPermaLink="false">4f741e704cb5caecbd1533012db879b2</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.6 | Joomla Extension - joomshaper.com -  Stored Cross-Site Scripting (XSS) in Mega Menu Badge Text in Helix Ultimate &lt; 2.2.11.</description>
+    <title>CVE-2026-120461 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120461</link>
+    <guid isPermaLink="false">f52b0fda432fe815fe4a8d58afbf009b</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.7 | Jpom through 2.11.12 contains a cross-workspace authorization bypass in POST /node/ssh_command/batch that resolves command templates and SSH nodes by ID without workspace filtering. Authenticated users with SSH command execute permission in one workspace can supply foreign template and node IDs to run commands on other workspaces' SSH hosts using their stored credentials.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-109083 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109083</link>
-    <guid isPermaLink="false">dcafee3160b9796f270339de9a5a42d3</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Improper isolation or compartmentalization vulnerability in Apache Syncope.
-
-An administrator with adequate entitlements can import arbitrary BPMN process definitions via the REST API and then start the process. When a BPMN process containing a JUEL expression is imported and started, the expression is executed directly on the server, with no sandbox.
-
-
-
-This issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 through 4.0.8, from 4.1.0 through 4.1.3.
-
-
-
-Users are recommended to upgrade to version 4.0.9 / 4.1.4, which fix this issue by rejecting BPMN definitions including expression attributes.</description>
+    <title>CVE-2026-120487 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120487</link>
+    <guid isPermaLink="false">f096345d7650ff48d8ede033ac31fd27</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.6 | LaraDashboard before 1.4.5 contains an incorrect authorization vulnerability in SettingPolicy::manageCoreUpgrades() that allows non-Superadmin administrators with settings.edit to access Superadmin-only core-upgrade operations. Attackers can use the /admin/settings/core-upgrades backup, download, restore and upgrade actions to obtain database dumps containing password hashes and restore or upgrade the site.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-110535 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110535</link>
-    <guid isPermaLink="false">d0b203fef3eae1016844572846d25301</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Improper Privilege Management vulnerability in Apache Syncope.
-
-
-
-AuthProfile self-updates allow non-admin users to configure impersonation for WA surrogate authentication.
-This issue affects Apache Syncope: from 3.0.12 through 3.0.16, from 4.0.0-M0 through 4.0.8, from 4.1.0-M0 through 4.1.3.
-
-
-
-Users are recommended to upgrade to version 4.0.9 / 4.1.4, which fix this issue.</description>
+    <title>CVE-2026-120488 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120488</link>
+    <guid isPermaLink="false">580a3233889431db362ea0f55a3e4dc3</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.1 | LaraDashboard before 1.4.9 contains a stored cross-site scripting vulnerability that allows authenticated users with post.create or post.edit permission to inject scripts via unsanitized LaraBuilder design_json block content. Attackers can save text-editor, HTML, text or heading blocks containing script or event-handler markup that executes in administrator or Superadmin sessions viewing the builder, preview or page.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-111959 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111959</link>
-    <guid isPermaLink="false">db8b9f56015b7911d1d93ffdffe7454d</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Out-of-bounds read vulnerability in Apache Arrow Rust (`arrow` crate), from version 33.0.0 through to versions 57.3.1, 58.4.0, 59.3.1 and 60.0.0.
-
-
-
-Improper validation of RunEndEncoded arrays in the ArrayData interface can allow reading data beyond the bounds of the child values array.
-
-
-
-Users are recommended to upgrade to versions 60.1.0, 59.3.2, 58.4.1, 57.3.2 which fixes the issue.</description>
+    <title>CVE-2026-120489 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120489</link>
+    <guid isPermaLink="false">5fc766988bcb2fa94d02fc7a2d7ed4b1</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.3 | Outline before 1.12.0 contains an incorrect authorization vulnerability in authorizeDocumentPublish() that allows authenticated members to publish documents into private collections without write access. Attackers can detach a child document via documents.unpublish, retaining parentDocumentId, then call documents.update with a private collection UUID to inject phishing content.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-113511 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113511</link>
-    <guid isPermaLink="false">2948557b6cec5d873062148d5f0b80bd</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Authorization bypass through User-Controlled key vulnerability in Apache Syncope.
-
-
-
-A delegated administrator can relocate a Realm subtree across administrative realm boundaries without permission for the destination
-This issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 through 4.0.8, from 4.1.0-M0 through 4.1.3.
-
-
-
-Users are recommended to upgrade to version 4.0.9 / 4.1.4, which fix this issue.</description>
+    <title>CVE-2026-120491 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120491</link>
+    <guid isPermaLink="false">c4a7d6941d0562c9831b3f7cb05f4c85</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 5.1 | Wing FTP Server before 8.2.6 contains a stored cross-site scripting vulnerability that allows authenticated web-client users to inject script by sending a crafted nowpath parameter to webclient/makethumb.html. Attackers can break out of the directory CDATA section in admin_get_lastconn.html XML to forge a connection id, which executes in administrators' browsers when admin_connection_list.html auto-refreshes, enabling Lua console abuse.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-113687 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113687</link>
-    <guid isPermaLink="false">c7bc443a695ed4a3497bba8649e21ba0</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Improper isolation or compartmentalization vulnerability in Apache Syncope.
-
-
-
-An administrator with adequate entitlements for Implementations can create a malicious Groovy class running untrusted code on a separate Thread, thus bypassing the Groovy security sandbox.
-
-
-
-This issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 through 4.0.8, from 4.1.0-M0 through 4.1.3.
-
-
-
-Users are recommended to upgrade to version 4.0.9 / 4.1.4, which fix this issue.</description>
+    <title>CVE-2026-120492 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120492</link>
+    <guid isPermaLink="false">b8060c016181f0b5cb852915d7f8e49e</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.3 | Chainlit 2.12.0 contains a server-side request forgery vulnerability that allows unauthenticated attackers to bypass path-scoped MCP allowed_urls entries because validate_mcp_url does not reject the semicolon character. Attackers can submit MCP URLs with '..;' segments to the /mcp endpoint, causing requests to paths outside the operator's grant on origins that strip semicolon path parameters.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-114364 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114364</link>
-    <guid isPermaLink="false">72aed079803bbf6c6e4b47803ef6bf57</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Apache Syncope.
-
-
-
-This CVE covers an incomplete fix for CVE-2026-77051: an administrator with adequate entitlements can achieve execution of arbitrary SQL via stacked queries, leveraging unsanitized opEvent parameters.
-Reference: https://cve.org/CVERecord?id=CVE-2026-77051
-
-This issue affects Apache Syncope: from 3.0.0-M0 through 3.0.16, from 4.0.0-M0 through 4.0.8, from 4.1.0-M0 through 4.1.3.
-
-
-
-Users are recommended to upgrade to version 4.0.9 / 4.1.4, which fix this issue.</description>
+    <title>CVE-2026-73695 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73695</link>
+    <guid isPermaLink="false">54b2eb79712d0462313806e3e1499063</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.3 | Control Web Panel (CWP) before webpanel_version 1.16 contains a path traversal vulnerability in services/users/index.php, where an attacker-supplied module name is concatenated directly into an include path with no allowlist, basename(), or traversal sanitization. An attacker can supply directory traversal sequences in the module name to include arbitrary local .php files, resulting in local PHP file inclusion.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120463 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120463</link>
-    <guid isPermaLink="false">919413dd00e9ad85847f2f550d7f2d26</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.0 | Warracker before 1.0.4 contains a missing authorization vulnerability in its Paperless-ngx integration that allows an authenticated, non-administrative user to bypass document ownership restrictions by searching for and linking another user's private document ID to a warranty they own using the `other` document type. Attackers can exploit insufficient authorization checks in the `paperless_search_and_link()` and `serve_paperless_document()` route handlers in file_routes.py to retrieve and disclose private documents belonging to another user via the shared Paperless-ngx API credential, resulting in unauthorized read access and confidentiality loss.</description>
+    <title>CVE-2026-73696 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73696</link>
+    <guid isPermaLink="false">27b0c6f89ce6d0894a6c1275095d6f9d</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.3 | Control Web Panel (CWP) before webpanel_version 1.12 contains an execution after redirect vulnerability in the user panel authentication flow, where CWPUserIndex's unauthenticatedFlow() calls toLoginWithIntendedUri() which emits a redirect header without exit(), allowing PHP execution to continue and the module dispatcher include to run without authentication. Attackers with nothing more than a valid hosting username can bypass authentication to reach user-panel module code paths, enabling a pre-authentication chain to root access.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-74993 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-74993</link>
-    <guid isPermaLink="false">61196691eeb2a5c4378b908076bf4b70</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.5 | Improper neutralization of special elements used in an SQL command ('SQL injection') vulnerability in Starnet Computer and Network Systems Inventory Tracking Application allows SQL Injection.
-
-This issue affects Inventory Tracking Application: through 2026-10-16.</description>
+    <title>CVE-2026-73697 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73697</link>
+    <guid isPermaLink="false">512711e54081b6b1ae9a8b1797a85c67</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 9.3 | Control Web Panel (CWP) before webpanel_version 1.16 contains an arbitrary file write and OS command injection vulnerability in the phpini_editor user panel module. The acc=update action writes attacker-controlled content to an attacker-supplied path via file_put_contents with no path confinement, and the acc=addlabelphpiniadv action passes unsanitized attacker input into shell_exec without escaping. An attacker with access to the module can write arbitrary files and execute arbitrary OS commands, resulting in remote code execution.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
