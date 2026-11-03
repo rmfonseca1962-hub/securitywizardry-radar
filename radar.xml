@@ -5,159 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2026 19:01:36 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-119521 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119521</link>
-    <guid isPermaLink="false">333c0151eee74823ad95eeef248606e2</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Cozmoslabs Paid Member Subscriptions paid-member-subscriptions allows Stored XSS.This issue affects Paid Member Subscriptions: from n/a through 3.1.3.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119672 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119672</link>
-    <guid isPermaLink="false">1088a9283c11bcb2e350a1c05f4f0187</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.9 | MongoDB Database Tools mongofiles uses a database-stored GridFS filename as the output destination for get_id when --local is not specified. A user who can modify the file metadata can set the stored filename to '-', causing a later authorized retrieval to write the file contents to standard output instead of a local file. If standard output is captured in a location accessible to that user, this may disclose GridFS content the user cannot read directly. Exploitation requires a higher-privileged operator to retrieve the affected file without an explicit local destination and attacker access to the captured output. This issue affects MongoDB Database Tools from version 3.1.4 through versions before 100.20.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119673 - NVD - CVSS Score v4.0: 1.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119673</link>
-    <guid isPermaLink="false">de44c70657498071c9cfdcbb275085fa</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 1.0 | MongoDB Database Tools mongofiles does not resolve existing parent-directory symlinks when validating output paths for get_regex. An unauthorized user who can both upload a GridFS file and place a symlink in the operator's download working directory can cause a later retrieval to create a file containing unauthorized user-controlled data outside that directory, using the operator process's filesystem permissions. The issue can occur with default traversal and overwrite settings. Exploitation requires an operator to retrieve matching files from the affected working directory; the demonstrated default behavior creates a new file rather than overwriting an existing file. This issue affects MongoDB Database Tools versions 100.2.0 through versions before 100.20.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119674 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119674</link>
-    <guid isPermaLink="false">a5fdd1085e26ed393c4e998c779baa57</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 2.1 | MongoDB Database Tools mongorestore incorrectly URL-decodes an original collection name read from metadata when the corresponding dump filename has been truncated. A database user who can create and populate a suitably encoded collection can cause a later authorized directory restore to write those documents into a different collection that the user cannot modify directly. When both collection names resolve to the same destination, backed-up documents may be omitted; use of --drop can also replace the unintended destination collection. Exploitation requires an operator to restore the affected collection from a directory dump with write access to the destination. This issue affects MongoDB Database Tools versions 100.0.2 through versions before 100.20.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119675 - NVD - CVSS Score v4.0: 5.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119675</link>
-    <guid isPermaLink="false">6763d3af8860b2b1ff5db94527280a58</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.2 | MongoDB Database Tools mongorestore inconsistently handles the system.buckets. prefix when validating collection names in an untrusted dump. A specially crafted collection name can bypass special-collection guards and operator namespace filters, causing a restore to create an unauthorized user-chosen database account, including an account with the root role. Exploitation requires an operator to restore unauthorized user-controlled data using credentials with sufficient user-management privileges on the destination deployment. Excluding the admin namespace alone does not prevent this behavior. This issue affects MongoDB Database Tools versions 100.4.0 through versions before 100.20.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120843 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120843</link>
-    <guid isPermaLink="false">769c0ecd6e189e3d436f2eebd19a215c</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Barn2 Plugins Posts Table with Search &amp; Sort posts-data-table allows Stored XSS.This issue affects Posts Table with Search &amp; Sort: from n/a through 1.4.14.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120846 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120846</link>
-    <guid isPermaLink="false">7b3e065f2f62e17516a8a32bce8a987a</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Uncanny Owl Uncanny Automator uncanny-automator allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Uncanny Automator: from n/a through 7.7.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121259 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121259</link>
-    <guid isPermaLink="false">6e106b8f015f32d430cc04e9041bbd3c</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 6.5 | A flaw was found in the GStreamer JPEG 2000 decimator in gst-plugins-bad. Crafted JPEG 2000 media can cause integer overflows or division by zero during tile processing. An application that processes the malicious media may crash, resulting in a denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121261 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121261</link>
-    <guid isPermaLink="false">a47a5ae25ce3117cf18fca454c32d2ca</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability has been found in phpMyAdmin ShapeFile up to 4.0.1. Impacted is the function ShapeRecord::loadFromFile of the component SHP File Handler. Such manipulation leads to infinite loop. The attack can be executed remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121262 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121262</link>
-    <guid isPermaLink="false">1d32f47ff182b95b33618ffaa8f90225</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was found in phpMyAdmin SQL-Parser 6.0.0/6.0.1. The affected element is the function parse of the file src/Statements/ExplainStatement.php. Performing a manipulation of the argument nextToken results in incorrect type conversion. The attack is possible to be carried out remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121587 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121587</link>
-    <guid isPermaLink="false">1296fd940c797a6f854db4c87bf07301</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 6.9 | Coolify before 4.1.1 contains an information disclosure vulnerability that allows unauthenticated attackers to enumerate application names across all teams via manual GitHub, GitLab, Bitbucket and Gitea webhooks. Attackers can send a repository name of % or empty with a common branch like main, exploiting unescaped LIKE wildcards to receive every matching application name before signature verification.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121588 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121588</link>
-    <guid isPermaLink="false">6d286547576e4b17b44b1e9738d92917</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.3 | TeXlyre from 0.11.0 before 0.13.5 contains a stored cross-site scripting vulnerability that allows attackers to execute script by supplying malicious LSP or typesetter recipe icons. Attackers can trick victims into importing a recipe whose icon contains an HTML event handler, persistently accessing local projects and repository credentials.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121602 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121602</link>
-    <guid isPermaLink="false">d2e3e6be162fd081137afc876f2e712c</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.5 | Solanum before commit 2ce64de contains a heap-based buffer overflow vulnerability that allows a malicious linked server to corrupt memory by sending overlong channel names in JOIN or SJOIN messages. Attackers controlling a peer server can trigger strcpy and sprintf overflows in ms_join and ms_sjoin to crash the ircd or potentially achieve remote code execution.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121603 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121603</link>
-    <guid isPermaLink="false">cbd72c896c7bff915cfe2b4b6670a6d0</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.5 | Solanum before commit 2ea1382 contains a buffer overflow vulnerability in ms_kill() that allows malicious linked servers to corrupt memory by sending an overlong kill reason. Attackers controlling a rogue or compromised peer server can send a reason exceeding KILLLEN that overflows a static 512-byte buffer, crashing the ircd or potentially achieving remote code execution.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121604 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121604</link>
-    <guid isPermaLink="false">ee3b3e70a88e6a438ffa79682f937c5e</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 4.8 | wlroots before 0.20.2 contains an out-of-bounds read vulnerability in read_surface_class() in xwayland/xwm.c that allows local X11 clients to leak compositor heap memory. Attackers can set a WM_CLASS property with a NUL-terminated instance but unterminated class, exposing over-read heap bytes as the window class or app_id over IPC.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121631 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121631</link>
-    <guid isPermaLink="false">06b01ff56db3b823f205c1ae30337d3f</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 2.3 | Lightdash 0.2609.0 before 3.137.0 contains an authorization bypass vulnerability in the RenameService that allows authenticated users with update Project permission on one project to access and modify dashboards belonging to a different project, caused by the failure to verify that the projectUuid from the URL matches the projectUuid of the target dashboard. Attackers can send crafted POST requests to the rename/dashboard endpoint to modify foreign dashboard filters and break charts, or send GET requests to the rename/dashboard/fields endpoint to read field metadata from projects they do not have access to.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-28327 - NVD - CVSS Score v3.1: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-28327</link>
-    <guid isPermaLink="false">60b1a98b263c060a15a6427769754087</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 8.2 | SolarWinds Dameware was found to be affected by a DLL hijacking vulnerability. The hijack occurs during installations only and requires access to the local machine and admin privileges.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-28335 - NVD - CVSS Score v3.1: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-28335</link>
-    <guid isPermaLink="false">22cb42a25730bcc3c5da787895837248</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 8.4 | SolarWinds Dameware was found to be affected by a buffer overflow vulnerability that can result in remote code execution. Authentication is required.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-28336 - NVD - CVSS Score v3.1: 9.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-28336</link>
-    <guid isPermaLink="false">decc838fe347fdb54083095d184d48bd</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 9.9 | SolarWinds Dameware was found to be affected by a command injection vulnerability that could lead to the compromise of the remotely controlled host. Authentication is required.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 03 Nov 2026 20:02:28 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-38595 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-38595</link>
@@ -323,6 +171,207 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63499</link>
     <guid isPermaLink="false">8f5c0c38d4a34ccc44900512f84dd6e6</guid>
     <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 6.9 | zt-zip is a Java library that provides convenience methods for ZIP archive manipulation. Prior to 1.18.1, ZipUtil.unpack(...) can apply stored ZIP-entry permissions to the extraction output directory when an entry name such as / or ./ resolves to that directory itself. Because the path traversal checks permit self-referencing entries that do not escape the destination, the unpacker's permission-handling path can replace restrictive output-directory permissions with attacker-supplied permissions. This affects applications that unpack untrusted ZIP files, and POSIX systems demonstrate the issue directly, while ZTFilePermissionsUtil.fetchDefaultStrategy provides fallback permission handling on other supported systems. This issue is fixed in version 1.18.1.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112917 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112917</link>
+    <guid isPermaLink="false">5fb3f53c573ff3e0d40d64e1de0060db</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 9.2 | In Docker Desktop for Windows with the WSL2 backend, an unprivileged Linux container can use 32-bit socketcall to bypass the default seccomp restriction on AF_VSOCK. This can expose host-facing services and Windows files accessible to the logged-in user. The issue affects x86-64 WSL2; LinuxKit-based backends are unaffected. The issue is fully fixed only with Docker Desktop 4.98.0 or later and WSL 3.0.3 or later. Docker Desktop 4.98.0 or later running on an older WSL remains affected.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119922 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119922</link>
+    <guid isPermaLink="false">e7799eb7ac64715018628ff1d0a825a1</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.7 | Improper access control in the Babelfish for PostgreSQL extension versions 1.2-1.5, 2.1-2.15, 3.1-3.12, 4.0-4.8, 5.1-5.4 may allow remote authenticated users to elevate their privileges. To remediate this issue, we recommend you upgrade to Babelfish for PostgreSQL extension versions 4.10, 5.6, 6.1 or later.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120673 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120673</link>
+    <guid isPermaLink="false">85406204df871aab5a98493f36828bd6</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 6.8 | A component of the MongoDB Rust Driver that records diagnostic tracing data can capture command content before automatic client-side field level encryption is applied. In deployments that turn on the optional tracing capability together with automatic in-use encryption, a party with read access to the application's exported trace data may obtain field values that the application designated for encryption, without access to the encryption keys. This may result in unintended disclosure of data.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120678 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120678</link>
+    <guid isPermaLink="false">a892a867944c408d487763691b962b66</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.7 | A memory management flaw in the MongoDB C Driver's handling of compressed responses may cause the client library to hold on to memory that is never released. An unauthenticated party that controls the database endpoint a client application connects to may cause repeated, unbounded memory growth in that application, which may result in the application becoming unavailable. No credentials, transport security settings, or user interaction are required.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120684 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120684</link>
+    <guid isPermaLink="false">27587cc3ff726f2d6c0ce0f935e8de8e</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 6.0 | A memory-initialization flaw in the legacy GridFS file handling of the MongoDB C Driver can cause uninitialized process memory to be treated as valid file content and stored on the server. A database user holding ordinary write access to a shared storage area can arrange conditions under which an application later appends to such a file and writes that memory into records the same user is permitted to read, which may result in unintended disclosure of sensitive information from the application's process, including credentials.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120953 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120953</link>
+    <guid isPermaLink="false">217e80590e5c81ffac0fa33d6c4242e1</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A URI redirection weakness exists in the authentication component of the Atlas SQL JDBC Driver. During an interactive sign-in flow the driver accepts endpoint addresses supplied by the remote endpoint it is pointed at without validating their scheme, and passes the resulting address to the local default protocol handler. An unauthenticated remote party that controls the endpoint a user elects to connect to may cause an address of its choosing to be opened on the user's system; user interaction is required.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120954 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120954</link>
+    <guid isPermaLink="false">14a9f0d33dc4c82a22fe85c54538ec9d</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 6.3 | A weakness in the BSON library's handling of a specialized binary vector data type allows an arithmetic wraparound when computing the number of elements described by an oversized attacker-supplied value. On builds where the platform word size is 32 bits, an application that parses untrusted BSON data can be made to process only a small fraction of the supplied elements while the operation reports success, producing results that disagree with byte-oriented accessors and with 64-bit builds of the same library. No authentication or user interaction is required beyond getting the application to parse the data. The impact is limited to data integrity; memory safety is not affected and no information is disclosed.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120955 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120955</link>
+    <guid isPermaLink="false">cd71e6104504ed265afc6a8a71094433</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.7 | The GridFS file download API in the MongoDB C Driver does not check the result of an internal operation under certain error conditions during file retrieval. This can cause the process to terminate when stream operations continue. A user who can influence file download parameters can trigger this condition, which may result in service unavailability for applications using the affected API.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120956 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120956</link>
+    <guid isPermaLink="false">38b69a32755edc3f50e5b74c0c75e3ae</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 7.1 | The MongoDB C Driver does not validate the type or format of a namespace field returned by the server in a query response. A MongoDB endpoint that a client application connects to, without needing any credentials, can return a malformed value in that field. This causes the client application process to terminate, and can also cause the driver to read memory outside an allocated buffer and to send a small amount of the application's own uninitialized heap memory back to the endpoint in a follow-up command. The impact is limited to the process that embeds the driver.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121382 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121382</link>
+    <guid isPermaLink="false">89e87c634fd301be5d1aabc2ecb5e1d0</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 7.7 | A vulnerability was determined in Netcore NBR100V2 1.3.240614.030928. Affected by this issue is the function msg_aes_dec of the file /usr/bin/auto_ac. This manipulation causes integer overflow. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121501 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121501</link>
+    <guid isPermaLink="false">9b2efd5a69614ecd1bb782bd047530c4</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was determined in mathurvishal CloudClassroom-PHP-Project. The affected element is the function session_regenerate_id of the file loginlinkadmin.php. Executing a manipulation of the argument PHPSESSID can lead to session fixiation. The attack can be launched remotely. The exploit has been publicly disclosed and may be utilized. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121652 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121652</link>
+    <guid isPermaLink="false">0f657b7b7fe4a189f4d012ac451d3396</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 4.8 | Cross-site scripting (XSS) issue in AWS Amplify maplibre-gl-js-amplify before 4.0.3 might allow remote authenticated users to inject arbitrary web script or HTML via the (1) title, (2) address, or (3) place_name property in GeoJSON feature data rendered by popupRender, or the (4) geofenceId value rendered in AmplifyGeofenceControl.
+
+
+
+To remediate this issue, users should upgrade to 4.0.3 or later.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-39379 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-39379</link>
+    <guid isPermaLink="false">063d01bc2277ea903020adc11104638d</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 7.1 | GeoNetwork is a catalog application to manage spatially referenced resources. From 3.0.0 until 4.2.15 and 4.4.10, requesting a nonexistent or unauthorized service URL can cause an error page to reflect attacker-controlled request content inside an AngularJS application without adequately neutralizing it for template evaluation. A remote attacker can induce a victim, including an administrator, to open a crafted link so the reflected value is evaluated as an AngularJS template expression. Combined with known AngularJS sandbox-escape techniques, this can execute arbitrary JavaScript in the victim's authenticated browser session, disclose information, or perform actions as the victim. This issue is fixed in versions 4.2.15 and 4.4.10.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-46487 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46487</link>
+    <guid isPermaLink="false">427bdf7d11a4dd54245a8bfe8a234dff</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 7.5 | GeoNetwork is a catalog application to manage spatially referenced resources. From 4.0.0-alpha.1 until 4.2.16 and 4.4.11, the Elasticsearch-backed search proxy can skip GeoNetwork's access-control filter injection when a client request has an omitted query field. The request is then forwarded to Elasticsearch without group visibility, draft exclusion, record ownership, or portal-specific filtering. An unauthenticated remote attacker can use the affected public search API to retrieve the full indexed contents of metadata records that should not be publicly visible. This issue is fixed in versions 4.2.16 and 4.4.11.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-57154 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57154</link>
+    <guid isPermaLink="false">ba2b62a193afe48f826126eee7d65b79</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 8.1 | OPNsense is a FreeBSD based firewall and routing platform. Prior to 26.1.11 and 26.4.1p1, authenticated Web UI or API users with delegated access to affected settings can submit CR or LF characters in fields expected to contain one line, causing generated privileged service configuration files to contain additional attacker-controlled directives or policy lines. The confirmed Dnsmasq path includes dhcp_boot.filename, dhcp_boot.servername, dhcp_boot.address, and dhcp_options.value, which are rendered into /usr/local/etc/dnsmasq.conf; access through page-services-dnsforwarder covers api/dnsmasq/*. Related affected fields span OpenVPN, DHCPv6, Unbound, IPsec, NTP, PPP or MPD, Monit, firewall, sudo, WebGUI, and System General configuration. Applying or restarting the affected service can alter behavior beyond the delegated setting, create service-side files, cross RBAC boundaries, or cause denial of service. Line injection through Monit mail password and adjacent Monit text fields into /usr/local/etc/monitrc demonstrated root command execution. Arbitrary shell command execution was not confirmed for the Dnsmasq path. This issue is fixed in versions 26.1.11 and 26.4.1p1.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63197 - NVD - CVSS Score v3.1: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63197</link>
+    <guid isPermaLink="false">11a444eda3cddcb9f03b12a72103b09c</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 7.3 | traQ is a messenger application built for Digital Creators Club traP. Prior to 3.28.3, instances configured with TRAQ_STORAGE_TYPE=local can return user-uploaded SVG or HTML content from the /files/{fileId} retrieval endpoint for direct browser rendering. An attacker with file-upload capability can provide crafted active content and induce another user to open its file URL, causing attacker-controlled JavaScript to execute in the victim's browser. This issue is fixed in version 3.28.3.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63198 - NVD - CVSS Score v3.1: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63198</link>
+    <guid isPermaLink="false">774a9ebc626194ba6463a5f7a08aa731</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 7.3 | traQ is a messenger application built for Digital Creators Club traP. Prior to 3.28.3, OAuth2 silent authorization requests using prompt=none with an empty or omitted scope parameter check prior consent against the empty requested scope set even though all scopes registered for the client become eligible for issuance. An attacker who controls an OAuth client capable of receiving authorization codes can target a user who previously consented to only some client scopes and obtain an access token containing broader registered scopes without additional consent. A user who has never consented to the client still receives consent_required. This issue is fixed in version 3.28.3.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63417 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63417</link>
+    <guid isPermaLink="false">0d4f7c3f14c8b7b896be13e2ea89708d</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.2 | Logging Redactor is a Python library designed to redact sensitive data in logs based on regex patterns and / or dictionary keys. Prior to 0.0.7, personally identifiable information returned by custom object __str__ or __repr__ methods is not redacted when such non-primitive objects are logged, causing sensitive values to appear in logs that are expected to mask them. This issue is fixed in version 0.0.7.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-82976 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82976</link>
+    <guid isPermaLink="false">11b40803f90fc7581a78b4ea95a59b86</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 7.1 | A flaw was found in the image-customization-controller used in OpenShift's bare metal provisioning stack. The controller registers an HTTP file server on port 8084 with no authentication. The custom imageFileSystem implementation exposes a browsable HTML directory listing of all registered images at the root path. The only access control on per-host images is the random UUID filename; the directory listing discloses those UUIDs to any caller on the provisioning network. Each served image embeds an Ignition config containing the base64-encoded cluster pull secret, optional IRONIC_RAMDISK_SSH_KEY, proxy settings, and per-host NetworkManager keyfiles. An adjacent network attacker can enumerate all image UUIDs via directory listing, download any image, extract the embedded Ignition config, and recover the cluster pull secret and SSH key.
+
+### Evidence
+**pkg/imagehandler/imagefilesystem.go — root directory is browsable and enumerates all UUID image names**
+```go
+func (f *imageFileSystem) Readdir(n int) ([]fs.FileInfo, error) {
+    f.mu.Lock()
+    defer f.mu.Unlock()
+    result := []fs.FileInfo{}
+    for _, im := range f.images {
+        result = append(result, im)
+    }
+    return result, nil
+}
+
+func (f *imageFileSystem) Open(name string) (http.File, error) {
+    f.log.Info(&quot;Open&quot;, &quot;path&quot;, name)
+    if name == &quot;/&quot; {
+        return f, nil
+    }
+    ...
+```
+
+**cmd/controller/main.go — file server bound on all interfaces without auth or TLS**
+```go
+http.Handle(&quot;/&quot;, http.FileServer(imageServer.FileSystem()))
+
+go func() {
+    server := &amp;http.Server{
+        Addr:              imagesBindAddr,   // default &quot;:8084&quot;
+        ReadHeaderTimeout: 5 * time.Second,
+    }
+    err := server.ListenAndServe()
+```
+
+**pkg/ignition/service_config.go:94-100 — pull secret is embedded in every served image**
+```go
+func (b *ignitionBuilder) authFile() ignition_config_types_32.File {
+    source := &quot;data:;base64,&quot; + strings.TrimSpace(b.ironicAgentPullSecret)
+    return ignition_config_types_32.File{
+        Node: ignition_config_types_32.Node{Path: &quot;/etc/authfile.json&quot;},
+        ...
+```
+
+### Attack Pattern
+Adjacent provisioning-network client → GET / lists UUID image names → download ISO/initramfs → extract embedded Ignition → recover cluster pull secret and SSH key.</description>
     <category>NVD</category>
     <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
