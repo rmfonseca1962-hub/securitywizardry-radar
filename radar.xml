@@ -5,292 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2026 14:01:36 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-99249 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99249</link>
-    <guid isPermaLink="false">b14bd170cc25395527f039bcfa2013e8</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-pid_namespace: make zap_pid_ns_processes() freezable
-
-When the init of a pid namespace exits, zap_pid_ns_processes() waits
-until all other pids in the namespace are freed. A tracer outside the
-namespace that does not reap its traced zombies keeps those pids
-allocated, so this wait has no upper bound, and while it lasts every
-suspend attempt fails:
-
-  Freezing user space processes failed after 20.006 seconds (2 tasks refusing to freeze, wq_busy=0):
-
-Neither wait is freezable. The first loop sleeps in do_wait(), which
-returns -ERESTARTSYS on the freezer's fake signal; the loop then clears
-TIF_SIGPENDING and waits again without ever freezing. The final loop
-sleeps in TASK_INTERRUPTIBLE, and since nothing clears TIF_SIGPENDING
-there, schedule() returns immediately after the first freeze attempt
-and the task spins until the wait ends.
-
-Sleep in TASK_INTERRUPTIBLE | TASK_FREEZABLE in do_wait(), so that the
-freezer can freeze tasks waiting there directly, and in TASK_IDLE |
-TASK_FREEZABLE in the final loop, like coredump_task_exit() does.
-
-This was hit with Chromium-based browsers: crashpad ptrace-attaches the
-threads of a crashed renderer, which is a pid namespace init, and does
-not reap those killed during the dump.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99250 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99250</link>
-    <guid isPermaLink="false">fa83e3464b9d12a3edd897b8cf705f54</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-printk: Postpone kthread startup
-
-There have been various bug reports related to SMP systems hanging
-on boot. The reports vary but seem to have some overlap with regard
-to missed IPI's during SMP setup. The reports also show that
-reverting NBCON console usage allows the bugs to disappear.
-
-The NBCON kthreads for console printing are started very early
-during boot using early_initcall(). Since these kthreads are
-asynchronously enabling/disabling interrupts during early boot, they
-may be interfering with early SMP setup on some hardware platforms.
-
-Starting the console printing kthreads later has shown to avoid the
-hanging on systems that could previously reproduce the issue.
-
-Postpone kthread starting until after all arch initcalls have
-completed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99251 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99251</link>
-    <guid isPermaLink="false">2f4d8b177e7c496b08a4f87c2756a763</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-Drivers: hv: Avoid infinite retry loop in init_vp_index()
-
-There is a retry loop in init_vp_index() where the CPUs from a certain
-node are stripped out if they have already been in the allocated cpumask
-or not in HK_TYPE_MANAGED_IRQ housekeeping cpumask. If there is no
-CPU left, the allocated cpumask is ignored and the process is retried
-again. However, if the HK_TYPE_MANAGED_IRQ housekeeping cpumask turns
-out not to contain any CPU in that particular node, that will become an
-infinite retry loop.  This particular problem was reported by sashiko
-[1]. This should rarely happen, but we still need to guard against this.
-
-Fix this infinite loop problem by also skipping NUMA node that has no
-housekeeping CPU in the inner while loop of init_vp_index(). Also update
-the early abort check to check for the absence of online housekeeping
-CPUs instead of just the emptiness of the cpumask. As the outer for
-loop will only be reached if the housekeeping cpumask has at least one
-online CPU, a NUMA node with housekeeping CPUs will eventually be found.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99252 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99252</link>
-    <guid isPermaLink="false">5f63f54b460f1f9e3ead2bd5ae39683b</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring/mpscq: disable preemption while pushing
-
-A push makes the node the new tail, and then links it to its predecessor.
-In between the queue isn't empty, but mpscq_pop() can't get at the node.
-The consumers deal with that by trying again, with a cond_resched() in
-the loop to give a preempted producer the chance to finish.
-
-cond_resched() doesn't do that if the consumer has a higher priority than
-the producer and both have to use the same CPU:
-
-  producer (SCHED_OTHER)              consumer (SCHED_FIFO), same CPU
-  io_req_local_work_add()
-    mpscq_push()
-      prev = xchg(&amp;q-&gt;tail, node)
-  &lt;preempted&gt;                         io_cqring_wait()
-                                        __io_run_local_work()
-                                      again:
-                                          cond_resched()  // nothing to do
-                                          mpscq_pop()     // NULL
-                                          // work pending, no events yet
-                                          goto again
-
-The producer can be any task that is able to queue task_work for the
-ring: an io-wq worker, or somebody who sends a message with
-IORING_OP_MSG_RING. The consumer spins, holding -&gt;uring_lock, until the
-scheduler takes pity on the fair class, which takes about a second with
-the default settings of the fair server, and forever without it. The
-loops in tctx_task_work_run() and io_cancel_local_task_work() have the
-same problem.
-
-Don't allow preemption between the two steps. That bounds the time the
-window is open on the CPU of the producer by what interrupts take, and a
-consumer that waits for that is on another CPU. The cost is a
-preempt_disable()/preempt_enable() pair per push.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99253 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99253</link>
-    <guid isPermaLink="false">31aab3cb35a262c6bce9c09b34a4e0c3</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring/cancel: rearm local work wake up before sleep
-
-io_uring_try_cancel_requests() sets -&gt;cq_wait_nr to 1 so that the next
-io_req_local_work_add() wakes the cancelling task. The add that takes the
-count to zero is the only one that wakes, later ones see a count &lt;= 0 and
-return. io_uring_cancel_generic() however only becomes
-TASK_INTERRUPTIBLE much later, so the one wake up can be spent on a
-running task. That is fine as long as the entry of that add is still
-queued, as the io_local_work_pending() check then skips the sleep. It is
-not if the add was delayed after queueing its entry:
-
-CPU0 (submitter in exec or exit)      CPU1 (io_req_local_work_add)
-                                      mpscq_push(req A)
-io_uring_try_cancel_requests()
-  io_run_local_work()  // runs req A
-io_uring_try_cancel_requests()
-  atomic_set(&amp;ctx-&gt;cq_wait_nr, 1)
-                                      atomic_read(&amp;ctx-&gt;cq_wait_nr) == 1
-                                      count taken, wake_up_state()
-                                        // task is running, no-op
-prepare_to_wait(TASK_INTERRUPTIBLE)
-io_local_work_pending() == false
-schedule()
-                                      mpscq_push(req B)
-                                      cq_wait_nr &lt;= 0, return
-
-Only the sleeping task can run req B, so it is stuck in execve() until a
-signal happens to wake it. An exiting task doesn't even get that.
-
-Arm the count again once the task state is set and before the work list
-is checked, for the rings whose local work this task is the one to run.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99254 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99254</link>
-    <guid isPermaLink="false">262b3db6f81361ee7fd40670b3a9d394</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring: don't flood a cancelling task with task_work
-
-io_ring_exit_work() asks each task which has used the ring to remove its
-tctx node, by task_work, and repeats that until the list is empty.
-io_tctx_exit_cb() doesn't touch the node while the task is in
-io_uring_cancel_generic(), which removes all the nodes at its end. So the
-work item queues the callback again as soon as it has completed, for
-nothing.
-
-That is more than a waste of time. task_work_run() only returns when it
-finds the list empty. If the rings are released from inside the
-cancellation, because requests of other rings held the last references to
-their files, up to 64 work items keep sending callbacks to the one task
-which is running them. It never finds the list empty, never gets back to
-the cancellation, the nodes stay, and so it goes on: a task with 60 pairs
-of rings which poll each other ran 280000 callbacks in 5 seconds, 20
-seconds after exit_group(). It ends when all the senders happen to be late
-at the same time. Until then the task keeps a CPU and the work items busy.
-
-An exiting task can't be killed meanwhile. execve() cancels the requests in
-the same way, so a live task can get stuck there as well, for minutes. If
-it takes more than five, the work items run into the
-WARN_ON_ONCE(time_after(jiffies, timeout)) of io_ring_exit_work(). No
-privilege is needed for any of this.
-
-If the callback has met a task in cancellation, wait a little before it is
-sent again. Nobody has to wake the work item up for that: either the node
-is gone by then, or it is the turn of the next round.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99255 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99255</link>
-    <guid isPermaLink="false">034d1b69c9fe96f81e7cd6ae73f1967c</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring/io-wq: don't hide a link from cancellations
-
-A task that exits cancels its tracked requests and waits until they are
-gone. io_uring_cancel_generic() looks everywhere a request can be, and
-goes to sleep if it found nothing to cancel. It is woken up each time
-one of the requests of the task is completed by task work or freed.
-
-When io-wq is done with a request that has a link, there is a time in which
-the next request of the link can't be found:
-
-  io_worker_handle_work()
-    io_assign_current_work(worker, NULL)
-    io_wq_free_work(work)
-      io_req_find_next()           // takes the link off the request
-      io_free_req()                // task work for the task
-    io_assign_current_work(worker, linked)
-      io_run_task_work()
-      cond_resched()
-      worker-&gt;cur_work = linked
-
-It is not pending, it is not the current work of a worker, and it is not
-yet on the list that it is about to be parked on. If the pass that the
-exiting task makes because of io_free_req() falls into that time, it finds
-nothing and the task goes to sleep. The worker then runs the link, which
-IO_WQ_BIT_EXIT doesn't prevent for bounded work. If that parks the request
-nothing is completed or freed, and nobody wakes up the task. If it is the
-process that exits it can't be killed any more either.
-
-  NOP, IOSQE_ASYNC | IOSQE_IO_LINK
-  FUTEX_WAIT, FUTEX2_PRIVATE
-  exit of the thread, or of the process, up to 63us later
-
-With four of these per round 5 to 8 of 10,000 rounds hang (4 CPUs, KVM):
-
-  io_uring_cancel_generic
-  do_exit
-
-Commit f8b632e89a10 (&quot;io_uring: tighten task exit cancellations&quot;) is about
-the same gap, and makes the task look again for whatever happens before
-io_free_req().
-
-Free the request once the link is the current work of the worker, or
-pending. Whoever is woken up by that can find the link, until it is parked
-where cancellations look as well. To do so split io_wq_free_work() in two.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99256 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99256</link>
-    <guid isPermaLink="false">84f8f500d9ee84ad14bf5b9f6cd21a5c</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-dm cache: fix issue with background work locking
-
-dm cache used a rw_semaphore for background_work_lock. Write locks on
-rw_semaphores have strict owner semantics, but there was no guarantee
-that the process that locked background_work_lock was the same process
-that unlocked it. This can be easily seen using a kernel compiled with
-CONFIG_DEBUG_RWSEMS. Given a dm cache device &lt;cache&gt;, run: 'dmsetup
-suspend &lt;cache&gt; &amp;&amp; dmsetup resume &lt;cache&gt;'. This will trigger a kernel
-warning:
-
-DEBUG_RWSEMS_WARN_ON((rwsem_owner(sem) != current) &amp;&amp; !rwsem_test_oflags(sem, RWSEM_NONSPINNABLE))
-
-triggered by cache_resume(). To fix this, switch from a rw_semaphore to
-a spinlock and a wait queue. dm cache already has a wait queue and
-associated counter, migration_wait and nr_allocated_migrations, that was
-getting woken up when background work was getting completed, but wasn't
-actually used by anything. This is replaced by the background_work queue
-and counter.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 03 Nov 2026 15:00:40 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-99257 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99257</link>
@@ -783,6 +498,94 @@ call timer_delete_sync() for the new reqsk.
 
 Let's pass false to __inet_csk_reqsk_queue_drop() to stop
 the new reqsk's timer.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119179 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119179</link>
+    <guid isPermaLink="false">56fec5087d7e65822e1643afe65cd477</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.3 | A flaw in the connection management layer of the MongoDB Node.js driver can leave a pooled network connection in the pool for reuse while data from an earlier operation is still outstanding on it. In applications that enable an optional client-side operation timeout, an unauthenticated party that can send ordinary requests to the application may cause database replies to be paired with the wrong requests. This may result in unintended disclosure of other users' records, incorrect operation results being returned, and failures of legitimate requests.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119742 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119742</link>
+    <guid isPermaLink="false">695a3def1ff55423c2ce4ad8d6d714e4</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.6 | Nagios XI before 2026R2 contains an OS command injection vulnerability in the MIB upload feature where the install_mib() function in mibs.php sanitizes uploaded filenames with an incomplete character deny-list that omits semicolons and pipes before passing them to a grep command executed via exec(). An authenticated administrator can upload a MIB file with a crafted filename using tab characters to bypass the deny-list and pipe to sh via a multipart POST request to mibs.php, resulting in arbitrary OS command execution as the web server user.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120572 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120572</link>
+    <guid isPermaLink="false">289f7e9280bfb880d86852e2ece844e1</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | Incorrect boundary conditions in the Layout: Block and Inline component. This vulnerability was fixed in Firefox 159.0.1.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-85032 - NVD - CVSS Score v3.1: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85032</link>
+    <guid isPermaLink="false">d05269569a8a3fcc99d4f52bda115b4b</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 4.8 | The MCTP over USB device class in subsys/pmci/mctp/mctp_usb.c splits RX handling across two threads: the system workqueue runs mctp_usb_class_out_work(), which parses host OUT data byte by byte and fills a packet buffer at usb-&gt;rx_pkt, while the USB device stack thread runs mctp_usb_class_disable(). The disable handler used k_work_cancel(), which removes a queued work item but returns immediately without waiting for a handler that is already running, and then called mctp_usb_reset_rx_state() to mctp_pktbuf_free() the packet buffer the worker may still be using.
+
+Both entry points into mctp_usb_class_disable() are driven by the attached USB host: a SET_CONFIGURATION request and a USB bus reset both reach it via usbd_config_reset() in subsys/usb/device_next/usbd_config.c. A host that streams partial MCTP frames on the bulk OUT endpoint and repeatedly forces a configuration change or bus reset therefore controls both the data being parsed and the moment the teardown runs, and can retry the race indefinitely without credentials or user interaction.
+
+If the free lands while the worker holds the pointer, the worker writes host-supplied bytes into freed memory of the dedicated MCTP heap (CONFIG_MCTP_HEAP_SIZE in subsys/pmci/mctp/mctp_memory.c), corrupting recycled buffers or sys_heap free-block metadata; this window requires genuine parallelism, i.e. CONFIG_SMP or a preemptible CONFIG_SYSTEM_WORKQUEUE_PRIORITY. With the default cooperative workqueue the worker can still yield inside mctp_bus_rx() (application callback or a control-message reply blocking in mctp_usb_tx()), after which it resumes and calls mctp_pktbuf_free(usb-&gt;rx_pkt) on a pointer the teardown has NULLed, dereferencing NULL and faulting on targets with null-pointer detection.
+
+The fix replaces the cancel with k_work_cancel_sync() plus a new struct k_work_sync out_work_sync, so disable waits for the RX worker to finish before draining the FIFO and freeing the packet buffer. The affected code is the MCTP subsystem, which is marked experimental, built only with CONFIG_MCTP_USB.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-85033 - NVD - CVSS Score v3.1: 4.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85033</link>
+    <guid isPermaLink="false">d2df7d07a05382bad3c107ac4372b9da</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 4.6 | The AVRCP Target role in subsys/bluetooth/host/classic/avrcp.c keeps its vendor-dependent response transmit state in a per-connection object selected by connection index (get_avrcp_tg()), with the per-transfer context (tid, sent_len, and the BT_AVRCP_TG_FLAG_TX_ONGOING flag) stored in the user_data of the queued response net_buf. The AVCTP teardown handler avrcp_disconnected() did not cancel tg-&gt;vd_rsp_tx_work and did not release the buffers still queued on tg-&gt;vd_rsp_tx_pending, so a link drop in the middle of a fragmented response left the buffer on the list with TX_ONGOING still set.
+
+A remote AVRCP Controller can trigger this deterministically: it issues a vendor-dependent command whose response exceeds one AVRCP fragment (for example GetElementAttributes or GetCapabilities), lets bt_avrcp_tg_vendor_tx_work() emit the START fragment, and then drops the ACL link instead of sending REQUEST_CONTINUING_RESPONSE. The AVCTP control channel requires an encrypted BR/EDR link (BT_SECURITY_L2), so the attacker must be a paired peer within radio range; no user interaction is needed.
+
+Because the Target objects are static and reused, the next connection landing on the same connection index finds the stale buffer at the head of vd_rsp_tx_pending. Every run of the TX work sees TX_ONGOING and returns immediately, so all further vendor-dependent responses queue behind the stale head and are never sent — a persistent loss of AVRCP Target function that no timeout clears and only a reboot recovers. Each cycle also leaks one response buffer from a shallow application pool, and a new peer that sends REQUEST_CONTINUING_RESPONSE clears the stale TX_ONGOING via bt_avrcp_tg_process_continuing_cmd(), causing the un-sent remainder of the previous peer's response to be transmitted to it.
+
+The fix cancels tg-&gt;vd_rsp_tx_work and unrefs every buffer on tg-&gt;vd_rsp_tx_pending in avrcp_disconnected(); since the TX context lives in the buffer user_data, releasing the buffers also resets the TX state machine. There is no memory corruption: the pre-fix buffer is leaked with a live reference, so no use-after-free arises.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-85034 - NVD - CVSS Score v3.1: 6.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85034</link>
+    <guid isPermaLink="false">6f8a8201ac873dbfd215620f18479533</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 6.7 | The Bluetooth host's GATT client passed the value of a received Handle Value Notification, Handle Value Indication or Multiple Handle Value Notification to bt_gatt_subscribe_params::notify callbacks using only the length derived from the received ATT PDU. bt_att_recv() in subsys/bluetooth/host/att.c validates only a minimum PDU length and does not enforce the negotiated ATT MTU, and the fixed ATT L2CAP channel in subsys/bluetooth/host/l2cap.c applies no rx.mtu check either, so the only ceiling was the ACL reassembly buffer CONFIG_BT_BUF_ACL_RX_SIZE. Values longer than the 512-octet maximum attribute length defined by the Bluetooth Core Specification (Vol 3, Part F, Section 3.2.9) could therefore be handed to subscribers that size their buffers to that documented limit.
+
+A remote peer that a device has connected and subscribed to — a malicious, spoofed or compromised GATT server within radio range — triggers the flaw by sending a notification or indication whose value exceeds 512 octets on a subscribed handle. In the LE Audio unicast client this reaches a concrete out-of-bounds write: unicast_client_ep_notify() in subsys/bluetooth/audio/bap_unicast_client.c copies the notification into the 512-byte att_buf of struct unicast_client with net_buf_simple_add_mem() and no tailroom check whenever length equals bt_audio_get_max_ntf_size(), i.e. the negotiated ATT MTU minus three. notify_handler() in subsys/bluetooth/audio/bap_broadcast_assistant.c has the same shape. Reaching the overflow requires a build whose ATT MTU exceeds 515 octets (CONFIG_BT_L2CAP_TX_MTU and CONFIG_BT_BUF_ACL_RX_SIZE set for full-length attribute support); the shipped defaults are far smaller.
+
+The overflow writes peer-controlled bytes past att_buf directly over the adjacent struct net_buf_simple net_buf — its data, __buf, len and size fields — which the subsequent long-read accumulation then uses as its destination, turning a small linear overflow into a controlled write. net_buf_simple_add() only asserts on insufficient tailroom unless CONFIG_NET_BUF_HARDENING is enabled, and that option is disabled by default, so ordinary production builds perform the copy. Beyond the in-tree LE Audio clients, any application subscriber that sized its receive buffer to the specification's 512-octet limit was exposed to the same overflow.
+
+The fix rejects notification, indication and multiple-notification values longer than BT_ATT_MAX_ATTRIBUTE_LEN in call_notify_cb_and_maybe_unsubscribe() in subsys/bluetooth/host/gatt.c before any subscriber callback is invoked, so no subscriber can be handed more than the specified maximum. Remaining tuples of a multiple handle value notification are still delivered and oversized indications are still confirmed.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-85035 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85035</link>
+    <guid isPermaLink="false">c19abc6fcda40241d326e086885c04f2</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 8.8 | The can_add_rx_filter_msgq() system call installs a CAN RX filter whose callback (can_msgq_put() in drivers/can/can_common.c) is handed the caller's struct k_msgq * as user_data. The controller driver stores that raw pointer in its filter table and dereferences it from the RX path every time a matching frame arrives. The system call verifier z_vrfy_can_add_rx_filter_msgq() in drivers/can/can_handlers.c validated the queue only with K_SYSCALL_OBJ(), which is a point-in-time check of type, initialization and caller permission and says nothing about the object's lifetime.
+
+On a build with CONFIG_USERSPACE=y and CONFIG_DYNAMIC_OBJECTS=y, an unprivileged user-mode thread that has been granted access to a CAN device can obtain a message queue whose lifetime it fully controls: k_object_alloc(K_OBJ_MSGQ) followed by k_msgq_alloc_init(). The lifetime of such an object is driven solely by its permission bitmask, and a pointer retained by the kernel is not represented there. After registering the filter, the thread calls k_object_release() — or simply terminates — and unref_check() frees the struct k_msgq storage while the CAN driver still holds the pointer.
+
+The next matching CAN frame causes k_msgq_put() to run in supervisor context against freed memory that the attacker can have groomed with another kernel allocation: the frame payload is memcpy()d through the reused block's write_ptr, and the queue's wait_q (and poll_events under CONFIG_POLL) list nodes are manipulated. This yields kernel-heap corruption reachable from a user-mode thread, defeating the isolation CONFIG_USERSPACE is intended to provide; the same dangling pointer also arises benignly when an application thread exits without calling can_remove_rx_filter().
+
+The fix validates the queue with K_SYSCALL_OBJ_STATIC(), which additionally rejects objects carrying K_OBJ_FLAG_ALLOC, so only statically defined queues (CAN_MSGQ_DEFINE()) may be registered from user mode. Supervisor-mode callers bypass the verifier and must themselves keep the queue valid until the filter is removed.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-89295 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-89295</link>
+    <guid isPermaLink="false">f3e633da167a36cf6c01f39aef3e923d</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In Eclipse Mnestix AAS Generator versions 0.1.0 up until but excluding 1.5.0, a practical upper bound on the client-supplied count parameter of the GET /api/v1/IdGenerator/submodelIds/{count} and GET /api/v2/IdGenerator/submodelIds/{count} endpoints is not enforced. The service generates and retains identifiers in memory before returning a response. A remote unauthenticated attacker can submit a large count to cause excessive memory consumption, potentially resulting in denial of service. Exploitation requires network access to the endpoint and successful retrieval of the ID-generation configuration from the configured backend repository.</description>
     <category>NVD</category>
     <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
