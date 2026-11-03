@@ -5,15 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2026 08:00:51 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-120830 - NVD - CVSS Score v3.1: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120830</link>
-    <guid isPermaLink="false">ebc2eb4adfbb630100d668fb35e1a7fa</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 7.4 | A flaw was found in libslirp in icmp_forward_error(). When building an ICMP error response, the length of the quoted original IPv4 packet was taken from the IP header without clamping it to the actual buffer length. A truncated or malformed packet could cause an out-of-bounds heap read, leaking host memory into the ICMP error packet returned to a guest or container.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 03 Nov 2026 09:02:34 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-105770 - NVD - CVSS Score v3.1: 5.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105770</link>
@@ -291,46 +283,56 @@ By exploiting this vulnerability, an attacker can redirect the user's browser to
     <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-86596 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86596</link>
-    <guid isPermaLink="false">6f0c0d398d9fbc7c96a6af449ba100bf</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 9.8 | The s2Member plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, &lt;= 260927 via the 'item_name' parameter parameter. This is due to insufficient sanitization in strip_php_tags_deep(), which only strips literal '&lt;?' sequences, combined with a post-interpolation placeholder cleanup that reassembles a valid '&lt;?php' opener after the attacker-controlled value has already been embedded in the email template. This makes it possible for authenticated attackers, with custom-level access and above, to execute code on the server.</description>
+    <title>CVE-2026-103653 - NVD - CVSS Score v4.0: 6.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103653</link>
+    <guid isPermaLink="false">7a377ad657c20b022790f396197e664a</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 6.7 | An out-of-bounds read vulnerability in the Qt CoAP message parsing (QCoapInternalReply::createFromFrame()) of the Qt CoAP module. Processing a malformed CoAP message can cause an application using Qt CoAP to crash (loss of availability) or to continue operating on incorrect data (potential loss of integrity).</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-111565 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111565</link>
-    <guid isPermaLink="false">2d80e8be0923609c6cbe8443cf07f642</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</description>
+    <title>CVE-2026-120988 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120988</link>
+    <guid isPermaLink="false">d6ebe71bbfc88abfd6c32208ae708709</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | billboard.js before 4.1.3 allows an attacker to execute malicious JavaScript due to improper sanitization of series ids during legend template rendering.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120597 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120597</link>
-    <guid isPermaLink="false">1f1c810ec908fe0acec3fa98d3aca7fd</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was identified in Welcart e-Commerce Plugin up to 2.12.6 on WordPress. This affects the function ESCOTT_MAIN::error_page_message of the file classes/paymentESCOTT.main.class.php. Such manipulation of the argument ResponseCd leads to cross site scripting. The attack can be launched remotely. The exploit is publicly available and might be used. Upgrading to version 2.12.7 mitigates this issue. It is recommended to upgrade the affected component. The value is now escaped with esc_html() before output. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.</description>
+    <title>CVE-2026-13594 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13594</link>
+    <guid isPermaLink="false">4a50166035bba6cce14ee7a9e5856ac1</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 9.1 | Zoho Corporation's ManageEngine Log360 and EventLog Analyzer versions 13062 and below are vulnerable to an issue that could allow an adversary to gain unauthorized access to the product.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120752 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120752</link>
-    <guid isPermaLink="false">e69cfaecaaa36813502ae44fed1ea53d</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 7.7 | PyMuPDF 1.25.3 before 2.0 contains a stack-based buffer overflow vulnerability in JM_set_annot_callout_line() that copies a caller-supplied number of callout points into a fixed three-element stack array. Attackers who control the callout argument passed to Page.add_freetext_annot() can supply four or more points to overwrite the stack frame, crashing the process or executing code.</description>
+    <title>CVE-2026-16900 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16900</link>
+    <guid isPermaLink="false">109dd61fc64e0599ff32b67ee4e20e68</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 7.5 | Zohocorp ManageEngine Log360 and EventLog Analyzer versions 13071 and below are vulnerable to an authentication bypass in local collector registration, allowing unauthenticated actor to register a local collector by sending a specially crafted registration request.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-71450 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71450</link>
-    <guid isPermaLink="false">47e6fd6e67d63e79873278777c8f0d06</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.7 | Authentication bypass using an alternate path or channel vulnerability in Johnson Controls EasyIO Neo EC and CW Edge Controller allows Authentication Bypass.
+    <title>CVE-2026-4052 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-4052</link>
+    <guid isPermaLink="false">720b640ac17e99077eed410c187fa6e4</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 9.8 | This issue only impacts deployments where WSO2 Identity Server is configured as a Resident Key Manager with database sharing. In such environments, a self-registered user may gain access to the System REST APIs of WSO2 API Manager by obtaining a token from the WSO2 Identity Server token endpoint.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-74846 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-74846</link>
+    <guid isPermaLink="false">537eb1085e4f5368423d2e67e55a00fd</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | Catalyst::Plugin::Authentication versions before 0.10029 for Perl allow timing attacks on stored passwords via eq comparisons in the legacy password verifier.
 
-This issue affects EasyIO Neo EC and CW Edge Controller: from EC 3.3b62 through EC 3.3b63 and from CW 3.3b24 through CW 3.3b25.</description>
+CVE-2026-5091 was fixed in the realm-based verifier. The legacy verifier, used by the deprecated login method, compares clear-text passwords, crypt hashes and base64 digests with eq, so the comparison time depends on how many leading bytes match.
+
+A remote attacker can use response-time differences to guess the stored password or hash.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   </channel>
 </rss>
