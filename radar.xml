@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2026 06:01:45 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 07:01:09 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-120830 - NVD - CVSS Score v3.1: 7.4</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120830</link>
@@ -185,8 +185,8 @@
   <item>
     <title>CVE-2026-120971 - NVD - CVSS Score v3.1: 5.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120971</link>
-    <guid isPermaLink="false">ffd73bc552efea930629ed9f65bcec6d</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 5.3 | RESTEasy's default exception mapper returns an exception's localized message in the HTTP 500 response body when no application exception mapper handles an unhandled exception other than a WebApplicationException. A remote unauthenticated client who can trigger such an exception may receive information included in the message. Fabio Burzigotti reports reproducing the behavior with RESTEasy 7.0.2.Final. The complete affected and fixed version ranges remain to be confirmed.</description>
+    <guid isPermaLink="false">7f0c8da1f9af0b47e3ab8e4c1e70393e</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 5.3 | A flaw was found in RESTEasy's default exception mapper. When an unhandled exception other than a WebApplicationException is not handled by an application exception mapper, RESTEasy returns the exception's localized message in the HTTP 500 response body. A remote unauthenticated attacker who can trigger such an exception may obtain information contained in that message. The behavior was reproduced with RESTEasy 7.0.2.Final.</description>
     <category>NVD</category>
     <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
@@ -207,60 +207,60 @@
     <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-58925 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58925</link>
-    <guid isPermaLink="false">b1b97b1936d19a6ef8072b3d9e5559ba</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | The report details a heap Use-After-Free (UAF) vulnerability within the `android.hardware.automotive.evs-default` HAL service, stemming from unsynchronized access to an `std::unordered_map`. An unprivileged application with access to the EVS manager can trigger this UAF by making concurrent calls to `setExtendedInfo` and `getExtendedInfo`, potentially enabling code execution within the privileged HAL process.</description>
+    <title>CVE-2026-103379 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103379</link>
+    <guid isPermaLink="false">d3ccc8fc3fc9935ab39fda6b67c4ffd7</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | The WATI Chat and Notification WordPress plugin through 1.1.8 does not require a valid, non-empty secret on a public endpoint that returns its stored API token, which an unauthenticated attacker can then present to a second public endpoint to obtain the order-received URL of any WooCommerce order and read the customer's name, address, phone number and email address. The endpoints are reachable in the WATI Chat and Notification WordPress plugin through 1.1.8's default state and are closed only once a WATI account is connected.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-58926 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58926</link>
-    <guid isPermaLink="false">8c3e09b1761200ce0f82db53467a2103</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | A Use-After-Free (UAF) vulnerability exists in the EVS HAL, allowing a privileged client to free a `buffer_handle_t` while the producer thread is still using it. This race condition, triggered via `doneWithFrame` and `setMaxFramesInFlight`, enables an attacker to manipulate freed heap memory, potentially leading to the leakage of file descriptors from the EVS HAL process.</description>
+    <title>CVE-2026-104647 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104647</link>
+    <guid isPermaLink="false">61c29c22d812b55f9a1bc93db0c10ba1</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | The weMail  WordPress plugin through 2.1.6 does not correctly verify user capabilities in its REST API permission checks, treating any user whose role is in the weMail  WordPress plugin through 2.1.6's allowed-roles list (Editor and above by default) as authorised for every action, which allows such users to perform administrator-level actions including enumerating all registered users with their email addresses and modifying the weMail  WordPress plugin through 2.1.6's own access-control configuration.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-58927 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58927</link>
-    <guid isPermaLink="false">78e63fa3a067b875e2b0c55d8b87c7ae</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | The vulnerability is a Use-After-Free (UAF) in the EVS AIDL HAL, arising from a data race on an unsynchronized `std::weak_ptr` within `EvsEnumerator::openCamera()`. Specifically, concurrent calls from a privileged UID (e.g., `AID_AUTOMOTIVE_EVS`) can cause a torn `weak_ptr` state, leading to a virtual call through a freed object's vtable at `cameraObj-&gt;getCameraInfo(&amp;desc)`. This allows for potential arbitrary code execution within the `hal_evs_default` process.</description>
+    <title>CVE-2026-104648 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104648</link>
+    <guid isPermaLink="false">ca121eb46ab622e4dc19b674fa40612f</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | The weMail  WordPress plugin through 2.1.6 does not restrict a site-wide third-party email-service API key to administrators, exposing it in an admin screen that users with the Editor role can reach by default, which allows them to obtain a reusable credential usable without a WordPress session to impersonate other users and sever the site's email-service connection.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-58930 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58930</link>
-    <guid isPermaLink="false">9f4632d7fa571665399b3e237fc3eeed</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | An unprivileged application can exploit a lack of package/signature validation in SystemUI's `RemoteQCController` when resolving a hardcoded `content://` URI. This allows the attacker to squat on a specific authority if the legitimate package is absent, inject spoofed UI elements into the trusted SystemUI Quick Controls panel, and gain a Background Activity Launch (BAL) grant from SystemUI when the user interacts with the spoofed element.</description>
+    <title>CVE-2026-105967 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105967</link>
+    <guid isPermaLink="false">4a2634a839f5fc8c69d90b549e0e3f39</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | The Gallery for Social Photo WordPress plugin through 1.0.0.41 does not validate a user-supplied URL before using it to perform a server-side request, allowing unauthenticated attackers to make the server issue requests to arbitrary internal hosts and read the responses.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-58977 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58977</link>
-    <guid isPermaLink="false">ddb9310b1f1c97b3799189af8b04ca53</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In is_valid_header of timed_cache_item.c, there is a possible out-of-bounds write due to a missing bounds check. This could lead to local escalation of privilege with System execution privileges needed. User interaction is not needed for exploitation.</description>
+    <title>CVE-2026-105993 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105993</link>
+    <guid isPermaLink="false">049769be41ba4f3e3a49ce5b61eeea61</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | The DT Directory Lite Addon WordPress plugin through 1.1 does not perform nonce or capability checks on its settings handlers, allowing unauthenticated attackers to modify the DT Directory Lite Addon WordPress plugin through 1.1's configuration and skin options.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-115215 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115215</link>
-    <guid isPermaLink="false">1684ad05aaa6620a3cb5970fbd8c3535</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.7 | In Eclipse ThreadX NetX Duo versions 6.0 through 6.5.2.202603a, the NetX Secure DTLS server allocates a session from its fixed session pool for the first datagram from any unrecognised address and port, before the cookie exchange, and never releases a session whose handshake stalls. A remote, unauthenticated attacker can exhaust the pool with one spoofed datagram per source and deny DTLS service to legitimate clients until the application resets the sessions.</description>
+    <title>CVE-2026-106004 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106004</link>
+    <guid isPermaLink="false">878e279d1a856dcc41e8ed677179a9fb</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | The DT LMS  WordPress plugin through 1.2 does not perform capability or nonce checks on one of its AJAX actions, allowing unauthenticated attackers to revoke any learner's course and class completion status.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-115403 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115403</link>
-    <guid isPermaLink="false">0287d7a011facc0ad5cf9913fc04313f</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.2 | In Eclipse ThreadX NetX Duo versions 6.0 through 6.5.2.202603a, built with BSD raw socket and IPv6 support, the IPv6 raw send path uses the destination-table entry it adds without checking that the add succeeded. When the destination table is full and an off-link destination is reached through a default router whose neighbour cache entry is unknown, sending on an IPv6 raw socket with header inclusion dereferences a NULL pointer; a remote sender can fill the table, for example with ICMPv6 Packet Too Big messages, and crash the sending thread.</description>
+    <title>CVE-2026-115205 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115205</link>
+    <guid isPermaLink="false">42c394c6abb5a8507acc4b38b4b2e5df</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | The AZEXO Store Locator WordPress plugin through 1.4 does not have a capability check or any authorization control when deleting a post, allowing any authenticated user, such as a subscriber, to delete arbitrary posts and pages.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-116635 - NVD - CVSS Score v4.0: 6.9</title>
