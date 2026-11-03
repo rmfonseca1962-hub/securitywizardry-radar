@@ -5,324 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2026 13:00:37 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-120328 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120328</link>
-    <guid isPermaLink="false">432acf1d7bf60dd592f508dda47da7a4</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 6.9 | The click tracking middleware does not validate the authentication code of a recipient if the code is omitted. Unauthenticated attackers can retrieve personal data of newsletter recipients, which is inserted into links of sent mails.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120329 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120329</link>
-    <guid isPermaLink="false">1690cc917ab5969401dc69705cd9cd60</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.3 | Saving the configuration of the mail backend module writes submitted settings to the page TSconfig without restricting them to the configuration options of the module. Backend users with access to the mail module can write arbitrary page TSconfig.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120330 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120330</link>
-    <guid isPermaLink="false">0438522691c1f153cd32dcd74653abf5</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 7.1 | Backend actions and ajax routes of the mail module do not check whether the backend user has access to the page of the requested mail or recipient group. Backend users with access to the mail module can view, change, send and export mails and recipient groups outside their web mounts, including the personal data of recipients.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120331 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120331</link>
-    <guid isPermaLink="false">dd7649a9740d4f0d423036df2ced47ee</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.3 | Content of external URL mails, their stylesheets and images to embed is fetched by the server without validating the target host. Backend users with access to the mail module can make the server send requests to hosts in the internal network.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120332 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120332</link>
-    <guid isPermaLink="false">9d140a85f3b9448563c38f67d999ab67</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | The HTML content of mails and tracked URLs are rendered unescaped in the backend module. Backend users with access to the mail module can inject arbitrary HTML and JavaScript, which is executed in the context of other backend users viewing the mail preview or report.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120333 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120333</link>
-    <guid isPermaLink="false">76b9cabf71616a1ef1991291c48a9d72</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.8 | The actions linked in the emails of the extension (e.g. to confirm a registration or the deletion of an account) do not reject requests with a missing or invalid hash. Instead, the frontend user given in the request is used. Unauthenticated attackers can therefore perform these actions for arbitrary active frontend users. This allows them to retrieve the email address or username of all frontend users and to delete arbitrary frontend user accounts.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77691 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77691</link>
-    <guid isPermaLink="false">22ee1c8e95438b6c91db6ccf74314a8d</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 8.1 | ZohoCorp ManageEngine Key Manager Plus versions before 7151 allow authenticated users to enter malicious input when configuring a Microsoft CA</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77777 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77777</link>
-    <guid isPermaLink="false">2d3e2a944a8b0b1bc3e70ae7b5cd332c</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 7.1 | ManageEngine Key Manager Plus versions before 7151 are vulnerable to an improper access control issue that allow authenticated users to modify another user's ACME certificate deployment credentials.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77778 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77778</link>
-    <guid isPermaLink="false">a2f581aefdcd08aaf5fb7c1c82f2a865</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 7.1 | ZohoCorp ManageEngine Key Manager Plus versions up to 7150 allow authenticated users to export certificates belonging to other users to their own registered key vaults.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-89229 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-89229</link>
-    <guid isPermaLink="false">a39b38ea7284ff225801a7e50ff8c9d2</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') in the ShareActivity component of BlueLM Copilot (com.vivo.ai.copilot) allows a malicious application installed on the same device to write arbitrary files via a crafted ACTION_SEND intent with a ContentProvider-supplied file name containing '..' sequences.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-89292 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-89292</link>
-    <guid isPermaLink="false">8c001e7e829c2670e10b851e54050735</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 9.2 | In Eclipse Mnestix Browser versions 1.6.0 up until but excluding 2.3.0 it was possible for an unauthenticated attacker to exfiltrate the MNESTIX_BACKEND_API_KEY for all configured Infrastructures.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-89293 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-89293</link>
-    <guid isPermaLink="false">06080f155b42f3802c4fb1f826e3d02b</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.8 | In Eclipse Mnestix Browser versions 1.2.0 up until but excluding 2.3.0 it was possible for an unauthenticated attacker to perform actions that are only allowed to be executed by an authorized Mnestix user, like changing the Infrastructure settings or calling the connected and authenticated Mnestix AAS Generator backend.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114442 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114442</link>
-    <guid isPermaLink="false">38c2de8e175ef803278ad38c75722016</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | Apache HertzBeat versions 1.7.1, 1.7.2, 1.7.3, 1.8.0, and 1.9.0 have incomplete XPath expression validation in the HTTP collector XML parsing path. An authenticated user with permission to create monitor templates can supply XPath expressions through metrics.aliasFields that are evaluated without the validation applied to parseScript. When processing a crafted XML response, repeated evaluation may consume excessive CPU resources and impair collector availability. This is a follow-up to the incomplete fix for CVE-2026-24343. The fix is included in Apache HertzBeat 1.9.1. Users should upgrade to 1.9.1 or a later version.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99243 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99243</link>
-    <guid isPermaLink="false">08e930bd843b369047af1f4c3d8b81f5</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io-wq: order the exit bit against worker creation task work
-
-io_wq_exit_workers() cancels task work for queued worker creation with
-task_work_cancel_match(). That has a plain load of task-&gt;task_works.
-
-io_queue_worker_create() adds the new entry and tests IO_WQ_BIT_EXIT to
-cancel it if the workqueue is already on its way out.
-
-That must be ordered. task_work_add() has a full barrier via cmpxchg().
-But io_wq_exit_start() sets the bit with set_bit() which doesn't have
-any memory ordering.
-
-So afaict, on weakly ordered architectures the exiting task may load
-task_works before the store of the bit is visible. The other side tests
-the bit before the store is visible as well. So the entry remains queued
-with worker_refs and the exiting task waits on worker_done indefinitely.
-
-If the task still has rings then io_uring_del_tctx_node() provides the
-barrier via test_and_set_bit() in io_wq_set_exit_on_idle(). When it
-has closed all rings though that barrier is gone.
-
-Add the barrier after the set_bit().</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99244 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99244</link>
-    <guid isPermaLink="false">9821fd821da1ba9cadea42528073cd0e</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-pid_namespace: prevent TIF_NOTIFY_SIGNAL from interrupting the reaper
-
-Since commit 7fea700e04bd (&quot;zap_pid_ns_processes: clear
-TIF_NOTIFY_SIGNAL along with TIF_SIGPENDING&quot;) zap_pid_ns_processes()
-clears TIF_NOTIFY_SIGNAL before every kernel_wait4() call. Otherwise
-kernel_wait4() doesn't sleep and returns -ERESTARTSYS if
-signal_pending() is true and the reaper busy-waits.
-
-But clearing TIF_NOTIFY_SIGNAL doesn't fix it. It can get raised again.
-For example, klp_send_signals() sets it raw against any task that hasn't
-transitioned yet. And it keeps sending it until the livepatch finishes.
-
-The sleep loop waiting for pid_allocated to drop has the same problem
-and it doesn't even clear anything. So a schedule() in
-TASK_INTERRUPTIBLE returns immediately.
-
-Use a no_notify_signal guard. signal_pending() will ignore
-TIF_NOTIFY_SIGNAL and the pid namespace reaper sleeps until a child
-exits or free_pid() wakes it.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99245 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99245</link>
-    <guid isPermaLink="false">2b70b4809bd4f4443efeeed06af9e83a</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-KEYS: Fix key_reject_and_link() race with keyring restriction
-
-The restrict_link check in key_reject_and_link() is done before taking
-the keyring semaphore, racing with a concurrent keyring_restrict()
-that installs the restriction while holding the semaphore in write
-mode.
-
-Move the check to after __key_link_lock(), so it is done under the
-semaphore, matching the pattern used in __key_create_or_update().</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99246 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99246</link>
-    <guid isPermaLink="false">c192caaf36db10216096c9eada704cd5</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-tipc: protect node reset trace dump with node lock
-
-The tipc_node_reset_links trace event asks tipc_node_dump() to walk the
-node's link entries. Unlike the other node events that request link data,
-this event runs without the node lock.
-
-This permits bearer teardown to free a link while the trace callback is
-dumping it:
-
-  CPU 0                                CPU 1
-  trace_tipc_node_reset_links()
-    tipc_node_dump()
-      l = n-&gt;links[0].link
-                                       tipc_node_write_lock()
-                                       kfree(l)
-                                       n-&gt;links[0].link = NULL
-                                       tipc_node_write_unlock()
-      tipc_link_dump(l)
-
-tipc_link_dump() then dereferences the stale pointer. KASAN reported:
-
-  BUG: KASAN: slab-use-after-free in tipc_link_dump
-  Read of size 4 by task poc/115
-  Call Trace:
-   tipc_link_dump+0x10cb/0x16b0
-   tipc_node_dump+0x4bb/0x740
-   trace_event_raw_event_tipc_node_class+0x258/0x360
-   tipc_node_reset_links+0x14d/0x1a0
-   tipc_rcv+0x13f5/0x3030
-   tipc_udp_recv+0x4e3/0x670
-  Allocated by task 0:
-   tipc_link_create+0x1e1/0x1020
-   tipc_node_check_dest+0x7d2/0x11a0
-   tipc_disc_rcv+0xdbf/0x1430
-  Freed by task 89:
-   kfree+0x131/0x3c0
-   tipc_node_link_down+0x267/0x4b0
-   tipc_node_delete_links+0xec/0x160
-   bearer_disable+0x107/0x260
-
-Take the node write lock around the trace event. This serializes the
-dump against tipc_node_link_down(delete=true), which frees the link
-under the same write lock.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99247 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99247</link>
-    <guid isPermaLink="false">956e2063fc25bc7e33986db835f7728c</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-tracing: Do not initialize tracefs work if tracing is disabled
-
-If trace buffer allocation fails during early boot (e.g.  in
-early_trace_init() -&gt; allocate_trace_buffers()), tracing_disabled is
-left set to 1 and the global trace array events list remains
-uninitialized.
-
-Later during boot, tracer_init_tracefs() (invoked via fs_initcall)
-queues tracerfs_init_work asynchronously without checking if tracing was
-disabled.  When tracer_init_tracefs_work_func() runs, it calls
-event_trace_init() and init_tracer_tracefs(&amp;global_trace, NULL)
-unconditionally.  This leads to __find_event_file() dereferencing an
-uninitialized tr-&gt;events list, causing an early boot NULL pointer
-dereference Oops:
-
-  BUG: Kernel NULL pointer dereference on read at 0x00000010
-  Faulting instruction address: 0xc000000000485be0
-  Oops: Kernel access of bad area, sig: 7 [#1]
-  ...
-  NIP [c000000000485be0] __find_event_file+0x70/0x3c0
-  LR  [c000000000448874] init_tracer_tracefs+0x274/0xc80
-  Call Trace:
-   init_tracer_tracefs+0x274/0xc80
-   tracer_init_tracefs_work_func+0x50/0x320
-   process_one_work+0x1e8/0x5c0
-   worker_thread+0x1dc/0x3d0
-   kthread+0x194/0x1b0
-   start_kernel_thread+0x14/0x18
-
-Check tracing_disabled at the beginning of tracer_init_tracefs_work_func()
-and return immediately if tracing is disabled or failed to initialize,
-preventing the crash.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99248 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99248</link>
-    <guid isPermaLink="false">856efd7a014f2bfd97ef13667c502190</guid>
-    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-i2c: xiic: restore non-managed runtime PM to fix clk WARN flood
-
-The devres conversion replaced manual pm_runtime_enable()/disable() with
-devm_pm_runtime_set_active_enabled() and dropped the remove-time runtime
-PM teardown. The managed release tears runtime PM down in the wrong
-order: it calls pm_runtime_dont_use_autosuspend() before
-pm_runtime_disable(), i.e. while runtime PM is still enabled, and devres
-is LIFO so the devm_clk_get_enabled() release runs afterwards.
-
-At remove(), pm_runtime_put_sync() leaves the device active with the
-autosuspend timer armed. Clearing use_autosuspend then makes rpm_idle()
-suspend immediately, and xiic_i2c_runtime_suspend() clk_disable()s the
-clock. The later devm_clk_get_enabled() release clk_disable_unprepare()s
-the already-disabled clock, so clk_core_disable() WARNs (&quot;clkN already
-disabled&quot;) on every teardown.
-
-Drop the managed helper and restore the non-managed runtime PM setup and
-teardown, so runtime PM is enabled once in probe and disabled once in
-remove and the clock enable count stays balanced.
-
-Order the remove teardown so runtime PM is disabled before the usage
-count is dropped: pm_runtime_disable() followed by pm_runtime_put_noidle()
-instead of pm_runtime_put_sync(). Dropping the count first with autosuspend
-still enabled arms the autosuspend timer, and a preemption before
-pm_runtime_disable() lets it expire, suspend the device and clk_disable()
-the clock, which the devm release then disables again - the same WARN.
-
-Restore the non-managed IRQ request as well. The probe error paths now
-unwind runtime PM by hand via goto, and a devm-registered handler is only
-freed later during devres unwind, so it would stay live across the manual
-teardown (and across any future failing step added after it). Request the
-IRQ with request_threaded_irq() and free it explicitly in the probe error
-path and in remove. The probe error path also clears use_autosuspend, to
-match the teardown in remove().</description>
-    <category>NVD</category>
-    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 03 Nov 2026 14:01:36 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-99249 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99249</link>
@@ -912,6 +595,194 @@ Call scx_wait_dispatching() in scx_move_local_task_to_local_dsq(),
 unlink_dsq_and_switch_rq_lock() and move_task_between_dsqs() before they
 operate on the task. In scx_move_local_task_to_local_dsq(), wait before
 scx_resolve_local_dsq() as it may update p-&gt;scx.flags.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108046 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108046</link>
+    <guid isPermaLink="false">5dc4f5e4747f71af9a0b47f385ee680a</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 6.9 | Direct Object Reference (IDOR) vulnerability in Alosuite due to insufficient authorization checks when processing object identifiers. By modifying the identifier provided to the ‘/Companies/Edit/{id}’ endpoint, an attacker can access information associated with other companies or users without the appropriate authorization. The vulnerability allows unauthenticated remote attackers to enumerate valid object identifiers and retrieve information that should be restricted to authorized users, resulting in the unauthorized disclosure of application data.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108047 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108047</link>
+    <guid isPermaLink="false">fde8f8a965c8e3dafcae35c94a3e8f4a</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.6 | Inadequate authorization vulnerability in Alosuite’s user invitation functionality. The ‘/Requests/userInvitation’ endpoint does not properly validate the assignment of privileges on the server, allowing an attacker to manipulate the invitation parameters during the request process. By intercepting and modifying a legitimate invitation request, an unauthenticated attacker can assign administrative privileges to a newly invited user without the appropriate authorization checks. A successful exploit results in unauthorized privilege escalation, granting full administrative access to the affected application.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108048 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108048</link>
+    <guid isPermaLink="false">39fb7c7b0f281611477cb763cb3baf1f</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 6.9 | Vulnerability due to a lack of request limits in Alosuite’s password recovery functionality. The ‘/Account/resetPwd’ endpoint does not enforce adequate restrictions on the number or frequency of password reset requests sent for a single account. As a result, a remote attacker can repeatedly call the endpoint to generate an unlimited number of password reset emails addressed to a user, causing an email flood and enabling abuse of the password recovery mechanism. The absence of request limits or other controls against automation can harm legitimate users, consume application and email infrastructure resources, and facilitate automated attacks against the password recovery service.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108049 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108049</link>
+    <guid isPermaLink="false">0c97f8730c40b6fd0778a0ee89836707</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | Clickjacking vulnerability in the Alosuite web application. The affected login interface can be embedded in a web page controlled by an attacker because it does not implement adequate user interface protection mechanisms, such as the X-Frame-Options header or an appropriate Content-Security-Policy (frame-ancestors) directive. By tricking a victim into interacting with a malicious web page, an attacker can trigger unwanted actions within the Alosuite application embedded in the frame, which could compromise the integrity of user interactions and facilitate further attacks against authenticated users.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108050 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108050</link>
+    <guid isPermaLink="false">d80240ece1052ab98df4ad5f1af35328</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A stored Cross-Site Scripting (XSS) vulnerability in Alosuite that affects the delivery note functionality. Insufficient sanitization and encoding of the specified fields allow JavaScript to be stored, which executes in other users’ browsers when they view the affected records. Exploitation requires authenticated access to the affected functionality. The code can alter the displayed content and perform actions within the context of the victim’s session. The list of features, parameters, and endpoints is as follows:
+
+CVE-2026-108050: ReferenceOtherParty in ‘/Documents/DeliveryNotes/Edit/{id}’;</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108051 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108051</link>
+    <guid isPermaLink="false">2e571fad1e699934fdcfc403d1be4ed4</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A stored Cross-Site Scripting (XSS) vulnerability in Alosuite that affects the delivery note functionality. Insufficient sanitization and encoding of the specified fields allow JavaScript to be stored, which executes in other users’ browsers when they view the affected records. Exploitation requires authenticated access to the affected functionality. The code can alter the displayed content and perform actions within the context of the victim’s session. The list of features, parameters, and endpoints is as follows:
+
+CVE-2026-108051: Nombre in ‘/Articulos/Create’;</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108052 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108052</link>
+    <guid isPermaLink="false">e078024527ca654d900fc377f92366db</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A stored Cross-Site Scripting (XSS) vulnerability in Alosuite that affects the delivery note functionality. Insufficient sanitization and encoding of the specified fields allow JavaScript to be stored, which executes in other users’ browsers when they view the affected records. Exploitation requires authenticated access to the affected functionality. The code can alter the displayed content and perform actions within the context of the victim’s session. The list of features, parameters, and endpoints is as follows:
+
+CVE-2026-108052: Codigo in ‘/CategoriasFicheros/Edit/{id}’;</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108053 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108053</link>
+    <guid isPermaLink="false">9bb84cd6bd29a262d49774097bf6ab87</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A stored Cross-Site Scripting (XSS) vulnerability in Alosuite that affects the delivery note functionality. Insufficient sanitization and encoding of the specified fields allow JavaScript to be stored, which executes in other users’ browsers when they view the affected records. Exploitation requires authenticated access to the affected functionality. The code can alter the displayed content and perform actions within the context of the victim’s session. The list of features, parameters, and endpoints is as follows:
+
+CVE-2026-108053: Nombre in ‘/CuentasCorrientes/Create’;</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108054 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108054</link>
+    <guid isPermaLink="false">119a43825076127b79f5827e72bf3db3</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A stored Cross-Site Scripting (XSS) vulnerability in Alosuite that affects the delivery note functionality. Insufficient sanitization and encoding of the specified fields allow JavaScript to be stored, which executes in other users’ browsers when they view the affected records. Exploitation requires authenticated access to the affected functionality. The code can alter the displayed content and perform actions within the context of the victim’s session. The list of features, parameters, and endpoints is as follows:
+
+CVE-2026-108054: Nombre in ‘/Familias/Edit/{id}’;</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108055 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108055</link>
+    <guid isPermaLink="false">b8d721a13a132f8313cf1c064a146a8d</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A stored Cross-Site Scripting (XSS) vulnerability in Alosuite that affects the delivery note functionality. Insufficient sanitization and encoding of the specified fields allow JavaScript to be stored, which executes in other users’ browsers when they view the affected records. Exploitation requires authenticated access to the affected functionality. The code can alter the displayed content and perform actions within the context of the victim’s session. The list of features, parameters, and endpoints is as follows:
+
+CVE-2026-108055: Nombre in ‘/Inmuebles/Create’;</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108056 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108056</link>
+    <guid isPermaLink="false">63a54c352160221759ac2c2fb697c564</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A stored Cross-Site Scripting (XSS) vulnerability in Alosuite that affects the delivery note functionality. Insufficient sanitization and encoding of the specified fields allow JavaScript to be stored, which executes in other users’ browsers when they view the affected records. Exploitation requires authenticated access to the affected functionality. The code can alter the displayed content and perform actions within the context of the victim’s session. The list of features, parameters, and endpoints is as follows:
+
+CVE-2026-108056: NombrePF in ‘/Empresas/Create’;</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108057 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108057</link>
+    <guid isPermaLink="false">a0fd181f6b83fef00fdd96bcfd5934bc</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A stored Cross-Site Scripting (XSS) vulnerability in Alosuite that affects the delivery note functionality. Insufficient sanitization and encoding of the specified fields allow JavaScript to be stored, which executes in other users’ browsers when they view the affected records. Exploitation requires authenticated access to the affected functionality. The code can alter the displayed content and perform actions within the context of the victim’s session. The list of features, parameters, and endpoints is as follows:
+
+CVE-2026-108057: Nombre in ‘/PlantillasPdf/Edit/1273129’;</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108058 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108058</link>
+    <guid isPermaLink="false">bb7d067915acec9963518de7f816d032</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A stored Cross-Site Scripting (XSS) vulnerability in Alosuite that affects the delivery note functionality. Insufficient sanitization and encoding of the specified fields allow JavaScript to be stored, which executes in other users’ browsers when they view the affected records. Exploitation requires authenticated access to the affected functionality. The code can alter the displayed content and perform actions within the context of the victim’s session. The list of features, parameters, and endpoints is as follows:
+
+CVE-2026-108058: Nombre in ‘/PlantillasMail/Edit’;</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108059 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108059</link>
+    <guid isPermaLink="false">df5fa41e162c6cf9d1c954498b11e88f</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A stored Cross-Site Scripting (XSS) vulnerability in Alosuite that affects the delivery note functionality. Insufficient sanitization and encoding of the specified fields allow JavaScript to be stored, which executes in other users’ browsers when they view the affected records. Exploitation requires authenticated access to the affected functionality. The code can alter the displayed content and perform actions within the context of the victim’s session. The list of features, parameters, and endpoints is as follows:
+
+CVE-2026-108059: Observaciones in ‘/Terceros/Create’;</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108060 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108060</link>
+    <guid isPermaLink="false">fc07647bce370aae124f496b8a4bb445</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 5.1 | A stored Cross-Site Scripting (XSS) vulnerability in Alosuite that affects the delivery note functionality. Insufficient sanitization and encoding of the specified fields allow JavaScript to be stored, which executes in other users’ browsers when they view the affected records. Exploitation requires authenticated access to the affected functionality. The code can alter the displayed content and perform actions within the context of the victim’s session. The list of features, parameters, and endpoints is as follows:CVE-2026-108060: Nombre in ‘/Trabajadores/Create’.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121458 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121458</link>
+    <guid isPermaLink="false">d7e99e71e1a6d3fa6d86322101bf7824</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 7.1 | Instatic before 0.0.21 contains a missing authorization vulnerability in its AI/MCP content read tools that allows low-privileged authenticated users with ai.chat and content.edit.own capabilities to access data rows belonging to other users by calling content_get_document and content_list_documents without the object-level authorization checks enforced by the normal HTTP API. Attackers can use the MCP interface to retrieve private or unpublished draft content and enumerate rows from the posts system table, resulting in cross-user data disclosure.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-65160 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65160</link>
+    <guid isPermaLink="false">910eadc6e6e20f41aa2d30469ab54759</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 5.5 | NVIDIA nvJPEG contains a vulnerability where an attacker could cause a divide-by-zero. A successful exploit of this vulnerability might lead to denial of service.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-76124 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76124</link>
+    <guid isPermaLink="false">d1949f2143f8d9315055d32f1d9e2913</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 8.8 | The BuddyBoss App plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 3.2.1 via the send_feedback function. This is due to insufficient file type validation that relies solely on the client-supplied Content-Type header without server-side content inspection or extension validation. This makes it possible for authenticated attackers, with subscriber-level access and above, to upload files that may be executable, which makes remote code execution possible. While uploaded files are deleted after email transmission, a race condition exists during SMTP execution that allows access to the file, and files persist indefinitely when wp_mail() fails.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99270 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99270</link>
+    <guid isPermaLink="false">4e5e91fe4db71eb821f9861062136e49</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+tcp: Fix potential UAF in reqsk_timer_handler().
+
+When TCP socket migration fails at inet_ehash_insert() in
+reqsk_timer_handler(), we jump to the no_ownership: label
+and free the new reqsk immediately with __reqsk_free().
+
+Thus, we must stop the new reqsk's timer before jumping to the
+label, but the timer might be missed since the cited commit,
+resulting in UAF.
+
+As we are in the original reqsk's timer context, we can safely
+call timer_delete_sync() for the new reqsk.
+
+Let's pass false to __inet_csk_reqsk_queue_drop() to stop
+the new reqsk's timer.</description>
     <category>NVD</category>
     <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
