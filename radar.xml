@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2026 01:01:01 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 02:02:18 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-120830 - NVD - CVSS Score v3.1: 7.4</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120830</link>
@@ -15,20 +15,20 @@
     <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91893 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91893</link>
-    <guid isPermaLink="false">aba6df386054ba38079cf9e6e875ab4e</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 7.8 | Dell Alienware Command Center (AWCC), versions prior to 6.14.54.0, contain an Improper Privilege Management vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privilege.</description>
+    <title>CVE-2026-105770 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105770</link>
+    <guid isPermaLink="false">6a9c95eb9a23da6a60e27f78e4356c87</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 5.3 | Octo STS (github.com/octo-sts/app) before 0.11.2 returns trust policy configuration to callers whose OIDC token does not satisfy that policy. TrustPolicy.CheckToken included the policy's issuer, subject and audience values or patterns and claim_pattern names and regular expressions in its PermissionDenied errors, which Exchange returned verbatim. Exchange also selected the GitHub App installation before checking the token, so errors from resolving the policy's app or app_pattern pin were returned to callers the policy does not trust. An attacker who holds any validly signed OIDC token, such as a GitHub Actions token from a repository they own, and who knows or guesses a target owner/repo and identity name can read that policy's matching rules, even when the policy is stored in a private repository. These rules often name internal repositories, branches, environments or cloud account identifiers. The issue does not allow minting tokens or bypassing a trust policy. This issue is fixed in 0.11.2.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91894 - NVD - CVSS Score v3.1: 6.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91894</link>
-    <guid isPermaLink="false">721c36b2119ba130c8082322ac373a50</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 6.7 | Dell Alienware Command Center (AWCC), versions prior to 6.14.54.0, contain a Least Privilege Violation vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Elevation of Privilege, Arbitrary Code Execution and Denial of Service.</description>
+    <title>CVE-2026-120833 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120833</link>
+    <guid isPermaLink="false">6edb16bc3b39e2ec52540acca19cf88b</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v4.0: 8.5 | labbench before 0.46.1 contains a deserialization of untrusted data vulnerability in read() and read_relational() that passes any file with a .p or .pickle extension to pandas.read_pickle based on the extension alone. Attackers who supply a crafted data file or relational data archive can execute arbitrary code when a user loads it with these functions.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-91895 - NVD - CVSS Score v3.1: 7.1</title>
