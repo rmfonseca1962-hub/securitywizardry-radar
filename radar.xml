@@ -5,39 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Nov 2026 23:00:35 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-59045 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59045</link>
-    <guid isPermaLink="false">f0a11b2659b88289023abe72914a3e0e</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple locations, there is a possible memory corruption due to a race condition. This could lead to local escalation of privilege with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-59046 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59046</link>
-    <guid isPermaLink="false">76a9969946c637298cd8fdcca955e11e</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In __pkvm_guest_relinquish_to_host of mem_protect.c, there is a possible out-of-bounds write due to improper input validation. This could lead to local denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-59047 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59047</link>
-    <guid isPermaLink="false">92ea9e129a3412ad58cc126ae4f8c87b</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In multiple locations, there is a possible denial of service due to a logic error in the code. This could lead to local denial of service with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-59048 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59048</link>
-    <guid isPermaLink="false">4f08ca81b3de58fad4a87db129690e21</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS: não informado | In rb_cpu_init of trace.c, there is a possible out-of-bounds read due to an incorrect bounds check. This could lead to local information disclosure with no additional execution privileges needed. User interaction is not needed for exploitation.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 03 Nov 2026 00:01:51 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-86365 - NVD - CVSS Score v3.1: 4.2</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86365</link>
@@ -335,6 +303,40 @@ To remediate this issue, users should upgrade to version v0.2.1.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86596</link>
     <guid isPermaLink="false">6f0c0d398d9fbc7c96a6af449ba100bf</guid>
     <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 9.8 | The s2Member plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, &lt;= 260927 via the 'item_name' parameter parameter. This is due to insufficient sanitization in strip_php_tags_deep(), which only strips literal '&lt;?' sequences, combined with a post-interpolation placeholder cleanup that reassembles a valid '&lt;?php' opener after the attacker-controlled value has already been embedded in the email template. This makes it possible for authenticated attackers, with custom-level access and above, to execute code on the server.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111565 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111565</link>
+    <guid isPermaLink="false">2d80e8be0923609c6cbe8443cf07f642</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120597 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120597</link>
+    <guid isPermaLink="false">1f1c810ec908fe0acec3fa98d3aca7fd</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was identified in Welcart e-Commerce Plugin up to 2.12.6 on WordPress. This affects the function ESCOTT_MAIN::error_page_message of the file classes/paymentESCOTT.main.class.php. Such manipulation of the argument ResponseCd leads to cross site scripting. The attack can be launched remotely. The exploit is publicly available and might be used. Upgrading to version 2.12.7 mitigates this issue. It is recommended to upgrade the affected component. The value is now escaped with esc_html() before output. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120752 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120752</link>
+    <guid isPermaLink="false">e69cfaecaaa36813502ae44fed1ea53d</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 7.7 | PyMuPDF 1.25.3 before 2.0 contains a stack-based buffer overflow vulnerability in JM_set_annot_callout_line() that copies a caller-supplied number of callout points into a fixed three-element stack array. Attackers who control the callout argument passed to Page.add_freetext_annot() can supply four or more points to overwrite the stack frame, crashing the process or executing code.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-71450 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71450</link>
+    <guid isPermaLink="false">47e6fd6e67d63e79873278777c8f0d06</guid>
+    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.7 | Authentication bypass using an alternate path or channel vulnerability in Johnson Controls EasyIO Neo EC and CW Edge Controller allows Authentication Bypass.
+
+This issue affects EasyIO Neo EC and CW Edge Controller: from EC 3.3b62 through EC 3.3b63 and from CW 3.3b24 through CW 3.3b25.</description>
     <category>NVD</category>
     <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
   </item>
