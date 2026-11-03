@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Nov 2026 07:01:09 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 08:00:51 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-120830 - NVD - CVSS Score v3.1: 7.4</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120830</link>
@@ -263,32 +263,32 @@
     <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-116635 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116635</link>
-    <guid isPermaLink="false">3d1806c164405a15a92f0ad51044e9e6</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 6.9 | Improper limitation of a pathname to a restricted directory in the deployment status component of the AWS Serverless MCP Server (aws-serverless-mcp-server) before v0.2.1 might allow an actor who can influence the MCP agent to read the contents of JSON files outside the intended deployment status directory. Where write access has been enabled, to create or overwrite JSON files outside that directory. This issue is reachable through directory traversal sequences or an absolute path supplied in the project name input.
+    <title>CVE-2025-1397 - NVD - CVSS Score v3.1: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-1397</link>
+    <guid isPermaLink="false">606488eb63ded7dbb02bf16bb5e24054</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 4.8 | When utilizing JWT Bearer or SAML2 Bearer grant types, the system fails to validate the status of the Identity Provider (IDP) before issuing access tokens. This oversight permits tokens to be generated even when the associated IDP has been disabled.
 
-
-
-To remediate this issue, users should upgrade to version v0.2.1.</description>
+A malicious actor could leverage this vulnerability to obtain access tokens by targeting a disabled IDP. This could enable them to bypass intended security controls and potentially access protected resources that should be inaccessible due to the IDP's disabled state.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120091 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120091</link>
-    <guid isPermaLink="false">a99ab2aa06e04c0ed17637446f34992d</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v4.0: 8.7 | Temporal Server compiles a Worker Controller Instance module, go.temporal.io/auto-scaled-workers, into its Worker Service, and that module registers a compute provider named k8s whose function is to manage workers running in a Kubernetes cluster. The k8s provider built its Kubernetes client from the client configuration supplied in the caller's request rather than from operator configuration, and building and using that client could run a command of the caller's choosing on the Worker Service host, under the account the server process runs as. Two frontend operations reach the provider. CreateWorkerDeploymentVersion requires a namespace write role. ValidateWorkerDeploymentVersionComputeConfig is registered as a read-only namespace operation, so an authenticated caller holding only a read role in a single namespace can reach the provider through it, and that route does not require a worker deployment to already exist. Execution happens while the submitted configuration is validated, so no scaling decision, task arrival, or unusual request sequence is required. Because the Worker Service process holds the persistence credentials for every namespace in the cluster and the cluster's TLS material, the consequence reaches beyond the caller's namespace to the cluster as a whole. The provider is present in the official temporal-server binaries and container images for the affected releases. The control that keeps it unreachable is the compute provider allowlist, the dynamic configuration setting workercontroller.compute_providers.enabled. On Temporal Server 1.31.0 through 1.31.2 that allowlist does not deny by default: when the setting is unset the check is skipped and every registered compute provider is permitted, k8s included, so a stock deployment of those releases is exposed. On 1.31.3 and later 1.31 releases, and on 1.32.0 and later 1.32 releases, the allowlist denies by default, and a deployment is exposed only where k8s has been added to it. The 1.30 release line does not include the Worker Controller Instance module and is unaffected. To determine whether a deployment is affected, check the following together. The deployed Temporal Server version is in an affected range. The Worker Service is running, which it is in the default service set and therefore in a stock deployment. The effective value of workercontroller.compute_providers.enabled contains k8s, or, on 1.31.0 through 1.31.2 only, is unset; check both the global value and every namespace-constrained override, because an override can add k8s for a single namespace. And authorization is configured, meaning a real authorizer and claim mapper are in place; a deployment running with no authorizer already grants every caller unrestricted access to every namespace, so it has no namespace boundary for this to cross. Deployments that use a custom authorizer should also check whether it permits ValidateWorkerDeploymentVersionComputeConfig to callers without namespace write access. The separate per-namespace dynamic configuration setting workercontroller.enabled does not gate the affected path on any affected release.</description>
+    <title>CVE-2025-5769 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-5769</link>
+    <guid isPermaLink="false">b20a39870ded8c9ba7e9353724edc031</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS Score v3.1: 6.1 | The authentication endpoint does not properly encode user-supplied input before rendering it within the web page. This lack of output encoding allows an attacker to inject malicious JavaScript payloads into the authentication flow, which are then executed by the victim's browser.
+
+By exploiting this vulnerability, an attacker can redirect the user's browser to a malicious website, modify the content of the web page displayed to the user, or exfiltrate information from the browser. However, due to the implementation of the httpOnly flag on session-related sensitive cookies, session hijacking and similar attacks are not possible.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120740 - NVD - CVSS Score v3.1: 2.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120740</link>
-    <guid isPermaLink="false">fe1197714a7d884cb4039773b27c75bd</guid>
-    <description>Monday 2 November 2026 | NVD | CVSS Score v3.1: 2.0 | A flaw was found in hivex. By supplying a specially crafted Windows registry hive file, an attacker can trigger an out-of-bounds memory read when hivex parses registry values containing malformed large data block lists. This issue can cause the application processing the registry file to crash, resulting in a Denial of Service (DoS).</description>
+    <title>CVE-2026-120987 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120987</link>
+    <guid isPermaLink="false">f00bc46734ec38b79c11dc012688901c</guid>
+    <description>Tuesday 3 November 2026 | NVD | CVSS: não informado | Whale Browser before 5.39.412.57 allows an attacker to bypass the iframe sandbox in a dual-tab environment.</description>
     <category>NVD</category>
-    <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-86596 - NVD - CVSS Score v3.1: 9.8</title>
