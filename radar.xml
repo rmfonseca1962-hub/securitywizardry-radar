@@ -5,233 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2026 16:01:33 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-121145 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121145</link>
-    <guid isPermaLink="false">1abb89a71ca145f3d40399184506681f</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 7.1 | This vulnerability exists in the iRA 2.0 and iRA.ev mobile applications due to insufficient validation of URLs and origins loaded within the WebView component. A remote attacker could exploit this vulnerability by sending malicious web content to the affected WebView.
-
-Successful exploitation of this vulnerability could allow the attacker to perform unauthorized interaction with application functionality, obtain live bearer authentication tokens and potentially impersonate the associated user and access vehicle related information and services.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121146 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121146</link>
-    <guid isPermaLink="false">68e9a21c9597f2b1688b7c2d27d44fda</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 6.8 | This vulnerability exists in the iRA 2.0 and iRA.ev mobile applications due to the recording of authentication tokens in application logs used for development and debugging. A local attacker with an access to logs could exploit this vulnerability by retrieving and misusing the exposed session tokens.
-
-
-
-Successful exploitation of this vulnerability could allow the attacker to impersonate the associated user and gain unauthorized access to vehicle related information and services.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121147 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121147</link>
-    <guid isPermaLink="false">110e3450af18f4760d3a6ec2396fbc73</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.5 | This vulnerability exists in the iRA 2.0 and iRA.ev mobile applications due to improper implementation of SSL certificate pinning in the network security configuration, resulting in ineffective certificate pinning controls. An attacker positioned to intercept network traffic could exploit this vulnerability to intercept or modify communications between the application and its backend services.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121373 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121373</link>
-    <guid isPermaLink="false">995ae5d865de5be6757c961e9c5a2567</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 5.3 | The Symfony HtmlSanitizer component MetaRefreshAttributeSanitizer, introduced to fix CVE-2026-48761, sanitizes the refresh URL of content attributes of meta tags using a regular expression that is too narrow, allowing sanitization to be bypassed, and resulting in potential URL redirection to untrusted sites in Symfony versions 6.1.x prior to 6.4.50, 7.x prior to 7.4.23, and 8.x prior to 8.1.11.
-
-
-
-
-The shared declarative refresh steps in the WHATWG HTML Standard require a broader approach: the separator after the time may be ASCII whitespace alone, with no ; or ,, and the url= keyword is optional. Directives the browser honours, but the regular expression misses are returned unchanged, so the attacker URL skips UrlSanitizer entirely and both allowLinkSchemes and allowLinkHosts are defeated for the refresh navigation.
-
-
-
-
-This is reachable under any configuration that allows meta with http-equiv and content, including the documented allowStaticElements() preset.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121620 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121620</link>
-    <guid isPermaLink="false">76ac7c9954beffa6475b66b613113dbf</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.3 | CoopCycle coopcycle-web 5.6.0 before 6.20.0 contains a missing authentication vulnerability that allows unauthenticated attackers to forge Zelty webhook events because the x-zelty-hmac-sha256 HMAC signature is never verified. Attackers can POST forged dish, menu, option and order-status events to /api/zelty/webhook/* endpoints to toggle restaurant products and alter order preparation states.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121936 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121936</link>
-    <guid isPermaLink="false">038995d3e56ee46589dc249414d3acb9</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 6.9 | easyVoice before 0.0.23 contains a server-side request forgery vulnerability that allows unauthenticated attackers to make the server send POST requests by supplying openaiBaseUrl with useLLM enabled. Attackers can target loopback and internal services through /api/v1/tts endpoints, using reflected error messages in the x-generate-tts-warning header to probe internal hosts and ports.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121937 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121937</link>
-    <guid isPermaLink="false">e038dd79cca29077ae21a6287b01e581</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 2.3 | loonflow before r3.2.3 contains a missing authorization vulnerability in TicketFlowHistoryView that allows any authenticated user to read other users' ticket flow history by supplying a ticket UUID. Attackers can request the ticket_flow_history endpoint, which skips ticket_view_permission_check, to obtain approval comments and processor names, emails and phone numbers.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121938 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121938</link>
-    <guid isPermaLink="false">d5ecae9949671722ad862ad4817fc296</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 6.0 | langchain4j-aideepin before 3.31.0 contains an insecure direct object reference vulnerability that allows authenticated users to read other users' character-chat conversations by supplying their character uuid. Attackers can request GET /character/{uuid}, which CharacterService.detail resolves without an ownership check, to obtain victims' questions, AI answers, and attachment and audio URLs.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121939 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121939</link>
-    <guid isPermaLink="false">fb7da522b34c3e4a636852b0a8e42989</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 9.2 | Databasement before 1.10.9 contains an authentication bypass vulnerability in OAuthService::findOrCreateLocalUser() that links OIDC identities to local users by email without checking email_verified. Attackers can register an identity provider account with a victim's unverified email to log in as any user, including the super-admin, and retain access after password resets.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121940 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121940</link>
-    <guid isPermaLink="false">790c563fcb5614c2b11951d363451137</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.7 | Stonewuu ai-fusion-video before 1.3.0 contains an insecure direct object reference vulnerability that allows authenticated users to access other users' projects by supplying unscoped object ids. Attackers can enumerate auto-increment ids on /api/project, /api/asset and /api/script handlers to read, overwrite, cascade-delete data, and add themselves as project members.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121941 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121941</link>
-    <guid isPermaLink="false">2de64d7df015d899450acb94e4933672</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.5 | libmt32emu before 2.8.4 contains a heap buffer overflow vulnerability in MidiStreamParserImpl::parseSysex that allows attackers to write past a heap allocation by supplying oversized unterminated SysEx messages. Attackers can feed more than 32768 SysEx data bytes through the mt32emu_parse_stream API via MIDI files, ports, or sequencer clients to corrupt heap memory and crash the application.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121942 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121942</link>
-    <guid isPermaLink="false">425d1e3a2ea0161fd243b5a8aa9757e5</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 6.9 | ZBar through 0.23.95 contains an out-of-bounds read vulnerability in _zbar_sq_decode() in zbar/sqcode.c that allows attackers to read heap memory outside the image buffer via crafted SQ code images. Attackers can supply an image with a skewed SQ code finder pattern near the edge, producing unchecked sample coordinates that crash the decoder and leak bytes into output.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121943 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121943</link>
-    <guid isPermaLink="false">419465427545e1f057a3b84e8ef06821</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 6.3 | Irontec sngrep through 1.9.0 contains an out-of-bounds stack read vulnerability in sip_check_packet and sip_validate_packet caused by an off-by-one length check on 10240-byte SIP payloads. Remote attackers can send a crafted UDP or TCP SIP packet or supply a pcap file to crash sngrep or leak adjacent stack bytes into displayed SIP fields.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121944 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121944</link>
-    <guid isPermaLink="false">ba35a97208825682d4cdb37a753099d6</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 6.8 | sngrep through 1.9.0 contains an infinite loop vulnerability in capture_packet_reasm_ip() in src/capture.c that allows attackers to cause denial of service via crafted NFLOG TLVs. Attackers can supply a pcap file with link type NFLOG containing a non-payload TLV with length under 4, making the capture thread spin at full CPU and stop processing packets.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121945 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121945</link>
-    <guid isPermaLink="false">beb42bbf3aae955b834c7bcf246d3804</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 7.2 | CoopCycle coopcycle-web before 6.20.1 contains a broken access control vulnerability that allows any courier to read and modify every incident because Incident operations only check ROLE_COURIER. Attackers can enumerate sequential incident ids and use PUT /api/incidents/{id}/action to re-price, cancel or reschedule other stores' orders and tasks.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121946 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121946</link>
-    <guid isPermaLink="false">05a6b2660ab5f3b025066263df943c6a</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 6.9 | zbateson mail-mime-parser before 3.0.9 and 4.x before 4.0.6 contains a CRLF header injection vulnerability in message-building helpers that fail to strip CR and LF characters. Attackers supplying crafted MIME type, charset, encoding, micalg, or protocol values can inject extra header lines such as a forged Bcc into outgoing messages.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121970 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121970</link>
-    <guid isPermaLink="false">5b9e6bbb626ce3b70d14e2d57ce8969a</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 6.3 | Pay with Vipps and MobilePay for WooCommerce (woo-vipps) before 6.4.1 contains an improper cryptographic signature verification vulnerability in the recurring-payment webhook handler that allows unauthenticated attackers to forge webhook requests when no local webhook secret is stored, because the code fails to return on an empty secret and computes an HMAC keyed with an empty string using a loose == comparison instead of hash_equals. Attackers can craft a recurring.agreement-stopped.v1 event with a known agreementId and a matching empty-key signature to cancel a victim's active WooCommerce subscription.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-65555 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65555</link>
-    <guid isPermaLink="false">e3201bc90db339948bd72d0084733550</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 9.8 | Incorrect Privilege Assignment vulnerability in Uncanny Owl Uncanny Toolkit for LearnDash uncanny-learndash-toolkit allows Privilege Escalation.This issue affects Uncanny Toolkit for LearnDash: from n/a through 3.8.2.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118391 - NVD - CVSS Score v4.0: 8.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118391</link>
-    <guid isPermaLink="false">1240a34cd4049be9fa5535b6193c0ae3</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.9 | Allocation of Resources Without Limits or Throttling vulnerability in elixir-ecto ecto allows an unauthenticated remote attacker to exhaust memory in the application and in the database server by sending requests with distinct JSON keys or list lengths where the application interpolates them into json_extract_path/2, field[^key] or splice/1. Ecto caches prepared queries per repository in an ETS table with no size limit and no eviction. Interpolated JSON path elements become part of the query expression instead of its parameters, and splice/1 expands into one placeholder per element, so every distinct key or list length creates a new cache entry. With ecto_sql each entry is also a new prepared statement on the database connection that runs it. None of this memory is released until the processes restart.
-
-This issue affects ecto: from 3.4.0 before 3.14.3.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119745 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119745</link>
-    <guid isPermaLink="false">bb86ff2367c503dba0c799144e01c541</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 5.3 | Sender plugin for WordPress before 2.11.3 contains a missing authorization vulnerability that allows any authenticated user, including Subscribers, to access a sensitive diagnostic dump by requesting the admin_post_sender_debug_download action handled by downloadDebugFile() without any capability, nonce, or referer check. Attackers can exploit this flaw via wp-admin/admin-post.php?action=sender_debug_download to retrieve WordPress, PHP, WooCommerce, and server version details, the full active plugin inventory, active theme information, and plugin settings including the connected Sender account resource key and account metadata.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121993 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121993</link>
-    <guid isPermaLink="false">14f8b4507b730e90a56db506011033ba</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 5.3 | wePOS (Point Of Sale for WooCommerce) before 2.0.3 contains a missing authorization vulnerability in the wepos/v1/payment/process REST route that allows authenticated vendor-level users to mark arbitrary orders as paid and completed by supplying another order's ID. Attackers with only the publish_shop_orders capability (such as Dokan vendor staff) can invoke the payment processing endpoint with an order ID they do not own to trigger the order completion lifecycle, including stock reduction and granting of paid-order access, without making any real payment.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100407 - NVD - CVSS Score v3.1: 4.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100407</link>
-    <guid isPermaLink="false">fe37705155fadd030063b9cc48c65653</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 4.4 | Git for Windows is the Windows port of Git. From 2.44.0.windows.1 until 2.55.0.windows.3, the git-credential-wincred store operation in contrib/credential/wincred/git-credential-wincred.c uses _scwprintf() to size a formatted wide-character credential buffer without space for the terminating NUL when both password and oauth_refresh_token are present. The operation also passes a byte count to _snwprintf_s() where a wide-character count is required, allowing the terminator to be written one WCHAR past the heap allocation before CredWriteW() persists the credential. The resulting fixed two-byte NUL overwrite can terminate the helper with Windows heap-corruption status and can cause git credential approve to report success even though the OAuth credential was not stored. This issue is fixed in version 2.55.0.windows.3.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100408 - NVD - CVSS Score v3.1: 4.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100408</link>
-    <guid isPermaLink="false">9e2bd01333cbccbcd1c2bec70b942c7f</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 4.4 | Git for Windows is the Windows port of Git. From 2.43.0.windows.1 until 2.55.0.windows.3, when a matching git:* credential exists in Windows Credential Manager and a git-credential-wincred erase input includes a password field, the operation in contrib/credential/wincred/git-credential-wincred.c allocates a buffer of exactly CredentialBlobSize bytes in match_cred_password() and then uses wcsncpy_s() to copy the corresponding number of wide characters plus a terminating NUL. The destination capacity is also supplied in bytes instead of WCHAR elements, allowing a fixed two-byte NUL write past the allocation before the password comparison determines whether CredDeleteW() should remove the credential; erase without a password field does not enter this comparison path. The helper can terminate with Windows heap-corruption status, and git credential reject can appear successful while the rejected credential remains stored. This issue is fixed in version 2.55.0.windows.3.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114627 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114627</link>
-    <guid isPermaLink="false">c211a2aac7b312c08da10d2beff275c9</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS: não informado | Web::Simple versions before 0.036 for Perl do not escape values interpolated into double-quoted strings in HTML::Tags output.
-
-Under use HTML::Tags or use XML::Tags, a double-quoted string literal becomes a StringThing object that holds each interpolated value as a separate part. The escaping step passes such objects through, and stringify joins their interpolated parts as is. A value passed on its own, as in &lt;p&gt;, $value, &lt;/p&gt;, is entity-escaped, but the same value in &quot;Hello $value&quot; is not.
-
-An attacker who controls a value that an application interpolates into a double-quoted string can inject script into the generated page.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119776 - NVD - CVSS Score v4.0: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119776</link>
-    <guid isPermaLink="false">4de63121e58baae763ebc5339b05a7c2</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 6.1 | In all prior released versions of FRRouting, the OSPFv3 (for IPv6) implementation does not check that OSPFv3 packets have a link-local source address and either a link-local destination or one of the protocol multicast destination groups.  This may enable malicious actors to establish OSPFv3 adjacencies from unexpectedly, distant IPv6 hosts. Proper usage of OSPFv3 authentication trailers (RFC 7166, as is best practice) prevents full exploitation of this issue, though may allow a malicious actor to waste CPU on authentication checks.
-
-
-
-Note the linked PR #23935 is not sufficient to fix the issue as it only verifies the source address. It is the destination address that must be checked.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 04 Nov 2026 17:01:14 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-120421 - NVD - CVSS Score v3.1: 6.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120421</link>
@@ -365,6 +139,234 @@ Any application whose option list is built from data rather than literals, using
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-66736</link>
     <guid isPermaLink="false">7b54a24d018e9b20f8502e871e210963</guid>
     <description>Wednesday 4 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-106554 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106554</link>
+    <guid isPermaLink="false">301622e7fb9af4bf9c1c585eed2b64c6</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS: não informado | One CBOR-parsing issue in jackson-dataformats-binary's CBOR module: an unbounded run of CBOR tags drives quadratic-time TagList growth (CPU/GC-exhaustion DoS, PoC-proven).
+
+
+
+PoC executed against com.fasterxml.jackson.dataformat:jackson-dataformat-cbor:2.18.2; present in current 2.x and 3.x (tools.jackson.dataformat.cbor) HEAD. Distinct from the Avro and Smile/Protobuf advisories for this repo.
+
+
+
+Quadratic CPU/GC DoS from an unbounded chain of CBOR tags (PoC-proven). File: cbor/src/main/java/.../cbor/CBORParser.java (tag handling -&gt; TagList).
+
+
+
+CBOR permits a data item to be preceded by any number of semantic tags. The CBOR parser accumulates them in a TagList whose backing array grows by a fixed increment (+8), not by doubling, and re-scans/copies on each growth. An attacker sends a value preceded by a long run of tag bytes; the fixed-increment growth makes accumulating N tags O(N^2) in time (plus GC pressure), with no cap on the number of stacked tags.
+
+
+
+PoC (executed, JDK 17): feeding a CBOR stream consisting of a long run of tag bytes (e.g. tag 0xC0+) before a trivial value forces quadratic CPU/GC; parse time grows super-linearly with the tag count, pinning a request thread with no configurable limit.
+
+
+
+Impact. Algorithmic-complexity denial of service (CWE-407): a modest input of stacked tags consumes quadratic CPU/GC, pinning a request thread; concurrent requests exhaust the pool.
+
+
+
+Fix. Grow TagList by doubling and/or cap the number of stacked tags (StreamReadConstraints-style).</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109518 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109518</link>
+    <guid isPermaLink="false">f8636f24cffa83910721f90d4d33b04a</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 7.7 | On Debian, Ubuntu, and derivative Linux distributions, an on-path attacker who can manipulate the HTTP traffic (including a malicious mirror or proxy) between an APT client and an archive server triggered by a package install can trick the client into installing an attacker-controlled unverified package and achieve remote code execution with root privileges.
+
+
+
+The vulnerability is caused by the reuse of hard links and requires the client to follow redirects and retry the download of package files. It requires the client to have a non-zero Acquire::Retries configuration setting; the value 3 is the default starting with Debian 12 (bookworm) and Ubuntu 22.04 LTS (Jammy Jellyfish), so older releases are unaffected in a default configuration</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119746 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119746</link>
+    <guid isPermaLink="false">ae02ee6db172eeb777129c61870015b5</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.2 | ProSoft Technology ICX35 devices (X35-HWC-A and ICX35-HWC-E) contain a login lockout bypass in the integrated module web page. The account lockout mechanism that restricts repeated failed authentication attempts is enforced in client-side JavaScript, so a remote attacker can reset the lockout and continue submitting password guesses by deleting the relevant browser cookies, defeating the brute-force protection. This vulnerability has been addressed in version 1.14.158.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121950 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121950</link>
+    <guid isPermaLink="false">7cc6400129e2a992c14bf2854b64a532</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 7.1 | FreeRDP before 3.32.2 does not check the product of surface dimensions in gdi_CreateSurface when handling an RDPGFX CREATE_SURFACE PDU, causing an integer wrap and heap buffer overflow on 32-bit builds and an approximately 4 GiB allocation on 64-bit builds. A malicious RDP server can send a CREATE_SURFACE PDU with width and height 32766 to a connecting client to corrupt heap memory or cause a denial of service.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121951 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121951</link>
+    <guid isPermaLink="false">c5ba54e6dce8264e85901d0e92d80490</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.7 | FreeRDP 3.0.0 before 3.32.2 server-side RDP peer input parsing skips the six-byte body of a slow-path input event with an unknown message type without checking it lies within the packet's declared length, causing a WinPR stream assertion failure. A remote RDP client with an active session can send a truncated unknown input event to abort assertion-enabled server processes, causing denial of service.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121952 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121952</link>
+    <guid isPermaLink="false">336a594a01572e437c664f5b90a1f5af</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 9.3 | FreeRDP before 3.32.2 has an out-of-bounds write in the proxy because rdp_read_bitmap_cache_v2_capability_set rejects only numCellCaches values above 5, yet the bitmap cache v2 cell array is later accessed at fixed indices 0 through 4. A client connecting to the proxy can declare fewer than five cell caches in its Confirm Active, causing heap corruption, heap data leakage to the backend, or a crash.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121953 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121953</link>
+    <guid isPermaLink="false">3a81fe24e047da5badd79e06d3a49651</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 9.3 | FreeRDP before 3.32.2 has a use-after-free in the client's rdpgfx dynamic virtual channel: a duplicate-name channel with a new ChannelId overwrites the listener's single callback slot, which rdpgfx_on_close frees without clearing. A malicious RDP server can open and close such a channel, then send a PDU on the original channel to crash the client or potentially execute code.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121954 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121954</link>
+    <guid isPermaLink="false">fef95ccbb49a2f20498df0e5370ae55e</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 7.1 | FreeRDP before 3.32.2 has a heap out-of-bounds write in the planar codec because freerdp_bitmap_planar_context_reset commits new dimensions before buffer reallocation succeeds, and a failed ResetGraphics is only logged. A malicious RDP server can send an oversized ResetGraphics PDU, then a GFX PLANAR command, to corrupt client heap memory and crash the client.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121955 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121955</link>
+    <guid isPermaLink="false">6c5580e9fcf926b354d5dd79bc09028a</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.7 | FreeRDP before 3.32.2 contains a use-after-free vulnerability in Emulate_SCardReleaseContext that frees the emulated SCardContext before its worker thread is cancelled and joined. A malicious server can send ESTABLISHCONTEXT, a long-timeout GETSTATUSCHANGE, then RELEASECONTEXT smartcard IRPs to corrupt heap memory or crash clients using smartcard emulation.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121956 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121956</link>
+    <guid isPermaLink="false">54183aaa0d3b84d5bac814ef33d81b0d</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.7 | FreeRDP before 3.32.2 contains a double free in the WinPR Kerberos SSPI retrieveSomeTgt function, which installs the krb5 default realm into a target principal that has an empty realm without taking ownership of it. Unauthenticated remote clients can send a crafted NLA/CredSSP u2u TGT request whose server-name component contains '@' to corrupt the heap and crash the server process.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121957 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121957</link>
+    <guid isPermaLink="false">a1b49296c292831d54508e4d7f42439a</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.7 | FreeRDP before 3.32.2 contains a use-after-free vulnerability that allows malicious RDP servers to corrupt client memory by racing the RDPGFX ResetGraphics handler against the planar bitmap decoder. Attackers can send ResetGraphics while concurrently sending compressed bitmaps of 32 bpp or more to trigger heap use-after-free or out-of-bounds read/write on shared planar buffers.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121958 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121958</link>
+    <guid isPermaLink="false">428a43675acd4af218f5863542403599</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.7 | FreeRDP through 3.32.1 has a heap out-of-bounds write in the RDPGFX client because the delete_surface callback truncates surface hash keys to 16 bits, leaving the surface table inconsistent so HashTable_GetKeys writes past its allocated key array. A malicious or man-in-the-middle RDP server can exploit this by creating surfaceId 0xFFFF, closing the RDPGFX channel, sending repeated DELETESURFACE PDUs, and then sending ENDFRAME or RESETGRAPHICS.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121959 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121959</link>
+    <guid isPermaLink="false">97489f2e986f9d3d5e7d3979f5cbfcd2</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 7.1 | FreeRDP before 3.32.2 contains an infinite loop vulnerability in websocket_context_read that fails to handle a zero BIO result with payload outstanding. A malicious RD Gateway can send a truncated WebSocket frame followed by a TLS close_notify, causing a client thread to spin and consume CPU until killed.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121960 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121960</link>
+    <guid isPermaLink="false">4bab9099af0cabab40e7a93bad4e7b2f</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.7 | FreeRDP before 3.32.2 contains a denial of service vulnerability in the NLA-enabled shadow server when a CredSSP TSRequest omits negoTokens. Unauthenticated attackers can send a crafted seven-byte TSRequest containing only the version field to trigger a fatal WINPR_ASSERT and abort the server process.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121961 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121961</link>
+    <guid isPermaLink="false">c5924e67a6f1918c7586a1d185f95dcb</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.2 | FreeRDP before 3.32.2 contains a use-after-free vulnerability in the freerdp-proxy DRDYNVC tracker when intercepting the drdynvc channel. A malicious target server can repeatedly send CREATE_REQUEST_PDU for an active channel id, racing front DATA handling to free a borrowed context and crash the proxy process.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121962 - NVD - CVSS Score v4.0: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121962</link>
+    <guid isPermaLink="false">76798ba3fc66eac7131e1d137d2a6462</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 7.2 | FreeRDP before 3.32.2 contains a heap buffer overflow in transport_default_read_pdu when handling partial Early User Authorization reads during PROTOCOL_HYBRID_EX CredSSP. A malicious RDP server can split the four-byte EUA result into short reads that advance the stream pointer beyond the 16 KiB allocation, causing an out-of-bounds write and client denial of service.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121963 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121963</link>
+    <guid isPermaLink="false">7d57eb8da48b6b0617de132ce857f15e</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.2 | FreeRDP before 3.32.2 contains a use-after-free vulnerability in the asynchronous dynamic rdpsnd channel that allows malicious RDP servers to trigger freed callback access by closing the channel with queued audio PDUs. Attackers can send a training PDU then close the channel so the playback thread reads the freed callback in rdpsnd_virtual_channel_write, crashing the client.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121964 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121964</link>
+    <guid isPermaLink="false">21cb540aa08ec7c43d9eefef008d6160</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.7 | FreeRDP before 3.32.2 contains a heap-based buffer overflow in the RD Gateway RPC client, where rpc_client_recv_fragment writes BIND_ACK and ALTER_CONTEXT_RESP fragments into a persistent PDU stream after checking only total capacity rather than remaining capacity from the current stream position. A malicious or compromised RD Gateway can send crafted RPC fragments with manipulated alloc_hint and frag_length values to overwrite client heap memory with attacker-controlled data, causing a crash or potentially arbitrary code execution.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121965 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121965</link>
+    <guid isPermaLink="false">9c16f06e78cf4b535ecd10b4a9fe1505</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 6.0 | Parse Server before 8.6.113 and 9.0.0 before 9.10.6-alpha.5 contains a prototype pollution vulnerability when building objects for Cloud Code triggers and LiveQuery, where a dot notation key whose intermediate segment resolves through an inherited member writes onto a process-wide built-in. Clients with write access to an object in a class with a trigger or LiveQuery can corrupt a built-in function, making unrelated requests fail until restart and denying service to all clients and hosted applications.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121966 - NVD - CVSS Score v4.0: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121966</link>
+    <guid isPermaLink="false">b98eec4265c130e09330169f55eb7b89</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 7.0 | Traefik 2.x before 2.11.60 and 3.x before 3.7.16 sends ForwardAuth subrequests (and, in 3.7, Ingress NGINX auth-url requests) through an auth-server connection pool shared by all clients, exposing connection-bound NTLM or Negotiate authentication. An unauthenticated attacker can reuse another user's authenticated connection, receiving the victim's identity via authResponseHeaders to access backends as that user.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121967 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121967</link>
+    <guid isPermaLink="false">23343a9af4668ba0023520cac347ce37</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 2.3 | Coder 2.28.0 before 2.29.22, 2.30.0 before 2.34.13, 2.35.0 before 2.35.10, 2.36.0 before 2.36.8, 2.37.0 before 2.37.5, and 2.38.0 before 2.38.1 contains a path traversal vulnerability in the AI Gateway passthrough router, which forwards percent-encoded dot segments upstream without rejecting them. Authenticated users can send paths such as %2e%2e or ..%2F under allowlisted prefixes to reach unintended provider endpoints using the deployment's centrally managed provider key.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-122032 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122032</link>
+    <guid isPermaLink="false">c1bdc8b1649b4414e3fb44bb398f833a</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 7.1 | SPIP before 4.4.29 contains a SQL injection vulnerability that allows authenticated attackers with back-office access to inject arbitrary SQL by submitting a differing where parameter value in the POST body versus the GET query string on the /ecrire/?exec=articles endpoint, bypassing spip_sanitize_from_request() sanitization. Attackers can exploit this request parameter mismatch to extract database contents, including protected articles and bcrypt password hashes of users.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-91163 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91163</link>
+    <guid isPermaLink="false">f66dea3eff060a4df3b00b104f7babb3</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 3.7 | Warpgate is an open source SSH, HTTPS, and MySQL bastion host for Linux. Prior to 0.29.0, the Kubernetes protocol listener uses AcceptAnyClientCert in warpgate-protocol-kubernetes/src/server/client_certs.rs to accept certificates at the TLS layer and defer validation to warpgate-protocol-kubernetes/src/server/auth.rs, where authentication and lookup failures are rendered verbatim in an HTTP 500 response body. The Kubernetes application in warpgate-protocol-kubernetes/src/server/mod.rs lacks the outer request-logging wrapper used by the HTTP protocol, and failures in warpgate-protocol-kubernetes/src/server/handlers.rs can short-circuit before its inner log point. An unauthenticated network client can therefore induce failures and receive ASN.1/DER parser diagnostics or sea_orm database errors without the attempt being recorded in the gateway log. The disclosed information is limited to internal diagnostics, and no user-data, integrity, or availability impact is established. This issue is fixed in version 0.29.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-91168 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91168</link>
+    <guid isPermaLink="false">36e46b0f64510da8c6bf41120871fb30</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 6.8 | Warpgate is an open source SSH, HTTPS, and MySQL bastion host for Linux. From 0.21.0 until 0.29.0, the Kubernetes request correlator in warpgate-protocol-kubernetes/src/correlator.rs keys an authorized AdmittedTarget by username, target_name, and client IP rather than by the immutable user UUID, while KubernetesSessionHandle::close does not evict the entry. If an account is deleted and a different low-privilege account is created with the same username, the replacement account can successfully authenticate as that recreated username and reuse the predecessor's still-live correlation entry when requesting the same target from the same client IP before kubernetes.session_max_age expires. Current-request authentication still occurs, but the reused entry bypasses a fresh target authorization check and can cause Warpgate to proxy requests with Kubernetes target credentials that the replacement account is not authorized to use, exposing cluster resources or permitting unauthorized mutations. This issue is fixed in version 0.29.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-92704 - NVD - CVSS Score v3.1: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92704</link>
+    <guid isPermaLink="false">ad2a6552fc7855da06cdb61f43b3c92a</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 8.3 | SharpEmu is an experimental PlayStation 5 emulator for Windows and Linux. In version 0.0.3-release.3 and earlier, the repository-provided debugger frontend tooling is vulnerable while running. This tooling is not included in the release archives. The frontend exposes an HTTP API on 127.0.0.1:8765 without authentication or CSRF token. Its  do_POST  handler in  tools/SharpEmu.DebuggerFrontend/debugger_frontend.py  does not validate the Origin, Referer, Sec-Fetch-Site, or Host headers. The  _read_json_body()  function also accepts JSON sent with browser-simple content types instead of requiring  application/json . A malicious page that can reach the loopback listener can send cross-origin requests to  /api/launch ,  /api/command , and  /api/connect . Chromium may require Local Network Access permission for pages served from public origins. Local-origin pages and other delivery paths are not consistently subject to this restriction. The  /api/launch  endpoint accepts an attacker-selected  emulatorPath  if it points to an existing file on the victim’s host. On POSIX systems, that file must also be executable. The endpoint additionally requires an existing  ebootPath . The  /api/command  endpoint exposes debugger operations, including  write-memory ,  set-register , and  continue . The  /api/connect  endpoint can initiate outbound TCP connections. These operations can let an attacker execute an existing binary with the victim’s privileges, control the attached emulated process, or reach network services accessible from the host. DNS rebinding can additionally let the attacker read API responses interactively. This issue is fixed in version 0.0.3-release.3-patch.1</description>
     <category>NVD</category>
     <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
   </item>
