@@ -5,63 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Nov 2026 12:02:42 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-19721 - NVD - CVSS Score v3.1: 3.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19721</link>
-    <guid isPermaLink="false">0257fee002fec4ee85f39a307d8fc459</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 3.3 | Improper restriction of XML external entity reference vulnerability in TÜBİTAK BİLGEM Software Technologies Research Institute İmzager allows Serialized Data External Linking.
-
-This issue affects İmzager: from 2.10.5 before 2.10.7.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-19731 - NVD - CVSS Score v3.1: 3.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19731</link>
-    <guid isPermaLink="false">cf375108a126b343150ec62b4dfe8574</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 3.3 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in TÜBİTAK BİLGEM Software Technologies Research Institute İmzager allows Path Traversal.
-
-This issue affects İmzager: from 2.10.5 before 2.10.7.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-108949 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108949</link>
-    <guid isPermaLink="false">f19c3bd06635b6fdaecc25e80ac08b11</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS: não informado | Denial of Service via OOM vulnerability in Apache ActiveMQ, ActiveMQ Broker.
-
-
-
-An authenticated OpenWire client that sends a ConsumerInfo for a temporary queue/topic owned by another connection is rejected with InvalidDestinationException, but the rejected Subscription is left behind in the region's subscriptions map. Repeating the request leaks broker heap until OOM because the broker does not clean up the rejected subscriptions in the map.
-
-
-
-This issue affects Apache ActiveMQ: from 6.0.0 before 6.3.3, before 5.19.12; ActiveMQ Broker: from 6.0.0 before 6.3.3, before 5.19.12.
-
-
-
-Users are recommended to upgrade to version 6.4.0, 6.3.3, or 5.19.12, which fixes the issue.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-110021 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110021</link>
-    <guid isPermaLink="false">9783e787cd92c029edc7acc7619c4b6f</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 6.9 | PLCnext Engineer checks GSDX manifest reference digests but does not cryptographically verify the XML `SignatureValue` over canonicalized `SignedInfo`. An unauthenticated local attacker can modify signed GSDML content, update its manifest digest, retain the public certificate data, and leave an invalid nonempty `SignatureValue`. PLCnext Engineer prior to 2026.6 reports the package as `Valid` and selects the modified device description for import under the default policy.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-110022 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110022</link>
-    <guid isPermaLink="false">5fd86be55c581e40ff298d724b383481</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 8.6 | The PFI plugin framework deploys executable assemblies (DLLs) from a signed plugin package into the local plugin repository and loads them via reflection, but the deployment routine processes archive entries that were never covered by the signature verification. An unauthenticated local attacker can replace an unsigned DLL outside the signed prefix in the archive passes verification and overwrites the legitimate signed assembly at the same destination path. The plugin loader then instantiates the attacker-supplied code without any additional integrity check resulting in a full compromise of the affected systems.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 04 Nov 2026 13:01:06 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-110935 - NVD - CVSS Score v4.0: 8.6</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110935</link>
@@ -486,6 +430,47 @@ Users are recommended to upgrade to version 4.1.17, which fixes this issue.</des
     <guid isPermaLink="false">d6c566b84586c7a4d2bc343a7fbd1ea2</guid>
     <description>Wednesday 4 November 2026 | NVD | CVSS: não informado | An uncontrolled memory access in the PDF import code of Apache OpenOffice versions through 4.1.16 allows a crafted PDF to cause an out-of-bounds memory write, causing program crash or memory corruption.
 Users are recommended to upgrade to version 4.1.17, which fixes this issue.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104799 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104799</link>
+    <guid isPermaLink="false">ae5ee68e8b772cdd866024cc2ebe6cf0</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 8.8 | The Mobile builder plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.4.2 via the `wcfmmp_profile_settings()` REST handler exposed at `POST /mobile-builder/v1/wcfm-profile-settings`. This is due to a PHP loose-comparison logic flaw in the meta key allow-list check — `strpos( $key, 'mobile_builder' ) == 0` evaluates to `true` for any key that does *not* contain the substring `'mobile_builder'` because `strpos()` returns `false` on no match and `false == 0` is `true` in PHP — combined with a `permission_callback` (`user_permissions_check`) that grants access to any authenticated user by only verifying `$user-&gt;exists()`. This makes it possible for authenticated attackers, with Subscriber-level access and above, to pass an unsanitized `data` array via the `key` and `data` parameters directly to `update_user_meta()`, overwriting arbitrary user meta on their own account — including the `wp_capabilities` meta key — to grant themselves Administrator-level privileges.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-114456 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114456</link>
+    <guid isPermaLink="false">0207fdd301953a17bd86f48998b75d1b</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 6.5 | Multiple Snowflake client drivers implementing the `authenticator=externalbrowser` single sign-on flow could have allowed an attacker to interfere with a user's login attempt through weaknesses in the local loopback callback listener used to receive the identity provider's response. The listener reflected an arbitrary request's Origin header into its CORS response headers and accepted the first token-bearing request it received during the login window without verifying a CSRF state value bound to that specific login attempt. An attacker able to reach the listener during an active login might have leveraged this to submit a forged callback response, causing the authentication attempt to fail. The fix is available in Snowflake Connector for Python 4.8.0, Snowflake Go Driver v2.3.0, Snowflake JDBC Driver 4.4.0 (including the snowflake-jdbc-fips and snowflake-jdbc-thin artifacts), Snowflake Node.js Driver 3.4.0, Snowflake Connector for .NET 6.3.0, Snowflake ODBC Driver 4.0.0, Snowflake PHP PDO Driver 4.3.0, and libsnowflakeclient 2.11.1. Go v1 users must migrate to the latest major version of the module. Users must manually upgrade.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121925 - NVD - CVSS Score v3.1: 6.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121925</link>
+    <guid isPermaLink="false">62729bda47f183710016efe55ea18282</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 6.6 | A stack-based buffer overflow in libsnowflakeclient and the Snowflake PHP PDO Driver could, under specific conditions, result in memory corruption during SAML-based authentication. During a native SSO/SAML login flow, the affected drivers may have copied a value taken from the identity provider's HTML response into a fixed-size memory buffer without first validating the length of that value. An attacker who controlled or had compromised the configured identity provider — or who was able to redirect the SAML single sign-on endpoint to an attacker-controlled server — might have leveraged this by returning an oversized response, potentially resulting in a crash or, in specific circumstances, remote code execution within the context of the application running the library. The fix is available in libsnowflakeclient version 2.11.1 and Snowflake PHP PDO Driver version 4.3.0. Users must manually upgrade.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-59267 - NVD - CVSS Score v4.0: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59267</link>
+    <guid isPermaLink="false">c5e0e49ff1131a927661c30b86012ce8</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v4.0: 5.8 | A crafted DXF document causes a heap buffer overflow in Draw in Apache OpenOffice 4.1.16 and earlier. This could cause a crash or otherwise a corruption of memory areas.
+Users are recommended to upgrade to version 4.1.17, which fixes this issue.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97397 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97397</link>
+    <guid isPermaLink="false">add5a7e6267bedccbea2000f0658da71</guid>
+    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Remove Google Fonts – Disable, Block, or Replace with Bunny Fonts for GDPR Compliance plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Field via Regex-Mangled Output Buffer in all versions up to, and including, 1.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires the plugin's Remove mode to be active and the malicious comment to be published, either through auto-approval for known commenters or manual moderator approval.</description>
     <category>NVD</category>
     <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
   </item>
