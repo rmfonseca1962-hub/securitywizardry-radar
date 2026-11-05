@@ -5,23 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 09:01:47 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-123010 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123010</link>
-    <guid isPermaLink="false">c1fc55381f3fe02b5bd22c5c6390c96b</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.2 | @twilio-labs/netlify-okta-auth through 1.0.2 relies on an unverified iss claim. This affects an outbound HTTP request to retrieve a public signing key. There may be other impacts in a misconfiguration where oktaUrl isn't set.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123011 - NVD - CVSS Score v3.1: 4.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123011</link>
-    <guid isPermaLink="false">5897af4aeecb6075fb573c70fc024903</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 4.2 | STMicroelectronics st-mems-android-linux-sensors-hal before 7bdf334 does not check whether the allowed number of channels is exceeded.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 05 Nov 2026 10:00:30 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-123012 - NVD - CVSS Score v4.0: 7.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123012</link>
@@ -325,6 +309,22 @@ This is an incomplete fix of CVE-2026-15446: the origin and path restrictions ad
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112072</link>
     <guid isPermaLink="false">1a590733b52ce69dd46ac997a32a1aeb</guid>
     <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | vault-java-driver, a Java client for HashiCorp Vault, parses Vault's JSON responses with a vendored minimal-json parser that has no nesting depth limit. A deeply nested value raises a StackOverflowError, which escapes catch (Exception) handlers and kills the reading thread. A Vault token that can write but not read a KV v2 path can store such a value there, so every later read of that path through the driver fails. This requires Vault 1.19.x or earlier, because 1.20 and later reject values nested deeper than 298 levels. This issue affects io.github.jopenlibs:vault-java-driver 5.2.0 through 6.2.3 and is fixed in 7.0.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-117679 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117679</link>
+    <guid isPermaLink="false">8f63507acb3c6cf93ad81db31517c287</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.1 | A cross-site scripting vulnerability exists in SHIRASAGI, which may allow an authenticated attacker to execute arbitrary script in a user's web browser when the user accesses a website using the affected product.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118869 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118869</link>
+    <guid isPermaLink="false">becbb05def0bd6f49976937b03bdfb3d</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.7 | An OS command injection vulnerability exists in SHIRASAGI, which may allow an authenticated attacker to execute arbitrary OS commands on the system running the product.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
