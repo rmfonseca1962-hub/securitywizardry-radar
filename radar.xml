@@ -5,95 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 12:00:48 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-93389 - NVD - CVSS Score v3.1: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93389</link>
-    <guid isPermaLink="false">0b08343bee366e6edf678d8c1b6bba46</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.2 | The LiteSpeed Cache plugin for WordPress is vulnerable to unauthenticated disclosure of sensitive WooCommerce customer data in all versions up to, and including, 7.9.1 With Cache REST enabled (the shipped default cache-rest=1), LiteSpeed stores WooCommerce Store API GET responses (/wc/store/v1/cart and /wc/store/v1/checkout) as PUBLIC cache objects and does not vary the cache on the Cart-Token or WooCommerce session. A shopper's personalized cart/checkout response is therefore served to any later, cookie-less and token-less client as an LSCache HIT. This makes it possible for unauthenticated attackers to read another shopper's billing and shipping details (name, company, street address, email, phone), cart contents and totals, and the shopper's live Cart-Token session JWT and nonce (enabling cart/checkout-session hijack), plus order_key on the checkout endpoint.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-15701 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-15701</link>
-    <guid isPermaLink="false">46e39ca07110e4ea0983026079a5a011</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | The Easy Social Icons WordPress plugin before 4.0.3 does not sanitise and escape some of its settings before outputting them on front-end pages, which could allow high-privilege users such as Administrators to perform Stored Cross-Site Scripting attacks when the unfiltered_html capability is disallowed, for example on a multisite network.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-15702 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-15702</link>
-    <guid isPermaLink="false">a982818ca931dbbbd6d3c2e22b3d2bf3</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | The Cloud Blocks WordPress plugin through 1.1.8 does not perform any authorisation or sanitisation when storing block asset URLs, allowing unauthenticated users to store malicious scripts that are executed in the browser of any privileged user, such as an administrator, who opens the block editor.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100144 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100144</link>
-    <guid isPermaLink="false">2b5a62481f192e22a737bd4f4b68faaf</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | The IVPAY payments WordPress plugin through 1.0.8 does not sanitise a value from its payment callback before using it in a SQL statement, and treats an empty API key, which is its own default, as valid authentication, allowing unauthenticated attackers to read arbitrary data from the database.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-105259 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105259</link>
-    <guid isPermaLink="false">60d20e174cbb3e831b43de1617e1e8fe</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | The Easy Social Icons WordPress plugin before 4.0.3 does not sanitise SVG files, which it adds to the list of file types that may be uploaded site-wide, allowing users with the Author role and above to upload a malicious SVG containing XSS payloads. Where another installed Easy Social Icons WordPress plugin before 4.0.3 exposes an upload route to unauthenticated visitors, the same issue can be triggered without an account.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-105971 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105971</link>
-    <guid isPermaLink="false">8cef3da082c12716abb17353eeaf295c</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | The Car Dealer (Dealership) and Vehicle sales WordPress plugin through 4.73 does not restrict its unauthenticated single-listing AJAX action to published content, allowing an unauthenticated attacker to read the title, content and metadata of any private, draft, pending, future or trashed post by supplying its numeric id.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107773 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107773</link>
-    <guid isPermaLink="false">a4eb8a861368826cb68bf1a4ca88f332</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.3.3 does not correctly verify authorization when serving a single order and its order notes, allowing unauthenticated attackers to read customer and order information and to add or delete order notes for a subset of orders.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107774 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107774</link>
-    <guid isPermaLink="false">27f4c47da6a2d36f9827e4a83b08823d</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.3.3 does not use a trusted site-owned sender address when relaying its store contact form, instead placing the unauthenticated submitter's supplied address directly in the message's From header rather than a Reply-To, allowing unauthenticated attackers to make the site email its own vendors with the sender spoofed to an address at the site's own domain (such as its administrator), aligned with the domain's own SPF/DKIM.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107775 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107775</link>
-    <guid isPermaLink="false">55e9833cedd9d25cfdec030b41f9b1cb</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | The Dokan: AI Powered WooCommerce Multivendor Marketplace Solution  WordPress plugin before 5.3.3 does not verify that the acting administrator is authorized to manage each selected user before enabling that user's marketplace seller status, allowing a subsite Administrator on WordPress Multisite to enable selling for users outside their own site, including network-level users they cannot otherwise manage.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107786 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107786</link>
-    <guid isPermaLink="false">32804bba6fca4d26f56e459d2f57dba7</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | The CatFolders  WordPress plugin before 2.5.7 does not properly sanitize and escape a user-controlled sort setting before using it in a SQL query, allowing authenticated users with upload capability (Author and above) to perform SQL injection attacks.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107787 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107787</link>
-    <guid isPermaLink="false">494d3518af4fcf3e4de70fc6ad31144f</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | The CatFolders  WordPress plugin before 2.5.7 does not have authorisation checks on a folder maintenance action, allowing users with a role as low as subscriber to reset the per-user ownership of every media folder and disable the CatFolders  WordPress plugin before 2.5.7's user restriction setting.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 05 Nov 2026 13:03:02 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-109150 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109150</link>
@@ -325,6 +237,148 @@ This is an incomplete fix of CVE-2026-15446: the origin and path restrictions ad
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123036</link>
     <guid isPermaLink="false">ff41d9070cfc3089795e0629ddc8fdc6</guid>
     <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.5 | A flaw was found in ansible-core. When a task marked `no_log: true` fails, the task result is censored before being emitted, but the `exception` field is retained because it is present in the PRESERVE allow-list in lib/ansible/_internal/_task.py, and the default stdout callback prints it through CallbackBase._handle_exception. As a result, sensitive values the operator explicitly asked to hide can be disclosed: module argument-validation errors echo the argument value, templating errors print an Origin source snippet (the failing line plus the two preceding lines of the variables file, exposing neighbouring secrets from an -e @secrets.yml file), and fail/assert messages are printed in full. Secret material supplied as extra variables or variables files can therefore leak to terminal output, CI logs, and the stdout logs of any automation wrapping ansible-playbook, even though every task touching the secrets is marked no_log: true. This is a regression introduced with the ansible-core 2.19 data-tagging/templating rework; the behaviour does not occur on 2.16, where the error text is correctly censored.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121489 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121489</link>
+    <guid isPermaLink="false">3c9a8269845b747610b70d23d83a1a2b</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 10.0 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Apache Juneau.
+
+The microservice DirectoryResource does not keep request paths inside its configured root directory. When an application enables the resource's view, upload or delete settings (all off by default), a client can read, write or delete files outside the root, anywhere the server process has access.
+
+This issue affects Apache Juneau: through 9.2.0.
+
+Users are recommended to upgrade to version 9.2.1, which fixes the issue.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123018 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123018</link>
+    <guid isPermaLink="false">90451ad1e1bcbab554374f18ba652a10</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security flaw has been discovered in eosphoros-ai DB-GPT up to 0.8.2. This issue affects the function execute_code of the file code_utils.py of the component CodeAction. Performing a manipulation results in code injection. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123019 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123019</link>
+    <guid isPermaLink="false">d68a393ead0ef22dabfd4e0a98c4aae9</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.5 | A weakness has been identified in eosphoros-ai DB-GPT up to 0.8.2. Impacted is the function exec_module of the file hf_adapter.py of the component HuggingFace Adapter. Executing a manipulation of the argument trust_remote_code can lead to inclusion of functionality from untrusted control sphere. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73095 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73095</link>
+    <guid isPermaLink="false">90c6702c279caa9f4fe0a48d387da6e0</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.7 | Allocation of Resources Without Limits or Throttling vulnerability in Apache Juneau.
+
+The MessagePack parser, which the REST server enables by default, sizes buffers from length values in the input. An unauthenticated client can send a few bytes that force a multi-gigabyte allocation and an OutOfMemoryError, causing denial of service. Related unbounded allocations in REST request handling (multipart uploads and request reader buffers) are fixed at the same time.
+
+This issue affects Apache Juneau: through 9.2.0.
+
+Users are recommended to upgrade to version 9.2.1, which fixes the issue.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73098 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73098</link>
+    <guid isPermaLink="false">dc7dd033c24f6fe6c5dbfb83cf07a21a</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 10.0 | Improper control of dynamically-loaded code vulnerability in Apache Juneau.
+
+When Apache Juneau parses a value into a property of type java.lang.Class (including parameterized forms), the default class swap loaded the named class with initialization enabled, so input naming a class on the application classpath ran that class's static initializer. The impact depends on the classes present in the deployment.
+
+This issue affects Apache Juneau: through 9.2.0.
+
+Users are recommended to upgrade to version 9.2.1, which fixes the issue.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73099 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73099</link>
+    <guid isPermaLink="false">e4a2f2e498dfa87ae708b1ae28f6351e</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 10.0 | Cross-Site Request Forgery (CSRF) vulnerability in Apache Juneau.
+
+The REST server accepts a &quot;content&quot; query parameter that replaces the request body, and this is enabled by default on every HTTP method, including GET. A cross-site link can therefore deliver an attacker-chosen request body to an endpoint without a CORS preflight, defeating protections that rely on the HTTP method or content type instead of an anti-CSRF token.
+
+This issue affects Apache Juneau: through 9.2.0.
+
+Users are recommended to upgrade to version 9.2.1, which fixes the issue. Applications that do not use the content parameter can also set disableContentParam to true.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73100 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73100</link>
+    <guid isPermaLink="false">c26d314d120d57e513b8af75673eb2db</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 10.0 | Insertion of Sensitive Information into Log File vulnerability in Apache Juneau.
+
+The default REST server call logger records request headers for requests that end in a server error, without redacting them. Any client able to cause a server error gets headers such as Authorization, Cookie, Proxy-Authorization and X-API-Key written in cleartext to the application log, exposing them to anyone who can read the logs.
+
+This issue affects Apache Juneau: through 9.2.0.
+
+Users are recommended to upgrade to version 9.2.1, which fixes the issue.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73101 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73101</link>
+    <guid isPermaLink="false">ae8cd1b2c43a44445c54b96dab0bb871</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 10.0 | Generation of Error Message Containing Sensitive Information vulnerability in Apache Juneau.
+
+The REST server sends the internal exception class and message to clients in a &quot;Thrown&quot; response header on every error response, and can include internal exception messages in the error body, even when stack-trace rendering is disabled. This reveals implementation details to remote clients.
+
+This issue affects Apache Juneau: through 9.2.0.
+
+Users are recommended to upgrade to version 9.2.1, which fixes the issue.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73116 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73116</link>
+    <guid isPermaLink="false">d9a574141565dcb8cce0da0f19e44d08</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 10.0 | Insufficiently Protected Credentials vulnerability in Apache Juneau.
+
+The Apache Juneau RestClient followed HTTP redirects while keeping credential headers from the original request, so a server that redirected the client to a different host or port, or from HTTPS to HTTP, could receive headers such as Authorization, Cookie, Proxy-Authorization and X-API-Key.
+
+This issue affects Apache Juneau: through 9.2.0.
+
+Users are recommended to upgrade to version 9.2.1, which fixes the issue. The fix applies to HTTP clients created by the RestClient builder; applications that supply their own HttpClient must disable automatic redirects or strip credential headers on cross-origin redirects themselves.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73117 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73117</link>
+    <guid isPermaLink="false">3e9379eec2367637cb985bbf964f1adc</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 10.0 | Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Response Splitting') vulnerability in Apache Juneau.
+
+The Apache Juneau REST server passed response header values and redirect targets to the servlet container unchecked. An application that sets a response header or redirect target from request data could let a remote client inject header lines (where the servlet container does not itself reject CR/LF) or redirect users to an arbitrary external site. The framework itself does not build headers or redirects from request data; exposure depends on application code.
+
+This issue affects Apache Juneau: through 9.2.0.
+
+Users are recommended to upgrade to version 9.2.1, which fixes the issue. Header values are now sanitized by default; applications that build redirect targets from request data must also switch from sendRedirect() to the new sendSafeRedirect().</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-96677 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96677</link>
+    <guid isPermaLink="false">b0e25572e560a13bb89729bcbbe1dc6d</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 10.0 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Apache Juneau.
+
+HTML document serialization does not HTML-encode variable substitutions in the page chrome (header, nav, aside, footer and similar fields). Applications whose chrome includes request-derived variables, such as request headers, form data or path values, reflect those values unencoded, allowing cross-site scripting. The default chrome does not use request variables, so only applications that add them are affected.
+
+This issue affects Apache Juneau: through 9.2.0.
+
+Users are recommended to upgrade to version 9.2.1, which fixes the issue.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
