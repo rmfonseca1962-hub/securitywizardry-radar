@@ -5,183 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 21:02:52 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-103021 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103021</link>
-    <guid isPermaLink="false">6a3c4692d9e22e491c9b14844226af38</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.3 | OpenEMR is a free and open source electronic health records and medical practice management application. From 6.0.0 until 8.3.0, interface/globals.php uses the unauthenticated authUser login parameter to populate temp_authuserid and load that account's user_settings before authentication succeeds. Existing usernames can therefore cause an additional database query and may apply visible customized settings, while nonexistent usernames skip that behavior. A remote unauthenticated actor can use timing or page differences to enumerate valid accounts for later credential attacks. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-103935 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103935</link>
-    <guid isPermaLink="false">7a6e0403826fd609914db91dcfb0f3a5</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, interface/forms/transfer_summary/new.php and interface/forms/functional_cognitive_status/new.php render stored transfer_to, code, and codetext values with text(), which uses ENT_NOQUOTES, inside double-quoted HTML value attributes. An authenticated clinical user can store a value containing a double quote that escapes the attribute and injects event-handler markup when another clinician opens the form. Successful exploitation can expose session data and protected health information or permit patient-record actions in the victim's session. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-103938 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103938</link>
-    <guid isPermaLink="false">d690915fc2646f8abafd7ae82e3558d0</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.1 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, interface/patient_file/pos_checkout_ippf.php performs state-changing void, voidall, and regen operations through GET requests without CSRF token validation. The form_checksum integrity check is conditional and is skipped when the parameter is omitted, allowing a cross-site request to force an authenticated billing user to void checkouts or regenerate invoice counters. The resulting changes can alter ledger state, financial reporting, and audit records. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-103939 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103939</link>
-    <guid isPermaLink="false">d3e18f7079252348192bd4d7de63ea72</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.4 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, interface/modules/custom_modules/oe-module-weno/scripts/file_download.php has no ACL or CSRF check and ignores the result of validateAdminCredentials(). When the Weno module is enabled, the default GET path calls PharmacyService::removeWenoPharmacies() before attempting a refetch, allowing any authenticated user to truncate the weno_pharmacy table and allowing a cross-site request to trigger the same operation through a logged-in victim. A failed later download can leave the e-prescribing pharmacy directory empty and unavailable. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104133 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104133</link>
-    <guid isPermaLink="false">497ba06e17c4b02fefb49854ca9c6aff</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.1 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, interface/modules/custom_modules/oe-module-dorn/public/compendium_install.php checks authentication and CSRF but does not require the admin/users ACL enforced by sibling DORN administration scripts. When the DORN module is enabled, a low-privilege authenticated user can supply a labGuid that causes LabCompendiumInstall::uninstall() to delete detail and result procedure types and deactivate order types before the reinstall step. The action can corrupt lab-ordering configuration and require an administrator to restore the compendium. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104134 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104134</link>
-    <guid isPermaLink="false">b97347bb7b7f880db4bb6fbb89e92a7a</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, the search_persons action in library/ajax/person_search_ajax.php validates CSRF but does not perform an AclMain authorization check before searching the person and patient_data tables. A low-privilege authenticated user can iterate name prefixes and receive patient first and last names, dates of birth, gender, phone numbers, and email addresses in JSON responses. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104135 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104135</link>
-    <guid isPermaLink="false">27f955284f6b96526a25693b1e5273db</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, library/ajax/payment_ajax.php validates a CSRF token but performs no AclMain authorization check before executing a wildcard search of patient_data. Any authenticated user, including a non-clinical role, can enumerate patient identifiers, full names, and dates of birth through the set_patient branch. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104136 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104136</link>
-    <guid isPermaLink="false">6620b3a814bfb42e77e692ba3a225b19</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, the new_recall branch of interface/main/messages/save.php accepts a caller-supplied pid without enforcing patient-level or recall-workflow authorization. A low-privilege authenticated user who knows or enumerates a patient identifier can retrieve patient details, contact fields, HIPAA notification preferences, recent appointment information, and existing recall information. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104137 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104137</link>
-    <guid isPermaLink="false">9c667715e507b4411b26e44210cad1a2</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, the sms_search branch of interface/main/messages/save.php requires an authenticated session but does not enforce patient or feature-level ACLs. A low-privilege user who cannot access patient data through the normal interface can search the MedEx SMS endpoint and receive patient identifiers, names, phone numbers, SMS permission status, and recent message information. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104138 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104138</link>
-    <guid isPermaLink="false">0d891778a28a24d747af4acc5c860b95</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, custom/ajax_download.php, custom/download_qrda.php, custom/export_qrda_xml.php, and custom/qrda_download.php validate CSRF but do not enforce the patients/med ACL used by the canonical CQM report page. The endpoints also accept an unscoped report_id, allowing a low-privilege authenticated user to reach report generation and download logic for other reports. In a clinic with generated CQM reports, this can expose QRDA Category One and Category Three clinical documents for patients in a measure. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104139 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104139</link>
-    <guid isPermaLink="false">1fae19f4331bffee353a38cb22fc2980</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, library/ajax/set_pt.php allows any authenticated user to set an arbitrary patient identifier in the active session without an ACL check, and interface/patient_file/download_template.php trusts that session value while enforcing only CSRF validation. A low-privilege user can select another patient and download a rendered document template containing the patient's demographics, encounter information, allergies, medications, and problem list despite lacking patients/docs access. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-110930 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110930</link>
-    <guid isPermaLink="false">c4b2eced00eb35c44219d30b5747ad66</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | Codex Desktop for Windows does not correctly check quotation marks in project paths from Windows Explorer. If a user selects &quot;Open project in ChatGPT&quot; for an attacker-controlled library's child item, the path can add application startup arguments. These arguments can run attacker-controlled code with the current Windows user's permissions before sign-in or project trust approval.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-115573 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115573</link>
-    <guid isPermaLink="false">8e10788961bf30466a7d8a2c227817c4</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.3.0, library/classes/Controller.class.php allows explicit controller.php dispatch to controllers missing from CONTROLLER_ACL_MAP, and checkControllerAcl() returns without enforcing any permission for those entries. A low-privilege authenticated user can invoke C_X12Partner::edit_action_process() to create or alter insurance-routing hosts and credentials, or invoke C_PatientFinder::find_action_process() to enumerate patient names, dates of birth, and identifiers. The shared fail-open dispatcher root cause also exposes other administrative controllers that were intended to be reached through ACL-gated Practice Settings routes. This issue is fixed in version 8.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-115928 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115928</link>
-    <guid isPermaLink="false">829b13ae8871f73c4fabe7c2c94f94ba</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, switch_core_media_add_crypto() passed the encoded key and salt length from an inbound SDP a=crypto attribute to switch_b64_decode() as the destination capacity. A zero-length key and salt made that capacity underflow, allowing the decoded attribute to overflow a fixed stack buffer with sender-chosen bytes before the call was answered. On the shipped external profile, an unauthenticated caller can reach the SDES-SRTP parser, while profiles that challenge inbound calls remain affected for senders who can authenticate; setting rtp_secure_media_inbound to false removes the path, and WebRTC DTLS-SRTP legs are unaffected. The overflow corrupts memory and can crash the FreeSWITCH process, dropping every active call, although remote code execution has not been demonstrated. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116567 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116567</link>
-    <guid isPermaLink="false">2120418563c60d6a10e89a397b25fa55</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, rtmp_handle_control() rendered an RTMP user-control message into a 200-byte stack buffer using an unbounded sprintf loop controlled by the wire message length. A body of roughly 70 bytes or more overflowed the stack before any RTMP login, because the handshake authenticates neither side. The flaw affects deployments that build and load mod_rtmp, which is disabled in the stock build and configuration but commonly exposes a listener on TCP port 1935 when enabled. One unauthenticated message can crash FreeSWITCH and end every active call; the constrained ASCII hex output has not yielded control-flow hijacking. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116568 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116568</link>
-    <guid isPermaLink="false">4570451c9768fd75c503224fc8719eb6</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, rtmp_rtmp2rtpH264() trusted the length prefix of each inbound H.264 NAL unit without checking it against the bytes remaining in the RTMP message. An oversized declared unit underflowed the unsigned remaining-byte counter and advanced the parser beyond its receive buffer, where the next length-prefix read could crash the process. The flaw affects deployments that build and load mod_rtmp and accept video call sessions, commonly on TCP port 1935; placing the call requires a directory login where auth-calls is true, while no credentials are required where auth-calls is absent or false. A remote client can terminate FreeSWITCH and every active call, but the defect supplies no write primitive and memory disclosure has not been demonstrated. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116569 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116569</link>
-    <guid isPermaLink="false">f4ac95128a8c07f2c28ffb3887049da2</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, msrp_parse_buffer() subtracted delimiter framing from a peer-controlled short segment whose MSRP byte range ended in * without first proving the segment was long enough. The unsigned result wrapped near SIZE_MAX and reached switch_msrp_msg_set_payload() as both an allocation size and memcpy length, while related pointer arithmetic could read before the receive buffer. The listener is disabled by default in msrp.conf.xml, but any deployment enabling an MSRP TCP or TLS port parses this framing before authentication. An unauthenticated network peer can corrupt memory and crash FreeSWITCH, dropping all active calls, although remote code execution has not been demonstrated. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116570 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116570</link>
-    <guid isPermaLink="false">5ebd544988141167c799a2b82e5b3f6b</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, http_directory_auth() rebuilt an expected user@domain:password credential and base64-encoded it into an 80-byte buffer using an encoder without an output-length argument. A configured credential longer than 57 characters overflowed the stack before the supplied HTTP Basic password was compared. An unauthenticated client only needed to name an existing directory user on an exposed mod_xml_rpc HTTP listener; the module is built but not loaded by the stock configuration. The overflow can corrupt the stack and crash FreeSWITCH, ending every active call, although the overrun bytes come from the configured credential and remote code execution has not been demonstrated. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116571 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116571</link>
-    <guid isPermaLink="false">aec7a96ef614d7010fdad92493db251f</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.9 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, rtmp_rtp2rtmpH264() built an AVC decoder configuration record in a fixed stack buffer by copying wire-derived SPS and PPS values without checking that their sizes and framing fit. An established H.264 call bridged toward an RTMP endpoint could supply oversized SPS and PPS parameter sets and overrun the function's stack frame. The flaw affects only deployments that build and load mod_rtmp and bridge RTP media into an RTMP leg; the module is disabled in the stock build and configuration. The corruption can abort FreeSWITCH and terminate every active call, and builds without stack protection receive a limited stack-write primitive, although code execution has not been demonstrated. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116572 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116572</link>
-    <guid isPermaLink="false">ec421096a69ee05d137fcbe3ab3d81e6</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | FreeSWITCH is an open-source software telecommunications platform. From 1.10.0 to 1.11.1, there is a stack-based buffer overflow in  mod_sofia  when processing SIP Contact display names for dialog-event notifications. A peer can establish a dialog containing an excessively long display name and subsequently subscribe to that entity’s dialog events, causing the stored value to overflow a fixed 512-byte stack buffer. Exploitation requires presence management to be enabled, directly or through shared appearance, and normally requires valid profile credentials unless subscription authentication is disabled. The overflow can terminate the FreeSWITCH process and all active calls. This vulnerability is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116779 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116779</link>
-    <guid isPermaLink="false">df2d6de52cd1edf961a77a7937ed7e5e</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 9.8 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.3, sofia_presence_handle_sip_i_message() split the To user of an inbound SIP MESSAGE on a plus sign and treated the left side as a chat protocol selector. Selecting the api chat proto reached switch_api_execute(), allowing a peer whose MESSAGE was accepted to run FreeSWITCH API commands, including operating-system command sinks, with the daemon's privileges. Inbound chat is enabled on the stock internal and external profiles, and any authenticated profile account is sufficient; stock directory users without password material can also remove that barrier in affected configurations. The flaw permits configuration and credential disclosure, arbitrary call control, and command execution, and exploitation has been observed in the wild. This issue is fixed in version 1.11.3.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116780 - NVD - CVSS Score v3.1: 2.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116780</link>
-    <guid isPermaLink="false">0832c0516f52652e34bd9cc4c4b2d7d0</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 2.7 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, switch_event_expand_headers_check() advanced beyond its heap copy when a positive offset in ${variable:offset} exceeded the variable value's length. The following length calculation and copy appended adjacent heap memory to the expansion result, potentially exposing channel variables, credentials, allocator data, and pointer bytes. The flaw is reachable through configuration templates that slice remote input and through authenticated Event Socket eval or Event Socket expand commands; the separate channel-variable expander used by ordinary dialplan slicing is unaffected. The requester cannot choose adjacent memory and disclosure stops at a zero byte, but repeated expansion can influence the layout. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 05 Nov 2026 22:02:17 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-116781 - NVD - CVSS Score v3.1: 5.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116781</link>
@@ -294,10 +118,10 @@ This issue affects only the classic deployment options for UCMDB UI (ucmdb-brows
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-44875 - NVD - CVSS: não informado</title>
+    <title>CVE-2026-44875 - NVD - CVSS Score v3.1: 7.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44875</link>
     <guid isPermaLink="false">d54768c6e9d16189f4416b61accebe16</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | In HPE Cray Programming Environment versions 25.03 and 25.09, prior to 26.03, the method that CPE is deployed on HPCM potentially allows elevated access by a local unprivileged user.</description>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.8 | In HPE Cray Programming Environment versions 25.03 and 25.09, prior to 26.03, the method that CPE is deployed on HPCM potentially allows elevated access by a local unprivileged user.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
@@ -332,6 +156,186 @@ This issue affects OpenText Directory Services (OTDS): from 25.1 through 26.2.</
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77604</link>
     <guid isPermaLink="false">e3a9aa58f90e79014eda2d8702539160</guid>
     <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | Code Graph RAG is an AI-powered knowledge graph and retrieval system for querying, understanding, and editing multi-language codebases. Prior to 0.0.345, the MCPToolsRegistry.read_file implementation in codebase_rag/mcp/tools.py joins attacker-controlled file_path input to project_root without resolving and verifying containment when offset or limit selects the paginated branch. An absolute path causes pathlib to discard the configured root, while relative traversal can also resolve outside it. The protected non-paginated branch uses validate_project_path, but the paginated branch bypasses that validation before opening the path. An unauthenticated caller of a network-exposed HTTP MCP server can therefore read arbitrary UTF-8-readable files available to the server process, including credentials, environment data, private keys, source, and configuration; local callers through the stdio transport can reach the same vulnerable code path. This issue is fixed in version 0.0.345.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110802 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110802</link>
+    <guid isPermaLink="false">b6ca26234d0caffe330c050f533b7967</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.1 | Altair is a GraphQL client for all platforms. From 7.2.4 until 8.5.8, packages/altair-iframe-sandbox/src/main.ts reads plugin_sandbox_opts from the iframe-sandbox query string and passes attacker-controlled scriptUrls to injectScript() in packages/altair-core/src/utils/inject.ts, which creates script elements in the page. The intended parent iframe flow places the page in an iframe with sandbox allow-scripts and without allow-same-origin, but direct navigation to a crafted iframe-sandbox URL omits that isolation and executes the supplied script in the origin serving Altair. Exploitation requires a victim to open the crafted URL, and the resulting script can access script-readable storage and make same-origin requests according to the deployment's authentication and cookie controls. This issue is fixed in version 8.5.8.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111062 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111062</link>
+    <guid isPermaLink="false">0a3a90f3623f6b4eafa689304b20f247</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 2.3 | russh is a Rust SSH client and server library. From version 0.34.0-beta.1 until version 0.64.0, its SSH server does not require the signature algorithm in a public-key authentication signature to match the algorithm named in the authentication request. A client possessing an authorized RSA private key can announce  rsa-sha2-512  while supplying a valid  ssh-rsa  SHA-1 signature, bypassing restrictions or producing misleading audit records when applications rely on the requested algorithm. A valid private-key signature remains required, and russh clients are not affected. This issue is fixed in version 0.64.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111753 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111753</link>
+    <guid isPermaLink="false">b1bf3ef522ba7a36b0cfcac4e1ee826b</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.9 | Angular is a development platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages. Prior to 20.3.34 and 21.0.3, the @angular/common HttpClient function xsrfInterceptorFn uses a regular expression that does not normalize request URLs in the same way as the browser's WHATWG URL parser. With XSRF protection enabled, a mutating HTTP request to an attacker-controlled URL containing backslashes, stripped control characters or spaces, or removable ASCII whitespace can be misclassified as relative and same-origin, causing the interceptor to attach the X-XSRF-TOKEN header before the browser dispatches the request to a cross-origin host. With permissive CORS handling for the custom header, the attacker can obtain the victim's XSRF token and use it to perform cross-site request forgery against the victim session. This issue is fixed in versions 20.3.34 and 21.0.3.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111771 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111771</link>
+    <guid isPermaLink="false">f50d07a5f4dd9140073932713073fcc4</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.8 | The Model Context Protocol TypeScript SDK provides TypeScript client and server implementations of the Model Context Protocol. From 1.6.0 until 1.32.0 in @modelcontextprotocol/sdk, from 2.0.0 until 2.3.0 in @modelcontextprotocol/server, from 2.0.0 until 2.0.2 in @modelcontextprotocol/express, and from 2.0.0 until 2.3.1 in @modelcontextprotocol/server-legacy, server-side bearer authentication could accept a valid access token issued for a different service because the SDK did not enforce the token audience. The affected surface is server-side HTTP bearer authentication. The trigger is a valid token whose audience names another service. The authorization server must issue tokens for multiple services, and the application's verifyAccessToken() must not independently validate aud. Applications already validating aud inside verifyAccessToken() are not affected. An attacker with a token for another service could authenticate to the MCP server and obtain the confidentiality and integrity capabilities granted to an authenticated caller. Upgrading alone leaves the new audience validation disabled. Operators must enable audience validation and provide the token audience together. Enabling only the expected audience check causes every request to receive HTTP 401. This issue is fixed in @modelcontextprotocol/sdk 1.32.0, @modelcontextprotocol/server 2.3.0, @modelcontextprotocol/express 2.0.2, and @modelcontextprotocol/server-legacy 2.3.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112899 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112899</link>
+    <guid isPermaLink="false">8312da229800eeb095c487166ef333af</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.3 | Pillow is a Python imaging library. In versions 2.3.0 through 12.3.0, EPS rendering does not validate the scaled image dimensions before invoking Ghostscript. Applications that process untrusted EPS or PostScript files using an application-selected scale greater than one can incur excessive Ghostscript CPU and temporary disk consumption. In versions with decompression-bomb protection, the scaled output is checked only after Ghostscript has completed rendering, allowing resource consumption beyond the configured pixel limit. The amplification depends on the scale selected by the application, not an attacker-controlled scale value. This issue is fixed in version 13.0.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112902 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112902</link>
+    <guid isPermaLink="false">098ddd885b93639013c8855a4aee45b4</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.3 | Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to  TIFFSetField()  that do not match libtiff’s definition of the corresponding tag. When an application saves attacker-controlled image metadata through this encoder, crafted tag values can cause invalid memory reads, copying process memory into the encoded output or crashing the process. Applications that return the encoded output to an attacker can disclose that memory. The issue is reachable when re-saving compressed TIFF images and through certain conversions that preserve EXIF metadata into compressed TIFF output. This vulnerability is fixed in version 13.0.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-114134 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114134</link>
+    <guid isPermaLink="false">8ae384e7b340f70ce33dddb91979da02</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.7 | Black is the uncompromising Python code formatter. Prior to 26.10.1, the Black GitHub Action with use_pyproject: true accepts tool.black.required-version from pyproject.toml without validating that it is a released Black version specifier. An attacker who can submit a pull request can change that field to a direct reference to attacker-controlled code, causing the workflow to install and execute the code in the victim repository's GitHub Actions context. This issue is fixed in version 26.10.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-114604 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114604</link>
+    <guid isPermaLink="false">e73f74744cd7b282ebc9c266a468d22d</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.4 | GraphQL Tools provides utilities for building, stitching, and mocking GraphQL schemas. From 10.10.1 until 12.0.2, the @graphql-tools/utils mergeIncrementalResult helper passes incrementalResult.path segments to setObjectKeyPath without runtime primitive-type validation. A non-primitive segment can bypass strict comparisons against __proto__, constructor, and prototype, then be coerced during property access so a malicious or compromised upstream incremental GraphQL response writes attacker-controlled properties to Object.prototype in the consuming Node.js process. The affected implementation is packages/utils/src/mergeIncrementalResult.ts and is reachable when consumers merge untrusted @defer or @stream transport results. This issue is fixed in version 12.0.2.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119434 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119434</link>
+    <guid isPermaLink="false">c2c89907482f0f3566c48c2a7d133da4</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in silviucpp ezstd allows an attacker who supplies a zstd frame to ezstd:decompress_using_ddict/2 to exhaust memory and terminate the Erlang VM via a small frame that declares a very large content size.
+
+zstd_nif_decompress_using_ddict in c_src/ezstd_nif.cc reads the frame's declared content size with ZSTD_getFrameContentSize and passes it directly to enif_make_new_binary, without the 1 GiB MAX_BUFFER_SIZE check that ezstd:decompress/1 applies before allocating. A valid 65,550-byte frame of RLE blocks declaring 2 GiB is rejected by ezstd:decompress/1 but is fully allocated and decompressed by the dictionary path. The allocation happens inside a NIF, so when it exceeds the memory available to the VM the operating system kills the whole node rather than the calling process.
+
+This issue affects ezstd: from 1.0.5 before 1.2.5.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-34157 - NVD - CVSS Score v4.0: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-34157</link>
+    <guid isPermaLink="false">8ca16bc83d890b871de61e92f1501131</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.6 | Wails is a framework for building desktop applications using Go and web technologies. From 2.0.0 until 2.13.0, BindingsAllowedOrigins in v2/internal/frontend/originvalidator/originValidator.go passes wildcard patterns to wildcardPatternToRegex, which expands every asterisk to an unrestricted regular-expression match. When an application configures a trailing or partial-label wildcard immediately after an allowed domain, an attacker-controlled lookalike origin can match the allowed suffix and invoke bound Go methods through IPC. A complete-component subdomain wildcard is an unaffected configuration. The resulting confidentiality, integrity, and availability impact depends on the file, database, command, credential, or other operations exposed by the application's bound methods. This issue is fixed in version 2.13.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-46350 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46350</link>
+    <guid isPermaLink="false">fcb6a1129095c465d257e1a49795e524</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 9.1 | dcmjs is a JavaScript implementation of DICOM manipulation. Prior to 0.52.0, the DecimalString and IntegerString implementations in src/ValueRepresentation.js sanitize text with a permissive regular expression and pass the result to JavaScript's Number constructor without validating finiteness or the DICOM value-representation rules. Scientific notation overflow in a DS or IS field can produce positive or negative Infinity, while stripping alphabetic characters from signed infinity text can leave a sign-only string that converts to NaN. IntegerString also accepts exponent notation and values outside the DICOM signed 32-bit IS range. Applications that trust these parsed values can propagate invalid numbers into spatial geometry, display windowing, dose scaling, frame counts, rescaling, or volume reconstruction, causing incorrect calculations or disrupted processing. This issue is fixed in version 0.52.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-48705 - NVD - CVSS Score v3.1: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48705</link>
+    <guid isPermaLink="false">3344cb0c25474b9b39d264f5a1806619</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 9.3 | MONAI (Medical Open Network for AI) is an AI toolkit for health care imaging. Prior to 1.6.1, PydicomReader._get_affine() trusts non-finite values in the DICOM PixelSpacing, ImagePositionPatient, and ImageOrientationPatient fields and composes them into an affine matrix without validation. An unauthenticated attacker who can upload a crafted DICOM to a default MONAILabel deployment can propagate NaN or infinity values through LoadImaged, Spacingd, model inference, and output writing, causing inference failures, persistent datastore poisoning, or geometrically corrupted results. This issue is fixed in version 1.6.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-49272 - NVD - CVSS Score v3.1: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49272</link>
+    <guid isPermaLink="false">a6ba7a720a8a9157d90c8e9b1fcf4837</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.5 | OAuthLib is an implementation of the OAuth request-signing logic for Python 3.6+. From 3.3.0 until 4.0.1, OAuthLib's RFC 8628 device workflow does not require DeviceCodeGrant.validate_token_request to check that the device_code parameter is present and valid. A caller whose client request is accepted by the configured validator and who knows a valid client ID enabled for the device workflow can submit a missing or bogus device code to the token endpoint and obtain a bearer token without completing device authorization. This issue is fixed in version 4.0.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-54442 - NVD - CVSS Score v3.1: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54442</link>
+    <guid isPermaLink="false">1d3a704d20eaa71ac07efa0f425886a7</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 4.8 | Emissary is a P2P based data-driven workflow engine. Prior to 8.51.0, the VALID_LINK validation in src/main/java/emissary/server/mvc/NavAction.java accepts protocol-relative URLs when processing configured navigation links. Browser URL normalization can interpret these accepted strings as external origins. The authoritative advisory attributes open redirect, server-side request forgery, and cloud metadata access to this bypass, but it identifies neither the server-side dereference path nor how navigation-link processing reaches that path. This issue is fixed in version 8.51.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-55458 - NVD - CVSS Score v4.0: 2.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55458</link>
+    <guid isPermaLink="false">1289dd1d0623866ddfd12db7248c705a</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 2.9 | Caddy is an extensible server platform that uses TLS by default. Prior to 2.11.5, the reverse proxy's finalizeResponse method in modules/caddyhttp/reverseproxy/reverseproxy.go handles an upstream 101 Switching Protocols response before running removeConnectionHeaders and the hopHeaders deletion loop used for ordinary responses. The early return invokes handleUpgradeResponse, which copies the upstream headers to the client and normalizes only WebSocket-specific header names. An attacker who controls or compromises a proxied WebSocket upstream can therefore cause hop-by-hop headers such as Alt-Svc, Keep-Alive, and Proxy-Authenticate, as well as headers named by Connection, to cross the proxy boundary. For HTTP/2 or HTTP/3 extended CONNECT, the upstream 101 response may be represented to the client as an ordinary successful response, increasing the chance that leaked headers are processed. This issue is fixed in version 2.11.5.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-62268 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62268</link>
+    <guid isPermaLink="false">4732ea241cad0f920ee240ab6caffda5</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.3 | borgbackup is an opensource, deduplicating archiver with compression and authenticated encryption. Prior to 1.4.5 and 2.0.0b22, extracting a malicious archive can follow a symlinked parent path or resolve embedded dot-dot path components and delete or overwrite files outside the extraction directory. A crafted slave hardlink can also use an attacker-controlled hardlink source outside the extraction directory and hard-link that file into the restored tree, disclosing its contents. Creating the malicious archive requires repository access and, for encrypted or authenticated repositories, the Borg key and passphrase; a victim must then extract the archive. This issue is fixed in versions 1.4.5 and 2.0.0b22.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-69143 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69143</link>
+    <guid isPermaLink="false">b9135a253d8f6526b31bb68f07b0c61e</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE is a duplicate of another CVE.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77463 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77463</link>
+    <guid isPermaLink="false">53385fed3be8334c746c30629137fc1f</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | Remark42 is a self-hosted comment engine for blogs, articles, or any other place where readers can add comments. From 1.0.0 until 1.16.2, Remark42 globally trusts True-Client-IP, X-Real-IP, and X-Forwarded-For without verifying that the direct peer is a trusted proxy, and middleware.RealIP overwrites r.RemoteAddr before per-IP controls run. In a directly reachable deployment, or a proxy that forwards attacker-controlled headers, a remote attacker can rotate spoofed forwarding headers to obtain fresh token buckets for rate-limited endpoints, bypass vote de-duplication when --votes-ip is enabled, mint anonymous identities, and poison stored comment IPs and request logs. The global concurrent-request throttle and per-request timeouts still limit availability impact. Mitigation support is available in version 1.16.2, but operators must configure --trusted-proxy for the deployment topology.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77622 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77622</link>
+    <guid isPermaLink="false">9363a1e1cfa58c6e4ed7aa71e9d37d07</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.2 | Sliver is a command and control framework. Prior to 1.7.6, an HTTP(S) listener using the PNG encoder accepts attacker-controlled PNG dimensions without an effective decoded-size or pixel limit in util/encoders/images.go, while the listener nonce space implemented in server/encoders/encoders.go is small enough to search remotely. An unauthenticated attacker who identifies a valid nonce can submit a highly compressed image to PNGEncoder.Decode, where it expands during png.Decode, exhausting server memory and causing a complete loss of availability. This vulnerability is fixed in 1.7.6.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81190 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81190</link>
+    <guid isPermaLink="false">ecebc52b8dc9c53dfd7b7dbbd1962773</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | KurrentDB is a database engineered for modern software applications and event-driven architectures. In version 26.1.0, a user authorized to read the $all stream can use Secondary Indexing query capabilities to read arbitrary files accessible to the database process, enumerate directories, and issue HTTP GET requests from that process. The default configuration limits this privilege to administrators. The flaw does not permit file writes and does not expose environment variables. This issue is fixed in version 26.1.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-85076 - NVD - CVSS Score v4.0: 9.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85076</link>
+    <guid isPermaLink="false">58d2d3c15ab09b5a0bec13c3a4293f74</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 9.0 | Cronicle is a multi-server task scheduler and runner, with a web based front-end UI. Prior to 0.9.124, an authenticated non-admin with run_events, create_events, or edit_events privilege can supply undeclared keys in event params through api_create_event, api_update_event, or api_run_event. lib/api.js and lib/api/event.js validate the parameter object without restricting its keys, and lib/job.js uppercases those keys and applies them to the child process environment after administrator-defined plugin variables. A key that collides with a security-sensitive environment variable can therefore override the plugin execution context and may cause privilege escalation, arbitrary code execution, data access, or service disruption depending on the plugin and runtime. This issue is fixed in version 0.9.124.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-87008 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87008</link>
+    <guid isPermaLink="false">9358394c748cc971e984171b7b7806c9</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.1 | Code Graph RAG is an AI-powered knowledge graph and retrieval system for querying, understanding, and editing multi-language codebases. Prior to 0.0.589, AstGrepService in codebase_rag/tools/ast_grep_service.py enumerates files beneath project_root and relies on should_skip_path in codebase_rag/utils/path_utils.py to classify them, but the containment check operates on unresolved lexical paths. A symbolic link planted inside an analyzed repository can therefore reference a file outside the configured root while still appearing in scope. The structural_search tool follows the link and discloses readable content without an approval gate, while structural_replace with dry_run=False follows it and overwrites writable content; the MCP path invokes structural replacement without the agent-loop approval control. An attacker who causes a victim to analyze a repository containing such a link can read credentials, keys, environment files, or sibling source and can modify files accessible to the code-graph-rag process. This issue is fixed in version 0.0.589.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
