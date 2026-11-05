@@ -5,79 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 05:01:00 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-122318 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122318</link>
-    <guid isPermaLink="false">8cb9472c76de05bc05e8bd7c3426d7c2</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.2 | Kyverno before 1.19.2 contains an authentication bypass in matchCertificateData that skips verifyImages subject and subjectRegExp checks when the signing certificate has no Subject Alternative Name. Attackers holding a leaf certificate from a configured private trust root can omit the SAN, set the expected Fulcio issuer OID, and sign malicious images that are admitted despite signer pinning.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122319 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122319</link>
-    <guid isPermaLink="false">95d3009167e168000d95bf18a437daf1</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.7 | Kyverno before 1.19.2 contains a denial-of-service vulnerability in the In and NotIn operators that allows attackers to crash the policy engine via an unchecked type assertion. Attackers can submit resources whose JMESPath-evaluated values yield arrays of integers, booleans, or mixed types, triggering a panic that disrupts admission control and policy enforcement.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122320 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122320</link>
-    <guid isPermaLink="false">1603178b6ea640fcead7b277774222ff</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.3 | Kyverno before 1.19.2 contains a missing authorization vulnerability that allows namespaced Policy authors to read resources in other namespaces by templating generate.clone or cloneList namespace values. Attackers can annotate a triggering ConfigMap so the background-controller copies a victim namespace's sensitive ConfigMap into the attacker's namespace, enabling cross-tenant data disclosure.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122321 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122321</link>
-    <guid isPermaLink="false">38b92e2926010107102e374c70b6c6fe</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.5 | Kyverno 1.18.0 before 1.19.2 contains a signature verification bypass in verifyImages because cached verification results are keyed by the image reference string (such as a tag) rather than bound to the verified digest, so cache hits skip signature and attestation checks. An attacker who can submit workloads and move a registry tag can warm the cache with a signed image, repoint the tag, and have Kyverno admit the workload and use mutateDigest to pin the unverified digest.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122322 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122322</link>
-    <guid isPermaLink="false">280f2364b1250582ee06e949e2754234</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.7 | Kyverno from 1.11.0 before 1.19.2 contains an unbounded decompression vulnerability in extractStatement that allows remote attackers to exhaust memory by supplying highly compressed attestation layers. Attackers controlling registry referrer artifacts can push gzip predicate layers exceeding maxPayloadSize when decompressed, causing admission controller OOM kills and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122323 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122323</link>
-    <guid isPermaLink="false">a9b14ccb1024574c6affadda7be5e766</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.7 | Kyverno from 1.11.0 before 1.19.2 contains an unbounded decompression vulnerability in FetchSignatureBlob that allows attackers to exhaust memory by supplying highly compressed notary signature layers. Attackers who control registry referrers or signatures can publish small gzip layers that decompress beyond maxPayloadSize, causing admission controller OOM kills and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122992 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122992</link>
-    <guid isPermaLink="false">569959ee218f15821bb57a7ae514b2be</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 9.2 | In G4KLX DStarGateway and F4FXL DStarGateway before 7b75de6, dstarCallsignToAPRS in APRSUtils.cpp has an integer underflow via an empty RS-MS1A sender field.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-33958 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33958</link>
-    <guid isPermaLink="false">c71e041ff2f96378bd2a26f260802652</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | Processing a malformed RRC Reconfiguration message leads to an out-of-bounds (OOB) access, resulting in a denial-of-service (DoS) condition.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-33965 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33965</link>
-    <guid isPermaLink="false">484690a9a28ff1e00b6e5d7e219c2165</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | An attacker may send a malicious IMS message to the target device, potentially leading to information exposure through the SIP message flow.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 05 Nov 2026 06:01:47 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-33969 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33969</link>
@@ -323,6 +251,78 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122236</link>
     <guid isPermaLink="false">eb34cbd14bb2cd07c518da3029cbe53d</guid>
     <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability has been found in OpenHands up to 1.24.0. This impacts an unknown function of the component Landing Page. Such manipulation leads to missing authentication. The attack must be carried out from within the local network. The exploit has been disclosed to the public and may be used. Upgrading to version 1.25.0 will fix this issue. The name of the patch is c5efa3ae415def0a903c82d2b17b748e663b1995. Upgrading the affected component is recommended.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104812 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104812</link>
+    <guid isPermaLink="false">1539177cacabd1652c82c528ba994684</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Redux Framework plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'multi_media' Field Array Key in all versions due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The wp_kses_post sanitization applied at save time operates only on array leaf values, leaving array keys entirely unsanitized; the injected key is then rendered directly into an id=&quot;filelist-&lt;KEY&gt;&quot; HTML attribute without esc_attr() in Redux_Multi_Media::render(), allowing attribute breakout.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-116617 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116617</link>
+    <guid isPermaLink="false">2a95fd739152d0ae4ecc9b36ca678507</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | The Motors – Car Dealership &amp; Classified Listings Plugin plugin for WordPress is vulnerable to File Deletion in all versions up to, and including, 1.4.128 The vulnerability exists because `stm_save_user_extra_fields()`, hooked to `personal_options_update`, writes the attacker-controlled `stm_dealer_logo_path` parameter directly to user meta without an ownership check binding the submitted path to the submitting user — unlike the `stm_payment_status` and `stm_lost_password_hash` fields, this field is not gated by a `manage_options` or `edit_users` capability check. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete image files belonging to other users under `wp-content/uploads` — including other users' avatars, dealer logos, and uploaded media — by storing a crafted path via their own profile and then triggering `unlink()` through the become-dealer form on their author page. Note that the two path guards (`stm_mvl_is_path_within_uploads` and `stm_mvl_is_allowed_image_file`) do restrict the attack surface to files with an image extension that resolve within the uploads basedir; files outside that directory, such as `wp-config.php` or plugin PHP files, cannot be reached.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118193 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118193</link>
+    <guid isPermaLink="false">ef16e1c9dc22f75246314c4da34cc6eb</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.19.1 via the `donor_default_user_role` parameter. This is due to the `sanitize_option_donor_default_user_role()` function applying only a narrow literal check against the string `'administrator'` rather than enforcing the plugin's own `give_get_donor_safe_user_roles()` allowlist on save, and due to the `give_core_settings_import_callback()` AJAX handler writing imported JSON directly into the `give_settings` option via `update_option()` without invoking the sanitize filter at all. This makes it possible for authenticated attackers with the GiveWP Manager role (holding the `manage_give_settings` capability) and above to configure donor registration to assign privileged WordPress roles — up to and including Administrator via the import path — to every new donor account created through the platform. Via the settings save path, the Administrator role is blocked but any other elevated role (Editor, Author, etc.) is accepted; via the Tools › Import JSON path, the sanitize filter is bypassed entirely, allowing the Administrator role itself to be stored and subsequently applied to all newly registered donor accounts.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120533 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120533</link>
+    <guid isPermaLink="false">c339c75dbb3eab518682c9fd53a7e881</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Redux Framework plugin for WordPress is vulnerable to Stored Cross-Site Scripting via theme_opts Parameter via User Profile in all versions up to, and including, 4.5.16 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires the host theme to have registered a Redux field of a CSS-emitting type (such as link_color, border, or typography) with an output CSS selector, as only the field types 'spinner', 'slider', 'color', and 'date' receive per-type value validation that would block the entity-encoded payload.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120553 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120553</link>
+    <guid isPermaLink="false">dde9638daddff9d36f058720be904fce</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Customer Reviews for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'slides_to_show' parameter in all versions up to, and including, 5.126.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123010 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123010</link>
+    <guid isPermaLink="false">c1fc55381f3fe02b5bd22c5c6390c96b</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.2 | @twilio-labs/netlify-okta-auth through 1.0.2 relies on an unverified iss claim. This affects an outbound HTTP request to retrieve a public signing key. There may be other impacts in a misconfiguration where oktaUrl isn't set.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123011 - NVD - CVSS Score v3.1: 4.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123011</link>
+    <guid isPermaLink="false">5897af4aeecb6075fb573c70fc024903</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 4.2 | STMicroelectronics st-mems-android-linux-sensors-hal before 7bdf334 does not check whether the allowed number of channels is exceeded.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123012 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123012</link>
+    <guid isPermaLink="false">54d52a1a2ec5adfa3d01ddfa156bfb9b</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.1 | In Gogs 0.14.3, the Git Smart HTTP authorization layer in internal/route/repo/http.go allows a push when only read access was intended, a different vulnerability than CVE-2026-52810. This occurs because of inconsistency about whether a verb is checked in a case-sensitive manner.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-93389 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93389</link>
+    <guid isPermaLink="false">0b08343bee366e6edf678d8c1b6bba46</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.2 | The LiteSpeed Cache plugin for WordPress is vulnerable to unauthenticated disclosure of sensitive WooCommerce customer data in all versions up to, and including, 7.9.1 With Cache REST enabled (the shipped default cache-rest=1), LiteSpeed stores WooCommerce Store API GET responses (/wc/store/v1/cart and /wc/store/v1/checkout) as PUBLIC cache objects and does not vary the cache on the Cart-Token or WooCommerce session. A shopper's personalized cart/checkout response is therefore served to any later, cookie-less and token-less client as an LSCache HIT. This makes it possible for unauthenticated attackers to read another shopper's billing and shipping details (name, company, street address, email, phone), cart contents and totals, and the shopper's live Cart-Token session JWT and nonce (enabling cart/checkout-session hijack), plus order_key on the checkout endpoint.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
