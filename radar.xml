@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 02:01:55 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 03:01:53 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-122049 - NVD - CVSS Score v4.0: 2.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122049</link>
@@ -71,36 +71,36 @@
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-55368 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55368</link>
-    <guid isPermaLink="false">217eff0c48caf18bdc7bc88d45987889</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 8.1 | h2o is an HTTP server with support for HTTP/1.x, HTTP/2 and HTTP/3. Prior to commit 48b7ae12107fd2b118e4641da49599e9aac8edd8, H2O's access-log formatter could write past its log-line buffer when an affected custom access-log format was configured. The allocation errors affected %{error}x, %q when the query string was empty, and numeric elements whose temporary terminating NUL reached the end of the buffer. A matching request could crash the server, while the effect of the one-byte NUL overwrite beyond a crash was not established. This vulnerability is fixed with commit 48b7ae12107fd2b118e4641da49599e9aac8edd8.</description>
+    <title>CVE-2025-66364 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-66364</link>
+    <guid isPermaLink="false">016dd8e2b2bf8d9ff80608b8a9dd7eb2</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | Continuously sending control‑plane messages causes the baseband to crashes.</description>
     <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-57562 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57562</link>
-    <guid isPermaLink="false">28459f0843cfcd6b478bafa80a66a455</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 6.5 | Readest is a modern, feature-rich ebook reader designed for seamless cross-platform access and an intuitive reading experience. Prior to 0.11.10, POST /api/stripe/check in apps/readest-app/src/app/api/stripe/check/route.ts accepted a client-controlled sessionId, retrieved the corresponding Stripe Checkout Session, and granted the paid plan to the authenticated caller without verifying session.metadata.userId. The createOrUpdateSubscription path then updated the plans row keyed by the caller's user identifier rather than the Checkout Session owner. Any authenticated free user with a paid active Checkout Session identifier, including one from the user's own single legitimate purchase, could replay that identifier to upgrade additional accounts without payment. This issue is fixed in version 0.11.10.</description>
+    <title>CVE-2026-122154 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122154</link>
+    <guid isPermaLink="false">1d57de76685f671c1e35aa34efdfa299</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was found in purocean Yank Note 3.93.0. This impacts the function config.getAll of the file src/main/server/index.ts of the component Settings Endpoint. The manipulation results in information disclosure. The attack may be launched remotely. The exploit has been made public and could be used. Upgrading to version 3.93.1 will fix this issue. The patch is identified as 59f85d48f17a70a402ad59dcecacdbec20f954df. The affected component should be upgraded. The commit removes the key from the response.</description>
     <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-57565 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57565</link>
-    <guid isPermaLink="false">015c9bd7c147b80f9cf5e79b383faaaa</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 6.5 | Readest is a modern, feature-rich ebook reader designed for seamless cross-platform access and an intuitive reading experience. Prior to 0.11.10, the apps/readest-app/src/pages/api/storage/upload.ts route constructed an object key from the authenticated user's identifier and a client-controlled fileName without rejecting path separators or parent-directory traversal. In the R2 backend, apps/readest-app/src/utils/r2.ts placed that key into a new Request URL before signing it, and URL normalization collapsed parent-directory components so the resulting presigned PUT could escape the caller's namespace. An authenticated attacker who knew a target user identifier and book hash could overwrite or poison that user's stored book object and corrupt the associated file_key metadata; the exact cross-tenant escape was verified for the R2 backend. This issue is fixed in version 0.11.10.</description>
+    <title>CVE-2026-122157 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122157</link>
+    <guid isPermaLink="false">76962fcaa79eeae94e45cd327524e25b</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was identified in Purocean Yank Note 3.93.0. Affected by this vulnerability is the function checkPermission of the file src/main/server/index.ts of the component Terminal Handler. Such manipulation leads to os command injection. The attack can be executed remotely. The exploit is publicly available and might be used. Upgrading to version 3.93.1 addresses this issue. The name of the patch is 59f85d48f17a70a402ad59dcecacdbec20f954df. Upgrading the affected component is recommended.</description>
     <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-57566 - NVD - CVSS Score v3.1: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57566</link>
-    <guid isPermaLink="false">d379ab437b8c21895c4ffb6ded249f68</guid>
-    <description>Wednesday 4 November 2026 | NVD | CVSS Score v3.1: 9.3 | Readest is a modern, feature-rich ebook reader designed for seamless cross-platform access and an intuitive reading experience. Prior to 0.11.10, the unauthenticated /api/opds/proxy route in apps/readest-app/src/app/api/opds/proxy/route.ts accepted an attacker-controlled URL and fetched it server-side without restricting the scheme, blocking private, loopback, link-local, or metadata hosts, or revalidating destinations during automatic redirect following. The route also accepted caller-controlled outbound headers and Authorization values and reflected the upstream status and response body. A remote attacker could use the service as an open request proxy and, on Node, Docker, or other self-hosted deployments with internal-network access, retrieve cloud metadata or internal-service responses. Cloudflare Workers deployments restrict access to link-local and private destinations, which reduces the internal-network impact there, but the unauthenticated public fetch-and-reflect behavior remains. This issue is fixed in version 0.11.10.</description>
+    <title>CVE-2026-122158 - NVD - CVSS Score v4.0: 2.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122158</link>
+    <guid isPermaLink="false">1e61b7a7ec8fe8e63e9cf0bd3074e8f9</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 2.0 | A security flaw has been discovered in InvoiceShelf up to 2.4.3/3.0.0-alpha.3. Affected by this issue is the function MemberService::create of the file app/Domains/Accounts/Application/MemberService.php. Performing a manipulation of the argument companies[].id/companies[].role results in improper access controls. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. Upgrading to version 2.4.4 and 3.0.0-alpha.4 can resolve this issue. The patch is named c798b513c3ab6e672a1678774720fbb282f4d0c6. It is recommended to upgrade the affected component.</description>
     <category>NVD</category>
-    <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-57567 - NVD - CVSS Score v3.1: 8.6</title>
