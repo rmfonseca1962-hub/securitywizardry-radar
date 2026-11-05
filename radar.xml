@@ -5,203 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 18:02:12 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-70659 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-70659</link>
-    <guid isPermaLink="false">786028027604f357001855accfdb9d02</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.8 | stable-diffusion.cpp is a pure C/C++ library for running diffusion model (Stable Diffusion, Flux, Wan, Qwen Image, Z-Image, and more) inference. From master-742-1a13107 until master-763-4fcc6fe, IMatrixCollector::load_imatrix in src/runtime/imatrix.cpp reuses the values and counts vectors for entries with the same tensor name but resizes them only when they are empty. An untrusted .imatrix file can provide a small nval for the first entry and a larger nval for a second entry with the same name, causing the accumulation loop to write attacker-controlled floating-point and integer values beyond both heap buffers. Loading the file through the --imat-in conversion path can corrupt the heap or crash the process before a model is required. This issue is fixed in master-763-4fcc6fe.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-70660 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-70660</link>
-    <guid isPermaLink="false">45631b8c83b77fbc46bc281e56d8aeeb</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | stable-diffusion.cpp is a pure C/C++ library for running diffusion model (Stable Diffusion, Flux, Wan, Qwen Image, Z-Image, and more) inference. Prior to master-764-e22272e, the safetensors loader in src/model_io/safetensors_io.cpp trusts each tensor's data_offsets after checking only that nbytes equals end - begin. A crafted .safetensors file can declare a byte range beyond the file's data section, causing src/model_loader.cpp to consume an attacker-chosen length from an unchecked mapped-file offset. Loading the model can read adjacent process memory into tensor buffers or crash the process. This issue is fixed in master-764-e22272e.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-73856 - NVD - CVSS Score v3.1: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73856</link>
-    <guid isPermaLink="false">31256673b8e8b3f107dff01e98deed2b</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.6 | ModSecurity is an open source, cross platform web application firewall (WAF) engine for Apache, IIS and Nginx. From 3.0.0 until 3.0.17, src/transaction.cc compares a response Content-Type value against SecResponseBodyMimeType entries case-sensitively. A mixed-case response media type that is semantically equivalent to a configured lowercase type can therefore be treated as unconfigured, causing ModSecurity to skip RESPONSE_BODY inspection. An unauthenticated requester can then receive response content that a phase 4 rule would otherwise block, including sensitive error or debug data. This issue is fixed in version 3.0.17.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-85286 - NVD - CVSS Score v3.1: 3.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85286</link>
-    <guid isPermaLink="false">2e7a50505d3438679c45a7cd8d18b7c8</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 3.7 | HomeBox is a home inventory and organization system. Prior to 0.27.0, the POST /api/v1/users/login endpoint performs password-hash verification only when the submitted username matches an existing account, while unknown usernames return immediately. Although both paths return the same 401 unauthorized response, the processing-time discrepancy allows an unauthenticated remote attacker to distinguish registered email addresses; rate limiting only reduces the number of attempts per window. This issue is fixed in version 0.27.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102739 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102739</link>
-    <guid isPermaLink="false">c25f9edbbb85b9bb114145db48ba9aa8</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.8 | ESPectre is a Wi-Fi motion sensing platform for ESP32. Prior to 3.0.0-rc1, Micro-ESPectre analysis tools, including tools/6_optimize_filter_params.py, tools/1_analyze_raw_data.py, and tools/10_train_ml_model.py, load NPZ datasets with NumPy pickle support enabled through micro-espectre/tools/csi_utils.py and a direct loader. A malicious dataset contributor or pull-request author can place an object-typed array in a .npz file under micro-espectre/data, causing pickle-controlled code to execute as the maintainer or developer when a documented analysis tool accesses the field. This issue is fixed in version 3.0.0-rc1.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-103112 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103112</link>
-    <guid isPermaLink="false">c1a7e7f2a8aca8423827cfed62027592</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | A flaw was found in the authentication session handling of the keycloak-services component in Keycloak. The issue occurs because the system fails to verify if an authenticator is valid for the current authentication flow when switching between the standard authentication path and the reset credentials path. An authenticated attacker can exploit this by triggering a race condition during the credential reset process to associate their successful authentication state with another user's session. This can result in the attacker gaining full access to the victim's account and changing their password.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104867 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104867</link>
-    <guid isPermaLink="false">99257f8628662fe2419ac3dcd80eb92a</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 4.3 | Immich is a high-performance self-hosted photo and video management solution. From 3.0.0 until 3.2.0, the GET /api/admin/users/{id}/calendar-heatmap route in server/src/controllers/user-admin.controller.ts uses the ordinary Permission.UserRead permission without an admin-route requirement, and UserAdminService.getCalendarHeatmap in server/src/services/user-admin.service.ts does not compare the authenticated user with the requested user identifier or perform a separate access check. Any authenticated non-admin user can therefore request another account's upload or capture-date activity heatmap for an arbitrary date range. AssetRepository.getCalendarHeatmap in server/src/repositories/asset.repository.ts filters by owner, date, and deletion state but not visibility, so the returned daily counts and total count include archived and locked assets. The route exposes counts and activity dates but does not return asset metadata or content, and it does not affect integrity or availability. This issue is fixed in version 3.2.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107123 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107123</link>
-    <guid isPermaLink="false">5a71495752504e519c63634d739a5a3b</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | A flaw was found in the SAML XML processing component of Keycloak, an open-source identity and access management solution. The issue occurs when the server parses XML documents containing excessively long dateTime or duration values. Because these strings are not properly validated before processing, the XML parser consumes excessive CPU time. An unauthenticated remote attacker can exploit this by sending specially crafted SAML requests to the server, leading to high CPU utilization and a denial of service for all users.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107602 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107602</link>
-    <guid isPermaLink="false">f6783c8b5e4bde155f9116bfde17bb54</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | A flaw was found in the SAML 1.1 XML parsing logic of Keycloak, an open-source identity and access management solution. The issue occurs when the parser encounters unexpected elements within a security token's key information section, causing the processing thread to enter an infinite loop. An unauthenticated remote attacker could exploit this by sending specially crafted requests, leading to 100% CPU usage and a total denial of service that requires a server restart to resolve.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-110931 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110931</link>
-    <guid isPermaLink="false">9aaae422b4ee1f991738c1fcbc7d5980</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | A flaw was found in the SAML 1.1 assertion parser of Keycloak, a tool used for identity and access management. The issue occurs when the parser handles a specific element called AuthorityBinding within an authentication statement. Due to an incomplete fix for a previous vulnerability, the parser can enter an infinite loop that consumes all available memory, causing the entire Keycloak service to crash and become unavailable to users.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-110932 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110932</link>
-    <guid isPermaLink="false">2fdb4298ac1886a32648c66f60dd4396</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | A flaw was found in the theme resource endpoint of Keycloak, an open-source identity and access management solution. The issue occurs because the server fails to validate theme names before using them as keys for an on-disk gzip cache. An unauthenticated attacker can exploit this by sending many requests with unique, fabricated theme names, leading to persistent disk space exhaustion that survives server restarts and causes service disruptions.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111253 - NVD - CVSS Score v3.1: 6.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111253</link>
-    <guid isPermaLink="false">5ff5c2fc518555564dec18fc79a87408</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.6 | A flaw was found in dnf5daemon-server. Session methods on dynamically exported D-Bus session objects do not verify that the caller is the unique sender that created the session. A local attacker can modify another user's live package-management session and replace its resolved transaction plan. If the legitimate session party later authorizes execution, the root daemon may apply the attacker-chosen package operations.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-112208 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112208</link>
-    <guid isPermaLink="false">dc9fcc3ba10e51ec68c7e97e4225c046</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | A flaw was found in the Organization identity-first login flow of the Keycloak authentication server. Keycloak is an open-source identity and access management solution used to secure modern applications and services. The issue occurs when an attacker who belongs to multiple organizations initiates a login and then switches to a registration or password reset path. During this process, a flag indicating a successful login is not properly cleared when the user is removed from the session. An attacker can then provide a victim's username, and the system incorrectly treats the stale flag as proof of the victim's identity. This allows the attacker to bypass authentication and gain full access to the victim's account and connected applications.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114232 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114232</link>
-    <guid isPermaLink="false">f57cc5a883dab9bda75c3efe2930ef19</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | A flaw was found in the UserManagedPermissionService of the Keycloak authorization server. The UMA Protection API, which manages user permissions, fails to validate the resourceType field when a user creates a new policy. This allows an attacker to create a policy that applies to resources owned by other users, potentially leading to unauthorized access or modification of sensitive data across the entire realm.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118517 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118517</link>
-    <guid isPermaLink="false">fd541eaf78a6d95aa312da686e29b7bf</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 2.3 | The Symfony HtmlSanitizer component UrlSanitizer parses URLs differently from browsers, allowing the allowLinkHosts() and allowMediaHosts() checks to be bypassed for URLs without a well-formed authority, resulting in untrusted hosts being referenced in sanitized output in Symfony versions 6.1.x prior to 6.4.50, 7.x prior to 7.4.23, and 8.x prior to 8.1.11.
-
-
-
-UrlSanitizer parses URLs with league/uri, which follows RFC 3986, while browsers follow the WHATWG URL standard. For URLs without a well-formed authority, such as http:evil.example, ///evil.example, or https://://evil.example/ the sanitizer finds no host, whereas browsers resolve them to evil.example. The guard added for CVE-2026-45066 missed the zero-slash form, and the host 0 was also skipped because PHP treats it as falsy.
-
-
-
-This is exploitable when a host allow-list is combined with allowRelativeLinks(true) or allowRelativeMedias(true). The default configuration is not affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119083 - NVD - CVSS Score v4.0: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119083</link>
-    <guid isPermaLink="false">13e70cb90a051315efeffe6db69b94ed</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.4 | Path traversal in the archive extraction utility in GluonTS before 0.17.0 might allow an actor who supplies a crafted tar archive to write arbitrary files outside the intended extraction directory with the privileges of the extracting process via symbolic or hard links contained in the archive.
-
-
-
-To remediate this issue, users should upgrade to version 0.17.0 or later.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120499 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120499</link>
-    <guid isPermaLink="false">9599f19959d79123df7338b2b354422e</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.5 | h5io before 0.2.6 contains a code injection vulnerability in read_hdf5() that allows attackers to execute arbitrary code by supplying a crafted HDF5 file. Attackers can store Python code in a node titled timezone, which _triage_read() passes to eval() with builtins reachable, name an arbitrary module in class or custom-object nodes that _import_class() imports, or place pickled objects in pd_dataframe or pd_series nodes that pandas deserializes on read.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121994 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121994</link>
-    <guid isPermaLink="false">fc1976657e47010f7ecb3d510ba11b55</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | A stack buffer overflow in the GDB client's remote protocol handler allows an attacker-controlled debug target to execute arbitrary code in the GDB process. The vulnerability exists in fetch_register_using_p, which decodes a stub's register reply into an alloca-sized buffer without bounding writes by the register width.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121995 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121995</link>
-    <guid isPermaLink="false">af264d1359c59099cc8551c3fcc82af8</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | A stack buffer overflow in the GDB client's tracepoint upload handler allows an attacker-controlled debug stub to corrupt stack memory automatically during connection setup. The overflow results from GDB reading beyond the current reply boundary into a stale prior reply in the shared packet buffer.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121996 - NVD - CVSS Score v3.1: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121996</link>
-    <guid isPermaLink="false">a7ae48e6f7e40826136f9396aaf7eea3</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.2 | A length validation flaw in gdbserver's agent-expression parser allows an unauthenticated remote attacker to read uninitialized heap memory from the gdbserver process and cause a denial of service. Disclosed heap content includes addresses suitable for defeating ASLR in further exploitation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121997 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121997</link>
-    <guid isPermaLink="false">aee49125cb1db84ce8a5542578db58fd</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | A heap buffer overflow in gdbserver's QTDPsrc packet handler allows an unauthenticated remote attacker to achieve native code execution in the gdbserver process. The vulnerability results from a mismatch between a packet's declared source length and the actual data length, causing hex2bin to write beyond the allocated heap buffer.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123151 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123151</link>
-    <guid isPermaLink="false">f185d8978e732a0d13e36d7af2b870ef</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | A flaw was found in the GNU debugger (GDB). When GDB connects to a remote debug target, a malicious target can cause GDB to overflow a buffer on the stack while parsing the target's replies. This can crash GDB or potentially allow the target to execute arbitrary code in the GDB client process with the privileges of the user running GDB.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-49393 - NVD - CVSS Score v3.1: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49393</link>
-    <guid isPermaLink="false">2a0e15f5229d8bf11a965834ee02e31b</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.4 | OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.56.0, the core server protects HTTP POST requests to /rpc with bearer middleware but exposes Socket.IO rpc:request and chat:start handlers without equivalent transport or handler-level authentication. A local unauthenticated client can connect to the Socket.IO namespace and dispatch requests through the same protected controller path that rejects a missing bearer on /rpc. Depending on the selected method, the attacker can read configuration or health data, start agent flows, interact with integrated account APIs, alter local data, or stop and restart services. This issue is fixed in version 0.56.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 05 Nov 2026 19:02:04 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-49405 - NVD - CVSS Score v3.1: 6.2</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49405</link>
@@ -335,6 +139,201 @@ To remediate this issue, users should upgrade to version 0.17.0 or later.</descr
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97371</link>
     <guid isPermaLink="false">2399af6b5a92cfc6c705acb30fe449dc</guid>
     <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.3 | ntopng is a web-based network traffic monitoring application. Prior to 6.7.260721, ndpi_get_custom_category_match writes a four-byte nDPI protocol-category value through a pointer to the two-byte id variable in IpAddress::reloadBlacklist in src/IpAddress.cpp during packet dissection and host initialization. A remote unauthenticated attacker on a monitored network segment can send packets that match custom-category rules, causing stack corruption and denial of service without user interaction. This issue is fixed in version 6.7.260721.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-102927 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102927</link>
+    <guid isPermaLink="false">b05c4b04141343f432f937e3e6650a50</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.9 | HedgeDoc is an open source, real-time collaborative markdown notes application. Prior to 1.11.1, the WebSocket permission handler allows a note owner to store strings outside the supported freely, editable, limited, locked, protected, and private permission values. The viewing and editing checks handle only known values and can otherwise fall through to permissive behavior, making a note readable or writable more broadly than intended. SQLite deployments can persist the invalid value because the database column does not strictly enforce the set, while MySQL and PostgreSQL reject the database update but can leave the in-memory note state inconsistent for connected users until reload or cache eviction. Exploitation requires the note owner to intentionally submit an invalid permission value, and the owner could already choose a legitimate permissive setting, which limits the practical security impact. This issue is fixed in version 1.11.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-105607 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105607</link>
+    <guid isPermaLink="false">654f4102773b8c0b64077582f713b319</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.6 | Joomla Extension - balbooa.com - Unauthenticated stored XSS in the &quot;Recent Comments / Recent Reviews&quot; widget in Gridbox &lt; 2.20.5.0</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107129 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107129</link>
+    <guid isPermaLink="false">73c2151669e21803afe28c45643b21a9</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.3 | Joomla Extension - balbooa.com - Unauthenticated arbitrary file deletion via path traversal in Gridbox &lt; 2.20.5.0</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107130 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107130</link>
+    <guid isPermaLink="false">8df242a2f9bc1ad19d734d0ef164b0bb</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | Joomla Extension - balbooa.com - Unauthenticated deletion of submission/field files in Gridbox &lt; 2.20.5.0</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107359 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107359</link>
+    <guid isPermaLink="false">052390e2bf3b11066dd584ecaa97bf3e</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.1 | Improper input validation in the beacon handler for WF200 firmware versions 3.17.0 and earlier may result in a divide-by-zero fault.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107903 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107903</link>
+    <guid isPermaLink="false">a6a199b8c8a33937c4cf96775b47283b</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.6 | Joomla Extension - balbooa.com - Stored XSS in reviews via inconsistent sanitization in Gridbox &lt; 2.20.5.0</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112109 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112109</link>
+    <guid isPermaLink="false">97677955fe82fd158db38063b4f5dd43</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.3 | A local privilege escalation vulnerability in Thales SafeNet Authentication Client (SAC) SACSrv can allow an authenticated, non-administrator local user to trigger a heap-based buffer overflow through the service interface. Successful exploitation may allow arbitrary code execution with Local System privileges.This issue affects SAC releases up to and including 10.9 R3 GA (build 10.9.7449).</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112110 - NVD - CVSS Score v4.0: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112110</link>
+    <guid isPermaLink="false">6b24e92cee938b1fde398c1ffb09bf4d</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.8 | A time-of-check to time-of-use race condition in the SafeNet Authentication Client (SAC) SACSrv log-cleanup function can allow an authenticated, non-administrator local user to redirect a privileged file deletion operation outside the intended log
+directory. 
+
+
+
+This issue affects SAC releases up to and including 10.9 R3 GA (build 10.9.7449).</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115452 - NVD - CVSS Score v4.0: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115452</link>
+    <guid isPermaLink="false">90f79b0865d5c7918538eb0436f9833e</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.5 | Joomla Extension - tassos.gr - Privileged stored XSS in Advanced Custom Fields 2.8.2-2.8.15, 3.0.0-3.1.8 and Smile Pack 1.1.2-1.2.9, 2.0.0-2.1.6 - A user who could edit a Map marker label, like an article author, could add a script that ran for anyone who opened the marker.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120859 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120859</link>
+    <guid isPermaLink="false">cffb2aca32b4a9df83621719103047ff</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.5 | PyMoDAQ before 4.4.13, and pymodaq_data, pymodaq_gui, and pymodaq_utils before 5.1.15, 5.2.x before 5.2.14, and 5.3.x before 5.3.10, contain deserialization of untrusted data and eval injection vulnerabilities that allow attackers to execute arbitrary code by supplying crafted files that a user opens. Attackers can store pickled objects in HDF5 string nodes that StringARRAY.array_to_string() passes to pickle.loads() when the node is browsed or read, place Python expressions in HDF5 attributes that JsonConverter.json2object() evaluates, supply a .dock file that load_layout_state() unpickles from the Dashboard Load layout action, or embed Python expressions in XML settings files that elt_to_dict() and set_txt_from_elt() evaluate.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121949 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121949</link>
+    <guid isPermaLink="false">477935104cbb94384b14f6919a2d862f</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 2.3 | The Symfony HtmlSanitizer component does not apply the media URL policy to the srcset and imagesrcset attributes, allowing values that point to hosts or schemes not permitted by allowMediaSchemes() or allowMediaHosts() to bypass it, so that browsers load images from disallowed hosts in Symfony versions 6.1.x prior to 6.4.50, 7.x prior to 7.4.23, and 8.x prior to 8.1.11.The srcset attribute on img and source elements and the imagesrcset attribute on link elements are allowed by the sanitizer, but their URL candidates are never validated, so their values are kept verbatim while the same URL in src is dropped. The fixes for CVE-2026-45753 and CVE-2026-48761 extended the same attribute list but did not cover these two attributes. For example, with allowMediaSchemes(['https']) and allowMediaHosts(['trusted.example']), &lt;img srcset=&quot;https://evil.example/a.png 1x&quot;&gt; survives sanitization, and the browser fetches the selected candidate as it would fetch src. Candidates with a scheme forbidden by the configuration, such as http, are kept as well.
+Any application that sanitizes untrusted HTML and relies on the media schemes and hosts allowlists to restrict where images can be loaded from is affected. A single crafted value is enough to make the browser of a user viewing the sanitized content send a request to an attacker-controlled host, which can be used to track viewers or log their IP addresses. No authentication is needed if the application accepts HTML from unauthenticated users.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123184 - NVD - CVSS Score v4.0: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123184</link>
+    <guid isPermaLink="false">4ef2a96a6d65c277219ae81e5b15352c</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.2 | An incorrect authorization vulnerability exists in the Altium 365 Git Service. The permission check performed when a user pushes to a project repository did not correctly evaluate the required access level, so the check passed for any user holding any level of access to the project. As a result, an authenticated user with view-only access to a project could write to that project's git repository.
+
+
+
+
+Read access was evaluated correctly and was not affected, and exploitation requires an authenticated account with existing access to the target project. The issue has been remediated in Altium 365 at the service level and no customer action is required. On-premise Altium Enterprise Server is not affected.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-54912 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54912</link>
+    <guid isPermaLink="false">37faa2f4a6cb8fec0275e430b10d709e</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.8 | WebAssembly Micro Runtime (WAMR) is a lightweight standalone WebAssembly (Wasm) runtime. Prior to 2.4.5, the two-pass fast interpreter loader in core/iwasm/interpreter/wasm_loader.c can make inconsistent constant-table decisions between the sizing pass and the emitting pass. After duplicate constants inflate the first pass beyond the constant-slot limit, wasm_loader_get_const_offset emits later constants inline, but the between-pass sort and deduplication reduces the table so the second pass can choose table references and cause reserve_block_ret to emit additional copy operands that were not included in code_compiled_peak_size. A crafted module can therefore make the second pass write partially attacker-controlled compiled-code data beyond the heap buffer allocated from the first pass's size calculation during wasm_runtime_load, before guest code executes. This can corrupt host heap metadata and deterministically crash the process, causing denial of service; further consequences depend on the host application's heap layout. Builds using WAMR_BUILD_FAST_INTERP=1 are affected; disabling the fast interpreter avoids the vulnerable loader. This issue is fixed in version 2.4.5.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-54913 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54913</link>
+    <guid isPermaLink="false">122427f75cc97b8d733e231b493424e4</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | WebAssembly Micro Runtime (WAMR) is a lightweight standalone WebAssembly (Wasm) runtime. Prior to 2.4.5, load_init_expr in core/iwasm/interpreter/wasm_loader.c accepts a non-reference heap-type byte for ref.null when WASM_ENABLE_GC=0, while the local WASMValue cur_value union is not zero-initialized and setting ref_index writes only part of it. A crafted module can declare an i64, f64, or v128 global initialized through the invalid ref.null form, causing push_const_expr_stack and the later global initialization path to copy uninitialized host-stack bytes into a value readable by the guest. The classic and fast interpreters are affected in the default no-GC configuration; the GC-enabled path validates heap types. The disclosure is four bytes for i64 or f64 globals and up to twelve bytes for each v128 global. This issue is fixed in version 2.4.5.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-54914 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54914</link>
+    <guid isPermaLink="false">c268e11f543e62f7d2c26df5d1a1ef1c</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.3 | WebAssembly Micro Runtime (WAMR) is a lightweight standalone WebAssembly (Wasm) runtime. Prior to 2.4.5, wasi_poll_oneoff in core/iwasm/libraries/libc-wasi/libc_wasi_wrapper.c validates the output pointer for only one wasi_event_t, while wasmtime_ssp_poll_oneoff in core/iwasm/libraries/libc-wasi/sandboxed-system-primitives/src/posix.c can write as many events as the guest-controlled nsubscriptions value. A crafted guest module can provide multiple subscriptions that produce events while positioning an output region large enough for only one event, causing a later out[nevents] write to cross the validated Wasm linear-memory boundary into adjacent host heap memory. The overwrite contains partly attacker-controlled event data and can reliably crash the host process, with further confidentiality or integrity consequences depending on heap layout. This issue is fixed in version 2.4.5.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77439 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77439</link>
+    <guid isPermaLink="false">f6d2ecaf9f31681998f6910377663020</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | Immich is a self-hosted photo and video management solution. Prior to 3.0.3, an authenticated user with editor access to a shared album can change the existing owner's role because album member role updates do not protect the owner from modification. By demoting the owner and then promoting themselves, an editor can take ownership of the album, remove the original owner, and delete the album. This vulnerability is fixed in version 3.0.3.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-92855 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92855</link>
+    <guid isPermaLink="false">1dc0bad742ee8351df5a5d32039f4ea1</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.4 | A flaw was found in the SAML identity broker component of Keycloak, which is used to delegate authentication to external identity providers. The issue occurs because the broker fails to verify that a user actually possesses the private key associated with a holder-of-key assertion. An attacker who intercepts a victim signed assertion can replay it to gain unauthorized access and impersonate the victim without needing their private key.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-92857 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92857</link>
+    <guid isPermaLink="false">910a5ce72245da67b89530d867bd2cce</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | Keycloak provides a Dynamic Client Registration feature that allows users with specific tokens to register their own applications. A flaw in how Keycloak validates these registration requests allows an attacker to create a malicious application that forges identity information. By mapping their own user profile details to protected fields like the user ID (sub) or intended audience (aud), an attacker can generate signed security tokens that make them appear to be a different user. This could allow an attacker to impersonate other users or gain unauthorized access to services that rely on these tokens for identity verification.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-93998 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93998</link>
+    <guid isPermaLink="false">ab874d5e224cd82b03c91e3f3e210c5d</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.4 | A flaw was found in the SAML adapter component of Keycloak, which is used to secure applications with SAML-based authentication. The adapter fails to verify that the issuer of a signed SAML assertion matches the expected identity provider configured for the application. If multiple identity providers share the same trusted signing key, an attacker who controls one of those providers can create a validly signed assertion to log into the application as any user, potentially gaining full administrative control.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-96453 - NVD - CVSS Score v3.1: 8.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96453</link>
+    <guid isPermaLink="false">7daeb7c026b8477c25d6613d61e07eac</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.0 | A flaw was found in the Keycloak Admin CLI kcadm tool, which is used by administrators to manage Keycloak servers from the command line. When a custom truststore is provided to verify the server identity, the tool incorrectly accepts any self-signed certificate as long as the hostname matches. This allows a network attacker to impersonate the Keycloak server, steal administrative credentials, and perform unauthorized management actions.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97174 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97174</link>
+    <guid isPermaLink="false">3618541d4e6e46f576335b1bded23a93</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.8 | A flaw was found in the Client-Initiated Backchannel Authentication (CIBA) implementation of Keycloak. The CIBA endpoint fails to properly validate the sub parameter, allowing it to be stored as an additional request parameter. During the token issuance process, this injected value overwrites the legitimate subject identifier. This allows an attacker to authenticate as themselves but receive security tokens belonging to a different victim user, leading to unauthorized account access.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97175 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97175</link>
+    <guid isPermaLink="false">bd51b45872b4d9067f60e57a79038424</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | A flaw was found in the idp-auto-link authenticator of the keycloak-services component, which handles user identity federation. The issue occurs when Keycloak automatically links an incoming identity from an external provider to an existing local account based on an email address without verifying if the provider has validated that email. This can allow an attacker to take over a victim's account by using a matching unverified email address at a brokered provider.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97847 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97847</link>
+    <guid isPermaLink="false">895847bbf8353b18b4aa242ddda01550</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.1 | A flaw was found in the protocol mapper and identity resolution components of Keycloak. The issue occurs when a client manager uses hardcoded-claim mappers to override identity claims in sessionless service-account tokens. Because these tokens lack a session ID, Keycloak may incorrectly resolve the token bearer as a different, highly privileged user based on the manipulated claims. This can allow an attacker with limited client management permissions to impersonate a realm administrator and gain full control over the realm.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
