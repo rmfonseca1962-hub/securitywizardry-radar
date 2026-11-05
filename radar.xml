@@ -5,200 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 22:02:17 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-116781 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116781</link>
-    <guid isPermaLink="false">640756dd0fae826978bd9dd2b45b495e</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.3 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, ws_read_frame() unmasked a WebSocket payload by iterating wsh-&gt;datalen, which included frame headers, while indexing from the payload pointer. A masked frame filling the 64 KiB receive buffer could therefore XOR up to 14 bytes beyond the buffer, and the exact-capacity case also wrote a terminating NUL one byte out of bounds. The flaw is reachable before authentication when mod_xml_rpc and its opt-in WebSocket endpoint are enabled, while both features are disabled in the stock configuration. The writes remain within the same connection handle's adjacent outbound buffer, so neither a process crash nor cross-session disclosure has been demonstrated. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116782 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116782</link>
-    <guid isPermaLink="false">a04b2b3cfbbcb646326d6fbff69ab487</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, rtmp_i_connect() passed the first RTMP connect argument to amf0_object_get() without checking whether the AMF value was an object. A string or number in place of an AMF object caused union bytes from the message to be interpreted as node pointers and dereferenced. Any client with network access to an enabled mod_rtmp listener could send the malformed connect command before login; the module is disabled in the stock build and configuration. The invalid read reliably crashes FreeSWITCH and ends every active call, while no write, memory disclosure, or code execution has been demonstrated. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116783 - NVD - CVSS Score v3.1: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116783</link>
-    <guid isPermaLink="false">3105024da852e4c6b2ad58cb893cab84</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.2 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, udptl_rx_packet() used a peer-controlled FEC entry count directly to fill five-entry FEC arrays in a mod_spandsp T.38 session. A larger count wrote sender-controlled error-recovery data beyond those arrays and persisted the oversized count for a later reconstruction pass. Any peer able to deliver UDPTL to an established T.38 fax session can reach the parser, including deployments using fax applications or a T.38 gateway. The memory corruption can crash FreeSWITCH and end every active call, although remote code execution has not been demonstrated. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116784 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116784</link>
-    <guid isPermaLink="false">2b295ea4314c2ae981712338fb634714</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, process_rtcp_report() used an RTPFB NACK packet's declared RTCP header length as its feedback-entry loop bound instead of the datagram length already validated by the caller. A short packet with an oversized declaration could drive reads far beyond the fixed 16 KiB receive buffer. Any peer able to send RTCP to an active video call can reach the flaw, including calls where remote SDP enables video RTCP even though the SIP profile has no explicit RTCP interval configured. The out-of-bounds read can crash FreeSWITCH and terminate every active call, but supplies no write primitive and does not echo the read values to the sender. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116785 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116785</link>
-    <guid isPermaLink="false">54dc51bbc9c268ca6e9cae9de6242f91</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 9.1 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, ws_read_frame() decoded a WebSocket frame's 64-bit extended payload length with a 32-bit byte swap and narrowed the result into a signed length. A value whose surviving low word became negative bypassed the signed size check and was reinterpreted as an enormous unsigned count, causing client bytes to overwrite memory beyond the 64 KiB receive buffer. Any client completing a /socket WebSocket upgrade on an enabled mod_xml_rpc endpoint reached the parser before HTTP authentication; both the module and WebSocket endpoint are disabled by default. The heap overwrite can corrupt connection pointers and crash FreeSWITCH, ending every concurrent session, although remote code execution has not been demonstrated. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116786 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116786</link>
-    <guid isPermaLink="false">f77a410b8f5f18f719e6c5e95c08b886</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, sofia_handle_sip_i_refer() placed raw Refer-To URI parameters and headers inside a sip_invite_params channel-variable block passed to switch_ivr_originate(). The originate parser treated a comma in the attacker-controlled value as a variable separator, allowing an authenticated caller on a bridged call to inject arbitrary variables into a newly originated leg. An injected execute_on_originate value could invoke the system dialplan application before answer and execute operating-system commands with the FreeSWITCH process privileges. SIP REFER is enabled by default, and the sender needs only a registered account and a call that takes the off-box transfer path, not administrative or Event Socket access. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116787 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116787</link>
-    <guid isPermaLink="false">6df80f38efd1214d91dc650e3888566d</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, mod_event_socket used an unauthenticated Content-Length value directly as the allocation size for an Event Socket message body. Negative or extremely large values could overflow the terminator calculation or force an allocation failure through a helper that aborts the FreeSWITCH process. The header is parsed before the Event Socket password, so any host admitted by apply-inbound-acl can trigger termination with its first packet; the default loopback ACL limits ordinary installations to local clients. The outbound socket dialplan path is also affected when FreeSWITCH connects to a hostile application server, and process termination drops every active call until the service is restarted. This issue is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116788 - NVD - CVSS Score v3.1: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116788</link>
-    <guid isPermaLink="false">310f68e258801ddfa414b10e41e90fdf</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.2 | FreeSWITCH is an open-source software telecommunications platform. Before version 1.11.2, an integer underflow in  switch_xml_decode()  can cause an undersized heap allocation when an XML document declares an entity with an empty replacement value. Subsequent copying overruns the allocated buffer. An unauthenticated attacker who can reach a SIP profile with presence management enabled and DTD processing permitted can trigger the vulnerability through a crafted SIP PUBLISH request. Exploitation can corrupt heap memory and terminate the FreeSWITCH process, interrupting all active calls. This vulnerability is fixed in version 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116789 - NVD - CVSS Score v3.1: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116789</link>
-    <guid isPermaLink="false">93278bbe287d0187b41862dc78901f16</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.4 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, dtls_state_setup() compared a peer certificate with the SDP a=fingerprint only when FreeSWITCH was the DTLS client, not when it held the DTLS server role. An unauthenticated peer able to reach the negotiated media port could complete the DTLS-SRTP handshake with an unrelated certificate, obtain the leg's SRTP keys, decrypt and inject media, and displace the legitimate endpoint; on ICE-enabled legs the peer also needs the connectivity-check credentials from SDP, which generally requires signaling visibility or a position on its path. WebRTC and SIP DTLS-SRTP legs are affected whenever the peer selects the active role, while FreeSWITCH client-role handshakes already perform fingerprint validation. Version 1.11.2 introduces the remediation, which requires rtp_dtls_client_cert_verify_mode=fingerprint.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116790 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116790</link>
-    <guid isPermaLink="false">f82383b7166a6cfff866f50ee6bc2985</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 9.1 | FreeSWITCH is a Software Defined Telecom Stack enabling the digital transformation from proprietary telecom switches to a software implementation that runs on any commodity hardware. Prior to 1.11.2, FreeSWITCH's inbound ICE handling accepted every connectivity check without cryptographically validating its STUN MESSAGE-INTEGRITY attribute. A network peer able to reach an ICE-enabled leg's media port could forge an ICE connectivity check without SDP credentials, nominate its own address, redirect RTP and DTLS traffic, and terminate the legitimate media path. On unencrypted legs this enables eavesdropping and media injection, while all WebRTC and SIP legs that negotiate ICE are in scope. Version 1.11.2 introduces the remediation, which requires ice_verify_message_integrity=true.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-18159 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18159</link>
-    <guid isPermaLink="false">d0878b0184096979cdaac2c927ff4ab4</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.3 | A vulnerability in OpenText OpenText Directory Services (OTDS) on Windows and Linux allows Clickjacking.
-
-This issue affects OpenText Directory Services (OTDS): from 10.5 through 26.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-19134 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19134</link>
-    <guid isPermaLink="false">a8c12aa5205b64782866d834fc8bcf54</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.1 | A vulnerability in OpenText OpenText Directory Services (OTDS) allows Black Box Reverse Engineering.
-
-This issue affects OpenText Directory Services (OTDS): from 22.1 to 26.2</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-1339 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-1339</link>
-    <guid isPermaLink="false">01183911b5c49f3e609f7034488b56ac</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.1 | An Open Redirect vulnerability has been identified in OpenText™ Universal Discovery and CMDB. The vulnerability can be exploited only if an attacker sends a specially crafted URL containing a link to a malicious resource and a user subsequently follows that link.
-Affected systems:
-
-This issue affects only the classic deployment options for UCMDB UI (ucmdb-browser) component within Universal Discovery and CMDB and Operations Bridge Manager. Containerized deployment options are not affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-44875 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44875</link>
-    <guid isPermaLink="false">d54768c6e9d16189f4416b61accebe16</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.8 | In HPE Cray Programming Environment versions 25.03 and 25.09, prior to 26.03, the method that CPE is deployed on HPCM potentially allows elevated access by a local unprivileged user.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-65983 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65983</link>
-    <guid isPermaLink="false">e36534a8989c197e99c7bf6ab30cf3ca</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.2.0, interface/modules/custom_modules/oe-module-faxsms/src/Controller/SignalWireClient.php decrypts a selected patient document with Document::get_data() and SignalWireClient::uploadFileForFax() writes the plaintext bytes under sites/{siteId}/fax. The module returns the resulting public URL to SignalWire, protects it only with a predictable uniqid() filename, and never removes the staged file. An unauthenticated network actor who obtains or guesses the URL can retrieve persistent patient documents even when drive encryption is enabled. This issue is fixed in version 8.2.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76181 - NVD - CVSS Score v4.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76181</link>
-    <guid isPermaLink="false">91bf793958866aabd7f8b981de6cfc08</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.4 | LibreOffice includes a dBASE database driver, which reads dBASE tables and their .ndx index files when a folder of dBASE files is used as a data source. A heap buffer overflow existed when an index page was read. The number of entries recorded in a page was not checked against the number of entries the page could hold, which comes from a different field of the index header. A crafted index could also make a page refer back to itself, so that reading it recursed without end. In fixed versions the index header and the entry count of each page are limited to what an index page can hold, and a page that refers back to one of its parent pages is not followed.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76580 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76580</link>
-    <guid isPermaLink="false">42722a14a8b86125b7bcc6944c3356eb</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.3 | Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in OpenText OpenText Directory Services (OTDS) on Windows and Linux allows Cross-Site Scripting (XSS).
-
-This issue affects OpenText Directory Services (OTDS): from 25.1 through 26.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77604 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77604</link>
-    <guid isPermaLink="false">e3a9aa58f90e79014eda2d8702539160</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | Code Graph RAG is an AI-powered knowledge graph and retrieval system for querying, understanding, and editing multi-language codebases. Prior to 0.0.345, the MCPToolsRegistry.read_file implementation in codebase_rag/mcp/tools.py joins attacker-controlled file_path input to project_root without resolving and verifying containment when offset or limit selects the paginated branch. An absolute path causes pathlib to discard the configured root, while relative traversal can also resolve outside it. The protected non-paginated branch uses validate_project_path, but the paginated branch bypasses that validation before opening the path. An unauthenticated caller of a network-exposed HTTP MCP server can therefore read arbitrary UTF-8-readable files available to the server process, including credentials, environment data, private keys, source, and configuration; local callers through the stdio transport can reach the same vulnerable code path. This issue is fixed in version 0.0.345.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-110802 - NVD - CVSS Score v3.1: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110802</link>
-    <guid isPermaLink="false">b6ca26234d0caffe330c050f533b7967</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.1 | Altair is a GraphQL client for all platforms. From 7.2.4 until 8.5.8, packages/altair-iframe-sandbox/src/main.ts reads plugin_sandbox_opts from the iframe-sandbox query string and passes attacker-controlled scriptUrls to injectScript() in packages/altair-core/src/utils/inject.ts, which creates script elements in the page. The intended parent iframe flow places the page in an iframe with sandbox allow-scripts and without allow-same-origin, but direct navigation to a crafted iframe-sandbox URL omits that isolation and executes the supplied script in the origin serving Altair. Exploitation requires a victim to open the crafted URL, and the resulting script can access script-readable storage and make same-origin requests according to the deployment's authentication and cookie controls. This issue is fixed in version 8.5.8.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111062 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111062</link>
-    <guid isPermaLink="false">0a3a90f3623f6b4eafa689304b20f247</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 2.3 | russh is a Rust SSH client and server library. From version 0.34.0-beta.1 until version 0.64.0, its SSH server does not require the signature algorithm in a public-key authentication signature to match the algorithm named in the authentication request. A client possessing an authorized RSA private key can announce  rsa-sha2-512  while supplying a valid  ssh-rsa  SHA-1 signature, bypassing restrictions or producing misleading audit records when applications rely on the requested algorithm. A valid private-key signature remains required, and russh clients are not affected. This issue is fixed in version 0.64.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111753 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111753</link>
-    <guid isPermaLink="false">b1bf3ef522ba7a36b0cfcac4e1ee826b</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.9 | Angular is a development platform for building mobile and desktop web applications using TypeScript/JavaScript and other languages. Prior to 20.3.34 and 21.0.3, the @angular/common HttpClient function xsrfInterceptorFn uses a regular expression that does not normalize request URLs in the same way as the browser's WHATWG URL parser. With XSRF protection enabled, a mutating HTTP request to an attacker-controlled URL containing backslashes, stripped control characters or spaces, or removable ASCII whitespace can be misclassified as relative and same-origin, causing the interceptor to attach the X-XSRF-TOKEN header before the browser dispatches the request to a cross-origin host. With permissive CORS handling for the custom header, the attacker can obtain the victim's XSRF token and use it to perform cross-site request forgery against the victim session. This issue is fixed in versions 20.3.34 and 21.0.3.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111771 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111771</link>
-    <guid isPermaLink="false">f50d07a5f4dd9140073932713073fcc4</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.8 | The Model Context Protocol TypeScript SDK provides TypeScript client and server implementations of the Model Context Protocol. From 1.6.0 until 1.32.0 in @modelcontextprotocol/sdk, from 2.0.0 until 2.3.0 in @modelcontextprotocol/server, from 2.0.0 until 2.0.2 in @modelcontextprotocol/express, and from 2.0.0 until 2.3.1 in @modelcontextprotocol/server-legacy, server-side bearer authentication could accept a valid access token issued for a different service because the SDK did not enforce the token audience. The affected surface is server-side HTTP bearer authentication. The trigger is a valid token whose audience names another service. The authorization server must issue tokens for multiple services, and the application's verifyAccessToken() must not independently validate aud. Applications already validating aud inside verifyAccessToken() are not affected. An attacker with a token for another service could authenticate to the MCP server and obtain the confidentiality and integrity capabilities granted to an authenticated caller. Upgrading alone leaves the new audience validation disabled. Operators must enable audience validation and provide the token audience together. Enabling only the expected audience check causes every request to receive HTTP 401. This issue is fixed in @modelcontextprotocol/sdk 1.32.0, @modelcontextprotocol/server 2.3.0, @modelcontextprotocol/express 2.0.2, and @modelcontextprotocol/server-legacy 2.3.1.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-112899 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112899</link>
-    <guid isPermaLink="false">8312da229800eeb095c487166ef333af</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.3 | Pillow is a Python imaging library. In versions 2.3.0 through 12.3.0, EPS rendering does not validate the scaled image dimensions before invoking Ghostscript. Applications that process untrusted EPS or PostScript files using an application-selected scale greater than one can incur excessive Ghostscript CPU and temporary disk consumption. In versions with decompression-bomb protection, the scaled output is checked only after Ghostscript has completed rendering, allowing resource consumption beyond the configured pixel limit. The amplification depends on the scale selected by the application, not an attacker-controlled scale value. This issue is fixed in version 13.0.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 05 Nov 2026 23:01:19 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-112902 - NVD - CVSS Score v4.0: 8.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112902</link>
@@ -336,6 +143,190 @@ This issue affects ezstd: from 1.0.5 before 1.2.5.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87008</link>
     <guid isPermaLink="false">9358394c748cc971e984171b7b7806c9</guid>
     <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.1 | Code Graph RAG is an AI-powered knowledge graph and retrieval system for querying, understanding, and editing multi-language codebases. Prior to 0.0.589, AstGrepService in codebase_rag/tools/ast_grep_service.py enumerates files beneath project_root and relies on should_skip_path in codebase_rag/utils/path_utils.py to classify them, but the containment check operates on unresolved lexical paths. A symbolic link planted inside an analyzed repository can therefore reference a file outside the configured root while still appearing in scope. The structural_search tool follows the link and discloses readable content without an approval gate, while structural_replace with dry_run=False follows it and overwrites writable content; the MCP path invokes structural replacement without the agent-loop approval control. An attacker who causes a victim to analyze a repository containing such a link can read credentials, keys, environment files, or sibling source and can modify files accessible to the code-graph-rag process. This issue is fixed in version 0.0.589.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-100395 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100395</link>
+    <guid isPermaLink="false">5f67ce703f28dd198e378e7252adf52d</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.8 | LXC is a userspace interface for the Linux kernel containment features used to create and manage system containers. In LXC 7.0.0 and earlier, lxc-copy and the public liblxc clone() API can follow attacker-controlled symbolic links while updating /etc/hostname in a copied container root filesystem. The affected surfaces are lxc-copy and liblxc's public lxc_container::clone() API. The privileged cloning process must run as root. The source rootfs must be attacker-controlled or less trusted. A symlink can be placed at etc/hostname or in an intermediate component. The clone operation preserves the symlink before updating the hostname. The vulnerable write truncates and overwrites an existing file outside the destination rootfs. When root clones an untrusted container without LXC_CLONE_KEEPNAME, the copied symlink can resolve outside the destination rootfs and cause the privileged process to overwrite an existing host file with the destination container name. Unprivileged use and managers with independent cloning implementations are not affected. LXC_CLONE_KEEPNAME avoids the hostname update and therefore the affected write.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111489 - NVD - CVSS Score v4.0: 9.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111489</link>
+    <guid isPermaLink="false">c41ac597c78af86c860d6b2ff28a145c</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 9.9 | A static credential embedded in the mobile app has been reported to return the 'autorizado' token on the MatchPoint platform. The report states that this token grants unauthenticated access to API services.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111490 - NVD - CVSS Score v4.0: 9.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111490</link>
+    <guid isPermaLink="false">6297c1745ec072c8fcb1e5bc1c40279c</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 9.9 | Insecure direct object reference (IDOR) vulnerability in the MatchPoint API, which relies on the `actingasuser` HTTP header without verifying the requester's authorization for the specified user. Manipulation of sequential identifiers allows access to personal, banking, and financial data, private messages, and QR codes for physical access, as well as the ability to modify third-party accounts, change passwords, impersonate users, and transfer virtual balances.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111491 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111491</link>
+    <guid isPermaLink="false">9c7c6b7a8b9f7fcfd310fee1a86b3c2e</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | Credentials are stored in plain text in an SQLite database and in the MatchPoint Android app's SharedPreferences. An attacker with access to the device's local data or a backup could retrieve usernames and passwords and use them to gain unauthorized access to accounts on the platform.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111492 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111492</link>
+    <guid isPermaLink="false">49701bd9b58946111c15e46cb3ea752e</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.6 | SQL injection in the push notification handler of the MatchPoint Android app, which processes messages from Firebase Cloud Messaging and constructs queries by concatenating untrusted data. An attacker capable of interacting with the component could manipulate queries and access sensitive information from the local database, including credentials stored in the versions described in the report. The scope of the injection is limited to the device.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111493 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111493</link>
+    <guid isPermaLink="false">243e40753a05e91f7d24be003c974880</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.7 | Lack of authentication and authorization in the Images.ashx endpoint in MatchPoint, which allows profile photos to be downloaded using predictable identifiers. An unauthenticated remote attacker could enumerate these identifiers and collect users' photos. Linking these photos to identities may be facilitated by other vulnerabilities in the platform.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111494 - NVD - CVSS Score v4.0: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111494</link>
+    <guid isPermaLink="false">f0d323b775cee86e22c154add3bf3855</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 9.1 | Incorrect validation of TLS certificates in the MatchPoint Android app due to a TrustManager that accepts any certificate and a permissive hostname validator. Additionally, the app allows unencrypted HTTP traffic. An attacker capable of intercepting the victim's traffic could read and modify communications, including credentials and personal data.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111495 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111495</link>
+    <guid isPermaLink="false">cf614b7713179dcc28a654a0b5cad406</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.1 | API keys, credentials, and configuration parameters embedded in the MatchPoint APK, which can be extracted through reverse engineering. The vendor distinguishes the extracted elements from Google Maps and Firebase keys that must remain on the client side and considers them project identifiers, not authentication secrets. The impact depends on the capabilities and restrictions of each exposed element.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111768 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111768</link>
+    <guid isPermaLink="false">f17b2b7203100e1d16403832a231bb74</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | The Model Context Protocol TypeScript SDK provides TypeScript client and server implementations of the Model Context Protocol. From 1.3.0 until 1.32.0 in @modelcontextprotocol/sdk and from 2.0.0 until 2.3.0 in @modelcontextprotocol/server, HTTP servers did not enforce a limit on the number of array elements and object keys validated in one request. The affected surface is validation of HTTP requests containing arrays or object keys. The trigger is an array-element or object-key validation workload large enough to exhaust memory while remaining within the request size limit. A single request within the default 4 MiB limit can terminate the process with JavaScript heap exhaustion. No credentials are required unless the application authenticates before SDK processing. Tools accepting arrays or records carry the greatest risk. stdio-only servers do not expose the HTTP request path. Upgrading alone does not enable the new validation bound. Operators must configure both a tool-input element bound and an appropriate request body size limit. This issue is fixed in @modelcontextprotocol/sdk 1.32.0 and @modelcontextprotocol/server 2.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111769 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111769</link>
+    <guid isPermaLink="false">7ef70b1dcc66e6903fe888bb7369128a</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | The Model Context Protocol TypeScript SDK provides TypeScript client and server implementations of the Model Context Protocol. Prior to 1.32.0 in @modelcontextprotocol/sdk and from 2.0.0 until 2.3.0 in @modelcontextprotocol/client, the HTTP client transports and OAuth client requests followed redirects to a different origin while retaining custom request headers and, for HTTP 307 or 308 responses, request bodies. The affected surfaces are StreamableHTTPClientTransport, SSEClientTransport, and OAuth client functions such as auth(). The trigger is an HTTP redirect to another origin. Custom headers and mcp-session-id can be re-sent to the redirected origin. HTTP 307 and 308 redirects can also re-send the request body. OAuth request bodies can contain refresh_token and client_secret values. Current runtimes already strip the Authorization header across origins. stdio clients do not use the affected HTTP path. A malicious or compromised MCP or authorization server could therefore receive API keys, session identifiers, OAuth refresh tokens, or OAuth client secrets. Restoring unrestricted redirect following after upgrading restores the exposure. This issue is fixed in @modelcontextprotocol/sdk 1.32.0 and @modelcontextprotocol/client 2.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111770 - NVD - CVSS Score v3.1: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111770</link>
+    <guid isPermaLink="false">19eb8d7e1459a40c01a66449aa605a45</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.7 | The Model Context Protocol TypeScript SDK provides TypeScript client and server implementations of the Model Context Protocol. From 2.0.0 until 2.3.0 in @modelcontextprotocol/server, applications that shared one stateless HTTP transport or one McpServer or Server instance among multiple clients could deliver responses and notifications to the wrong client. The affected surface is an MCP server reached over HTTP by multiple clients. The trigger is reuse of one stateless transport or server instance. Messages were associated with a connection using only the JSON-RPC request identifier. SDK clients start request identifiers at zero, so collisions occur in normal operation. Cross-client delivery exposes one client's responses and notifications to another client. The issue requires an HTTP endpoint reachable by more than one client and an application that constructs the server or transport once at startup instead of once per request or session. stdio servers and factory-created per-call servers are not affected. Upgrading causes reused instances to fail and therefore requires an application code change. This issue is fixed in @modelcontextprotocol/server 2.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112907 - NVD - CVSS Score v3.1: 2.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112907</link>
+    <guid isPermaLink="false">ae972ca2d5d1d033139f40279c602e24</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 2.5 | filelock is a platform-independent file lock for Python. From 3.22.0 until 4.2.1, soft lock classes on Windows read an existing marker with _read_lock_file and remove a stale marker through break_lock_file using pathname operations that wait for an oplock break. Another local account with read access to an unheld marker can keep a Level 1 or batch oplock unanswered, causing SoftFileLock.acquire and related async or fallback locks to wait beyond timeout, blocking=False, and cancel_check. A stale marker under the oplock cannot be broken, but mutual exclusion remains intact and no file other than the marker is accessed. This issue is fixed in version 4.2.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112908 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112908</link>
+    <guid isPermaLink="false">110156aadb3b33ffb729b57b18581805</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.3 | filelock is a platform-independent file lock for Python. From version 3.30.0 until version 4.2.1,  StrictSoftFileLock  and  AsyncStrictSoftFileLock  on POSIX systems create coordination and claim directories without applying the caller’s restrictive lock mode. A permissive umask or inherited default ACL can leave these directories writable by another local user, allowing that user to delete an active holder’s claims. Another authorized process can then acquire the lock while the original holder remains in its critical section. An attacker can also plant malformed claims to prevent acquisition. This issue is fixed in version 4.2.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112910 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112910</link>
+    <guid isPermaLink="false">44f6b5a731e0f6009117ac764ac6678e</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.3 | filelock is a platform-independent file lock for Python. From 3.10.0 until 4.2.1, filelock on Windows ignores the mode argument for WindowsFileLock files and the ReadWriteLock SQLite database. A lock created with mode=0o600 receives the parent directory's inheritable ACL because _open_non_reparse_fd and _nt_open do not create an owner-only security descriptor. Another local account with inherited access can read holder metadata or the lock database, modify those files where the ACL permits writes, or take the byte-range lock after release and delay later acquisitions. UnixFileLock is not affected, and mutual exclusion between cooperating processes continues to hold. This issue is fixed in version 4.2.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112913 - NVD - CVSS Score v3.1: 3.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112913</link>
+    <guid isPermaLink="false">c3846fea9240f9defa323e74a1d9f3d9</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 3.3 | filelock is a platform-independent file lock for Python. From 3.20.4 until 4.2.1, ReadWriteLock and AsyncReadWriteLock on Windows use _connect to attach SQLite to the lock database by pathname, allowing another local account that can create adjacent names to place a database-wal or database-journal side file before acquisition. An undeletable WAL file makes each read or write acquisition fail immediately with sqlite3.OperationalError regardless of timeout. Separately, when the database contains at least one table, a hot journal that grants the lock account modify rights can cause SQLite recovery to delete a file named by that journal only when the lock account has permission to delete the target. The issue requires a directory writable by another account, such as a shared Windows temporary directory, and does not affect private directories. This issue is fixed in version 4.2.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112938 - NVD - CVSS Score v3.1: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112938</link>
+    <guid isPermaLink="false">f47a2400458ee24e68a0c1a0169097a9</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.8 | filelock is a platform-independent file lock for Python. From 3.30.0 until 4.2.1, On POSIX platforms, StrictSoftFileLock and AsyncStrictSoftFileLock validate the coordination directory in _ensure_protocol_directory but later reach the claims directory through _open_directory by pathname, allowing a local account that can rename the coordination name to swap in a symbolic link between check and use during acquisition. That race can create and leave claim files in another writable directory or strand claims in a different strict lock so the second lock times out. Separately, the claims property and force_break follow a resting symbolic link without a race when the lock user inspects or recovers the lock. Claims inspection discloses a file name to the other account only if the resulting exception text or claim_name reaches that account through a shared log, CI output, or error report. A blind force_break recovery that removes live claims from another strict lock can allow two processes into that lock's critical section; this path reaches other strict locks, not arbitrary files. This issue is fixed in version 4.2.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119757 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119757</link>
+    <guid isPermaLink="false">b6828180bf31aca387dc165c04443a59</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 9.3 | BTCPay Server before 2.4.2, including 2.4.2 release candidates, contains an information disclosure vulnerability that allows unauthenticated remote attackers to retrieve .macaroon credential files for an LND (Lightning Network Daemon) node. Attackers can use the exposed macaroon to gain full control of the LND node, including moving funds, resulting in theft of funds from affected deployments.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-122267 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122267</link>
+    <guid isPermaLink="false">06f938df24b2c802e36e6bd501026da7</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.8 | MinIO Signature V4 verification before RELEASE.2026-09-22T19-25-18Z accepts unsigned x-amz-* headers, letting a presigned PUT URL be escalated into a cross-bucket read.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-33944 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33944</link>
+    <guid isPermaLink="false">80483fa9be54aaa7b0ef29c03bce9bf9</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | Dolibarr is an open-source enterprise resource planning and customer relationship management application. Prior to 22.0.5 and 23.0.1, there is a SQL injection vulnerability in the Third Party company update functionality. The application concatenates the  localtax1_value  and  localtax2_value  properties into an SQL UPDATE statement without numeric conversion or other appropriate sanitization. An authenticated user with Third Party create or edit permission can submit crafted  lt1  or  lt2  POST parameters to read sensitive database information, including password hashes, API keys, and business data, or modify third-party records. This issue is fixed in versions 22.0.5 and 23.0.2.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-58273 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58273</link>
+    <guid isPermaLink="false">94010d9d393899e249fbb4d0bc2af4cf</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | Rucio is a scientific data management framework. From 1.16.1 until 35.9.0, 38.6.0, and 41.0.0rc1, the /credentials/signurl endpoint reads X-Rucio-Account instead of the account stored in request.environ['issuer'] by token authentication. Any authenticated low-privilege user can supply root as the header value and pass the root-only get_signed_url permission check. The server then returns a presigned read, write, or delete URL for an attacker-selected object using stored S3, GCS, or Swift credentials, and X-Rucio-VO can select another tenant in multi-VO deployments. This permits data disclosure, modification, deletion, and cross-tenant access on cloud-backed RSEs. This issue is fixed in versions 35.9.0, 38.6.0, and 41.0.0rc1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-88983 - NVD - CVSS Score v3.1: 5.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88983</link>
+    <guid isPermaLink="false">6ca0b1c401d9e1d8b83661ba4f85aa51</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.0 | Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.17.0, the API server's pipeline and pipeline-version creation paths fetch a caller-supplied pipelineURL without restricting the destination. An authenticated caller with permission to create a pipeline or pipeline version can make requests from the API server to internal services and observe a limited status-code oracle. Arbitrary response-body disclosure, credential theft, and integrity or availability impact are not established. This issue is fixed in version 2.17.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-88985 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88985</link>
+    <guid isPermaLink="false">95ec02f11dbf61627d02aea479966b9f</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.17.0, the API server trusts structural SQL identifier fields decoded from the base64-encoded JSON page_token parameter before constructing list queries. An attacker who can invoke an affected pipeline or run list API can inject through KeyFieldName or SortByFieldName, including v1beta1 and v2beta1 run-listing metric paths, and read data available to the API server database account across namespaces. Database modification is not established. This issue is fixed in version 2.17.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-88986 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88986</link>
+    <guid isPermaLink="false">977ea4fc570588651bdd575bab71ce47</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.1 | Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.15.0, the frontend routes /pipeline/k8s/pod and /pipeline/k8s/pod/events use frontend/server/k8s-helper.ts to include untrusted podname and podnamespace query values and backend error details in HTML-capable error responses. An unauthenticated attacker can craft a link that executes JavaScript in the frontend origin when a user who satisfies the deployment's authentication and route-access requirements follows it and reaches an affected response. Cookie disclosure depends on cookie attributes, and server-side code execution or availability impact is not established. This issue is fixed in version 2.15.0.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
