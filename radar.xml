@@ -5,39 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 08:01:41 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-116617 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116617</link>
-    <guid isPermaLink="false">2a95fd739152d0ae4ecc9b36ca678507</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | The Motors – Car Dealership &amp; Classified Listings Plugin plugin for WordPress is vulnerable to File Deletion in all versions up to, and including, 1.4.128 The vulnerability exists because `stm_save_user_extra_fields()`, hooked to `personal_options_update`, writes the attacker-controlled `stm_dealer_logo_path` parameter directly to user meta without an ownership check binding the submitted path to the submitting user — unlike the `stm_payment_status` and `stm_lost_password_hash` fields, this field is not gated by a `manage_options` or `edit_users` capability check. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete image files belonging to other users under `wp-content/uploads` — including other users' avatars, dealer logos, and uploaded media — by storing a crafted path via their own profile and then triggering `unlink()` through the become-dealer form on their author page. Note that the two path guards (`stm_mvl_is_path_within_uploads` and `stm_mvl_is_allowed_image_file`) do restrict the attack surface to files with an image extension that resolve within the uploads basedir; files outside that directory, such as `wp-config.php` or plugin PHP files, cannot be reached.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118193 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118193</link>
-    <guid isPermaLink="false">ef16e1c9dc22f75246314c4da34cc6eb</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.19.1 via the `donor_default_user_role` parameter. This is due to the `sanitize_option_donor_default_user_role()` function applying only a narrow literal check against the string `'administrator'` rather than enforcing the plugin's own `give_get_donor_safe_user_roles()` allowlist on save, and due to the `give_core_settings_import_callback()` AJAX handler writing imported JSON directly into the `give_settings` option via `update_option()` without invoking the sanitize filter at all. This makes it possible for authenticated attackers with the GiveWP Manager role (holding the `manage_give_settings` capability) and above to configure donor registration to assign privileged WordPress roles — up to and including Administrator via the import path — to every new donor account created through the platform. Via the settings save path, the Administrator role is blocked but any other elevated role (Editor, Author, etc.) is accepted; via the Tools › Import JSON path, the sanitize filter is bypassed entirely, allowing the Administrator role itself to be stored and subsequently applied to all newly registered donor accounts.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120533 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120533</link>
-    <guid isPermaLink="false">c339c75dbb3eab518682c9fd53a7e881</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Redux Framework plugin for WordPress is vulnerable to Stored Cross-Site Scripting via theme_opts Parameter via User Profile in all versions up to, and including, 4.5.16 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires the host theme to have registered a Redux field of a CSS-emitting type (such as link_color, border, or typography) with an output CSS selector, as only the field types 'spinner', 'slider', 'color', and 'date' receive per-type value validation that would block the entity-encoded payload.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120553 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120553</link>
-    <guid isPermaLink="false">dde9638daddff9d36f058720be904fce</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Customer Reviews for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'slides_to_show' parameter in all versions up to, and including, 5.126.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 05 Nov 2026 09:01:47 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-123010 - NVD - CVSS Score v3.1: 7.2</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123010</link>
@@ -325,6 +293,38 @@ This is an incomplete fix of CVE-2026-15446: the origin and path restrictions ad
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123033</link>
     <guid isPermaLink="false">6fd1dee93e8a808a56df34dfc813a44a</guid>
     <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.3 | Authentication bypass in the HA heartbeat origin check in middlewared in TrueNAS SCALE before 25.10.8 (and in release trains before their respective fixes) allows an attacker on the same network segment to achieve unauthenticated full-administrator API access and execute commands as root. middlewared registers the HA peer-authentication hook (ha_permission) unconditionally, with no failover-licence or heartbeat-interface check. An unauthenticated connection whose TCP peer address is a hardcoded HA heartbeat address (169.254.10.1 or 169.254.10.2) and whose peer port is &lt;= 1024 is granted a node credential that is authorized for every API method and treated as full administrator. Both conditions are properties of the attacker's own socket, and thus an attacker on the same layer-2 segment satisfies them without forging anything. The hook is present on non-HA, unlicensed, single-node Community Edition installations. The fix additionally requires that the connection terminate on the HA heartbeat listener (a local address/port the attacker cannot control).</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-100109 - NVD - CVSS Score v3.0: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100109</link>
+    <guid isPermaLink="false">fd2a66166f3bac341749a6b9ac804c2d</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.0: 9.8 | The Security For WooCommerce WordPress plugin from 1.0.10 to 1.0.16 does not perform capability checks when creating users through an action available to unauthenticated visitors, and lets the caller choose the new account's role, allowing unauthenticated attackers to create administrator accounts and take over the site.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107776 - NVD - CVSS Score v3.1: 2.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107776</link>
+    <guid isPermaLink="false">6b4248224cd4cf17694865959cc7b3b8</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 2.2 | The Dokan WordPress plugin before 5.3.3 does not reconcile the amount credited to a vendor's reverse-withdrawal ledger against the amount actually collected for the payment order, allowing a vendor to clear their outstanding commission debt while paying less than the balance owed when a discount coupon is applied at checkout.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109408 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109408</link>
+    <guid isPermaLink="false">291fa9796235e256c094489c45278a8c</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.4 | vault-java-driver, a Java client for HashiCorp Vault, silently disables TLS certificate and hostname verification in three states where the caller asked for verification: an SslConfig passed to VaultConfig without calling build(), an SslConfig restored by Java deserialization, and VAULT_SSL_VERIFY set to a truthy value other than &quot;true&quot;, such as 1, yes or on. In each case SslConfig.isVerify() returns false and the driver installs a trust-all SSLContext. An attacker on the network path to the Vault server can then read the Vault token and secrets in transit and forge responses. This issue affects io.github.jopenlibs:vault-java-driver 5.2.0 through 6.2.3. It is fixed in 7.0.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112072 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112072</link>
+    <guid isPermaLink="false">1a590733b52ce69dd46ac997a32a1aeb</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | vault-java-driver, a Java client for HashiCorp Vault, parses Vault's JSON responses with a vendored minimal-json parser that has no nesting depth limit. A deeply nested value raises a StackOverflowError, which escapes catch (Exception) handlers and kills the reading thread. A Vault token that can write but not read a KV v2 path can store such a value there, so every later read of that path through the driver fails. This requires Vault 1.19.x or earlier, because 1.20 and later reject values nested deeper than 298 levels. This issue affects io.github.jopenlibs:vault-java-driver 5.2.0 through 6.2.3 and is fixed in 7.0.0.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
