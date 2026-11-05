@@ -5,335 +5,325 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 19:02:04 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 20:01:14 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-49405 - NVD - CVSS Score v3.1: 6.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49405</link>
-    <guid isPermaLink="false">d08b629854c3dcc09fbf72b06d4da90d</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.2 | OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.56.0, the local server exposes the server-sent events endpoint at /events without bearer authentication, permits cross-origin browser access, and uses only a caller-supplied client_id to select WebChannelEvent objects from the process-wide event bus. An unauthenticated local client, or an attacker-hosted web page opened by the victim, can subscribe to another client's stream by supplying a known or guessed identifier; the fixed system identifier makes the proactive-message stream predictable. The exposed events can include complete assistant responses, streamed message content, tool names, tool arguments, and raw tool outputs intended for the local user interface. This issue is fixed in version 0.56.0.</description>
+    <title>CVE-2026-123196 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123196</link>
+    <guid isPermaLink="false">8a40ac847a12359cb21f181793593303</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.6 | Authorizer before 2.4.2 contains a password reset poisoning vulnerability that allows unauthenticated attackers to control emailed link hosts by supplying x-authorizer-url gRPC metadata. Attackers can send this metadata to the gRPC port or a Grpc-Metadata-X-Authorizer-Url header through the REST gateway to capture reset or magic-link tokens and take over accounts.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-49407 - NVD - CVSS Score v3.1: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49407</link>
-    <guid isPermaLink="false">0791030977605264d686ae03781c8f36</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.7 | OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before version 0.57.44, its local  /ws/dictation  WebSocket endpoint lacks client authentication and browser-origin validation. An unauthenticated client, including a malicious web page able to reach the endpoint, can submit audio and trigger resource-intensive speech-to-text processing. Earlier affected versions also accumulate audio in an unbounded buffer, allowing continuous streaming to exhaust process memory. These conditions can degrade performance, exhaust resources, or crash the application. This issue is fixed in version 0.57.44.</description>
+    <title>CVE-2026-123197 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123197</link>
+    <guid isPermaLink="false">7b6708f189bff55ca24f1c054c3ef234</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | WPPConnect Server through 2.10.76 contains a missing authentication vulnerability that allows unauthenticated attackers to read decrypted sticker media through the /files static mount. Attackers can enumerate Unix timestamps in GET /files/file&lt;timestamp&gt;.webp requests to retrieve stickers from any session, bypassing per-session token checks.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-54140 - NVD - CVSS Score v3.1: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54140</link>
-    <guid isPermaLink="false">805febc280ad2c82494596d50c27280d</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.3 | OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.57.13, OpenHuman places names, descriptions, titles, and parameter definitions returned by configured external MCP servers into the agent model context without neutralizing instructions or bounding the descriptive fields. The McpRemoteTool records produced by list_tools preserve this remote content, while tool filtering considers the tool name and the prompt-injection detector screens user messages rather than MCP definitions. A malicious or compromised MCP server can therefore return a poisoned description that is evaluated on every agent turn and may direct the model to invoke other available tools, disclose accessible data, or perform unauthorized actions without a separate malicious user message. The issue affects users who configure an attacker-controlled or compromised MCP server. This issue is fixed in version 0.57.13.</description>
+    <title>CVE-2026-123198 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123198</link>
+    <guid isPermaLink="false">bb7943ccb4ddb8a94368c1482fca17ea</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 9.3 | LMFDB before commit 01829bd contains a server-side template injection vulnerability in the render_knowl function that allows unauthenticated attackers to inject Jinja expressions via request parameters. Attackers can supply crafted query-string values or 'content' data to /knowledge/render/&lt;ID&gt; to reach Python builtins and execute operating system commands as the web application account.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-54141 - NVD - CVSS Score v3.1: 9.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54141</link>
-    <guid isPermaLink="false">71ae1d68c5520ddc6d3eb85679cf5485</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 9.0 | OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.57.13, a remote direct message received through a configured Yuanbao channel is converted into a generic channel AgentTurnRequest that uses the default tool policy without establishing an interactive approval context. Under the default Supervised autonomy policy with Node enabled, node_exec is classified as a write operation that should prompt for approval, but ApprovalGate treats missing APPROVAL_CHAT_CONTEXT as a non-interactive turn and allows execution. Because Yuanbao direct messages are open by default, an external sender who can message the connected bot can influence the agent to execute JavaScript and operating-system commands as the OpenHuman user without an approval prompt. The issue requires a configured Yuanbao channel, the default approval-requiring policy state, Node availability, and successful model selection of node_exec. This issue is fixed in version 0.57.13.</description>
+    <title>CVE-2026-123199 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123199</link>
+    <guid isPermaLink="false">ece8d79c34b21fe97e74955da506fd21</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.8 | eBook-speaker 6.1.0 through 6.2.0 contains a stack buffer overflow vulnerability in get_attributes() in src/common.c caused by an unbounded strcpy of an element's name attribute. Attackers can craft an EPUB or DAISY book with a name attribute of 511 or more characters to corrupt the stack and crash the reader when opened.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-54142 - NVD - CVSS Score v3.1: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54142</link>
-    <guid isPermaLink="false">8958a5fb19a17a29e4c5184d20ba346c</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.7 | OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.57.13, background synchronization for connected services such as email, Slack, and Notion stores raw external content and later places it in the model context of autonomous background agents without neutralizing embedded instructions. ApprovalGate treats tool calls without an interactive chat context as pre-authorized automation, so attacker-authored content processed during a background tick can influence the model to invoke Composio actions without presenting an approval request. An attacker who can deliver content to a connected account can use this path to send or forward data, post messages, create or modify third-party content, or disclose information from OpenHuman memory and integrations. The issue requires an active integration and successful model interpretation of the injected instructions. This issue is fixed in version 0.57.13.</description>
+    <title>CVE-2026-123200 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123200</link>
+    <guid isPermaLink="false">a7e44f430aa98a281f821e12f8430a57</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.7 | VRPN through 07.36 contains an out-of-bounds stack write vulnerability in vrpn_Endpoint::handle_sender_message() and handle_type_message() that allows unauthenticated remote peers to write outside a stack buffer via an unchecked length index. Attackers can connect, complete the version-cookie exchange, and send a SENDER_DESCRIPTION or TYPE_DESCRIPTION message with an out-of-range or negative index to crash the process.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-54143 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54143</link>
-    <guid isPermaLink="false">b734fba48adc0b69220525c0546b43d0</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 9.8 | OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before version 0.57.13, an attacker who can send messages to a configured external channel can cause the agent to create persistent shell cron jobs without human approval. The scheduler later executes these jobs with the privileges of the OpenHuman runtime user. Command validation also permits leading environment assignments that can redirect allowed commands to executable helpers. The demonstrated exploit requires a suitable helper executable already present on the host. This can lead to unauthorized persistent command execution and compromise data and resources accessible to OpenHuman. This issue is fixed in version 0.57.13.</description>
+    <title>CVE-2026-123201 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123201</link>
+    <guid isPermaLink="false">156b883d3fb3fbfbfb4c4819fa16fe80</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.3 | Buku (bukuserver) through 5.1.1 contains an unauthenticated server-side request forgery vulnerability that allows remote attackers to make the server request internal hosts by supplying a url parameter to /api/fetch_data or /api/network_handle. Attackers can target loopback, private, or cloud metadata IP addresses, which pass the weak is_bad_url() check and follow redirects, to discover internal services and read their page titles, descriptions, and keywords.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-54144 - NVD - CVSS Score v3.1: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54144</link>
-    <guid isPermaLink="false">58399ae8a76fb330b1fb0f5b06612f12</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.1 | OpenHuman is an open-source agent harness available as a desktop application and Rust library. Before 0.56.0 on macOS, the runtime injected into a supported remote account webview such as Google Meet allows page JavaScript to call getDisplayMedia without a live user gesture. Instead of rejecting the request, the shim falls through to native Chromium capture behavior, and the embedded CEF environment can auto-select the primary display because it lacks the normal desktop-media picker. If OpenHuman already has macOS Screen Recording permission and an attacker obtains JavaScript execution in an allowed embedded origin, the attacker can obtain a real desktop capture stream without a new user gesture. The stream can expose chats, documents, source code, email, meeting content, credentials, one-time codes, and other visible desktop information. The separate direct screen_share_begin_session IPC path failing origin validation does not prevent exploitation through getDisplayMedia. This issue is fixed in version 0.56.0.</description>
+    <title>CVE-2026-123202 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123202</link>
+    <guid isPermaLink="false">9cf99d968e0dfc32481c8c558e49aa3e</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.7 | libnxml before 0.18.6 contains a stack-based buffer overflow vulnerability in src/nxml_parser.c that allows remote attackers to write past a 1024-byte stack buffer via long XML names. Attackers can supply XML or RSS feeds with a 1022-character element, attribute, DOCTYPE or entity name ending in a multi-byte UTF-8 character to crash parsing applications.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-54145 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54145</link>
-    <guid isPermaLink="false">76fd6a5f3de61ec962c8de3a03dc0620</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | OpenHuman is an open-source agent harness available as a desktop application and Rust library. In affected versions before 0.57.5, the approval gate uses the JSON-RPC bearer token as an approval session identifier. This exposes the credential through persisted approval records, events, debug logs, and RPC responses, including during normal desktop operation. An attacker who obtains these artifacts can recover the token and access the core RPC interface while it remains valid. This can expose sensitive agent and integration data and permit privileged operations. Stable tokens remain usable until rotated; launch-specific tokens remain usable while the corresponding core instance is active. The fix is included in version 0.57.5.</description>
+    <title>CVE-2026-123203 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123203</link>
+    <guid isPermaLink="false">cff654a619245ed0c76b0227f9bab226</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | NEURON (CoreNEURON) through 9.0.2 contains a stack buffer overflow vulnerability that allows attackers to corrupt stack memory by supplying over-long tokens in a crafted model dataset. Attackers can place oversized version or mechanism-name tokens in bbcore_mech.dat, globals.dat, or files.dat loaded by nrniv-core to crash the process.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-54146 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54146</link>
-    <guid isPermaLink="false">f2b891788edd231ccbc4469aa0813762</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | OpenHuman is an open-source agent harness available as a desktop application and Rust library. From 0.53.15 before 0.57.5 on macOS, core_process.rs in the Tauri desktop process publishes the per-launch OPENHUMAN_CORE_TOKEN bearer credential in its process environment even though the core now runs as an in-process task. Another process running as the same user can read that environment through the macOS KERN_PROCARGS2 process-inspection interface, recover the token together with the local host and port, and authenticate to the core JSON-RPC service with the authority of the desktop frontend. The attacker can read agent memory and integrated-account data, invoke privileged actions, change configuration, and stop or disrupt services without root access, developer mode, or changes to System Integrity Protection. This issue affects Intel and Apple Silicon macOS systems. This issue is fixed in version 0.57.5.</description>
+    <title>CVE-2026-123204 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123204</link>
+    <guid isPermaLink="false">539e75950f7c1cc11152dd3de8b22296</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.3 | Posta before v0.18.0 contains a server-side request forgery vulnerability that allows authenticated users with edit rights to make the backend send POST requests to internal destinations by creating webhooks with arbitrary URLs. Attackers can target loopback, private-network or cloud metadata addresses and read delivery status codes and error strings to probe internal hosts and ports.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75599 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75599</link>
-    <guid isPermaLink="false">e3d0af2c63a8cdde50609060c1418511</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.4 | HomeBox is a home inventory and organization system. Prior to 0.27.0, the maybeUrl() utility accepts markdown-style links in entity custom-field values without restricting the URL scheme, so an authenticated user can store a javascript: URI that is rendered as a clickable anchor on an item page. When another authenticated user clicks the link, attacker-controlled JavaScript executes in the victim's HomeBox origin, enabling session theft, account takeover, or data exfiltration. This issue is fixed in version 0.27.0.</description>
+    <title>CVE-2026-123205 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123205</link>
+    <guid isPermaLink="false">a5e300c63f1486bbe2f2962c5e9fe1d4</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.3 | accel-ppp before 1.15.0 contains a heap buffer overflow vulnerability in the tcp, syslog and pgsql log targets that allows unauthenticated remote peers to overflow fixed heap buffers by producing log lines exceeding LOG_MAX_SIZE. Attackers within client-ip-range can send an L2TP Start-Control-Connection-Request with many string AVPs when verbose logging is enabled to corrupt heap memory and crash the daemon.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75614 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75614</link>
-    <guid isPermaLink="false">5df5887fdcfe15b038a2045cc9b6c3e4</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | ASN1SCC is an open source ASN.1 compiler for embedded systems. Prior to 4.7.0.1, BitStream_DecodeConstraintWholeNumber in asn1crt/asn1crt_encoding.c reads enough bits for a constrained integer but does not reject values above the declared range when the encoded range is not a power of two. Generated uPER and ACN decoders for variable-size SEQUENCE OF, OCTET STRING, BIT STRING, and string values use the invalid result as a loop or copy length, so a crafted over-range size field can write beyond a destination buffer. Decoding untrusted affected data can corrupt heap or stack memory, cause a crash, or potentially permit code execution. This issue is fixed in version 4.7.0.1.</description>
+    <title>CVE-2026-123206 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123206</link>
+    <guid isPermaLink="false">95c814b80f2c7bec9cf7491308d5c5b3</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.3 | EdgeChat before 2.20.3 contains a missing authentication vulnerability in the GET /files/:key route that allows unauthenticated or banned users to download decrypted public-channel attachments because canAccessFile() accepts a null user id. Attackers holding an attachment object key can omit or supply an invalid token to retrieve plaintext attachments without a session or channel membership.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75615 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75615</link>
-    <guid isPermaLink="false">08aa4304b75ce475fdffa4d0c720e853</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.3 | ASN1SCC is an open source ASN.1 compiler for embedded systems. Prior to 4.7.0.1, the ACN runtime function Acn_Dec_String_CharIndex_private in asn1crt/asn1crt_encoding_acn.c and the generated uPER decoder InternalItem_string_with_alpha_decode in StgC/uper_c.stg do not validate a decoded character index before reading allowedCharSet. For string alphabets whose size is not a power of two, a crafted message can select an unused encoded index, read a small bounded window of adjacent static program constants, and return the byte as a successfully decoded character. The full 128-character IA5String alphabet is not affected. This issue is fixed in version 4.7.0.1.</description>
+    <title>CVE-2026-123207 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123207</link>
+    <guid isPermaLink="false">e2dd77c30211eb9498f4a186fff59397</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 2.3 | LibreTV before v2.21.2 contains a server-side request forgery vulnerability that allows authenticated users to bypass checkUpstreamAllowed() by exploiting unpinned DNS resolution in fetchWithSafeRedirects(). Attackers controlling authoritative DNS can return public addresses during validation and internal addresses at connection time via /api/source/test, /api/proxy, /api/search or /api/detail to reach loopback services, private hosts or cloud metadata endpoints.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-76077 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76077</link>
-    <guid isPermaLink="false">5db0d11a6c6c0b0a2cf34a2c25a2c618</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | ASN1SCC is an open source ASN.1 compiler for embedded systems. Prior to 4.7.0.1, the XER tokenizer NT() in asn1crt/asn1crt_encoding_xer.c, which is reached by all XER decode paths, copies tag characters into a fixed char Value[100] field without a length bound and reads input and lookahead bytes without checking the buffer count. A crafted XER message with an overlong tag can overwrite the tokenizer's stack frame, while a truncated tag or unterminated processing-instruction or comment sequence can read beyond the input and may cause a CPU spin. The flaws can disclose adjacent memory, corrupt stack data, crash or hang the decoder, and potentially permit code execution. This issue is fixed in version 4.7.0.1.</description>
+    <title>CVE-2026-123208 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123208</link>
+    <guid isPermaLink="false">ee0b79a5be06768f052d654b0f49d16e</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.7 | noname Electron desktop build v1.11.2 through v1.11.6.1 contains an unauthenticated local file server with wildcard CORS that allows malicious websites to read, overwrite, or delete installation files. Attackers can send cross-origin requests to /writeFile on localhost port 8089 to overwrite renderer scripts, executing JavaScript with Node.js access as the local user.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-82413 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82413</link>
-    <guid isPermaLink="false">65a1785a58a1428f852f5f846d01f904</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | ntopng is a web-based network traffic monitoring application. Prior to 6.7.260717, scripts/lua/rest/v2/add/host/to_scan.lua and scripts/lua/rest/v2/exec/host/schedule_vulnerability_scan.lua accept scan_ports from any authenticated session, including non-administrator users, while deployments with login disabled expose the same request without authentication. The endpoints validate scan_ports with validateSingleWord, which permits shell metacharacters, and persist the value for the minute vulnerability-scan scheduler. The scheduler concatenates the value into an nmap command through nmap_scan_host and executes it through ntop.execCmd or ntop.execCmdAsync using popen. For the tcp_portscan and cve modules, a preliminary nmap -sn probe must first report the target as up before the attacker-controlled ports are used. When nmap is installed, this command injection allows arbitrary operating-system commands to execute as the ntopng service account without further user interaction. This issue is fixed in version 6.7.260717.</description>
+    <title>CVE-2026-123271 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123271</link>
+    <guid isPermaLink="false">2302d8c1893c6560f30c57bf22f487d3</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.1 | ChatCLI before v1.215.2 contains an improper validation vulnerability in the MCP OAuth login flow that uses server-supplied Protected Resource Metadata as the resource indicator without checking it matches the configured server URL. A malicious MCP server can declare another resource on the same authorization server, obtain the user's bearer token for it, and replay that token against the other resource.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-82965 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82965</link>
-    <guid isPermaLink="false">b366207525974233105ef4b18dee63c1</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | A flaw was found in the SAML implementation of Keycloak, an open-source identity and access management solution. The SAML Artifact Resolution and ECP SOAP endpoints do not properly limit the size or complexity of incoming XML requests. An unauthenticated remote attacker can exploit this by sending specially crafted, large XML messages that cause the server to consume excessive memory. This leads to the application running out of memory and crashing, resulting in a denial of service for all users.</description>
+    <title>CVE-2026-123272 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123272</link>
+    <guid isPermaLink="false">b37f3aea2f2adf11ff75052070d1efef</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.1 | Mark3labs mcp-go before v1.2.1 contains an improper validation vulnerability in OAuthHandler.fetchServerMetadata that allows malicious MCP servers to obtain tokens for other resources by declaring arbitrary resources in well-known metadata. Attackers can declare a different MCP server as the RFC 8707 resource indicator, causing the authorization server to mint tokens the attacker replays against that resource.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-85287 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85287</link>
-    <guid isPermaLink="false">770c2368738df0adf354a9b25f438cdd</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | HomeBox is a home inventory and organization system. Prior to 0.27.0, POST /api/v1/users/register and the users.email uniqueness constraint treat email addresses as case-sensitive while HomeBox uses a case-insensitive login lookup. An unauthenticated attacker who knows a victim's email can register a differently cased variant, creating duplicate rows that cause login to return 401 for both variants and deny the victim access, while also bypassing the one-account-per-email policy. This issue is fixed in version 0.27.0.</description>
+    <title>CVE-2026-123273 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123273</link>
+    <guid isPermaLink="false">814ee983d4aa401d05d4924f137c27e6</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.1 | ImageMagick before 7.1.2-35 and 6.9.13-60 contains an infinite loop vulnerability in the SVG decoder because QueueAuthenticPixelCacheNexus in MagickCore/cache.c fails to validate requested region width and height. Attackers can supply a crafted SVG image that repeatedly requests a non-advancing pixel region, consuming CPU and hanging the decoding worker.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97371 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97371</link>
-    <guid isPermaLink="false">2399af6b5a92cfc6c705acb30fe449dc</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.3 | ntopng is a web-based network traffic monitoring application. Prior to 6.7.260721, ndpi_get_custom_category_match writes a four-byte nDPI protocol-category value through a pointer to the two-byte id variable in IpAddress::reloadBlacklist in src/IpAddress.cpp during packet dissection and host initialization. A remote unauthenticated attacker on a monitored network segment can send packets that match custom-category rules, causing stack corruption and denial of service without user interaction. This issue is fixed in version 6.7.260721.</description>
+    <title>CVE-2026-61648 - NVD - CVSS Score v3.1: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61648</link>
+    <guid isPermaLink="false">bd7030b3cb247e37a437f5714ff9df07</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.3 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, a user-controllable Multi report condition passes parameter_value through unencodeMultienum() and concatenates the result into a SQL WHERE clause. Although securexss() normally entity-encodes quotes, an input prefixed with an XSS payload makes AntiXSS select a processed string instead of the encoded backup, allowing a literal quote to reach the database. A low-privileged user with AOR Reports access can read arbitrary tables through time-based or UNION-based SQL injection and can consume database connections with delay expressions. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-102927 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102927</link>
-    <guid isPermaLink="false">b05c4b04141343f432f937e3e6650a50</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.9 | HedgeDoc is an open source, real-time collaborative markdown notes application. Prior to 1.11.1, the WebSocket permission handler allows a note owner to store strings outside the supported freely, editable, limited, locked, protected, and private permission values. The viewing and editing checks handle only known values and can otherwise fall through to permissive behavior, making a note readable or writable more broadly than intended. SQLite deployments can persist the invalid value because the database column does not strictly enforce the set, while MySQL and PostgreSQL reject the database update but can leave the in-memory note state inconsistent for connected users until reload or cache eviction. Exploitation requires the note owner to intentionally submit an invalid permission value, and the owner could already choose a legitimate permissive setting, which limits the practical security impact. This issue is fixed in version 1.11.1.</description>
+    <title>CVE-2026-61649 - NVD - CVSS Score v3.1: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61649</link>
+    <guid isPermaLink="false">544de013dddf7bf73d1416b4055f3f36</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.7 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the SSRF protection added in 7.15.1 uses a substring comparison in isSelfRequest() rather than hostname equality. The affected flow begins at validate_external_host() and uses isSelfRequest(), and stripos() to carry attacker-controlled data or authorization state into the security-sensitive operation. An authenticated attacker can place the server hostname in a URL path to bypass IP validation and direct server-side requests to internal services. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-105607 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105607</link>
-    <guid isPermaLink="false">654f4102773b8c0b64077582f713b319</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.6 | Joomla Extension - balbooa.com - Unauthenticated stored XSS in the &quot;Recent Comments / Recent Reviews&quot; widget in Gridbox &lt; 2.20.5.0</description>
+    <title>CVE-2026-61650 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61650</link>
+    <guid isPermaLink="false">981cafeae48a54e1fc8f8771e04e7495</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the POST /Api/V8/module/{moduleName}/{id}/relationships/{linkFieldName} endpoint checks only view and list permissions before a one-to-many relationship writes a target record's foreign key, without enforcing the required edit permission. A low-privileged user can reassign records, alter ownership and security-relevant relationships, expand cross-user access, and manipulate workflows. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107129 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107129</link>
-    <guid isPermaLink="false">73c2151669e21803afe28c45643b21a9</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.3 | Joomla Extension - balbooa.com - Unauthenticated arbitrary file deletion via path traversal in Gridbox &lt; 2.20.5.0</description>
+    <title>CVE-2026-61651 - NVD - CVSS Score v3.1: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61651</link>
+    <guid isPermaLink="false">23f2550ae82baab2ffba0caa1661fe9c</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.3 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the get_end_date action in Projects Controller concatenates an authenticated caller's task_id value into a SQL query without parameterization. A low-privileged user can use blind SQL injection to enumerate the database schema and extract credentials, customer records, and other database contents. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107130 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107130</link>
-    <guid isPermaLink="false">8df242a2f9bc1ad19d734d0ef164b0bb</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | Joomla Extension - balbooa.com - Unauthenticated deletion of submission/field files in Gridbox &lt; 2.20.5.0</description>
+    <title>CVE-2026-61653 - NVD - CVSS Score v3.1: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61653</link>
+    <guid isPermaLink="false">5f9105b3c896080d12bbc5c4357373eb</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.3 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, modules/Campaigns/PopupCampaignRoi.php interpolates $_REQUEST['id'] into SQL. Although securexss() normally entity-encodes quotes, an input prefixed with an XSS payload makes AntiXSS select a processed string instead of the entity-encoded backup, allowing a literal quote to reach the query. An authenticated user with Campaigns access can perform time-based blind SQL injection against arbitrary database tables. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107359 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107359</link>
-    <guid isPermaLink="false">052390e2bf3b11066dd584ecaa97bf3e</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.1 | Improper input validation in the beacon handler for WF200 firmware versions 3.17.0 and earlier may result in a divide-by-zero fault.</description>
+    <title>CVE-2026-63111 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63111</link>
+    <guid isPermaLink="false">0a1618fda6f144446a87f136d41188ee</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.1 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the V8 module API lacks module-level authorization and permits a low-privileged user to create SchedulersJobs records with attacker-controlled target values. The affected flow begins at /Api/V8/module and uses SchedulersJobs, target, cron.php, and url:: to carry attacker-controlled data or authorization state into the security-sensitive operation. Cron.php later executes the queued job with system privileges, and the url:: target makes server-side requests to internal or external hosts, can follow redirects, can persist as a recurring job, and may expose internal services. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107903 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107903</link>
-    <guid isPermaLink="false">a6a199b8c8a33937c4cf96775b47283b</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.6 | Joomla Extension - balbooa.com - Stored XSS in reviews via inconsistent sanitization in Gridbox &lt; 2.20.5.0</description>
+    <title>CVE-2026-63213 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63213</link>
+    <guid isPermaLink="false">88f9123865fa3ee79ffbc61da4325ea7</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.2 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the Upgrade Wizard commit flow trusts the hidden zip_to_dir parameter, while clean_path() does not reject traversal sequences. An authenticated administrator can copy extracted package files outside the intended destination, overwrite application or configuration files, place executable PHP under the web root, or cause denial of service. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-112109 - NVD - CVSS Score v4.0: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112109</link>
-    <guid isPermaLink="false">97677955fe82fd158db38063b4f5dd43</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.3 | A local privilege escalation vulnerability in Thales SafeNet Authentication Client (SAC) SACSrv can allow an authenticated, non-administrator local user to trigger a heap-based buffer overflow through the service interface. Successful exploitation may allow arbitrary code execution with Local System privileges.This issue affects SAC releases up to and including 10.9 R3 GA (build 10.9.7449).</description>
+    <title>CVE-2026-63214 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63214</link>
+    <guid isPermaLink="false">8a5617946a917eef2c467b5b8ff52de6</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, legacy REST methods append an authenticated caller's query parameter as a SQL WHERE clause after insufficient structural validation. The affected flow begins at /service/v4_1/rest.php and uses get_entry_list, get_entries_count, and query to carry attacker-controlled data or authorization state into the security-sensitive operation. An account with list permission on a module can bypass the user_hash filter, retrieve password hashes and other database data, and use recovered administrative credentials to compromise the application. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-112110 - NVD - CVSS Score v4.0: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112110</link>
-    <guid isPermaLink="false">6b24e92cee938b1fde398c1ffb09bf4d</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.8 | A time-of-check to time-of-use race condition in the SafeNet Authentication Client (SAC) SACSrv log-cleanup function can allow an authenticated, non-administrator local user to redirect a privileged file deletion operation outside the intended log
-directory. 
-
-
-
-This issue affects SAC releases up to and including 10.9 R3 GA (build 10.9.7449).</description>
+    <title>CVE-2026-63215 - NVD - CVSS Score v3.1: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63215</link>
+    <guid isPermaLink="false">81aadd8fcd44a33374c077031980eac8</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.3 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the REST API v4.1 get_entry_list method is vulnerable to time-based blind SQL injection when an authenticated caller simultaneously bypasses two independent security mechanisms. The advisory does not identify those controls more precisely, so their identities remain unspecified. Successful exploitation can extract sensitive database information. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-115452 - NVD - CVSS Score v4.0: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115452</link>
-    <guid isPermaLink="false">90f79b0865d5c7918538eb0436f9833e</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.5 | Joomla Extension - tassos.gr - Privileged stored XSS in Advanced Custom Fields 2.8.2-2.8.15, 3.0.0-3.1.8 and Smile Pack 1.1.2-1.2.9, 2.0.0-2.1.6 - A user who could edit a Map marker label, like an article author, could add a script that ran for anyone who opened the marker.</description>
+    <title>CVE-2026-63217 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63217</link>
+    <guid isPermaLink="false">5490ccfbf12b07a8ec06d2f4f02bfae0</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the generatePdf entry point loads an arbitrary record through BeanFactory::getBean() without checking the requesting user's record access. The affected flow begins at modules/AOS_PDF_Templates/generatePdf.php and uses generatePdf, and BeanFactory::getBean() to carry attacker-controlled data or authorization state into the security-sensitive operation. Any authenticated user can read fields from records denied by configured ACL roles, including contact, financial, deal, and custom-field data. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120859 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120859</link>
-    <guid isPermaLink="false">cffb2aca32b4a9df83621719103047ff</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.5 | PyMoDAQ before 4.4.13, and pymodaq_data, pymodaq_gui, and pymodaq_utils before 5.1.15, 5.2.x before 5.2.14, and 5.3.x before 5.3.10, contain deserialization of untrusted data and eval injection vulnerabilities that allow attackers to execute arbitrary code by supplying crafted files that a user opens. Attackers can store pickled objects in HDF5 string nodes that StringARRAY.array_to_string() passes to pickle.loads() when the node is browsed or read, place Python expressions in HDF5 attributes that JsonConverter.json2object() evaluates, supply a .dock file that load_layout_state() unpickles from the Dashboard Load layout action, or embed Python expressions in XML settings files that elt_to_dict() and set_txt_from_elt() evaluate.</description>
+    <title>CVE-2026-63218 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63218</link>
+    <guid isPermaLink="false">fb9dee3e709eaf1ad869ee20ca113ccb</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the changeReportPage controller action renders a protected report without repeating the record-level access check enforced by DetailView. The affected flow begins at AOR_Reports and uses changeReportPage, and DetailView to carry attacker-controlled data or authorization state into the security-sensitive operation. An authenticated user can directly invoke the action and read report rows and restricted-module data despite owner-only or role-based report visibility. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121949 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121949</link>
-    <guid isPermaLink="false">477935104cbb94384b14f6919a2d862f</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 2.3 | The Symfony HtmlSanitizer component does not apply the media URL policy to the srcset and imagesrcset attributes, allowing values that point to hosts or schemes not permitted by allowMediaSchemes() or allowMediaHosts() to bypass it, so that browsers load images from disallowed hosts in Symfony versions 6.1.x prior to 6.4.50, 7.x prior to 7.4.23, and 8.x prior to 8.1.11.The srcset attribute on img and source elements and the imagesrcset attribute on link elements are allowed by the sanitizer, but their URL candidates are never validated, so their values are kept verbatim while the same URL in src is dropped. The fixes for CVE-2026-45753 and CVE-2026-48761 extended the same attribute list but did not cover these two attributes. For example, with allowMediaSchemes(['https']) and allowMediaHosts(['trusted.example']), &lt;img srcset=&quot;https://evil.example/a.png 1x&quot;&gt; survives sanitization, and the browser fetches the selected candidate as it would fetch src. Candidates with a scheme forbidden by the configuration, such as http, are kept as well.
-Any application that sanitizes untrusted HTML and relies on the media schemes and hosts allowlists to restrict where images can be loaded from is affected. A single crafted value is enough to make the browser of a user viewing the sanitized content send a request to an attacker-controlled host, which can be used to track viewers or log their IP addresses. No authentication is needed if the application accepts HTML from unauthenticated users.</description>
+    <title>CVE-2026-69134 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69134</link>
+    <guid isPermaLink="false">7c89d03d8ea1e3017973852fd764250f</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the REST v4 JSON handler reads the pre-filter RAW_REQUEST value and relationship write helpers interpolate supplied field values into INSERT and UPDATE statements. The affected flow begins at $GLOBALS['RAW_REQUEST'] and uses set_relationship, SugarRelationship::addRow(), SugarRelationship::updateRow(), and contact_role to carry attacker-controlled data or authorization state into the security-sensitive operation. An authenticated user can inject SQL through relationship fields to read or alter database data and may reach file-write consequences when the database account has elevated privileges. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123184 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123184</link>
-    <guid isPermaLink="false">4ef2a96a6d65c277219ae81e5b15352c</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.2 | An incorrect authorization vulnerability exists in the Altium 365 Git Service. The permission check performed when a user pushes to a project repository did not correctly evaluate the required access level, so the check passed for any user holding any level of access to the project. As a result, an authenticated user with view-only access to a project could write to that project's git repository.
-
-
-
-
-Read access was evaluated correctly and was not affected, and exploitation requires an authenticated account with existing access to the target project. The issue has been remediated in Altium 365 at the service level and no customer action is required. On-premise Altium Enterprise Server is not affected.</description>
+    <title>CVE-2026-69135 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69135</link>
+    <guid isPermaLink="false">774e4ee128f77cc689ea8ca2b767f03c</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.1 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the Project module interpolates the authenticated caller's duplicateId POST parameter directly into a SQL query without sanitization, quoting, or parameterization. An authenticated attacker can alter query structure and disclose sensitive database information. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-54912 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54912</link>
-    <guid isPermaLink="false">37faa2f4a6cb8fec0275e430b10d709e</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.8 | WebAssembly Micro Runtime (WAMR) is a lightweight standalone WebAssembly (Wasm) runtime. Prior to 2.4.5, the two-pass fast interpreter loader in core/iwasm/interpreter/wasm_loader.c can make inconsistent constant-table decisions between the sizing pass and the emitting pass. After duplicate constants inflate the first pass beyond the constant-slot limit, wasm_loader_get_const_offset emits later constants inline, but the between-pass sort and deduplication reduces the table so the second pass can choose table references and cause reserve_block_ret to emit additional copy operands that were not included in code_compiled_peak_size. A crafted module can therefore make the second pass write partially attacker-controlled compiled-code data beyond the heap buffer allocated from the first pass's size calculation during wasm_runtime_load, before guest code executes. This can corrupt host heap metadata and deterministically crash the process, causing denial of service; further consequences depend on the host application's heap layout. Builds using WAMR_BUILD_FAST_INTERP=1 are affected; disabling the fast interpreter avoids the vulnerable loader. This issue is fixed in version 2.4.5.</description>
+    <title>CVE-2026-69136 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69136</link>
+    <guid isPermaLink="false">cca1ef982021b138f878f47abd93e36f</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.1 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, email template attachment handling passes the remove_attachment POST parameter array through HTML-oriented securexss() processing and directly interpolates its elements into an SQL UPDATE statement. An authenticated attacker can inject SQL to disclose database information or abuse the UPDATE context to soft-delete all records in the notes table in one request. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-54913 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54913</link>
-    <guid isPermaLink="false">122427f75cc97b8d733e231b493424e4</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | WebAssembly Micro Runtime (WAMR) is a lightweight standalone WebAssembly (Wasm) runtime. Prior to 2.4.5, load_init_expr in core/iwasm/interpreter/wasm_loader.c accepts a non-reference heap-type byte for ref.null when WASM_ENABLE_GC=0, while the local WASMValue cur_value union is not zero-initialized and setting ref_index writes only part of it. A crafted module can declare an i64, f64, or v128 global initialized through the invalid ref.null form, causing push_const_expr_stack and the later global initialization path to copy uninitialized host-stack bytes into a value readable by the guest. The classic and fast interpreters are affected in the default no-GC configuration; the GC-enabled path validates heap types. The disclosure is four bytes for i64 or f64 globals and up to twelve bytes for each v128 global. This issue is fixed in version 2.4.5.</description>
+    <title>CVE-2026-69137 - NVD - CVSS Score v3.1: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69137</link>
+    <guid isPermaLink="false">d4309038189862ffabfa8e4f61ba30e7</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.7 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the CalendarAccount testConnection action passes an authenticated caller's server_url directly to curl without host, address, or scheme validation. The affected flow begins at CalendarAccount::action_testConnection and uses server_url, CalDAVProvider::makeCalDAVRequest(), and PROPFIND to carry attacker-controlled data or authorization state into the security-sensitive operation. The server sends a PROPFIND request from its network context and returns non-success response bodies, enabling internal-service access, partial response disclosure, service enumeration, and possible cloud metadata access. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-54914 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54914</link>
-    <guid isPermaLink="false">c268e11f543e62f7d2c26df5d1a1ef1c</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.3 | WebAssembly Micro Runtime (WAMR) is a lightweight standalone WebAssembly (Wasm) runtime. Prior to 2.4.5, wasi_poll_oneoff in core/iwasm/libraries/libc-wasi/libc_wasi_wrapper.c validates the output pointer for only one wasi_event_t, while wasmtime_ssp_poll_oneoff in core/iwasm/libraries/libc-wasi/sandboxed-system-primitives/src/posix.c can write as many events as the guest-controlled nsubscriptions value. A crafted guest module can provide multiple subscriptions that produce events while positioning an output region large enough for only one event, causing a later out[nevents] write to cross the validated Wasm linear-memory boundary into adjacent host heap memory. The overwrite contains partly attacker-controlled event data and can reliably crash the host process, with further confidentiality or integrity consequences depending on heap layout. This issue is fixed in version 2.4.5.</description>
+    <title>CVE-2026-69140 - NVD - CVSS Score v3.1: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69140</link>
+    <guid isPermaLink="false">c7882d7bd3f13bede1193b228046e65f</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.3 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, GetLatestRevision.php interpolates get_latest_for_id directly into an SQL UPDATE statement. Although securexss() normally entity-encodes quotes, an input prefixed with an XSS payload makes AntiXSS select a processed string instead of the encoded backup, allowing a literal quote to reach the query. A low-privileged user with Documents module access can disclose database data and mass-update linked_documents records, while stacked statements and arbitrary DROP or INSERT operations are not supported by this vector. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77439 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77439</link>
-    <guid isPermaLink="false">f6d2ecaf9f31681998f6910377663020</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | Immich is a self-hosted photo and video management solution. Prior to 3.0.3, an authenticated user with editor access to a shared album can change the existing owner's role because album member role updates do not protect the owner from modification. By demoting the owner and then promoting themselves, an editor can take ownership of the album, remove the original owner, and delete the album. This vulnerability is fixed in version 3.0.3.</description>
+    <title>CVE-2026-69141 - NVD - CVSS Score v3.1: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69141</link>
+    <guid isPermaLink="false">25e64734bd20970c6a362be50155ddbe</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.3 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the CasesController action_get_kb_articles action interpolates $_POST['search'] into a CASE WHEN ... LIKE expression and the SQL WHERE clause. Although securexss() normally entity-encodes quotes, an input prefixed with an XSS payload makes AntiXSS select a processed string instead of the encoded backup, allowing a literal quote to reach the query. A low-privileged user with Cases module access can perform blind SQL injection and extract sensitive database information. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-92855 - NVD - CVSS Score v3.1: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92855</link>
-    <guid isPermaLink="false">1dc0bad742ee8351df5a5d32039f4ea1</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.4 | A flaw was found in the SAML identity broker component of Keycloak, which is used to delegate authentication to external identity providers. The issue occurs because the broker fails to verify that a user actually possesses the private key associated with a holder-of-key assertion. An attacker who intercepts a victim signed assertion can replay it to gain unauthorized access and impersonate the victim without needing their private key.</description>
+    <title>CVE-2026-69142 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69142</link>
+    <guid isPermaLink="false">a4dd669cb8f077f81063cf066b3a4a17</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the jjwg_Maps map marker endpoint uses the authenticated caller's distance value in the map_markers action without strict numeric validation or parameterization. An authenticated attacker can alter the SQL query, extract database data, modify query results, and consume resources. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-92857 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92857</link>
-    <guid isPermaLink="false">910a5ce72245da67b89530d867bd2cce</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.1 | Keycloak provides a Dynamic Client Registration feature that allows users with specific tokens to register their own applications. A flaw in how Keycloak validates these registration requests allows an attacker to create a malicious application that forges identity information. By mapping their own user profile details to protected fields like the user ID (sub) or intended audience (aud), an attacker can generate signed security tokens that make them appear to be a different user. This could allow an attacker to impersonate other users or gain unauthorized access to services that rely on these tokens for identity verification.</description>
+    <title>CVE-2026-69144 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69144</link>
+    <guid isPermaLink="false">48b2e123118ba072dc4001fd237d6cce</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, download.php checks authorization against a Documents bean before resolving whether the supplied identifier is a document_revisions.id. When a revision UUID is submitted with type=Documents, the check targets an empty Documents bean; the revision is then resolved and served without checking its parent document. A low-privileged authenticated user can use this identifier confusion to download administrator-owned or otherwise protected documents. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-93998 - NVD - CVSS Score v3.1: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93998</link>
-    <guid isPermaLink="false">ab874d5e224cd82b03c91e3f3e210c5d</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.4 | A flaw was found in the SAML adapter component of Keycloak, which is used to secure applications with SAML-based authentication. The adapter fails to verify that the issuer of a signed SAML assertion matches the expected identity provider configured for the application. If multiple identity providers share the same trusted signing key, an attacker who controls one of those providers can create a validly signed assertion to log into the application as any user, potentially gaining full administrative control.</description>
+    <title>CVE-2026-69145 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69145</link>
+    <guid isPermaLink="false">74ee57f08aaa4329a60940623015ffec</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, AOR report generation reloads the value stored in aor_fields.field and concatenates it into report SQL without strict field validation. An authenticated user able to configure reports can inject SQL through that stored field value and disclose database contents. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-96453 - NVD - CVSS Score v3.1: 8.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96453</link>
-    <guid isPermaLink="false">7daeb7c026b8477c25d6613d61e07eac</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.0 | A flaw was found in the Keycloak Admin CLI kcadm tool, which is used by administrators to manage Keycloak servers from the command line. When a custom truststore is provided to verify the server identity, the tool incorrectly accepts any self-signed certificate as long as the hostname matches. This allows a network attacker to impersonate the Keycloak server, steal administrative credentials, and perform unauthorized management actions.</description>
+    <title>CVE-2026-71548 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71548</link>
+    <guid isPermaLink="false">793eef57d5a9a220598d7df8d114a184</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, AOR_Report::build_report_query_where incorporates a report editor's parameter_value when value_type=Field without sufficient validation. An authenticated user who can save a report can use SQL injection to read the entire SuiteCRM database. Disclosed data can include users.user_hash, OAuth2 tokens, CRM records, report definitions, and configuration data; the connector does not permit stacked queries, so direct write-through-injection is not supported. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97174 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97174</link>
-    <guid isPermaLink="false">3618541d4e6e46f576335b1bded23a93</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.8 | A flaw was found in the Client-Initiated Backchannel Authentication (CIBA) implementation of Keycloak. The CIBA endpoint fails to properly validate the sub parameter, allowing it to be stored as an additional request parameter. During the token issuance process, this injected value overwrites the legitimate subject identifier. This allows an attacker to authenticate as themselves but receive security tokens belonging to a different victim user, leading to unauthorized account access.</description>
+    <title>CVE-2026-71550 - NVD - CVSS Score v3.1: 9.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71550</link>
+    <guid isPermaLink="false">b11d519660a4de653588ee41034e66aa</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 9.9 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the workflow controller uses a path-traversal-capable aow_action value in require_once() without constraining the resolved file. The affected flow begins at modules/AOW_WorkFlow/controller.php and uses aow_action, and require_once() to carry attacker-controlled data or authorization state into the security-sensitive operation. An authenticated user with the WorkFlow role can include executable PHP, obtain server-side code execution, access CRM data and configuration secrets, and establish persistent access. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97175 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97175</link>
-    <guid isPermaLink="false">bd51b45872b4d9067f60e57a79038424</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | A flaw was found in the idp-auto-link authenticator of the keycloak-services component, which handles user identity federation. The issue occurs when Keycloak automatically links an incoming identity from an external provider to an existing local account based on an email address without verifying if the provider has validated that email. This can allow an attacker to take over a victim's account by using a matching unverified email address at a brokered provider.</description>
+    <title>CVE-2026-94395 - NVD - CVSS Score v4.0: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94395</link>
+    <guid isPermaLink="false">4d21f9a4adeb2f16f2458d2549ec4a53</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.0 | A stack-based buffer overflow in Thales SafeNet Authentication Client (SAC) SIS token engine processing can be triggered by a malicious physical or software-emulated smart card. The issue can occur before authentication or PIN entry and may
+cause a denial of service or potentially arbitrary code execution with the privileges of the affected process. Affected releases start with SAC 10.8 R7 and include SAC 10.9 R3 GA (build 10.9.7449).</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97847 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97847</link>
-    <guid isPermaLink="false">895847bbf8353b18b4aa242ddda01550</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.1 | A flaw was found in the protocol mapper and identity resolution components of Keycloak. The issue occurs when a client manager uses hardcoded-claim mappers to override identity claims in sessionless service-account tokens. Because these tokens lack a session ID, Keycloak may incorrectly resolve the token bearer as a different, highly privileged user based on the manipulated claims. This can allow an attacker with limited client management permissions to impersonate a realm administrator and gain full control over the realm.</description>
+    <title>CVE-2026-97377 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97377</link>
+    <guid isPermaLink="false">e09ae0edd104dc0cb8cb76d63f1df0d1</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | SuiteCRM is an open-source, enterprise-ready Customer Relationship Management (CRM) software application. Prior to 7.15.2 and 8.10.2, the legacy SOAP portal method portal_get_entry_list propagates caller-controlled where and order_by values into SQL query construction without sufficient neutralization. A low-privileged portal API user can perform blind SQL injection to disclose database metadata and sensitive records, affect query behavior, and consume resources. This issue is fixed in versions 7.15.2 and 8.10.2.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
