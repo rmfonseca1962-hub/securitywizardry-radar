@@ -5,15 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 10:00:30 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-123012 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123012</link>
-    <guid isPermaLink="false">54d52a1a2ec5adfa3d01ddfa156bfb9b</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.1 | In Gogs 0.14.3, the Git Smart HTTP authorization layer in internal/route/repo/http.go allows a push when only read access was intended, a different vulnerability than CVE-2026-52810. This occurs because of inconsistency about whether a verb is checked in a case-sensitive manner.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 05 Nov 2026 11:02:50 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-93389 - NVD - CVSS Score v3.1: 8.2</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93389</link>
@@ -325,6 +317,14 @@ This is an incomplete fix of CVE-2026-15446: the origin and path restrictions ad
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118869</link>
     <guid isPermaLink="false">becbb05def0bd6f49976937b03bdfb3d</guid>
     <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.7 | An OS command injection vulnerability exists in SHIRASAGI, which may allow an authenticated attacker to execute arbitrary OS commands on the system running the product.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123036 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123036</link>
+    <guid isPermaLink="false">ff41d9070cfc3089795e0629ddc8fdc6</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.5 | A flaw was found in ansible-core. When a task marked `no_log: true` fails, the task result is censored before being emitted, but the `exception` field is retained because it is present in the PRESERVE allow-list in lib/ansible/_internal/_task.py, and the default stdout callback prints it through CallbackBase._handle_exception. As a result, sensitive values the operator explicitly asked to hide can be disclosed: module argument-validation errors echo the argument value, templating errors print an Origin source snippet (the failing line plus the two preceding lines of the variables file, exposing neighbouring secrets from an -e @secrets.yml file), and fail/assert messages are printed in full. Secret material supplied as extra variables or variables files can therefore leak to terminal output, CI logs, and the stdout logs of any automation wrapping ansible-playbook, even though every task touching the secrets is marked no_log: true. This is a regression introduced with the ansible-core 2.19 data-tagging/templating rework; the behaviour does not occur on 2.16, where the error text is correctly censored.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
