@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 05:00:31 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Nov 2026 06:01:30 +0000</lastBuildDate>
   <item>
     <title>CVE-2025-71458 - NVD - CVSS Score v4.0: 8.7</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2025-71458</link>
@@ -71,36 +71,36 @@
     <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-111769 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111769</link>
-    <guid isPermaLink="false">7ef70b1dcc66e6903fe888bb7369128a</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | The Model Context Protocol TypeScript SDK provides TypeScript client and server implementations of the Model Context Protocol. Prior to 1.32.0 in @modelcontextprotocol/sdk and from 2.0.0 until 2.3.0 in @modelcontextprotocol/client, the HTTP client transports and OAuth client requests followed redirects to a different origin while retaining custom request headers and, for HTTP 307 or 308 responses, request bodies. The affected surfaces are StreamableHTTPClientTransport, SSEClientTransport, and OAuth client functions such as auth(). The trigger is an HTTP redirect to another origin. Custom headers and mcp-session-id can be re-sent to the redirected origin. HTTP 307 and 308 redirects can also re-send the request body. OAuth request bodies can contain refresh_token and client_secret values. Current runtimes already strip the Authorization header across origins. stdio clients do not use the affected HTTP path. A malicious or compromised MCP or authorization server could therefore receive API keys, session identifiers, OAuth refresh tokens, or OAuth client secrets. Restoring unrestricted redirect following after upgrading restores the exposure. This issue is fixed in @modelcontextprotocol/sdk 1.32.0 and @modelcontextprotocol/client 2.3.0.</description>
+    <title>CVE-2026-114366 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114366</link>
+    <guid isPermaLink="false">69a7792af23c5297ef8918f1051bb2d6</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 2.3 | An information disclosure vulnerability in the Qt Framework QWebSocket authentication handling of the Qt WebSockets module.</description>
     <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-111770 - NVD - CVSS Score v3.1: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111770</link>
-    <guid isPermaLink="false">19eb8d7e1459a40c01a66449aa605a45</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.7 | The Model Context Protocol TypeScript SDK provides TypeScript client and server implementations of the Model Context Protocol. From 2.0.0 until 2.3.0 in @modelcontextprotocol/server, applications that shared one stateless HTTP transport or one McpServer or Server instance among multiple clients could deliver responses and notifications to the wrong client. The affected surface is an MCP server reached over HTTP by multiple clients. The trigger is reuse of one stateless transport or server instance. Messages were associated with a connection using only the JSON-RPC request identifier. SDK clients start request identifiers at zero, so collisions occur in normal operation. Cross-client delivery exposes one client's responses and notifications to another client. The issue requires an HTTP endpoint reachable by more than one client and an application that constructs the server or transport once at startup instead of once per request or session. stdio servers and factory-created per-call servers are not affected. Upgrading causes reused instances to fail and therefore requires an application code change. This issue is fixed in @modelcontextprotocol/server 2.3.0.</description>
+    <title>CVE-2026-119431 - NVD - CVSS Score v3.1: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119431</link>
+    <guid isPermaLink="false">b9667f5b8b29ce0eff63a4878a7077f4</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.7 | A server-side request forgery (SSRF) vulnerability exists in Foxit Workspace's file-upload functionality. Insufficient validation of user-supplied links may allow a remote attacker to induce the server to access internal resources and return their contents, potentially resulting in sensitive information disclosure and unauthorized access to internal services.</description>
     <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-112907 - NVD - CVSS Score v3.1: 2.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112907</link>
-    <guid isPermaLink="false">ae972ca2d5d1d033139f40279c602e24</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 2.5 | filelock is a platform-independent file lock for Python. From 3.22.0 until 4.2.1, soft lock classes on Windows read an existing marker with _read_lock_file and remove a stale marker through break_lock_file using pathname operations that wait for an oplock break. Another local account with read access to an unheld marker can keep a Level 1 or batch oplock unanswered, causing SoftFileLock.acquire and related async or fallback locks to wait beyond timeout, blocking=False, and cancel_check. A stale marker under the oplock cannot be broken, but mutual exclusion remains intact and no file other than the marker is accessed. This issue is fixed in version 4.2.1.</description>
+    <title>CVE-2026-119432 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119432</link>
+    <guid isPermaLink="false">bef7c4961c6adf3c417f3842c70ecb72</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 8.7 | A stored cross-site scripting (XSS) vulnerability exists in the Foxit Workspace's file share preview functionality. An attacker could upload a crafted file and share it with a victim. When the victim opens or previews the file, the embedded script executes in the application's origin, potentially accessing locally stored credentials and enabling credential theft.</description>
     <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-112908 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112908</link>
-    <guid isPermaLink="false">110156aadb3b33ffb729b57b18581805</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.3 | filelock is a platform-independent file lock for Python. From version 3.30.0 until version 4.2.1,  StrictSoftFileLock  and  AsyncStrictSoftFileLock  on POSIX systems create coordination and claim directories without applying the caller’s restrictive lock mode. A permissive umask or inherited default ACL can leave these directories writable by another local user, allowing that user to delete an active holder’s claims. Another authorized process can then acquire the lock while the original holder remains in its critical section. An attacker can also plant malformed claims to prevent acquisition. This issue is fixed in version 4.2.1.</description>
+    <title>CVE-2026-119433 - NVD - CVSS Score v3.1: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119433</link>
+    <guid isPermaLink="false">3e62dce300373d42df51879f0a10bfe5</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.7 | A server-side request forgery (SSRF) vulnerability exists in an undocumented API endpoint of Foxit Workspace due to insufficient validation of user-supplied URL and network parameters. A remote attacker could exploit this issue to induce the server to send requests to arbitrary internal or external resources, potentially enabling unauthorized access to internal services, network reconnaissance, and sensitive information disclosure.</description>
     <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-112910 - NVD - CVSS Score v3.1: 5.3</title>
