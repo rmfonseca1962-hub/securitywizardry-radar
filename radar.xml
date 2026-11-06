@@ -5,127 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 10:00:12 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-97848 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97848</link>
-    <guid isPermaLink="false">7f1c04e599019c8852e3a466e62bf8e0</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | A flaw was found in the token sanitization logic of Keycloak, an open source identity and access management solution. The issue occurs when a protocol mapper is configured to emit structured claims using the JSON type. The security check designed to remove unauthorized role mappings only looks for standard Java maps and fails to recognize Jackson based JSON objects. This allows an attacker to inject forged client roles into security tokens, which could lead to unauthorized access to protected resources.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120749 - NVD - CVSS Score v3.1: 6.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120749</link>
-    <guid isPermaLink="false">39540cdb289653002bc54d2999612451</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.2 | A flaw was found in D-Bus. With a privileged Monitoring client attached (for example dbus-monitor or busctl monitor), an unprivileged local user can cause dbus-daemon to abort if a driver-originated broadcast such as NameOwnerChanged or ActivatableServicesChanged cannot be delivered to a recipient (for example due to a deny rule or an exceeded outgoing message queue). Driver broadcasts still use serial 0; when delivery fails, composing the monitor error reply asserts reply_serial != 0 and aborts the daemon. This is an incomplete fix for CVE-2023-34969, which only assigned serials for driver messages sent to a single recipient. On the well-known system bus this is a denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-73471 - NVD - CVSS Score v3.1: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73471</link>
-    <guid isPermaLink="false">c906adbb640c397bf6b79293f519acce</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.1 | A flaw was found in GStreamer gst-plugins-good (avidemux). In the Nikon metadata tag parser, a pointer can be dereferenced without verifying that data remains in the buffer, causing out-of-bounds reads. Because avidemux is auto-plugged by playbin, decodebin, and gst-discoverer, opening or previewing a crafted AVI is sufficient to trigger the issue. Fixed upstream in gst-plugins-good 1.28.6 (GStreamer-SA-2026-0072).</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-73472 - NVD - CVSS Score v3.1: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73472</link>
-    <guid isPermaLink="false">841a8af5804de75aabaeabef43cfbdd4</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.1 | A flaw was found in GStreamer gst-plugins-good (avidemux). In the superindex and subindex parsers, integer overflow can bypass bounds checks and cause out-of-bounds reads. Because avidemux is auto-plugged by playbin, decodebin, and gst-discoverer, opening or previewing a crafted AVI is sufficient to trigger the issue. Fixed upstream in gst-plugins-good 1.28.6 (GStreamer-SA-2026-0072).</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-73473 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73473</link>
-    <guid isPermaLink="false">b9d3f667db384f9898728c3c813dbade</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.5 | A flaw was found in GStreamer gst-plugins-good (avidemux). In the subindex parser, missing validation of the entry count can cause excessive memory allocation and denial of service. Because avidemux is auto-plugged by playbin, decodebin, and gst-discoverer, opening or previewing a crafted AVI is sufficient to trigger the issue. Fixed upstream in gst-plugins-good 1.28.6 (GStreamer-SA-2026-0072).</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-83493 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83493</link>
-    <guid isPermaLink="false">71666c1aacf67f4c436e01109e93f759</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS: não informado | A flaw was found in distributed-workloads. A remote attacker could exploit a vulnerability in the pull_request_target workflow by submitting a specially crafted pull request. This workflow processes untrusted code from the pull request author while operating with the base repository's sensitive secrets, such as the SNYK_TOKEN, and its default write token. Consequently, an attacker could exfiltrate these secrets, leading to unauthorized access to the Snyk integration and potential control over the repository.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-83494 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83494</link>
-    <guid isPermaLink="false">6d7a391311487319e595ac416c89c97f</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS: não informado | A flaw was found in the training-operator. An incorrect object casting in the PyTorchJob ValidateUpdate webhook allows users to bypass an immutability check. This vulnerability could enable users to detach a queued job from its quota management system or hijack a running job's controller ownership. The primary impact is a Denial of Service (DoS) condition.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-9797 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9797</link>
-    <guid isPermaLink="false">82ff026c566075dccc098d0ed29b3490</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | A flaw was found in Keycloak's administrative services (org.keycloak.services.resources.admin). A highly privileged attacker, authenticated with a 'manage-clients' role, could exploit this vulnerability through several methods, including manipulating client JSON Web Key Sets (JWKS), swapping client authenticator types and resetting secrets, or downloading legitimate signing keys. Successful exploitation allows the attacker to obtain a token with 'realm-admin' role assignments, leading to privilege escalation and potential unauthorized access to sensitive resources.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118166 - NVD - CVSS Score v3.1: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118166</link>
-    <guid isPermaLink="false">79d98978810b10b7072290f960487bf6</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.8 | The MC4WP: Mailchimp for WordPress WordPress plugin before 4.15.0 does not prevent request-derived values in its dynamic content tags from being processed as shortcodes when a form is embedded with its block, allowing unauthenticated visitors to execute arbitrary registered shortcodes with attacker-chosen attributes. This requires the site owner to have added a request-derived tag to the form content and to embed the form with the block rather than the classic shortcode.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118423 - NVD - CVSS Score v3.1: 10.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118423</link>
-    <guid isPermaLink="false">7978c31b45fbacc4f9fdaf15a94d12c9</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 10.0 | The WP Libre Form WordPress plugin 1.5.0.1 does not validate the type of files uploaded through its form submissions, allowing unauthenticated attackers to upload PHP files to a web-accessible location and execute them, leading to remote code execution.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119472 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119472</link>
-    <guid isPermaLink="false">753b7e26306d7d56d9fbe05e796b7ea9</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in David Anderson Redux Framework redux-framework allows Stored XSS.This issue affects Redux Framework: from n/a through 4.5.16.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119488 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119488</link>
-    <guid isPermaLink="false">6e19f5a9c206bf04f41aa41e7de08498</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Shamim Rajani Pie Register pie-register allows Stored XSS.This issue affects Pie Register: from n/a through 3.8.4.15.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119499 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119499</link>
-    <guid isPermaLink="false">9e0ce0f1f15c693e831f48908c89dc67</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.5 | Insertion of Sensitive Information Into Sent Data vulnerability in BAKKBONE Australia FloristPress bakkbone-florist-companion allows Retrieve Embedded Sensitive Data.This issue affects FloristPress: from n/a through 7.8.4.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119516 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119516</link>
-    <guid isPermaLink="false">42ce54955daafc5a10be8a95bef41ab8</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 9.8 | Deserialization of Untrusted Data vulnerability in Mamunur Rashid Radius Booking — Booking Calendar for Appointments &amp;amp; Services radius-booking allows Object Injection.This issue affects Radius Booking — Booking Calendar for Appointments &amp;amp; Services: from n/a through 1.0.20.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120844 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120844</link>
-    <guid isPermaLink="false">82f3ed3d291438fa4ced9602a9d6a74e</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 9.8 | Incorrect Privilege Assignment vulnerability in miniOrange OAuth Single Sign On – SSO (OAuth Client) miniorange-login-with-eve-online-google-facebook allows Privilege Escalation.This issue affects OAuth Single Sign On – SSO (OAuth Client): from n/a through 7.1.3.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Fri, 06 Nov 2026 11:01:16 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-121006 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121006</link>
@@ -329,6 +209,126 @@ HTTP::Body version 1.25 limits the size and number of lines in the trailer.</des
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19877</link>
     <guid isPermaLink="false">fef737c5dd55db979b0e848f4eea87f0</guid>
     <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.5 | INFINITT ULite 5.0.2.1_BN48_20260528 and earlier protects image-share links with a low-entropy password and does not restrict repeated password attempts, allowing an unauthenticated remote attacker to brute-force the password within the link validity window and gain unauthorized access to shared medical images. Fixed in ULite 5.0.2.1 BN50.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109977 - NVD - CVSS Score v3.1: 4.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109977</link>
+    <guid isPermaLink="false">d8e8ced38136e1867f222db2e2820ae4</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.9 | The YaySMTP – WP Mail SMTP with Email Logs, Tracking &amp; Reports plugin for WordPress is vulnerable to time-based SQL Injection via the 'params[searchKey]' parameter in all versions up to, and including, 2.7.8 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109994 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109994</link>
+    <guid isPermaLink="false">9b530d47cbe6a7dc2060c66c773393d4</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | The Eventin – Events Calendar, Tickets, Registration, Booking &amp; WooCommerce plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 4.1.29 via the 'id' parameter. This makes it possible for authenticated attackers, with subscriber-level access and above, to extract the email address and phone number of any WordPress user, including administrators, by supplying their user id in a query-string parameter while placing the authenticated user's own id in the URL path.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110776 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110776</link>
+    <guid isPermaLink="false">084af3466497b99b0d84bb414b9c24dc</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.2 | The MDTF – Meta Data and Taxonomies Filter plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'vars' parameter in all versions up to, and including, 1.4.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires that a published page or post on the target site contains the [meta_data_filter_results] shortcode, which is the primary output feature of the plugin.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115831 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115831</link>
+    <guid isPermaLink="false">aba777322ddef26e3bb99e8b3cc3f1ab</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.3 | The VOD Infomaniak plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 1.5.15. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to initiate unauthorized video imports using the site owner's Infomaniak API credentials, consume the site owner's VOD account quota, and insert arbitrary rows into the wp_vod_upload table causing public shortcodes to resolve to attacker-chosen video content. This action is explicitly reserved for Contributor-level and above by the plugin's own role-rights system, meaning subscriber access is intentionally forbidden by design — the AJAX handler simply omits the enforcement.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-116592 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116592</link>
+    <guid isPermaLink="false">94807ae95a91ba3f52ea8fde635cb410</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.4 | undici is an HTTP client for Node.js. In versions 7.30.1 and 8.12.2 through 8.12.3, when an originless Agent composes the redirect and shared cache interceptors, undici decides whether to store the final response under the original request key by inspecting only the final redirect hop, which bypasses the earlier fix for CVE-2026-109829 that compared only the initial and final origins. A redirect that bounces through an untrusted origin and returns to the trusted origin is still cached under the trusted key, an intermediate hop's Vary is dropped so a response that varies on Authorization or Cookie can be served to a different user, and an intermediate hop's no-cache or default-uncacheable status is ignored so a non-storable redirect is laundered into a cacheable entry. An attacker who controls a redirect target from a trusted URL can poison the cached entry for that URL or have a private, per-user response served to a later caller. The issue is fixed in undici 7.30.2 and 8.12.4, and users should upgrade to one of those versions or later. As a workaround, compose the interceptors as cache then redirect, use per-origin dispatchers and cache stores, or disable shared caching on redirect-capable requests.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120222 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120222</link>
+    <guid isPermaLink="false">34cbaeb19aa928ef5375cdbeb61034e0</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.9 | undici is an HTTP client for Node.js. In versions 7.0.0 through 7.30.1 and 8.0.0 through 8.12.3, when the cache interceptor is composed with a downstream handler that throws during response processing (such as the built-in dump interceptor exceeding its maxSize, or the decompress interceptor rejecting more than five Content-Encoding values), a throw raised asynchronously while a cached response is replayed escapes as an uncaught exception or unhandled promise rejection and terminates the Node.js process. A malicious or compromised HTTP server can crash any such client by serving a cacheable response that triggers the throw on replay, including on a 304 revalidation of a stale entry, so the impact is availability only. The issue is fixed in undici 7.30.2 and 8.12.4, and users should upgrade to one of those versions or later. As a workaround, avoid composing the cache interceptor with a response handler that throws during response processing until upgrading.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120415 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120415</link>
+    <guid isPermaLink="false">dbb8318199154fa1b2ad518da6511139</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.9 | undici is an HTTP client for Node.js. In versions 7.0.0 through 7.30.1 and 8.0.0 through 8.12.3, the redirect interceptor strips sensitive headers such as Authorization, Cookie, Proxy-Authorization, and Host when a request is redirected to a different origin, but when request headers are supplied as an array of name and value tuples (a valid documented input, for example from Object.entries), the redirect handler misreads them as a flat list so the header names never match and the sensitive headers are not removed. If a header-normalizing interceptor such as cache or deduplicate is composed outside the redirect interceptor, it then serializes the retained headers onto the cross-origin request, disclosing the caller's origin-bound credentials to the unrelated redirect destination. This is a representation-dependent bypass of the cross-origin header stripping added in CVE-2024-30260. The issue is fixed in undici 7.30.2 and 8.12.4, and users should upgrade to one of those versions or later. As a workaround, supply request headers as a plain object or a flat name and value array rather than an array of tuples, or compose the redirect interceptor outside the normalizing interceptor.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120423 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120423</link>
+    <guid isPermaLink="false">8338e4fd39c08bd5d52a9684a233e47b</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.9 | undici is an HTTP client for Node.js. In versions 7.15.0 through 7.30.1 and 8.0.0 through 8.12.3, fetch verifies Subresource Integrity metadata by splitting the integrity string on a single space, but the SRI grammar separates metadata by ASCII whitespace, which also includes the horizontal tab. An integrity value whose digest is preceded by a tab or other ASCII whitespace is parsed as a single unrecognized token and skipped, and when no recognized algorithm remains undici treats the integrity list as empty and accepts the response, so a server returning a body different from the pinned digest passes the check. An application that pins a response with a valid but whitespace-surrounded SRI value receives attacker-controlled bytes with no integrity error, and the attacker needs only to control the response body, not the integrity metadata. The issue is fixed in undici 7.30.2 and 8.12.4, and users should upgrade to one of those versions or later. As a workaround, supply SRI integrity metadata without surrounding whitespace, using a single space to separate multiple digests.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120474 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120474</link>
+    <guid isPermaLink="false">1f34e3a0113aef7b92dd3087db54fc6d</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | undici is an HTTP client for Node.js. In versions 7.0.0 through 7.30.1 and 8.0.0 through 8.12.3, when the redirect interceptor and a shared response cache are used together, an authenticated request that is redirected to a same-origin target has the final response stored under the original request's cache key. That key omits the credential and carries no Vary header, so a later anonymous or different user can be served the first user's private response body. This results in cross-user disclosure of cached private responses. The issue is fixed in undici 7.30.2 and 8.12.4, and users should upgrade to one of those versions or later.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120550 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120550</link>
+    <guid isPermaLink="false">66b9e9a06f4a8114b771d4e2faf848a1</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.4 | The WP User Manager – Registration Form, Login Form, User Profile Builder &amp; Member Directory plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'name (REST users endpoint) -&gt; wp_users.display_name' parameter in all versions up to, and including, 2.10.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The payload is stored via the WordPress core REST endpoint POST /wp-json/wp/v2/users/me, which bypasses the plugin's own wpum_sanitize_text sanitizer applied on its front-end account form, making the save-time sanitization ineffective as a mitigation.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120659 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120659</link>
+    <guid isPermaLink="false">7f203bc14d8034b509c63375b084862d</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.3 | The Redirection for Contact Form 7 plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 3.2.14 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to write arbitrary post meta values to newly created lead posts and copy arbitrary server-side files with allowed MIME-type extensions into the plugin's uploads directory. Exploitation requires a published Contact Form 7 form configured with the Save Entry (Save Lead) action enabled on the target site.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123087 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123087</link>
+    <guid isPermaLink="false">ba3e75c1d72aac9ba03d410ee2831f41</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 8.7 | SQL injection vulnerability in Atmira’s SIREC. The server retrieves the value of a field from a JSON object containing user-supplied information and concatenates it into an SQL statement without properly sanitising the input. This allows the original query to be altered via malicious input, causing the database to return unexpected information.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-33379 - NVD - CVSS Score v3.1: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33379</link>
+    <guid isPermaLink="false">16cf0e016bcde7a5d8e843aa853f92ba</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 8.5 | A user with any role, including Viewer or a service account with no permissions, can create, externally publish, and delete dashboard snapshots (missing authorization). Only Grafana OSS and Grafana Enterprise 12.4 are affected; earlier versions and Grafana 13 are not.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-87964 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87964</link>
+    <guid isPermaLink="false">ce1c49e83b09bc4e43daa42f3ee248d8</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Product Feed Manager for WooCommerce – CTX Feed – Support 220+ Shopping, AI &amp; Social Channels plugin for WordPress is vulnerable to PHP Code Injection in all versions up to, and including, 8.0.26. This is due to insufficient sanitization of the `feedConfigCustom2` parameter — only `wp_unslash()` is applied before the value is stored verbatim via `update_option()`, and during feed generation the `Custom2Template::evaluate_return()` method passes the stored `{(return ...)}` template expressions directly to PHP's `eval()` function without any code-level sanitization. This makes it possible for authenticated attackers, with Shop Manager-level access and above, to inject and execute arbitrary PHP code on the server, escalating their privileges beyond what the role normally permits to full remote code execution and site takeover. The `ctxfeed_custom2_eval_enabled` option defaults to `true`, meaning no additional administrator configuration is required for this attack path to be exploitable out of the box.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97642 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97642</link>
+    <guid isPermaLink="false">2db883e73eb0704a3a5be6cf081a8cfe</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Wp Parsidate plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the calendar Gutenberg block's 'theme' attribute in versions up to, and including, 6.4. This is due to insufficient input sanitization and output escaping on the block attribute value which is concatenated directly into an HTML class attribute in the printCalendar() function without esc_attr(). This makes it possible for authenticated attackers, with Contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
     <category>NVD</category>
     <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
   </item>
