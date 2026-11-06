@@ -5,143 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 22:01:31 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-124029 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124029</link>
-    <guid isPermaLink="false">5010948dfb84cee6d7fc6ba42bea12da</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 6.9 | Kopia through 0.23.1 contains a path traversal vulnerability in copyDirectoryContent that allows users with repository write access to escape the restore directory via crafted entry names. Attackers can create snapshots whose directory manifest entries are named '..', so victims restoring with default options write attacker-chosen content outside the restore directory.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124030 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124030</link>
-    <guid isPermaLink="false">d53aaaa7220003c54d0c72e7991c4de0</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC through 26.07.0 contains a type confusion vulnerability in gf_sg_command_apply() in src/scenegraph/commands.c that fails to verify BIFS field-replace command types match target node fields. Attackers can supply a crafted XMT file opened with MP4Box, such as via chapter import, causing gf_sg_vrml_field_clone() to memcpy from invalid pointers and crash.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124031 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124031</link>
-    <guid isPermaLink="false">8f9126d2bf19ed7b88c05383326c0c01</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC through 26.07.0 contains a type confusion vulnerability in drawable_get_aspect_2d_mpeg4() and TraverseShape() that casts a Shape's appearance node to M_Appearance without checking its node tag. Attackers can supply a crafted XMT file placing another node type, such as Conditional, in the appearance field to trigger an invalid memory read and crash MP4Box.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124039 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124039</link>
-    <guid isPermaLink="false">079da6c67b0d2d48af6442e7aee9be57</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 4.8 | Gitleaks through 8.30.1 contains an incorrect permission assignment vulnerability that allows local users to read scan reports because cmd/root.go creates the --report-path file with os.Create and default permissions. Unless --redact is passed, other local users on shared hosts or CI runners can read plaintext secrets and matching lines to obtain discovered credentials.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124040 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124040</link>
-    <guid isPermaLink="false">b3f441c6a54d90b9ff6d4a10e0c86212</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 9.2 | CivetWeb through 1.16, when built with USE_HTTP2 and enable_http2 on, contains a use-after-free vulnerability in handle_http2() that retains freed :method and :path pointers. Unauthenticated remote attackers can send a later HEADERS frame omitting these pseudo-headers to influence request method or path seen by access rules, or crash the server.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-33050 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-33050</link>
-    <guid isPermaLink="false">021a71548890ff597733576820e372c5</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 8.8 | GeoNode is a geospatial content management system, a platform for the management and publication of geospatial data. Prior to 5.1.0, a crafted vector file layer name supplied during upload allows a low-privileged remote user to inject shell syntax and execute arbitrary operating-system commands on the GeoNode server. This issue is fixed in version 5.1.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-46429 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46429</link>
-    <guid isPermaLink="false">cc29d47c452d67fc06662026d8c43c12</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.5 | GeoNode is a geospatial content management system, a platform for the management and publication of geospatial data. Prior to 5.0.3, specially crafted requests can circumvent GeoNode upload service validation, allowing a low-privileged remote user to store and serve malicious files. This issue is fixed in version 5.0.3.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-55449 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55449</link>
-    <guid isPermaLink="false">4377ca1e6e889f715275b8af1216b892</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 5.3 | CloudBeaver is a cloud database manager. Prior to 26.1.2, its resource-management project resolution accepts project identifiers without validating that they are safe path components. An authenticated user with resource-management privileges can supply a crafted project identifier that causes path resolution to escape the shared-projects directory and enumerate directory names elsewhere on the server. This can disclose filesystem layout information. Arbitrary file reads, writes, and deletion are not confirmed. The issue is fixed in 26.1.2 by validating project names before resolving the shared-project path.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-55649 - NVD - CVSS Score v3.1: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55649</link>
-    <guid isPermaLink="false">4e6d81cb22433165c4c7860da6b6a359</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.3 | GeoNode is a geospatial content management system, a platform for the management and publication of geospatial data. Prior to 5.0.3, document abstract metadata is stored without sanitization, allowing a low-privileged remote user to persist arbitrary HTML and JavaScript that executes in another user's browser when the document page is visited. This issue is fixed in version 5.0.3.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-58490 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58490</link>
-    <guid isPermaLink="false">e8e9be05ecce48955d0634511a248575</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 9.8 | Tracecat is an open-source security automation platform for teams and AI agents. From version 0.37.0 until 1.0.0-beta.49, Docker Compose deployments with SAML enabled can render SAML_SIGNED_ASSERTIONS and SAML_SIGNED_RESPONSES as empty values, overriding secure application defaults and disabling both signature requirements. An unauthenticated attacker who can reach the SAML assertion consumer endpoint can submit a forged unsigned response for an existing Tracecat user email address and obtain that user’s session. Targeting an existing superadmin can result in superadmin account takeover. Exploitation does not create users when SAML user creation is disabled and does not affect default Fargate or Helm deployments. Version 1.0.0-beta.49 removes the insecure deployment pass-through and requires signed assertions and responses.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-63663 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63663</link>
-    <guid isPermaLink="false">4eb2030a5244469e8682617ce3449439</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | CloudBeaver is a cloud database manager. From version 23.2.3 until 26.1.2, a path traversal vulnerability in its SQL result-editing functionality allows an authenticated user with SQL result-editing privileges to cause the server to open files outside the intended temporary upload directory. In affected database value-handling scenarios, this can disclose local files readable by the CloudBeaver server process. Version 26.1.2 prevents traversal outside the intended temporary upload directory.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-63664 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63664</link>
-    <guid isPermaLink="false">a8f73d69c0fc8b83e9ab2001850fed6d</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | CloudBeaver is a cloud database manager. In versions up to and including 26.1.1, some server-side export operations do not consistently enforce the global data export restriction. An authenticated non-administrative user with access to a shared database connection can initiate certain server-side data exports even when an administrator has disabled exports. This can disclose database contents that the user is permitted to query but is not permitted to export. The issue does not grant additional database read privileges. It is fixed in 26.1.2 by consistently enforcing the global restriction for server-side exports.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-65960 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65960</link>
-    <guid isPermaLink="false">d39221808e3da20332a565c3b96b772a</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 8.8 | Tetragon is an eBPF-based security observability and runtime enforcement project. Versions before 1.7.0 can use a Helm default that exposes the privileged Tetragon gRPC API through an unauthenticated TCP listener on localhost:54321. An attacker who can run or compromise same-node hostNetwork pods can reach the listener and invoke privileged methods without authentication. These methods can add, delete, or reconfigure tracing policies and change debug settings, potentially resulting in privilege escalation or container escape. Version 1.7.0 changes the default endpoint to a Unix-domain socket. Deployments that do not expose an unauthenticated TCP listener are not affected.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-73860 - NVD - CVSS Score v4.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73860</link>
-    <guid isPermaLink="false">b773386514e4cbc372bfb03b81b5d828</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 5.4 | CRIU is a checkpoint and restore tool for Linux. Prior to 4.2.1, CRIU injects a syscall;int3 sequence at the start of the first executable virtual memory area and resumes the target process to execute parasite code. Malicious code in the target process can keep an rseq critical section armed over that injection point so the kernel's restartable-sequence abort redirects execution to an attacker-controlled callback when CRIU resumes the process. In container snapshot environments, the hijacked parasite runs with seccomp disabled and a relaxed AppArmor profile and supplies trusted data to the privileged CRIU process, which can enable higher-privilege code execution. This issue is fixed in version 4.2.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-54991 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-54991</link>
-    <guid isPermaLink="false">d231c120a5ef14f1e17082edf956b563</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.5 | JupyterLab Desktop is the cross-platform desktop application for JupyterLab. Prior to 4.6.2-1, JupyterLab Desktop for macOS declared the com.apple.security.cs.allow-dyld-environment-variables entitlement, allowing the dynamic linker to honor DYLD_INSERT_LIBRARIES despite the hardened runtime. An attacker who can already execute code as the current user can load an arbitrary dynamic library into the JupyterLab Desktop process and inherit TCC permissions previously granted to the application, including access to protected Documents, Desktop, or Downloads folders without another macOS prompt. Exploitation requires existing local code execution and prior TCC grants; it does not provide initial or remote code execution. Windows and Linux are not affected. This vulnerability is fixed in 4.6.2-1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-55002 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-55002</link>
-    <guid isPermaLink="false">4fc2d118f7becf037b629c8a5d9d2c7a</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.5 | JupyterLab Desktop is the cross-platform desktop application for JupyterLab. Prior to 4.6.2-1, JupyterLab Desktop for macOS shipped with Electron's RunAsNode fuse enabled, allowing ELECTRON_RUN_AS_NODE to execute arbitrary Node.js code in the application process. An attacker who can already execute code as the current user can therefore run code in JupyterLab Desktop's context and inherit TCC permissions previously granted to the application, including access to protected Documents, Desktop, or Downloads folders without another macOS prompt. Exploitation requires existing local code execution and prior TCC grants; it does not provide initial or remote code execution. Windows and Linux are not affected. This vulnerability is fixed in 4.6.2-1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102344 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102344</link>
-    <guid isPermaLink="false">ebd73b1e5f69c19ac611d2c9aed8c1fc</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 8.1 | Lavish is the new editor for your HTML artifacts. Prior to 0.1.43, the lavish-axi loopback HTTP server did not authenticate requests or validate Host and Origin values on session, artifact, prompt, and polling routes. A website visited while the server is running can use DNS rebinding to send same-origin browser requests to the local service. POST /api/sessions accepts a caller-selected file path and returns its deterministic session key; GET /artifact/:key/index.html then returns the file contents, allowing disclosure of any file readable by the server process without an existing session. An attacker can also queue text through POST /api/:key/prompts for an active agent session when the artifact path is known or guessed. Visiting the attacker-controlled website is the required user interaction. This vulnerability is fixed in 0.1.43.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Fri, 06 Nov 2026 23:02:33 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-102530 - NVD - CVSS Score v4.0: 9.4</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102530</link>
@@ -327,6 +191,142 @@ This issue affects grpc_server: from 1.0.0 before 1.0.6.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86044</link>
     <guid isPermaLink="false">cd00820fb7b14b25aa8a407b186a13bb</guid>
     <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 9.6 | JupyterLab Desktop is the cross-platform desktop application for JupyterLab. Prior to 4.6.2-1, JupyterLab Desktop exposed getServerInfo to the renderer without confirming that the current page still had the local Jupyter server origin. In a local managed session using JupyterLab before 4.4.8, an attacker can place a crafted MathJax link in an untrusted notebook. If a victim opens the notebook and clicks the link, the existing renderer navigates to an attacker-controlled site while retaining access to the preload bridge. The site can call getServerInfo to obtain the local server URL and authentication token, then use the Jupyter REST API to create and trust a notebook that executes arbitrary code as the victim. Users whose environment already uses JupyterLab 4.4.8 or later are unaffected because the corrected link handling breaks the first step of the chain. This vulnerability is fixed in 4.6.2-1.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-103022 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103022</link>
+    <guid isPermaLink="false">5f8d8a29ff2a435972a7285d8e10adca</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.3 | Urwid is a console user interface library for Python. Prior to 4.0.7, handle_short_request() in urwid/display/web.py performs unguarded character encoding on POST input and unguarded UTF-8 decoding on polling update socket output. A remote attacker who obtains a valid X-Urwid-ID session token can submit non-ASCII POST data that raises UnicodeEncodeError, while non-UTF-8 polling output raises UnicodeDecodeError, causing the CGI handler to return an error and terminate request processing. The POST exception path also leaves an opened file descriptor unclosed for the CGI process lifetime, so repeated requests can cause denial of service for the web display interface. This issue is fixed in version 4.0.7.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104254 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104254</link>
+    <guid isPermaLink="false">9a33c491695381498e687c35f532a0ed</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.3 | liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. From 0.11.0 through 0.16.0, builds configured with OQS_ENABLE_SIG_STFL_LMS=ON can read beyond a caller-supplied signature buffer when an untrusted truncated LMS or HSS-LMS signature reaches OQS_SIG_STFL_verify or OQS_SIG_STFL_alg_lms_verify. In hss_validate_signature_init() in src/sig_stfl/lms/external/hss_verify_inc.c, consumed-length checks do not ensure that the bottom-level q and C fields remain available, allowing up to 32 bytes to be read past the buffer. In version 0.16.0, is_hss_public_key() also reads at offset 8 after only a four-byte length check, allowing an over-read of up to eight bytes. No valid signature is required, but the public key must be syntactically plausible. The read data is consumed only by an internal hash and is not exposed, so the supported impact is a possible verifier crash and denial of service, not memory disclosure or acceptance of an invalid signature. This issue is scheduled to be fixed in version 0.17.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104267 - NVD - CVSS Score v4.0: 4.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104267</link>
+    <guid isPermaLink="false">3f30250181c2c1894cea663a88936b7d</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 4.1 | Botan is a C++ cryptography library. From 2.7.0 until 3.13.0, Botan's Scrypt implementation on 32-bit platforms computes required memory with unchecked multiplication, allowing attacker-controlled Scrypt parameters to wrap the allocation size and create a buffer smaller than the algorithm subsequently writes. The issue affects systems that enable Scrypt and accept arbitrary parameters from a hostile source, including applications that decrypt attacker-supplied encrypted private keys. A triggering parameter set can cause approximately four gigabytes of Scrypt output to be written past the allocated heap buffer, immediately crashing the process and causing denial of service. Arbitrary code execution is not demonstrated and appears difficult, but cannot be excluded from the overwrite primitive. This issue is fixed in version 3.13.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119800 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119800</link>
+    <guid isPermaLink="false">f9da9ac666ec129abdea01dc2cbf2f93</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.3 | Ryot is a self-hosted personal tracking application. Prior to 10.5.6, the collectionContents GraphQL query implemented by collection_contents() in crates/services/collection/src/content_operations.rs accepts a caller-controlled CollectionContentsInput.collection_id and returns a collection without checking whether the authenticated user owns it, collaborates on it, or may view it. The caller's user id is used only to annotate the response, allowing any authenticated user who obtains another collection's id to read the owner's identity, collection name and description, reviews, and complete item list across the tenant boundary. This issue is fixed in version 10.5.6.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123788 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123788</link>
+    <guid isPermaLink="false">0fba92d3335bdec6253fd762aa76f950</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 5.3 | A security vulnerability has been detected in chenyme grok2api up to 3.1.6. The impacted element is an unknown function of the file backend/internal/transport/http/inference/voice_ws_handler.go of the component STT Billing. The manipulation leads to enforcement of behavioral workflow. The attack may be initiated remotely. Upgrading to version 3.1.7 is sufficient to resolve this issue. The identifier of the patch is 7ad0f791f0a9eb5a0ddfe38ac4dfcef01e19a6d4. Upgrading the affected component is recommended.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123791 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123791</link>
+    <guid isPermaLink="false">d37abaccc3061391ab463667e9d81e06</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was detected in OpenBMB Internet of Agents up to 9d78e88e47160eb42ee1ee8538c05e1c2c47877a. This affects the function _primary_field_query of the file common/utils/milvus_utils.py of the component Agent Registry. The manipulation of the argument key results in improper neutralization of special elements in data query logic. The attack may be launched remotely. The exploit is now public and may be used. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-44519 - NVD - CVSS Score v3.1: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44519</link>
+    <guid isPermaLink="false">0c6e4e48aeff2e78479c8df1b73e725e</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.1 | liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. Prior to 0.16.0, the ct_select function in src/kem/frodokem/external/util.c for the FrodoKEM-640, FrodoKEM-976, and FrodoKEM-1344 AES and SHAKE reference variants lacks a value barrier in the Fujisaki-Okamoto implicit-rejection path. When compiled with Clang 17 or later at an affected optimization level such as -Os, the compiler can emit a secret-dependent conditional load, causing the real and rejection secret paths to leave distinguishable cache residency after successful and failed decapsulation. A local attacker able to perform repeated cache-timing measurements may use this oracle as part of a private-key recovery attack. Default -O3 builds vectorize both source loads and do not exhibit the reported behavior, and the advisory does not report the same generated memory-access pattern in NTRU, NTRU-Prime, BIKE, HQC, Classic McEliece, Kyber, or the already-barriered ML-KEM implementation. This issue is fixed in version 0.16.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-47738 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47738</link>
+    <guid isPermaLink="false">69a2091a5f41212f4fb5a8462dda1e26</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.3 | liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. Prior to 0.16.0, OQS_KEM_encaps_derand can dereference an uninitialized encaps_derand function pointer when called on NTRU-HPS-2048-509, NTRU-HPS-2048-677, NTRU-HPS-4096-821, NTRU-HPS-4096-1229, NTRU-HRSS-701, or NTRU-HRSS-1373. The affected NTRU constructors omit the OQS_KEM.encaps_derand member because those schemes do not support derandomized encapsulation, OQS_KEM objects are allocated without zero initialization, and the wrapper in src/kem/kem.c checks only that the OQS_KEM pointer is non-null before calling through the residual heap value. An application is affected only if it instantiates one of those six NTRU KEMs and invokes OQS_KEM_encaps_derand on it. The supported impact is a calling-process crash and denial of service. This issue is fixed in version 0.16.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-48057 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48057</link>
+    <guid isPermaLink="false">8e84af8c82578c5a87fbe8c17820c34d</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 2.1 | Botan is a C++ cryptography library. Prior to 3.13.0, Botan's X.509 Distinguished Name decoder flattens the Attribute-Value Assertions in each Relative Distinguished Name and loses multi-value RDN grouping before DN name-constraint enforcement. An attacker controlling a name-constrained intermediate CA can issue a certificate with a multi-value RDN whose first Common Name matches the permitted constraint and whose second Common Name is attacker-chosen, causing the constraint check to accept the flattened first value. If the certificate contains no subjectAlternativeName extension, the second Common Name can then be accepted as a hostname; Botan does not fall back to Common Name hostname matching when any subjectAlternativeName is present. The exposure is limited to deployments using DN name constraints, which are uncommon outside internal PKIs, and to certificates without a subjectAlternativeName. This issue is fixed in version 3.13.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-50240 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-50240</link>
+    <guid isPermaLink="false">ff6d4c7937b035e2daee7f8aa7a4a052</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 8.8 | A flaw was found in OpenShift Pipelines-as-Code (PAC). PAC does not verify whether the creator of a Repository custom resource has permission to create PipelineRuns. A namespace user with only Repository and Secret create/delete permissions can cause PAC to execute attacker-controlled PipelineRuns as the auto-provisioned pipeline ServiceAccount, which carries ClusterRole/edit by default. This results in namespace-scoped privilege escalation, enabling Secret read, resource creation/modification/deletion, and potential supply chain injection in CI/CD namespaces.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-59104 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59104</link>
+    <guid isPermaLink="false">1409f78b89fd66bbce4f62de4afccd14</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 9.3 | UgCS server before 6.2 contains an authentication bypass in the HCI protocol login handler (LoginHandler) exposed on TCP port 3334. When the user database contains exactly one user (the default single-operator installation), a LoginRequest with empty userLogin and userPassword fields is interpreted as \&quot;use the only user\&quot; rather than as invalid credentials, and the server returns a fully authenticated session. Because the service listens on all interfaces (0.0.0.0) without TLS by default, an unauthenticated remote attacker with network access to port 3334 can obtain an authenticated session without knowing any credential and then issue privileged commands, including commanding connected drones and uploading flight routes.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-68933 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68933</link>
+    <guid isPermaLink="false">04de6c9fe13eac9c65a10e15060f378e</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.5 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, public dashboard passwords were stored in plaintext, accepted through a URL query parameter, and checked without effective attempt throttling. The vulnerable surface is public password-protected dashboard storage and validation routes. An unauthenticated attacker targets a public password-protected dashboard and repeatedly submits candidate passwords or obtains password-bearing server or proxy logs. Unlimited online guesses enable brute force, while cleartext storage and URL transport expose the secret in application storage and server or proxy access logs. The target must be a public dashboard with password protection enabled. Even failed attempts reveal chart count and configuration without the password; a recovered password grants access to the protected dashboard and its chart data. This vulnerability is fixed in 5.2.3.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-68935 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68935</link>
+    <guid isPermaLink="false">e37de58fcc064518f4e0579fe17476a9</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 9.1 | Chartbrew is an open-source web application for creating charts from databases and APIs. In versions 4.8.5 through 5.2.2, API connection creation and update operations accept the internal  allowPrivateHost  field from user input. An authenticated user with permission to manage API connections can enable this field to bypass private and reserved-network destination restrictions. An upgrade migration also enables the override on pre-existing API connections. The per-connection setting takes precedence over  CB_ALLOW_PRIVATE_NETWORK_CALLS , so disabling that instance option does not protect connections with the override enabled. Successful exploitation allows requests to internal HTTP services reachable from the Chartbrew server, potentially disclosing information or triggering unauthorized actions depending on the target service. Recognized cloud metadata endpoints remain separately blocked. This issue is fixed in version 5.2.3.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-69128 - NVD - CVSS Score v4.0: 4.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69128</link>
+    <guid isPermaLink="false">fd119693b510bf1e9fb577977ddf7e7e</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 4.6 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In 5.2.2, the AI SQL blocklist omitted sibling PostgreSQL filesystem functions and failed to match double-quoted identifier forms of denied functions. The vulnerable surface is the AI query tool's PostgreSQL SQL-validation blocklist. A team Owner or Admin uses an AI-enabled PostgreSQL connection whose database role can call server-side file functions and causes generated SQL to use an unlisted sibling function or a double-quoted denied function. Unlisted sibling functions remain allowed, and double-quoted function identifiers bypass the denylist regular expressions and reach PostgreSQL. AI features must be enabled and the user must have elevated Chartbrew privileges. A PostgreSQL superuser or pg_read_server_files role can resolve absolute paths to files readable by the PostgreSQL OS user, while a non-superuser is limited to the source-stated PGDATA-relative scope. This vulnerability is fixed in 5.2.3.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77442 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77442</link>
+    <guid isPermaLink="false">89b05390ae7d961eb0ec98817c11074e</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.9 | Ryot is a self-hosted personal tracking application. Prior to 10.4.0, the createOrUpdateUserIntegration GraphQL mutation in crates/services/user/src/integration_operations.rs allows a low-privileged authenticated user to supply another user's integrationId to create_or_update_user_integration() without an ownership check. SeaORM treats the supplied primary key as an update target, and the operation assigns the caller's user_id while replacing the targeted integration's provider_specifics and other configuration, which can transfer ownership, overwrite configuration, or disable the victim's integration. Exploitation requires obtaining the victim's non-brute-forceable integration id, and the vulnerable update does not disclose existing stored credential values. This issue is fixed in version 10.4.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94618 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94618</link>
+    <guid isPermaLink="false">6afd2b8b4b13abd49bd3aa8cb7a0a436</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.4 | FileGator is a multi-user file manager. Prior to 7.15.0, GET /batchdownload in backend/Controllers/DownloadController.php uses batchDownloadStart() to stream a shared temporary archive selected by the request-supplied uniqid without checking that the current session created it. In deployments with distinct per-user home directories, a valid user with read, download, and batchdownload permissions who obtains another user's active archive id can cross that boundary and retrieve the victim's batch archive. The archive lifetime and id-acquisition requirement limit exploitation, but a successful replay also deletes the victim's pending archive. This issue is fixed in version 7.15.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94619 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94619</link>
+    <guid isPermaLink="false">e637deeb9cd7d8195dcc62d11504e655</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.9 | FileGator is a multi-user file manager. Prior to 7.15.0, POST /upload in backend/Controllers/UploadController.php uses the request-supplied resumableFilename as an unnamespaced key in shared temporary storage. In a multi-user deployment configured with distinct per-user home directories, a low-privileged user with upload permission can set resumableTotalChunks and resumableTotalSize to zero so the assembly loop writes no data, after which the handler reads a pre-existing temporary file with that name, stores it in the attacker's home directory, and removes it. The same filename path can append data when chunks are supplied, allowing disclosure, modification, or deletion of another user's transient object, including a pending archive or the login rate-limit lockfile, while Tmpfs path sanitization limits the primitive to the temporary directory. This issue is fixed in version 7.15.0.</description>
     <category>NVD</category>
     <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
   </item>
