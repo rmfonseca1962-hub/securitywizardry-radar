@@ -5,162 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 14:01:01 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-123335 - NVD - CVSS Score v3.1: 3.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123335</link>
-    <guid isPermaLink="false">ec28d7ec200e8513f0fa86fe8fbf7f77</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 3.5 | In JetBrains YouTrack before 2026.2.19562, 
-2026.1.14137, 
-2025.3.169041 missing authorization  allowed attaching tags to any issue via the tag issues collection</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123336 - NVD - CVSS Score v3.1: 3.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123336</link>
-    <guid isPermaLink="false">ef0f64c53b89dbf70249cb489e8feb53</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 3.1 | In JetBrains YouTrack before 2026.2.19728 the attachment size limit could be bypassed via AI assistant thread conversion</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123337 - NVD - CVSS Score v3.1: 3.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123337</link>
-    <guid isPermaLink="false">797bb7d9f9ec031203e2a504526f3279</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 3.1 | In JetBrains YouTrack before 2026.2.19656 users without update permission could change issue visibility</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-66293 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-66293</link>
-    <guid isPermaLink="false">08a0e5f3f6aaa836b883acb1cd115d28</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 2.1 | XML injection in the encoder of Saxy. Saxy.Encoder does not neutralize the -- sequence in XML comment content: escape_comment/2 returns the comment binary unchanged in every clause and only appends a space when the comment ends in a single -, so neither an interior -- nor a full --&gt; is escaped or rejected before the encoder wraps the content in the &lt;!-- and --&gt; delimiters.
-
-When an application serializes attacker-controlled text as a comment, through Saxy.XML.comment/1 or a raw {:comment, text} simple form child, the attacker can close the comment early with --&gt; and inject arbitrary sibling markup into the serialized document. A downstream parser then sees elements, attributes, and text that the application never built. Where the document is rendered as HTML or SVG, the injected markup executes as stored cross-site scripting; where it is consumed by another XML processor, the attacker can forge data that the producing application never emitted. Documents that Saxy only parses are not a vector.
-
-This issue affects saxy: from 0.7.0 before 1.7.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-66294 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-66294</link>
-    <guid isPermaLink="false">28fba897b4cea1e84f261c03f240ad85</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 2.1 | XML injection in the Saxy XML encoder. Saxy.Encoder.cdata/1 serializes a {:cdata, characters} node by wrapping the supplied characters between &lt;![CDATA[ and ]]&gt; and passing the payload through byte for byte. The encoder's character-data and attribute-value paths escape the XML metacharacters &lt;, &gt;, &amp;, &quot;, and ', but the CDATA path applies no neutralization at all. XML provides no character escaping mechanism inside a CDATA section, so the only correct way to represent a ]]&gt; substring is to split the section and rejoin it as ]]]]&gt;&lt;![CDATA[&gt;. Saxy neither performs that split nor rejects the substring.
-
-An application that renders untrusted text as CDATA, by building the node with Saxy.XML.cdata/1 and serializing it with Saxy.encode!/2 or Saxy.encode_to_iodata!/2, therefore lets an attacker terminate the section at a position of their choosing. Everything supplied after the ]]&gt; is emitted outside any CDATA context and is parsed as markup, so a single attacker-controlled text field becomes attacker-controlled document structure: arbitrary sibling elements and attributes that the application never built. Downstream consumers of the serialized document accept the injected markup as genuine. Services that generate SOAP envelopes, RSS or Atom feeds, sitemaps, SVG, or XML exports from user-supplied content can have trusted fields forged or overridden. Applications that never place untrusted text in a CDATA node are not affected.
-
-This issue affects saxy: from 0.7.0 before 1.7.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-66295 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-66295</link>
-    <guid isPermaLink="false">c91220f8120e3a00aed0a0b2909f2c90</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 2.1 | Saxy's XML encoder writes the target and the content of a processing instruction into the output document verbatim, without validation or escaping. The encoder builds the construct by concatenating both fields between &lt;? and ?&gt;, so neither field is checked against the constraints the XML specification places on it.
-
-Because ?&gt; terminates a processing instruction, a target or content value containing that sequence closes the construct at a position the attacker chooses. Everything the attacker writes after it is emitted as ordinary markup at document level, which allows arbitrary elements, attributes, and further processing instructions to be injected into the serialized document. Appending a matching &lt;? keeps the encoder's own terminator well-formed, so the result still parses and the injection is silent rather than a visible corruption. The target is additionally unconstrained by the XML Name production, which permits injection before the remainder of the processing instruction.
-
-The result is XML injection into a serialized document: the tree the application asks Saxy to encode and the tree a downstream parser reads back are no longer the same. Character data, attribute values, and comments are all escaped by the encoder, so processing instructions are the one construct that passes user bytes through untouched. Since Saxy.XML.processing_instruction/2 is a documented public builder, an application inherits the flaw without misusing the API. The consequences depend on what consumes the XML: forged records in a feed or export read by another system, injected stylesheet or rendering directives, or active content where the output is served to a browser as XML or SVG.
-
-This issue affects saxy: from 0.7.0 before 1.7.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-84155 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84155</link>
-    <guid isPermaLink="false">5cd77b6985760e3dc47521f7890412a0</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 5.3 | CodeChecker's web server fails to fully invalidate a session token on logout when the server runs with more than one API worker process (the default). Each worker process maintains its own
-in-memory session cache; logout only clears the cache of the single worker that handles the request (plus the shared database record). Other workers continue to honor the destroyed token
-from their stale in-memory copies until the session's lifetime expires. An attacker who has captured a valid token can therefore keep impersonating the user after the user has logged out.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-84161 - NVD - CVSS Score v3.1: 4.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84161</link>
-    <guid isPermaLink="false">f6d4764d463c16b4e43af17886703f6a</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.9 | When an operator enables store.analysis_statistics_dir, a network client with PRODUCT_STORE permission for a product can call that product's storeAnalysisStatistics Thrift-over-HTTP method. CodeChecker 6.29.0 decodes the attacker-controlled Base64 string and passes the complete compressed input to one-shot zlib.decompress(). No maximum decompressed size is enforced.
-
-
-
-This gives a correctly authorized, non-superuser store account a high-ratio memory and persistent-disk amplification primitive. The complete output is first materialized as a Python bytes object and is then written to the configured statistics directory. A sufficiently scaled payload can exhaust the API worker or host memory and impair CodeChecker availability.
-
-
-
-The shipped value of store.analysis_statistics_dir is null, so the affected feature is disabled by default. The primary assessment does not rely on authentication being disabled. There is no authorization bypass and no path traversal in this report.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-84164 - NVD - CVSS Score v4.0: 0.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84164</link>
-    <guid isPermaLink="false">d7466690b85024f8a421e7d7876e1a21</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 0.0 | The HTML report that plist-to-html, CodeChecker parse --export html and CodeChecker cmd diff --output html generate puts the report message, the checker name and the source file path into a script block through json.dumps. json.dumps does not escape the less-than character, so a closing script tag in any of those three fields ends the script element and what follows is parsed as HTML.
-
-
-
-
-The input author is whoever controls the analysed tree or a third-party result file that report-converter ingests, or who holds PRODUCT_STORE in the cmd diff flow. The viewer is somebody else: docs/jenkins_gerrit_integration.md documents writing the report into Jenkins userContent and posting its URL into a Gerrit review. One caveat worth stating up front is that Jenkins serves userContent under a restrictive CSP that would block an inline handler, so that destination is probably safe as configured. The generated report sets no CSP of its own, so the impact lands wherever it is published without one.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-66621 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-66621</link>
-    <guid isPermaLink="false">453eb28224c1f54d50df242f59db82ae</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS: não informado | Apache James SASL OAuthBearer/XOAUTH2 prior versions 3.9.1 fails to validate correctly AUD claim of JWT payloads when introspection is not configured.
-
-This allows an attacker with valid credentials to access the mail server even if they are not authorized to do so.
-
-We recommend users to upgrade to non vulnerable version that forces explicit configuration of aud claims and forces introspection.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-103479 - NVD - CVSS Score v3.1: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103479</link>
-    <guid isPermaLink="false">2be24ecc3f52aad14b7e586cbaf40317</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.6 | The Pubjet | پاب‌جت plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 5.4.8. This is due to the `checkToken()` AJAX handler — registered under `wp_ajax_pubjet-check-token` — performing no capability check and no nonce verification before unconditionally writing the attacker-supplied `token` GET parameter directly into the site-wide `pubjet_settings` option via `pubjet_update_setting()`, prior to any remote validation. This makes it possible for authenticated attackers, with Subscriber-level access and above, to overwrite the plugin's stored REST API credential with an attacker-chosen value, immediately elevating their effective privileges to those of an authorized Pubjet API client and enabling them to invoke otherwise-restricted endpoints — `createReportage`, `updateReportage`, `deleteReportage`, `toggleCopyright`, and `createBacklink` — to create, modify, and delete arbitrary reportage posts and manipulate plugin state that Subscribers cannot normally access. The privilege escalation is self-reinforcing: because `RestApi::isTokenValid()` authenticates solely by comparing the incoming `Authorization` header against the value returned by `pubjet_token()`, which reads from the same option the unprotected handler writes to, the attacker-planted token is trusted as legitimate on all subsequent requests.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-103908 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103908</link>
-    <guid isPermaLink="false">a87a5fc7d7920e0b5496de8521084115</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.4 | The The AMP for WP – Accelerated Mobile Pages plugin for WordPress is vulnerable to arbitrary shortcode execution in all versions up to, and including, 1.1.18. This is due to the software allowing users to execute an action that does not properly validate a value before running do_shortcode. This makes it possible for authenticated attackers, with custom-level access and above, to execute arbitrary shortcodes. The vulnerable output block is gated by the 'ampforwp-cat-description' setting, which is enabled by default, meaning the vast majority of installations are affected without any additional configuration change.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104010 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104010</link>
-    <guid isPermaLink="false">e27c3dff8ad8ddad7f80a40bc95de88b</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.5 | The WPSyncSheets For Contact Form 7 – CF7 Google Sheets Connector &amp; Save to Database plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.8.0 via the 'any non-system CF7 field (e.g., your-message)' parameter parameter. This is due to insufficient sanitization of CF7 submission field values before database storage and the absence of an allowed_classes restriction on maybe_unserialize() during admin retrieval. This makes it possible for unauthenticated attackers to execute code on the server. Successful exploitation of the remote code execution gadget chain requires that a Google Sheets access token be configured in the plugin (its primary advertised feature), as this triggers autoloading of the bundled Monolog 2.10.0 library whose classes form the exploitable gadget chain; however, the underlying PHP Object Injection occurs regardless.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107622 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107622</link>
-    <guid isPermaLink="false">9026369af3623d457696444a9cbcfa3b</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 9.8 | The BuddyForms plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.10.5 via a form-type confusion attack through the `bf_post_type` parameter. This is due to the public frontend submission handler `buddyforms_form_response_no_ajax()` authorizing logged-out submissions based solely on the target form's `public_submit` flag while independently trusting the attacker-supplied `$_POST['bf_post_type']` to determine the post type of the newly created object — a cross-check introduced in 2.10.2 applies only to existing posts (`post_id != 0`) and is completely bypassed for new-object creation — combined with the `save_post` listener `buddyforms_edit_form_save_meta_box_data()` lacking both a `current_user_can()` capability check and a form-builder nonce, causing it to unconditionally persist attacker-supplied `$_POST['buddyforms_options']` for any newly inserted `buddyforms` CPT post. This makes it possible for unauthenticated attackers to insert a rogue BuddyForms form configuration with an attacker-controlled `new_user_role` value into the live global form registry, then submit a registration through that form to create a new WordPress account with administrator-level privileges and achieve full site takeover. Exploitation requires the WordPress site to have &quot;Anyone can register&quot; enabled and at least one public BuddyForms form attached to a page, both of which are standard BuddyForms deployment configurations.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107658 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107658</link>
-    <guid isPermaLink="false">fc31c0f7c6ed3d1c9905d4119f616794</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.4 | The BuddyForms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'bf_post_type (and buddyforms_form_content)' parameter in all versions up to, and including, 2.10.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires that at least one BuddyForms form with public submissions enabled exists on the site (so that the required nonce can be harvested from the public form page) and that the active theme registers a widgetized sidebar, allowing the injected customize_changeset to place a malicious Custom HTML widget into the site's front end.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Fri, 06 Nov 2026 15:02:31 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-114630 - NVD - CVSS Score v3.1: 9.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114630</link>
@@ -386,6 +231,126 @@ The fix makes AuthenticatorManager::authenticateUser() dispatch the security.a
     <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.3 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in TÜBİTAK BİLGEM Software Technologies Research Institute pardus-boot-repair allows Path Traversal.
 
 This issue affects pardus-boot-repair: from 1.0.8 before 1.1.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123653 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123653</link>
+    <guid isPermaLink="false">c251db37732dd823921ea5e53ac7766b</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 2.1 | A security vulnerability has been detected in esengine DeepSeek-Reasonix up to 2.52.0. Affected is the function discoverDocs of the file internal/memory/doc.go. The manipulation leads to improper neutralization of input used for llm prompting. The attack can be initiated remotely. The exploit has been disclosed publicly and may be used. Upgrading to version 2.53.0 is able to address this issue. The identifier of the patch is 4ca33493a673c2788aa8598fbca2b2f47a69e1b8. It is suggested to upgrade the affected component.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21849 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21849</link>
+    <guid isPermaLink="false">16c042203694531928d69ecb07f19870</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 3.7 | HCL AION is affected by a missing encryption vulnerability in the WebSocket connection set up by the GenAI web interface. The connection used the unencrypted WebSocket protocol (ws://localhost:8000) instead of an encrypted (wss://) channel. This may allow data exchanged over the connection to be intercepted or read by an attacker on the network, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21850 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21850</link>
+    <guid isPermaLink="false">03887c2f4c71ee46426a25613297d40a</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | HCL AION is affected by a vulnerability where user-controlled input could be included in HTTP response headers without proper neutralization of CR/LF characters. This may allow an attacker to inject headers or split responses, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-35102 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35102</link>
+    <guid isPermaLink="false">492839b85425ad9c7fff8a1c76b5c780</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.7 | HCL AION is affected by an open redirect vulnerability in the navigation bar of the GenAI web interface (Navbar component). The switch-version action redirected the browser to a dynamically constructed URL (window origin + '/workspace') without validating the redirect destination. This may be used in phishing attacks, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-35103 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35103</link>
+    <guid isPermaLink="false">c66345a6ceb05549c6e08333f5b87f3e</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.7 | HCL AION is affected by an open redirect vulnerability on the role assignment pending page (RoleAssignPending component). The redirect to the login page used a URL taken from build configuration (NEXT_PUBLIC_LOGIN_URL) without validating the redirect destination. This may be used in phishing attacks, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-35104 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35104</link>
+    <guid isPermaLink="false">6dab5cc6f9193bc80427478f4cee74cd</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.7 | HCL AION is affected by an open redirect vulnerability on the user registration page (Signup component). The redirect performed after registration used the value of the 'redirect' query parameter without validation, so a crafted registration link could send a user to an untrusted external site. This may be used in phishing attacks, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-35105 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35105</link>
+    <guid isPermaLink="false">e0325b107deea281d2cce85154e1e768</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.7 | HCL AION is affected by an open redirect vulnerability in the session-handling logic of the GenAI web interface (UserContext component, line 78). The redirect to the login page used a URL taken from build configuration (NEXT_PUBLIC_LOGIN_URL) without validating the redirect destination. This may be used in phishing attacks, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-35106 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35106</link>
+    <guid isPermaLink="false">c091dec528129e76662ec5f028f0c6f5</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.7 | HCL AION is affected by an open redirect vulnerability in the session-handling logic of the GenAI web interface (UserContext component, line 89). A second redirect to the login page in this component used a URL taken from build configuration (NEXT_PUBLIC_LOGIN_URL) without validating the redirect destination. This may be used in phishing attacks, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-35107 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35107</link>
+    <guid isPermaLink="false">28bdd61c22eb037b8e22de6ad9c986f6</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.7 | HCL AION is affected by an open redirect vulnerability in the user menu of the GenAI web interface (UserMenu component). The redirect to the login page on logout used a URL taken from build configuration (NEXT_PUBLIC_LOGIN_URL) without validating the redirect destination. This may be used in phishing attacks, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-35109 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35109</link>
+    <guid isPermaLink="false">823d7fac35453c4d88f8c07744273a87</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 3.7 | HCL AION is affected by a vulnerability where pages served over HTTPS could be cached by the browser or intermediate proxies. Sensitive information in cached responses may be retrieved by an unauthorized user with access to the cache, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-35110 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35110</link>
+    <guid isPermaLink="false">9d7c1d0a62bd22d0bf220579dbb35903</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.4 | HCL AION is affected by a vulnerability where encrypted (HTTPS) communication was not enforced for all requests. Data may be transmitted over unencrypted connections and intercepted by an attacker on the network, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-35111 - NVD - CVSS Score v3.1: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35111</link>
+    <guid isPermaLink="false">89456377984594c2607887a24a3c4767</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.8 | HCL AION is affected by a vulnerability where the Cross-Origin-Resource-Policy (CORP) header was missing or insecure, allowing application resources to be loaded by other origins. This may expose resources to cross-origin data leakage, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-35112 - NVD - CVSS Score v3.1: 4.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35112</link>
+    <guid isPermaLink="false">d40a14b97ea17f07442356faf878c592</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.2 | HCL AION is affected by a vulnerability where the Cross-Origin-Embedder-Policy (COEP) header was missing or insecure, so embedded cross-origin resources were not required to explicitly grant permission. This weakens cross-origin isolation, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-35113 - NVD - CVSS Score v3.1: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35113</link>
+    <guid isPermaLink="false">1e1538910a333906e91aba2f124ce39d</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.8 | HCL AION is affected by a vulnerability where the Cross-Origin-Opener-Policy (COOP) header was missing or insecure, allowing cross-origin documents to share a browsing context with the application. This may enable cross-window attacks, potentially resulting in unintended behavior or security impact under certain conditions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-5345 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-5345</link>
+    <guid isPermaLink="false">db4516ba954b411c2111d3f88e05f93a</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 3.7 | HCL AION is affected by a missing encryption vulnerability in a second WebSocket connection defined in the GenAI web interface. The connection used the unencrypted WebSocket protocol (ws://test) instead of an encrypted (wss://) channel. This may allow data exchanged over the connection to be intercepted or read by an attacker on the network, potentially resulting in unintended behavior or security impact under certain conditions.</description>
     <category>NVD</category>
     <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
   </item>
