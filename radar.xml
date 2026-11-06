@@ -5,155 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Nov 2026 23:01:19 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-112902 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112902</link>
-    <guid isPermaLink="false">098ddd885b93639013c8855a4aee45b4</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.3 | Pillow is a Python imaging library. In versions through 12.3.0, the libtiff TIFF encoder can pass arguments to  TIFFSetField()  that do not match libtiff’s definition of the corresponding tag. When an application saves attacker-controlled image metadata through this encoder, crafted tag values can cause invalid memory reads, copying process memory into the encoded output or crashing the process. Applications that return the encoded output to an attacker can disclose that memory. The issue is reachable when re-saving compressed TIFF images and through certain conversions that preserve EXIF metadata into compressed TIFF output. This vulnerability is fixed in version 13.0.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114134 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114134</link>
-    <guid isPermaLink="false">8ae384e7b340f70ce33dddb91979da02</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.7 | Black is the uncompromising Python code formatter. Prior to 26.10.1, the Black GitHub Action with use_pyproject: true accepts tool.black.required-version from pyproject.toml without validating that it is a released Black version specifier. An attacker who can submit a pull request can change that field to a direct reference to attacker-controlled code, causing the workflow to install and execute the code in the victim repository's GitHub Actions context. This issue is fixed in version 26.10.1.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114604 - NVD - CVSS Score v4.0: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114604</link>
-    <guid isPermaLink="false">e73f74744cd7b282ebc9c266a468d22d</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.4 | GraphQL Tools provides utilities for building, stitching, and mocking GraphQL schemas. From 10.10.1 until 12.0.2, the @graphql-tools/utils mergeIncrementalResult helper passes incrementalResult.path segments to setObjectKeyPath without runtime primitive-type validation. A non-primitive segment can bypass strict comparisons against __proto__, constructor, and prototype, then be coerced during property access so a malicious or compromised upstream incremental GraphQL response writes attacker-controlled properties to Object.prototype in the consuming Node.js process. The affected implementation is packages/utils/src/mergeIncrementalResult.ts and is reachable when consumers merge untrusted @defer or @stream transport results. This issue is fixed in version 12.0.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119434 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119434</link>
-    <guid isPermaLink="false">c2c89907482f0f3566c48c2a7d133da4</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in silviucpp ezstd allows an attacker who supplies a zstd frame to ezstd:decompress_using_ddict/2 to exhaust memory and terminate the Erlang VM via a small frame that declares a very large content size.
-
-zstd_nif_decompress_using_ddict in c_src/ezstd_nif.cc reads the frame's declared content size with ZSTD_getFrameContentSize and passes it directly to enif_make_new_binary, without the 1 GiB MAX_BUFFER_SIZE check that ezstd:decompress/1 applies before allocating. A valid 65,550-byte frame of RLE blocks declaring 2 GiB is rejected by ezstd:decompress/1 but is fully allocated and decompressed by the dictionary path. The allocation happens inside a NIF, so when it exceeds the memory available to the VM the operating system kills the whole node rather than the calling process.
-
-This issue affects ezstd: from 1.0.5 before 1.2.5.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-34157 - NVD - CVSS Score v4.0: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-34157</link>
-    <guid isPermaLink="false">8ca16bc83d890b871de61e92f1501131</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.6 | Wails is a framework for building desktop applications using Go and web technologies. From 2.0.0 until 2.13.0, BindingsAllowedOrigins in v2/internal/frontend/originvalidator/originValidator.go passes wildcard patterns to wildcardPatternToRegex, which expands every asterisk to an unrestricted regular-expression match. When an application configures a trailing or partial-label wildcard immediately after an allowed domain, an attacker-controlled lookalike origin can match the allowed suffix and invoke bound Go methods through IPC. A complete-component subdomain wildcard is an unaffected configuration. The resulting confidentiality, integrity, and availability impact depends on the file, database, command, credential, or other operations exposed by the application's bound methods. This issue is fixed in version 2.13.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-46350 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-46350</link>
-    <guid isPermaLink="false">fcb6a1129095c465d257e1a49795e524</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 9.1 | dcmjs is a JavaScript implementation of DICOM manipulation. Prior to 0.52.0, the DecimalString and IntegerString implementations in src/ValueRepresentation.js sanitize text with a permissive regular expression and pass the result to JavaScript's Number constructor without validating finiteness or the DICOM value-representation rules. Scientific notation overflow in a DS or IS field can produce positive or negative Infinity, while stripping alphabetic characters from signed infinity text can leave a sign-only string that converts to NaN. IntegerString also accepts exponent notation and values outside the DICOM signed 32-bit IS range. Applications that trust these parsed values can propagate invalid numbers into spatial geometry, display windowing, dose scaling, frame counts, rescaling, or volume reconstruction, causing incorrect calculations or disrupted processing. This issue is fixed in version 0.52.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-48705 - NVD - CVSS Score v3.1: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48705</link>
-    <guid isPermaLink="false">3344cb0c25474b9b39d264f5a1806619</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 9.3 | MONAI (Medical Open Network for AI) is an AI toolkit for health care imaging. Prior to 1.6.1, PydicomReader._get_affine() trusts non-finite values in the DICOM PixelSpacing, ImagePositionPatient, and ImageOrientationPatient fields and composes them into an affine matrix without validation. An unauthenticated attacker who can upload a crafted DICOM to a default MONAILabel deployment can propagate NaN or infinity values through LoadImaged, Spacingd, model inference, and output writing, causing inference failures, persistent datastore poisoning, or geometrically corrupted results. This issue is fixed in version 1.6.1.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-49272 - NVD - CVSS Score v3.1: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49272</link>
-    <guid isPermaLink="false">a6ba7a720a8a9157d90c8e9b1fcf4837</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.5 | OAuthLib is an implementation of the OAuth request-signing logic for Python 3.6+. From 3.3.0 until 4.0.1, OAuthLib's RFC 8628 device workflow does not require DeviceCodeGrant.validate_token_request to check that the device_code parameter is present and valid. A caller whose client request is accepted by the configured validator and who knows a valid client ID enabled for the device workflow can submit a missing or bogus device code to the token endpoint and obtain a bearer token without completing device authorization. This issue is fixed in version 4.0.1.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-54442 - NVD - CVSS Score v3.1: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54442</link>
-    <guid isPermaLink="false">1d3a704d20eaa71ac07efa0f425886a7</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 4.8 | Emissary is a P2P based data-driven workflow engine. Prior to 8.51.0, the VALID_LINK validation in src/main/java/emissary/server/mvc/NavAction.java accepts protocol-relative URLs when processing configured navigation links. Browser URL normalization can interpret these accepted strings as external origins. The authoritative advisory attributes open redirect, server-side request forgery, and cloud metadata access to this bypass, but it identifies neither the server-side dereference path nor how navigation-link processing reaches that path. This issue is fixed in version 8.51.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-55458 - NVD - CVSS Score v4.0: 2.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55458</link>
-    <guid isPermaLink="false">1289dd1d0623866ddfd12db7248c705a</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 2.9 | Caddy is an extensible server platform that uses TLS by default. Prior to 2.11.5, the reverse proxy's finalizeResponse method in modules/caddyhttp/reverseproxy/reverseproxy.go handles an upstream 101 Switching Protocols response before running removeConnectionHeaders and the hopHeaders deletion loop used for ordinary responses. The early return invokes handleUpgradeResponse, which copies the upstream headers to the client and normalizes only WebSocket-specific header names. An attacker who controls or compromises a proxied WebSocket upstream can therefore cause hop-by-hop headers such as Alt-Svc, Keep-Alive, and Proxy-Authenticate, as well as headers named by Connection, to cross the proxy boundary. For HTTP/2 or HTTP/3 extended CONNECT, the upstream 101 response may be represented to the client as an ordinary successful response, increasing the chance that leaked headers are processed. This issue is fixed in version 2.11.5.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62268 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62268</link>
-    <guid isPermaLink="false">4732ea241cad0f920ee240ab6caffda5</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 5.3 | borgbackup is an opensource, deduplicating archiver with compression and authenticated encryption. Prior to 1.4.5 and 2.0.0b22, extracting a malicious archive can follow a symlinked parent path or resolve embedded dot-dot path components and delete or overwrite files outside the extraction directory. A crafted slave hardlink can also use an attacker-controlled hardlink source outside the extraction directory and hard-link that file into the restored tree, disclosing its contents. Creating the malicious archive requires repository access and, for encrypted or authenticated repositories, the Borg key and passphrase; a victim must then extract the archive. This issue is fixed in versions 1.4.5 and 2.0.0b22.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-69143 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69143</link>
-    <guid isPermaLink="false">b9135a253d8f6526b31bb68f07b0c61e</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE is a duplicate of another CVE.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77463 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77463</link>
-    <guid isPermaLink="false">53385fed3be8334c746c30629137fc1f</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | Remark42 is a self-hosted comment engine for blogs, articles, or any other place where readers can add comments. From 1.0.0 until 1.16.2, Remark42 globally trusts True-Client-IP, X-Real-IP, and X-Forwarded-For without verifying that the direct peer is a trusted proxy, and middleware.RealIP overwrites r.RemoteAddr before per-IP controls run. In a directly reachable deployment, or a proxy that forwards attacker-controlled headers, a remote attacker can rotate spoofed forwarding headers to obtain fresh token buckets for rate-limited endpoints, bypass vote de-duplication when --votes-ip is enabled, mint anonymous identities, and poison stored comment IPs and request logs. The global concurrent-request throttle and per-request timeouts still limit availability impact. Mitigation support is available in version 1.16.2, but operators must configure --trusted-proxy for the deployment topology.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77622 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77622</link>
-    <guid isPermaLink="false">9363a1e1cfa58c6e4ed7aa71e9d37d07</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 8.2 | Sliver is a command and control framework. Prior to 1.7.6, an HTTP(S) listener using the PNG encoder accepts attacker-controlled PNG dimensions without an effective decoded-size or pixel limit in util/encoders/images.go, while the listener nonce space implemented in server/encoders/encoders.go is small enough to search remotely. An unauthenticated attacker who identifies a valid nonce can submit a highly compressed image to PNGEncoder.Decode, where it expands during png.Decode, exhausting server memory and causing a complete loss of availability. This vulnerability is fixed in 1.7.6.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-81190 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81190</link>
-    <guid isPermaLink="false">ecebc52b8dc9c53dfd7b7dbbd1962773</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | KurrentDB is a database engineered for modern software applications and event-driven architectures. In version 26.1.0, a user authorized to read the $all stream can use Secondary Indexing query capabilities to read arbitrary files accessible to the database process, enumerate directories, and issue HTTP GET requests from that process. The default configuration limits this privilege to administrators. The flaw does not permit file writes and does not expose environment variables. This issue is fixed in version 26.1.1.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-85076 - NVD - CVSS Score v4.0: 9.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85076</link>
-    <guid isPermaLink="false">58d2d3c15ab09b5a0bec13c3a4293f74</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 9.0 | Cronicle is a multi-server task scheduler and runner, with a web based front-end UI. Prior to 0.9.124, an authenticated non-admin with run_events, create_events, or edit_events privilege can supply undeclared keys in event params through api_create_event, api_update_event, or api_run_event. lib/api.js and lib/api/event.js validate the parameter object without restricting its keys, and lib/job.js uppercases those keys and applies them to the child process environment after administrator-defined plugin variables. A key that collides with a security-sensitive environment variable can therefore override the plugin execution context and may cause privilege escalation, arbitrary code execution, data access, or service disruption depending on the plugin and runtime. This issue is fixed in version 0.9.124.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-87008 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87008</link>
-    <guid isPermaLink="false">9358394c748cc971e984171b7b7806c9</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.1 | Code Graph RAG is an AI-powered knowledge graph and retrieval system for querying, understanding, and editing multi-language codebases. Prior to 0.0.589, AstGrepService in codebase_rag/tools/ast_grep_service.py enumerates files beneath project_root and relies on should_skip_path in codebase_rag/utils/path_utils.py to classify them, but the containment check operates on unresolved lexical paths. A symbolic link planted inside an analyzed repository can therefore reference a file outside the configured root while still appearing in scope. The structural_search tool follows the link and discloses readable content without an approval gate, while structural_replace with dry_run=False follows it and overwrites writable content; the MCP path invokes structural replacement without the agent-loop approval control. An attacker who causes a victim to analyze a repository containing such a link can read credentials, keys, environment files, or sibling source and can modify files accessible to the code-graph-rag process. This issue is fixed in version 0.0.589.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100395 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100395</link>
-    <guid isPermaLink="false">5f67ce703f28dd198e378e7252adf52d</guid>
-    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.8 | LXC is a userspace interface for the Linux kernel containment features used to create and manage system containers. In LXC 7.0.0 and earlier, lxc-copy and the public liblxc clone() API can follow attacker-controlled symbolic links while updating /etc/hostname in a copied container root filesystem. The affected surfaces are lxc-copy and liblxc's public lxc_container::clone() API. The privileged cloning process must run as root. The source rootfs must be attacker-controlled or less trusted. A symlink can be placed at etc/hostname or in an intermediate component. The clone operation preserves the symlink before updating the hostname. The vulnerable write truncates and overwrites an existing file outside the destination rootfs. When root clones an untrusted container without LXC_CLONE_KEEPNAME, the copied symlink can resolve outside the destination rootfs and cause the privileged process to overwrite an existing host file with the destination container name. Unprivileged use and managers with independent cloning implementations are not affected. LXC_CLONE_KEEPNAME avoids the hostname update and therefore the affected write.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Fri, 06 Nov 2026 01:01:39 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-111489 - NVD - CVSS Score v4.0: 9.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111489</link>
@@ -327,6 +179,150 @@ This issue affects ezstd: from 1.0.5 before 1.2.5.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88986</link>
     <guid isPermaLink="false">977ea4fc570588651bdd575bab71ce47</guid>
     <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.1 | Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.15.0, the frontend routes /pipeline/k8s/pod and /pipeline/k8s/pod/events use frontend/server/k8s-helper.ts to include untrusted podname and podnamespace query values and backend error details in HTML-capable error responses. An unauthenticated attacker can craft a link that executes JavaScript in the frontend origin when a user who satisfies the deployment's authentication and route-access requirements follows it and reaches an affected response. Cookie disclosure depends on cookie attributes, and server-side code execution or availability impact is not established. This issue is fixed in version 2.15.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-102943 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102943</link>
+    <guid isPermaLink="false">122ac45aa199e2b89b8e20e6cc2c6abc</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.5 | Dagu is a workflow engine with a built-in Web user interface. Prior to version 2.11.0, its MCP  dagu_read  operation with target  dag_spec  invokes the DAG specification API directly, bypassing the HTTP middleware introduced for CVE-2026-33344. The underlying resolver does not restrict resolved paths to configured DAG directories. An authenticated attacker with a viewer-role API key can supply an absolute or traversing path to read  .yaml  or  .yml  files outside those directories that are accessible to the Dagu process. The affected operation does not provide write or execution capability. This issue is fixed in version 2.11.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110390 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110390</link>
+    <guid isPermaLink="false">8cc11b183846f4e77d14b3c1ecfe61da</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 6.9 | Missing authentication in the FlexNet Beacon component of Flexera One and FlexNet Manager Suite allows unauthenticated remote attackers to obtain Beacon policy and targeting information when anonymous web server access is enabled (the default).</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-113663 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113663</link>
+    <guid isPermaLink="false">3b4efda3fef4d2a349770e3a107e34db</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.8 | AG2 is an open-source AgentOS. From 0.13.2 until ag2 1.1.1, and from autogen 0.13.2 to 0.14.1, SandboxShellTool configurations using allowed=[...] or readonly=True rely on ShellAdapter._filter and contains_shell_operator in ag2/tools/sandbox/filter.py and ag2/tools/sandbox/adapter/shell.py to validate a command prefix and reject selected shell syntax. The filter omits newline and carriage-return separators, while the accepted raw string is passed to sh -c, allowing an attacker-influenced agent command to execute an additional arbitrary statement. With the default LocalEnvironment backend, the injected statement runs as a host subprocess with the privileges of the agent process and can affect confidentiality, integrity, and availability. This issue is fixed in ag2 version 1.1.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-16579 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16579</link>
+    <guid isPermaLink="false">675623f337bbdc69f26332ac6491e5eb</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-68509 - NVD - CVSS Score v3.1: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68509</link>
+    <guid isPermaLink="false">fc5c1db5011c899bf0f4919340745210</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 6.3 | FairEmail is a fully featured, open source, privacy-friendly email app for Android. Prior to 1.2325, shared attachment handling does not adequately sanitize an attacker-controlled filename before constructing its destination path. A local attacker-controlled app can therefore supply path components that escape the intended shared attachment directory and overwrite or corrupt files in the FairEmail private data directory, including account or message databases. Exploitation requires app lock using PIN or biometric authentication and user interaction to unlock FairEmail. This issue is fixed in version 1.2325.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77596 - NVD - CVSS Score v3.1: 9.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77596</link>
+    <guid isPermaLink="false">e5953d766bfeb6b0c97b26dca25b4de7</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 9.6 | Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.18.0, the multi-user HTTP endpoints POST /apis/v2beta1/pipelines/upload and POST /apis/v2beta1/pipelines/upload_version call canUploadVersionedPipeline, which returns without SubjectAccessReview when the target namespace is empty while REQUIRE_NAMESPACE_FOR_PIPELINES defaults to false. A low-privilege tenant can create shared pipelines or inject attacker-controlled versions into existing shared pipelines without the required write permission; if the API server is directly reachable without an authenticating proxy, an unauthenticated caller can exploit the same bypass, while deployments protected by such a proxy do not expose anonymous access. An enabled unpinned recurring run that follows the latest version can then execute the injected specification in another tenant's namespace under that workload's service account, while pinned or embedded-specification runs are not automatically substituted. This issue is fixed in version 2.18.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-85068 - NVD - CVSS Score v3.1: 2.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85068</link>
+    <guid isPermaLink="false">a4083214601b5e966e7f7a187cae2f33</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 2.4 | Network UPS Tools is a collection of programs which provide a common interface for monitoring and administering UPS, PDU and SCD hardware. From 2.4.2 through 2.8.5, ippon_command in drivers/blazer_usb.c partially initializes char tmp[64] with a short Megatec status query and then passes a fixed eight-byte chunk to usb_control_msg. A malicious firmware-controlled USB device presenting the Mustek Powermust VID 0x06da and Mustek Powermust PID 0x0003 matches blazer_usb_id, selects ippon_subdriver, and can receive the uninitialized trailing stack bytes during normal polling. The disclosure is bounded and read-only, requires physical or supply-chain access to the USB bus, and has no established integrity or availability impact. This issue is scheduled to be fixed in version 2.8.6.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-88979 - NVD - CVSS Score v3.1: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88979</link>
+    <guid isPermaLink="false">90c362914c0fd1861fe76d6092e357f3</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.8 | Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. From 2.17.0 until 2.18.0, the TensorBoard proxy token introduced by the incomplete remediation for CVE-2026-54745 uses MINIO_SECRET_KEY as its HMAC secret, whose bundled default is publicly known. In an authorization-disabled deployment using that default, an unauthenticated attacker can forge a token containing a chosen viewerName and namespace; the proxy constructs the destination from the viewerName plus the -service suffix, the namespace, and the configured cluster domain, then reads responses on port 80 under the /tensorboard/&lt;viewer&gt;/ path. Resource-name validation and path-traversal rejection remain enforced, authorization-enabled deployments still check access to the selected namespace, and unrestricted metadata access, writes, or service disruption are not established. This issue is fixed in version 2.18.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-88980 - NVD - CVSS Score v3.1: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88980</link>
+    <guid isPermaLink="false">e21f254c3227fd9e8ec42bea8012848f</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.6 | Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.18.0, the frontend GET /artifacts/get route accepts source=http or source=https with caller-controlled bucket and key values, and isAllowedResourceName permits an all-digit decimal host that the URL parser converts to an IPv4 address. The default ALLOWED_ARTIFACT_DOMAIN_REGEX and authorization-disabled standalone configuration allow an unauthenticated caller to fetch internal HTTP resources and receive their response body. In the authenticated multi-user configuration, the same destination-validation defect is reachable by a low-privilege tenant with a valid identity and authorized namespace. Cloud credential disclosure depends on reachable metadata services and attached roles, and the issue does not establish IMDSv2 bypass or credential access when metadata is blocked. This issue is fixed in version 2.18.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-88981 - NVD - CVSS Score v3.1: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88981</link>
+    <guid isPermaLink="false">a8db4e7d5b35a34166193c2056dab6d9</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.6 | Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.18.0, the frontend artifact download path for source=s3 or source=minio accepts providerInfo.Params.endpoint, and the archived pod-log path accepts S3-compatible endpoint metadata from workflow status, without requiring those endpoints to match operator-controlled storage configuration. In the shipped authorization-disabled standalone configuration, an unauthenticated caller can make the shared ml-pipeline-ui pod connect to arbitrary reachable hosts and return response data; requests may also reveal an access-key identifier when signed with configured object-store credentials. Multi-user secret-backed metadata remains restricted to the server namespace. This issue is fixed in version 2.18.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-88982 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88982</link>
+    <guid isPermaLink="false">720fcc3df2ed2341375753e5959027e9</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.4 | Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.18.0, the legacy V1/raw-Argo execution cache mutating webhook and cache-server storage path hash selected template fields without the Kubernetes namespace, use the key alone for lookups and duplicate checks, and trust the mutable pipelines.kubeflow.org/execution_cache_key annotation when publishing outputs. In multi-user deployments where tenant namespaces share the cache service, a tenant with workload-submission privileges can read another namespace's cached outputs or seed matching outputs that are substituted into a later step. Standard KFP V2 component pods bypass this cache, matching requires the selected template fields and staleness policy, and arbitrary code execution or service availability impact is not established. This issue is fixed in version 2.18.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-88984 - NVD - CVSS Score v4.0: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88984</link>
+    <guid isPermaLink="false">42328ce3c513fa5c00a6c15018fda8c3</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v4.0: 7.2 | Kubeflow Pipelines enables users to build and deploy portable, scalable machine learning workflows. Prior to 2.16.1, the multi-user API server treats the empty namespace used by shared or global pipelines as an authorization exception for modification and deletion operations. An authenticated user can modify or delete shared pipeline definitions and versions without the required Kubernetes RBAC permissions, compromising their integrity and availability. Read-only access to shared pipelines remains intentional, single-user deployments intentionally bypass multi-user checks, and execution of a modified pipeline is a conditional downstream consequence. The separate shared-pipeline multipart upload authorization path is outside this advisory and is not remediated by version 2.16.1. This issue is fixed in version 2.16.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-92693 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92693</link>
+    <guid isPermaLink="false">51b95a88b7e2af02405c302f22909fce</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.2 | FastNetMon is a high-performance DDoS detector and sensor. In version 1.2.9 and earlier, parse_raw_packet_to_simple_packet_full() in src/simple_packet_parser_ng.cpp dereferences ipv6_extension_header_fragment_t when IpProtocolNumberIPV6_FRAG is present without first verifying that the eight-byte Fragment header remains. A crafted sFlow v5 RAW_PACKET_HEADER record can remotely reach this shared parser with the Fragment bytes omitted, causing an unauthenticated remote out-of-bounds read. The supplied harness detects the read under AddressSanitizer, but the advisory does not establish a production process crash. No fixed release is available as of this review.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-92694 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92694</link>
+    <guid isPermaLink="false">2b90c5798ce150bc9e3b8fe1e360f1e4</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 5.9 | FastNetMon is a high-performance DDoS detector and sensor. In version 1.2.9 and earlier, FastNetMon's IPv6 top-talkers screen-draw thread in draw_table_ipv6() in src/fastnetmon_logic.cpp iterates ipv6_host_counters.average_speed_map without holding counter_map_mutex while recalculate_speed() inserts new keys and may rehash the same map. The race requires networks_list to include the targeted IPv6 range. It causes confirmed undefined behavior under load; a process crash is plausible but was not observed, so reliable denial of service has not been established. No fixed release is available as of this review.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-92695 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92695</link>
+    <guid isPermaLink="false">c770e7ad9f1debfcce2d05838b9ba61b</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.2 | FastNetMon is a high-performance DDoS detector and sensor. In version 1.2.9 and earlier, the live parse_packet() callback in src/pcap_plugin/pcap_collector.cpp is registered through pcap_loop and processes captured frames when pcap = on without checking packethdr-&gt;caplen. A short frame or an attacker-controlled IPv4 header length can make the parser dereference IP or transport headers beyond the captured bytes, causing an out-of-bounds read and process termination. No fixed release is available as of this review.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-92697 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92697</link>
+    <guid isPermaLink="false">f371a936e9cd4030d0e87fb15db7e815</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | FastNetMon is a high-performance DDoS detector and sensor. In version 1.2.9 and earlier, the NetFlow v9 collector calls  strlen()  on an attacker-controlled interface-description field without bounding the scan to the field’s declared length. Although fields longer than 128 bytes are excluded from this operation, an accepted field without a null terminator can cause reads beyond the field and packet buffer. An unauthenticated remote attacker who can send crafted UDP packets to the collector can trigger an out-of-bounds read and potentially crash the process, causing denial of service. No fixed release is available as of this review.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-92698 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92698</link>
+    <guid isPermaLink="false">0d7c7b65b03901f24eeae049fc7b2d71</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 8.2 | FastNetMon is a high-performance DDoS detector and sensor. In version 1.2.9 and earlier, process_sflow_flow_sample() in src/sflow_plugin/sflow_collector.cpp passes the attacker-controlled sflow_raw_protocol_header_t.header_size to parse_raw_packet_to_simple_packet_full() as its trusted captured length without comparing it with the bytes remaining in the record. An inflated header_size creates a false end pointer beyond the received sFlow v5 UDP buffer, defeating the nested parser's bounds checks and causing an unauthenticated remote out-of-bounds read and process crash, with possible limited exposure of adjacent bytes through parsed flow fields. No fixed release is available as of this review.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-93424 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93424</link>
+    <guid isPermaLink="false">32659b73c3318fff76b8f4651e974863</guid>
+    <description>Thursday 5 November 2026 | NVD | CVSS Score v3.1: 7.5 | FastNetMon is a high-performance DDoS detector and sensor. In version 1.2.9 and earlier, peer_find_template() in src/netflow_plugin/netflow_collector.cpp and src/netflow_plugin/netflow_v9_collector.cpp returns a pointer into global_netflow9_templates after releasing the cache mutex. On deployments with at least two entries in netflow_ports, concurrent template redefinition and data-flowset processing can let add_update_peer_template() reassign the template and free its records vector while another listener dereferences the escaped pointer. An unauthenticated sender that can reach both NetFlow/IPFIX listener ports can trigger a heap-use-after-free and reliably crash FastNetMon. No fixed release is available as of this review.</description>
     <category>NVD</category>
     <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
   </item>
