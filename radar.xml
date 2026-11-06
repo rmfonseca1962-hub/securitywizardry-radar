@@ -5,63 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 07:00:53 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-77299 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77299</link>
-    <guid isPermaLink="false">ef99c88ef82f0629265d03a9ebb3c926</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.5 | Regexp2 is a feature-rich RegExp engine for Go. Prior to version 2.3.0, when regexp2 compiles and matches a pattern containing a large fixed-count quantifier applied to a zero-width subexpression — e.g. (?:){50000000} — the match engine executes the empty loop body m-1 times, pushing two integers onto the backtracking stack on every iteration. Because the parser accepts any repetition count up to math.MaxInt32 and the backtracking stack grows without bound, a pattern of fewer than 20 bytes matched against an empty input can force multi-gigabyte allocation and OOM-kill the process. MatchTimeout does not fully mitigate this because the memory is allocated faster than the 100 ms timeout clock can fire. This issue has been patched in version 2.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-89142 - NVD - CVSS Score v3.1: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-89142</link>
-    <guid isPermaLink="false">4fb4f7fc6f05456f5dfc1d96e8896020</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.3 | In the Wi-Fi NPU FW, there is a possible out-of-bounds write due to an incorrect bounds check. This could lead to local denial of service with user execution privileges needed. User interaction is not needed for exploitation.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114366 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114366</link>
-    <guid isPermaLink="false">69a7792af23c5297ef8918f1051bb2d6</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 2.3 | An information disclosure vulnerability in the Qt Framework QWebSocket authentication handling of the Qt WebSockets module.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119431 - NVD - CVSS Score v3.1: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119431</link>
-    <guid isPermaLink="false">b9667f5b8b29ce0eff63a4878a7077f4</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.7 | A server-side request forgery (SSRF) vulnerability exists in Foxit Workspace's file-upload functionality. Insufficient validation of user-supplied links may allow a remote attacker to induce the server to access internal resources and return their contents, potentially resulting in sensitive information disclosure and unauthorized access to internal services.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119432 - NVD - CVSS Score v3.1: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119432</link>
-    <guid isPermaLink="false">bef7c4961c6adf3c417f3842c70ecb72</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 8.7 | A stored cross-site scripting (XSS) vulnerability exists in the Foxit Workspace's file share preview functionality. An attacker could upload a crafted file and share it with a victim. When the victim opens or previews the file, the embedded script executes in the application's origin, potentially accessing locally stored credentials and enabling credential theft.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119433 - NVD - CVSS Score v3.1: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119433</link>
-    <guid isPermaLink="false">3e62dce300373d42df51879f0a10bfe5</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.7 | A server-side request forgery (SSRF) vulnerability exists in an undocumented API endpoint of Foxit Workspace due to insufficient validation of user-supplied URL and network parameters. A remote attacker could exploit this issue to induce the server to send requests to arbitrary internal or external resources, potentially enabling unauthorized access to internal services, network reconnaissance, and sensitive information disclosure.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107124 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107124</link>
-    <guid isPermaLink="false">8c7661d3110f77b233339733e6a4134c</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.4 | A flaw was found in the OIDC logout endpoint of the keycloak-services component, which handles user session termination in Red Hat Build of Keycloak. The issue occurs because the system sets a session cookie based on an unvalidated token hint before completing security checks. An attacker can use this flaw to fix a session ID in a victim's browser, allowing them to hijack the victim's subsequent login and gain full control over their account.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Fri, 06 Nov 2026 08:00:20 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-109081 - NVD - CVSS Score v3.1: 6.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109081</link>
@@ -323,6 +267,62 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97848</link>
     <guid isPermaLink="false">7f1c04e599019c8852e3a466e62bf8e0</guid>
     <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | A flaw was found in the token sanitization logic of Keycloak, an open source identity and access management solution. The issue occurs when a protocol mapper is configured to emit structured claims using the JSON type. The security check designed to remove unauthorized role mappings only looks for standard Java maps and fails to recognize Jackson based JSON objects. This allows an attacker to inject forged client roles into security tokens, which could lead to unauthorized access to protected resources.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120749 - NVD - CVSS Score v3.1: 6.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120749</link>
+    <guid isPermaLink="false">39540cdb289653002bc54d2999612451</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.2 | A flaw was found in D-Bus. With a privileged Monitoring client attached (for example dbus-monitor or busctl monitor), an unprivileged local user can cause dbus-daemon to abort if a driver-originated broadcast such as NameOwnerChanged or ActivatableServicesChanged cannot be delivered to a recipient (for example due to a deny rule or an exceeded outgoing message queue). Driver broadcasts still use serial 0; when delivery fails, composing the monitor error reply asserts reply_serial != 0 and aborts the daemon. This is an incomplete fix for CVE-2023-34969, which only assigned serials for driver messages sent to a single recipient. On the well-known system bus this is a denial of service.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73471 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73471</link>
+    <guid isPermaLink="false">c906adbb640c397bf6b79293f519acce</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.1 | A flaw was found in GStreamer gst-plugins-good (avidemux). In the Nikon metadata tag parser, a pointer can be dereferenced without verifying that data remains in the buffer, causing out-of-bounds reads. Because avidemux is auto-plugged by playbin, decodebin, and gst-discoverer, opening or previewing a crafted AVI is sufficient to trigger the issue. Fixed upstream in gst-plugins-good 1.28.6 (GStreamer-SA-2026-0072).</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73472 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73472</link>
+    <guid isPermaLink="false">841a8af5804de75aabaeabef43cfbdd4</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.1 | A flaw was found in GStreamer gst-plugins-good (avidemux). In the superindex and subindex parsers, integer overflow can bypass bounds checks and cause out-of-bounds reads. Because avidemux is auto-plugged by playbin, decodebin, and gst-discoverer, opening or previewing a crafted AVI is sufficient to trigger the issue. Fixed upstream in gst-plugins-good 1.28.6 (GStreamer-SA-2026-0072).</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73473 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73473</link>
+    <guid isPermaLink="false">b9d3f667db384f9898728c3c813dbade</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.5 | A flaw was found in GStreamer gst-plugins-good (avidemux). In the subindex parser, missing validation of the entry count can cause excessive memory allocation and denial of service. Because avidemux is auto-plugged by playbin, decodebin, and gst-discoverer, opening or previewing a crafted AVI is sufficient to trigger the issue. Fixed upstream in gst-plugins-good 1.28.6 (GStreamer-SA-2026-0072).</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-83493 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83493</link>
+    <guid isPermaLink="false">71666c1aacf67f4c436e01109e93f759</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS: não informado | A flaw was found in distributed-workloads. A remote attacker could exploit a vulnerability in the pull_request_target workflow by submitting a specially crafted pull request. This workflow processes untrusted code from the pull request author while operating with the base repository's sensitive secrets, such as the SNYK_TOKEN, and its default write token. Consequently, an attacker could exfiltrate these secrets, leading to unauthorized access to the Snyk integration and potential control over the repository.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-83494 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83494</link>
+    <guid isPermaLink="false">6d7a391311487319e595ac416c89c97f</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS: não informado | A flaw was found in the training-operator. An incorrect object casting in the PyTorchJob ValidateUpdate webhook allows users to bypass an immutability check. This vulnerability could enable users to detach a queued job from its quota management system or hijack a running job's controller ownership. The primary impact is a Denial of Service (DoS) condition.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-9797 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9797</link>
+    <guid isPermaLink="false">82ff026c566075dccc098d0ed29b3490</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | A flaw was found in Keycloak's administrative services (org.keycloak.services.resources.admin). A highly privileged attacker, authenticated with a 'manage-clients' role, could exploit this vulnerability through several methods, including manipulating client JSON Web Key Sets (JWKS), swapping client authenticator types and resetting secrets, or downloading legitimate signing keys. Successful exploitation allows the attacker to obtain a token with 'realm-admin' role assignments, leading to privilege escalation and potential unauthorized access to sensitive resources.</description>
     <category>NVD</category>
     <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
   </item>
