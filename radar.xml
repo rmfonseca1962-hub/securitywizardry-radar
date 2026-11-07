@@ -5,135 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2026 14:01:59 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-120509 - NVD - CVSS Score v3.1: 4.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120509</link>
-    <guid isPermaLink="false">fc2b6ac23fde20ad2ed00dfbd8a581f8</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 4.7 | The Real Testimonials – Testimonial Slider, Collect Customer Reviews and Video Testimonials plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'tpro_client_name' parameter in all versions up to, and including, 4.1.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires an administrator to publish the submitted testimonial, trigger the Show Preview AJAX handler, and save an Update, which canonicalizes and persists the attacker-controlled payload as the Manage View title — matching the plugin's standard moderation workflow. Successful exploitation additionally requires an action by an administrator — the attacker cannot trigger the vulnerability on their own.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120683 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120683</link>
-    <guid isPermaLink="false">9b5d4f91a6ec3d3b7d77ba2d19783260</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.4 | The Real Testimonials – Testimonial Slider, Collect Customer Reviews and Video Testimonials plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'tpro_client_testimonial' parameter in all versions up to, and including, 4.1.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires an administrator to approve the pending testimonial through standard moderation and the target page to load the WordPress Interactivity runtime (e.g. a theme or block that enqueues @wordpress/interactivity).</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120685 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120685</link>
-    <guid isPermaLink="false">3655b7d4a9f93e182c14b92b1efc7e30</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.4 | The Real Testimonials – Testimonial Slider, Collect Customer Reviews and Video Testimonials plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'tpro_client_image (JPEG IPTC caption) + tpro_client_testimonial ([gallery] shortcode)' parameter in all versions up to, and including, 4.1.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires an administrator to have the display block configured with the Strip All HTML Tags option disabled, which is the plugin's native setting for rendering formatted testimonial content, and to have approved the submitted testimonials.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121265 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121265</link>
-    <guid isPermaLink="false">6bfd247f9bb674dac6705f36d2c8b8d9</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | SQL::Abstract versions before 2.000003 for Perl allow SQL injection via an arrayref column value in insert and update.
-
-With the array_datatypes option off, which is the default, insert(), update() and values() treat an arrayref column value as literal SQL. Its first element goes into the SQL text unescaped and the rest become bind values. A JSON array, or a repeated form field decoded as an arrayref, is such a value.
-
-An application that passes request data as column values to insert or update with the default options allows SQL injection.
-
-Releases before 2.000003 also treat an arrayref in generate() as literal SQL, including through AUTOLOAD when allow_autoload is on, whatever array_datatypes is set to.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121765 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121765</link>
-    <guid isPermaLink="false">997c0c4938f1cb8f9cffa0b479192695</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Cozmoslabs TranslatePress translatepress-multilingual allows Stored XSS.This issue affects TranslatePress: from n/a through 3.3.8.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121976 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121976</link>
-    <guid isPermaLink="false">80c1f04b3b5423e79325627ed947acd9</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Modula plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'items' parameter in versions up to, and including, 3.0.17 This is due to insufficient input sanitization of the per-image 'link' field in the save_merged_items() REST handler and Images\Adapter::normalize_item_row(), which preserves unknown keys verbatim, combined with output escaping in Modula_Helper::generate_attributes() that applies only esc_attr() to the resulting anchor href and does not strip the 'javascript:' URL scheme. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page and clicks the gallery tile.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121977 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121977</link>
-    <guid isPermaLink="false">c003c3e2e9bad73d3c249ba09d962a60</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.4 | The JetFormBuilder — Dynamic Blocks Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'note (form field whose value is written to post meta `note`)' parameter in all versions up to, and including, 3.6.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires a privileged user with the edit_others_posts capability to visit a form URL containing the attacker-created post ID, a delivery step the attacker controls via a crafted phishing link.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122059 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122059</link>
-    <guid isPermaLink="false">7185a95ad301f84beaacd4e537673419</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The WP ImageViewer plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'img.alt' parameter in all versions up to, and including, 3.0.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires a front-end content plugin such as bbPress to be active, as it grants Subscriber-level users the bbp_participant capability needed to publish image-bearing content containing the encoded payload. Exploitation by attackers with contributor-level access and above requires that the site allows Contributors (or higher) to submit image HTML in post content — the WordPress default. On a default installation, where that is not configured, the vulnerability requires attackers with custom-level access and above.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122231 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122231</link>
-    <guid isPermaLink="false">37e4407e9acfb0cc082b259e7508f809</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The WS Form LITE – Drag &amp; Drop Contact Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'field_&lt;id&gt;[0][0]' parameter in all versions up to, and including, 1.12.18 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is possible because the client-side esc_html() helper returns any non-string value unchanged, allowing a nested-array payload coerced via Array.prototype.toString to reach jQuery .append() unescaped.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123418 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123418</link>
-    <guid isPermaLink="false">293cb6f56373afb0e0e87b3878913114</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Church Admin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'lat' parameter in all versions up to, and including, 5.1.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This vulnerability is only exploitable when a Google Maps API key has been configured in Church Admin settings, as the vulnerable sink is only reached when that option is present.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123776 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123776</link>
-    <guid isPermaLink="false">d7a5db5b20304721cccf6a1c8db7f791</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | RRD::CGI::Image versions through 0.01 for Perl pass CGI query parameters containting &quot;tz&quot; to tzset(), , so a FIFO or device path blocks the CGI process.
-
-The normalize_params method sends any query key matching /tz/i to tz(), which sets $ENV{TZ} to that value, with no validation. It then calls tzset(). glibc treats a TZ value starting with / or : as a file path and opens it, so a value naming a FIFO or a blocking device stalls the process inside tzset().</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-93429 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93429</link>
-    <guid isPermaLink="false">8ce56fda8f53ab2836b0f7cc9e6a3ea0</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The VikBooking Hotel Booking Engine &amp; PMS plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'guests[][][documents]' Parameter in all versions up to, and including, 1.8.17 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the attacker to possess a valid booking sid/ts pair, which can be obtained by making a standard public booking, as the session token needed to satisfy the JSession::checkToken() gate is emitted in the publicly accessible pre-checkin form.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-93755 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93755</link>
-    <guid isPermaLink="false">f5a77f3659654e80ea79923c24012186</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Happyforms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via spoofable client IP headers in versions up to, and including, 1.38.9. This is due to the happyforms_get_client_ip() function reading raw HTTP_CLIENT_IP and HTTP_X_FORWARDED_FOR request headers without any validation or sanitization, storing the value as post meta ('client_ip') via update_post_meta() during unauthenticated form submissions, and later echoing it in the admin submission edit screen's Details metabox without output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user (typically an administrator reviewing a submission) accesses an injected page.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-93766 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93766</link>
-    <guid isPermaLink="false">ec316868ddc8152bf94be1991ccf0552</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Happyforms Pro plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'happyforms_client_referer' parameter in all versions up to, and including, 1.38.9 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-96565 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96565</link>
-    <guid isPermaLink="false">1de5cd69819ad42fd0c8b5ab285b49e9</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The WP-Members Membership Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via WooCommerce Checkout Multicheckbox/Multiselect Field (scalar bypass of wpmem_sanitize_array) in all versions up to, and including, 3.5.7 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is only exploitable via the WooCommerce classic checkout path, as the sibling registration, profile, and account-edit handlers implode the value before sanitization, which raises a PHP 8 TypeError on scalar input and fails closed.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 07 Nov 2026 15:01:34 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-109973 - NVD - CVSS Score v3.1: 6.4</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109973</link>
@@ -331,6 +203,449 @@ The normalize_params method sends any query key matching /tz/i to tz(), which se
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123964</link>
     <guid isPermaLink="false">2ff16b6bf3b166dba24fcb0f0fdea69b</guid>
     <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was detected in OpenBMB Internet of Agents up to 9d78e88e47160eb42ee1ee8538c05e1c2c47877a. This affects the function launch_goal of the file im_client/communication/communication_layer.py of the component Collaboration Layer. Performing a manipulation of the argument max_turns results in infinite loop. The attack may be initiated remotely. The exploit is now public and may be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120984 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120984</link>
+    <guid isPermaLink="false">386b1a494c3b9d4addd71d29fe82b91c</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 9.1 | A flaw was found in the Keycloak server's client management component. When a client is created or imported with authorization services enabled, the system fails to properly clear an internal session attribute used during the setup process. This allows an authenticated attacker with client management permissions to bypass security controls and upload a malicious JavaScript policy, which is then executed on the server when an authorization request is made. Successful exploitation could allow the attacker to run arbitrary code on the server, potentially compromising the entire system.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123966 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123966</link>
+    <guid isPermaLink="false">d090c0f06db112635c12777d93462b17</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 9.3 | A vulnerability was determined in Tenda AC19 16.03.10.07. Affected by this issue is the function saveParentControlInfo of the file /goform/saveParentControlInfo. This manipulation of the argument deviceId causes heap-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123988 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123988</link>
+    <guid isPermaLink="false">f9c1b862a0f74729e98413e39e66c5c7</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability has been found in SililaWijesinghe Food Ordering System up to ba314e897e3365600461e5ea59432e39ceaa0fa5. This issue affects some unknown processing of the file /Food-Ordering-System/admin/. Such manipulation leads to exposure of information through directory listing. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99271 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99271</link>
+    <guid isPermaLink="false">7222bb203cafa094aa30358c51d79c4a</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ALSA: line6: Clear prev_fbuf on capture buffer release
+
+A KASAN slab-use-after-free read was reported in submit_audio_out_urb()
+when generating an impulse test signal:
+
+  BUG: KASAN: slab-use-after-free in create_impulse_test_signal sound/usb/line6/playback.c:76 [inline]
+  BUG: KASAN: slab-use-after-free in submit_audio_out_urb+0x1848/0x1b20 sound/usb/line6/playback.c:249
+  Read of size 2 at addr ffff888008d74870 by task syz.2.3214/7785
+
+  Allocated by task 11:
+   kmem_cache_alloc_noprof+0x2f0/0x390 mm/slub.c:4144
+   line6_buffer_acquire+0x1a1/0x220 sound/usb/line6/pcm.c:158
+   line6_pcm_acquire+0xb6/0x230 sound/usb/line6/pcm.c:329
+   line6_startup_work+0x3c/0x50 sound/usb/line6/driver.c:728
+
+  Freed by task 7785:
+   kfree+0xf8/0x390 mm/slub.c:6566
+   line6_buffer_release sound/usb/line6/pcm.c:176 [inline]
+   line6_buffer_release+0xa5/0xf0 sound/usb/line6/pcm.c:170
+   __line6_pcm_release sound/usb/line6/pcm.c:305 [inline]
+   line6_pcm_release+0x5a/0x80 sound/usb/line6/pcm.c:313
+   snd_toneport_monitor_put+0x11b/0x190 sound/usb/line6/toneport.c:183
+
+line6pcm-&gt;prev_fbuf points into the capture PCM stream buffer
+(line6pcm-&gt;in.buffer), which is updated during audio_in_callback() to
+feed rate synchronization, software monitoring, and impulse test signal
+generation on playback side.
+
+When all capture streams are closed, line6_buffer_release() frees
+pstr-&gt;buffer with kfree().  However, it does not clear line6pcm-&gt;prev_fbuf.
+If playback is subsequently started (e.g. via impulse test signal
+volume control snd_line6_impulse_volume_put()), submit_audio_out_urb()
+dereferences the stale pointer line6pcm-&gt;prev_fbuf under in.lock,
+resulting in a slab-use-after-free read.
+
+Clear prev_fbuf and prev_fsize in line6_buffer_release() when releasing
+the capture stream buffer under in.lock, ensuring that no stale buffer
+pointer can be accessed by submit_audio_out_urb().</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99272 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99272</link>
+    <guid isPermaLink="false">ed80bfc9a6f93026365154ffc45acacb</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+smb: client: validate the data area in SMB2_read()
+
+SMB2_read() copies le32_to_cpu(rsp-&gt;DataLength) bytes from
+(char *)rsp + rsp-&gt;DataOffset without checking that the range lies
+within the response actually received. A READ response with
+DataOffset == 0 makes smb2_get_data_area_len() zero the data length, so
+smb2_check_message() accepts a frame as short as the fixed response,
+while SMB2_read() still uses the server-supplied DataLength, capped only
+by CIFS_MAX_MSGSIZE and the caller's length.
+
+A malicious server can answer the synchronous read used by the
+mfsymlinks (or SFU) symlink parser with an 81-byte READ response
+carrying DataOffset 0 and DataLength 1067, making the client copy 1067
+bytes from a 448-byte receive object (KASAN slab-out-of-bounds; up to
+16 KiB in the general case).
+
+Clamp a zero (or header-overlapping) DataOffset to read_rsp_size, as
+handle_read_data() does for the asynchronous path, and reject the
+response unless DataOffset + DataLength fits within rsp_iov.iov_len.
+The SMB1 helper was fixed the same way in 5be5bdda5863.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99273 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99273</link>
+    <guid isPermaLink="false">6f74773204feb74205c7cf2dfa7d1afc</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ksmbd: reserve space for the UTF-16 terminator in stream info
+
+smb_strtoUTF16() always writes a terminating zero UTF-16 unit after the
+converted characters, but get_file_stream_info() budgets only
+sizeof(struct smb2_file_stream_info) + streamlen * 2 for a stream entry
+and sizeof(struct smb2_file_stream_info) + 7 * 2 for the trailing
+&quot;::$DATA&quot; entry. When an entry exactly fills the 448-byte small response
+buffer, the terminator is written two bytes past the allocation.
+
+Reserve one extra UTF-16 unit in both budget checks. The terminator is
+not part of the wire format, so the reported lengths are unchanged.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99274 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99274</link>
+    <guid isPermaLink="false">75cd62eca20db1c68855a1e4c9dd5bd5</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+smb: client: fix fiemap wild read on empty truncated response
+
+smb3_fiemap() treats -E2BIG from SMB2_ioctl() as a truncated range blob
+and loops for the next chunk. If the server reports
+STATUS_BUFFER_OVERFLOW with OutputCount == 0, SMB2_ioctl() returns
+-E2BIG with out_data == NULL and out_data_len == 0, and the existing
+length checks accept the empty result. The loop then evaluates
+
+	next = out_data[num - 1].file_offset + ...
+
+with num == 0, reading 16 bytes before NULL.
+
+Reject a truncated range blob that contains no range, so the resume
+offset is never computed from an empty response. Also require the last
+range in a truncated blob to advance the resume offset without
+overflowing, and to stay within the requested range; a malicious or
+broken server could otherwise make no progress or underflow len and loop
+forever. Free the previous response buffer before retrying.
+
+Reproduced on 6.6.87.2 with a malicious SMB2 server that answers
+FSCTL_QUERY_ALLOCATED_RANGES with STATUS_BUFFER_OVERFLOW and
+OutputCount == 0; an FS_IOC_FIEMAP ioctl on the mount oopses in
+cifs_fiemap() with CR2 = fffffffffffffff8. The code path is unchanged
+on mainline.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99275 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99275</link>
+    <guid isPermaLink="false">f18be57e9b57bafcfb57fdbd8a454201</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+smb: client: reject short SESSION_SETUP responses
+
+smb2_check_message() accepts frames shorter than struct smb2_pdu when
+the SMB2 status is non-zero, before the minimum-PDU check added by
+b4694f269e66d. A 64-byte STATUS_MORE_PROCESSING_REQUIRED SESSION_SETUP
+response is therefore accepted even though it cannot contain the
+SecurityBufferOffset and SecurityBufferLength fields.
+
+The parser then reads those fields from stale bytes left in the reused
+receive buffer by an earlier frame. With a long stale
+SecurityBufferLength, decode_ntlmssp_challenge() copies up to about
+64 KB from beyond the receive object and sends the data back to the
+server in the NTLMv2 AUTHENTICATE target info.
+
+Reject short MPR SESSION_SETUP responses before the short-error path,
+and validate SecurityBufferOffset + SecurityBufferLength against the
+received response length before decoding the challenge.
+
+The ordering bypass is not new: the short-error early return predates
+b4694f269e66d, and the unvalidated SecurityBufferLength read predates
+the 2016 raw NTLMSSP split in 166cea4dc3a4, so all supported stable
+trees are affected. Reproduced on 6.6.87.2; the path is unchanged on
+mainline.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99276 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99276</link>
+    <guid isPermaLink="false">c1fd067bceac1fa09f04ff90eedb2108</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ksmbd: defer connection scavenging while session locks are busy
+
+The expiration worker holds conn_list_lock for reading while checking
+for authenticated sessions. Without this change, the check can wait for
+conn-&gt;session_lock or sessions_table_lock.
+
+In destroy_previous_session(), the status updates after
+ksmbd_conn_wait_idle_sess() run with both session locks held for
+writing. Both the KSMBD_SESS_GOOD error path and the
+KSMBD_SESS_NEED_SETUP success path call ksmbd_all_conn_set_status(),
+which takes conn_list_lock for reading.
+
+A writer queued on conn_list_lock can block these new read acquisitions.
+The worker then waits for a session lock held by
+destroy_previous_session(), which waits behind the writer. The writer
+cannot proceed until the worker releases conn_list_lock.
+
+Try both session locks instead of waiting in the scavenging check. Keep
+the connection when either lock is busy and let the periodic worker
+retry later.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99277 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99277</link>
+    <guid isPermaLink="false">d69a453b3518298482843cd5ef096420</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ksmbd: hold a connection reference for each session channel
+
+ksmbd_session_unregister() removes a session from the global and per-
+connection tables before dropping the table reference. A concurrent
+reference holder can keep the session and its channel list alive after
+those removals.
+
+Connection cleanup can no longer find the unpublished session to remove its
+channels. Since a channel only stores a raw conn pointer, the connection
+can be freed while another session reference holder is still accessing it,
+for example during SMB3.1.1 binding or a procfs read.
+
+Take a connection reference when registering a channel and release it on
+insertion failure, channel removal, or final session destruction. Keep the
+channels and signing keys until the session is destroyed so a response can
+still be signed after the session has been unregistered.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99278 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99278</link>
+    <guid isPermaLink="false">88e489a6a303ab1a4ba155a43871700b</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ksmbd: limit sessions on each connection
+
+The pending setup limit only counts InProgress sessions. A client can
+complete authentication repeatedly and retain an unbounded number of Valid
+sessions on one connection.
+
+Reserve a connection slot before allocating a session and retain a
+connection reference while authentication is in progress. The first SMB3
+channel takes over that reservation; binding to another connection reserves
+one slot there. Reauthentication and authentication continuation reuse the
+existing reservation. Return slots on allocation or insertion failure,
+channel removal, and final session destruction.
+
+Accept max_sessions_per_connection in reserved startup-request space and
+default to 64 when older tools leave it zero. Keep the request size and
+existing field offsets unchanged. Expose the configured limit in procfs.
+The existing connection limits bound the aggregate number of sessions
+without a separate global session allocation limit.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99279 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99279</link>
+    <guid isPermaLink="false">1f0032cc8bb8bf668701bf62928d40da</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ksmbd: reclaim ended sessions on logoff and expiration
+
+LOGOFF and previous-session replacement leave sessions Expired with a
+zero credential expiry. Ended sessions can retain their memory and
+connection slots when no further setup arrives on the owning connection.
+
+Unpublish a logged-off session while the request reference keeps its
+response signing and encryption keys alive. Remove its procfs entry
+before dropping the table reference so a reader cannot remove its own
+entry on the last put. Clear proc_entry after removal to avoid removing
+it twice.
+
+Reclaim ended sessions from the global table in the existing expiration
+worker before it acquires conn_list_lock. Only select Expired sessions
+with zero credential expiry and no references beyond the table
+reference. Keep sessions whose Kerberos credentials expired available
+for reauthentication.
+
+Unlink the session from its setup connection and all channel
+connections, so SMB2 sessions and sessions with only secondary SMB3
+channels are covered. The session already holds connection references,
+and sessions_table_lock prevents concurrent channel removal. Queue
+sessions on a separate disposal list, leaving their hash nodes unhashed,
+and remove procfs entries and drop table references outside the locks.
+
+Keep the pending setup check before allocating a new session so
+abandoned InProgress sessions can release their slots even at the
+connection limit. Retain the timeout and reference checks and dispose of
+those sessions outside the locks. Leave ended Expired sessions to the
+expiration worker.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99280 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99280</link>
+    <guid isPermaLink="false">6f73f641cd903227f44ae3836366cbdf</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ksmbd: drain session procfs readers before dropping table references
+
+Session registration failure and connection cleanup can drop the table
+reference while the per-session procfs entry is still accessible. If a
+reader holds the last remaining reference, its final put calls
+proc_remove() from its own callback and waits for that callback to
+finish.
+
+Remove the procfs entry before dropping the table reference in the
+registration failure path. Queue sessions removed during connection
+cleanup and drain their procfs readers after releasing both session
+locks, then return their table references. Keep the global hash node
+unhashed while a session is queued so a concurrent unregister cannot
+drop the reference again.
+
+Previous-session replacement also destroys the file table before the
+session is finally freed. Detach the idr under the lock used by procfs
+file counters, and report zero files after it has been detached. This
+prevents a reader from accessing the idr during or after its
+destruction.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99281 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99281</link>
+    <guid isPermaLink="false">7d47b71813c17d168d55a91eea63b5e3</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+tun: Require CAP_NET_ADMIN to attach to an ownerless device
+
+Twenty years ago I made creating a tuntap device require CAP_NET_ADMIN
+in commit ca6bb5d7ab22 (&quot;[NET]: Require CAP_NET_ADMIN to create tuntap
+devices.&quot;)
+
+The idea was to allow the permissions on /dev/net/tun to be relaxed to
+0666 and thus allow owners of tun devices assigned with TUNSETOWNER to
+actually open it and get at their devices.
+
+What we missed at the time was that persistent devices with *no* owner
+were already essentially world-consumable, and anyone who could open
+the device node could also attach to those.
+
+Even then, using persistent devices with no explicitly set owner — on
+the (false) presumption that CAP_NET_ADMIN would be required to open
+them — wasn't an egregious userspace bug. There are cases where it does
+make sense to separate the creation/configuration of the netdevice, from
+the process which shovels packets into it.
+
+Since then, TUNSETGROUP was added a year later in commit 8c644623fe7e
+(&quot;[NET]: Allow group ownership of TUN/TAP devices.&quot;). Its commit message
+noted that if both uid and gid are set, both have to match (in itself a
+bizarre choice) — but still not that with *neither* set, no permission
+at all was required.
+
+Then in 2012 commit c8d68e6be1c3 (&quot;tuntap: multiqueue support&quot;) allowed
+new queues to be attached to a device from the moment of its creation,
+with no way for userspace to close the race between creation and a
+subsequent TUNSET{OWNER,GROUP}.
+
+In 2024, commit 3ca459eaba1bf (&quot;tun: fix group permission check&quot;) tried
+to fix things to be saner: only require the user *or* the group to
+match, in line with standard POSIX permissions, and require
+CAP_NET_ADMIN if neither the user nor group authorised the access
+(although it put the CAP_NET_ADMIN check first, and would wrongly have
+reported the capability as having been used even when it was not).
+
+That fix was reverted in commit a70c7b3cbc06 (&quot;tun: revert fix group
+permission check&quot;) due to allegedly causing a regression in an selinux
+test suite which *expected* the attachment to succeed when authorised
+by none of user, group, nor CAP_NET_ADMIN:
+https://lore.kernel.org/netdev/CAFqZXNtkCBT4f+PwyVRmQGoT3p1eVa01fCG_aNtpt6dakXncUg@mail.gmail.com/
+
+We should not break UAPI. But we don't have to consider an selinux test
+case which deliberately exercises a security flaw to be UAPI worth
+preserving either. To which end, I have fixed it in selinux-testsuite
+commit b2f894f0016b (&quot;tests/tun_tap: set an owner on the device for the
+relabel tests&quot;).
+
+So: fix the lack of CAP_NET_ADMIN check on devices which *haven't* been
+assigned an owner or group, while leaving the weird tun ownership model
+as it was (user *and* group have to match, if both are set). If someone
+still wants to fix the latter (which wasn't actually the reason the
+previous attempt was reverted), they can do it under separate cover.
+
+Permit attaching to an existing device only if an owner and/or group was
+set and the caller matches all that were set, or if the caller has
+CAP_NET_ADMIN. The only behavioural change is that a device with no
+owner or group now requires CAP_NET_ADMIN to attach — precisely the
+loophole we want to close.
+
+And put the CAP_NET_ADMIN check in the right place this time.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99282 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99282</link>
+    <guid isPermaLink="false">c5df312b0c2820d556312bc9ba91b3c8</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+net/sched: sch_teql: fix use-after-free on lower qdisc drop
+
+The issue: teql_master_xmit() tests the slave's ndo_start_xmit() return
+value against NETDEV_TX_OK alone. A slave that consumes the skb but
+returns an error code (rc &lt; NET_XMIT_MASK, e.g. NET_XMIT_DROP) is treated
+as if the skb were still owned, so the loop restores skb-&gt;dev and calls
+__skb_pull() on it. A VLAN slave returns the result of dev_queue_xmit()
+from its ndo_start_xmit() (propagated since cbbef5e18307), and when the
+lower qdisc drops the packet that value is NET_XMIT_DROP after the skb
+has been freed, giving a use-after-free in teql_master_xmit().
+
+The Fix: test for consumption with dev_xmit_complete(), which accepts
+NETDEV_TX_OK and every rc &lt; NET_XMIT_MASK, matching other callers that
+need to distinguish consumed results from busy. Only NETDEV_TX_OK keeps
+the packet counted in tx_packets/tx_bytes and advances the slave; a
+consumed result that is neither a success nor NET_XMIT_CN ends the
+attempt and is charged to tx_dropped, so lower-qdisc drops are no longer
+reported as good transmits. NET_XMIT_CN is counted like success because
+it can accompany acceptance of the current packet: pfifo_head_drop drops
+the old head, enqueues the current skb and returns NET_XMIT_CN.
+
+Conditions to recreate the bug:
+With CONFIG_NET_SCH_TEQL,
+CONFIG_VLAN_8021Q and CONFIG_DUMMY enabled, add lkrdummy0 (dummy) and
+lkrvlan0 (VLAN id 37 on lkrdummy0); set a pfifo limit 0 root on lkrdummy0
+and a teql0 root on lkrvlan0; bring teql0 up with an address and send one
+UDP packet to it. The VLAN xmit returns NET_XMIT_DROP from the lower
+qdisc while holding a freed skb.</description>
     <category>NVD</category>
     <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
