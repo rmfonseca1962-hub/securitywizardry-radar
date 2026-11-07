@@ -5,111 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2026 15:01:34 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-109973 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109973</link>
-    <guid isPermaLink="false">4cbb8fdc6e27cf2a490898568f514ce9</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Image Hover Effects Ultimate Visual Composer (Flipbox - Awesomes Flip Boxes Image Overlay) plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'flip-box-image-upload-url-01-alt' parameter in versions up to, and including, 3.1.1. This is due to the plugin saving the image-alt field through sanitize_text_field() in Inc/Style22::register_child() (and Inc/Style18, 19, 20, 25, 29) — which preserves the double-quote character — and then concatenating the stored value into a double-quoted HTML attribute in Public_Render/Style22::default_render() (and the corresponding Style18/19/20/25/29 renderers) with no esc_attr() escaping. This makes it possible for authenticated attackers, with contributor-level access and above (when an administrator has delegated the plugin's 'Who can edit' capability via the plugin Settings page, or on multisite installations where even administrators lack unfiltered_html), to inject arbitrary web scripts in pages that will execute whenever a user accesses any page containing an affected [oxilab_flip_box] shortcode or block.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119156 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119156</link>
-    <guid isPermaLink="false">8b0942a5cd0beb9c9708d328f36b30c6</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Download Manager plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'wpdm_reg[first_name], wpdm_reg[last_name], wpdm_reg[user_login]' parameter in all versions up to, and including, 7.5.9 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the site to have &quot;Anyone can register&quot; enabled, the plugin's [wpdm_reg_form] shortcode published on a public page, and at least one package authored by user ID 1 rendered with the Spotlight link template.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120579 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120579</link>
-    <guid isPermaLink="false">60647161d78ec4839325a7e30bdf3d24</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Active Woot Products Tables for WooCommerce. 100% FREE plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'help_title' parameter in all versions up to, and including, 2.1.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120839 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120839</link>
-    <guid isPermaLink="false">8593072daea3fdc0095e944026da558d</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 8.8 | Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Magepeople inc. WpTravelly tour-booking-manager allows PHP Local File Inclusion.This issue affects WpTravelly: from n/a through 2.3.8.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120841 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120841</link>
-    <guid isPermaLink="false">ec3a5ea880d48ea9889d5db57fda6449</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 8.8 | Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in Magepeople inc. WpTravelly tour-booking-manager allows PHP Local File Inclusion.This issue affects WpTravelly: from n/a through 2.3.8.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121575 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121575</link>
-    <guid isPermaLink="false">121b1052fc1fa763d9ac7c7c03102ef3</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in WP User Manager WP User Manager wp-user-manager allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP User Manager: from n/a through 2.10.4.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121579 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121579</link>
-    <guid isPermaLink="false">b3820daaa09cc057f600a8432e65ea28</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Unlimited Elements Unlimited Elements For Elementor (Free Widgets, Addons, Templates) unlimited-elements-for-elementor allows Stored XSS.This issue affects Unlimited Elements For Elementor (Free Widgets, Addons, Templates): from n/a through 2.0.26.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121775 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121775</link>
-    <guid isPermaLink="false">bbdba3177bc3f116f6c1f9cc1a5e2f85</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in VillaTheme CURCY woo-multi-currency allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects CURCY: from n/a through 2.2.20.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121777 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121777</link>
-    <guid isPermaLink="false">4c323896db6a56aa38f7c7058e6877f4</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Cool Plugins Cool Formkit Lite extensions-for-elementor-form allows Code Injection.This issue affects Cool Formkit Lite: from n/a through 2.7.10.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121784 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121784</link>
-    <guid isPermaLink="false">6de15dabb49d599f6f8b6e8418e5c622</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Magepeople inc. WpBookingly service-booking-manager allows Stored XSS.This issue affects WpBookingly: from n/a through 1.4.3.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122041 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122041</link>
-    <guid isPermaLink="false">c0de87e9f15980b48df5bdd4e28dd31b</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 9.1 | The Checkout Field Editor for WooCommerce (Pro) plugin for WordPress is vulnerable to unauthorized deletion of arbitrary attachments due to a missing capability/ownership check in the ajax_remove_uploaded() function in versions up to, and including, 3.8.0. The handler is registered for both wp_ajax and wp_ajax_nopriv and is gated solely by the 'file_handling_nonce' nonce, which is emitted inside the public checkout page markup (data-nonce attribute) whenever a File Upload checkout field is configured. This makes it possible for unauthenticated attackers to delete arbitrary attachments (including those belonging to other users or posts) by submitting a crafted attachment_id, which can lead to loss of important media and potential denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122659 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122659</link>
-    <guid isPermaLink="false">dc6778ce6c135160bc41dcc2b808c80b</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.4 | Missing Authorization vulnerability in WP ManageNinja LLC Fluent Booking fluent-booking allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Fluent Booking: from n/a through 2.5.0.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122660 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122660</link>
-    <guid isPermaLink="false">ff93084cbb096a8f8b435f8216d5016a</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in BAKKBONE Australia FloristPress bakkbone-florist-companion allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects FloristPress: from n/a through 7.8.5.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 07 Nov 2026 16:00:28 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-122663 - NVD - CVSS Score v3.1: 5.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122663</link>
@@ -646,6 +542,110 @@ lkrvlan0 (VLAN id 37 on lkrdummy0); set a pfifo limit 0 root on lkrdummy0
 and a teql0 root on lkrvlan0; bring teql0 up with an address and send one
 UDP packet to it. The VLAN xmit returns NET_XMIT_DROP from the lower
 qdisc while holding a freed skb.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123989 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123989</link>
+    <guid isPermaLink="false">aae78909c311bc6ba409fabf59baf8f2</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.3 | A vulnerability was found in ESEngine DeepSeek-Reasonix up to 1.33.0. Impacted is the function loadGitStatus of the file build.rs of the component Build Script Execution. Performing a manipulation results in permission issues. The attack may be initiated remotely. Upgrading to version 1.34.0 is recommended to address this issue. The patch is named a54659c2c5b0f4e57aae2b44d41f421c6a71e8cf. You should upgrade the affected component.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124307 - NVD - CVSS Score v4.0: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124307</link>
+    <guid isPermaLink="false">eb4d512206ca1e003cb24ee73fbf9c44</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.8 | Fraunhofer HHI VVdeC before 3.2.1 contains a heap use-after-free vulnerability that allows attackers to corrupt memory by redefining an ALF adaptation parameter set id still referenced by slices. Attackers can supply a crafted VVC bitstream that, with multithreaded decoding, makes worker threads dereference freed APS objects in CABACReader::readAlf() and AdaptiveLoopFilter::reconstructCoeff(), causing crashes or heap corruption.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124308 - NVD - CVSS Score v4.0: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124308</link>
+    <guid isPermaLink="false">3ebf179b8f967aefee333a0e90d43014</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.8 | Fraunhofer HHI VVdeC before 3.2.1 contains a heap use-after-free vulnerability in DecLibRecon::createSubPicRefBufs because decompressPicture clears m_subPicExtTasks without waiting for pending tasks. Attackers can supply a crafted multi-subpicture VVC bitstream to decoders using two or more threads, causing heap memory corruption or a decoder crash.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124309 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124309</link>
+    <guid isPermaLink="false">19a789511fd5ec673001d522bb4809eb</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 6.9 | Fraunhofer HHI VVdeC before 3.2.1 contains a heap out-of-bounds read vulnerability in SEIReader::xParseSEIScalableNesting that allows attackers to read past heap allocations by casting the SEI wrapper object instead of its payload. Attackers can supply a crafted VVC bitstream with a scalable nesting SEI containing a nested buffering period SEI to crash the decoder or copy adjacent heap memory.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124310 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124310</link>
+    <guid isPermaLink="false">61d41018a5ac1bd1417f26d8eccfbde5</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 6.9 | Fraunhofer HHI VVdeC before 3.2.1 contains an out-of-bounds read vulnerability that allows attackers to crash the decoder by supplying bitstreams with overlapping slice CTU coverage. Attackers can code a CTU in a second slice so a bi-predicted BDOF coding unit carries a negative reference index, causing Slice::getRefPic to read outside m_apcRefPicList and crash decoding.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124311 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124311</link>
+    <guid isPermaLink="false">0123f9b7d86fd529eb2a19edc2c448d9</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 6.8 | Fraunhofer HHI VVdeC through 3.2.1 contains a NULL pointer dereference vulnerability in InterPrediction::xPredInterBlk that allows attackers to crash the decoder by switching SPS to enable reference wrap-around. Attackers can supply a crafted VVC bitstream activating a new SPS with sps_ref_wraparound_enabled_flag set, causing reads from missing PIC_RECON_WRAP buffers and denial of service.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124312 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124312</link>
+    <guid isPermaLink="false">936175486f151f24d110d8e4c810c5cf</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.7 | Fraunhofer HHI VVdeC through 3.2.1 contains a heap out-of-bounds read vulnerability that allows attackers to crash the decoder by supplying a collocated picture of different resolution. Attackers can craft a VVC bitstream enabling TMVP with a smaller collocated reference picture, causing getColInfo to read past the colMotion allocation when error concealment is enabled.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124313 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124313</link>
+    <guid isPermaLink="false">f312dac593b5329504c182442a4aa479</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.3 | Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in the whitelisted get_linked_payments_for_doc method. Any authenticated user, including portal users, can supply arbitrary company, doctype, and docname values to read Payment Ledger Entry allocation data for other companies' invoices and vouchers.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124314 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124314</link>
+    <guid isPermaLink="false">dd537b608f2fe340a56d33cf42fd7fec</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 7.1 | Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in erpnext.crm.utils.get_open_activities that exposes ToDo and Event records. Any authenticated user, including portal or no-role users, can supply arbitrary ref_doctype and ref_docname values to enumerate activities and private calendar event details.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124315 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124315</link>
+    <guid isPermaLink="false">4577d55e0e7a93dfafe04e5bfd118e17</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 7.1 | Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in the whitelisted get_bom_items and get_bom_diff methods that skip BOM read permission checks. Any authenticated user, including portal or no-role users, can call get_bom_items with a BOM name to retrieve every raw material, quantity, rate and cost.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124316 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124316</link>
+    <guid isPermaLink="false">957dd45247d86fb1ed0ccae2f4b687b4</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.3 | Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in the whitelisted erpnext.buying.utils.get_linked_material_requests method lacking document or company permission checks. Authenticated users, including portal users or users without roles, can supply item codes to retrieve open Purchase-type Material Requests belonging to other companies.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124317 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124317</link>
+    <guid isPermaLink="false">6a6c84d4193b1e53b1dbd7dd8f6f41a4</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 6.3 | libexpat through 2.10.0 contains an out-of-bounds read vulnerability in unknown_toUtf8() and unknown_toUtf16() in xmltok.c when handling application-registered unknown encodings. Attackers can supply a document ending in a truncated multibyte sequence so the convert callback reads past the parse buffer, leaking adjacent memory or crashing applications.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124318 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124318</link>
+    <guid isPermaLink="false">1b56e339638aac6411738af278a1770c</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 8.6 | Treeio through 2.0 contains an insecure deserialization vulnerability in UpdateRecord.get_format_strings and ModuleSetting.loads that allows staff users to execute code via unverified pickle data. Attackers can store a crafted base64 pickle payload in an UpdateRecord format_strings field through the Django admin, executing Python code as the web server user when news feeds render.</description>
     <category>NVD</category>
     <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
