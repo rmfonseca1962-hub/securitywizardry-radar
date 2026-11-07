@@ -5,31 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2026 21:01:26 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-123964 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123964</link>
-    <guid isPermaLink="false">2ff16b6bf3b166dba24fcb0f0fdea69b</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was detected in OpenBMB Internet of Agents up to 9d78e88e47160eb42ee1ee8538c05e1c2c47877a. This affects the function launch_goal of the file im_client/communication/communication_layer.py of the component Collaboration Layer. Performing a manipulation of the argument max_turns results in infinite loop. The attack may be initiated remotely. The exploit is now public and may be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120984 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120984</link>
-    <guid isPermaLink="false">386b1a494c3b9d4addd71d29fe82b91c</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 9.1 | A flaw was found in the Keycloak server's client management component. When a client is created or imported with authorization services enabled, the system fails to properly clear an internal session attribute used during the setup process. This allows an authenticated attacker with client management permissions to bypass security controls and upload a malicious JavaScript policy, which is then executed on the server when an authorization request is made. Successful exploitation could allow the attacker to run arbitrary code on the server, potentially compromising the entire system.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123966 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123966</link>
-    <guid isPermaLink="false">d090c0f06db112635c12777d93462b17</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 9.3 | A vulnerability was determined in Tenda AC19 16.03.10.07. Affected by this issue is the function saveParentControlInfo of the file /goform/saveParentControlInfo. This manipulation of the argument deviceId causes heap-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 07 Nov 2026 22:00:34 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-123988 - NVD - CVSS Score v4.0: 5.5</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123988</link>
@@ -646,6 +622,83 @@ qdisc while holding a freed skb.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124059</link>
     <guid isPermaLink="false">d7dc628bbcaa7feca29225f604e03d6b</guid>
     <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 8.5 | A security vulnerability has been detected in TOTOLINK CA300-PoE 6.2c.884. Affected by this vulnerability is the function setWiFiWdsAddConfig of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument ApCliKeyStr leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124060 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124060</link>
+    <guid isPermaLink="false">2893f31d3e3d459c8b7f10cde2c455eb</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 8.5 | A vulnerability was detected in TOTOLINK CA300-PoE 6.2c.884. Affected by this issue is the function UploadCustomModule of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument File results in buffer overflow. The attack may be launched remotely. The exploit is now public and may be used.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99283 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99283</link>
+    <guid isPermaLink="false">ccaf72c2929505c8bd9666ea8db9b57e</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+netfilter: conntrack: tcp: use UNACK timeout for non-closing RST packets
+
+Commit be0502a3f2e9 (&quot;netfilter: conntrack: tcp: only close if RST
+matches exact sequence&quot;) keeps an established conntrack entry in
+ESTABLISHED when an in-window RST does not match the expected sequence
+number exactly, so the endpoint can validate the RST with a challenge
+ACK.
+
+The timeout selection nevertheless uses the CLOSE timeout for every RST
+packet.  The bug is that timeout selection is based on the packet type,
+not on the state transition result: even when RST validation keeps
+new_state in ESTABLISHED, the timeout is still forced to
+TCP_CONNTRACK_CLOSE.
+
+Linux TCP independently rate limits challenge ACKs per socket.  A second
+non-exact RST can therefore arrive after the first challenge ACK has
+restored the timeout but before the rate limit expires.  The second RST
+lowers the timeout to 10 seconds again while the endpoint suppresses the
+second challenge ACK, allowing the conntrack entry to expire while both
+TCP endpoints remain established.
+
+Using the ESTABLISHED timeout for such RSTs would avoid this short
+expiration window, but it could also retain stale entries for the
+five-day default because conntrack cannot reliably match the endpoint's
+exact TCP state.
+
+Use the UNACK timeout for RST packets that leave the conntrack entry in
+TCP_CONNTRACK_ESTABLISHED.  Exact-match RSTs and accepted RST packet
+trains still fall through to timeouts[new_state], which preserves the
+CLOSE timeout when conntrack accepts the RST as closing the flow.
+
+This avoids the aggressive 10-second expiration window for non-exact
+RSTs while preserving the short timeout for RSTs that conntrack accepts
+as closing the flow.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99284 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99284</link>
+    <guid isPermaLink="false">8c1338192c883114b8120cfe36b4e35a</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+net: skbuff: propagate shared-frag marker in skb_zerocopy()
+
+skb_zerocopy() moves frag descriptors from @from into @to and takes a
+reference on each frag, but it does not copy skb_shinfo(from)-&gt;flags into
+skb_shinfo(to)-&gt;flags.  A destination skb holding the same page-cache
+backed frags as the source therefore reports skb_has_shared_frag() as
+false.
+
+That breaks the invariant relied on by later in-place writers.  ESP input
+checks skb_has_shared_frag() before deciding whether an uncloned
+nonlinear skb can skip skb_cow_data(); with the marker lost, an skb that
+skb_zerocopy() built for nfnetlink_queue or for an openvswitch upcall is
+decrypted in place, letting an unprivileged user write into the page
+cache of a root-owned read-only file.
+
+Propagate SKBFL_SHARED_FRAG when frag descriptors are copied, as done for
+the other frag-transfer helpers.</description>
     <category>NVD</category>
     <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
