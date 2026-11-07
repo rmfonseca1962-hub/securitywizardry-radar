@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2026 03:01:15 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 04:02:23 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-71881 - NVD - CVSS Score v4.0: 4.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71881</link>
@@ -15,208 +15,204 @@
     <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-63440 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63440</link>
-    <guid isPermaLink="false">11afd368828a076d297929c1e80643b6</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.9 | 2FAuth is a web app to manage Two-Factor Authentication (2FA) accounts and generate their security codes. Prior to 8.0.0, the otpauth image-fetch path validates a hostname through ValidatesUrls::isExternalHost() and then lets IconService::storeRemoteImage() resolve the same hostname again for the HTTP request. When external otpauth image fetching is enabled, an authenticated user controlling low-TTL authoritative DNS can return a public address during validation and an internal address during the later connection, bypassing the private-address deny list to reach loopback, private-network, link-local, or cloud metadata endpoints. This issue is fixed in version 8.0.0.</description>
+    <title>CVE-2026-104913 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104913</link>
+    <guid isPermaLink="false">2422d98fb7a03fa564f4429ddb550621</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 8.8 | The Interactive Real Estate – Floor Plan &amp; Building Visualizer plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.6.0 via the extract_zip_data function. This is due to missing capability check, nonce verification, and file extension or MIME type validation before copying attacker-supplied ZIP members to the uploads directory. This makes it possible for authenticated attackers, with subscriber-level access and above, to upload files that may be executable, which makes remote code execution possible. This vulnerability is only exploitable on sites where the plugin's Freemius Premium license or trial is active, as the sole gate in the handler is a site-level license check rather than a per-user capability check.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-63441 - NVD - CVSS Score v4.0: 4.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63441</link>
-    <guid isPermaLink="false">79a8cc170b708721e5e10a4ab0245896</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 4.9 | 2FAuth is a web app to manage Two-Factor Authentication (2FA) accounts and generate their security codes. From 6.1.0 until 8.0.0, App\Services\Traits\ValidatesUrls::isPublicIp() does not recognize the 64:ff9b::/96 and 64:ff9b:1::/48 NAT64 prefixes, so an otpauth URI image parameter can pass an IPv6 literal or DNS64-synthesized address whose embedded IPv4 target is private, link-local, loopback, or cloud metadata. In a deployment with image fetching enabled and a NAT64 translation path to the internal IPv4 target, an account holder can submit the crafted URI directly, or an external attacker can induce a victim to import a crafted URI or migration payload. IconService::buildFromRemoteImage() then issues an HTTP GET to the embedded target, allowing image-shaped responses to be recovered or other endpoints to be probed blindly. This issue is fixed in version 8.0.0.</description>
+    <title>CVE-2026-115816 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115816</link>
+    <guid isPermaLink="false">d58dfa8a91fffed4d52a1b22420ebfbd</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Kubio AI Page Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment (review body)' parameter in all versions up to, and including, 2.9.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires the attacker's review containing the payload to be approved, either automatically (due to a previously approved review from the same account) or manually by an administrator, and the active single-product template must use a Kubio-rendered wp:post-content block.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-71397 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71397</link>
-    <guid isPermaLink="false">0bfa981b755e03d8a14906ea21d84526</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 8.2 | Allocation of Resources Without Limits or Throttling vulnerability in elixir-grpc grpc_server allows unauthenticated attackers to exhaust memory and crash the node via an oversized client-streaming or bidirectional-streaming request body.
-
-The streaming read clause of 'Elixir.GRPC.Server.Adapters.Cowboy.Handler':info/3 (grpc_server/lib/grpc/server/adapters/cowboy/handler.ex) never checks the configured max_body_size. Only the unary read path enforces that cap. 'Elixir.GRPC.Server.Adapters.Cowboy':reading_stream/1 (grpc_server/lib/grpc/server/adapters/cowboy.ex) appends every received chunk to its buffer until a complete length-prefixed message arrives. A client can declare a very large message and send it across many small HTTP/2 DATA frames, and the server buffers all of it.
-
-This issue affects grpc_server: from 1.0.0 before 1.0.6.</description>
+    <title>CVE-2026-116562 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116562</link>
+    <guid isPermaLink="false">3dcb1db3d0153f8c301dddb240626915</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Motors – Car Dealership &amp; Classified Listings Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'stm_f_s[make]' parameter in all versions up to, and including, 1.4.128 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the Free Listing Submission feature to be enabled, which is shipped on by default via the Setup Wizard demo configuration.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-71863 - NVD - CVSS Score v3.1: 2.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71863</link>
-    <guid isPermaLink="false">4bc0db7efac57e76f111af610b7ab00d</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 2.6 | SecureDrop is an open-source whistleblower submission system that media organizations can use to securely accept documents from, and communicate with anonymous sources. From 2.13.0 until 2.16.1, running the securedrop-admin install Ansible playbook with journalist alerts disabled leaves the journalist alert key filename empty, causing the copy task to transfer every file in ~/.config/securedrop-admin/, including Onion Service client authentication credentials, to the Monitor Server. An attacker must first compromise the privileged Monitor Server to obtain the credentials, and the credentials remain an additional protection layer rather than sufficient access by themselves because the Journalist Interface still requires a username, passphrase, and MFA, while SSH access still requires SSH keys. This issue is fixed in version 2.16.1.</description>
+    <title>CVE-2026-118046 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118046</link>
+    <guid isPermaLink="false">3c2a0ebec75e501cf8ec844b111391cf</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The JS Help Desk – AI-Powered Support &amp; Ticketing System plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'jsticket_message' parameter in all versions up to, and including, 5.0.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The payload fires specifically when an administrator or agent opens the affected ticket and the page initializes VenoBox, which reads the browser-decoded data-title attribute and passes it to jQuery .html(), making routine ticket review the trigger condition.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-85295 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85295</link>
-    <guid isPermaLink="false">a27a72e504caf35e13f10f9b7b786ce9</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 9.8 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, four authentication helpers accepted session tokens signed with CB_SECRET, including known, weak, or shipped-default values. The vulnerable surface is session JWT fallback in server/modules/verifyToken.js, verifyUser.js, getUserFromToken.js, and socketManager.js across the API and socket layer. A stock source or repository Docker Compose deployment retains a known, weak, or default CB_SECRET and an attacker submits a forged HS256 token decoding to a target user id. Knowing the symmetric secret lets the attacker create a token that the legacy verification fallback accepts as the target user without that user's password or two-factor authentication. The condition includes stock source and repository Docker Compose installs and any otherwise known or weak CB_SECRET; a bare container where CB_SECRET is undefined is not affected by this fallback path. A forged session impersonates the chosen user across the entire API and socket layer and exercises that user's Chartbrew privileges. This issue is fixed in version 5.2.3.</description>
+    <title>CVE-2026-118054 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118054</link>
+    <guid isPermaLink="false">583f0fc4d8ec5d46a2ff8f53ce590324</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The LearnPress – Course Review plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'review_title (inside `data.args.review_title`)' parameter in all versions up to, and including, 4.2.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected payload only executes after an administrator approves the submitted review, though sites with comment_previously_approved auto-approval configured may bypass manual moderation.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-85708 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85708</link>
-    <guid isPermaLink="false">dc3a5d29abae13bd149cd5f3661be87e</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.5 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, Chart share and embed tokens were signed with CB_SECRET, including known or shipped-default values in stock source and repository Docker Compose installs. The vulnerable surface is chart share-token verification and filter-access routes for private charts. An attacker who knows the deployment's CB_SECRET targets a private chart that has been shared at least once so a share-policy row exists, then forges a Chart-subject token for that chart id. The known signing key permits valid Chart tokens, and the filter-access path accepts sequential integer ids without requiring a legitimate share link; token expiry and revocation are ineffective once the secret is known. The condition requires a known or default secret and an existing share-policy row. A bare container where CB_SECRET is undefined is outside this path, and a unique secret excludes it only while the value remains unknown and unpredictable. An unauthenticated attacker can enumerate integer ids and read arbitrary private chart data, including chartData, without possessing a legitimate share link. This issue is fixed in version 5.2.3.</description>
+    <title>CVE-2026-118067 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118067</link>
+    <guid isPermaLink="false">4b8761e6bdffef47c5630891eb9cc093</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.4 | The Form Maker by 10Web – Mobile-Friendly Drag &amp; Drop Contact Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'wdform_&lt;field_id&gt;_element&lt;form_id&gt; (payload) + disabled_fields&lt;form_id&gt; (pivot)' parameter in all versions up to, and including, 1.15.50 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the targeted form to contain a File Upload field, as the attacker must suppress that field's storage row via the disabled_fields parameter to shift a controlled text-field value into the positional slot where escaping is skipped; execution occurs when an administrator opens the Submissions page for the affected form.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-85712 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85712</link>
-    <guid isPermaLink="false">e591651fc2261b5265fbf6ca5dcbf273</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 8.8 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, the shared project permission check trusted a caller-controlled team_id and let the teamOwner/teamAdmin branch continue without confirming that the target project belonged to that team. The vulnerable surface is project routes and related authorization checks that accepted user-controlled project identifiers. An authenticated user who is an owner or admin of their own team submits a victim project id together with the attacker's own team_id in the request body; default self-signup grants the required role on the user's own team. Authorization is evaluated against the attacker-selected team instead of the target project's team, and the update path mass-assigns the request body without a project field allow-list. The attacker needs a valid Chartbrew account, an owner or admin role on their own team, and a victim project identifier; requests without the body team_id trick are rejected. The attacker can re-parent the victim project into their own team, gain full read and write access, expose it publicly, remove password protection, and cause the victim to lose it; the shared delete route also permits cross-tenant deletion. This issue is fixed in version 5.2.3.</description>
+    <title>CVE-2026-119070 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119070</link>
+    <guid isPermaLink="false">dea22c76a83cc96182705fbb295ff6e1</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Optimole – Optimize Images | Convert WebP &amp; AVIF | CDN &amp; Lazy Load | Image Optimization plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 4.2.17 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit requires the plugin to be in its normal connected state (cdn_key and cdn_secret configured) with the image replacer enabled, which is the default post-setup configuration; the stored payload bypasses all WordPress comment sanitization filters because it contains no HTML metacharacters at storage time — the characters are produced only by Optimole's own decoder at render time.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-85726 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85726</link>
-    <guid isPermaLink="false">c0fdfcc5a92bbf54e817ad3f465e7a75</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.5 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, a date-typed MongoDB variable placed inside a quoted query placeholder was inserted as an unescaped string, unlike the safely escaped or coerced string, number, and Boolean branches. The vulnerable surface is mongoDB-backed public, shareable, or embedded charts processed by date-variable substitution. An unauthenticated user supplies a crafted URL filter to a public, shareable, or embedded MongoDB chart whose query places a date-typed variable in a quoted literal. The crafted date value breaks out of the quoted literal and changes query logic; the chart's returned row count becomes a Boolean oracle for character-by-character field extraction. The chart must be externally reachable and use the vulnerable date-in-quoted-placeholder branch. Extraction is read-only and limited to one queried collection per request, and it requires neither an account nor a known field value. The blind oracle can disclose any field in the queried collection, including secrets the chart does not display. This issue is fixed in version 5.2.3.</description>
+    <title>CVE-2026-119098 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119098</link>
+    <guid isPermaLink="false">07fd6ca8eb74db6e7b68ae7657ddf1b6</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The LifterLMS – WP LMS for eLearning, Online Courses, &amp; Quizzes plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'answer[]' parameter in all versions up to, and including, 10.3.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires the attacker to be enrolled as a student in a course containing a Content-type quiz question; the injected payload executes in the administrator's browser session during the normal grading workflow when 'Start a Review' is clicked on the affected attempt.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-85736 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85736</link>
-    <guid isPermaLink="false">bee1f9171aa2b8c5358cf696376a9334</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 8.1 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, connection creation or update stored attacker-chosen absolute SSL and SSH file paths, and later connection cleanup passed those stored paths to fs.unlink without a path restriction. The vulnerable surface is data-connection certificate and SSH-key cleanup when a connection is removed. A user with createOwn and deleteOwn permissions on their own team stores a target path in a connection and then deletes the connection to trigger cleanup; default self-signup grants teamOwner these permissions. The cleanup routine treats the stored SSL or SSH path as a managed certificate path and unlinks the referenced file; duplicateConnection provides a second advisory-identified trigger. The attacker must be able to create or update and then delete a connection on their own team. The default container runs Chartbrew as uid 0, while deployments with a less-privileged process are limited by that process's deletion permissions. The attacker can delete files such as /code/.env or application source, causing integrity loss and service disruption. This issue is fixed in version 5.2.3.</description>
+    <title>CVE-2026-119152 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119152</link>
+    <guid isPermaLink="false">6d06ef5a39d370fea4ae5a2c39747313</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.4 | The Appointment Booking Plugin – LatePoint | Calendar &amp; Scheduling for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'customer[email] (inside params)' parameter in all versions up to, and including, 5.7.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. An unauthenticated visitor can exploit this by registering as a LatePoint customer via the public booking form — receiving an active customer session with no WordPress account — and then submitting a quoted local-part email address containing an HTML payload (e.g. a tag with no spaces) that passes FILTER_VALIDATE_EMAIL but is stored and rendered unescaped.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-85737 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85737</link>
-    <guid isPermaLink="false">d5d23e4176ab4514e928972f9fe93e70</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | Velociraptor is a tool for collecting host-based state information using Velociraptor Query Language (VQL) queries. Prior to 0.77.2, SQLPlugin.Call in vql/parsers/sql/sql.go does not enforce plugin-level FILESYSTEM_READ or NETWORK checks before the mysql and postgres branches pass a caller-controlled connstring to sql.Open, allowing arbitrary outbound database connections. With attacker-controlled MySQL connection options that enable local-infile access, a rogue MySQL server can request files readable by the Velociraptor server process, including root-readable files when that process runs as root. The SQLite file accessor still enforces FILESYSTEM_READ, but a low-privilege analyst with ANY_QUERY can use the zero-permission data accessor and ATTACH DATABASE to create files without the plugin-level check. This issue is fixed in version 0.77.2.</description>
+    <title>CVE-2026-119165 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119165</link>
+    <guid isPermaLink="false">8200812e1038374d0a18650843d2c20b</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The WPBakery Page Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'display_name / nickname' parameter in all versions up to, and including, 9.0.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful execution requires that at least one public post attributed to the attacker's account be rendered through a Basic Grid using a Grid Builder template with the Post Author element configured to link to the post author; Author-level users can satisfy this precondition unassisted, while Subscribers depend on an administrator having assigned or published a post under their account.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-86005 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86005</link>
-    <guid isPermaLink="false">42941cd6a4f0d4b4e86bec8458ee9e81</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 9.3 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, the administrative BullMQ dashboard was mounted without an authentication check. The vulnerable surface is the Bull Board/BullMQ administration dashboard at /apps/queues. A remote unauthenticated attacker reaches /apps/queues on a Chartbrew instance where Redis and BullMQ are enabled and a reverse proxy does not independently block the route. The dashboard trusted network reachability as authorization and exposed its queue-management interface directly. Redis and BullMQ must be enabled and the route must be reachable. Available actions depend on the installed Bull Board version and queue state, while confidentiality depends on job payload and log contents. An unauthenticated user can inspect exposed job payloads and logs and, when enabled by the installed version and queue state, retry or delete jobs or otherwise alter queue processing, affecting confidentiality, integrity, or availability. This issue is fixed in version 5.2.3.</description>
+    <title>CVE-2026-119175 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119175</link>
+    <guid isPermaLink="false">1cf85e6c6f9c08fc5526192ec30d760a</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Flying Images: Optimize and Lazy Load Images for Faster Page Speed plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 2.4.15 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. A first-time commenter's submission requires a single administrator approval under the default comment_previously_approved setting; however, once approved, all subsequent comments from the same name and email pair bypass moderation, and the injected script executes for every visitor — including administrators viewing the post from the front end.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-86044 - NVD - CVSS Score v3.1: 9.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86044</link>
-    <guid isPermaLink="false">cd00820fb7b14b25aa8a407b186a13bb</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 9.6 | JupyterLab Desktop is the cross-platform desktop application for JupyterLab. Prior to 4.6.2-1, JupyterLab Desktop exposed getServerInfo to the renderer without confirming that the current page still had the local Jupyter server origin. In a local managed session using JupyterLab before 4.4.8, an attacker can place a crafted MathJax link in an untrusted notebook. If a victim opens the notebook and clicks the link, the existing renderer navigates to an attacker-controlled site while retaining access to the preload bridge. The site can call getServerInfo to obtain the local server URL and authentication token, then use the Jupyter REST API to create and trust a notebook that executes arbitrary code as the victim. Users whose environment already uses JupyterLab 4.4.8 or later are unaffected because the corrected link handling breaks the first step of the chain. This vulnerability is fixed in 4.6.2-1.</description>
+    <title>CVE-2026-119213 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119213</link>
+    <guid isPermaLink="false">f8a5643e577dd6f7ce7635ca95c2b600</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 3.7 | The Fluent Support – Helpdesk &amp; Customer Support Ticket System plugin for WordPress is vulnerable to unauthenticated modification of a linked customer's stored profile fields in versions up to, and including, 2.4.7 Its first-party Fluent Forms integration (FeedIntegration::notify()) opens a ticket from each public form submission and, for a logged-out submitter, resolves the submitted email to an existing WordPress account via get_user_by('email', ...) without verifying the submitter controls that address, then passes the attacker-supplied data to Customer::maybeCreateCustomer(). This makes it possible for unauthenticated attackers to overwrite a limited set of a registered customer's stored profile fields where an administrator has enabled a FluentSupport feed on a public form. The email address, role and status are never changed; first and last name are overwritten only when the target user has no name set in user meta; and other fields (title, address, city, state, zip, country) are writable only where an administrator has mapped them in the feed.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-103022 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103022</link>
-    <guid isPermaLink="false">5f8d8a29ff2a435972a7285d8e10adca</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.3 | Urwid is a console user interface library for Python. Prior to 4.0.7, handle_short_request() in urwid/display/web.py performs unguarded character encoding on POST input and unguarded UTF-8 decoding on polling update socket output. A remote attacker who obtains a valid X-Urwid-ID session token can submit non-ASCII POST data that raises UnicodeEncodeError, while non-UTF-8 polling output raises UnicodeDecodeError, causing the CGI handler to return an error and terminate request processing. The POST exception path also leaves an opened file descriptor unclosed for the CGI process lifetime, so repeated requests can cause denial of service for the web display interface. This issue is fixed in version 4.0.7.</description>
+    <title>CVE-2026-119218 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119218</link>
+    <guid isPermaLink="false">3da3d9c059b836d2504646801b0fbece</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.4 | The Greenshift – animation and page builder blocks plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'url (comment_author_url)' parameter in all versions up to, and including, 13.2.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires the affected page to be configured with a GreenShift Interaction Layer attach-attribute action that copies a comment-author anchor's href into a Counter block's data-prefix or data-postfix attribute; given that configuration, the payload executes for every visitor who loads the Counter into the viewport once the comment is published.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-104254 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104254</link>
-    <guid isPermaLink="false">9a33c491695381498e687c35f532a0ed</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.3 | liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. From 0.11.0 through 0.16.0, builds configured with OQS_ENABLE_SIG_STFL_LMS=ON can read beyond a caller-supplied signature buffer when an untrusted truncated LMS or HSS-LMS signature reaches OQS_SIG_STFL_verify or OQS_SIG_STFL_alg_lms_verify. In hss_validate_signature_init() in src/sig_stfl/lms/external/hss_verify_inc.c, consumed-length checks do not ensure that the bottom-level q and C fields remain available, allowing up to 32 bytes to be read past the buffer. In version 0.16.0, is_hss_public_key() also reads at offset 8 after only a four-byte length check, allowing an over-read of up to eight bytes. No valid signature is required, but the public key must be syntactically plausible. The read data is consumed only by an internal hash and is not exposed, so the supported impact is a possible verifier crash and denial of service, not memory disclosure or acceptance of an invalid signature. This issue is scheduled to be fixed in version 0.17.0.</description>
+    <title>CVE-2026-119219 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119219</link>
+    <guid isPermaLink="false">a5a18bd95c68d763c5c41e98ff4fdbeb</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.4 | The Jupiter X Core plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'fields[&lt;custom_meta_field_id&gt;]' parameter in all versions up to, and including, 4.62.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Execution requires that the attacker-registered account be assigned as the post_author of a page or post whose template includes the Raven Author Box widget, a fixture an administrator can create by reassigning authorship to any user including newly registered Subscribers.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-104267 - NVD - CVSS Score v4.0: 4.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104267</link>
-    <guid isPermaLink="false">3f30250181c2c1894cea663a88936b7d</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 4.1 | Botan is a C++ cryptography library. From 2.7.0 until 3.13.0, Botan's Scrypt implementation on 32-bit platforms computes required memory with unchecked multiplication, allowing attacker-controlled Scrypt parameters to wrap the allocation size and create a buffer smaller than the algorithm subsequently writes. The issue affects systems that enable Scrypt and accept arbitrary parameters from a hostile source, including applications that decrypt attacker-supplied encrypted private keys. A triggering parameter set can cause approximately four gigabytes of Scrypt output to be written past the allocated heap buffer, immediately crashing the process and causing denial of service. Arbitrary code execution is not demonstrated and appears difficult, but cannot be excluded from the overwrite primitive. This issue is fixed in version 3.13.0.</description>
+    <title>CVE-2026-119616 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119616</link>
+    <guid isPermaLink="false">6d951e55f5249fd7afac29ae1582f2a2</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.9 | The Noptin – Newsletter, New Post Notifications &amp; Email Automation plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 4.4.3 via the 'noptin_fields[first_name]' parameter parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. The public Manage Preferences page issues a nonce to unauthenticated visitors, meaning there is no effective authorization barrier — an unauthenticated attacker can store the malicious payload as their first_name and have it executed the next time any newsletter is sent by the site operator. Successful exploitation additionally requires an action by an administrator — the attacker cannot trigger the vulnerability on their own.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119800 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119800</link>
-    <guid isPermaLink="false">f9da9ac666ec129abdea01dc2cbf2f93</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.3 | Ryot is a self-hosted personal tracking application. Prior to 10.5.6, the collectionContents GraphQL query implemented by collection_contents() in crates/services/collection/src/content_operations.rs accepts a caller-controlled CollectionContentsInput.collection_id and returns a collection without checking whether the authenticated user owns it, collaborates on it, or may view it. The caller's user id is used only to annotate the response, allowing any authenticated user who obtains another collection's id to read the owner's identity, collection name and description, reviews, and complete item list across the tenant boundary. This issue is fixed in version 10.5.6.</description>
+    <title>CVE-2026-120082 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120082</link>
+    <guid isPermaLink="false">658652ce5558fb239476dffb161ec3ad</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The GeoDirectory – WP Business Directory Plugin and Classified Listings Directory plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'post_content' parameter in all versions up to, and including, 2.8.200 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The nested shortcode payload ([gd_dynamic_conten[gd_tags]t ...]) defeats the plugin's geodir_strip_shortcodes() guard because WordPress's strip_shortcodes() performs only a single pass over registered tags, and HTML-entity-encoded attributes in the resulting shortcode survive wp_kses_post() because kses inspects HTML tags rather than shortcode attribute values.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123788 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123788</link>
-    <guid isPermaLink="false">0fba92d3335bdec6253fd762aa76f950</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 5.3 | A security vulnerability has been detected in chenyme grok2api up to 3.1.6. The impacted element is an unknown function of the file backend/internal/transport/http/inference/voice_ws_handler.go of the component STT Billing. The manipulation leads to enforcement of behavioral workflow. The attack may be initiated remotely. Upgrading to version 3.1.7 is sufficient to resolve this issue. The identifier of the patch is 7ad0f791f0a9eb5a0ddfe38ac4dfcef01e19a6d4. Upgrading the affected component is recommended.</description>
+    <title>CVE-2026-120512 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120512</link>
+    <guid isPermaLink="false">bab2ada159ff8db8fbae1f122f4e262c</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Form Maker by 10Web – Mobile-Friendly Drag &amp; Drop Contact Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'wdform_&lt;n&gt;_element&lt;id&gt; (Hidden Input field, name = user-defined, e.g. hidden_probe)' parameter in all versions up to, and including, 1.15.50 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires an administrator to open the Submissions screen and click the Show-on-Map link associated with the poisoned entry, at which point the attacker-controlled field_id value is echoed unescaped into a single-quoted JavaScript string in the FormMakerEditCountryinPopup popup — a step whose nonce and capability checks are automatically satisfied by the administrator's own session and the freshly minted fm_ajax_nonce embedded in the link.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123791 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123791</link>
-    <guid isPermaLink="false">d37abaccc3061391ab463667e9d81e06</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was detected in OpenBMB Internet of Agents up to 9d78e88e47160eb42ee1ee8538c05e1c2c47877a. This affects the function _primary_field_query of the file common/utils/milvus_utils.py of the component Agent Registry. The manipulation of the argument key results in improper neutralization of special elements in data query logic. The attack may be launched remotely. The exploit is now public and may be used. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <title>CVE-2026-120520 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120520</link>
+    <guid isPermaLink="false">9589871437918a015ab975946452733b</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.3 | The Greenshift – animation and page builder blocks plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 13.2.2 via the 'img (or any key the publisher references in {{GET:key}})' parameter. This makes it possible for unauthenticated attackers to extract authenticated users' HttpOnly WordPress session cookies, specifically wordpress_logged_in_* tokens, by injecting a nested {{COOKIE:}} placeholder via a GET parameter that causes the victim's browser to transmit the cookie value to an attacker-controlled host as an image src URL. Exploitation requires that a site publisher has configured a public GreenShift Element image block whose src attribute contains a {{GET:}} placeholder, and that a logged-in user can be induced to open the attacker's crafted link — neither condition is part of the plugin's default state.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-44519 - NVD - CVSS Score v3.1: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-44519</link>
-    <guid isPermaLink="false">0c6e4e48aeff2e78479c8df1b73e725e</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.1 | liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. Prior to 0.16.0, the ct_select function in src/kem/frodokem/external/util.c for the FrodoKEM-640, FrodoKEM-976, and FrodoKEM-1344 AES and SHAKE reference variants lacks a value barrier in the Fujisaki-Okamoto implicit-rejection path. When compiled with Clang 17 or later at an affected optimization level such as -Os, the compiler can emit a secret-dependent conditional load, causing the real and rejection secret paths to leave distinguishable cache residency after successful and failed decapsulation. A local attacker able to perform repeated cache-timing measurements may use this oracle as part of a private-key recovery attack. Default -O3 builds vectorize both source loads and do not exhibit the reported behavior, and the advisory does not report the same generated memory-access pattern in NTRU, NTRU-Prime, BIKE, HQC, Classic McEliece, Kyber, or the already-barriered ML-KEM implementation. This issue is fixed in version 0.16.0.</description>
+    <title>CVE-2026-120540 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120540</link>
+    <guid isPermaLink="false">d6c863b4a51523494802149ddc6515fb</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The iubenda | All-in-one Compliance for GDPR / CCPA Cookie Consent + more plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to, and including, 3.13.6. This is due to the way iubendaParser::parse_comments() re-processes HTML inside IUB-COOKIE-BLOCK markers through the bundled simple_html_dom parser after WordPress has already KSES-filtered the saved comment: simple_html_dom's remove_noise() stores &lt;code&gt; bodies under a deterministic key ('___noise___ 1000') and restore_noise() later substitutes any matching substring back into attribute values WITHOUT re-escaping, allowing a quote-breaking payload stashed in an allowed &lt;code&gt; element to be injected into an allowed &lt;abbr title=&quot;___noise___ 1000&quot;&gt; attribute at render time. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page, after an administrator approves the first (otherwise moderated) comment under WordPress's default comment_previously_approved setting.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-47738 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-47738</link>
-    <guid isPermaLink="false">69a2091a5f41212f4fb5a8462dda1e26</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.3 | liboqs is a C-language cryptographic library that provides implementations of post-quantum cryptography algorithms. Prior to 0.16.0, OQS_KEM_encaps_derand can dereference an uninitialized encaps_derand function pointer when called on NTRU-HPS-2048-509, NTRU-HPS-2048-677, NTRU-HPS-4096-821, NTRU-HPS-4096-1229, NTRU-HRSS-701, or NTRU-HRSS-1373. The affected NTRU constructors omit the OQS_KEM.encaps_derand member because those schemes do not support derandomized encapsulation, OQS_KEM objects are allocated without zero initialization, and the wrapper in src/kem/kem.c checks only that the OQS_KEM pointer is non-null before calling through the residual heap value. An application is affected only if it instantiates one of those six NTRU KEMs and invokes OQS_KEM_encaps_derand on it. The supported impact is a calling-process crash and denial of service. This issue is fixed in version 0.16.0.</description>
+    <title>CVE-2026-120555 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120555</link>
+    <guid isPermaLink="false">c001fc220812979a4e9acc9196ec352b</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.3 | The Jupiter X Core plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 4.62.0 via the 'file' parameter parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information. The path confinement check introduced in the CVE-2023-3813 fix (strpos + realpath) is present and working, so reads are confined to wp-content/uploads/ and cannot reach wp-config.php or other files outside that directory.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-48057 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48057</link>
-    <guid isPermaLink="false">8e84af8c82578c5a87fbe8c17820c34d</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 2.1 | Botan is a C++ cryptography library. Prior to 3.13.0, Botan's X.509 Distinguished Name decoder flattens the Attribute-Value Assertions in each Relative Distinguished Name and loses multi-value RDN grouping before DN name-constraint enforcement. An attacker controlling a name-constrained intermediate CA can issue a certificate with a multi-value RDN whose first Common Name matches the permitted constraint and whose second Common Name is attacker-chosen, causing the constraint check to accept the flattened first value. If the certificate contains no subjectAlternativeName extension, the second Common Name can then be accepted as a hostname; Botan does not fall back to Common Name hostname matching when any subjectAlternativeName is present. The exposure is limited to deployments using DN name constraints, which are uncommon outside internal PKIs, and to certificates without a subjectAlternativeName. This issue is fixed in version 3.13.0.</description>
+    <title>CVE-2026-120737 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120737</link>
+    <guid isPermaLink="false">481ec76213fb5b36c81d6461128cd0d4</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.9 | The Jupiter X Core plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 4.62.0 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to enumerate and render arbitrary published post types not intended for public listing — including Flamingo CF7 submission records containing submitter names, email addresses, phone numbers, full messages, and IP addresses — and perform meta_query boolean-oracle reads against the postmeta of any published post. Exploitation requires that a Posts or Advanced Posts widget on the site has 'Is Archive Template' enabled, which is the standard Jupiter X archive-template configuration used by most Jupiter X sites; additionally, the nonce verified by the second endpoint is minted via wp_create_nonce and printed on every frontend page as ravenTools.nonce, rendering it ineffective as an authorization barrier.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-50240 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-50240</link>
-    <guid isPermaLink="false">ff6d4c7937b035e2daee7f8aa7a4a052</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 8.8 | A flaw was found in OpenShift Pipelines-as-Code (PAC). PAC does not verify whether the creator of a Repository custom resource has permission to create PipelineRuns. A namespace user with only Repository and Secret create/delete permissions can cause PAC to execute attacker-controlled PipelineRuns as the auto-provisioned pipeline ServiceAccount, which carries ClusterRole/edit by default. This results in namespace-scoped privilege escalation, enabling Secret read, resource creation/modification/deletion, and potential supply chain injection in CI/CD namespaces.</description>
+    <title>CVE-2026-120741 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120741</link>
+    <guid isPermaLink="false">8b3ab1061a8d571fdc325be24355a31d</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.4 | The MotoPress Appointment Booking Lite plugin for WordPress is vulnerable to Stored Cross-Site Scripting in versions up to, and including, 2.4.8 via the public '/motopress/appointment/v1/customers/create' REST endpoint. The route is registered with permission_callback =&gt; '__return_true' and the handler's 'name' parameter is not sanitized before being written to the custom wp_mpa_customers table via $wpdb-&gt;insert, nor is it escaped on output in the admin bookings list when the viewing user lacks the 'mpa_edit_customer' capability (such as the plugin-defined Appointment Employee role). This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-59104 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59104</link>
-    <guid isPermaLink="false">1409f78b89fd66bbce4f62de4afccd14</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 9.3 | UgCS server before 6.2 contains an authentication bypass in the HCI protocol login handler (LoginHandler) exposed on TCP port 3334. When the user database contains exactly one user (the default single-operator installation), a LoginRequest with empty userLogin and userPassword fields is interpreted as \&quot;use the only user\&quot; rather than as invalid credentials, and the server returns a fully authenticated session. Because the service listens on all interfaces (0.0.0.0) without TLS by default, an unauthenticated remote attacker with network access to port 3334 can obtain an authenticated session without knowing any credential and then issue privileged commands, including commanding connected drones and uploading flight routes.</description>
+    <title>CVE-2026-121515 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121515</link>
+    <guid isPermaLink="false">f817472d85a07e9f6a4a919098e75ef7</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.4 | The FV Flowplayer Video Player plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 7.5.56.7212 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the 'Parse Vimeo and YouTube links' option to be enabled, and the injected comment must be approved before the script executes for site visitors.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-68933 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68933</link>
-    <guid isPermaLink="false">04de6c9fe13eac9c65a10e15060f378e</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.5 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.3, public dashboard passwords were stored in plaintext, accepted through a URL query parameter, and checked without effective attempt throttling. The vulnerable surface is public password-protected dashboard storage and validation routes. An unauthenticated attacker targets a public password-protected dashboard and repeatedly submits candidate passwords or obtains password-bearing server or proxy logs. Unlimited online guesses enable brute force, while cleartext storage and URL transport expose the secret in application storage and server or proxy access logs. The target must be a public dashboard with password protection enabled. Even failed attempts reveal chart count and configuration without the password; a recovered password grants access to the protected dashboard and its chart data. This vulnerability is fixed in 5.2.3.</description>
+    <title>CVE-2026-121519 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121519</link>
+    <guid isPermaLink="false">a6578b177d0c137b0ea830e2a7a610ee</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Social Slider Feed – Social Media Feed &amp; Gallery Widgets plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'slidespeed' parameter in all versions up to, and including, 2.3.8 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The missing current_user_can() check in the Factory framework's connect() dispatcher allows Subscriber-level users to bypass the manage_options capability gate and both harvest a valid wis_edit_feed nonce and overwrite any feed's slidespeed setting, after which the stored payload fires on every public pageview embedding the feed shortcode.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-68935 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68935</link>
-    <guid isPermaLink="false">e37de58fcc064518f4e0579fe17476a9</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 9.1 | Chartbrew is an open-source web application for creating charts from databases and APIs. In versions 4.8.5 through 5.2.2, API connection creation and update operations accept the internal  allowPrivateHost  field from user input. An authenticated user with permission to manage API connections can enable this field to bypass private and reserved-network destination restrictions. An upgrade migration also enables the override on pre-existing API connections. The per-connection setting takes precedence over  CB_ALLOW_PRIVATE_NETWORK_CALLS , so disabling that instance option does not protect connections with the override enabled. Successful exploitation allows requests to internal HTTP services reachable from the Chartbrew server, potentially disclosing information or triggering unauthorized actions depending on the target service. Recognized cloud metadata endpoints remain separately blocked. This issue is fixed in version 5.2.3.</description>
+    <title>CVE-2026-93754 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93754</link>
+    <guid isPermaLink="false">b6935bd1b3b3ce9deee497798386600c</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 9.8 | The payever – WooCommerce Gateway plugin for WordPress is vulnerable to arbitrary file upload leading to remote code execution in various versions up to, and including, 4.8.0. Three WooCommerce-API callbacks (payever_set_sandbox_api_keys, payever_toggle_subscription, payever_synchronization_incoming) are registered with no authentication, capability check, or nonce, and the upload_image() routine writes a remotely fetched file to the public uploads directory using an attacker-controlled basename() BEFORE validating the file type. This makes it possible for unauthenticated attackers to write an executable PHP file and achieve remote code execution. NOTE: the token-recovery leg of the full chain depends on the plugin's outbound validateToken() call to Payever's service; the unauthenticated hard-coded-credential identity overwrite (CWE-862/CWE-798) is independently exploitable.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-69128 - NVD - CVSS Score v4.0: 4.6</title>
