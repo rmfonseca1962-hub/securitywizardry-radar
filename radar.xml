@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Nov 2026 04:02:23 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 05:00:22 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-71881 - NVD - CVSS Score v4.0: 4.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71881</link>
@@ -215,80 +215,68 @@
     <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-69128 - NVD - CVSS Score v4.0: 4.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69128</link>
-    <guid isPermaLink="false">fd119693b510bf1e9fb577977ddf7e7e</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 4.6 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. In 5.2.2, the AI SQL blocklist omitted sibling PostgreSQL filesystem functions and failed to match double-quoted identifier forms of denied functions. The vulnerable surface is the AI query tool's PostgreSQL SQL-validation blocklist. A team Owner or Admin uses an AI-enabled PostgreSQL connection whose database role can call server-side file functions and causes generated SQL to use an unlisted sibling function or a double-quoted denied function. Unlisted sibling functions remain allowed, and double-quoted function identifiers bypass the denylist regular expressions and reach PostgreSQL. AI features must be enabled and the user must have elevated Chartbrew privileges. A PostgreSQL superuser or pg_read_server_files role can resolve absolute paths to files readable by the PostgreSQL OS user, while a non-superuser is limited to the source-stated PGDATA-relative scope. This vulnerability is fixed in 5.2.3.</description>
+    <title>CVE-2026-119158 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119158</link>
+    <guid isPermaLink="false">8e1ee77983ecda65338161abe699ae14</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Pie Register – User Registration, Profiles &amp; Content Restriction plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'first_name' parameter in all versions up to, and including, 3.8.4.16 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is exploitable when public registration is enabled and the registration form includes a Profile Picture field; the attacker registers via the publicly accessible form (nonce is emitted to unauthenticated visitors) to store the payload, then logs in as the newly created Subscriber to post a comment that triggers delivery to all page visitors.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77442 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77442</link>
-    <guid isPermaLink="false">89b05390ae7d961eb0ec98817c11074e</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.9 | Ryot is a self-hosted personal tracking application. Prior to 10.4.0, the createOrUpdateUserIntegration GraphQL mutation in crates/services/user/src/integration_operations.rs allows a low-privileged authenticated user to supply another user's integrationId to create_or_update_user_integration() without an ownership check. SeaORM treats the supplied primary key as an update target, and the operation assigns the caller's user_id while replacing the targeted integration's provider_specifics and other configuration, which can transfer ownership, overwrite configuration, or disable the victim's integration. Exploitation requires obtaining the victim's non-brute-forceable integration id, and the vulnerable update does not disclose existing stored credential values. This issue is fixed in version 10.4.0.</description>
+    <title>CVE-2026-120560 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120560</link>
+    <guid isPermaLink="false">ecfbb0032d40e97be97a7b57f0a56c4b</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.5 | The Active Woot Products Tables for WooCommerce. 100% FREE plugin for WordPress is vulnerable to Media Library File Deletion in all versions up to, and including, 2.1.5 This is due to the `get_table_data()` AJAX handler — registered for unauthenticated access via `wp_ajax_nopriv_woot_get_table_data` — performing no nonce verification and no capability check before passing the attacker-supplied `wp_columns_actions` parameter directly to `apply_filters()` alongside an attacker-controlled integer derived from the `table_id` parameter. This makes it possible for unauthenticated attackers to delete any WordPress media library attachment and its underlying file in the uploads directory by supplying a known or guessed numeric attachment ID, enabling complete erasure of a site's media library. Exploitation is achievable because WordPress core registers `wp_delete_attachment()` as a callback on hooks such as `upgrader_scheduled_cleanup` and `importer_scheduled_cleanup`, which `sanitize_key()` does not strip; notably, only attachment posts reachable by numeric ID are affected, and files outside `wp-content/uploads` — such as `wp-config.php` or plugin PHP files — cannot be targeted through this path.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-94618 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94618</link>
-    <guid isPermaLink="false">6afd2b8b4b13abd49bd3aa8cb7a0a436</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.4 | FileGator is a multi-user file manager. Prior to 7.15.0, GET /batchdownload in backend/Controllers/DownloadController.php uses batchDownloadStart() to stream a shared temporary archive selected by the request-supplied uniqid without checking that the current session created it. In deployments with distinct per-user home directories, a valid user with read, download, and batchdownload permissions who obtains another user's active archive id can cross that boundary and retrieve the victim's batch archive. The archive lifetime and id-acquisition requirement limit exploitation, but a successful replay also deletes the victim's pending archive. This issue is fixed in version 7.15.0.</description>
+    <title>CVE-2026-120677 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120677</link>
+    <guid isPermaLink="false">dfe7de8774a815e92f1f44aeaf24c93f</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Optimole – Optimize Images | Convert WebP &amp; AVIF | CDN &amp; Lazy Load | Image Optimization plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 4.2.18 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires the comment to be approved by an administrator and for the affected post to contain at least one iframe or video element (e.g., a core Video block), which is sufficient under default plugin settings where video lazy loading is enabled.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-94619 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94619</link>
-    <guid isPermaLink="false">e637deeb9cd7d8195dcc62d11504e655</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.9 | FileGator is a multi-user file manager. Prior to 7.15.0, POST /upload in backend/Controllers/UploadController.php uses the request-supplied resumableFilename as an unnamespaced key in shared temporary storage. In a multi-user deployment configured with distinct per-user home directories, a low-privileged user with upload permission can set resumableTotalChunks and resumableTotalSize to zero so the assembly loop writes no data, after which the handler reads a pre-existing temporary file with that name, stores it in the attacker's home directory, and removes it. The same filename path can append data when chunks are supplied, allowing disclosure, modification, or deletion of another user's transient object, including a pending archive or the login rate-limit lockfile, while Tmpfs path sanitization limits the primitive to the temporary directory. This issue is fixed in version 7.15.0.</description>
+    <title>CVE-2026-120739 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120739</link>
+    <guid isPermaLink="false">fa0020c3b7051dc5cc3fa9159991ceb4</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Optimole – Optimize Images | Convert WebP &amp; AVIF | CDN &amp; Lazy Load | Image Optimization plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 's (missing_srcsets[*][*].s)' parameter in all versions up to, and including, 4.2.18 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The HMAC signature required to pass the REST endpoint's authorization check is published in plaintext to unauthenticated visitors inside the inline optimoleDataOptimizer JavaScript object on any page with an incomplete profile, making the effective authentication barrier nonexistent.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107931 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107931</link>
-    <guid isPermaLink="false">b89980c8f03a9a6f36ee27d84cfebde2</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</description>
+    <title>CVE-2026-121516 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121516</link>
+    <guid isPermaLink="false">6d44d35dccc81f9899d694457f03b424</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.1 | The QODE Wishlist for WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'qode_wishlist_for_woocommerce_guests_items' parameter in all versions up to, and including, 1.2.9 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is exploitable by guests because the required wp_rest nonce is publicly emitted to unauthenticated visitors on the /wishlist/ page, and the attacker controls the transient key, meaning the payload is stored site-wide and only requires a victim to open a crafted share URL and click the injected title link. Successful exploitation additionally requires an action by an administrator — the attacker cannot trigger the vulnerability on their own.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-109469 - NVD - CVSS Score v3.1: 10.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109469</link>
-    <guid isPermaLink="false">5fe51be40e7c212e6f0dde25d113fa75</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 10.0 | Authorization bypass through user-controlled key in Entra Device Registration allows an unauthorized attacker to elevate privileges over a network.</description>
+    <title>CVE-2026-123218 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123218</link>
+    <guid isPermaLink="false">b5a62e809dee30d6acf9b022da071883</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 9.8 | IBM Aspera Faspex 5.0.0 through 5.0.19 could allow an authorized user to craft a specific message to bypass user authorization and gain full administrative privileges.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-118785 - NVD - CVSS Score v3.1: 6.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118785</link>
-    <guid isPermaLink="false">f7f68ae19e07008cfe02df2cfc8669f9</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.7 | Improper handling of non-secure-world input in NSC veneer
-functions of NXP MCUXpresso SDK TrustZone-M examples (trustzone_examples),
-affecting versions through 26.06.00-lts and 26.09.00-pvw2, may allow a
-non-secure caller to supply unvalidated pointers or untrusted data, causing a
-timing side-channel, TOCTOU condition, or format-string misuse, potentially
-resulting in secure-world memory disclosure or denial of service. All software
-versions starting from 26.06.01-lts and 26.09.00 have fixed this issue.</description>
+    <title>CVE-2026-17362 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-17362</link>
+    <guid isPermaLink="false">f2ea90cbf0bf69c517e61f29c35b4964</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 9.8 | IBM API Connect 12.1.0.0 through 12.1.1.2 could allow a remote attacker to create, modify, or delete tenants due to missing authorization.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-118786 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118786</link>
-    <guid isPermaLink="false">d14f6ab12e7aa56581ec1cfee48ca20d</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.8 | Improper input validation in non-secure-callable (NSC)
-veneer functions of the NXP MCUXpresso SDK rpmsg-lite multicore example
-(multicore_examples/rpmsg_lite_pingpong_tzm) up to releases 26.06.00-lts and
-26.09.00 may allow a non-secure caller to supply unvalidated pointers and size
-values, potentially resulting in disclosure of secure-world memory to the
-non-secure domain, or denial of service. All software versions starting from
-26.06.01-lts and 26.12.00-pvw1 have fixed this issue.</description>
+    <title>CVE-2026-19803 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19803</link>
+    <guid isPermaLink="false">b1df680fb73669fad76620ff56bbf3a6</guid>
+    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 9.8 | The Printcart Store – Web to Print Product Designer for WooCommerce plugin for WordPress is vulnerable to Arbitrary File Upload in all versions up to, and including, 2.13.2. This is due to the `nbu_crop_image` AJAX handler accepting a user-supplied `url` parameter that `Nbdesigner_IO::convert_url_to_path()` concatenates onto the uploads base directory without normalizing or stripping `../` sequences, and then deriving both the output directory and output file extension via `pathinfo()` from the same attacker-controlled path — with no `stripImage()` call before `writeImage()` is invoked. This makes it possible for unauthenticated attackers to write attacker-controlled PHP content to arbitrary locations outside the uploads directory, resulting in remote code execution when the written file is subsequently requested. This vulnerability is only exploitable when the `nbdesigner_upload_popup_style` site option is set to `a` (Advanced Upload Popup), which causes the handler to be registered for unauthenticated requests; however, the required `save-design` nonce is printed on the fully public frontend `upload-design-file` page, making it trivially obtainable by any anonymous visitor once that configuration is active.</description>
     <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-119519 - NVD - CVSS Score v3.1: 4.3</title>
