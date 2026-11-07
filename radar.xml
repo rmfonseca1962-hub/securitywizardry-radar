@@ -5,87 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Nov 2026 23:02:33 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-102530 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102530</link>
-    <guid isPermaLink="false">63fa96e1bb9abc0c3584cd3c17395c56</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 9.4 | JupyterLab Desktop is the cross-platform desktop application for JupyterLab. Prior to 4.6.2-1, remote-server URLs were inserted into the server-selection dialog and Welcome view without safe encoding. An attacker who convinces a user to submit a crafted URL can execute JavaScript in the Welcome renderer and abuse its privileged IPC bridge to execute arbitrary code with the user’s privileges. The Welcome view also unsafely renders RSS news-feed titles; exploitation through this separate input path requires control over content delivered through the application’s Jupyter Blog feed or its cached feed data, rather than submission of a remote-server URL. This issue affects all supported platforms and is fixed in version 4.6.2-1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102610 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102610</link>
-    <guid isPermaLink="false">ef22ffdedba3cde4d2a554b9caee0d64</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.4 | fast-agent is a framework for building, running, and evaluating AI agents with Model Context Protocol support. Prior to 0.7.21, fast-agent serve uses HTTP transport bound to 0.0.0.0 on port 8000 without authentication, allowing any network client that can reach the /mcp endpoint to invoke the exposed agent tool. When the server is started with --shell, the agent can call the local execute tool implemented by tools/local_shell_executor.py, so an unauthenticated remote client can cause operating-system commands to run as the server user; without --shell, the client can still consume the operator's model and configured MCP tools. The defaults are defined in cli/commands/serve.py and mcp/server/agent_server.py, and the non-interactive server permission prompt does not prevent the described access. This issue is fixed in version 0.7.21.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102657 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102657</link>
-    <guid isPermaLink="false">bfab4d3141003c84c3c82d9c4fd1ca0a</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 7.5 | esm.sh is a no-build content delivery network (CDN) for web development. Prior to server version 137_7, the documented web.NewHandler static file server in web/handler.go joins the URL-decoded r.URL.Path with Config.AppDir without verifying that the result remains inside the configured application directory. URL-encoded dot segments such as %2e%2e bypass the plain traversal redirect performed by Go's ServeMux, allowing an unauthenticated remote attacker to make the server open and return files outside Config.AppDir that are readable by the server process. The confirmed impact is file disclosure only, and the issue is reachable with Dev disabled. This issue is fixed in server version 137_7.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123787 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123787</link>
-    <guid isPermaLink="false">6e1413fd6b768162d6a269ef26eb340b</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 2.1 | A weakness has been identified in nexmoe VidBee up to 1.3.13/2.0.2. The affected element is an unknown function of the file apps/desktop/src/main/local-api.ts of the component Local HTTP Service. Executing a manipulation can lead to information disclosure. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 2.2.0 is sufficient to fix this issue. This patch is called 141b8d39c1c11da4589264f814cee077df81e7f6. It is suggested to upgrade the affected component.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124078 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124078</link>
-    <guid isPermaLink="false">cec5ddfb203c5176f03e628099602d27</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 8.7 | plist.js (npm package 'plist') before 5.0.1 contains an uncontrolled resource consumption vulnerability in the binary property-list parser (parseBinary) that allows unauthenticated attackers to crash a Node.js process by exploiting unmemoized recursive resolution of shared object references for arrays and dictionaries. Attackers can craft a small binary plist (under 200 bytes) containing chained self-referencing object indices to trigger exponential (2^N) resolution calls and memory growth, causing an unrecoverable out-of-memory crash and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-54349 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54349</link>
-    <guid isPermaLink="false">be0adf7dede2417313d9d9a57e150ef0</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 9.8 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.1, SQL dashboard-variable substitution used attacker-controlled JavaScript replacement strings unsafely across SQL connectors and separately failed to escape backslashes for MySQL and MariaDB quoted contexts. The vulnerable surface is public and embedded dashboard/chart requests that call applyMysqlOrPostgresVariables. An unauthenticated user sends crafted URL filter values to a public or embedded chart backed by a stored SQL query. Replacement-string dollar sequences can alter SQL independently of the database engine, while MySQL and MariaDB backslash handling provides a second quoted-string escape path. The target must expose a public or embedded chart using URL-controlled variables in a SQL query; only the backslash branch is specific to MySQL and MariaDB. Injected SQL can read, modify, or delete data available to the configured database account. This issue is fixed in version 5.2.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-54589 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54589</link>
-    <guid isPermaLink="false">af9a1f987988efccfd8176a3b9377e71</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v4.0: 7.0 | Chartbrew is an open-source web application that can connect directly to databases and APIs and use the data to create charts. Prior to 5.2.1, the outbound URL guard recognized ordinary IPv4, IPv6, and IPv4-mapped IPv6 destinations but did not recognize IPv4 addresses embedded in NAT64 prefixes. The vulnerable surface is aPI Data Connection outbound requests routed through server/modules/outboundTargetPolicy.js. An authenticated user with permission to create or edit an API connection supplies an attacker-controlled hostname or redirect whose DNS answer is a NAT64 address embedding a private or link-local IPv4 destination. The policy treated the NAT64 address as public; a NAT64 gateway then translated it to the embedded private IPv4 address after validation. The bypass requires a NAT64/DNS64 deployment path and connection-management privileges. IPv4-only deployments are not affected by this specific bypass. The attacker can read responses from 169.254.169.254 cloud metadata and arbitrary internal IPv4 hosts and ports reachable through the NAT64 gateway. This issue is fixed in version 5.2.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-59171 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59171</link>
-    <guid isPermaLink="false">45208b22d7f52e2ebf1abf68a05c012c</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.9 | JSON-java is a reference implementation of a JSON package in Java. From version 20150729 through 20260522, JSONTokener.nextSimpleValue can accumulate unbounded numeric tokens before JSONObject.stringToNumber passes them to BigInteger or BigDecimal conversion without a length limit. An application that parses attacker-controlled JSON or XML through JSONObject, JSONArray, or XML.toJSONObject can spend super-linear CPU time converting a sufficiently long numeric literal, blocking request-handling threads and causing denial of service. Strict mode and keep-strings settings in JSONParserConfiguration do not prevent the affected conversion path. Version 20260719 limits numeric conversion length.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-63437 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63437</link>
-    <guid isPermaLink="false">21571d216bd867274a68fd334357ac32</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | 2FAuth is a web app to manage Two-Factor Authentication (2FA) accounts and generate their security codes. Prior to 8.0.0, the recipients() method in app/Api/v1/Controllers/TwoFAccountShareController.php receives a caller-selected TwoFAccount through Laravel model binding but does not call the manageShares authorization policy before listing its recipients. When account sharing is enabled, an authenticated user can call GET /api/v1/twofaccounts/{victimId}/recipients for accounts owned by other users, enumerate registered user IDs and display names, test exact email addresses with filter[nameOrEmail], and inspect each account's sharing relationships. This issue is fixed in version 8.0.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-63438 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63438</link>
-    <guid isPermaLink="false">99f718aaea6e82b61ee8513350a7f591</guid>
-    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 9.8 | 2FAuth is a web app to manage Two-Factor Authentication (2FA) accounts and generate their security codes. Prior to 8.0.0, when AUTHENTICATION_GUARD=reverse-proxy-guard accepts authentication headers from a client that did not pass through a trusted proxy, RemoteUserProvider::retrieveById() creates an account for an unknown REMOTE_USER, promotes the first created account to administrator, and synchronizes the account email from the configured mail header. An unauthenticated remote client can therefore create an administrator on a fresh instance or impersonate and redirect email for a known account, exposing 2FA secrets and administrative functions. This issue is fixed in version 8.0.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 07 Nov 2026 00:00:52 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-63439 - NVD - CVSS Score v3.1: 9.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63439</link>
@@ -327,6 +247,98 @@ This issue affects grpc_server: from 1.0.0 before 1.0.6.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94619</link>
     <guid isPermaLink="false">e637deeb9cd7d8195dcc62d11504e655</guid>
     <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.9 | FileGator is a multi-user file manager. Prior to 7.15.0, POST /upload in backend/Controllers/UploadController.php uses the request-supplied resumableFilename as an unnamespaced key in shared temporary storage. In a multi-user deployment configured with distinct per-user home directories, a low-privileged user with upload permission can set resumableTotalChunks and resumableTotalSize to zero so the assembly loop writes no data, after which the handler reads a pre-existing temporary file with that name, stores it in the attacker's home directory, and removes it. The same filename path can append data when chunks are supplied, allowing disclosure, modification, or deletion of another user's transient object, including a pending archive or the login rate-limit lockfile, while Tmpfs path sanitization limits the primitive to the temporary directory. This issue is fixed in version 7.15.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107931 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107931</link>
+    <guid isPermaLink="false">b89980c8f03a9a6f36ee27d84cfebde2</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109469 - NVD - CVSS Score v3.1: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109469</link>
+    <guid isPermaLink="false">5fe51be40e7c212e6f0dde25d113fa75</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 10.0 | Authorization bypass through user-controlled key in Entra Device Registration allows an unauthorized attacker to elevate privileges over a network.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118785 - NVD - CVSS Score v3.1: 6.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118785</link>
+    <guid isPermaLink="false">f7f68ae19e07008cfe02df2cfc8669f9</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.7 | Improper handling of non-secure-world input in NSC veneer
+functions of NXP MCUXpresso SDK TrustZone-M examples (trustzone_examples),
+affecting versions through 26.06.00-lts and 26.09.00-pvw2, may allow a
+non-secure caller to supply unvalidated pointers or untrusted data, causing a
+timing side-channel, TOCTOU condition, or format-string misuse, potentially
+resulting in secure-world memory disclosure or denial of service. All software
+versions starting from 26.06.01-lts and 26.09.00 have fixed this issue.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118786 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118786</link>
+    <guid isPermaLink="false">d14f6ab12e7aa56581ec1cfee48ca20d</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.8 | Improper input validation in non-secure-callable (NSC)
+veneer functions of the NXP MCUXpresso SDK rpmsg-lite multicore example
+(multicore_examples/rpmsg_lite_pingpong_tzm) up to releases 26.06.00-lts and
+26.09.00 may allow a non-secure caller to supply unvalidated pointers and size
+values, potentially resulting in disclosure of secure-world memory to the
+non-secure domain, or denial of service. All software versions starting from
+26.06.01-lts and 26.12.00-pvw1 have fixed this issue.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119519 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119519</link>
+    <guid isPermaLink="false">2078172cbc1b2e2fabd2aad5db7cdb90</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in WProyal Royal Elementor Addons royal-elementor-addons allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Royal Elementor Addons: from n/a through 1.7.1068.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120845 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120845</link>
+    <guid isPermaLink="false">aad1f14ec99aade0ff2486e52402c70c</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WPMU DEV Smush Image Compression and Optimization wp-smushit allows Stored XSS.This issue affects Smush Image Compression and Optimization: from n/a through 4.3.5.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120851 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120851</link>
+    <guid isPermaLink="false">8cc60b8c422a162baf5b8fecbcb2c7a4</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in PublishPress PublishPress Revisions revisionary allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects PublishPress Revisions: from n/a through 4.2.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-122670 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122670</link>
+    <guid isPermaLink="false">b0e6256b557d3bbc90422eb2e54255c8</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.4 | Missing Authorization vulnerability in WP SYNTEX Polylang polylang allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Polylang: from n/a through 3.9.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123471 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123471</link>
+    <guid isPermaLink="false">19f0e57745032c4e992edc9cc02fe0f4</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 4.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in myCred myCred mycred allows Code Injection.This issue affects myCred: from n/a through 4.0.2.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-27356 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-27356</link>
+    <guid isPermaLink="false">2e20f866b03c8bea798b0b736c7a776f</guid>
+    <description>Friday 6 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in ibericode MC4WP mailchimp-for-wp allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects MC4WP: from n/a through 4.14.1.</description>
     <category>NVD</category>
     <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
   </item>
