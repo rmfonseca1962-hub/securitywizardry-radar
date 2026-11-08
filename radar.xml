@@ -5,183 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2026 06:02:19 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-123579 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123579</link>
-    <guid isPermaLink="false">75eb5757890ec9e53207db8d55459ef5</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | DNSSEC validation in Hickory DNS hickory-net 0.26.0-beta.1 before 0.26.2 and hickory-proto through 0.26.0-alpha.1 does not distinguish NODATA responses from wildcard-expanded positive responses. For a query that should return NODATA in a zone with wildcard records, an attacker can combine an NSEC3 record matching the query name with a signed wildcard record into a bogus positive response that validation accepts.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123580 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123580</link>
-    <guid isPermaLink="false">b3c0c19b423d8aadc8171b85ba0c3987</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-net 0.26.0-beta.1 before 0.26.2 and hickory-proto through 0.26.0-alpha.1 perform insufficient checks on NSEC3 record names during DNSSEC verification, comparing only the hashed label without confirming the record belongs to the correct zone. Attackers can supply NSEC3 records from another zone with a matching hash label to forge DNSSEC nonexistence proofs.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123581 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123581</link>
-    <guid isPermaLink="false">cedc5ecf632291dba1e266992baa6a7a</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.9 | Hickory DNS hickory-proto through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 contain a DNSSEC validation flaw that accepts a response as a positive answer when any valid RRset appears in the answer section, without checking that the RRset is responsive to the query. Attackers can supply signed but unrelated RRsets so that responses lacking matching records are validated as positive answers instead of as no-data responses.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123582 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123582</link>
-    <guid isPermaLink="false">f69b60f1b7a7d6eb77afbfe04807a377</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | The validating recursive resolver and validating forwarder in Hickory DNS (hickory-server) 0.25.0 before 0.26.2 do not check whether the SOA record passed DNSSEC validation when assembling NXDOMAIN or NODATA responses. An attacker able to supply forged DNS responses can have a forged SOA record returned to clients with the AD bit set, misleading clients that rely on the server's DNSSEC validation.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123583 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123583</link>
-    <guid isPermaLink="false">2c05b0c18e7dd15030791d818b9f9e73</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | The recursive resolver in Hickory DNS hickory-recursor 0.25.0 through 0.25.2 and hickory-resolver 0.26.0 before 0.26.2 does not apply out-of-bailiwick filtering to negative responses. Attackers able to supply crafted negative responses can include out-of-bailiwick records to facilitate cache poisoning and more easily exploit other DNSSEC verification flaws.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123584 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123584</link>
-    <guid isPermaLink="false">cc04a5538836eb420fd3c75d4a0a5938</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.2 | The hickory-net crate in Hickory DNS 0.26.0 before 0.26.2 stops listening and returns an error when a client UDP connection receives a datagram that cannot be parsed as a DNS message. Remote attackers who guess the query's source port, without knowing the transaction ID, can spoof malformed responses to abort client queries, causing denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123585 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123585</link>
-    <guid isPermaLink="false">f72c31b38ac8eb8035aee02561e95b25</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.9 | The hickory-resolver component of Hickory DNS 0.25.0 before 0.26.2 follows irrelevant CNAME records when resolving recursive queries, sending queries that are unnecessary to answer the original request. Attackers controlling DNS responses can include CNAME records in the authority or additional sections, or outside the original query name's CNAME chain, causing excess resolver queries and increased query amplification.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123586 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123586</link>
-    <guid isPermaLink="false">56fb58761b11bb0b172da0cb7c74cf2a</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS 0.25.0-alpha.3 through 0.25.2 contains a query amplification vulnerability in its recursive resolver, which mishandles cyclic sibling name server referrals that lack glue records. Attackers controlling two zones whose name servers reference each other without glue records can make the recursor loop, sending many upstream queries, amplified further by zero-TTL NS records.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123587 - NVD - CVSS Score v4.0: 8.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123587</link>
-    <guid isPermaLink="false">b1204737d39113700e723eb4ffcf5a2c</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.9 | The DNSSEC validation in the Hickory DNS hickory-net crate 0.26.0 before 0.26.2 identifies wraparound NSEC records by comparing the next domain name to an SOA record in the response, accepting that SOA even if it fails validation. Attackers who can supply DNS responses can combine a genuine NSEC record and its RRSIG with a crafted SOA record to forge nonexistence of any RRset.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123588 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123588</link>
-    <guid isPermaLink="false">7d9e75f7e70f9db438ac172f85f0da1a</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | The recursive resolver in Hickory DNS (all versions of the hickory-recursor crate, and hickory-resolver 0.26.0 before 0.26.2) caches an empty connection pool when it follows a referral with no glue records and all queries for the name servers' IP addresses fail. An attacker able to spoof DNS responses can make these lookups fail, causing all subsequent queries for the affected zone to fail until the cache entry expires or is evicted.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123589 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123589</link>
-    <guid isPermaLink="false">9dbc4192dfa19c74b0cb5623c3b2e28c</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.9 | The DNS-over-QUIC (DoQ) server in hickory-server (hickory-dns) before 0.26.2 does not apply any timeout when reading a request message from a QUIC stream, bypassing all configured timeouts. A remote unauthenticated client can open a connection and a request stream and hold it open indefinitely, consuming server resources and causing a denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123590 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123590</link>
-    <guid isPermaLink="false">a52c55bcc458ef939dc333782647a8bf</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-net 0.26.0-beta.1 before 0.26.2 and hickory-proto through 0.26.0-alpha.1 accept NSEC and NSEC3 records for DNSSEC nonexistence proofs when any other record with the same owner name passes signature validation. Attackers able to supply DNS responses can mix validly signed records with bogus same-name NSEC or NSEC3 records of different types in the authority section to forge nonexistence proofs.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123591 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123591</link>
-    <guid isPermaLink="false">304e5302d91af0fa2d0ea6ec5fdd39b8</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.2 | Hickory DNS hickory-net 0.26.0-beta.1 before 0.26.2 and hickory-proto through 0.26.0-alpha.1 fail to verify, per RFC 6840 §4.4, that an NSEC or NSEC3 record denying a DS RRset also proves the delegation's NS record exists. Attackers can reuse child-side NSEC or NSEC3 records to fake an insecure delegation and forge child-zone records.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123592 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123592</link>
-    <guid isPermaLink="false">b49e35a6f1efdfd1cf271a0c15ad97ac</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.2 | The hickory-net crate in Hickory DNS 0.26.0-beta.1 before 0.26.2 allows DNSSEC validation bypass because Name's Hash ignores label lengths and ValidationCacheKey compares only that hash. An attacker controlling an unsigned delegation whose name differs from a signed target only in dot positions can prime an Insecure verdict, causing forged answers for the target to skip signature verification instead of returning SERVFAIL.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123593 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123593</link>
-    <guid isPermaLink="false">f4e5de699188790feb89aff64769d744</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-net 0.26.0-beta.1 before 0.26.2 and hickory-proto 0.24.0 through 0.26.0-alpha.1 compare DNSKEY public keys against DNSSEC trust anchors without checking the DNSKEY record name, so an RRset made up only of trusted keys is accepted without RRSIG verification. Attackers able to spoof or control name server responses can replace a secure zone's DNSKEY RRset with the root zone's keys, and use a large TTL to keep it cached.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123594 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123594</link>
-    <guid isPermaLink="false">86364ab2da9e791e982075d30b4a33a3</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-proto through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 contain an NSEC validation flaw that returns a secure proof for NXDOMAIN responses when the covering NSEC's Next Domain Name is a strict descendant of the query name, which actually proves the name exists as an empty non-terminal. On-path attackers can flip the unsigned rcode of a genuine signed NODATA response from NOERROR to NXDOMAIN, causing validators to accept forged nonexistence of the name.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123595 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123595</link>
-    <guid isPermaLink="false">48fbc6ca71a54576dc258b58c44ac246</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-proto 0.25 through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 contain a DNSSEC validation flaw in the validating recursor's NSEC3 handler, which matches the closest encloser by hash alone without checking the type bitmap and so accepts parent-side ancestor-delegation NSEC3 records as proof of nonexistence. An attacker who delivers one response built from genuinely signed parent NSEC3 records can cause NXDOMAIN or NODATA to be cached with AD=1, denying resolution of existing names at and below the zone cut.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123596 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123596</link>
-    <guid isPermaLink="false">abb0e542575c06a07696478520462ce6</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-proto through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 contain a DNSSEC validation flaw in the validating recursor's NSEC handler that accepts parent-side ancestor-delegation NSEC records as proof of nonexistence for names below the zone cut. An on-path attacker, rogue parent nameserver, or attacker winning a port and TXID race can deliver one forged NXDOMAIN response built from genuinely signed parent NSEC records, causing authenticated denial of existing child-zone names cached for the negative TTL.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123597 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123597</link>
-    <guid isPermaLink="false">b4dc699b9db1c28ff962762b201af865</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-proto 0.25.0-alpha.1 through 0.26.0-alpha.1 and hickory-net before 0.26.2 contain a logic bug in DnssecDnsHandle's DS-fetch path that caches transient DS lookup errors as Bogus DNSSEC validation verdicts. An attacker who induces a SERVFAIL, REFUSED, or timeout response to a child-zone DS sub-query causes the validator to return SERVFAIL for all names under that zone until the cache entry's TTL expires.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123598 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123598</link>
-    <guid isPermaLink="false">70d2bf284a7aa7a64a7f53628a290d3c</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | The validating recursor in Hickory DNS hickory-recursor 0.25.0 through 0.26.0-alpha.1, hickory-resolver 0.26.0-alpha.1 before 0.26.2, and hickory-net 0.26.0-beta.1 before 0.26.2 caches DNSSEC-bogus answers using the untrusted, attacker-supplied record TTL (capped at 24 hours) instead of a short validation-failure TTL. A remote attacker who spoofs a single authoritative response with an invalid signature and a long TTL can keep the bogus result cached for up to 24 hours.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123599 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123599</link>
-    <guid isPermaLink="false">09d18c5e8bae2cd635cc455e9c610717</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-proto before 0.26.0-beta.1 and hickory-net before 0.26.2 contain a DNSSEC validation bypass because verify_rrsets() ignores DNS class when partitioning RRsets, so non-IN records skip signature verification yet are marked secure when the IN records verify. Attackers able to supply DNS responses can include forged CH or HS class records, including DS records, to authenticate any DNSKEY and forge child zone responses.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123600 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123600</link>
-    <guid isPermaLink="false">7263e59875fb2fcbc8eb15395f838152</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-proto 0.25.0-alpha.3 through 0.25.2 and hickory-net 0.26.0-alpha.1 before 0.26.2 contain a DNSSEC validation flaw in DnssecDnsHandle that accepts NSEC3-signed NODATA responses for zone-apex queries as secure without an NSEC3 record matching the hashed QNAME. On-path attackers or malicious authoritative servers can replay a validly signed non-apex NSEC3 with the zone's signed SOA to serve an authenticated (AD=1) denial of any apex RRtype for the negative-cache TTL.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 08 Nov 2026 07:02:18 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-123601 - NVD - CVSS Score v4.0: 8.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123601</link>
@@ -323,6 +147,182 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114713</link>
     <guid isPermaLink="false">47f35743c54bd10152e2c461d6043b38</guid>
     <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 8.6 | The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 &quot;label&quot; message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-103303 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103303</link>
+    <guid isPermaLink="false">e2bb4bc55d45c4da93670a27b2d2ba54</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Turisbook Booking System WordPress plugin through 1.3.8 does not have authorisation and CSRF checks when saving its settings, and does not sanitise and escape one of them before outputting it in an admin page, allowing unauthenticated users to perform Stored Cross-Site Scripting attacks against administrators.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-103375 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103375</link>
+    <guid isPermaLink="false">fe54aa2acf4adb21084e8dec150def0d</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Antom Payments WordPress plugin through 2.0.11 does not perform any ownership or authorisation check before returning an order's confirmation link, which contains its secret key, to unauthenticated visitors, allowing attackers to view any customer's order details, including name, address, phone number and email.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104307 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104307</link>
+    <guid isPermaLink="false">e9fe5d563124b5b59c4eb5c66ed13f35</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The BackUpWordPress plugin before 3.15 does not perform a capability or nonce check on an AJAX action that cleans up its backup directory, allowing any authenticated user (Subscriber and above) to delete the BackUpWordPress plugin before 3.15's backup protection and working files, removing download protection from stored backups and disrupting in-progress backups.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104337 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104337</link>
+    <guid isPermaLink="false">d206908d6730401e701ecfc2881b1f90</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Razorpay for WooCommerce WordPress plugin before 4.8.9 does not verify ownership of an order before returning a coupon discount computed against that order, allowing unauthenticated attackers to disclose the monetary value of arbitrary customer orders by enumerating order IDs.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104338 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104338</link>
+    <guid isPermaLink="false">108977dd4317ac831bd967b8d81de177</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Razorpay for WooCommerce WordPress plugin before 4.8.9 does not perform an authorization check on one of its REST routes and derives the acting user's identity from an unauthenticated request parameter, allowing an unauthenticated attacker to cause the request to execute as an arbitrary user account for the duration of the request. Exploitation additionally requires a specific coupon Razorpay for WooCommerce WordPress plugin before 4.8.9 to be active on the site.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104639 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104639</link>
+    <guid isPermaLink="false">a09506918065c6756ea11d14f49b08cd</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Razorpay for WooCommerce WordPress plugin before 4.8.9 does not sanitize and escape a value derived from an incoming webhook request before using it in a SQL query, allowing users able to obtain the webhook secret (administrators) to perform SQL injection attacks.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-105970 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105970</link>
+    <guid isPermaLink="false">baa9689493a9224a90d62b7938143911</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Thanh Toán Quét Mã QR Code Tự Động  WordPress plugin through 2.0.1 does not properly verify the authenticity of incoming bank-transfer payment notifications on a default installation, allowing unauthenticated attackers to mark arbitrary WooCommerce orders as paid.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-106015 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106015</link>
+    <guid isPermaLink="false">0b355e875e15bb10ccfb904e13d12e72</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Ecommerce Affiliate WordPress plugin through 1.0.0 does not restrict one-time password issuance and verification to the legitimate account owner, nor limit verification attempts, allowing unauthenticated attackers to take over any account, including administrators.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109925 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109925</link>
+    <guid isPermaLink="false">65b5a86f590b55d6c10b608af576266f</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Productive Commerce  WordPress plugin before 1.1.54 does not sanitise and escape a parameter before using it in a SQL statement, allowing unauthenticated attackers to perform SQL injection attacks.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110132 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110132</link>
+    <guid isPermaLink="false">2a42264c1bd53b7757efdff81dc79886</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Sync Post With Other Site WordPress plugin before 1.9.4 does not properly authorize a content-management action for post types other than pages, allowing users with Contributor-level access or above to create and modify arbitrary custom post types, including reassigning content authorship.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110963 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110963</link>
+    <guid isPermaLink="false">095846bbc6685fc24c19c7148e414c55</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Userplace  WordPress plugin through 1.2.0 does not perform authorization checks on an AJAX action available to unauthenticated users and publicly exposes the nonce that protects it, allowing unauthenticated attackers to create an administrator account or write arbitrary site options, leading to full site takeover.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-114432 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114432</link>
+    <guid isPermaLink="false">a55fb55af0396377ae9d8780bb27f58e</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Contact Form 7 WordPress plugin before 6.2.4 does not validate the type or extension of files uploaded through a form file field, and a flaw in its temporary-file cleanup leaves the uploaded file on disk, allowing unauthenticated users to upload arbitrary files to the site. On a stock Debian or Ubuntu Apache configuration, which lists directory contents and maps .phar to the PHP handler, the stored file can be located and executed, leading to Remote Code Execution. On other configurations, including nginx and Apache with .htaccess overrides enabled, the issue is limited to an arbitrary file written into the uploads directory, which may still be served as active content such as HTML or SVG from the site's own origin.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-122060 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122060</link>
+    <guid isPermaLink="false">5faa8d4ce61bc8f57735d056790b2191</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The WP Recipe Maker WordPress plugin before 10.9.2 does not check whether the post a recipe is embedded in is password protected before returning the recipe through its REST API and structured data output, allowing unauthenticated users to read the full content of recipes in password-protected posts.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-122062 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122062</link>
+    <guid isPermaLink="false">abf6fbc6d7931335f8243af6da7110d4</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Pronamic Pay WordPress plugin before 11.1.0, Pronamic Pay doneren met Mollie WordPress plugin before 1.7.1 do not restrict access to stored form submissions through the REST API, allowing unauthenticated users to read the messages that visitors submitted through the bundled forms.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-122085 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122085</link>
+    <guid isPermaLink="false">29b5fe468fa2d8ee0118cc98987d6fce</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Event Tickets Manager for WooCommerce WordPress plugin before 1.6.0 does not perform authorisation or a valid nonce check on its ticket-transfer feature, which is available to unauthenticated users, allowing them to transfer other attendees' guest-checkout tickets to an email address of their choosing, invalidating the legitimate ticket and causing the victim's ticket PDF, which contains attendee personal data, to be sent to the attacker.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-85344 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85344</link>
+    <guid isPermaLink="false">b8c7afcce21084fe760a340c7e937bc2</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The FV Flowplayer Video Player WordPress plugin before 7.5.57.7212 does not perform any authorization check on an AJAX action that carries out a site-wide content rewrite, so any authenticated user, including subscriber-level, can trigger a bulk modification of posts they should not be able to edit.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-96961 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96961</link>
+    <guid isPermaLink="false">eb3c37bb4b23c62d403c6a38a36655e5</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Pie Register  WordPress plugin through 3.8.4.15 does not perform any capability, nonce or authentication check on one of its request handlers, allowing unauthenticated attackers to reset the Pie Register  WordPress plugin through 3.8.4.15's settings to their defaults (disabling registration security controls such as new-user email verification) and to destroy a Pie Register  WordPress plugin through 3.8.4.15 data table.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-96963 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96963</link>
+    <guid isPermaLink="false">471002195a7f3e01818e76a5f02645c3</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Pie Register  WordPress plugin through 3.8.4.15 does not perform an authorisation check in one of its AJAX actions, allowing users with a role as low as contributor to modify existing administrator-created invitation-code records.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97192 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97192</link>
+    <guid isPermaLink="false">cc7371b79f73bc77c118341187588f8a</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Secure Custom Fields WordPress plugin before 6.9.8 does not re-apply its field-group location rules when persisting values submitted through the post editor save path, allowing users with contributor-level access and above to write custom fields the site restricted to administrators onto their own posts.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97193 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97193</link>
+    <guid isPermaLink="false">2df2f1b1adc90e71c69f2d0bfb067edc</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Secure Custom Fields WordPress plugin before 6.9.8 does not verify that a user is allowed to edit the target object before writing to it during bidirectional relationship synchronization, allowing users with contributor-level access and above to add or remove a reference to their own object on arbitrary posts, users, or terms they cannot otherwise edit.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97194 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97194</link>
+    <guid isPermaLink="false">2fa1aea8578261935d3d95212165a7b4</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Secure Custom Fields WordPress plugin before 6.9.8 does not perform a read-permission check when it renders and formats the values of its relational fields, allowing users with post-editing access (Contributor and above) to disclose the titles and non-public statuses of other users' unpublished posts.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97195 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97195</link>
+    <guid isPermaLink="false">39e2678933dc1180ab8d2d3d6c6f03c2</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Secure Custom Fields WordPress plugin before 6.9.8 does not sanitize a persisted field definition before emitting part of it as an HTML attribute name, allowing a user able to configure its fields to store a payload that executes as JavaScript in the browser of any user who views a page rendering the affected field, which on multisite lets a site administrator who lacks the unfiltered_html capability inject script into other users' sessions.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
