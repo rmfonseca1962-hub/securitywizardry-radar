@@ -5,119 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2026 16:01:13 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-124458 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124458</link>
-    <guid isPermaLink="false">4514758dc88863f144349a201f175b87</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.4.0 contains an authorization bypass vulnerability in the FHIR GET /fhir/Person/:uuid route that allows patient-portal users to read any staff member's demographics by bypassing compartment enforcement. Attackers holding a patient SMART token with patient/Person.read can harvest staff Person UUIDs from Appointment references to retrieve names, home addresses, phone numbers, and personal emails.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124459 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124459</link>
-    <guid isPermaLink="false">5ca026d62a7540e18576e63a01d8f968</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.6 | OpenEMR before 8.3.0 contains an insecure direct object reference vulnerability in many encounter-form view and save endpoints that lack patient/encounter ownership checks. Authenticated clinical users can enumerate sequential form id values in requests such as soap/view.php and save.php to read and overwrite other patients' clinical records.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124460 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124460</link>
-    <guid isPermaLink="false">d9b9cb9e573033f2b6e9738b8a09a24d</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains an insecure direct object reference vulnerability in PortalPatientController::Read() that allows authenticated patients to read other patients' pending demographic change requests. Attackers can supply another patient's ID in the patientId query string parameter to retrieve PHI including names, addresses, SSNs, and insurance information.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124461 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124461</link>
-    <guid isPermaLink="false">84beaa3c61516fd48d7a225687f5834d</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.6 | OpenEMR before 8.3.0 contains a missing authorization vulnerability in library/ajax/upload.php that allows any authenticated user to read and overwrite document data by supplying an arbitrary doc_id. Low-privilege users can enumerate doc_id values with the fetch and save actions to disclose patient health information and tamper with medical records across all patients.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124462 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124462</link>
-    <guid isPermaLink="false">ca2b54619867ff540d19c817e15f86dd</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains an insecure direct object reference vulnerability in OnsiteDocumentController::Query() that allows authenticated portal patients to bypass the lowercase pid authorization guard by supplying a capitalised Pid parameter. Attackers can request the api/onsitedocuments endpoint with Pid set to another patient's id to overwrite the session-pinned criteria and read other patients' onsite documents containing PHI.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124463 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124463</link>
-    <guid isPermaLink="false">ed7099a422c0945e30da929767ac03d5</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.3 | OpenEMR before 8.3.0 contains a stored cross-site scripting vulnerability that allows authenticated users with CAMOS access to inject HTML by saving malicious CAMOS content through ajax_save.php. Attackers can store a script payload that executes unencoded when the entry is printed via the non-print_html branch of rx_print.php, performing actions and reading data as the victim user.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124464 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124464</link>
-    <guid isPermaLink="false">66e2def5d8f50d19799c4fd817d71f30</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.4.0 contains an authorization bypass vulnerability that allows patient-scoped SMART tokens to read other patients' questionnaire responses because FhirQuestionnaireResponseService does not implement IPatientCompartmentResourceService. Attackers holding a patient/QuestionnaireResponse.rs token can request responses by uuid or list the unfiltered bundle to obtain cross-patient clinical assessment answers.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124465 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124465</link>
-    <guid isPermaLink="false">3d142933018ed8670a67e94a7d374055</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | Trendyol kafka-konsumer from 2.3.3 before 2.6.18 contains a denial of service vulnerability in batch_consumer.go that panics when a single record exceeds MessageGroupByteSizeLimit. Attackers able to produce to the consumed topic can publish one oversized record that terminates the consumer before offset commit, causing a persistent crash loop.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124466 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124466</link>
-    <guid isPermaLink="false">08a608ae9a798bedfc984782f2d062de</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.9 | OpenEMR before 8.4.0 contains a server-side request forgery vulnerability that allows unauthenticated attackers to make the server send HTTP requests by registering an OAuth2 client with an unvalidated jwks_uri. Attackers can trigger the fetch via the token introspection endpoint with an unsigned client_assertion to probe internal services and reach cloud metadata endpoints.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124467 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124467</link>
-    <guid isPermaLink="false">df51db1c7e4d6730d8bbc35bdefbbf80</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | OpenEMR before 8.4.0 contains a local file inclusion in the ESign router (library/ESign/Router.php), which passes the unsanitized module parameter into a require_once of '&lt;module&gt;/Controller.php', and the fax module's faxProcessUploads writes attacker-named files to a predictable temp path without extension checks. Authenticated attackers can upload a PHP file named Controller.php, then request interface/esign/index.php with a traversing module parameter to include it and execute arbitrary code.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124468 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124468</link>
-    <guid isPermaLink="false">11c8d93921ebd7fce6dd6282913e785f</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains an SQL injection vulnerability in the Standard REST API patient insurance and employer search, which concatenates query-string parameter names into SQL as column identifiers without escaping. Authenticated clients, including low-privilege patient-portal OAuth2 tokens, can send crafted parameter names to /api/patient/{puuid}/insurance or /api/patient/{puuid}/employer to extract patient PHI, user records, and API client secrets.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124469 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124469</link>
-    <guid isPermaLink="false">3c7dedce574ccea5f417e6912883d342</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.4 | OpenEMR before 8.3.0 contains an SQL injection vulnerability in the Fee Sheet drug-inventory lookup (DrugSalesService::sellDrug) that interpolates the prod[N][warehouse] POST field into an ORDER BY clause. Low-privileged authenticated users can submit Fee Sheet product lines with constant subqueries to run a time-based blind oracle, extracting patient data and users_secure bcrypt hashes.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124470 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124470</link>
-    <guid isPermaLink="false">484991edf7e2351b90fd23a5b2461fba</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains a broken object level authorization vulnerability in portal/report/portal_custom_report.php that allows authenticated portal patients to read other patients' problem list entries. Attackers can enumerate sequential IDs in issue_ parameter names to retrieve other patients' problem titles, clinical notes, ICD diagnosis codes, and IPPF contraceptive records.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124471 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124471</link>
-    <guid isPermaLink="false">cc43e3ccf6fe9ac21d6bccb43f0f02d2</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.6 | OpenEMR before 8.3.0 contains a missing authorization vulnerability in interface/billing/sl_eob_invoice.php that allows any authenticated user to read and modify billing data for any encounter. Attackers can iterate the id parameter to read patient names and billing notes, and post payments, adjustments, deletions, or billing notes against any patient's account.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 08 Nov 2026 17:01:45 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-124472 - NVD - CVSS Score v4.0: 8.6</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124472</link>
@@ -323,6 +211,118 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124553</link>
     <guid isPermaLink="false">e7efa732b1f4c221798e07d8a2dd2dc3</guid>
     <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | BabelDOC from 0.3.61 before 0.7.0 contains a resource exhaustion vulnerability that allows remote attackers to exhaust CPU and memory by supplying unbounded bfrange and cidrange spans. Attackers can submit a crafted PDF whose embedded ToUnicode CMap declares a huge range, driving billions of loop iterations and stalling the translation worker.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2024-41786 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2024-41786</link>
+    <guid isPermaLink="false">4933b92ae4282ddf1950812c191407df</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.3 | IBM Engineering Requirements Management DOORS Next 7.1, and 7.2 could allow a remote attacker to force the Web server to return contents of a sensitive requested file due to improper input validation.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2025-0166 - NVD - CVSS Score v3.1: 2.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-0166</link>
+    <guid isPermaLink="false">57d2332273fe9214512ccff06e7638cc</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 2.7 | IBM watsonx Orchestrate Cartridge for Cloud Pak for Data 4.8.4 through 4.8.5, and 5.0.0 through 5.4.2 could disclose sensitive source code information that should not be accessible.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2025-1837 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-1837</link>
+    <guid isPermaLink="false">f921acafd8a50dee6055ff21f9b93dbb</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.4 | IBM watsonx Orchestrate Cartridge for Cloud Pak for Data 4.8.4 through 4.8.5, and 5.0.0 through 5.4.2 could allow an authenticated user to perform unauthorized actions due to improper trust of server-side permission methods.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2025-36075 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-36075</link>
+    <guid isPermaLink="false">df4dcdce438133206ca3dbf993626427</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.3 | IBM Safer Payments 6.4.0.00 through 6.4.2.11, 6.5.0.00 through 6.5.0.09, 6.6.0.00 through 6.6.0.07, 6.7.0.00 through 6.7.0.03, and 6.8.0.00 could allow an authenticated user to obtain sensitive information, caused by improper user input validation. By using a set of API requests the user could exploit this vulnerability to decrypt sensitive information.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101117 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101117</link>
+    <guid isPermaLink="false">49e9d80844a811f5a894369552ee3462</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 9.1 | IBM WebSphere Extreme Scale 8.6.1.0 through 8.6.2.2 could allow a remote attacker to bypass security restrictions due to improper Content Security Policy configuration.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-102618 - NVD - CVSS Score v3.1: 3.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102618</link>
+    <guid isPermaLink="false">0bd06645de687b69ecf2372114a1a6ec</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 3.6 | IBM i 7.6, 7.5, 7.4, and 7.3 could allow an authenticated user to indirectly disable system auditing, which they otherwise don't have authority to disable.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-103320 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103320</link>
+    <guid isPermaLink="false">da33f2718ba781ad867d59cfb4b12d50</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 4.3 | IBM WebSphere Application Server Liberty 17.0.0.3 through 26.0.0.10 could allow an authenticated user with the Reader role to obtain sensitive information.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109899 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109899</link>
+    <guid isPermaLink="false">8cd91a23d3c10bc572141b49f1946b31</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 7.1 | Missing Authorization vulnerability in Melapress Melapress Role Editor melapress-role-editor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Melapress Role Editor: from n/a through 1.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109900 - NVD - CVSS Score v3.1: 9.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109900</link>
+    <guid isPermaLink="false">3086c2a446f8e08c721052e65a56d4f6</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 9.6 | Incorrect Privilege Assignment vulnerability in Melapress Melapress Role Editor melapress-role-editor allows Privilege Escalation.This issue affects Melapress Role Editor: from n/a through 1.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-114186 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114186</link>
+    <guid isPermaLink="false">0022ea26be45ebfa80b3197097b5dad6</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing Authorization vulnerability in WPVibes AnyWhere Elementor anywhere-elementor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects AnyWhere Elementor: from n/a through 1.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-114188 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114188</link>
+    <guid isPermaLink="false">2946164048ea22023ba0215008520462</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WPVibes AnyWhere Elementor anywhere-elementor allows Stored XSS.This issue affects AnyWhere Elementor: from n/a through 1.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-114189 - NVD - CVSS Score v3.1: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114189</link>
+    <guid isPermaLink="false">dca6bd0d30ff771e1672cc55fb4ee61d</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 8.5 | Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in WPVibes AnyWhere Elementor anywhere-elementor allows Blind SQL Injection.This issue affects AnyWhere Elementor: from n/a through 1.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120858 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120858</link>
+    <guid isPermaLink="false">8fd907f25e098322975868fc2de74606</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing Authorization vulnerability in WP ManageNinja LLC FluentForm fluentform allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects FluentForm: from n/a through 6.2.16.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-61987 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61987</link>
+    <guid isPermaLink="false">deb90b7626a9f913b69bf78c876eabb7</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WC Lovers WCFM – Frontend Manager for WooCommerce wc-frontend-manager allows Stored XSS.This issue affects WCFM – Frontend Manager for WooCommerce: from n/a through 6.8.1.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
