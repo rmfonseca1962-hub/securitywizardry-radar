@@ -5,702 +5,326 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2026 02:00:39 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 03:02:00 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-99271 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99271</link>
-    <guid isPermaLink="false">7222bb203cafa094aa30358c51d79c4a</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ALSA: line6: Clear prev_fbuf on capture buffer release
-
-A KASAN slab-use-after-free read was reported in submit_audio_out_urb()
-when generating an impulse test signal:
-
-  BUG: KASAN: slab-use-after-free in create_impulse_test_signal sound/usb/line6/playback.c:76 [inline]
-  BUG: KASAN: slab-use-after-free in submit_audio_out_urb+0x1848/0x1b20 sound/usb/line6/playback.c:249
-  Read of size 2 at addr ffff888008d74870 by task syz.2.3214/7785
-
-  Allocated by task 11:
-   kmem_cache_alloc_noprof+0x2f0/0x390 mm/slub.c:4144
-   line6_buffer_acquire+0x1a1/0x220 sound/usb/line6/pcm.c:158
-   line6_pcm_acquire+0xb6/0x230 sound/usb/line6/pcm.c:329
-   line6_startup_work+0x3c/0x50 sound/usb/line6/driver.c:728
-
-  Freed by task 7785:
-   kfree+0xf8/0x390 mm/slub.c:6566
-   line6_buffer_release sound/usb/line6/pcm.c:176 [inline]
-   line6_buffer_release+0xa5/0xf0 sound/usb/line6/pcm.c:170
-   __line6_pcm_release sound/usb/line6/pcm.c:305 [inline]
-   line6_pcm_release+0x5a/0x80 sound/usb/line6/pcm.c:313
-   snd_toneport_monitor_put+0x11b/0x190 sound/usb/line6/toneport.c:183
-
-line6pcm-&gt;prev_fbuf points into the capture PCM stream buffer
-(line6pcm-&gt;in.buffer), which is updated during audio_in_callback() to
-feed rate synchronization, software monitoring, and impulse test signal
-generation on playback side.
-
-When all capture streams are closed, line6_buffer_release() frees
-pstr-&gt;buffer with kfree().  However, it does not clear line6pcm-&gt;prev_fbuf.
-If playback is subsequently started (e.g. via impulse test signal
-volume control snd_line6_impulse_volume_put()), submit_audio_out_urb()
-dereferences the stale pointer line6pcm-&gt;prev_fbuf under in.lock,
-resulting in a slab-use-after-free read.
-
-Clear prev_fbuf and prev_fsize in line6_buffer_release() when releasing
-the capture stream buffer under in.lock, ensuring that no stale buffer
-pointer can be accessed by submit_audio_out_urb().</description>
+    <title>CVE-2026-123578 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123578</link>
+    <guid isPermaLink="false">2c2e4230eb500066990aaeef6c44394c</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-net 0.26.0 before 0.26.2 and hickory-proto 0.25.0 through 0.25.2 skip the check that a UDP response's question section matches the query when the response has an empty question section (QDCOUNT=0), and also skip the case-randomization check. Remote attackers able to inject spoofed UDP responses can send QDCOUNT=0 responses to bypass these checks, weakening defenses against DNS spoofing.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99272 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99272</link>
-    <guid isPermaLink="false">ed80bfc9a6f93026365154ffc45acacb</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-smb: client: validate the data area in SMB2_read()
-
-SMB2_read() copies le32_to_cpu(rsp-&gt;DataLength) bytes from
-(char *)rsp + rsp-&gt;DataOffset without checking that the range lies
-within the response actually received. A READ response with
-DataOffset == 0 makes smb2_get_data_area_len() zero the data length, so
-smb2_check_message() accepts a frame as short as the fixed response,
-while SMB2_read() still uses the server-supplied DataLength, capped only
-by CIFS_MAX_MSGSIZE and the caller's length.
-
-A malicious server can answer the synchronous read used by the
-mfsymlinks (or SFU) symlink parser with an 81-byte READ response
-carrying DataOffset 0 and DataLength 1067, making the client copy 1067
-bytes from a 448-byte receive object (KASAN slab-out-of-bounds; up to
-16 KiB in the general case).
-
-Clamp a zero (or header-overlapping) DataOffset to read_rsp_size, as
-handle_read_data() does for the asynchronous path, and reject the
-response unless DataOffset + DataLength fits within rsp_iov.iov_len.
-The SMB1 helper was fixed the same way in 5be5bdda5863.</description>
+    <title>CVE-2026-123579 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123579</link>
+    <guid isPermaLink="false">75eb5757890ec9e53207db8d55459ef5</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | DNSSEC validation in Hickory DNS hickory-net 0.26.0-beta.1 before 0.26.2 and hickory-proto through 0.26.0-alpha.1 does not distinguish NODATA responses from wildcard-expanded positive responses. For a query that should return NODATA in a zone with wildcard records, an attacker can combine an NSEC3 record matching the query name with a signed wildcard record into a bogus positive response that validation accepts.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99273 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99273</link>
-    <guid isPermaLink="false">6f74773204feb74205c7cf2dfa7d1afc</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: reserve space for the UTF-16 terminator in stream info
-
-smb_strtoUTF16() always writes a terminating zero UTF-16 unit after the
-converted characters, but get_file_stream_info() budgets only
-sizeof(struct smb2_file_stream_info) + streamlen * 2 for a stream entry
-and sizeof(struct smb2_file_stream_info) + 7 * 2 for the trailing
-&quot;::$DATA&quot; entry. When an entry exactly fills the 448-byte small response
-buffer, the terminator is written two bytes past the allocation.
-
-Reserve one extra UTF-16 unit in both budget checks. The terminator is
-not part of the wire format, so the reported lengths are unchanged.</description>
+    <title>CVE-2026-123580 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123580</link>
+    <guid isPermaLink="false">b3c0c19b423d8aadc8171b85ba0c3987</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-net 0.26.0-beta.1 before 0.26.2 and hickory-proto through 0.26.0-alpha.1 perform insufficient checks on NSEC3 record names during DNSSEC verification, comparing only the hashed label without confirming the record belongs to the correct zone. Attackers can supply NSEC3 records from another zone with a matching hash label to forge DNSSEC nonexistence proofs.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99274 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99274</link>
-    <guid isPermaLink="false">75cd62eca20db1c68855a1e4c9dd5bd5</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-smb: client: fix fiemap wild read on empty truncated response
-
-smb3_fiemap() treats -E2BIG from SMB2_ioctl() as a truncated range blob
-and loops for the next chunk. If the server reports
-STATUS_BUFFER_OVERFLOW with OutputCount == 0, SMB2_ioctl() returns
--E2BIG with out_data == NULL and out_data_len == 0, and the existing
-length checks accept the empty result. The loop then evaluates
-
-	next = out_data[num - 1].file_offset + ...
-
-with num == 0, reading 16 bytes before NULL.
-
-Reject a truncated range blob that contains no range, so the resume
-offset is never computed from an empty response. Also require the last
-range in a truncated blob to advance the resume offset without
-overflowing, and to stay within the requested range; a malicious or
-broken server could otherwise make no progress or underflow len and loop
-forever. Free the previous response buffer before retrying.
-
-Reproduced on 6.6.87.2 with a malicious SMB2 server that answers
-FSCTL_QUERY_ALLOCATED_RANGES with STATUS_BUFFER_OVERFLOW and
-OutputCount == 0; an FS_IOC_FIEMAP ioctl on the mount oopses in
-cifs_fiemap() with CR2 = fffffffffffffff8. The code path is unchanged
-on mainline.</description>
+    <title>CVE-2026-123581 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123581</link>
+    <guid isPermaLink="false">cedc5ecf632291dba1e266992baa6a7a</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.9 | Hickory DNS hickory-proto through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 contain a DNSSEC validation flaw that accepts a response as a positive answer when any valid RRset appears in the answer section, without checking that the RRset is responsive to the query. Attackers can supply signed but unrelated RRsets so that responses lacking matching records are validated as positive answers instead of as no-data responses.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99275 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99275</link>
-    <guid isPermaLink="false">f18be57e9b57bafcfb57fdbd8a454201</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-smb: client: reject short SESSION_SETUP responses
-
-smb2_check_message() accepts frames shorter than struct smb2_pdu when
-the SMB2 status is non-zero, before the minimum-PDU check added by
-b4694f269e66d. A 64-byte STATUS_MORE_PROCESSING_REQUIRED SESSION_SETUP
-response is therefore accepted even though it cannot contain the
-SecurityBufferOffset and SecurityBufferLength fields.
-
-The parser then reads those fields from stale bytes left in the reused
-receive buffer by an earlier frame. With a long stale
-SecurityBufferLength, decode_ntlmssp_challenge() copies up to about
-64 KB from beyond the receive object and sends the data back to the
-server in the NTLMv2 AUTHENTICATE target info.
-
-Reject short MPR SESSION_SETUP responses before the short-error path,
-and validate SecurityBufferOffset + SecurityBufferLength against the
-received response length before decoding the challenge.
-
-The ordering bypass is not new: the short-error early return predates
-b4694f269e66d, and the unvalidated SecurityBufferLength read predates
-the 2016 raw NTLMSSP split in 166cea4dc3a4, so all supported stable
-trees are affected. Reproduced on 6.6.87.2; the path is unchanged on
-mainline.</description>
+    <title>CVE-2026-123582 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123582</link>
+    <guid isPermaLink="false">f69b60f1b7a7d6eb77afbfe04807a377</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | The validating recursive resolver and validating forwarder in Hickory DNS (hickory-server) 0.25.0 before 0.26.2 do not check whether the SOA record passed DNSSEC validation when assembling NXDOMAIN or NODATA responses. An attacker able to supply forged DNS responses can have a forged SOA record returned to clients with the AD bit set, misleading clients that rely on the server's DNSSEC validation.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99276 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99276</link>
-    <guid isPermaLink="false">c1fd067bceac1fa09f04ff90eedb2108</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: defer connection scavenging while session locks are busy
-
-The expiration worker holds conn_list_lock for reading while checking
-for authenticated sessions. Without this change, the check can wait for
-conn-&gt;session_lock or sessions_table_lock.
-
-In destroy_previous_session(), the status updates after
-ksmbd_conn_wait_idle_sess() run with both session locks held for
-writing. Both the KSMBD_SESS_GOOD error path and the
-KSMBD_SESS_NEED_SETUP success path call ksmbd_all_conn_set_status(),
-which takes conn_list_lock for reading.
-
-A writer queued on conn_list_lock can block these new read acquisitions.
-The worker then waits for a session lock held by
-destroy_previous_session(), which waits behind the writer. The writer
-cannot proceed until the worker releases conn_list_lock.
-
-Try both session locks instead of waiting in the scavenging check. Keep
-the connection when either lock is busy and let the periodic worker
-retry later.</description>
+    <title>CVE-2026-123583 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123583</link>
+    <guid isPermaLink="false">2c05b0c18e7dd15030791d818b9f9e73</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | The recursive resolver in Hickory DNS hickory-recursor 0.25.0 through 0.25.2 and hickory-resolver 0.26.0 before 0.26.2 does not apply out-of-bailiwick filtering to negative responses. Attackers able to supply crafted negative responses can include out-of-bailiwick records to facilitate cache poisoning and more easily exploit other DNSSEC verification flaws.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99277 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99277</link>
-    <guid isPermaLink="false">d69a453b3518298482843cd5ef096420</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: hold a connection reference for each session channel
-
-ksmbd_session_unregister() removes a session from the global and per-
-connection tables before dropping the table reference. A concurrent
-reference holder can keep the session and its channel list alive after
-those removals.
-
-Connection cleanup can no longer find the unpublished session to remove its
-channels. Since a channel only stores a raw conn pointer, the connection
-can be freed while another session reference holder is still accessing it,
-for example during SMB3.1.1 binding or a procfs read.
-
-Take a connection reference when registering a channel and release it on
-insertion failure, channel removal, or final session destruction. Keep the
-channels and signing keys until the session is destroyed so a response can
-still be signed after the session has been unregistered.</description>
+    <title>CVE-2026-123584 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123584</link>
+    <guid isPermaLink="false">cc04a5538836eb420fd3c75d4a0a5938</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.2 | The hickory-net crate in Hickory DNS 0.26.0 before 0.26.2 stops listening and returns an error when a client UDP connection receives a datagram that cannot be parsed as a DNS message. Remote attackers who guess the query's source port, without knowing the transaction ID, can spoof malformed responses to abort client queries, causing denial of service.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99278 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99278</link>
-    <guid isPermaLink="false">88e489a6a303ab1a4ba155a43871700b</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: limit sessions on each connection
-
-The pending setup limit only counts InProgress sessions. A client can
-complete authentication repeatedly and retain an unbounded number of Valid
-sessions on one connection.
-
-Reserve a connection slot before allocating a session and retain a
-connection reference while authentication is in progress. The first SMB3
-channel takes over that reservation; binding to another connection reserves
-one slot there. Reauthentication and authentication continuation reuse the
-existing reservation. Return slots on allocation or insertion failure,
-channel removal, and final session destruction.
-
-Accept max_sessions_per_connection in reserved startup-request space and
-default to 64 when older tools leave it zero. Keep the request size and
-existing field offsets unchanged. Expose the configured limit in procfs.
-The existing connection limits bound the aggregate number of sessions
-without a separate global session allocation limit.</description>
+    <title>CVE-2026-123585 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123585</link>
+    <guid isPermaLink="false">f72c31b38ac8eb8035aee02561e95b25</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.9 | The hickory-resolver component of Hickory DNS 0.25.0 before 0.26.2 follows irrelevant CNAME records when resolving recursive queries, sending queries that are unnecessary to answer the original request. Attackers controlling DNS responses can include CNAME records in the authority or additional sections, or outside the original query name's CNAME chain, causing excess resolver queries and increased query amplification.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99279 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99279</link>
-    <guid isPermaLink="false">1f0032cc8bb8bf668701bf62928d40da</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: reclaim ended sessions on logoff and expiration
-
-LOGOFF and previous-session replacement leave sessions Expired with a
-zero credential expiry. Ended sessions can retain their memory and
-connection slots when no further setup arrives on the owning connection.
-
-Unpublish a logged-off session while the request reference keeps its
-response signing and encryption keys alive. Remove its procfs entry
-before dropping the table reference so a reader cannot remove its own
-entry on the last put. Clear proc_entry after removal to avoid removing
-it twice.
-
-Reclaim ended sessions from the global table in the existing expiration
-worker before it acquires conn_list_lock. Only select Expired sessions
-with zero credential expiry and no references beyond the table
-reference. Keep sessions whose Kerberos credentials expired available
-for reauthentication.
-
-Unlink the session from its setup connection and all channel
-connections, so SMB2 sessions and sessions with only secondary SMB3
-channels are covered. The session already holds connection references,
-and sessions_table_lock prevents concurrent channel removal. Queue
-sessions on a separate disposal list, leaving their hash nodes unhashed,
-and remove procfs entries and drop table references outside the locks.
-
-Keep the pending setup check before allocating a new session so
-abandoned InProgress sessions can release their slots even at the
-connection limit. Retain the timeout and reference checks and dispose of
-those sessions outside the locks. Leave ended Expired sessions to the
-expiration worker.</description>
+    <title>CVE-2026-123586 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123586</link>
+    <guid isPermaLink="false">56fb58761b11bb0b172da0cb7c74cf2a</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS 0.25.0-alpha.3 through 0.25.2 contains a query amplification vulnerability in its recursive resolver, which mishandles cyclic sibling name server referrals that lack glue records. Attackers controlling two zones whose name servers reference each other without glue records can make the recursor loop, sending many upstream queries, amplified further by zero-TTL NS records.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99280 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99280</link>
-    <guid isPermaLink="false">6f73f641cd903227f44ae3836366cbdf</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: drain session procfs readers before dropping table references
-
-Session registration failure and connection cleanup can drop the table
-reference while the per-session procfs entry is still accessible. If a
-reader holds the last remaining reference, its final put calls
-proc_remove() from its own callback and waits for that callback to
-finish.
-
-Remove the procfs entry before dropping the table reference in the
-registration failure path. Queue sessions removed during connection
-cleanup and drain their procfs readers after releasing both session
-locks, then return their table references. Keep the global hash node
-unhashed while a session is queued so a concurrent unregister cannot
-drop the reference again.
-
-Previous-session replacement also destroys the file table before the
-session is finally freed. Detach the idr under the lock used by procfs
-file counters, and report zero files after it has been detached. This
-prevents a reader from accessing the idr during or after its
-destruction.</description>
+    <title>CVE-2026-123587 - NVD - CVSS Score v4.0: 8.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123587</link>
+    <guid isPermaLink="false">b1204737d39113700e723eb4ffcf5a2c</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.9 | The DNSSEC validation in the Hickory DNS hickory-net crate 0.26.0 before 0.26.2 identifies wraparound NSEC records by comparing the next domain name to an SOA record in the response, accepting that SOA even if it fails validation. Attackers who can supply DNS responses can combine a genuine NSEC record and its RRSIG with a crafted SOA record to forge nonexistence of any RRset.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99281 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99281</link>
-    <guid isPermaLink="false">7d47b71813c17d168d55a91eea63b5e3</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-tun: Require CAP_NET_ADMIN to attach to an ownerless device
-
-Twenty years ago I made creating a tuntap device require CAP_NET_ADMIN
-in commit ca6bb5d7ab22 (&quot;[NET]: Require CAP_NET_ADMIN to create tuntap
-devices.&quot;)
-
-The idea was to allow the permissions on /dev/net/tun to be relaxed to
-0666 and thus allow owners of tun devices assigned with TUNSETOWNER to
-actually open it and get at their devices.
-
-What we missed at the time was that persistent devices with *no* owner
-were already essentially world-consumable, and anyone who could open
-the device node could also attach to those.
-
-Even then, using persistent devices with no explicitly set owner — on
-the (false) presumption that CAP_NET_ADMIN would be required to open
-them — wasn't an egregious userspace bug. There are cases where it does
-make sense to separate the creation/configuration of the netdevice, from
-the process which shovels packets into it.
-
-Since then, TUNSETGROUP was added a year later in commit 8c644623fe7e
-(&quot;[NET]: Allow group ownership of TUN/TAP devices.&quot;). Its commit message
-noted that if both uid and gid are set, both have to match (in itself a
-bizarre choice) — but still not that with *neither* set, no permission
-at all was required.
-
-Then in 2012 commit c8d68e6be1c3 (&quot;tuntap: multiqueue support&quot;) allowed
-new queues to be attached to a device from the moment of its creation,
-with no way for userspace to close the race between creation and a
-subsequent TUNSET{OWNER,GROUP}.
-
-In 2024, commit 3ca459eaba1bf (&quot;tun: fix group permission check&quot;) tried
-to fix things to be saner: only require the user *or* the group to
-match, in line with standard POSIX permissions, and require
-CAP_NET_ADMIN if neither the user nor group authorised the access
-(although it put the CAP_NET_ADMIN check first, and would wrongly have
-reported the capability as having been used even when it was not).
-
-That fix was reverted in commit a70c7b3cbc06 (&quot;tun: revert fix group
-permission check&quot;) due to allegedly causing a regression in an selinux
-test suite which *expected* the attachment to succeed when authorised
-by none of user, group, nor CAP_NET_ADMIN:
-https://lore.kernel.org/netdev/CAFqZXNtkCBT4f+PwyVRmQGoT3p1eVa01fCG_aNtpt6dakXncUg@mail.gmail.com/
-
-We should not break UAPI. But we don't have to consider an selinux test
-case which deliberately exercises a security flaw to be UAPI worth
-preserving either. To which end, I have fixed it in selinux-testsuite
-commit b2f894f0016b (&quot;tests/tun_tap: set an owner on the device for the
-relabel tests&quot;).
-
-So: fix the lack of CAP_NET_ADMIN check on devices which *haven't* been
-assigned an owner or group, while leaving the weird tun ownership model
-as it was (user *and* group have to match, if both are set). If someone
-still wants to fix the latter (which wasn't actually the reason the
-previous attempt was reverted), they can do it under separate cover.
-
-Permit attaching to an existing device only if an owner and/or group was
-set and the caller matches all that were set, or if the caller has
-CAP_NET_ADMIN. The only behavioural change is that a device with no
-owner or group now requires CAP_NET_ADMIN to attach — precisely the
-loophole we want to close.
-
-And put the CAP_NET_ADMIN check in the right place this time.</description>
+    <title>CVE-2026-123588 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123588</link>
+    <guid isPermaLink="false">7d9e75f7e70f9db438ac172f85f0da1a</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | The recursive resolver in Hickory DNS (all versions of the hickory-recursor crate, and hickory-resolver 0.26.0 before 0.26.2) caches an empty connection pool when it follows a referral with no glue records and all queries for the name servers' IP addresses fail. An attacker able to spoof DNS responses can make these lookups fail, causing all subsequent queries for the affected zone to fail until the cache entry expires or is evicted.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99282 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99282</link>
-    <guid isPermaLink="false">c5df312b0c2820d556312bc9ba91b3c8</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-net/sched: sch_teql: fix use-after-free on lower qdisc drop
-
-The issue: teql_master_xmit() tests the slave's ndo_start_xmit() return
-value against NETDEV_TX_OK alone. A slave that consumes the skb but
-returns an error code (rc &lt; NET_XMIT_MASK, e.g. NET_XMIT_DROP) is treated
-as if the skb were still owned, so the loop restores skb-&gt;dev and calls
-__skb_pull() on it. A VLAN slave returns the result of dev_queue_xmit()
-from its ndo_start_xmit() (propagated since cbbef5e18307), and when the
-lower qdisc drops the packet that value is NET_XMIT_DROP after the skb
-has been freed, giving a use-after-free in teql_master_xmit().
-
-The Fix: test for consumption with dev_xmit_complete(), which accepts
-NETDEV_TX_OK and every rc &lt; NET_XMIT_MASK, matching other callers that
-need to distinguish consumed results from busy. Only NETDEV_TX_OK keeps
-the packet counted in tx_packets/tx_bytes and advances the slave; a
-consumed result that is neither a success nor NET_XMIT_CN ends the
-attempt and is charged to tx_dropped, so lower-qdisc drops are no longer
-reported as good transmits. NET_XMIT_CN is counted like success because
-it can accompany acceptance of the current packet: pfifo_head_drop drops
-the old head, enqueues the current skb and returns NET_XMIT_CN.
-
-Conditions to recreate the bug:
-With CONFIG_NET_SCH_TEQL,
-CONFIG_VLAN_8021Q and CONFIG_DUMMY enabled, add lkrdummy0 (dummy) and
-lkrvlan0 (VLAN id 37 on lkrdummy0); set a pfifo limit 0 root on lkrdummy0
-and a teql0 root on lkrvlan0; bring teql0 up with an address and send one
-UDP packet to it. The VLAN xmit returns NET_XMIT_DROP from the lower
-qdisc while holding a freed skb.</description>
+    <title>CVE-2026-123589 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123589</link>
+    <guid isPermaLink="false">9dbc4192dfa19c74b0cb5623c3b2e28c</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.9 | The DNS-over-QUIC (DoQ) server in hickory-server (hickory-dns) before 0.26.2 does not apply any timeout when reading a request message from a QUIC stream, bypassing all configured timeouts. A remote unauthenticated client can open a connection and a request stream and hold it open indefinitely, consuming server resources and causing a denial of service.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123989 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123989</link>
-    <guid isPermaLink="false">aae78909c311bc6ba409fabf59baf8f2</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.3 | A vulnerability was found in ESEngine DeepSeek-Reasonix up to 1.33.0. Impacted is the function loadGitStatus of the file build.rs of the component Build Script Execution. Performing a manipulation results in permission issues. The attack may be initiated remotely. Upgrading to version 1.34.0 is recommended to address this issue. The patch is named a54659c2c5b0f4e57aae2b44d41f421c6a71e8cf. You should upgrade the affected component.</description>
+    <title>CVE-2026-123590 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123590</link>
+    <guid isPermaLink="false">a52c55bcc458ef939dc333782647a8bf</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-net 0.26.0-beta.1 before 0.26.2 and hickory-proto through 0.26.0-alpha.1 accept NSEC and NSEC3 records for DNSSEC nonexistence proofs when any other record with the same owner name passes signature validation. Attackers able to supply DNS responses can mix validly signed records with bogus same-name NSEC or NSEC3 records of different types in the authority section to forge nonexistence proofs.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124307 - NVD - CVSS Score v4.0: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124307</link>
-    <guid isPermaLink="false">eb4d512206ca1e003cb24ee73fbf9c44</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.8 | Fraunhofer HHI VVdeC before 3.2.1 contains a heap use-after-free vulnerability that allows attackers to corrupt memory by redefining an ALF adaptation parameter set id still referenced by slices. Attackers can supply a crafted VVC bitstream that, with multithreaded decoding, makes worker threads dereference freed APS objects in CABACReader::readAlf() and AdaptiveLoopFilter::reconstructCoeff(), causing crashes or heap corruption.</description>
+    <title>CVE-2026-123591 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123591</link>
+    <guid isPermaLink="false">304e5302d91af0fa2d0ea6ec5fdd39b8</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.2 | Hickory DNS hickory-net 0.26.0-beta.1 before 0.26.2 and hickory-proto through 0.26.0-alpha.1 fail to verify, per RFC 6840 §4.4, that an NSEC or NSEC3 record denying a DS RRset also proves the delegation's NS record exists. Attackers can reuse child-side NSEC or NSEC3 records to fake an insecure delegation and forge child-zone records.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124308 - NVD - CVSS Score v4.0: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124308</link>
-    <guid isPermaLink="false">3ebf179b8f967aefee333a0e90d43014</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.8 | Fraunhofer HHI VVdeC before 3.2.1 contains a heap use-after-free vulnerability in DecLibRecon::createSubPicRefBufs because decompressPicture clears m_subPicExtTasks without waiting for pending tasks. Attackers can supply a crafted multi-subpicture VVC bitstream to decoders using two or more threads, causing heap memory corruption or a decoder crash.</description>
+    <title>CVE-2026-123592 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123592</link>
+    <guid isPermaLink="false">b49e35a6f1efdfd1cf271a0c15ad97ac</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.2 | The hickory-net crate in Hickory DNS 0.26.0-beta.1 before 0.26.2 allows DNSSEC validation bypass because Name's Hash ignores label lengths and ValidationCacheKey compares only that hash. An attacker controlling an unsigned delegation whose name differs from a signed target only in dot positions can prime an Insecure verdict, causing forged answers for the target to skip signature verification instead of returning SERVFAIL.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124309 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124309</link>
-    <guid isPermaLink="false">19a789511fd5ec673001d522bb4809eb</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 6.9 | Fraunhofer HHI VVdeC before 3.2.1 contains a heap out-of-bounds read vulnerability in SEIReader::xParseSEIScalableNesting that allows attackers to read past heap allocations by casting the SEI wrapper object instead of its payload. Attackers can supply a crafted VVC bitstream with a scalable nesting SEI containing a nested buffering period SEI to crash the decoder or copy adjacent heap memory.</description>
+    <title>CVE-2026-123593 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123593</link>
+    <guid isPermaLink="false">f4e5de699188790feb89aff64769d744</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-net 0.26.0-beta.1 before 0.26.2 and hickory-proto 0.24.0 through 0.26.0-alpha.1 compare DNSKEY public keys against DNSSEC trust anchors without checking the DNSKEY record name, so an RRset made up only of trusted keys is accepted without RRSIG verification. Attackers able to spoof or control name server responses can replace a secure zone's DNSKEY RRset with the root zone's keys, and use a large TTL to keep it cached.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124310 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124310</link>
-    <guid isPermaLink="false">61d41018a5ac1bd1417f26d8eccfbde5</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 6.9 | Fraunhofer HHI VVdeC before 3.2.1 contains an out-of-bounds read vulnerability that allows attackers to crash the decoder by supplying bitstreams with overlapping slice CTU coverage. Attackers can code a CTU in a second slice so a bi-predicted BDOF coding unit carries a negative reference index, causing Slice::getRefPic to read outside m_apcRefPicList and crash decoding.</description>
+    <title>CVE-2026-123594 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123594</link>
+    <guid isPermaLink="false">86364ab2da9e791e982075d30b4a33a3</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-proto through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 contain an NSEC validation flaw that returns a secure proof for NXDOMAIN responses when the covering NSEC's Next Domain Name is a strict descendant of the query name, which actually proves the name exists as an empty non-terminal. On-path attackers can flip the unsigned rcode of a genuine signed NODATA response from NOERROR to NXDOMAIN, causing validators to accept forged nonexistence of the name.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124311 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124311</link>
-    <guid isPermaLink="false">0123f9b7d86fd529eb2a19edc2c448d9</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 6.8 | Fraunhofer HHI VVdeC through 3.2.1 contains a NULL pointer dereference vulnerability in InterPrediction::xPredInterBlk that allows attackers to crash the decoder by switching SPS to enable reference wrap-around. Attackers can supply a crafted VVC bitstream activating a new SPS with sps_ref_wraparound_enabled_flag set, causing reads from missing PIC_RECON_WRAP buffers and denial of service.</description>
+    <title>CVE-2026-123595 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123595</link>
+    <guid isPermaLink="false">48fbc6ca71a54576dc258b58c44ac246</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-proto 0.25 through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 contain a DNSSEC validation flaw in the validating recursor's NSEC3 handler, which matches the closest encloser by hash alone without checking the type bitmap and so accepts parent-side ancestor-delegation NSEC3 records as proof of nonexistence. An attacker who delivers one response built from genuinely signed parent NSEC3 records can cause NXDOMAIN or NODATA to be cached with AD=1, denying resolution of existing names at and below the zone cut.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124312 - NVD - CVSS Score v4.0: 5.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124312</link>
-    <guid isPermaLink="false">936175486f151f24d110d8e4c810c5cf</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.7 | Fraunhofer HHI VVdeC through 3.2.1 contains a heap out-of-bounds read vulnerability that allows attackers to crash the decoder by supplying a collocated picture of different resolution. Attackers can craft a VVC bitstream enabling TMVP with a smaller collocated reference picture, causing getColInfo to read past the colMotion allocation when error concealment is enabled.</description>
+    <title>CVE-2026-123596 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123596</link>
+    <guid isPermaLink="false">abb0e542575c06a07696478520462ce6</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-proto through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 contain a DNSSEC validation flaw in the validating recursor's NSEC handler that accepts parent-side ancestor-delegation NSEC records as proof of nonexistence for names below the zone cut. An on-path attacker, rogue parent nameserver, or attacker winning a port and TXID race can deliver one forged NXDOMAIN response built from genuinely signed parent NSEC records, causing authenticated denial of existing child-zone names cached for the negative TTL.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124313 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124313</link>
-    <guid isPermaLink="false">f312dac593b5329504c182442a4aa479</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.3 | Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in the whitelisted get_linked_payments_for_doc method. Any authenticated user, including portal users, can supply arbitrary company, doctype, and docname values to read Payment Ledger Entry allocation data for other companies' invoices and vouchers.</description>
+    <title>CVE-2026-123597 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123597</link>
+    <guid isPermaLink="false">b4dc699b9db1c28ff962762b201af865</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-proto 0.25.0-alpha.1 through 0.26.0-alpha.1 and hickory-net before 0.26.2 contain a logic bug in DnssecDnsHandle's DS-fetch path that caches transient DS lookup errors as Bogus DNSSEC validation verdicts. An attacker who induces a SERVFAIL, REFUSED, or timeout response to a child-zone DS sub-query causes the validator to return SERVFAIL for all names under that zone until the cache entry's TTL expires.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124314 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124314</link>
-    <guid isPermaLink="false">dd537b608f2fe340a56d33cf42fd7fec</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 7.1 | Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in erpnext.crm.utils.get_open_activities that exposes ToDo and Event records. Any authenticated user, including portal or no-role users, can supply arbitrary ref_doctype and ref_docname values to enumerate activities and private calendar event details.</description>
+    <title>CVE-2026-123598 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123598</link>
+    <guid isPermaLink="false">70d2bf284a7aa7a64a7f53628a290d3c</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | The validating recursor in Hickory DNS hickory-recursor 0.25.0 through 0.26.0-alpha.1, hickory-resolver 0.26.0-alpha.1 before 0.26.2, and hickory-net 0.26.0-beta.1 before 0.26.2 caches DNSSEC-bogus answers using the untrusted, attacker-supplied record TTL (capped at 24 hours) instead of a short validation-failure TTL. A remote attacker who spoofs a single authoritative response with an invalid signature and a long TTL can keep the bogus result cached for up to 24 hours.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124315 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124315</link>
-    <guid isPermaLink="false">4577d55e0e7a93dfafe04e5bfd118e17</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 7.1 | Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in the whitelisted get_bom_items and get_bom_diff methods that skip BOM read permission checks. Any authenticated user, including portal or no-role users, can call get_bom_items with a BOM name to retrieve every raw material, quantity, rate and cost.</description>
+    <title>CVE-2026-123599 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123599</link>
+    <guid isPermaLink="false">09d18c5e8bae2cd635cc455e9c610717</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-proto before 0.26.0-beta.1 and hickory-net before 0.26.2 contain a DNSSEC validation bypass because verify_rrsets() ignores DNS class when partitioning RRsets, so non-IN records skip signature verification yet are marked secure when the IN records verify. Attackers able to supply DNS responses can include forged CH or HS class records, including DS records, to authenticate any DNSKEY and forge child zone responses.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124316 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124316</link>
-    <guid isPermaLink="false">957dd45247d86fb1ed0ccae2f4b687b4</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.3 | Frappe ERPNext before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in the whitelisted erpnext.buying.utils.get_linked_material_requests method lacking document or company permission checks. Authenticated users, including portal users or users without roles, can supply item codes to retrieve open Purchase-type Material Requests belonging to other companies.</description>
+    <title>CVE-2026-123600 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123600</link>
+    <guid isPermaLink="false">7263e59875fb2fcbc8eb15395f838152</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | Hickory DNS hickory-proto 0.25.0-alpha.3 through 0.25.2 and hickory-net 0.26.0-alpha.1 before 0.26.2 contain a DNSSEC validation flaw in DnssecDnsHandle that accepts NSEC3-signed NODATA responses for zone-apex queries as secure without an NSEC3 record matching the hashed QNAME. On-path attackers or malicious authoritative servers can replay a validly signed non-apex NSEC3 with the zone's signed SOA to serve an authenticated (AD=1) denial of any apex RRtype for the negative-cache TTL.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124317 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124317</link>
-    <guid isPermaLink="false">6a6c84d4193b1e53b1dbd7dd8f6f41a4</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 6.3 | libexpat through 2.10.0 contains an out-of-bounds read vulnerability in unknown_toUtf8() and unknown_toUtf16() in xmltok.c when handling application-registered unknown encodings. Attackers can supply a document ending in a truncated multibyte sequence so the convert callback reads past the parse buffer, leaking adjacent memory or crashing applications.</description>
+    <title>CVE-2026-123601 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123601</link>
+    <guid isPermaLink="false">2f7531b9f90b4724d3b772232fa97ca9</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.3 | Hickory DNS hickory-proto 0.25.0 through 0.26.0-alpha.1 and hickory-net 0.26.0-beta.1 before 0.26.2 invert the relational operators in the wrap-around branch of find_covering_record() in nsec3.rs, so the last NSEC3 record in a zone's hash ring covers every hash except its owner. Attackers able to inject DNS responses can replay that NSEC3 record and its RRSIG to forge DNSSEC-validated negative responses denying legitimate names.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124318 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124318</link>
-    <guid isPermaLink="false">1b56e339638aac6411738af278a1770c</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 8.6 | Treeio through 2.0 contains an insecure deserialization vulnerability in UpdateRecord.get_format_strings and ModuleSetting.loads that allows staff users to execute code via unverified pickle data. Attackers can store a crafted base64 pickle payload in an UpdateRecord format_strings field through the Django admin, executing Python code as the web server user when news feeds render.</description>
+    <title>CVE-2026-123602 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123602</link>
+    <guid isPermaLink="false">117b05669fcef8869baacaca5dca5235</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.2 | The Hickory DNS recursor in all versions of hickory-recursor and in hickory-resolver 0.26.0-beta.1 before 0.26.2 (recursor feature) is vulnerable to ghost domain names attacks because it reuses child-side apex NS RRsets cached from zone NS queries for iterative resolution. By repeatedly querying a zone's NS records, an attacker keeps the stale RRset cached indefinitely, letting name servers whose delegation the parent revoked keep answering for the zone.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123990 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123990</link>
-    <guid isPermaLink="false">42ea274cf7cd19c9ee43b35841c9dafd</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security vulnerability has been detected in DataEase up to 2.10.27/3.1.0. Affected is the function ExtWhere2Str.extWhere2sqlOjb of the file engine/trans/ExtWhere2Str.java of the component Chart Data Handler. Such manipulation of the argument operator leads to sql injection. The attack may be performed from remote. The exploit has been disclosed publicly and may be used. Upgrading to version 3.2.0 is able to address this issue. Upgrading the affected component is advised. The vendor confirms: &quot;The fix validates the complete compound operator and uses fixed AND / OR keywords instead of concatenating user-controlled logic into SQL.&quot;</description>
+    <title>CVE-2026-123603 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123603</link>
+    <guid isPermaLink="false">7db76b27110be939fb29aa8e9f4bf530</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.9 | hickory-proto and hickory-resolver 0.26.0 before 0.26.2, hickory-server 0.25.0-alpha.1 before 0.26.2, and hickory-recursor 0.25.0-alpha.3 through 0.26.0-alpha.1 fail to canonicalize IPv4-mapped IPv6 addresses when checking deny_answers, deny_server, or AccessControlSet rules. Attackers can use IPv4-mapped addresses to evade answer filtering, trigger queries to denied nameservers, or reach hickory-server library deployments on dual-stack IPv6 sockets from denied clients.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123991 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123991</link>
-    <guid isPermaLink="false">6c11cdf422fd5ecfe1ae44a175c6bb82</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was detected in DataEase up to 2.10.27. Affected by this vulnerability is the function WhitelistUtils.endsWithAny of the file WhitelistUtils.java of the component Authentication Filter. Performing a manipulation of the argument File results in unrestricted upload. It is possible to initiate the attack remotely. The exploit is now public and may be used. Upgrading to version 2.10.28 addresses this issue. It is advisable to upgrade the affected component. The vendor confirms: &quot;This issue has been addressed by enforcing authentication on the standalone static-resource upload endpoint independently of the URI suffix whitelist.&quot;</description>
+    <title>CVE-2026-123604 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123604</link>
+    <guid isPermaLink="false">1c7ab684c2dec54603932e13d2f97960</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-resolver 0.26.0-beta.1 before 0.26.2 contains an unbounded retry loop in NameServerPool::try_send, which re-queues truncated (TC) responses without checking the answering transport or counting iterations. A malicious authoritative server returning TC=1 on every transport keeps the resolver spinning on a persistent TCP connection until the 5-second request deadline expires, causing resource exhaustion.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119522 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119522</link>
-    <guid isPermaLink="false">e76f6b7f81159cdc4ababfbba7c3e466</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in ThemeGrill User Registration user-registration allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects User Registration: from n/a through 5.3.1.</description>
+    <title>CVE-2026-123605 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123605</link>
+    <guid isPermaLink="false">9c6756f94b29cda51c4a952d41f1513b</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-proto 0.1 through 0.25.0-alpha.3 and hickory-net before 0.26.2 contain a DNSSEC validation bypass because the validator verifies an RRSIG against the DNSKEY of whatever name appears in its Signer's Name field without checking that this name is the zone containing the RRset. Attackers controlling any secure zone can produce valid signatures over arbitrary records in unrelated zones, which resolvers, recursors, and clients using DnssecDnsHandle accept as authenticated.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120836 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120836</link>
-    <guid isPermaLink="false">2d83a7569b3a4bd6ae07f076afca56fd</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing Authorization vulnerability in eLightUp Meta Box – WordPress Custom Fields Framework meta-box allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Meta Box – WordPress Custom Fields Framework: from n/a through 5.15.3.</description>
+    <title>CVE-2026-123606 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123606</link>
+    <guid isPermaLink="false">666200081f61f419daa574bd04e8e205</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | The hickory-dns recursor in hickory-recursor 0.25.0-alpha.3 through 0.25.2 and hickory-resolver 0.26.0-alpha.1 before 0.26.2 iterates every out-of-bailiwick NS target lacking glue in a referral without any per-query work budget. Remote attackers can serve such referrals to force A and AAAA lookups per target, amplifying traffic against remote servers or exhausting recursor resources.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123461 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123461</link>
-    <guid isPermaLink="false">6d228d886b6b6db4ee0c9b3dfa248d08</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in PluginUs.Net FOX woocommerce-currency-switcher allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects FOX: from n/a through 1.5.6.</description>
+    <title>CVE-2026-123607 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123607</link>
+    <guid isPermaLink="false">95d403183a98ee4a11fab0684f500a73</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-proto 0.25.0-alpha.3 through 0.25.2 and hickory-net before 0.26.1 contain an unbounded loop vulnerability in DnssecDnsHandle NSEC3 closest-encloser proof validation when the SOA owner is not an ancestor of the QNAME. Upstream attackers can return NoData or NXDomain responses with a cross-zone SOA record to panic debug builds or exhaust memory in release builds.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123472 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123472</link>
-    <guid isPermaLink="false">86cde86bef0355b938f7791a34b3809c</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in eLightUp Meta Box – WordPress Custom Fields Framework meta-box allows Stored XSS.This issue affects Meta Box – WordPress Custom Fields Framework: from n/a through 5.15.3.</description>
+    <title>CVE-2026-123608 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123608</link>
+    <guid isPermaLink="false">db587d8c1406f1c7d3fcba48fd5da8a7</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-proto from 0.3.1 before 0.26.1 contains a denial of service vulnerability in BinEncoder that allows remote attackers to exhaust CPU through quadratic-time name compression. Attackers can send malicious DNS messages with many records that add many candidate labels and trigger repeated linear scans during encoding, amplifying CPU exhaustion.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123992 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123992</link>
-    <guid isPermaLink="false">bce1d8fbf1d8616c5012589b56cdbb91</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 2.1 | A flaw has been found in DataEase up to 2.10.27. Affected by this issue is the function StaticResourceServer.validateSvgContent of the file core/core-backend/src/main/java/io/dataease/visualization/server/StaticResourceServer.java of the component SVG Handler. Executing a manipulation can lead to cross site scripting. It is possible to launch the attack remotely. The exploit has been published and may be used. Upgrading to version 2.10.28 can resolve this issue. This patch is called 0709fe98d6608c3507daee3e92cf433e7ff61370. You should upgrade the affected component. The vendor confirms: &quot;The reported tab/entity-based URL bypass is covered by our previously implemented SVG security hardening. The fix replaces the blacklist-based checks with namespace-aware element and attribute allowlists, restricts permitted references to document-local fragments, and applies a restrictive Content Security Policy to uploaded SVG responses.&quot;</description>
+    <title>CVE-2026-123609 - NVD - CVSS Score v4.0: 4.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123609</link>
+    <guid isPermaLink="false">7856cd6b8022b7e66de2c1c83523c736</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 4.1 | Rustls before 0.23.46 and 0.24.0-dev.1 before 0.24.0-dev.2 contains an information disclosure vulnerability where derived Debug formatting of client session values exposes secret key material. Custom ClientSessionStore implementations that log Tls12ClientSessionValue or Tls13ClientSessionValue can leak TLS 1.2 master secrets or TLS 1.3 resumption PSKs to log readers.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124057 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124057</link>
-    <guid isPermaLink="false">2015a8a424982d5ce78ca39678a27d55</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 8.5 | A security flaw has been discovered in TOTOLINK CA300-PoE 6.2c.884. This impacts the function setWiFiMultipleConfig of the file /cgi-bin/cstecgi.cgi. Performing a manipulation of the argument Key1Str1 results in buffer overflow. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks.</description>
+    <title>CVE-2026-123610 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123610</link>
+    <guid isPermaLink="false">e51ba0a1be236c7a8ce7b97190002df8</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | rustls before 0.23.46 contains an uncontrolled memory allocation flaw in its optional Brotli certificate decompression, which limits decompressed output size but accepts an input-selected large history window. Malicious peers can send a certificate with a five-byte Brotli header requesting up to 1 GiB before authentication, aborting Brotli-enabled clients or client-authenticating servers whose allocator cannot satisfy the request.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124258 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124258</link>
-    <guid isPermaLink="false">3e9b848df66fff11b56bf5daa5337d0e</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in ThemeGrill User Registration user-registration allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects User Registration: from n/a through 5.3.1.</description>
+    <title>CVE-2026-123611 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123611</link>
+    <guid isPermaLink="false">5482b1c22e724735f02bcef9a2b71a84</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | rustls before 0.23.46 contains a key exchange downgrade vulnerability that allows network attackers to poison the per-server-name key-exchange group record via an unauthenticated ServerHello. Attackers can answer one connection with a ServerHello selecting X25519, causing later ClientHellos to send only classical shares and lose post-quantum confidentiality.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124058 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124058</link>
-    <guid isPermaLink="false">17282b894ed98164ba3540ccbfe6fb36</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 8.5 | A weakness has been identified in TOTOLINK CA300-PoE 6.2c.884. Affected is the function setWiFiRepeaterConfig of the file /cgi-bin/cstecgi.cgi. Executing a manipulation of the argument ApCliKeyStr can lead to buffer overflow. The attack can be launched remotely. The exploit has been made available to the public and could be used for attacks.</description>
+    <title>CVE-2026-123612 - NVD - CVSS Score v4.0: 4.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123612</link>
+    <guid isPermaLink="false">8fbfbd47625383bc10f6afb1540d2c59</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 4.6 | rustls 0.23.44 and 0.23.45 contain an information disclosure vulnerability that sends application data buffered before the handshake completes to the client-facing server when Encrypted Client Hello is rejected. Because start_traffic() queues plaintext from ClientConnection::writer() before sending the ech_required alert, the authenticated public_name server receives data intended for the inner server.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124059 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124059</link>
-    <guid isPermaLink="false">d7dc628bbcaa7feca29225f604e03d6b</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 8.5 | A security vulnerability has been detected in TOTOLINK CA300-PoE 6.2c.884. Affected by this vulnerability is the function setWiFiWdsAddConfig of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument ApCliKeyStr leads to buffer overflow. The attack may be initiated remotely. The exploit has been disclosed publicly and may be used.</description>
+    <title>CVE-2026-123613 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123613</link>
+    <guid isPermaLink="false">dfc78316fc9b00fca8f24dbdb78c18ef</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.9 | Rustls from 0.23.13 before 0.23.45 accepts TLS 1.3 handshake messages at the wrong encryption level when they follow a key-changing message in the same record, because Deframer::aligned does not enforce RFC 8446 record-boundary alignment. A peer or on-path attacker can pack a plaintext EncryptedExtensions with the ServerHello, which rustls accepts unencrypted.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124060 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124060</link>
-    <guid isPermaLink="false">2893f31d3e3d459c8b7f10cde2c455eb</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v4.0: 8.5 | A vulnerability was detected in TOTOLINK CA300-PoE 6.2c.884. Affected by this issue is the function UploadCustomModule of the file /cgi-bin/cstecgi.cgi. The manipulation of the argument File results in buffer overflow. The attack may be launched remotely. The exploit is now public and may be used.</description>
+    <title>CVE-2026-123614 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123614</link>
+    <guid isPermaLink="false">ed227926e65df76d2989cd1dd0a55426</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.3 | imgproxy from 4.0.0 before 4.0.16 contains an integer overflow in the ICO loader that allows remote attackers to trigger a heap buffer overflow via a crafted data_size value. Attackers can submit a crafted ICO image whose data_size wraps the allocation in vips/icoload.c, corrupting heap memory to crash the process or achieve code execution.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99283 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99283</link>
-    <guid isPermaLink="false">ccaf72c2929505c8bd9666ea8db9b57e</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-netfilter: conntrack: tcp: use UNACK timeout for non-closing RST packets
-
-Commit be0502a3f2e9 (&quot;netfilter: conntrack: tcp: only close if RST
-matches exact sequence&quot;) keeps an established conntrack entry in
-ESTABLISHED when an in-window RST does not match the expected sequence
-number exactly, so the endpoint can validate the RST with a challenge
-ACK.
-
-The timeout selection nevertheless uses the CLOSE timeout for every RST
-packet.  The bug is that timeout selection is based on the packet type,
-not on the state transition result: even when RST validation keeps
-new_state in ESTABLISHED, the timeout is still forced to
-TCP_CONNTRACK_CLOSE.
-
-Linux TCP independently rate limits challenge ACKs per socket.  A second
-non-exact RST can therefore arrive after the first challenge ACK has
-restored the timeout but before the rate limit expires.  The second RST
-lowers the timeout to 10 seconds again while the endpoint suppresses the
-second challenge ACK, allowing the conntrack entry to expire while both
-TCP endpoints remain established.
-
-Using the ESTABLISHED timeout for such RSTs would avoid this short
-expiration window, but it could also retain stale entries for the
-five-day default because conntrack cannot reliably match the endpoint's
-exact TCP state.
-
-Use the UNACK timeout for RST packets that leave the conntrack entry in
-TCP_CONNTRACK_ESTABLISHED.  Exact-match RSTs and accepted RST packet
-trains still fall through to timeouts[new_state], which preserves the
-CLOSE timeout when conntrack accepts the RST as closing the flow.
-
-This avoids the aggressive 10-second expiration window for non-exact
-RSTs while preserving the short timeout for RSTs that conntrack accepts
-as closing the flow.</description>
+    <title>CVE-2026-123615 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123615</link>
+    <guid isPermaLink="false">e147156849294773395d7b04981b784b</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | imgproxy 3.3.0 before 4.0.17 contains an out-of-bounds heap read and write in the ICO loader's BMP header reconstruction (vips_foreign_load_ico_header in vips/icoload.c) when an ICO entry declares a tiny data size, causing unvalidated header fields to be read and written past the allocated buffer. Unauthenticated remote attackers can supply a crafted ICO image to corrupt adjacent heap chunk metadata, triggering a glibc abort that crashes the worker.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99284 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99284</link>
-    <guid isPermaLink="false">8c1338192c883114b8120cfe36b4e35a</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-net: skbuff: propagate shared-frag marker in skb_zerocopy()
-
-skb_zerocopy() moves frag descriptors from @from into @to and takes a
-reference on each frag, but it does not copy skb_shinfo(from)-&gt;flags into
-skb_shinfo(to)-&gt;flags.  A destination skb holding the same page-cache
-backed frags as the source therefore reports skb_has_shared_frag() as
-false.
-
-That breaks the invariant relied on by later in-place writers.  ESP input
-checks skb_has_shared_frag() before deciding whether an uncloned
-nonlinear skb can skip skb_cow_data(); with the marker lost, an skb that
-skb_zerocopy() built for nfnetlink_queue or for an openvswitch upcall is
-decrypted in place, letting an unprivileged user write into the page
-cache of a root-owned read-only file.
-
-Propagate SKBFL_SHARED_FRAG when frag descriptors are copied, as done for
-the other frag-transfer helpers.</description>
+    <title>CVE-2026-123616 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123616</link>
+    <guid isPermaLink="false">06a8724d5e0516f824bd4b22355d53c4</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | imgproxy from 3.3.0 before 4.0.16 contains an unbounded memory allocation vulnerability in the ICO loader that fails to validate the data_size field. Attackers can supply a crafted 23-byte ICO file declaring a ~4GB data_size to trigger memory exhaustion and worker crashes without authentication.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120531 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120531</link>
-    <guid isPermaLink="false">6917207529a059e92e8c3f4b0c2fdcdf</guid>
-    <description>Saturday 7 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Subscribe2 – Form, Email Subscribers &amp; Newsletters plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘data[ip]’ parameter in all versions up to, and including, 10.47 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
+    <title>CVE-2026-124422 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124422</link>
+    <guid isPermaLink="false">528872dbf3341998ab3ddc0de7927824</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 5.3 | SunEditor from 3.0.0 before 3.4.0 contains a stored cross-site scripting vulnerability in html.clean() that rebuilds iframes from data-se-iframe-holder-attrs JSON without filtering srcdoc or uppercase SRC keys. Attackers can inject crafted HTML through paste, html.set, or html.insert to execute script in the host page origin when victims load or paste the content.</description>
     <category>NVD</category>
-    <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   </channel>
 </rss>
