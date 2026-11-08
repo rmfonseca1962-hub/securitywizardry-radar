@@ -5,324 +5,324 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2026 14:00:59 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Nov 2026 15:00:44 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-123605 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123605</link>
-    <guid isPermaLink="false">9c6756f94b29cda51c4a952d41f1513b</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-proto 0.1 through 0.25.0-alpha.3 and hickory-net before 0.26.2 contain a DNSSEC validation bypass because the validator verifies an RRSIG against the DNSKEY of whatever name appears in its Signer's Name field without checking that this name is the zone containing the RRset. Attackers controlling any secure zone can produce valid signatures over arbitrary records in unrelated zones, which resolvers, recursors, and clients using DnssecDnsHandle accept as authenticated.</description>
+    <title>CVE-2026-124457 - NVD - CVSS Score v4.0: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124457</link>
+    <guid isPermaLink="false">a2ea4b8e4f4edf0d69db89520e696fd0</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.2 | OpenEMR before 8.3.0 contains a path traversal vulnerability in interface/billing/sl_eob_process.php that allows authenticated users to write and read files by supplying unsanitized eraname values. Attackers without billing privileges can inject ../ sequences to create ERA report .html files anywhere the web user can write and parse arbitrary .edi files echoed into the report.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123606 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123606</link>
-    <guid isPermaLink="false">666200081f61f419daa574bd04e8e205</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | The hickory-dns recursor in hickory-recursor 0.25.0-alpha.3 through 0.25.2 and hickory-resolver 0.26.0-alpha.1 before 0.26.2 iterates every out-of-bailiwick NS target lacking glue in a referral without any per-query work budget. Remote attackers can serve such referrals to force A and AAAA lookups per target, amplifying traffic against remote servers or exhausting recursor resources.</description>
+    <title>CVE-2026-124458 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124458</link>
+    <guid isPermaLink="false">4514758dc88863f144349a201f175b87</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.4.0 contains an authorization bypass vulnerability in the FHIR GET /fhir/Person/:uuid route that allows patient-portal users to read any staff member's demographics by bypassing compartment enforcement. Attackers holding a patient SMART token with patient/Person.read can harvest staff Person UUIDs from Appointment references to retrieve names, home addresses, phone numbers, and personal emails.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123607 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123607</link>
-    <guid isPermaLink="false">95d403183a98ee4a11fab0684f500a73</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-proto 0.25.0-alpha.3 through 0.25.2 and hickory-net before 0.26.1 contain an unbounded loop vulnerability in DnssecDnsHandle NSEC3 closest-encloser proof validation when the SOA owner is not an ancestor of the QNAME. Upstream attackers can return NoData or NXDomain responses with a cross-zone SOA record to panic debug builds or exhaust memory in release builds.</description>
+    <title>CVE-2026-124459 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124459</link>
+    <guid isPermaLink="false">5ca026d62a7540e18576e63a01d8f968</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.6 | OpenEMR before 8.3.0 contains an insecure direct object reference vulnerability in many encounter-form view and save endpoints that lack patient/encounter ownership checks. Authenticated clinical users can enumerate sequential form id values in requests such as soap/view.php and save.php to read and overwrite other patients' clinical records.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123608 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123608</link>
-    <guid isPermaLink="false">db587d8c1406f1c7d3fcba48fd5da8a7</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | Hickory DNS hickory-proto from 0.3.1 before 0.26.1 contains a denial of service vulnerability in BinEncoder that allows remote attackers to exhaust CPU through quadratic-time name compression. Attackers can send malicious DNS messages with many records that add many candidate labels and trigger repeated linear scans during encoding, amplifying CPU exhaustion.</description>
+    <title>CVE-2026-124460 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124460</link>
+    <guid isPermaLink="false">d9b9cb9e573033f2b6e9738b8a09a24d</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains an insecure direct object reference vulnerability in PortalPatientController::Read() that allows authenticated patients to read other patients' pending demographic change requests. Attackers can supply another patient's ID in the patientId query string parameter to retrieve PHI including names, addresses, SSNs, and insurance information.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123609 - NVD - CVSS Score v4.0: 4.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123609</link>
-    <guid isPermaLink="false">7856cd6b8022b7e66de2c1c83523c736</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 4.1 | Rustls before 0.23.46 and 0.24.0-dev.1 before 0.24.0-dev.2 contains an information disclosure vulnerability where derived Debug formatting of client session values exposes secret key material. Custom ClientSessionStore implementations that log Tls12ClientSessionValue or Tls13ClientSessionValue can leak TLS 1.2 master secrets or TLS 1.3 resumption PSKs to log readers.</description>
+    <title>CVE-2026-124461 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124461</link>
+    <guid isPermaLink="false">84beaa3c61516fd48d7a225687f5834d</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.6 | OpenEMR before 8.3.0 contains a missing authorization vulnerability in library/ajax/upload.php that allows any authenticated user to read and overwrite document data by supplying an arbitrary doc_id. Low-privilege users can enumerate doc_id values with the fetch and save actions to disclose patient health information and tamper with medical records across all patients.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123610 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123610</link>
-    <guid isPermaLink="false">e51ba0a1be236c7a8ce7b97190002df8</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | rustls before 0.23.46 contains an uncontrolled memory allocation flaw in its optional Brotli certificate decompression, which limits decompressed output size but accepts an input-selected large history window. Malicious peers can send a certificate with a five-byte Brotli header requesting up to 1 GiB before authentication, aborting Brotli-enabled clients or client-authenticating servers whose allocator cannot satisfy the request.</description>
+    <title>CVE-2026-124462 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124462</link>
+    <guid isPermaLink="false">ca2b54619867ff540d19c817e15f86dd</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains an insecure direct object reference vulnerability in OnsiteDocumentController::Query() that allows authenticated portal patients to bypass the lowercase pid authorization guard by supplying a capitalised Pid parameter. Attackers can request the api/onsitedocuments endpoint with Pid set to another patient's id to overwrite the session-pinned criteria and read other patients' onsite documents containing PHI.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123611 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123611</link>
-    <guid isPermaLink="false">5482b1c22e724735f02bcef9a2b71a84</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.3 | rustls before 0.23.46 contains a key exchange downgrade vulnerability that allows network attackers to poison the per-server-name key-exchange group record via an unauthenticated ServerHello. Attackers can answer one connection with a ServerHello selecting X25519, causing later ClientHellos to send only classical shares and lose post-quantum confidentiality.</description>
+    <title>CVE-2026-124463 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124463</link>
+    <guid isPermaLink="false">ed7099a422c0945e30da929767ac03d5</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.3 | OpenEMR before 8.3.0 contains a stored cross-site scripting vulnerability that allows authenticated users with CAMOS access to inject HTML by saving malicious CAMOS content through ajax_save.php. Attackers can store a script payload that executes unencoded when the entry is printed via the non-print_html branch of rx_print.php, performing actions and reading data as the victim user.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123612 - NVD - CVSS Score v4.0: 4.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123612</link>
-    <guid isPermaLink="false">8fbfbd47625383bc10f6afb1540d2c59</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 4.6 | rustls 0.23.44 and 0.23.45 contain an information disclosure vulnerability that sends application data buffered before the handshake completes to the client-facing server when Encrypted Client Hello is rejected. Because start_traffic() queues plaintext from ClientConnection::writer() before sending the ech_required alert, the authenticated public_name server receives data intended for the inner server.</description>
+    <title>CVE-2026-124464 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124464</link>
+    <guid isPermaLink="false">66e2def5d8f50d19799c4fd817d71f30</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.4.0 contains an authorization bypass vulnerability that allows patient-scoped SMART tokens to read other patients' questionnaire responses because FhirQuestionnaireResponseService does not implement IPatientCompartmentResourceService. Attackers holding a patient/QuestionnaireResponse.rs token can request responses by uuid or list the unfiltered bundle to obtain cross-patient clinical assessment answers.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123613 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123613</link>
-    <guid isPermaLink="false">dfc78316fc9b00fca8f24dbdb78c18ef</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.9 | Rustls from 0.23.13 before 0.23.45 accepts TLS 1.3 handshake messages at the wrong encryption level when they follow a key-changing message in the same record, because Deframer::aligned does not enforce RFC 8446 record-boundary alignment. A peer or on-path attacker can pack a plaintext EncryptedExtensions with the ServerHello, which rustls accepts unencrypted.</description>
+    <title>CVE-2026-124465 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124465</link>
+    <guid isPermaLink="false">3d142933018ed8670a67e94a7d374055</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | Trendyol kafka-konsumer from 2.3.3 before 2.6.18 contains a denial of service vulnerability in batch_consumer.go that panics when a single record exceeds MessageGroupByteSizeLimit. Attackers able to produce to the consumed topic can publish one oversized record that terminates the consumer before offset commit, causing a persistent crash loop.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123614 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123614</link>
-    <guid isPermaLink="false">ed227926e65df76d2989cd1dd0a55426</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.3 | imgproxy from 4.0.0 before 4.0.16 contains an integer overflow in the ICO loader that allows remote attackers to trigger a heap buffer overflow via a crafted data_size value. Attackers can submit a crafted ICO image whose data_size wraps the allocation in vips/icoload.c, corrupting heap memory to crash the process or achieve code execution.</description>
+    <title>CVE-2026-124466 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124466</link>
+    <guid isPermaLink="false">08a608ae9a798bedfc984782f2d062de</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.9 | OpenEMR before 8.4.0 contains a server-side request forgery vulnerability that allows unauthenticated attackers to make the server send HTTP requests by registering an OAuth2 client with an unvalidated jwks_uri. Attackers can trigger the fetch via the token introspection endpoint with an unsigned client_assertion to probe internal services and reach cloud metadata endpoints.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123615 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123615</link>
-    <guid isPermaLink="false">e147156849294773395d7b04981b784b</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | imgproxy 3.3.0 before 4.0.17 contains an out-of-bounds heap read and write in the ICO loader's BMP header reconstruction (vips_foreign_load_ico_header in vips/icoload.c) when an ICO entry declares a tiny data size, causing unvalidated header fields to be read and written past the allocated buffer. Unauthenticated remote attackers can supply a crafted ICO image to corrupt adjacent heap chunk metadata, triggering a glibc abort that crashes the worker.</description>
+    <title>CVE-2026-124467 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124467</link>
+    <guid isPermaLink="false">df51db1c7e4d6730d8bbc35bdefbbf80</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | OpenEMR before 8.4.0 contains a local file inclusion in the ESign router (library/ESign/Router.php), which passes the unsanitized module parameter into a require_once of '&lt;module&gt;/Controller.php', and the fax module's faxProcessUploads writes attacker-named files to a predictable temp path without extension checks. Authenticated attackers can upload a PHP file named Controller.php, then request interface/esign/index.php with a traversing module parameter to include it and execute arbitrary code.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123616 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123616</link>
-    <guid isPermaLink="false">06a8724d5e0516f824bd4b22355d53c4</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | imgproxy from 3.3.0 before 4.0.16 contains an unbounded memory allocation vulnerability in the ICO loader that fails to validate the data_size field. Attackers can supply a crafted 23-byte ICO file declaring a ~4GB data_size to trigger memory exhaustion and worker crashes without authentication.</description>
+    <title>CVE-2026-124468 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124468</link>
+    <guid isPermaLink="false">11c8d93921ebd7fce6dd6282913e785f</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains an SQL injection vulnerability in the Standard REST API patient insurance and employer search, which concatenates query-string parameter names into SQL as column identifiers without escaping. Authenticated clients, including low-privilege patient-portal OAuth2 tokens, can send crafted parameter names to /api/patient/{puuid}/insurance or /api/patient/{puuid}/employer to extract patient PHI, user records, and API client secrets.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124422 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124422</link>
-    <guid isPermaLink="false">528872dbf3341998ab3ddc0de7927824</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 5.3 | SunEditor from 3.0.0 before 3.4.0 contains a stored cross-site scripting vulnerability in html.clean() that rebuilds iframes from data-se-iframe-holder-attrs JSON without filtering srcdoc or uppercase SRC keys. Attackers can inject crafted HTML through paste, html.set, or html.insert to execute script in the host page origin when victims load or paste the content.</description>
+    <title>CVE-2026-124469 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124469</link>
+    <guid isPermaLink="false">3c7dedce574ccea5f417e6912883d342</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.4 | OpenEMR before 8.3.0 contains an SQL injection vulnerability in the Fee Sheet drug-inventory lookup (DrugSalesService::sellDrug) that interpolates the prod[N][warehouse] POST field into an ORDER BY clause. Low-privileged authenticated users can submit Fee Sheet product lines with constant subqueries to run a time-based blind oracle, extracting patient data and users_secure bcrypt hashes.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-114713 - NVD - CVSS Score v3.1: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114713</link>
-    <guid isPermaLink="false">47f35743c54bd10152e2c461d6043b38</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 8.6 | The labeled-response module in UnrealIRCd 6.0.0 before 6.2.7.1 does not escape the IRCv3 &quot;label&quot; message tag when echoing it into replies, which allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.</description>
+    <title>CVE-2026-124470 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124470</link>
+    <guid isPermaLink="false">484991edf7e2351b90fd23a5b2461fba</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains a broken object level authorization vulnerability in portal/report/portal_custom_report.php that allows authenticated portal patients to read other patients' problem list entries. Attackers can enumerate sequential IDs in issue_ parameter names to retrieve other patients' problem titles, clinical notes, ICD diagnosis codes, and IPPF contraceptive records.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-103303 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103303</link>
-    <guid isPermaLink="false">e2bb4bc55d45c4da93670a27b2d2ba54</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Turisbook Booking System WordPress plugin through 1.3.8 does not have authorisation and CSRF checks when saving its settings, and does not sanitise and escape one of them before outputting it in an admin page, allowing unauthenticated users to perform Stored Cross-Site Scripting attacks against administrators.</description>
+    <title>CVE-2026-124471 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124471</link>
+    <guid isPermaLink="false">cc43e3ccf6fe9ac21d6bccb43f0f02d2</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.6 | OpenEMR before 8.3.0 contains a missing authorization vulnerability in interface/billing/sl_eob_invoice.php that allows any authenticated user to read and modify billing data for any encounter. Attackers can iterate the id parameter to read patient names and billing notes, and post payments, adjustments, deletions, or billing notes against any patient's account.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-103375 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103375</link>
-    <guid isPermaLink="false">fe54aa2acf4adb21084e8dec150def0d</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Antom Payments WordPress plugin through 2.0.11 does not perform any ownership or authorisation check before returning an order's confirmation link, which contains its secret key, to unauthenticated visitors, allowing attackers to view any customer's order details, including name, address, phone number and email.</description>
+    <title>CVE-2026-124472 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124472</link>
+    <guid isPermaLink="false">90c2b9fe7c2a7299d8d0fee664e8bebc</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.6 | OpenEMR before 8.3.0 contains a missing authorization vulnerability in interface/billing/sl_eob_patient_note.php that allows any authenticated user to read and modify patient billing notes. Attackers with low-privilege accounts can enumerate the patient_id parameter and submit POST requests using the embedded CSRF token to view or tamper with confidential billing data.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-104307 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104307</link>
-    <guid isPermaLink="false">e9fe5d563124b5b59c4eb5c66ed13f35</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The BackUpWordPress plugin before 3.15 does not perform a capability or nonce check on an AJAX action that cleans up its backup directory, allowing any authenticated user (Subscriber and above) to delete the BackUpWordPress plugin before 3.15's backup protection and working files, removing download protection from stored backups and disrupting in-progress backups.</description>
+    <title>CVE-2026-124473 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124473</link>
+    <guid isPermaLink="false">30484e58c9f64a2f244345cc2ef5af92</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains a broken object-level authorization vulnerability in the SOAP note update API, which does not verify that the supplied SOAP note ID (sid) belongs to the supplied patient and encounter. Authenticated users with encounters/notes permission can send PUT requests to /api/patient/:pid/encounter/:eid/soap_note/:sid with another patient's sid to overwrite that clinical note and reassign its pid.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-104337 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104337</link>
-    <guid isPermaLink="false">d206908d6730401e701ecfc2881b1f90</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Razorpay for WooCommerce WordPress plugin before 4.8.9 does not verify ownership of an order before returning a coupon discount computed against that order, allowing unauthenticated attackers to disclose the monetary value of arbitrary customer orders by enumerating order IDs.</description>
+    <title>CVE-2026-124474 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124474</link>
+    <guid isPermaLink="false">5582c5cbef65c83ed1c122da79a7cc4c</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 5.3 | MRBS (Meeting Room Booking System) before 1.12.3 contains a reflected cross-site scripting vulnerability that allows unauthenticated attackers to inject script via the error parameter of view_entry.php. Attackers can send crafted links to logged-in users to read CSRF tokens, modify or delete bookings, or perform administrative actions.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-104338 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104338</link>
-    <guid isPermaLink="false">108977dd4317ac831bd967b8d81de177</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Razorpay for WooCommerce WordPress plugin before 4.8.9 does not perform an authorization check on one of its REST routes and derives the acting user's identity from an unauthenticated request parameter, allowing an unauthenticated attacker to cause the request to execute as an arbitrary user account for the duration of the request. Exploitation additionally requires a specific coupon Razorpay for WooCommerce WordPress plugin before 4.8.9 to be active on the site.</description>
+    <title>CVE-2026-124475 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124475</link>
+    <guid isPermaLink="false">47e21350b868a652c9431afa9fbf1c64</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains an insecure direct object reference vulnerability in portal/lib/persist.php that allows authenticated portal patients to modify other patients' settings by supplying an arbitrary setting_patient value. Attackers can insert or overwrite patient_settings rows for victims to suppress notifications, tamper with consent flags, or alter portal preferences.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-104639 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104639</link>
-    <guid isPermaLink="false">a09506918065c6756ea11d14f49b08cd</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Razorpay for WooCommerce WordPress plugin before 4.8.9 does not sanitize and escape a value derived from an incoming webhook request before using it in a SQL query, allowing users able to obtain the webhook secret (administrators) to perform SQL injection attacks.</description>
+    <title>CVE-2026-124476 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124476</link>
+    <guid isPermaLink="false">2db1f19208954847305e67221cebee3d</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains an insecure direct object reference in portal/lib/paylib.php, which writes the request-supplied form_pid (or the patient_id_cc value in Sphere data) to onsite_portal_activity without checking it against the session patient. Authenticated portal patients can submit portal-save, review-save, AuthorizeNet, Stripe, or Sphere requests to insert or modify forged payment-audit records in other patients' billing records.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-105970 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105970</link>
-    <guid isPermaLink="false">baa9689493a9224a90d62b7938143911</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Thanh Toán Quét Mã QR Code Tự Động  WordPress plugin through 2.0.1 does not properly verify the authenticity of incoming bank-transfer payment notifications on a default installation, allowing unauthenticated attackers to mark arbitrary WooCommerce orders as paid.</description>
+    <title>CVE-2026-124477 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124477</link>
+    <guid isPermaLink="false">de0763569bc7f9373fd06fdf3acf7a76</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | OpenEMR before 8.3.0 contains a missing authorization vulnerability that allows low-privileged authenticated users to delete arbitrary patient recall records via the delete_Recall action. Attackers can send POST requests to /interface/main/messages/save.php with a target pid and r_ID to remove recall data without ACL or ownership checks.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-106015 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106015</link>
-    <guid isPermaLink="false">0b355e875e15bb10ccfb904e13d12e72</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Ecommerce Affiliate WordPress plugin through 1.0.0 does not restrict one-time password issuance and verification to the legitimate account owner, nor limit verification attempts, allowing unauthenticated attackers to take over any account, including administrators.</description>
+    <title>CVE-2026-124478 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124478</link>
+    <guid isPermaLink="false">8e15e065af6776b67317e82f28fdfd23</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains a missing authorization vulnerability in the addRecall action of /interface/main/messages/save.php that allows low-privileged authenticated users to modify arbitrary patients' recall data. Attackers can submit a crafted new_pid with recall, contact, provider, facility, and notification preference fields to overwrite records of patients they cannot access.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-109925 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109925</link>
-    <guid isPermaLink="false">65b5a86f590b55d6c10b608af576266f</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Productive Commerce  WordPress plugin before 1.1.54 does not sanitise and escape a parameter before using it in a SQL statement, allowing unauthenticated attackers to perform SQL injection attacks.</description>
+    <title>CVE-2026-124479 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124479</link>
+    <guid isPermaLink="false">648998ef4cbeb823e55312f5aaa507b3</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.4.0 contains an arbitrary local file read vulnerability in REST document download, where the controller passes stored uploaded document bytes to Symfony's BinaryFileResponse as a filesystem path instead of returning them as content. Authenticated users with document upload and download access can upload a document containing an absolute pathname, such as the sqlconf.php location, then download it to read server files and recover database credentials.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-110132 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110132</link>
-    <guid isPermaLink="false">2a42264c1bd53b7757efdff81dc79886</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Sync Post With Other Site WordPress plugin before 1.9.4 does not properly authorize a content-management action for post types other than pages, allowing users with Contributor-level access or above to create and modify arbitrary custom post types, including reassigning content authorship.</description>
+    <title>CVE-2026-124480 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124480</link>
+    <guid isPermaLink="false">7121ef5ba9dc48b9a1095767c4658bc7</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | OpenEMR before 8.4.0 contains an authorization bypass vulnerability that allows low-privileged authenticated users to read cross-patient FHIR QuestionnaireResponse data by sending the APICSRFTOKEN header. Attackers can reuse the session-exposed api_csrf_token_js value to skip FHIR scope checks and call GET /fhir/QuestionnaireResponse, exfiltrating site-wide questionnaire answer PHI.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-110963 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110963</link>
-    <guid isPermaLink="false">095846bbc6685fc24c19c7148e414c55</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Userplace  WordPress plugin through 1.2.0 does not perform authorization checks on an AJAX action available to unauthenticated users and publicly exposes the nonce that protects it, allowing unauthenticated attackers to create an administrator account or write arbitrary site options, leading to full site takeover.</description>
+    <title>CVE-2026-124481 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124481</link>
+    <guid isPermaLink="false">b24eb9bfe083047e1a3d88663e5a3fe4</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.4.0 contains an improper authorization vulnerability in Rainforest patient portal payments that trusts browser-supplied patientId, encounter, and amount values instead of deriving them from the portal session. Authenticated portal patients can tamper with JSON sent to portal_payment.rainforest.php so the payin.authorized webhook writes forged ar_activity credits to other patients' encounters exceeding the amount actually paid.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-114432 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114432</link>
-    <guid isPermaLink="false">a55fb55af0396377ae9d8780bb27f58e</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Contact Form 7 WordPress plugin before 6.2.4 does not validate the type or extension of files uploaded through a form file field, and a flaw in its temporary-file cleanup leaves the uploaded file on disk, allowing unauthenticated users to upload arbitrary files to the site. On a stock Debian or Ubuntu Apache configuration, which lists directory contents and maps .phar to the PHP handler, the stored file can be located and executed, leading to Remote Code Execution. On other configurations, including nginx and Apache with .htaccess overrides enabled, the issue is limited to an arbitrary file written into the uploads directory, which may still be served as active content such as HTML or SVG from the site's own origin.</description>
+    <title>CVE-2026-124482 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124482</link>
+    <guid isPermaLink="false">22404950d6396d7626eac521a118790a</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.4.0 contains an authorization bypass allowing low-privileged SMART standalone-launch users to bind arbitrary patient UUIDs into the OAuth token context. Attackers with only the patients|demo ACL can select a victim during authorization and read that patient's clinical notes and documents through patient-scoped DocumentReference and Binary FHIR endpoints.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-122060 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122060</link>
-    <guid isPermaLink="false">5faa8d4ce61bc8f57735d056790b2191</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The WP Recipe Maker WordPress plugin before 10.9.2 does not check whether the post a recipe is embedded in is password protected before returning the recipe through its REST API and structured data output, allowing unauthenticated users to read the full content of recipes in password-protected posts.</description>
+    <title>CVE-2026-124483 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124483</link>
+    <guid isPermaLink="false">45f5ef57a3f6cf7a1f2c7a3208cae72a</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | OpenEMR before 8.4.0 contains an incorrect authorization vulnerability because the prescription REST API routes check the patients.med ACL instead of patients.rx and request no specific permission bit, so read-only Medical/History access passes the check. Authenticated staff users can reuse the UI-exposed APICSRFTOKEN to enumerate prescription UUIDs, forge prescriptions for arbitrary patients, and deactivate existing prescriptions tenant-wide.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-122062 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122062</link>
-    <guid isPermaLink="false">abf6fbc6d7931335f8243af6da7110d4</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Pronamic Pay WordPress plugin before 11.1.0, Pronamic Pay doneren met Mollie WordPress plugin before 1.7.1 do not restrict access to stored form submissions through the REST API, allowing unauthenticated users to read the messages that visitors submitted through the bundled forms.</description>
+    <title>CVE-2026-124484 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124484</link>
+    <guid isPermaLink="false">89f6ab8f1b9638af80f3ba34ca849464</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | OpenEMR before 8.4.0 contains a missing authorization vulnerability in portal onsite-document APIs that allows any authenticated core user to access cross-patient documents. Attackers can omit the patientId parameter and supply arbitrary record IDs to list, read, and overwrite other patients' portal documents, signatures, and template data.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-122085 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122085</link>
-    <guid isPermaLink="false">29b5fe468fa2d8ee0118cc98987d6fce</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Event Tickets Manager for WooCommerce WordPress plugin before 1.6.0 does not perform authorisation or a valid nonce check on its ticket-transfer feature, which is available to unauthenticated users, allowing them to transfer other attendees' guest-checkout tickets to an email address of their choosing, invalidating the legitimate ticket and causing the victim's ticket PDF, which contains attendee personal data, to be sent to the attacker.</description>
+    <title>CVE-2026-124485 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124485</link>
+    <guid isPermaLink="false">fd985e33496943d56b44063135c65d18</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains an authorization bypass vulnerability in the patient portal onsitedocuments API that allows authenticated patients to read other patients' documents by overriding query criteria. Attackers can send empty pid_Equals and denialReason_IsNotLike parameters to remove patient scoping and locked filters, exposing consent bodies, signatures, file paths, and template data.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-85344 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85344</link>
-    <guid isPermaLink="false">b8c7afcce21084fe760a340c7e937bc2</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The FV Flowplayer Video Player WordPress plugin before 7.5.57.7212 does not perform any authorization check on an AJAX action that carries out a site-wide content rewrite, so any authenticated user, including subscriber-level, can trigger a bulk modification of posts they should not be able to edit.</description>
+    <title>CVE-2026-124486 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124486</link>
+    <guid isPermaLink="false">9a12dc8e4130fa94778a4f524b1e8f4d</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | OpenEMR before 8.3.0 contains a missing authorization vulnerability in the classic document controller that allows low-privilege authenticated users to recategorize other patients' documents. Attackers can invoke move_action_process to move a document into a patients|demo category, then retrieve it with an empty patient_id to exfiltrate PHI and tamper with charts.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-96961 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96961</link>
-    <guid isPermaLink="false">eb3c37bb4b23c62d403c6a38a36655e5</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Pie Register  WordPress plugin through 3.8.4.15 does not perform any capability, nonce or authentication check on one of its request handlers, allowing unauthenticated attackers to reset the Pie Register  WordPress plugin through 3.8.4.15's settings to their defaults (disabling registration security controls such as new-user email verification) and to destroy a Pie Register  WordPress plugin through 3.8.4.15 data table.</description>
+    <title>CVE-2026-124487 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124487</link>
+    <guid isPermaLink="false">277b7f7a23dfe4cfcfc43ed7f662071f</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.4.0 contains an improper authorization vulnerability in the non-patient POST /fhir/DocumentReference/$docref route that allows low-privileged users to generate any patient's CCDA. Attackers with only demographics and documents permissions can supply a victim patient parameter, then download the full-chart CCDA from Patient Documents to exfiltrate clinical data.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-96963 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96963</link>
-    <guid isPermaLink="false">471002195a7f3e01818e76a5f02645c3</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Pie Register  WordPress plugin through 3.8.4.15 does not perform an authorisation check in one of its AJAX actions, allowing users with a role as low as contributor to modify existing administrator-created invitation-code records.</description>
+    <title>CVE-2026-124488 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124488</link>
+    <guid isPermaLink="false">bbc3c99a18d851de9a4fb2678a49c136</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.6 | OpenEMR before 8.3.0 contains an authorization bypass vulnerability that allows authenticated clinicians lacking high-sensitivity permission to read and modify encounter-bound forms via load_form.php. Attackers can request the Clinical Notes or Care Plan direct loader to obtain restricted content and a CSRF token, then submit save.php to tamper with clinical records.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97192 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97192</link>
-    <guid isPermaLink="false">cc7371b79f73bc77c118341187588f8a</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Secure Custom Fields WordPress plugin before 6.9.8 does not re-apply its field-group location rules when persisting values submitted through the post editor save path, allowing users with contributor-level access and above to write custom fields the site restricted to administrators onto their own posts.</description>
+    <title>CVE-2026-124489 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124489</link>
+    <guid isPermaLink="false">5ba73325de1470d0aafc6b16f3872e39</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 7.1 | OpenEMR before 8.3.0 contains a broken access control vulnerability in portal/portal_payment.php that allows low-privilege authenticated users to bypass billing ACL checks by tampering patient identifiers. Attackers can modify the pid and form_pid parameters to view payment pages and record fraudulent payment receipts for arbitrary patients, corrupting billing records.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97193 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97193</link>
-    <guid isPermaLink="false">2df2f1b1adc90e71c69f2d0bfb067edc</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Secure Custom Fields WordPress plugin before 6.9.8 does not verify that a user is allowed to edit the target object before writing to it during bidirectional relationship synchronization, allowing users with contributor-level access and above to add or remove a reference to their own object on arbitrary posts, users, or terms they cannot otherwise edit.</description>
+    <title>CVE-2026-124490 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124490</link>
+    <guid isPermaLink="false">1491105560d00769fa931b117d582288</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.4 | OpenEMR before 8.3.0 contains a path traversal vulnerability in the RingCentral RCFaxClient disposeDocument() method of oe-module-faxsms that allows authenticated attackers to read and write arbitrary files via the file_path parameter. Attackers can use action=download to read credentials and source code, or action=setup with base64 content to write web-executable files for code execution.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97194 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97194</link>
-    <guid isPermaLink="false">2fa1aea8578261935d3d95212165a7b4</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Secure Custom Fields WordPress plugin before 6.9.8 does not perform a read-permission check when it renders and formats the values of its relational fields, allowing users with post-editing access (Contributor and above) to disclose the titles and non-public statuses of other users' unpublished posts.</description>
+    <title>CVE-2026-124491 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124491</link>
+    <guid isPermaLink="false">45d3fb376ac2134addaa357499fd4ce5</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 5.3 | SunEditor before 3.4.0 contains a stored cross-site scripting vulnerability in the FileUpload plugin create() method that assigns server-returned file names to innerHTML without escaping. Attackers can upload files with HTML-laden names that bypass html.clean() and execute JavaScript in victims' browsers when content or gallery items load, enabling session theft.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97195 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97195</link>
-    <guid isPermaLink="false">39e2678933dc1180ab8d2d3d6c6f03c2</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS: não informado | The Secure Custom Fields WordPress plugin before 6.9.8 does not sanitize a persisted field definition before emitting part of it as an HTML attribute name, allowing a user able to configure its fields to store a payload that executes as JavaScript in the browser of any user who views a page rendering the affected field, which on multisite lets a site administrator who lacks the unfiltered_html capability inject script into other users' sessions.</description>
+    <title>CVE-2026-124492 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124492</link>
+    <guid isPermaLink="false">58ac5dabb54ae602d739e991b3c1ba9a</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.3 | SunEditor before 3.4.0 contains a stored cross-site scripting vulnerability in ModalAnchorEditor's #createBookmarkList, which inserts entity-decoded h1-h6 header textContent into the bookmark list via innerHTML without escaping. Attackers can store HTML-encoded payloads in editor headers that execute JavaScript when a victim opens the link modal and types # in the URL input.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124326 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124326</link>
-    <guid isPermaLink="false">334d6188be880aecfc611cb19268cb14</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 2.1 | A flaw has been found in DataLinkDC Dinky up to 1.2.5. Impacted is the function file.getOriginalFilename of the file CatalogueController.java of the component Catalogue Upload. Executing a manipulation of the argument filename can lead to path traversal. The attack can be executed remotely. The exploit has been published and may be used. The researcher claims to have submitted a GHSA on the repository of the project.</description>
+    <title>CVE-2026-124493 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124493</link>
+    <guid isPermaLink="false">bb81fbbe188525489a6ff63d0c599a86</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.3 | SunEditor before 3.4.0 contains a stored cross-site scripting vulnerability in the DocumentType constructor that injects header textContent into innerHTML without HTML escaping. Attackers can store entity-encoded HTML in h1-h6 headers that executes JavaScript when editors using document:header mode initialize, enabling session cookie theft.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124328 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124328</link>
-    <guid isPermaLink="false">9d3c8e10405bcc0835ee2da61d14df94</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability has been found in FlowCI flow-core-x up to 1.23.49. The affected element is the function ConditionManagerImpl.run of the file core/src/main/java/com/flowci/core/common/manager/ConditionManagerImpl.java of the component Groovy Script Evaluation. The manipulation of the argument condition leads to code injection. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-124494 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124494</link>
+    <guid isPermaLink="false">4dc094a9b879e1b386a7991634c794e3</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.3 | SunEditor before 3.4.0 contains a stored cross-site scripting vulnerability because the html.clean() sanitizer's _normalizeURL() function decodes named entities like &amp;colon; to an empty string. Attackers can inject href values such as javascript&amp;colon; that pass the _isSafeURL() check but are decoded by browsers, executing JavaScript when victims click stored links.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124329 - NVD - CVSS Score v4.0: 1.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124329</link>
-    <guid isPermaLink="false">e469f5164110d6f84b404ea0e2e01cb9</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 1.3 | A vulnerability was found in FlowCI flow-core-x up to 1.23.49. The impacted element is the function FileHelper.unzip of the file common/src/main/java/com/flowci/common/helper/FileHelper.java. The manipulation results in path traversal. The attack may be performed from remote. A high complexity level is associated with this attack. The exploitability is regarded as difficult. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-124551 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124551</link>
+    <guid isPermaLink="false">f78dd18f600ab7de24ed1bfece59c6bd</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.0 | ClassroomIO through 1.0.0 contains an authorization bypass vulnerability that allows authenticated users of any organization to clone other tenants' courses via the POST /course/:courseId/clone endpoint. Attackers who know a target course id can copy its sections, lessons, exercises, and quiz answer keys into their own organization, exposing private course content.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124330 - NVD - CVSS Score v4.0: 1.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124330</link>
-    <guid isPermaLink="false">7fb77f793a2c5766a355068be2b02965</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 1.3 | A vulnerability was determined in FlowCI flow-core-x up to 1.23.49. This affects the function exist/save/read/remove of the file store/src/main/java/com/flowci/store/LocalFileManager.java of the component LocalFileManager. This manipulation of the argument fileName causes path traversal. It is possible to initiate the attack remotely. A high degree of complexity is needed for the attack. The exploitability is reported as difficult. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-124552 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124552</link>
+    <guid isPermaLink="false">1ca632fb0c0f1e755224836c3f487a12</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 4.8 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in the Shorewall and Shorewall6 modules' list.cgi, which renders table fields and COMMENT lines unescaped. Authenticated users with table edit permission can store JavaScript via savecmt.cgi or table entries that executes when other users, including root, view the list page.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
