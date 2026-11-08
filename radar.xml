@@ -5,223 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Nov 2026 18:00:33 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-124490 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124490</link>
-    <guid isPermaLink="false">1491105560d00769fa931b117d582288</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.4 | OpenEMR before 8.3.0 contains a path traversal vulnerability in the RingCentral RCFaxClient disposeDocument() method of oe-module-faxsms that allows authenticated attackers to read and write arbitrary files via the file_path parameter. Attackers can use action=download to read credentials and source code, or action=setup with base64 content to write web-executable files for code execution.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124491 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124491</link>
-    <guid isPermaLink="false">45d3fb376ac2134addaa357499fd4ce5</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 5.3 | SunEditor before 3.4.0 contains a stored cross-site scripting vulnerability in the FileUpload plugin create() method that assigns server-returned file names to innerHTML without escaping. Attackers can upload files with HTML-laden names that bypass html.clean() and execute JavaScript in victims' browsers when content or gallery items load, enabling session theft.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124492 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124492</link>
-    <guid isPermaLink="false">58ac5dabb54ae602d739e991b3c1ba9a</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.3 | SunEditor before 3.4.0 contains a stored cross-site scripting vulnerability in ModalAnchorEditor's #createBookmarkList, which inserts entity-decoded h1-h6 header textContent into the bookmark list via innerHTML without escaping. Attackers can store HTML-encoded payloads in editor headers that execute JavaScript when a victim opens the link modal and types # in the URL input.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124493 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124493</link>
-    <guid isPermaLink="false">bb81fbbe188525489a6ff63d0c599a86</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.3 | SunEditor before 3.4.0 contains a stored cross-site scripting vulnerability in the DocumentType constructor that injects header textContent into innerHTML without HTML escaping. Attackers can store entity-encoded HTML in h1-h6 headers that executes JavaScript when editors using document:header mode initialize, enabling session cookie theft.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124494 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124494</link>
-    <guid isPermaLink="false">4dc094a9b879e1b386a7991634c794e3</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 9.3 | SunEditor before 3.4.0 contains a stored cross-site scripting vulnerability because the html.clean() sanitizer's _normalizeURL() function decodes named entities like &amp;colon; to an empty string. Attackers can inject href values such as javascript&amp;colon; that pass the _isSafeURL() check but are decoded by browsers, executing JavaScript when victims click stored links.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124551 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124551</link>
-    <guid isPermaLink="false">f78dd18f600ab7de24ed1bfece59c6bd</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 6.0 | ClassroomIO through 1.0.0 contains an authorization bypass vulnerability that allows authenticated users of any organization to clone other tenants' courses via the POST /course/:courseId/clone endpoint. Attackers who know a target course id can copy its sections, lessons, exercises, and quiz answer keys into their own organization, exposing private course content.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124552 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124552</link>
-    <guid isPermaLink="false">1ca632fb0c0f1e755224836c3f487a12</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 4.8 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in the Shorewall and Shorewall6 modules' list.cgi, which renders table fields and COMMENT lines unescaped. Authenticated users with table edit permission can store JavaScript via savecmt.cgi or table entries that executes when other users, including root, view the list page.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124553 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124553</link>
-    <guid isPermaLink="false">e7efa732b1f4c221798e07d8a2dd2dc3</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v4.0: 8.7 | BabelDOC from 0.3.61 before 0.7.0 contains a resource exhaustion vulnerability that allows remote attackers to exhaust CPU and memory by supplying unbounded bfrange and cidrange spans. Attackers can submit a crafted PDF whose embedded ToUnicode CMap declares a huge range, driving billions of loop iterations and stalling the translation worker.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2024-41786 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2024-41786</link>
-    <guid isPermaLink="false">4933b92ae4282ddf1950812c191407df</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.3 | IBM Engineering Requirements Management DOORS Next 7.1, and 7.2 could allow a remote attacker to force the Web server to return contents of a sensitive requested file due to improper input validation.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-0166 - NVD - CVSS Score v3.1: 2.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-0166</link>
-    <guid isPermaLink="false">57d2332273fe9214512ccff06e7638cc</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 2.7 | IBM watsonx Orchestrate Cartridge for Cloud Pak for Data 4.8.4 through 4.8.5, and 5.0.0 through 5.4.2 could disclose sensitive source code information that should not be accessible.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-1837 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-1837</link>
-    <guid isPermaLink="false">f921acafd8a50dee6055ff21f9b93dbb</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.4 | IBM watsonx Orchestrate Cartridge for Cloud Pak for Data 4.8.4 through 4.8.5, and 5.0.0 through 5.4.2 could allow an authenticated user to perform unauthorized actions due to improper trust of server-side permission methods.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-36075 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-36075</link>
-    <guid isPermaLink="false">df4dcdce438133206ca3dbf993626427</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.3 | IBM Safer Payments 6.4.0.00 through 6.4.2.11, 6.5.0.00 through 6.5.0.09, 6.6.0.00 through 6.6.0.07, 6.7.0.00 through 6.7.0.03, and 6.8.0.00 could allow an authenticated user to obtain sensitive information, caused by improper user input validation. By using a set of API requests the user could exploit this vulnerability to decrypt sensitive information.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-101117 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101117</link>
-    <guid isPermaLink="false">49e9d80844a811f5a894369552ee3462</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 9.1 | IBM WebSphere Extreme Scale 8.6.1.0 through 8.6.2.2 could allow a remote attacker to bypass security restrictions due to improper Content Security Policy configuration.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102618 - NVD - CVSS Score v3.1: 3.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102618</link>
-    <guid isPermaLink="false">0bd06645de687b69ecf2372114a1a6ec</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 3.6 | IBM i 7.6, 7.5, 7.4, and 7.3 could allow an authenticated user to indirectly disable system auditing, which they otherwise don't have authority to disable.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-103320 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103320</link>
-    <guid isPermaLink="false">da33f2718ba781ad867d59cfb4b12d50</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 4.3 | IBM WebSphere Application Server Liberty 17.0.0.3 through 26.0.0.10 could allow an authenticated user with the Reader role to obtain sensitive information.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-109899 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109899</link>
-    <guid isPermaLink="false">8cd91a23d3c10bc572141b49f1946b31</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 7.1 | Missing Authorization vulnerability in Melapress Melapress Role Editor melapress-role-editor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Melapress Role Editor: from n/a through 1.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-109900 - NVD - CVSS Score v3.1: 9.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109900</link>
-    <guid isPermaLink="false">3086c2a446f8e08c721052e65a56d4f6</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 9.6 | Incorrect Privilege Assignment vulnerability in Melapress Melapress Role Editor melapress-role-editor allows Privilege Escalation.This issue affects Melapress Role Editor: from n/a through 1.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114186 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114186</link>
-    <guid isPermaLink="false">0022ea26be45ebfa80b3197097b5dad6</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing Authorization vulnerability in WPVibes AnyWhere Elementor anywhere-elementor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects AnyWhere Elementor: from n/a through 1.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114188 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114188</link>
-    <guid isPermaLink="false">2946164048ea22023ba0215008520462</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WPVibes AnyWhere Elementor anywhere-elementor allows Stored XSS.This issue affects AnyWhere Elementor: from n/a through 1.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114189 - NVD - CVSS Score v3.1: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114189</link>
-    <guid isPermaLink="false">dca6bd0d30ff771e1672cc55fb4ee61d</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 8.5 | Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in WPVibes AnyWhere Elementor anywhere-elementor allows Blind SQL Injection.This issue affects AnyWhere Elementor: from n/a through 1.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120858 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120858</link>
-    <guid isPermaLink="false">8fd907f25e098322975868fc2de74606</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing Authorization vulnerability in WP ManageNinja LLC FluentForm fluentform allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects FluentForm: from n/a through 6.2.16.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-61987 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61987</link>
-    <guid isPermaLink="false">deb90b7626a9f913b69bf78c876eabb7</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WC Lovers WCFM – Frontend Manager for WooCommerce wc-frontend-manager allows Stored XSS.This issue affects WCFM – Frontend Manager for WooCommerce: from n/a through 6.8.1.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-105467 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105467</link>
-    <guid isPermaLink="false">365e8cc781dfedeada53cf38362a98f4</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 8.1 | IBM QRadar 7.5.0 through 7.5.0 Update Pack 16 Interim Fix 02, and 7.6.0.0 through 7.6.0.5 is vulnerable to Reflected XSS. A victim must open a specifically crafted URL while authenticated to QRadar to trigger this.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-105473 - NVD - CVSS Score v3.1: 4.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105473</link>
-    <guid isPermaLink="false">e0fe3b86855446c9a1a80df869b5b146</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 4.6 | IBM QRadar 7.5.0 through 7.5.0 Update Pack 16 Interim Fix 02, and 7.6.0.0 through 7.6.0.5 is vulnerable to Open Redirect. A victim must open a specifically crafted URL while authenticated to QRadar to trigger this.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107330 - NVD - CVSS Score v3.1: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107330</link>
-    <guid isPermaLink="false">6a6ae71a265024a02b24c6208b386886</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 7.7 | IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to obtain sensitive information due to a Server-Side Request Forgery (SSRF) vulnerability.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107331 - NVD - CVSS Score v3.1: 9.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107331</link>
-    <guid isPermaLink="false">dfc05acfaf8e298c657cbc9c18074500</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 9.9 | IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to obtain sensitive information due to an absolute-path traversal vulnerability.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-108284 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108284</link>
-    <guid isPermaLink="false">6d9de000c32f3f82b755005a5f20c85a</guid>
-    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | IBM WebSphere Application Server Liberty 17.0.0.3 through 26.0.0.10 could allow an authenticated user with the Reader role to obtain sensitive information.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 08 Nov 2026 19:02:54 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-108292 - NVD - CVSS Score v3.1: 5.5</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108292</link>
@@ -323,6 +107,222 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11547</link>
     <guid isPermaLink="false">ab794be89f23cbef76ff4f732735ee63</guid>
     <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 4.3 | IBM WebSphere Application Server Liberty 17.0.0.3 through 26.0.0.10 is affected by a server-side request forgery vulnerability in the Admin Center deploy validation endpoint.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120113 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120113</link>
+    <guid isPermaLink="false">4ac4aa91cb206bab4bea0f2bc34c7f98</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.4 | IBM Aspera Connect 1.6.1 through 4.2.19 could allow a remote attacker to obtain sensitive information and modify host trust configuration due to missing authentication and overly permissive cross-origin access controls in the local HTTP service. By persuading a victim to visit a malicious web page, an attacker could perform unauthorized cross-origin requests to read and modify configuration.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120115 - NVD - CVSS Score v3.1: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120115</link>
+    <guid isPermaLink="false">f97ee870f2174a34acd4641556021498</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.3 | IBM Aspera Connect 1.6.1 through 4.2.19 fails to consistently enforce origin verification across all REST API endpoints. An attacker who convinces a user to visit a malicious website could delete or inspect account configurations.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-12735 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12735</link>
+    <guid isPermaLink="false">9f7953ab774a95e0c165739f00cd8e17</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 4.3 | IBM Controller Disclosure Management 1.0.0.0 could allow an attacker to obtain sensitive EXIF metadata from uploaded images due to improper removal of sensitive information before storage.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-12737 - NVD - CVSS Score v3.1: 4.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12737</link>
+    <guid isPermaLink="false">e0e88547c1aac5f9f2a5363166811176</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 4.4 | IBM Sterling B2B Integrator 6.2.2.0 through 6.2.2.1_1 and IBM Sterling File Gateway 6.2.2.0 through 6.2.2.1_1 stores potentially sensitive information in log files that could be read by a local privileged user.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14375 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14375</link>
+    <guid isPermaLink="false">e7143f613715c4a6a5c65dcc9fb9f0e9</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.9 | IBM Storage Scale 5.2.3.0 through 5.2.3.8, and 6.0.1.0 does not validate or improperly validates TLS certificate validation when communicating with remote cluster GUI interfaces, which could allow an attacker to inject forged JSON responses using man in the middle techniques.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14377 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14377</link>
+    <guid isPermaLink="false">483184263841ccc999d0b6f61085c738</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.4 | IBM Turbonomic kubeturbo agent 8.16.0 through 8.21.2 is vulnerable to server-side request forgery (SSRF). This may allow an authenticated attacker to send unauthorized requests from the system, potentially leading to network enumeration or facilitating other attacks.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14434 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14434</link>
+    <guid isPermaLink="false">bccbe0ba79655f7b65ea9b58de74ff0a</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.9 | IBM Turbonomic kubeturbo agent 8.16.0 through 8.21.2 does not validate or improperly validates TLS certificate validation, which could allow an attacker to obtain sensitive information using man in the middle techniques.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14435 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14435</link>
+    <guid isPermaLink="false">bca8889408b51288d8fe29824c4cc89b</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.9 | IBM Turbonomic kubeturbo agent 8.16.0 through 8.20.3 does not validate or improperly validates TLS certificate validation, which could allow an attacker to obtain sensitive information using man in the middle techniques.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14437 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14437</link>
+    <guid isPermaLink="false">24aac44176b9f8f530b003b6a2a8a457</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | IBM Storage Scale 5.2.3.0 through 5.2.3.9 and 6.0.1.0 could allow a remote attacker to traverse directories on the system. An attacker could send a specially crafted URL request containing &quot;dot dot&quot; sequences (/../) to view arbitrary files on the system.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14469 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14469</link>
+    <guid isPermaLink="false">fcd58eafd6404a70abb7d2587a39130b</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.4 | IBM Storage Scale 5.2.3.0 through 5.2.3.9 and 6.0.1.0  could allow an authenticated attacker to access and manipulate filesets beyond their control due to improper authorization.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14963 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14963</link>
+    <guid isPermaLink="false">521217a08099d9fed5bd2a71729d762a</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 4.3 | IBM Cognos Command Center 10.2.4.1 and 10.2.5 could allow a remote attacker to execute unauthorized processes due to cross-site request forgery.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-15266 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15266</link>
+    <guid isPermaLink="false">842dd3e7051c449c7b44cf32e4f054ba</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 9.8 | IBM Concert 1.0 through 3.0.1.1 contains components that allow potentially unsafe command execution, which could be exploited to run arbitrary system commands on the host.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-16325 - NVD - CVSS Score v3.1: 4.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16325</link>
+    <guid isPermaLink="false">4d15ddc353d4e421c1f4bb89ac151238</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 4.4 | IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to execute arbitrary scripts due to improper neutralization of input in the X-Forwarded-Host header.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-16427 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16427</link>
+    <guid isPermaLink="false">70c79ba9a7246d0c0ab45cbc75c5eaf7</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to write arbitrary files due to a path traversal vulnerability.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-16433 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16433</link>
+    <guid isPermaLink="false">420429bee5f115756c00d5a83ba0ee8e</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to write arbitrary files due to a path traversal vulnerability.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-16699 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16699</link>
+    <guid isPermaLink="false">0b289e705abe21b556721185128c9298</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | IBM Netezza Appliance 11.3.0.2 Interim Fix 002 through 11.3.1.3 Interim Fix 006 could allow a remote authenticated attacker to change the passwords of other users due to improper authorization.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-17437 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-17437</link>
+    <guid isPermaLink="false">c474ed3f88ee8f123337d36d0ba00c30</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.5 | IBM App Connect Enterprise 13.0.1.0 through 13.0.8.2, and 12.0.1.0 through 12.0.12.29 could allow a local attacker to perform an arbitrary file write due to improper validation of pathnames during archive extraction.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-17466 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-17466</link>
+    <guid isPermaLink="false">f370a003d71e8ed0cd391a08f03b19e7</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 9.1 | IBM Optim 1.0.0, 1.1.0, and 1.2.0 could allow a remote authenticated attacker to obtain sensitive information due to path traversal.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-18093 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18093</link>
+    <guid isPermaLink="false">4c1a4b0f504a03a2e66f164b536a821b</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 7.5 | IBM App Connect Enterprise 13.0.1.0 through 13.0.8.2 could allow a remote attacker to obtain sensitive information due to broken access control.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-18194 - NVD - CVSS Score v3.1: 2.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18194</link>
+    <guid isPermaLink="false">4f519234536bbbad8a80e626ef225843</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 2.5 | IBM App Connect Enterprise 13.0.1.0 through 13.0.8.2 could allow a remote attacker to perform unauthorized actions due to missing anti-clickjacking controls.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-18195 - NVD - CVSS Score v3.1: 4.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18195</link>
+    <guid isPermaLink="false">0595d0bbe3b720514c68dbe7fb2409b1</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 4.2 | IBM App Connect Enterprise 13.0.1.0 through 13.0.8.2, and 12.0.1.0 through 12.0.12.30 could allow a remote attacker to perform content spoofing due to improper output encoding of error messages.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-18196 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18196</link>
+    <guid isPermaLink="false">f23e0daef7fc44f5e89667cb41d4be24</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.4 | IBM App Connect Enterprise 13.0.1.0 through 13.0.8.2, and 12.0.1.0 through 12.0.12.30 could allow a remote attacker to inject arbitrary HTML due to improper output neutralization.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-18484 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18484</link>
+    <guid isPermaLink="false">df893675133158040da6a4a592b61833</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | IBM ContextForge MCP Gateway 1.0.0 through 1.0.11 could allow a remote authenticated attacker to cause a denial of service due to improper slug normalization causing tool name collisions.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-18525 - NVD - CVSS Score v3.1: 4.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18525</link>
+    <guid isPermaLink="false">4e5363d58ed9512d611dc661da78aee2</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 4.9 | IBM Secure Proxy 6.1.0.0 through 6.2.1.2 could allow a remote authenticated attacker to cause a denial of service due to improper validation of listener IP address and port.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-18546 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18546</link>
+    <guid isPermaLink="false">7962fa44de4c03eee6e46e50f6b1a38d</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 5.4 | IBM CockroachDB PostgreSQL for IBM VPC 26.2.0 through 26.2.3, 25.4.0 through 25.4.12, and 25.2.0 through 25.2.20 is vulnerable to server-side request forgery (SSRF). This may allow an authenticated attacker to send unauthorized requests from the system, potentially leading to network enumeration or facilitating other attacks.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-18668 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18668</link>
+    <guid isPermaLink="false">cb47954c9ad9fdb2a392f2964fbd03c8</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.5 | IBM Sterling File Gateway 6.2.1.0 through 6.2.1.2_1 and  6.2.2.0 - 6.2.2.1_1 could allow a remote attacker to perform protocol downgrade attacks due to a security misconfiguration.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-76052 - NVD - CVSS Score v3.1: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76052</link>
+    <guid isPermaLink="false">4bb205f8c1943f6d9fb53c8e10c39962</guid>
+    <description>Sunday 8 November 2026 | NVD | CVSS Score v3.1: 6.0 | IBM Storage Scale System 6.2.3.0 through 6.2.3.6, and 7.0.0.0 through 7.0.1.0 and IBM Storage Scale 6.0.0.0 through 6.0.1.0, and 5.2.3.0 through 5.2.3.8 could allow an attacker to leverage an undocumented flag to gain access to an unauthenticated path in the REST API.</description>
     <category>NVD</category>
     <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
   </item>
