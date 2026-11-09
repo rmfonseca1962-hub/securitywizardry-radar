@@ -5,207 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Nov 2026 17:02:50 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-112204 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112204</link>
-    <guid isPermaLink="false">a7c39da9b08a892383603e1f3b72cf12</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.1 | WidzialniCMS is vulnerable to Reflected XSS in the /index.php endpoint. An attacker can prepare an URL that, when opened, results in arbitrary JavaScript execution in the victim's browser, allowing e.g session cookie theft.
-
-
-This issue has been fixed in version 2.5.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-112205 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112205</link>
-    <guid isPermaLink="false">8362927a6408bf57a358a7d4007606eb</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.9 | WidzialniCMS is vulnerable to Bruteforce Protection Bypass in the login functionality. The cookie-based lockout can be bypassed by omitting the login_count and login_timeout cookies, allowing an unauthenticated attacker to perform an unlimited number of login attempts.
-
-
-
-
-This issue has been fixed in version 2.5.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118790 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118790</link>
-    <guid isPermaLink="false">f54c131ee9c354c87b38803ab1f3f0b8</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.2 | Multiple hardcoded credentials are embedded within product components and administrative functionalities. These credentials may enable unauthorized access to privileged accounts, services, or application features across affected deployments.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118791 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118791</link>
-    <guid isPermaLink="false">dc1ffd2f52bae178fe9661949c599d54</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.2 | The application implements software update functionality without adequate authenticity and integrity validation, allowing update packages to be accepted without sufficient cryptographic verification.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118792 - NVD - CVSS Score v4.0: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118792</link>
-    <guid isPermaLink="false">6a8cb1285d043e4f05fea3e8005f6432</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.1 | Default credentials permit access through AcuXDBC.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118795 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118795</link>
-    <guid isPermaLink="false">fc922b79c5f436a2885bdce6b16f1733</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.9 | Administrative roles and module permissions are stored in mutable local database fields, allowing privilege escalation for attackers with database write access.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118798 - NVD - CVSS Score v4.0: 4.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118798</link>
-    <guid isPermaLink="false">8230172031f4b6b22bb258c42f95298c</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 4.4 | Multiple sensitive authentication data, including credentials, OAuth-related secrets, session information, and authentication artifacts, are exposed through application logs and persistent client-side storage, enabling unauthorized access and session compromise.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119610 - NVD - CVSS Score v3.1: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119610</link>
-    <guid isPermaLink="false">458f60c3c6112860fb5aed52e12b07c0</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 8.2 | A flaw was found in GStreamer's gst-plugins-good, specifically in the H.264 RTP depayloader element. When processing MTAP16 or MTAP24 multi-time aggregation RTP packets, a signed/unsigned integer conversion error causes the remaining-length counter to underflow to a large positive value when the packet is truncated. This allows a remote, unauthenticated attacker to trigger an out-of-bounds heap read of up to approximately 64 KiB of process memory by sending a single malformed RTP packet. Successful exploitation can crash the receiving GStreamer pipeline (denial of service), and in relay or transcoding deployments where output is accessible to the attacker, may expose adjacent heap contents.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119613 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119613</link>
-    <guid isPermaLink="false">3db3e441ef6ac53898e57fa6d298f11d</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.3 | Generation of Error Message Containing Sensitive Information vulnerability in ash-project ash_ai allows a caller of an AshAi tool to read internal error details, including module names and data values, by making a tool call fail.
-
-AshAi.ToToolError gained an implementation for Ash.Error.Unknown.UnknownError that returns the error's error field as is, and AshAi.Tool.Errors.format/1 sends that text to MCP clients (tool calls and resource reads in AshAi.Mcp.Server) and to the model in AshAi.ToolLoop. Ash stores the full Exception.format/2 output of a raised exception, or inspect/1 of a bare {:error, term} return, in that field. A tool result that cannot be JSON-encoded raises a Protocol.UndefinedError whose text includes the inspected value, which can be a whole record with fields the tool never returns. None of these errors were logged. The fix logs them under an error id and returns only that id to the caller.
-
-This issue affects ash_ai: from 1.5.0 before 1.5.1.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120854 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120854</link>
-    <guid isPermaLink="false">dbc6e2aca854eda57417ea6785cc5df2</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.5 | Allocation of Resources Without Limits or Throttling vulnerability in iubenda iubenda iubenda-cookie-law-solution allows HTTP DoS.This issue affects iubenda: from n/a through 3.13.6.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120856 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120856</link>
-    <guid isPermaLink="false">7aefbd84ad5586de432b0cf3212b9022</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Rymera Web Co Invoice Gateway for WooCommerce – Invoice Payment Gateway invoice-gateway-for-woocommerce allows Reflected XSS.This issue affects Invoice Gateway for WooCommerce – Invoice Payment Gateway: from n/a through 1.1.6.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121601 - NVD - CVSS Score v3.1: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121601</link>
-    <guid isPermaLink="false">6abfa581bf640a08c0987ab0967c5453</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 6.1 | A flaw was found in GStreamer's MXF demuxer plugin (gst-plugins-bad). When processing a specially crafted MXF media file, the demuxer indexes its internal delta-entry and slice-offset tables using values from the file without validating that they are within the bounds of the allocated arrays. A local attacker who tricks a user into opening a malicious MXF file can cause the application to crash (denial of service) and may be able to read limited amounts of heap memory adjacent to the affected arrays.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121611 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121611</link>
-    <guid isPermaLink="false">1478035edcd542d9e75b1979d05183d1</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 6.5 | A flaw was found in GStreamer's gst-plugins-bad package. A use of uninitialized memory vulnerability exists in the H.265 (HEVC) bitstream parser when processing Video Parameter Sets that declare more than one HRD (Hypothetical Reference Decoder) parameter set. A remote attacker could exploit this by providing a crafted H.265 media file or stream that, when processed by an application using GStreamer, causes unpredictable parser behavior and may crash the application. This can lead to a denial of service for any application using GStreamer to play back H.265 content.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122673 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122673</link>
-    <guid isPermaLink="false">13c4335e705700ede7b2c84f546a6a2c</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Wpmet ShopEngine shopengine allows Stored XSS.This issue affects ShopEngine: from n/a through 4.9.8.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124079 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124079</link>
-    <guid isPermaLink="false">46ec65b16c709deea93b4d5df468e97e</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 9.3 | rConfig Core 8.0.0 before 8.2.19 and rConfig Pro before 8.4.1 contain a deserialization of untrusted data vulnerability that allows unauthenticated network attackers to execute arbitrary code by pushing a crafted serialized job onto the Redis-backed Laravel Horizon queue, which runs without authentication in affected deployments. Laravel's CallQueuedHandler unserializes the job without class restrictions, allowing attackers to instantiate the existing App\\Jobs\\TaskDownloadRun class and invoke an attacker-controlled Artisan command. Attackers can leverage the bundled laravel/tinker package to execute arbitrary PHP and operating system commands as the queue worker's user, write a persistent web shell into the web-served storage/app/public directory, and read database credentials, stored device credentials, and API tokens. Where Redis is not directly reachable, authenticated attackers can deliver the payload through the application by configuring a device target that points at the rConfig server's loopback address.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124622 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124622</link>
-    <guid isPermaLink="false">7a8c861c9332fa4943a644395e6e2caf</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 4.8 | A vulnerability was identified in olivier-ls PHP-FTS up to 1.1.3. This impacts the function TrigramIndex::open of the file Storage.php. Such manipulation leads to time-of-check time-of-use. The attack needs to be performed locally. Upgrading to version 1.1.4 will fix this issue. The name of the patch is 0b2fae333d6b022da7ed4c43e2d41aa03f91dff3. Upgrading the affected component is recommended. The project maintainer explains: &quot;[T]he attack requires write access to the index directory by a user other than the one running the application. That is a real shared-hosting scenario and worth defending against, which is why it is fixed but it is a hardening measure rather than a remotely reachable vulnerability, and the &quot;Code Execution&quot; impact additionally assumes the symlink target is a web-served .php file.&quot;</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124623 - NVD - CVSS Score v4.0: 2.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124623</link>
-    <guid isPermaLink="false">f6ba83ab4bcbb19a384afe89700afd13</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 2.0 | A security flaw has been discovered in PipraPay 3.0.0. Affected is the function system-settings-import of the file /sumo166/CVE-apply/blob/main/PipraPay/PipraPay/system-settings-import of the component ZIP Archive Handler. Performing a manipulation results in unrestricted upload. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-94434 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94434</link>
-    <guid isPermaLink="false">d69eaa3676ead0519d0b255e863a23f1</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 8.8 | Improper neutralization of special elements used in an OS command ('OS command injection') vulnerability in TÜBİTAK BİLGEM Software Technologies Research Institute Pardus Boot Repair allows OS Command Injection.
-
-This issue affects Pardus Boot Repair: from 1.0.8 before 1.0.9.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-95648 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95648</link>
-    <guid isPermaLink="false">e9427898ebe23b34b62bbd03090d31f2</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 8.1 | Improperly controlled modification of Dynamically-Determined object attributes vulnerability in C-Prot Inc. C-Prot AppDefense allows Privilege Escalation.
-
-This issue affects C-Prot AppDefense: before 1.0.2729.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119274 - NVD - CVSS Score v3.1: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119274</link>
-    <guid isPermaLink="false">0c3b2e776110dec9bded825488449435</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 4.8 | Infoblox NIOS version upto 9.1.0 contain a vulnerability related to improper input validation that allows a stored XSS</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119743 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119743</link>
-    <guid isPermaLink="false">f4fa670cdada7c2facda38e2ab6a2be5</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.3 | pdfmake before 0.3.14 contains a shared resource caching vulnerability that allows attackers to access cross-document cached resources by exploiting a process-wide virtual file system keyed only by URL without request headers or per-document access enforcement. Attackers can retrieve resources fetched with another caller's credentials or from URLs that a later document's access policy would deny, resulting in cross-document information disclosure and bypass of the URL access policy.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121841 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121841</link>
-    <guid isPermaLink="false">b0d3fdf03848cd767e18eba23eab4d63</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS: não informado | Other issue in Firefox for iOS. This vulnerability was fixed in Firefox for iOS 160.0.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121842 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121842</link>
-    <guid isPermaLink="false">75fa61aa8ef821b9a0a2a12b3e294736</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 8.8 | Privilege escalation in the Reader View component in Firefox for iOS. This vulnerability was fixed in Firefox for iOS 160.0.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Mon, 09 Nov 2026 18:01:51 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-121843 - NVD - CVSS Score v3.1: 8.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121843</link>
@@ -358,6 +158,193 @@ Affected versions: flowintel prior to 4.0.0</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118492</link>
     <guid isPermaLink="false">e53672662ddbe0d9ac369f62178ba7a4</guid>
     <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 2.0 | In Eclipse Langium versions 3.0.0 and later, the langium-sprotty package does not HTML-escape diagnostic messages before rendering them in the default hover popup provided by `addHoverPopupHandler`. If a Langium grammar allows cross-reference text to contain HTML markup (such as through a STRING terminal), an unresolved cross-reference produces a diagnostic message that includes the literal ref text. When a Sprotty diagram is opened for a malicious source file under these conditions, and a user hovers over the corresponding error marker, attacker-controlled JavaScript can execute in the browser or webview.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-103906 - NVD - CVSS Score v4.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103906</link>
+    <guid isPermaLink="false">0dd4323379e1b93808acbf9a0e906e85</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.8 | Use of hard-coded MQTT credentials in the AM CLUB mobile application allows an authenticated attacker to connect to the MQTT broker and access data or perform actions across tenant boundaries.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104989 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104989</link>
+    <guid isPermaLink="false">1edeec9bbbb53a015803fbb7f7991de5</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 9.3 | Uncontrolled search path element in package upload feature in Chaos Software V-Ray versions through 2.0.19 allows remote unauthenticated attackers to execute arbitrary code via redirecting access to libraries</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112164 - NVD - CVSS Score v4.0: 6.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112164</link>
+    <guid isPermaLink="false">72b204af352b820cb9671322848b643c</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.6 | The LaserGest mobile application encrypts stored assistance portal credentials with a hardcoded AES key and IV, allowing an attacker with access to the application package to recover them in cleartext.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112165 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112165</link>
+    <guid isPermaLink="false">6aba65b6909b4b02d4a189d449cffb0f</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.9 | The LaserGest mobile application disables TLS certificate and hostname verification via setServerTrustMode(&quot;nocheck&quot;), allowing a man-in-the-middle attacker to intercept or modify network traffic, including credentials and API communications.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-114594 - NVD - CVSS Score v4.0: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114594</link>
+    <guid isPermaLink="false">b305bd89ba9ef2eaf131c85d98c2251a</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.4 | A time-of-check to time-of-use (TOCTOU) race condition in the Sandisk Dashboard installer allows a local, authenticated standard user to replace an installer-staged binary in a user-writable temporary directory between validation and execution. The elevated installer then executes the attacker-controlled binary, resulting in local privilege escalation to a high-integrity (administrative) context. This issue affects Sandisk Dashboard through 5.2.2.3.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115336 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115336</link>
+    <guid isPermaLink="false">9d63f2211bb7e05f74fe4cc20658f368</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 6.5 | Incorrect quota accounting in Progress Software WS_FTP Server releases prior to 2025.0.5 on Windows could allow an authenticated user with upload and delete permissions to exceed storage quotas, potentially causing denial of service.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115337 - NVD - CVSS Score v3.1: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115337</link>
+    <guid isPermaLink="false">842554c6ed94c67c4466b58d467b9e84</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 6.3 | Improper access control in Progress WS_FTP Server versions prior to 2025.0.5 could allow an authenticated user with certain folder-management permissions to bypass access restrictions and access or modify files belonging to other users.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115338 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115338</link>
+    <guid isPermaLink="false">4b8ebb80add6ebc230597b53a6e32861</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 8.1 | Insufficient protection of communications in Progress WS_FTP Server versions prior to 2025.0.5 could allow a network attacker to intercept sensitive information or modify requests when unencrypted connections are used.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115339 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115339</link>
+    <guid isPermaLink="false">7d7728873f34860f5796f23c5d4101a7</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.5 | Insufficient resource limits in Progress Software WS_FTP Server releases prior to 2025.0.5 on Windows could allow an unauthenticated remote attacker to cause denial of service.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115340 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115340</link>
+    <guid isPermaLink="false">54104a72d5c4f1e876e4bcd522544556</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.1 | Progress Software WS_FTP Server versions prior to 2025.0.5 on Windows may write sensitive user credential and session data to a temporary file during file transfer operations.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115341 - NVD - CVSS Score v3.1: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115341</link>
+    <guid isPermaLink="false">1efc845afe4876268a60abeaec832e2e</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.7 | Improper access restrictions in the Thin Client Web Transfer component of Progress Software WS_FTP Server versions prior to 2025.0.5 on Windows could allow an authenticated FTP user to access files outside their intended scope.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121576 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121576</link>
+    <guid isPermaLink="false">d82ef0caa8118fecd08200c153de9822</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 8.8 | Incorrect Privilege Assignment vulnerability in AtlasAiDev MCP Server for WordPress ai-workflow-automation-ai-agent-hub allows Privilege Escalation.This issue affects MCP Server for WordPress: from n/a through 2.0.1.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121612 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121612</link>
+    <guid isPermaLink="false">ea413806eac0306d167f2bd3bc834309</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 4.3 | Weak Authentication vulnerability in WPZOOM WPBruiser {no- Captcha anti-Spam} goodbye-captcha allows Authentication Abuse.This issue affects WPBruiser {no- Captcha anti-Spam}: from n/a through 3.6.2.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121685 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121685</link>
+    <guid isPermaLink="false">31d59cc93289e588b3ceed1009b50a97</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) contains multiple sets of hard-coded credentials. These include fleet‑wide credentials, including BasicAuth credentials for an Agora token service, AWS IAM access keys, AWS IoT MQTT credentials, and a Slack incoming webhook URL. These credentials are embedded directly in frodobot.bin and are accessible through static analysis of the publicly downloadable firmware. Extraction requires no special privileges.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121686 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121686</link>
+    <guid isPermaLink="false">3f7cb45572e2db66606af6d6e2c46fb1</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) is vulnerable to unauthenticated, remote code execution via MQTT. A firmware method accepts arbitrary shell commands delivered via Amazon Web Services Internet of Things Message Queuing Telemetry Transport (AWS IoT MQTT) messages and executes them as root. Access is gated only by shared Internet of Things (IoT) credentials, with no per‑device authentication, enabling remote code execution as root across the fleet.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121687 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121687</link>
+    <guid isPermaLink="false">96fa6e86908ff07b8135c07513d28cad</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) contains several local interfaces that are exposed without authentication.
+1. HTTP REST API (port 80): motor control, telemetry/GPS/IMEI, plaintext WiFi password (GET /api/v1/wifi/status), join-arbitrary-WiFi, diagnostic export.
+2. ADB (Android Debug Bridge, port 5555) access to root shell
+3. SSH (port 22)</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121688 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121688</link>
+    <guid isPermaLink="false">a462ed776461eabee82e969e93c754d1</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) contains an insecure STM32 firmware update mechanism. The STM32 motor‑controller firmware is fetched over unencrypted HTTP. Integrity is validated only via MD5, with the hash provided in the same unprotected response. No code‑signing mechanism is implemented, allowing firmware to be replaced with potentially malicious code.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121689 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121689</link>
+    <guid isPermaLink="false">559346995c243e8eb58784035900874b</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (v6.2.4_6.2.5_0.614.0) exposes sensitive credentials through multiple insecure mechanisms. The Wi‑Fi PSK is stored in plaintext in wpa_supplicant.conf and is disclosed through unauthenticated API endpoints and diagnostic exports. Additionally, unauthenticated ADB access allows retrieval of the /etc/shadow file.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121690 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121690</link>
+    <guid isPermaLink="false">277b374050ea3f64cae9256382c23afa</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) executes code with unnecessary privileges. All processes run as root and the system lacks privilege separation. The compromise of any single service results in full administrative control of the device.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-122664 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122664</link>
+    <guid isPermaLink="false">e9886149d45d5d391a01dd2a05e16f66</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in VideoWhisper.com Broadcast Live Video videowhisper-live-streaming-integration allows Reflected XSS.This issue affects Broadcast Live Video: from n/a through 7.3.14.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123364 - NVD - CVSS Score v4.0: 2.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123364</link>
+    <guid isPermaLink="false">b77e1292651fe835dce2359760d516b8</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 2.4 | OctoPrint provides a web interface for controlling consumer 3D printers. From 2.0.0rc1 until 2.0.0rc7, an authenticated user can supply a crafted default port or baudrate through a connect request to the bundled Serial Connector plugin. OctoPrint persists these values in printerConnection.preferred.parameters.port or printerConnection.preferred.parameters.baudrate and renders them as HTML when another user views the saved connection parameters, allowing script execution in that user's browser and actions within the user's OctoPrint access. This issue is fixed in version 2.0.0rc7.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123482 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123482</link>
+    <guid isPermaLink="false">3f9275d886a3a32e368276b0b9791d4c</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Crocoblock JetFormBuilder jetformbuilder allows Stored XSS.This issue affects JetFormBuilder: from n/a through 3.6.8.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124683 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124683</link>
+    <guid isPermaLink="false">e5350c962879129a2f580cc83f4752f0</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 8.7 | Eclipse Langium versions 3.2.0 through 4.4.0 contain an inefficient algorithmic complexity issue (CWE-407) in the opt-in IndentationAwareTokenBuilder and IndentationAwareLexer. When producing DEDENT tokens, the token builder recomputes line numbers by re-scanning the entire preceding document text. A document whose indentation changes on most lines then takes quadratic time to tokenize. Because tokenization is synchronous, a crafted document of a few hundred kilobytes can block the Node.js event loop for tens of seconds. That causes a DoS for every user served by the same process. Languages built with the DefaultLexer and DefaultTokenBuilder are unaffected.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
