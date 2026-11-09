@@ -5,339 +5,324 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 09 Nov 2026 19:01:11 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 09 Nov 2026 20:01:28 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-118492 - NVD - CVSS Score v4.0: 2.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118492</link>
-    <guid isPermaLink="false">e53672662ddbe0d9ac369f62178ba7a4</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 2.0 | In Eclipse Langium versions 3.0.0 and later, the langium-sprotty package does not HTML-escape diagnostic messages before rendering them in the default hover popup provided by `addHoverPopupHandler`. If a Langium grammar allows cross-reference text to contain HTML markup (such as through a STRING terminal), an unresolved cross-reference produces a diagnostic message that includes the literal ref text. When a Sprotty diagram is opened for a malicious source file under these conditions, and a user hovers over the corresponding error marker, attacker-controlled JavaScript can execute in the browser or webview.</description>
+    <title>CVE-2026-125214 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125214</link>
+    <guid isPermaLink="false">74fe0818b1bac2efba6ee7d2edd54a60</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in pcm_bluray_decode_frame() in libavcodec/pcm-bluray.c on big-endian hosts. Attackers can supply a crafted Blu-ray (M2TS) LPCM stream whose payload length is not a multiple of the sample size, writing attacker-controlled bytes past the audio frame buffer.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-103906 - NVD - CVSS Score v4.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103906</link>
-    <guid isPermaLink="false">0dd4323379e1b93808acbf9a0e906e85</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.8 | Use of hard-coded MQTT credentials in the AM CLUB mobile application allows an authenticated attacker to connect to the MQTT broker and access data or perform actions across tenant boundaries.</description>
+    <title>CVE-2026-125215 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125215</link>
+    <guid isPermaLink="false">96a0d595b0b32553d074e17c6b857c72</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.7 | FFmpeg 7.1 through 9.0.2 contains a NULL pointer dereference vulnerability in ff_dovi_rpu_generate() in libavcodec/dovi_rpuenc.c that allows attackers to crash applications via crafted Dolby Vision RPU metadata. Attackers can supply streams with default or alternating omitted DM blocks to the dovi_rpu bitstream filter with compression enabled, causing denial of service.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-104989 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104989</link>
-    <guid isPermaLink="false">1edeec9bbbb53a015803fbb7f7991de5</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 9.3 | Uncontrolled search path element in package upload feature in Chaos Software V-Ray versions through 2.0.19 allows remote unauthenticated attackers to execute arbitrary code via redirecting access to libraries</description>
+    <title>CVE-2026-125216 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125216</link>
+    <guid isPermaLink="false">5b6291b8136c45629682cd8366b922d9</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg through 9.0.2 contains a NULL pointer dereference vulnerability in libavcodec/dpxenc.c that allows attackers to crash the process via unvalidated bits_per_raw_sample for RGB48 input. Attackers can supply a 12-bit RGB image, such as JPEG 2000, that when transcoded to DPX selects encode_gbrp12() and dereferences NULL plane pointers, causing denial of service.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-112164 - NVD - CVSS Score v4.0: 6.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112164</link>
-    <guid isPermaLink="false">72b204af352b820cb9671322848b643c</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.6 | The LaserGest mobile application encrypts stored assistance portal credentials with a hardcoded AES key and IV, allowing an attacker with access to the application package to recover them in cleartext.</description>
+    <title>CVE-2026-125217 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125217</link>
+    <guid isPermaLink="false">a9de4709a35088d23d277b3cdd690883</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg through 9.0.2 contains an uninitialized memory use vulnerability in roq_dpcm_encode_frame() in libavcodec/roqaudioenc.c that encodes stale heap contents when flushed early. Attackers can supply short audio streams under eight frames for RoQ DPCM transcoding, causing DPCM-quantized uninitialized heap data from frame_buffer to leak into output packets.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-112165 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112165</link>
-    <guid isPermaLink="false">6aba65b6909b4b02d4a189d449cffb0f</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.9 | The LaserGest mobile application disables TLS certificate and hostname verification via setServerTrustMode(&quot;nocheck&quot;), allowing a man-in-the-middle attacker to intercept or modify network traffic, including credentials and API communications.</description>
+    <title>CVE-2026-125218 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125218</link>
+    <guid isPermaLink="false">4b351a93b4a8292947b4c86e67776923</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in the APNG encoder's encode_apng() function in libavcodec/pngenc.c when frame size changes mid-stream. Attackers can supply crafted media whose resolution grows mid-stream, causing APNG_DISPOSE_OP_BACKGROUND memset writes past prev_frame and crashing or corrupting heap memory in transcoding applications.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-114594 - NVD - CVSS Score v4.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114594</link>
-    <guid isPermaLink="false">b305bd89ba9ef2eaf131c85d98c2251a</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.4 | A time-of-check to time-of-use (TOCTOU) race condition in the Sandisk Dashboard installer allows a local, authenticated standard user to replace an installer-staged binary in a user-writable temporary directory between validation and execution. The elevated installer then executes the attacker-controlled binary, resulting in local privilege escalation to a high-integrity (administrative) context. This issue affects Sandisk Dashboard through 5.2.2.3.</description>
+    <title>CVE-2026-125219 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125219</link>
+    <guid isPermaLink="false">73ac5ec7f789f1984613ff79aa877b9a</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in vdpau_hevc_start_frame() in libavcodec/vdpau_hevc.c that copies unbounded PPS tile counts into fixed-size VDPAU arrays. Attackers can supply crafted HEVC bitstreams with excessive tile columns or rows to write controlled 16-bit values past heap-allocated hwaccel data, corrupting memory in applications using VDPAU decoding.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-115336 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115336</link>
-    <guid isPermaLink="false">9d63f2211bb7e05f74fe4cc20658f368</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 6.5 | Incorrect quota accounting in Progress Software WS_FTP Server releases prior to 2025.0.5 on Windows could allow an authenticated user with upload and delete permissions to exceed storage quotas, potentially causing denial of service.</description>
+    <title>CVE-2026-125220 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125220</link>
+    <guid isPermaLink="false">4d6e587c084f5d0a7203a0dc5f51f3a4</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg through 9.0.2 contains a deadlock vulnerability in mimic_decode_frame() in libavcodec/mimic.c that fails to report frame progress when init_get_bits8() fails. Attackers can supply a crafted file with an oversized Mimic intra frame followed by inter frames to hang frame-threaded decoding indefinitely.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-115337 - NVD - CVSS Score v3.1: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115337</link>
-    <guid isPermaLink="false">842554c6ed94c67c4466b58d467b9e84</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 6.3 | Improper access control in Progress WS_FTP Server versions prior to 2025.0.5 could allow an authenticated user with certain folder-management permissions to bypass access restrictions and access or modify files belonging to other users.</description>
+    <title>CVE-2026-125221 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125221</link>
+    <guid isPermaLink="false">50691cdfa26d6dab25fb9dd7e64fc947</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg through 9.0.2 contains an uncontrolled recursion vulnerability in score_header() in libavcodec/flac_parser.c that allows attackers to exhaust the thread stack via crafted FLAC input. Attackers can supply a FLAC stream packed with many small valid-looking frame headers, forcing deep recursion that crashes the process during demuxing or parsing.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-115338 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115338</link>
-    <guid isPermaLink="false">4b8ebb80add6ebc230597b53a6e32861</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 8.1 | Insufficient protection of communications in Progress WS_FTP Server versions prior to 2025.0.5 could allow a network attacker to intercept sensitive information or modify requests when unencrypted connections are used.</description>
+    <title>CVE-2026-125222 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125222</link>
+    <guid isPermaLink="false">282594f28e1915ece66b1f204b1582b2</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg through 9.0.2 contains an integer overflow vulnerability in hap_parse_frame_header() in libavcodec/hapdec.c that allows attackers to trigger a heap buffer overflow on 32-bit builds. Attackers can craft Hap video frames with Snappy length prefixes that wrap tex_size, causing decompress_chunks_thread() to write outside tex_buf and crash the application or potentially execute code.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-115339 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115339</link>
-    <guid isPermaLink="false">7d7728873f34860f5796f23c5d4101a7</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.5 | Insufficient resource limits in Progress Software WS_FTP Server releases prior to 2025.0.5 on Windows could allow an unauthenticated remote attacker to cause denial of service.</description>
+    <title>CVE-2026-125223 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125223</link>
+    <guid isPermaLink="false">93128216d7dc72483ab7ba93c6be9642</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.7 | FFmpeg 8.0 through 9.0.2 contains a memory leak vulnerability in the VP9 decoder that allows attackers to exhaust memory because vp9_decode_frame() skips resetting the CBS fragment on error paths. Attackers can supply a crafted VP9 stream with invalid tile sizes decoded with slice threading to leak packet buffers and units, exhausting memory in the decoding application.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-115340 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115340</link>
-    <guid isPermaLink="false">54104a72d5c4f1e876e4bcd522544556</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.1 | Progress Software WS_FTP Server versions prior to 2025.0.5 on Windows may write sensitive user credential and session data to a temporary file during file transfer operations.</description>
+    <title>CVE-2026-125224 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125224</link>
+    <guid isPermaLink="false">f1f4b54b090cc9a232cfaa29c67819a5</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg through 9.0.2 contains a denial of service vulnerability in libavcodec/vorbis_parser.c that re-parses invalid extradata for every packet when valid_extradata remains false. Attackers can supply crafted Ogg or Matroska Vorbis streams with large invalid extradata and many packets to exhaust CPU during demuxing or probing.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-115341 - NVD - CVSS Score v3.1: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115341</link>
-    <guid isPermaLink="false">1efc845afe4876268a60abeaec832e2e</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.7 | Improper access restrictions in the Thin Client Web Transfer component of Progress Software WS_FTP Server versions prior to 2025.0.5 on Windows could allow an authenticated FTP user to access files outside their intended scope.</description>
+    <title>CVE-2026-125225 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125225</link>
+    <guid isPermaLink="false">52c03e7ef0bb8cb997e349bcac6ec3ac</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg through 9.0.2 contains a NULL pointer dereference vulnerability in aac_adtstoasc_filter() that allows attackers to crash applications via oversized ADTS AAC packets. Attackers can supply a crafted file with a packet over 256 MB, overflowing the bit count so init_get_bits() fails unchecked and get_bits() crashes during MP4, Matroska, FLV or LATM remuxing.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121576 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121576</link>
-    <guid isPermaLink="false">d82ef0caa8118fecd08200c153de9822</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 8.8 | Incorrect Privilege Assignment vulnerability in AtlasAiDev MCP Server for WordPress ai-workflow-automation-ai-agent-hub allows Privilege Escalation.This issue affects MCP Server for WordPress: from n/a through 2.0.1.</description>
+    <title>CVE-2026-125226 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125226</link>
+    <guid isPermaLink="false">8a7918dfa7ad67111bebd90c151f4043</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg through 9.0.2 contains an uncontrolled memory allocation vulnerability in sbg_read_header() in libavformat/sbgdec.c that derives an unbounded default frame size from the script's sample rate. Attackers can supply a crafted SBaGen script declaring a very high -r sample rate so the wavesynth decoder allocates enormous audio frames, exhausting memory and causing denial of service.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121612 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121612</link>
-    <guid isPermaLink="false">ea413806eac0306d167f2bd3bc834309</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 4.3 | Weak Authentication vulnerability in WPZOOM WPBruiser {no- Captcha anti-Spam} goodbye-captcha allows Authentication Abuse.This issue affects WPBruiser {no- Captcha anti-Spam}: from n/a through 3.6.2.</description>
+    <title>CVE-2026-125227 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125227</link>
+    <guid isPermaLink="false">3b60cd10c7a63e27a3a410ca07183d1d</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg through 9.0.2 contains an integer overflow in cbs_jpeg_write_scan() in libavcodec/cbs_jpeg.c that causes a heap buffer overflow on 32-bit builds. Attackers can supply a crafted MJPEG/JPEG stream with a scan of 512 MiB or more, processed by CBS bitstream filters like filter_units, to corrupt the heap or crash the application.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121685 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121685</link>
-    <guid isPermaLink="false">31d59cc93289e588b3ceed1009b50a97</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) contains multiple sets of hard-coded credentials. These include fleet‑wide credentials, including BasicAuth credentials for an Agora token service, AWS IAM access keys, AWS IoT MQTT credentials, and a Slack incoming webhook URL. These credentials are embedded directly in frodobot.bin and are accessible through static analysis of the publicly downloadable firmware. Extraction requires no special privileges.</description>
+    <title>CVE-2026-125228 - NVD - CVSS Score v4.0: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125228</link>
+    <guid isPermaLink="false">1ce3f427202d0403f1d993e0752540f3</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.8 | FFmpeg before 8.1.3 and 9.x before 9.0.2 contains an out-of-bounds read vulnerability in put_vector() in libavcodec/vorbisenc.c when NaN samples leave the codebook entry at -1. Attackers can supply audio with NaN float samples to the native Vorbis encoder, causing heap reads before arrays that crash the application or leak adjacent heap memory into output.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121686 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121686</link>
-    <guid isPermaLink="false">3f7cb45572e2db66606af6d6e2c46fb1</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) is vulnerable to unauthenticated, remote code execution via MQTT. A firmware method accepts arbitrary shell commands delivered via Amazon Web Services Internet of Things Message Queuing Telemetry Transport (AWS IoT MQTT) messages and executes them as root. Access is gated only by shared Internet of Things (IoT) credentials, with no per‑device authentication, enabling remote code execution as root across the fleet.</description>
+    <title>CVE-2026-125229 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125229</link>
+    <guid isPermaLink="false">05a847938306ac653ee9b52dc1cb31fe</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg through 9.0.2 contains an out-of-bounds memory access vulnerability in the encode_frame() function of libavcodec/huffyuvenc.c, because encode_init() never validates minimum frame dimensions for the median predictor. Attackers can supply a tiny video, such as a 2-pixel-wide or 1-2-pixel-tall frame, that causes negative sub_median_pred lengths and out-of-bounds reads and writes when transcoded to huffyuv or ffvhuff, crashing the encoder.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121687 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121687</link>
-    <guid isPermaLink="false">96fa6e86908ff07b8135c07513d28cad</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) contains several local interfaces that are exposed without authentication.
-1. HTTP REST API (port 80): motor control, telemetry/GPS/IMEI, plaintext WiFi password (GET /api/v1/wifi/status), join-arbitrary-WiFi, diagnostic export.
-2. ADB (Android Debug Bridge, port 5555) access to root shell
-3. SSH (port 22)</description>
+    <title>CVE-2026-125230 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125230</link>
+    <guid isPermaLink="false">c7bcfdacf579602aee67db583b9bf47a</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg through 9.0.2 contains an integer overflow vulnerability in the pcm_rechunk bitstream filter that allows attackers to trigger division by zero via a crafted channel count. Attackers can supply a file declaring a huge channel count that is remuxed into MXF, GXF or DAUD, overflowing sample_size and crashing the application.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121688 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121688</link>
-    <guid isPermaLink="false">a462ed776461eabee82e969e93c754d1</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) contains an insecure STM32 firmware update mechanism. The STM32 motor‑controller firmware is fetched over unencrypted HTTP. Integrity is validated only via MD5, with the hash provided in the same unprotected response. No code‑signing mechanism is implemented, allowing firmware to be replaced with potentially malicious code.</description>
+    <title>CVE-2026-125231 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125231</link>
+    <guid isPermaLink="false">a7dca32196be5c60b434390c0ba9ef76</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg 4.4 through 9.0.2 contains a NULL pointer dereference vulnerability in libavcodec/adxdec.c because adx_decode_header() updates the channel layout before validating the sample rate. Attackers can supply a crafted ADX/AAX stream with mid-stream new-extradata side data carrying an invalid sample rate, causing adx_decode() to write through NULL plane pointers and crash the application.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121689 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121689</link>
-    <guid isPermaLink="false">559346995c243e8eb58784035900874b</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (v6.2.4_6.2.5_0.614.0) exposes sensitive credentials through multiple insecure mechanisms. The Wi‑Fi PSK is stored in plaintext in wpa_supplicant.conf and is disclosed through unauthenticated API endpoints and diagnostic exports. Additionally, unauthenticated ADB access allows retrieval of the /etc/shadow file.</description>
+    <title>CVE-2026-125232 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125232</link>
+    <guid isPermaLink="false">3dd3f6d01d649de5c386294fb1c08e7f</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg through 9.0.2 contains a division by zero vulnerability in estimate_motion_b() in libavcodec/motion_est.c, caused by frame timestamp distances truncated to 16 bits. Attackers can supply input with timestamp gaps that are multiples of 65536, crashing MPEG-4 Part 2 or MPEG-1/2 B-frame encoding with SIGFPE.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121690 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121690</link>
-    <guid isPermaLink="false">277b374050ea3f64cae9256382c23afa</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS: não informado | FrodoBots EarthRover Mini+ firmware (version 6.2.4_6.2.5_0.614.0) executes code with unnecessary privileges. All processes run as root and the system lacks privilege separation. The compromise of any single service results in full administrative control of the device.</description>
+    <title>CVE-2026-125233 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125233</link>
+    <guid isPermaLink="false">ba041dd2825cc39a3eb7b1d64b446928</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in dvbsub_encode() in libavcodec/dvbsubenc.c that undercounts each CLUT segment header by two bytes. Attackers can supply a file with many bitmap subtitle rectangles that, when transcoded to the dvbsub encoder, writes past the output buffer and corrupts heap memory.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-122664 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122664</link>
-    <guid isPermaLink="false">e9886149d45d5d391a01dd2a05e16f66</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in VideoWhisper.com Broadcast Live Video videowhisper-live-streaming-integration allows Reflected XSS.This issue affects Broadcast Live Video: from n/a through 7.3.14.</description>
+    <title>CVE-2026-125234 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125234</link>
+    <guid isPermaLink="false">bca7e509db7ddeb2c0d5d6818f95cf4c</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg through 9.0.2 contains an integer overflow vulnerability in wavpack_encode_init() in libavcodec/wavpackenc.c that causes an infinite loop when computing block size from sample rate and channel count. Attackers can supply a crafted audio file, such as a WAV header declaring a huge sample rate with many channels, to hang applications transcoding to WavPack.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123364 - NVD - CVSS Score v4.0: 2.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123364</link>
-    <guid isPermaLink="false">b77e1292651fe835dce2359760d516b8</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 2.4 | OctoPrint provides a web interface for controlling consumer 3D printers. From 2.0.0rc1 until 2.0.0rc7, an authenticated user can supply a crafted default port or baudrate through a connect request to the bundled Serial Connector plugin. OctoPrint persists these values in printerConnection.preferred.parameters.port or printerConnection.preferred.parameters.baudrate and renders them as HTML when another user views the saved connection parameters, allowing script execution in that user's browser and actions within the user's OctoPrint access. This issue is fixed in version 2.0.0rc7.</description>
+    <title>CVE-2026-125235 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125235</link>
+    <guid isPermaLink="false">a1eb454fd4665b3e90c5af969c6c0773</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg through 9.0.2 contains a heap overflow vulnerability in libavcodec/qsvenc.c that allows attackers to corrupt memory by reusing an undersized pooled QSVFrame buffer when input dimensions increase. Attackers can supply crafted input whose resolution grows mid-stream, transcoded with Intel Quick Sync encoders without rescaling, to crash the application or corrupt heap memory.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123482 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123482</link>
-    <guid isPermaLink="false">3f9275d886a3a32e368276b0b9791d4c</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Crocoblock JetFormBuilder jetformbuilder allows Stored XSS.This issue affects JetFormBuilder: from n/a through 3.6.8.</description>
+    <title>CVE-2026-125236 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125236</link>
+    <guid isPermaLink="false">e201972921149ebfe5da0f6fc35781ec</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg through 9.0.2 contains a memory leak vulnerability in alloc_frame() in libavcodec/vvc/refs.c that leaks SPS and PPS references when frame buffer allocation fails. Attackers can supply a crafted VVC (H.266) stream that repeatedly replaces parameter sets, steadily growing memory use and causing denial of service.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124683 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124683</link>
-    <guid isPermaLink="false">e5350c962879129a2f580cc83f4752f0</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 8.7 | Eclipse Langium versions 3.2.0 through 4.4.0 contain an inefficient algorithmic complexity issue (CWE-407) in the opt-in IndentationAwareTokenBuilder and IndentationAwareLexer. When producing DEDENT tokens, the token builder recomputes line numbers by re-scanning the entire preceding document text. A document whose indentation changes on most lines then takes quadratic time to tokenize. Because tokenization is synchronous, a crafted document of a few hundred kilobytes can block the Node.js event loop for tens of seconds. That causes a DoS for every user served by the same process. Languages built with the DefaultLexer and DefaultTokenBuilder are unaffected.</description>
+    <title>CVE-2026-125237 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125237</link>
+    <guid isPermaLink="false">9ecd4d7a7ddcfa8205da8040f2289181</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.7 | FFmpeg 8.1 through 9.0.2 contains a denial of service vulnerability in libavcodec/dpx.c that leaves dpx-&gt;hwaccel_picture_private allocated when Vulkan hwaccel callbacks fail. Attackers can supply crafted DPX images that make start_frame, decode_slice or end_frame fail, triggering an av_assert0 abort on the next frame and terminating the decoding application.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119755 - NVD - CVSS Score v4.0: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119755</link>
-    <guid isPermaLink="false">77a6ccbc5dd1bb280a303dede1e6ab00</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.5 | Tasmota through 16.0.0, fixed in commit 1cb7ebc, contains a cross-site request forgery vulnerability that allows unauthenticated attackers to bypass Referer-based CSRF protection in HttpCheckPriviledgedAccess() by crafting a Referer header where the device hostname or IP appears as a substring immediately after http://.evil.com/. Attackers can lure an administrator on the device's network to a malicious page to issue arbitrary console commands and reconfigure Wi-Fi, MQTT, settings, or firmware on devices lacking a WebPassword.</description>
+    <title>CVE-2026-125238 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125238</link>
+    <guid isPermaLink="false">2da648f3a56a782107b43d460657bb29</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg through 9.0.2 contains a reachable assertion vulnerability in libxevd_receive_frame() in libavcodec/libxevd.c that returns success when an access unit produces no frame. Attackers can supply a crafted EVC file with truncated or picture-less access units to trigger the av_assert0() on frame-&gt;private_ref, aborting any decoding application.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119756 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119756</link>
-    <guid isPermaLink="false">ea212910bffb3c3251f11a0dee192ec6</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 9.3 | Tasmota through 16.0.0, fixed in commit e97e1e4, contains a heap out-of-bounds write vulnerability in SendReceiveDeviceGroupMessage() that allows unauthenticated attackers on the local network to corrupt heap memory by sending crafted Device Groups messages over UDP port 4447 that cause the log_remaining counter to go negative and writes to exceed the fixed 512-byte buffer. Attackers can exploit this flaw to crash the device or potentially achieve native code execution on ESP8266 and ESP32 platforms that lack ASLR and heap cookies.</description>
+    <title>CVE-2026-125239 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125239</link>
+    <guid isPermaLink="false">68d5b263e5ad39ee666a36cf30cc5dce</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in ff_dxva2_hevc_fill_picture_parameters() that allows attackers to corrupt memory via unbounded non-uniform tile counts. Attackers can supply crafted HEVC bitstreams with many non-uniformly spaced tiles to write controlled 16-bit values past fixed-size DXVA arrays during DXVA2, D3D11VA, or D3D12VA decoding on Windows.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123270 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123270</link>
-    <guid isPermaLink="false">6f8da330cde6d43619432d0243f01e88</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 9.8 | Redpanda Connect versions 4.39 to 4.110 contain a missing authentication vulnerability that enables unauthenticated remote code execution (RCE). In streams mode, the management HTTP API is exposed on `0.0.0.0:4195`, but authentication is disabled by default and there is no authentication gate protecting the stream CRUD routes. An unauthenticated attacker with network access to TCP/4195 can `POST` a malicious pipeline definition to `/streams/{id}` that includes code-executing processors such as `command`, `subprocess`, `ffi`, or unsafe `sql_raw`, thereby achieving arbitrary RCE on the host with the permissions of the Redpanda Connect service account. Because pipelines can also return command output in-band via HTTP, this vulnerability enables full host compromise, credential theft, and data exfiltration with no user interaction or credentials required.  
-
-Starting with v4.111, the API endpoint was reconfigured as opt-in, so this and later versions are no longer vulnerable by default. However, RCE remains achievable on v4.111 and later if the management API is manually enabled via the `--bind-http` flag.</description>
+    <title>CVE-2026-125240 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125240</link>
+    <guid isPermaLink="false">346282ba0333d247a2d0a42cdfdd8bce</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg through 9.0.2 contains a resource leak vulnerability in svt_jpegxs_dec_decode() in libsvtjpegxsdec.c that leaks decoder instances when ff_set_dimensions() rejects frame dimensions. Attackers can supply a crafted JPEG XS stream, for example in MPEG-TS, with oversized headers to repeatedly leak decoder threads and buffers, exhausting memory.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123367 - NVD - CVSS Score v3.1: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123367</link>
-    <guid isPermaLink="false">f1b1514e1931cb79ed405e246f8927a3</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.4 | Thor Vector Graphics (ThorVG) is a production-ready vector graphics engine. Prior to 1.1.2, the bundled jpgd JPEG decoder accepts duplicate component selectors in an SOS scan header, causing each duplicate to increase m_blocks_per_mcu without checking the buffers sized from the frame components. A crafted grayscale JPEG can repeat its component in the SOS header, causing decode paths in src/loaders/jpg/tvgJpgd.cpp to write beyond heap buffers sized for one component. The issue is reachable through direct JPEG decoding and through JPEG images embedded in Lottie content, and confirmed impact is memory corruption followed by a process crash. This issue is fixed in version 1.1.2.</description>
+    <title>CVE-2026-125241 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125241</link>
+    <guid isPermaLink="false">18d2e3f6ad4baf1262213b081f709a9c</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg through 9.0.2 contains a heap buffer overflow vulnerability in libavcodec/flicvideo.c that allows attackers to write out of bounds because check_pixel_ptr() checks only one bound with negative-stride frames. Attackers can supply a crafted FLIC file whose RLE and delta chunks write pixel data past frame storage, corrupting heap memory to crash applications or possibly execute code.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123368 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123368</link>
-    <guid isPermaLink="false">947ae35322944f9f1aeff974b112bd08</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 2.3 | compose-lint is a Docker Compose security linter that identifies dangerous misconfigurations before deployment. From 0.22.0 until 0.31.0, compose-lint follows a sibling .env symbolic link outside the project without applying its normal containment check. From 0.28.0, the same gap also affects an include project_directory link outside the project. A pull request can reference a variable from the linked file, causing substitution to place runner file or process-environment data into finding messages written to logs, JSON, SARIF artifacts, and Code Scanning alerts. Reading /proc/self/environ can expose the remainder of the linter process environment because NUL-separated entries are treated as one value, although disclosure requires a workflow that processes untrusted changes with useful environment data and GitHub normally withholds secrets from fork pull requests. The pass or fail result is not changed. This issue is fixed in version 0.31.0.</description>
+    <title>CVE-2026-125242 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125242</link>
+    <guid isPermaLink="false">6e2aa6e606c967d91822a1de4282f9c2</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.7 | FFmpeg through 9.0.2 contains a memory leak vulnerability in libavcodec/vdpau.c that allows attackers to exhaust heap memory by aborting pictures before end_frame. Attackers can supply crafted H.264 streams with malformed NAL units that repeatedly abandon pictures, leaking the bitstream_buffers table continuously and causing denial of service.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123369 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123369</link>
-    <guid isPermaLink="false">c17140eade85797523f34269174ceef0</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.3 | compose-lint is a Docker Compose security linter that identifies dangerous misconfigurations before deployment. Prior to 0.31.0, compose-lint prints attacker-controlled service names, environment keys, file lines, and other Compose text without neutralizing GitHub Actions and Azure Pipelines workflow-command openers. When a workflow processes a pull request, legacy ##[ commands or a line-leading double-colon command can create false annotations, hide log regions, mask selected strings, or invoke other commands recognized by the runner. The affected text report paths do not alter the compose-lint exit code or pass or fail result, but they can misrepresent the CI output presented to reviewers. This issue is fixed in version 0.31.0.</description>
+    <title>CVE-2026-125243 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125243</link>
+    <guid isPermaLink="false">1d3d1f709cb04dd3fad8a22361220fe4</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg through 9.0.2 contains an uninitialized memory disclosure vulnerability in ff_jpegls_decode_picture() in libavcodec/jpeglsdec.c, which decodes 16-bit line-interleaved JPEG-LS scans as 8-bit samples. Attackers can supply a crafted single-component JPEG-LS image with the ILV byte set to 1, causing decoded GRAY16 frames to expose leftover heap memory.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123370 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123370</link>
-    <guid isPermaLink="false">f0fe090383c28a359a0dcce6c71b0292</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.1 | compose-lint is a Docker Compose security linter that identifies dangerous misconfigurations before deployment. From 0.9.0 until 0.18.0, compose-lint's YAML parser recognizes lone carriage returns and Unicode line separators U+0085, U+2028, and U+2029 as line breaks while fix position conversion counts only newline characters. A pull request can place one of these separators in a quoted value so fix --apply shifts each later edit and deletes the line after the selected target, including an unselected network or other security setting. The resulting Compose file can remain valid, post-edit checks can pass, and the command can report a successful fix even though the dry-run diff was the only place showing the extra deletion. This issue is fixed in version 0.18.0.</description>
+    <title>CVE-2026-125244 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125244</link>
+    <guid isPermaLink="false">afd24481067051af8ecaefda59cd881b</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 8.1.3 and 9.x before 9.0.2 contains an out-of-bounds write vulnerability in the VVC decoder's sh_entry_points() function in libavcodec/vvc/ps.c. Attackers can supply a crafted VVC (H.266) bitstream whose SPS/PPS tile and WPP layout produces excess entry points, overflowing entry_point_start_ctu and corrupting decoder memory.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123371 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123371</link>
-    <guid isPermaLink="false">d3bac57053daefc52cf8c83a840c9afa</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 2.3 | compose-lint is a Docker Compose security linter that identifies dangerous misconfigurations before deployment. From 0.2.0 until 0.32.0, compose-lint automatically follows a .compose-lint.yml policy-file symbolic link outside the project and includes part of the target line when that external file fails YAML parsing. A pull request can point the policy file at a runner credential file, causing about 30 characters around an attacker-uncontrolled parse position to appear in standard error, JSON errors, and SARIF tool execution notifications uploaded by the GitHub Action. The run exits with an error and the attacker cannot select the exact disclosed line, but public logs or Code Scanning output can reveal part of the target. This issue is fixed in version 0.32.0.</description>
+    <title>CVE-2026-125245 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125245</link>
+    <guid isPermaLink="false">7904cf76592ada43249077ebefca2c34</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.7 | FFmpeg through 9.0.2 contains a memory leak vulnerability in ff_mjpeg_decode_sof() in libavcodec/mjpegdec.c, which overwrites the hwaccel_picture_private pointer without freeing it. Attackers can supply crafted MJPEG streams with repeated SOF markers or failing frames to leak hwaccel private data and hardware buffers under VAAPI or NVDEC decoding.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123372 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123372</link>
-    <guid isPermaLink="false">d4156e12d8787363170e4fad3220b831</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 2.3 | compose-lint is a Docker Compose security linter that identifies dangerous misconfigurations before deployment. From 0.22.0 until 0.32.0, compose-lint substitutes values from a sibling .env file into image fields and quotes the resolved value in CL-0004 and CL-0019 finding messages and fix text. In a workflow that writes secrets into that file and then lints untrusted pull-request content, an attacker can reference a secret variable so its whole value reaches the job log, JSON output, SARIF artifacts, and Code Scanning alerts. Fork pull requests normally lack secrets, so exploitation requires a secret-bearing workflow such as pull_request_target, same-repository branches, or a retained .env on a self-hosted runner, and the pass or fail result is unchanged. This issue is fixed in version 0.32.0.</description>
+    <title>CVE-2026-125246 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125246</link>
+    <guid isPermaLink="false">dad2a2ff2c968dcb6907d5efb5060505</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 5.7 | FFmpeg through 9.0.2 contains a denial of service vulnerability in cbs_jpeg_assemble_fragment() that miscounts 0xff stuffing bytes in JPEG scan headers. Attackers can supply a crafted JPEG/MJPEG stream with 0xff in the scan header, triggering an av_assert0 abort when CBS-based bitstream filters process it.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123373 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123373</link>
-    <guid isPermaLink="false">dffb554ec210e81e096afc46382df06a</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 2.3 | compose-lint is a Docker Compose security linter that identifies dangerous misconfigurations before deployment. From 0.2.0 until 0.25.0, compose-lint follows a project-controlled symbolic link used as the Compose file outside the project. The same issue affects compose.override.yml and a COMPOSE_FILE entry from 0.22.0, and an env_file target from 0.23.0. If an external Compose-related target fails YAML parsing, the error quotes an attacker-uncontrolled line into standard error, JSON errors, and SARIF notifications, while an external env_file can expose credential-like key names through CL-0020 and CL-0021 findings. The attacker selects the target path but not the exact parser-failure line, values from env_file are not printed, and the pass or fail result is unchanged. This issue is fixed in version 0.25.0.</description>
+    <title>CVE-2026-125247 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125247</link>
+    <guid isPermaLink="false">964d174363a52248ae27fd28b0437e27</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg through 9.0.2 contains an integer overflow vulnerability in dng_decode_tiles() that allows attackers to leak uninitialized memory via crafted DNG tile dimensions. Attackers can set TileWidth or TileLength near INT_MAX so the tile loop never runs, outputting a frame exposing uninitialized or stale heap memory.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123796 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123796</link>
-    <guid isPermaLink="false">06ce509f80d7cb77a298bb536889e320</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 2.3 | compose-lint is a Docker Compose security linter that identifies dangerous misconfigurations before deployment. From 0.32.0 until 0.33.0, compose-lint's incomplete remediation for .env secret disclosure checks the 20,000-finding limit before replacing resolved values with their variable references. A pull request can combine a secret-referencing image field with aliased content that produces more than 20,000 findings, causing the early-stop path to emit already graded findings with the resolved secret value in text, JSON, SARIF, and Code Scanning output. Exploitation requires a workflow that writes secrets into the sibling .env and lints untrusted changes, and the run exits 2 unless --allow-partial-coverage is used. This issue is fixed in version 0.33.0.</description>
+    <title>CVE-2026-125248 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125248</link>
+    <guid isPermaLink="false">7195043adab9281a259632a204b4c134</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg 9.0 through 9.0.2 contains an integer overflow vulnerability in libavcodec/ffv1enc_vulkan.c that undersizes the float remap GPU buffer for large frames. Attackers can supply large GBRPF32 or GBRAPF32 images or videos that, when transcoded to FFV1 with the Vulkan encoder, trigger out-of-bounds GPU memory writes causing crashes or memory corruption.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123797 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123797</link>
-    <guid isPermaLink="false">a054073616650a7d1e7eadb67bc7f312</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 7.5 | SuperTokens Core is an open source authentication server. Prior to 11.3.6, 11.4.6, and 12.0.8, app-specific management requests using an unknown tenant path and an older supported cdi-version can bypass API-key and public-tenant enforcement. In src/main/java/io/supertokens/webserver/WebserverAPI.java, checkIPAccess and assertThatAPIKeyCheckPasses suppress TenantOrAppNotFoundException, while the later app-specific handler resolves app/public storage and the public-tenant guard applies only to CDI versions 5.0 and later. An unauthenticated caller able to reach the Core endpoint can therefore use PUT /ghosttenant/recipe/role and GET /ghosttenant/recipe/roles to create and enumerate application roles without a valid API key. This issue is fixed in versions 11.3.6, 11.4.6, and 12.0.8.</description>
+    <title>CVE-2026-125249 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125249</link>
+    <guid isPermaLink="false">dc4e69a2d6b7c31727e67dfaf9cd30de</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg 7.1 through 9.0.2 contains an integer overflow in ff_vk_decode_add_slice() in libavcodec/vulkan_decode.c that miscalculates the Vulkan hwaccel bitstream buffer size. Attackers can supply a crafted stream with over 2 GiB of slice data per frame, causing memcpy() to write past a smaller pooled host-mapped buffer.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125063 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125063</link>
-    <guid isPermaLink="false">eb0c566ed58f018b28c190ef1bac0af2</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 4.3 | A flaw was found in the rrule validation of schedules in automation controller. Several non-anchored regular expressions with lazy wildcard prefixes are applied to the user-supplied rrule value; when the expected DTSTART/RRULE tokens are absent, validation time grows quadratically with the length of the value. An authenticated user can submit a large token-free rrule through the REST API, including the schedule preview endpoint, which requires no resource-level permissions; validation runs synchronously in the API web worker, so a single such request occupies a worker for an extended time and repeated requests can exhaust the web worker pool, denying access to the API and web UI while the attack is sustained. The impact is limited to availability.</description>
+    <title>CVE-2026-125250 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125250</link>
+    <guid isPermaLink="false">632a9c2efad719cb50bfb991f7413352</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg through 9.0.2 contains a heap buffer overflow in the GIF encoder's gif_image_write_image() in libavcodec/gif.c because shrunk_buf is sized from the first frame's linesize. Attackers can supply PAL8 video whose frame linesize grows mid-stream, causing remap_frame_to_palette() to write past shrunk_buf and corrupt the heap during GIF transcoding.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-19706 - NVD - CVSS Score v3.1: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19706</link>
-    <guid isPermaLink="false">39746847686fcfcc064e95aea6130585</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 8.3 | During ABI bootstrap, the bootstrap node's approve-csr.service approves and signs every CSR without identity validation.
-
-An attacker on the install network can retrieve the unauthenticated Ignition file (ports 22623/22624), extract a limited kubeconfig, submit a CSR for CN=system:admin, receive the signed certificate, and gain full cluster-admin access.
-
-Exploitable only during the narrow bootstrap window.</description>
+    <title>CVE-2026-125251 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125251</link>
+    <guid isPermaLink="false">03e22154ec46bf33a399451108cd1203</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg through 9.0.2 contains an integer overflow vulnerability in the VVC decoder alloc_frame() function in libavcodec/vvc/refs.c that undersizes the reference picture list allocation on 32-bit builds. Attackers can supply a crafted VVC (H.266) file with a very large number of NAL units per access unit to trigger heap out-of-bounds writes and corrupt memory.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-60117 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60117</link>
-    <guid isPermaLink="false">b5587e259f30da774e7060cec13aec6e</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 6.9 | The Android implementation of the Flutter/Dart receive_sharing_intent package, versions 1.4.1 through 1.9.0, contains a path traversal vulnerability in FileDirectory.getDataColumn that allows a malicious co-resident application to write files outside the intended cache directory by supplying a crafted _display_name value from an untrusted ContentProvider. Attackers can use a path-shaped display name ../databases/proof.txt combined with a controlled content stream to write to arbitrary locations within the receiving application's private sandbox under its UID, achieving file overwrite without user interaction.</description>
+    <title>CVE-2026-12977 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12977</link>
+    <guid isPermaLink="false">0c69c5410af768c2e31da02987f47036</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 8.8 | A flaw was found in the deployment-operation family of WildFly Core. Certain handlers, such as upload-deployment-url, lack proper sensitivity classification, allowing an administrator with the restricted &quot;Maintainer&quot; role to read sensitive configuration files. This can lead to the exfiltration of credentials and full administrative control (SuperUser) of the server.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-84503 - NVD - CVSS Score v3.1: 6.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84503</link>
-    <guid isPermaLink="false">63e48290672a61e7a15b77191dc66535</guid>
-    <description>Monday 9 November 2026 | NVD | CVSS Score v3.1: 6.7 | A flaw was found in ansible-core's ansible.builtin.git module. The module
-invokes git (ls-remote, clone, fetch) with the repository URL as a positional
-argument and without a &quot;--&quot; separator, so a repository URL that begins with a
-dash is interpreted by git as a command-line option. A caller that passes an
-attacker-controlled repository URL to the module can trigger argument
-injection (for example --upload-pack/--exec), resulting in arbitrary command
-execution on the host running the module.</description>
+    <title>CVE-2026-70555 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-70555</link>
+    <guid isPermaLink="false">ba2e554e52f12414acb3cabc07ad9b25</guid>
+    <description>Monday 9 November 2026 | NVD | CVSS Score v4.0: 7.1 | rConfig Core 8.2.3 before 8.2.13 contains an information disclosure vulnerability that allows authenticated users to retrieve cleartext SSH, Telnet, and enable passwords for managed devices through the device-credentials API due to automatic decryption on read and missing authorization checks. Attackers can request GET /api/device-credentials, GET /api/device-credentials/{id}, or the external GET /api/v1/device-credentials endpoint, which authenticates any valid token as the seeded administrator account, to statelessly exfiltrate all stored plaintext device credentials. rConfig Pro is not affected.</description>
     <category>NVD</category>
     <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
   </item>
