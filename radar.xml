@@ -5,324 +5,382 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 17:01:39 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 19:02:35 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-111259 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111259</link>
-    <guid isPermaLink="false">ecca40bfd038b45697e5fef5fcbad5df</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The embedded server generates HTTP session identifiers with a non-cryptographic random number generator by default. A remote attacker who observes a session identifier can predict the identifiers issued to other users and hijack their sessions, if the application relies on HTTP sessions for authentication. Users are recommended to upgrade to version 10.3.0 or 11.0.0-M2, which fix the issue.</description>
+    <title>CVE-2026-50249 - NVD - CVSS Score v4.0: 5.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-50249</link>
+    <guid isPermaLink="false">51e48a713011b778f78cdd121a2587ce</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.6 | Out-of-bounds read in the GenerationSetup for the Intel(R) Server Board D50DNP and Intel(R) Server Board M50FCP within Ring 0 UEFI may allow an information disclosure. Startup code and smm adversary with a privileged user combined with a high complexity attack may enable data exposure. This result may potentially occur via local access when attack requirements are present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (none) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-111260 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111260</link>
-    <guid isPermaLink="false">231ca31686ca1c8afec70c5dfcdd1cd6</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The Jakarta Security OpenID Connect authentication mechanism generates the state and nonce values with a non-cryptographic random number generator and insufficient entropy. A remote attacker who predicts these values can forge an authentication callback that logs a victim into the attacker's account, and the replay protection for ID tokens is weakened. Users are recommended to upgrade to version 10.3.0 or 11.0.0-M2, which fix the issue.</description>
+    <title>CVE-2026-52899 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-52899</link>
+    <guid isPermaLink="false">04f14c9b755427d539e67c8447742674</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.9 | Deserialization of untrusted data for some BigDL software before version 2.5.0b1 within Ring 3: User Applications may allow an escalation of privilege. Unprivileged software adversary with an unauthenticated user combined with a low complexity attack may enable escalation of privilege. This result may potentially occur via network access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (low), integrity (low) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-111261 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111261</link>
-    <guid isPermaLink="false">91af387902a0228b9d45cc0e09d4f4e9</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The Jakarta Security LDAP identity store accepts an empty password as valid if the directory server allows unauthenticated binds, which some directory servers do by default. A remote attacker can then authenticate as any existing user without knowing the password. Users are recommended to upgrade to version 10.3.0 or 11.0.0-M2, which fix the issue.</description>
+    <title>CVE-2026-55709 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55709</link>
+    <guid isPermaLink="false">e4d8075871e410064df44736a93dd903</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.9 | Loop with unreachable exit condition ('infinite loop') in the MigTD's GetQuote for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. System software adversary with an unauthenticated user combined with a low complexity attack may enable denial of service. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (none) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-112191 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112191</link>
-    <guid isPermaLink="false">2659dcc5a2337a16e1b7e33b1d024256</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.6 | In Eclipse Kura versions 5.4.0 through 5.6.2, the Identity REST APIs (identity/v1, and identity/v2 since 5.5.0, provided by org.eclipse.kura.rest.identity.provider) do not check identity and permission management requests against the permissions of the requesting identity. An authenticated identity holding the rest.identity permission, but not kura.admin, can assign any permission to any identity, including kura.admin to itself. It can also change the password of, or delete, identities holding more privileges than its own, including administrators, and create or delete permissions. This allows escalation to full administrative privileges and can lock legitimate administrators out of the device. The issue is fixed in Eclipse Kura 5.6.3.</description>
+    <title>CVE-2026-55716 - NVD - CVSS Score v4.0: 5.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55716</link>
+    <guid isPermaLink="false">c98245f3b6be9acd86cecceffd1b7368</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.6 | Out-of-bounds read in the CheckUefiVgaMode for the Intel(R) Server Board D50DNP and Intel(R) Server Board M50FCP within Ring 0 UEFI may allow an information disclosure. Startup code and smm adversary with a privileged user combined with a high complexity attack may enable data exposure. This result may potentially occur via local access when attack requirements are present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (none) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-11315 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11315</link>
-    <guid isPermaLink="false">e3dcf47f64e54dcc57795d5057caaa3d</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 4.3 | A out-of-bounds read vulnerability exists in the dr_mp3 drmp3_init_internal functionality of dr_libs (version(s): 0.7.3). A specially crafted .mp3 file can lead to an out-of-bounds read. An attacker can provide a malicious file to trigger this vulnerability.</description>
+    <title>CVE-2026-56432 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56432</link>
+    <guid isPermaLink="false">7b3459c8b6e36deced5f7692829d5d6e</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.2 | Unintended proxy or intermediary ('confused deputy') in the MigTD signing for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an escalation of privilege. System software adversary with a privileged user combined with a low complexity attack may enable escalation of privilege. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (high) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (high), integrity (high) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-11316 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11316</link>
-    <guid isPermaLink="false">8577882d4486dd77857a3307958e802e</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 8.8 | A out-of-bounds write vulnerability exists in the dr_wav drwav__read_cue_to_metadata_obj functionality of dr_libs (version(s): 0.14.5). A specially crafted .wav file can lead to an out-of-bounds write. An attacker can provide a malicious file to trigger this vulnerability.</description>
+    <title>CVE-2026-56435 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56435</link>
+    <guid isPermaLink="false">e159742899340197327cdb6fc093209b</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.7 | Out-of-bounds write in the XmlCliCommonDxe for the Intel(R) Server Board D50DNP and Intel(R) Server Board M50FCP within Ring 0 UEFI may allow an escalation of privilege. Startup code and smm adversary with a privileged user combined with a high complexity attack may enable local code execution. This result may potentially occur via local access when attack requirements are present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (high), integrity (high) and availability (high) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121653 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121653</link>
-    <guid isPermaLink="false">2c6b809690f8df33e3d2cf3813744572</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 9.8 | SQL injection in the Core of Ivanti Endpoint Manager before version 2024 SU8 allows a remote unauthenticated attacker to achieve remote code execution.</description>
+    <title>CVE-2026-56440 - NVD - CVSS Score v4.0: 4.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56440</link>
+    <guid isPermaLink="false">27cff22d5b0980a65f44f0f0b8f07cc5</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 4.6 | Improper input validation for some BigDL before version 2.5.0b1 within Ring 3: User Applications may allow an escalation of privilege. Unprivileged software adversary with an unauthenticated user combined with a low complexity attack may enable escalation of privilege. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires active user interaction. The potential vulnerability may impact the confidentiality (low), integrity (low) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121683 - NVD - CVSS Score v3.1: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121683</link>
-    <guid isPermaLink="false">b300d70421525d370d0f57b07800ea2a</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 9.4 | Missing authentication in Ivanti Cloud Services Application version 5.0.8 allows a remote unauthenticated attacker to add and delete arbitrary trusted EPM Core certificate entries.</description>
+    <title>CVE-2026-56759 - NVD - CVSS Score v4.0: 6.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-56759</link>
+    <guid isPermaLink="false">3a301910fc9b7e9284b9395a9ed6ed98</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.7 | Improper input validation in the MigTD PCI BAR handling for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an escalation of privilege. System software adversary with a privileged user combined with a low complexity attack may enable data corruption. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (high) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123179 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123179</link>
-    <guid isPermaLink="false">8dc5714a376f6b074895e64f52edd255</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 5.5 | An insecure default initialization of resource in the Tomcat shutdown listener of Ivanti Ivanti Sentry before versions 10.7.4 and 10.8.3 allows a local authenticated attacker to cause a denial of service.</description>
+    <title>CVE-2026-57882 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57882</link>
+    <guid isPermaLink="false">a12919bd449b61b71da0f26913508971</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.7 | Out-of-bounds write in the XmlCliCommonDxe for the Intel(R) Server Board D50DNP and Intel(R) Server Board M50FCP within Ring 0 UEFI may allow an escalation of privilege. Startup code and smm adversary with a privileged user combined with a high complexity attack may enable local code execution. This result may potentially occur via local access when attack requirements are present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (high), integrity (high) and availability (high) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123181 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123181</link>
-    <guid isPermaLink="false">694d6aac0aef3ab13d1282a391bd3534</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 5.5 | A path traversal vulnerability in Ivanti Sentry before versions 10.7.4 and 10.8.3 allows a remote authenticated attacker with administrative privileges to create arbitrary directories and files with root privileges.</description>
+    <title>CVE-2026-57890 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57890</link>
+    <guid isPermaLink="false">2d41d53505e6ee32253600092366ae05</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.7 | Improper cleanup on thrown exception in the MigTD's SPDM responder for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an information disclosure. Network adversary with an unauthenticated user combined with a low complexity attack may enable data exposure. This result may potentially occur via network access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (none) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124036 - NVD - CVSS Score v4.0: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124036</link>
-    <guid isPermaLink="false">3abab9a4850e8f236e87679c73be9b02</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 7.6 | Missing authorization checks in the visual alert feature of FlockOS, Flock's hosted public safety platform, prior to 2026-09-28, allowed an authenticated user with permission to manage saved searches in their own organization to read, modify or delete another organization's saved-search alerts and change their recipients, given the alert's identifier, and to create alerts attributed to another organization. Flock remediated the issue in the hosted service on 2026-09-28; no customer action is required.</description>
+    <title>CVE-2026-57891 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57891</link>
+    <guid isPermaLink="false">d97d6eae0fc77ceda20b8cf8bd99e77e</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.7 | Out-of-bounds write in the XmlCliCommonDxe for the Intel(R) Server Board D50DNP and Intel(R) Server Board M50FCP within Ring 0 UEFI may allow an escalation of privilege. System software adversary with a privileged user combined with a high complexity attack may enable local code execution. This result may potentially occur via local access when attack requirements are present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (high), integrity (high) and availability (high) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124037 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124037</link>
-    <guid isPermaLink="false">7545c72d137b97155a14c9ec9329d238</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.2 | An information exposure flaw in the public access-list sign-up feature of the Flock Safety Platform, present from 2026-06-23 to 2026-10-22, allowed a remote, unauthenticated attacker who had a community's public sign-up link and a registered vehicle's license plate to retrieve that registrant's name, email address, home address and approval status. Each lookup required solving a CAPTCHA. No license plate reader detections, images or video were exposed. Flock remediated the issue in the hosted service on 2026-10-22; no customer action is required.</description>
+    <title>CVE-2026-57892 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57892</link>
+    <guid isPermaLink="false">d7a6a5e8e5c3549d085408d62e6dae29</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.8 | Insufficient granularity of access control in the MigTD v2 policy evaluation engine for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an escalation of privilege. Network adversary with an unauthenticated user combined with a high complexity attack may enable escalation of privilege. This result may potentially occur via adjacent access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (high), integrity (high) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124038 - NVD - CVSS Score v4.0: 1.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124038</link>
-    <guid isPermaLink="false">a568384fc33a735af3a50186088e58cc</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 1.0 | An uncontrolled XML entity expansion vulnerability in the Flock Installer app for Android before version 2.35.0 allows an attacker who has a valid technician account and controls or impersonates the camera being set up to crash the app, on devices running Android 10, 11 or 12, by returning a camera configuration response that contains nested XML entity declarations. The vulnerability does not allow the attacker to read or change data on the device, and no customer license plate, video or location data is exposed. Android 13 and later reject the response. The issue is fixed in version 2.35.0; update to 2.35.0 or later.</description>
+    <title>CVE-2026-57893 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57893</link>
+    <guid isPermaLink="false">ac3c6de037cdf409d460b22c91299076</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.8 | Incomplete internal state distinction in the MigTD's SPDM responder for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an escalation of privilege. System software adversary with a privileged user combined with a low complexity attack may enable data corruption. This result may potentially occur via adjacent access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (high) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125747 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125747</link>
-    <guid isPermaLink="false">ced560e2b887f403b3f855ae13dd43ca</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.3 | ZenTao PMS through 22.7 contains a missing object-level authorization vulnerability in module/build/control.php that allows authenticated users to modify builds in projects they do not belong to. Attackers holding build privileges in any project can supply sequential buildID values to delete, edit, or relink stories and bugs on builds in foreign or private projects.</description>
+    <title>CVE-2026-59771 - NVD - CVSS Score v4.0: 6.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59771</link>
+    <guid isPermaLink="false">e51557ebe3a57f3356f8238fdc3cbbdf</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.7 | Improper validation of array index in the MigTD's virtio-serial driver for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. System software adversary with a privileged user combined with a low complexity attack may enable denial of service. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (none) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125748 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125748</link>
-    <guid isPermaLink="false">5ffb9c924b2eeb19780214b9320bf5a2</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.3 | Parabol before 15.21.2 contains a missing authorization vulnerability in the addReactjiToReactable GraphQL mutation that allows authenticated users to tamper with reactions on other organizations' content. Attackers can pair their own meetingId with a reactableId of another tenant's reflection, comment, or sequential team prompt response to add or remove their reactions.</description>
+    <title>CVE-2026-60020 - NVD - CVSS Score v4.0: 4.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60020</link>
+    <guid isPermaLink="false">291544b450a94ff849a08522d4636bcd</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 4.6 | Missing release of memory after effective lifetime in the MigTD virtio-serial driver for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. System software adversary with a privileged user combined with a low complexity attack may enable denial of service. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (none) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125749 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125749</link>
-    <guid isPermaLink="false">806d348ea3066639c0aee34564751b91</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 2.3 | TaxHacker through 0.8.5 contains an insecure direct object reference vulnerability in app/(app)/settings/actions.ts that allows authenticated users to modify other users' data by supplying an arbitrary userId. Attackers can invoke Server Actions like deleteCategoryAction or editFieldAction with a victim's UUID to delete categories, clear transaction assignments, or alter LLM prompts.</description>
+    <title>CVE-2026-60059 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60059</link>
+    <guid isPermaLink="false">0b9be0b1f4adf39348c92070c1a41f17</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 4.8 | Use of uninitialized resource in the MigTD memory for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an information disclosure. Network adversary with a privileged user combined with a low complexity attack may enable data exposure. This result may potentially occur via adjacent access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (low), integrity (none) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125750 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125750</link>
-    <guid isPermaLink="false">dc7b8c9f12b29e35082c9a62cd60ec55</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 7.1 | Firekylin through 2.18.1 contains an improper authorization vulnerability that allows editor-role users to read administrator-only secrets because the admin API base guard permits all GET actions. Editors can query options.js for TOTP secrets, push credentials, and cloud storage keys, or user.js for other users' app_key/app_secret to publish posts as administrators via admin/post_push.</description>
+    <title>CVE-2026-60071 - NVD - CVSS Score v4.0: 6.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60071</link>
+    <guid isPermaLink="false">f4d2afbbf2b47bce8ee78f98f765c2a2</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.7 | Improper validation of specified quantity in input in the MigTD vsock packet handling for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. System software adversary with a privileged user combined with a low complexity attack may enable denial of service. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (none) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125751 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125751</link>
-    <guid isPermaLink="false">6440aedac6c25c5ca6002f29ab5cf4e5</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 2.3 | Meteroid before 2.2.0 contains an authorization bypass vulnerability in the ApiTokensService GetApiTokenById gRPC handler that fails to apply the caller's tenant context. Authenticated users with settings:read permission can supply another tenant's API token ID to obtain its Argon2 secret hash and owning tenant ID.</description>
+    <title>CVE-2026-60133 - NVD - CVSS Score v4.0: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60133</link>
+    <guid isPermaLink="false">d2fd374a69cb4a34ee35350bf0253c74</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.8 | Integer overflow in the MigTD vsock for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. Unprivileged software adversary with an authenticated user combined with a high complexity attack may enable denial of service. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (low) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125752 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125752</link>
-    <guid isPermaLink="false">bf354c99d1a8b8c7b8b3864cd22e1dd6</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 2.3 | Meteroid before 2.2.0 contains a cross-tenant authorization bypass vulnerability in the CouponsService UpdateCouponStatus gRPC handler, whose UPDATE query filters only on coupon id and ignores tenant ID. Authenticated users with catalog:manage or a tenant-scoped API key can supply another tenant's coupon ID to disable, archive, or re-enable that coupon and receive its details.</description>
+    <title>CVE-2026-60138 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60138</link>
+    <guid isPermaLink="false">12ae1afbc848421fb948e845e4821c65</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.4 | Use of out-of-range pointer offset in the MigTD's virtio-vsock implementation for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an escalation of privilege. System software adversary with a privileged user combined with a low complexity attack may enable escalation of privilege. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125753 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125753</link>
-    <guid isPermaLink="false">f8d973ca9999820842b68c9f3546c4bc</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.2 | ABP Framework 2.9.0 before 10.6.2 and 10.7.0 pre-releases before 10.7.0 contain a path traversal vulnerability in DefaultBlobFilePathCalculator that allows unauthenticated attackers to access files outside the blob container. Attackers can send %5C-encoded backslashes through the Blogging api/blogging/files/{name} endpoint on Windows hosts to read files like appsettings.json containing signing keys and connection strings.</description>
+    <title>CVE-2026-60139 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60139</link>
+    <guid isPermaLink="false">98380b6b86f3ed0058eb3933af46a03e</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.0 | Improper neutralization in the MigTD SPDM transport for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. Network adversary with an unauthenticated user combined with a low complexity attack may enable denial of service. This result may potentially occur via adjacent access when attack requirements are present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (low) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125754 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125754</link>
-    <guid isPermaLink="false">094186cf3ad511addd9c0dfb3f844335</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 7.1 | Dolibarr 20.0.0 through 23.0.4 and 24.x before 24.0.2 contains an insecure direct object reference vulnerability in api_expensereports.class.php payment endpoints that lets authenticated users access other users' expense report payments. Attackers with only expense report read and create rights can call getAllPayments, getPayments, addPayment, or updatePayment to read, create, or modify payments, falsifying reimbursement state.</description>
+    <title>CVE-2026-60141 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60141</link>
+    <guid isPermaLink="false">480f5b6cfdd0c47f76924b408c323934</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 4.8 | Improper null termination for some Intel(R) Metrics Discovery Application Programming Interface before version 1.16.189 within Ring 3: User Applications may allow a denial of service. Unprivileged software adversary with an authenticated user combined with a low complexity attack may enable denial of service. This result may potentially occur via local access when attack requirements are not present with special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (none) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125755 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125755</link>
-    <guid isPermaLink="false">ac7fc50b9e94da89dbf72efad4f5856d</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.3 | Nodemailer 3.0.0 before 10.4.1 contains an address parsing flaw in addressparser that truncates domains at folding whitespace or comments before a dot, allowing attackers to bypass recipient domain restrictions. Attackers can submit crafted to, cc, bcc or replyTo addresses that pass RFC 5322 domain checks but deliver mail to an attacker-chosen address under the application's sender identity.</description>
+    <title>CVE-2026-60142 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-60142</link>
+    <guid isPermaLink="false">6e10a0fbb7f9cc3f1af78e1672c47550</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.4 | Write-what-where condition in the MigTD for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an information disclosure and escalation of privilege. System software adversary with a privileged user combined with a low complexity attack may enable escalation of privilege. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125756 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125756</link>
-    <guid isPermaLink="false">97dfad288d60abee8a8c290e8dfd7145</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.2 | postal-mime before 4.2.1 contains a parser differential vulnerability in its address parser that truncates the domain at folding whitespace or comments preceding a dot. Remote attackers can craft From headers that pass SPF/DKIM/DMARC alignment for their own subdomain while PostalMime.parse() reports a spoofed victim sender address.</description>
+    <title>CVE-2026-61377 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61377</link>
+    <guid isPermaLink="false">4feae4b63ce160e30828c904a19afc07</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.8 | Sensitive information uncleared in resource before release for reuse in the MigTD for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an information disclosure. System software adversary with a privileged user combined with a high complexity attack may enable data exposure. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (none) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (high), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125757 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125757</link>
-    <guid isPermaLink="false">a35064fe93dac4e121268269753bc1c5</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 9.4 | mailcow: dockerized before 2026-11 contains a server-side template injection vulnerability that allows domain administrators to execute commands in the shared rspamd container by storing a malicious domain-wide footer. Attackers can embed a Jinja macro with an os.execute default value, rendered by the rspamd MOO_FOOTER prefilter, to read or inject mail for every tenant and disable filtering.</description>
+    <title>CVE-2026-61383 - NVD - CVSS Score v4.0: 2.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61383</link>
+    <guid isPermaLink="false">4025c2bead2da724f9fe8de20f6e3a1b</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 2.0 | Incorrect calculation of buffer size in the MigTD's servtd_get_quote for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. System software adversary with an unauthenticated user combined with a high complexity attack may enable denial of service. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (none) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125758 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125758</link>
-    <guid isPermaLink="false">1c32cab990535cf19d5c5817f3449034</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 9.1 | Aptabase before commit 61d4c01 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge sign-in links by using the publicly known example AUTH_SECRET. Attackers can enumerate registered e-mails via /api/_auth/signin, forge HS256 JWTs redeemed by /api/_auth/continue, impersonate users, export analytics data, and transfer app ownership.</description>
+    <title>CVE-2026-61467 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61467</link>
+    <guid isPermaLink="false">96fb145b8b2f7a6d571c87427ddbd41d</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.8 | Use after free in the MigTD virtio driver for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an escalation of privilege. System software adversary with a privileged user combined with a low complexity attack may enable data corruption. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (high) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125759 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125759</link>
-    <guid isPermaLink="false">78dfa18c0990d684971f2153d90fda8d</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 7.7 | Nango before 0.71.3 contains an sql injection vulnerability that allows unauthenticated attackers to execute arbitrary SQL by supplying a crafted task group key to the orchestrator API. Attackers can send a malicious group.key to POST /v1/immediate, which TaskEventsHandler.notify() interpolates into a Postgres NOTIFY statement, running stacked queries against the scheduler database.</description>
+    <title>CVE-2026-61468 - NVD - CVSS Score v4.0: 6.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61468</link>
+    <guid isPermaLink="false">165dcf32a0b9bfd5033855cfb8feccb9</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.7 | Improper privilege management in the MigTD logging for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an information disclosure. System software adversary with a privileged user combined with a low complexity attack may enable data exposure. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (none) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-18128 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18128</link>
-    <guid isPermaLink="false">30ef13bb2d26a3d845a884075ee9b5f0</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 6.8 | Cleartext transmission of sensitive information in the Agent of Ivanti Endpoint Manager before version 2024 SU8 allows a remote unauthenticated attacker to in a MITM position to read and modify HTTP traffic.</description>
+    <title>CVE-2026-61469 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61469</link>
+    <guid isPermaLink="false">ec7faeaf80f551e0bec2c28801cfe063</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.1 | Off-by-one error in the MigTD's vmcall_raw transport for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. System software adversary with an unauthenticated user combined with a low complexity attack may enable data corruption. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (low) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-86336 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86336</link>
-    <guid isPermaLink="false">cad8b76fd2ffabc219990d7dce37de8a</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | Apache TomEE running on JDK 21 or later skips EJB method authorization checks, allowing callers to invoke EJB methods without the configured access restrictions being enforced. Users are recommended to upgrade to version 10.3.0 or 11.0.0-M2, which fix the issue.</description>
+    <title>CVE-2026-61470 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61470</link>
+    <guid isPermaLink="false">a617586c22163692e9c0f6b1f572237a</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.3 | Improper control of a resource through its lifetime in the MigTD's TLS client for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. Network adversary with an unauthenticated user combined with a low complexity attack may enable data corruption. This result may potentially occur via adjacent access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (low) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-86531 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86531</link>
-    <guid isPermaLink="false">75962527eaa6dc2a5b880fbc06931881</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The embedded OpenEJB HTTP server does not limit the size of incoming request bodies or of multipart requests, and does not remove the temporary files it creates for multipart parts. A remote unauthenticated attacker can cause excessive memory or disk usage, leading to denial of service. Deployments using the Tomcat connectors are not affected. Users are recommended to block network access to the embedded HTTP server from untrusted clients, or to migrate to the Tomcat based TomEE distributions.</description>
+    <title>CVE-2026-61473 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61473</link>
+    <guid isPermaLink="false">a9755077a2de58fcbaad172677ec25b3</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 9.2 | Authentication bypass by capture-replay in the MigTD for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an escalation of privilege. System software adversary with a privileged user combined with a low complexity attack may enable escalation of privilege. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (high), integrity (high) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-87758 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87758</link>
-    <guid isPermaLink="false">53561963a86b019abf940c8f1b396755</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The remote EJB client does not verify that the hostname of the server it connects to matches the server's TLS certificate. An attacker able to intercept network traffic between an EJB client and server can impersonate the server and read or modify the traffic, including credentials and invocation data. Users are recommended to upgrade to version 10.3.0 or 11.0.0-M2, which fix the issue.</description>
+    <title>CVE-2026-61887 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61887</link>
+    <guid isPermaLink="false">1d33686d2d72b6818fabd424d84e85bc</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 9.4 | Missing critical step in authentication in the MigTD SPDM rebind implementation for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an escalation of privilege and information disclosure. Network adversary with an unauthenticated user combined with a low complexity attack may enable remote code execution. This result may potentially occur via adjacent access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (high), integrity (high) and availability (high) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97402 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97402</link>
-    <guid isPermaLink="false">d45b5c5af48b5a801d8b0888288bdb1e</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 2.3 | In Eclipse Kura versions 3.1.0 to 5.6.2, the iBeacon and Eddystone advertisement decoders wrongly parse the AD-structure length field of an over-the-air BLE advertising payload. Any unauthenticated attacker within BLE radio range can broadcast a two-byte advertising payload that drives the Kura beacon-scanner thread into a tight infinite loop, pinning a CPU core and permanently halting beacon ingestion until the gateway is restarted. To trigger the attack, the iBeacon/Eddystone scanner component should be installed and active. By default the components are not installed or enabled.</description>
+    <title>CVE-2026-62275 - NVD - CVSS Score v4.0: 5.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62275</link>
+    <guid isPermaLink="false">9b9654ba09af8c60440c5f04432b9772</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.6 | Detection of error condition without action in the MigTD's vmcall_raw transport for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an escalation of privilege. System software adversary with a privileged user combined with a low complexity attack may enable data corruption. This result may potentially occur via local access when attack requirements are present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (high) and availability (none) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97849 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97849</link>
-    <guid isPermaLink="false">dff95eb98ae6cc5775f96be34be04a72</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The embedded Derby network service ignores its configured bind address and listens on all network interfaces. When the service is enabled, a remote attacker with network access can connect to the database server and read or modify data. Users are recommended to upgrade to version 10.3.0 or 11.0.0-M2, which fix the issue.</description>
+    <title>CVE-2026-62920 - NVD - CVSS Score v4.0: 6.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62920</link>
+    <guid isPermaLink="false">1b3bf407cad0d02f58de1e5d553481d3</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.7 | Unchecked return value in the MigTD error handling for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. System software adversary with a privileged user combined with a low complexity attack may enable denial of service. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (none) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97867 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97867</link>
-    <guid isPermaLink="false">d99f1c5e14558f5c3428a60ac3666122</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The EJBd remote protocol returns datasource connection details, including database credentials, to remote clients that look up a datasource. A remote client able to reach the EJBd endpoint can obtain the database credentials and connect to the database directly. Users are recommended to upgrade to version 10.3.0 or 11.0.0-M2, which fix the issue.</description>
+    <title>CVE-2026-62929 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62929</link>
+    <guid isPermaLink="false">50f3e4a2ddde5a32eedce5391cc693ba</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.4 | Expired pointer dereference in the MigTD's virtio-vsock implementation for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow an escalation of privilege and information disclosure. System software adversary with a privileged user combined with a low complexity attack may enable escalation of privilege. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (high), integrity (high) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97870 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97870</link>
-    <guid isPermaLink="false">dec164ae7499cbf5bd23ee6e6678d769</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | When Hessian remoting endpoints are served by the embedded HTTP server, configured authentication and transport security requirements are silently ignored. A remote unauthenticated attacker can invoke the exposed EJB methods without credentials or over an unencrypted connection. Only deployments that use the embedded HTTP server rather than Tomcat and rely on these settings are affected. Users are recommended to block network access to Hessian endpoints from untrusted clients, or to migrate to another remoting protocol.</description>
+    <title>CVE-2026-62930 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62930</link>
+    <guid isPermaLink="false">99b4670ffcd2a1cffa2bf1bd2f3dd85c</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.3 | Unchecked return value in the MigTD's TLS implementation for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. Network adversary with an unauthenticated user combined with a low complexity attack may enable denial of service. This result may potentially occur via adjacent access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (low) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97872 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97872</link>
-    <guid isPermaLink="false">92057649e235613f1cc146d461f2ec25</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | When an EJB is exposed over the optional Hessian protocol inside an existing web application, some configured authentication and transport security settings are silently not enforced. A remote unauthenticated attacker can invoke the exposed EJB methods. Only deployments using the Hessian module with such settings are affected. Users are recommended to block network access to Hessian endpoints from untrusted clients, or to migrate to another remoting protocol.</description>
+    <title>CVE-2026-63018 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63018</link>
+    <guid isPermaLink="false">801ade3e5b5d6f032a751239b5b09a17</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 4.8 | Integer underflow (wrap or wraparound) for some Intel(R) Metrics Discovery Application Programming Interface software before version 1.16.189 within Ring 3: User Applications may allow a denial of service. Unprivileged software adversary with an authenticated user combined with a low complexity attack may enable denial of service. This result may potentially occur via local access when attack requirements are not present with special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (none) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97874 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97874</link>
-    <guid isPermaLink="false">a49c556f088b4f54a6d11c94fa0006eb</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | When Hessian remoting is configured with BASIC authentication, the authentication check is not applied to Hessian endpoints of applications deployed under a non-root context path. A remote unauthenticated attacker can invoke the exposed EJB methods without credentials. Users are recommended to block network access to Hessian endpoints from untrusted clients, or to migrate to another remoting protocol.</description>
+    <title>CVE-2026-63027 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63027</link>
+    <guid isPermaLink="false">a1c7c6077d04e43b48312e3d3da3e45c</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.3 | Incorrect behavior order in the get_tcb_level_by_svn for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. Network adversary with an unauthenticated user combined with a low complexity attack may enable denial of service. This result may potentially occur via adjacent access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (none) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97880 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97880</link>
-    <guid isPermaLink="false">2ace796139a1beb2ac9380ee92763507</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The embedded OpenEJB HTTP server dispatches some requests to REST endpoints configured for HTTP Basic authentication without verifying credentials. A remote unauthenticated attacker can invoke protected resources, bypassing authentication. Only deployments that use the embedded HTTP server with Basic authentication are affected. Users are recommended to block network access to the embedded HTTP server from untrusted clients, or to migrate to the Tomcat based TomEE distributions.</description>
+    <title>CVE-2026-63028 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63028</link>
+    <guid isPermaLink="false">08cf95443e5f976c6bc142ca98d0b33b</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.1 | Improper initialization in the MigTD virtio-vsock stream handling for the Intel(R) TDX Migration Trust Domain (MigTD) within Ring 0: Hypervisor may allow a denial of service. System software adversary with an unauthenticated user combined with a low complexity attack may enable data corruption. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires no user interaction. The potential vulnerability may impact the confidentiality (none), integrity (low) and availability (low) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97881 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97881</link>
-    <guid isPermaLink="false">5e6f66d002c763167935edbc79ec28c8</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The embedded OpenEJB HTTP server does not restrict static resource paths to the configured resource directories. A remote unauthenticated attacker can read arbitrary files accessible to the server process. Users are recommended to block network access to the embedded HTTP server from untrusted clients, or to migrate to the Tomcat based TomEE distributions.</description>
+    <title>CVE-2026-63540 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63540</link>
+    <guid isPermaLink="false">929bf043925e8949193cf626ec373787</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.9 | Heap-based buffer overflow for some Hyperscan before version v5.4.2.1 within Ring 3: User Applications may allow a denial of service. Unprivileged software adversary with an unauthenticated user combined with a low complexity attack may enable denial of service. This result may potentially occur via local access when attack requirements are not present without special internal knowledge and requires passive user interaction. The potential vulnerability may impact the confidentiality (none), integrity (low) and availability (high) of the vulnerable system, resulting in subsequent system confidentiality (none), integrity (none) and availability (none) impacts.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97888 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97888</link>
-    <guid isPermaLink="false">8e89f2fcc66e8460a3425fa8c78012f8</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The embedded HTTP server does not clear the security identity established during a request before its worker thread handles the next request. A remote unauthenticated attacker can have their request processed with the identity of a previously authenticated user, gaining that user's privileges. Only applications served by the embedded HTTP server that authenticate programmatically or via basic authentication are affected. Users are recommended to block network access to the embedded HTTP server from untrusted clients, or to migrate to the Tomcat based TomEE distributions.</description>
+    <title>CVE-2026-79914 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-79914</link>
+    <guid isPermaLink="false">bab813a615dd23903e8b70294c8b30da</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 4.3 | NocoBase is an AI-powered no-code/low-code platform for building business applications and enterprise solutions. Versions 2.1.0 through 2.1.14 contain a server-side request forgery vulnerability in the customRequests:send endpoint. A low-privileged authenticated user can override the stored request URL at runtime using options.url, causing the NocoBase server to send requests to attacker-controlled or internal destinations. Exploitation could expose internal services, Docker host gateways, or cloud metadata endpoints and allow the server to be used as a trusted network proxy. This issue has been fixed in version 2.1.15.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97890 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97890</link>
-    <guid isPermaLink="false">0904d0d34c7701d5e91489a0dcef582b</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The embedded HTTP server does not invalidate the previous session identifier when an application changes the session id, e.g. after login. An attacker who can plant a session identifier in a victim's browser can hijack the victim's authenticated session. Users are recommended to block network access to the embedded HTTP server from untrusted clients, or to migrate to the Tomcat based TomEE distributions.</description>
+    <title>CVE-2026-99285 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99285</link>
+    <guid isPermaLink="false">79ac182945202567cca7659c8cdbe3b8</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+netfilter: nft_byteorder: remove multi-register support
+
+64bit byteorder conversion is broken when several registers need to be
+converted because the source register array advances in steps for 4 bytes
+instead of 8:
+
+  for (i = ...
+      src64 = nft_reg_load64(&amp;src[i]);
+                             ~~~~~ u32 *src
+      nft_reg_store64(&amp;dst64[i],
+
+Remove the multi-register support, it has other issues as well:
+
+Pablo points out that commit
+caf3ef7468f7 (&quot;netfilter: nf_tables: prevent OOB access in nft_byteorder_eval&quot;)
+alters semantics: before the loop operated on registers, i.e.
+ for ( ... )
+   dst32[i] = htons((u16)src32[i])
+
+ .. but after the patch it will operate on bytes, which makes this
+ useless to convert e.g. concatenations, which store each compound
+ in its own register.
+
+Multi-convert of u32 has one theoretical application:
+
+ct mark . meta mark . tcp dport @intervalset
+
+Because ct mark and meta mark are host byte order, use with
+intervals has to convert the byteorder for ct/meta mark value
+to network byte order (bigendian).
+
+nftables emits this:
+ [ meta load mark =&gt; reg 1 ]
+ [ byteorder reg 1 = hton(reg 1, 4, 4) ]
+ [ ct load mark =&gt; reg 9 ]
+ [ byteorder reg 9 = hton(reg 9, 4, 4) ]
+ ...
+
+I.e. two separate calls.  Theoretically it could be changed to do:
+ [ meta load mark =&gt; reg 1 ]
+ [ ct load mark =&gt; reg 9 ]
+ [ byteorder reg 1 = htonl(reg 1, 4, 8) ]
+ ...
+
+But then all it would take to change the set to
+meta mark . tcp dport . ct mark
+
+... and we'd be back to two &quot;byteorder&quot; calls. IOW, support to
+convert a range of registers is both dysfunctional and dubious.
+
+Simplify this: remove the feature.
+
+Pablo Neira Ayuso points out that nftables before 1.1.0 can generate
+incorrect byteorder conversions, see 9fe58952c45a,
+&quot;evaluate: skip byteorder conversion for selector smaller than 2 bytes&quot;
+in nftables.git).  Affected rulesets fail to load with this change and
+old userspace due to 'len != size' check.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
