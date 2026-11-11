@@ -5,47 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 16:02:34 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-126662 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126662</link>
-    <guid isPermaLink="false">afe8ae0bf051a3a4010a346a59a8cc99</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 7.1 | Contao 4.0.0 before 5.3.54, 5.4.0 before 5.7.17, and 6.0.0 before 6.0.6 contains an access control bypass vulnerability that allows filemount-restricted backend users to modify folders outside their filemount via the file manager Edit-Multiple operation. Attackers holding the protected or syncExclude field permission can submit outside folder paths in the IDS parameter to publish protected folders or exclude them from DBAFS synchronization, exposing files for public download.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126663 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126663</link>
-    <guid isPermaLink="false">ec97cc3399dd6e26d42ca3f4992e8c40</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | Contao 4.0.0 before 5.3.54, 5.4.0 before 5.7.17, and 6.0.0 before 6.0.6 contains a path traversal vulnerability that allows content editors to read image files anywhere on the filesystem via the {{image::}} insert tag. Attackers can embed percent-encoded sequences like ..%2f that pass Validator::isInsecurePath() before rawurldecode(), making the frontend resize and serve readable image files outside the files directory.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-94125 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94125</link>
-    <guid isPermaLink="false">bb1bfd98c3bcae70a1f6b5a3d705e824</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Nimbus returns the worker placement of every topology running on a supervisor, including the host, port, owner and resource assignment of topologies the caller is not authorized to read. In a multi-tenant cluster, an authenticated user who is allowed to access Nimbus can learn where the workers of other users' topologies run. Users are recommended to upgrade to version 3.2.0, which fixes the issue.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-0470 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0470</link>
-    <guid isPermaLink="false">c2a38a22afa89fa1b7a71ddf957f240b</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 6.8 | Null pointer dereference in AMD Embedded SPI Flash driver could allow a local user to potentially cause a loss of availability.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123040 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123040</link>
-    <guid isPermaLink="false">dbb29f679ae3d3170b1ee344c98008ab</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.5 | An attacker who gains the ability to execute arbitrary code on a system with TrueConf Server (Linux) versions from 4.7.2 up to, but not including, 5.5.6 installed, running as the user trueconf (by exploiting some other vulnerability), can elevate their privileges to root.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 11 Nov 2026 17:02:14 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-125838 - NVD - CVSS Score v3.1: 8.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125838</link>
@@ -376,6 +336,70 @@ This issue affects Apache XML Graphics Batik: through 1.19.
 
 
 Users are recommended to upgrade to version 1.20, which fixes the issue.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-100290 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100290</link>
+    <guid isPermaLink="false">ac8dcad45ef6190cbf4a1cea2e26f25e</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 3.7 | The regcomp and regexec functions in the GNU C Library version 2.3 to version 2.44 may read freed memory and free the same heap block twice when a memory allocation fails while a regular expression is compiled or matched.  The re_dfa_add_node (the NFA node table) and build_range_exp (bracket ranges) grow several arrays with consecutive realloc calls and store the new pointers only after all of them succeed.  When a later call fails, the pattern buffer keeps pointers to blocks that were already freed, and the error cleanup frees them again.  In regexec, the back-reference cache (match_ctx_add_entry) frees its array when a realloc fails but keeps the pointer, which is freed again on the error path.
+
+An attacker does not need to supply a crafted regular expression: patterns large enough to grow these arrays are common.  The failure has to hit a specific allocation, though, so the issue can only be reached when the system is already under memory pressure.  An attacker who supplies the pattern or the subject string has little control over which allocation fails, so the expected impact is a crash of the process.  This issue affects all architectures and ABIs supported by the GNU C Library.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-105440 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105440</link>
+    <guid isPermaLink="false">44bb3d86a766d08c85efa216e3caef73</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.3 | Missing authorization in the JSON-RPC web services interface
+of Extreme Networks Switch Engine (EXOS) allows an authenticated,
+low-privileged (read-only) user to execute CLI show commands that are
+restricted to that role through the command line interface. Successful
+exploitation results in disclosure of sensitive information, including the
+device configuration and the password hashes of local accounts. Configuration,
+enable, and debug commands are not affected. Disclosed password hashes can be
+attacked offline, and a weak password could lead to administrative access to
+the device. This issue is fixed in Switch Engine 33.7.1-patch1-11,
+33.1.100.133-patch1-9, and 32.7.4.15-patch1-11.
+
+
+
+
+
+
+
+
+Extreme Networks would like to thank Toàn Lê (GitHub: https://github.com/toanln-cov) for responsibly disclosing this vulnerability and for working with our PSIRT team through coordinated disclosure.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115819 - NVD - CVSS Score v3.1: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115819</link>
+    <guid isPermaLink="false">525286afc9611141696998ec49d31f25</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 4.8 | Calling the wide scanf family of functions (swscanf, fwscanf, wscanf, vswscanf, vfwscanf and vwscanf) with a %s or %[ conversion without the 'l' length modifier in the GNU C Library version 2.2 to version 2.44 writes an extra null byte one past the end of the destination array when the converted multibyte string and its terminating null byte exactly fill that array.
+
+These conversions store each wide input character into the caller's char array as a multibyte sequence.  The conversion ends with the sequence that returns to the initial shift state, which also stores the terminating null byte, and the functions then append a second null byte.  A destination sized for the converted string and one terminator, as the C standard requires the caller to provide, is therefore written one byte past its end.  The out-of-bounds byte is always a null byte, which may corrupt adjacent data or crash the process.  An attacker who supplies the input can trigger the overflow with a string whose converted length exactly fills the destination.
+
+The narrow scanf functions, the %ls and %l[ conversions into a wchar_t array, and the 'a' and 'm' allocation modifiers are not affected, and storing a wide scanf conversion into a narrow char array is uncommon.  This issue affects all architectures and ABIs supported by the GNU C Library.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124686 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124686</link>
+    <guid isPermaLink="false">f3bd1f7581e8b7245fd0382a24468e3a</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 5.4 | In Progress® Kendo® UI for jQuery versions prior to 2026.4.1111, kendo.init() compiles data-* attribute values with new Function when an invalid JSON object is supplied. An attacker with low privileges who can control these attribute values can inject JavaScript that executes during declarative widget initialization when a user loads or interacts with an affected page. Successful exploitation can compromise the confidentiality and integrity of data accessible in the user's browser context. The issue was reported in version 2022.3.1109; the first affected release has not been established.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-64855 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-64855</link>
+    <guid isPermaLink="false">399c7d17a70783e9ae144fbed0462d9a</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.2 | soapbar is a SOAP library for Python — client, server, and WSDL handling. Prior to version 0.13.0, verify_envelope_bsp() derived its trust anchor from the message it was verifying. It read the X.509 certificate out of the caller-untrusted wsse:BinarySecurityToken, validated only that certificate's not-before / not-after dates, and then verified the signature against that same certificate. There was no CA-chain validation, no issuer/subject allowlist, and no pinning. A successful verify_envelope_bsp() therefore proved only that the envelope was signed by whoever supplied the embedded certificate — never that it was signed by a trusted party. An attacker who mints their own certificate, signs a forged envelope, and embeds that certificate in the token passes verification. Any consumer that treats a successful BSP verification as authentication can be impersonated (signature forgery / authentication bypass). verify_envelope() (which pins a caller-supplied x509_cert) was not affected — the flaw was specific to the BSP variant whose trust anchor came from the message. This issue has been patched in version 0.13.0.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
