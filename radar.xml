@@ -5,124 +5,14 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Nov 2026 23:01:33 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 01:02:39 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-123262 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123262</link>
-    <guid isPermaLink="false">d721c1316f1422fe857505045d7f1703</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 5.9 | CAI Content Credentials is affected by an Improper Verification of Cryptographic Signature vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to bypass security measures and gain unauthorized write access. Exploit depends on conditions beyond the attacker's control. Exploitation of this issue does not require user interaction.</description>
+    <title>CVE-2026-126188 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126188</link>
+    <guid isPermaLink="false">bbec6c841c7b4ad7423ef1bab0f0882d</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 3.7 | Active Storage makes it simple to upload and reference files in cloud services and attach those files to Active Record objects. Prior to 8.0.5.2 and from 8.1 until 8.1.4.1, Active Storage's ActiveStorage::Previewer::VideoPreviewer, ActiveStorage::Analyzer::VideoAnalyzer, and ActiveStorage::Analyzer::AudioAnalyzer pass uploaded blob contents to FFmpeg without restricting the demuxer. A direct upload can retain a client-declared video/* or audio/* content type for an HLS playlist. FFmpeg content probing selects the hls demuxer, which opens attacker-named file:// segments when the blob is previewed or analyzed. Applications that accept untrusted uploads and generate video previews or analyze video or audio attachments can disclose a local media file readable by the application process when the attacker knows its path. This issue is fixed in versions 8.0.5.2 and 8.1.4.1.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123267 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123267</link>
-    <guid isPermaLink="false">380faa64e398fec0e7992ad9fee0367e</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 5.5 | CAI Content Credentials is affected by an Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability that could result in a Security feature bypass. An attacker could leverage this vulnerability to access unauthorized files or directories outside the intended restrictions. Exploitation of this issue requires user interaction in that a victim must visit a maliciously crafted URL or interact with a compromised web page.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123341 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123341</link>
-    <guid isPermaLink="false">614de7926149673db2b5a4687b443033</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 5.4 | Adobe Experience Manager is affected by a reflected Cross-Site Scripting (XSS) vulnerability. If a low-privileged attacker is able to convince a victim to visit a URL referencing a vulnerable page, malicious JavaScript content may be executed within the context of the victim's browser. Scope is changed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125297 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125297</link>
-    <guid isPermaLink="false">88919eccf3cc9f3b85f02a54c1135cb2</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 9.3 | AsiaInfo Business Support System (BSS) 9.2.0 through 9.2.40 accepts unauthenticated requests via the management API '/bss/sysmgnt/api/'. A remote, unauthenticated attacker could provision a new account with administrative privileges or take over existing accounts, and perform other administrative actions. Fixed in 9.2.41.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125298 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125298</link>
-    <guid isPermaLink="false">9c75e76b247f027e61a0b38ef5b608fc</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 9.3 | AsiaInfo Business Support System (BSS) 9.2.0 through 9.2.40 does not correctly verify cryptographic signatures for JSON Web Tokens (JWT). A remote, unauthenticated attacker could forge a well-formed JWT without a valid signature and use it to execute privileged actions. Fixed in 9.2.41.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125878 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125878</link>
-    <guid isPermaLink="false">17cdc3fca2a321ab0a74efa7391baeaf</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.7 | Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in N-able N-central allows Resource Injection.
-
-This issue affects N-central: before 26.4.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125879 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125879</link>
-    <guid isPermaLink="false">f2675b0c41c58f2954f02b592d4337a8</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.6 | Incorrect privilege assignment vulnerability in N-able N-central allows Privilege Escalation.
-
-This issue affects N-central: before 26.4.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125880 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125880</link>
-    <guid isPermaLink="false">026631ce48685f87594ddbe799bc221b</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.3 | Improper neutralization of HTTP headers for scripting syntax vulnerability in N-able N-central allows Cross-Site Scripting (XSS).
-
-This issue affects N-central: before 26.4.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125881 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125881</link>
-    <guid isPermaLink="false">b5d6b5361effc1bfaa187242bd0e7399</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 9.3 | Server-Side request forgery (SSRF) vulnerability in N-able N-central allows Server Side Request Forgery.
-
-This issue affects N-central: before 26.4.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125882 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125882</link>
-    <guid isPermaLink="false">a61d85853cd29ec575722f109c04712d</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.6 | Relative path traversal vulnerability in N-able N-central allows Path Traversal.
-
-This issue affects N-central: before 26.4.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125883 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125883</link>
-    <guid isPermaLink="false">64ee436d6b558cfead008f5c73770d9c</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 9.3 | Improper restriction of XML external entity reference vulnerability in N-able N-central allows XML Schema Poisoning.
-
-This issue affects N-central: before 26.4.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125958 - NVD - CVSS Score v4.0: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125958</link>
-    <guid isPermaLink="false">e7aaddb6d49cddeb80c9c1a41ca4e2c1</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 7.5 | Download of code without integrity check vulnerability in N-able N-central allows Remote Code Inclusion.
-
-This issue affects N-central: through 24.6.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126085 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126085</link>
-    <guid isPermaLink="false">7a41836b2dc29cfb55122b3a171441bd</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 5.3 | Active Storage makes it simple to upload and reference files in cloud services and attach those files to Active Record objects. Prior to 8.1.4.1 and 8.0.5.2, ActiveStorage::Service::GCSService#url_for_direct_upload does not bind the declared content length into the signed direct-upload URL, and #headers_for_direct_upload returns no length constraint, so the URL authorizes an upload body of any size. A direct-upload client could store a file larger than the byte_size it declared, and the resulting blob keeps the declared size, possibly bypassing application file size validations and quotas. This is the weakness that CVE-2020-8162 fixed in the S3 service. Applications that store files in Google Cloud Storage and accept direct uploads are affected. This issue is fixed in versions 8.1.4.1 and 8.0.5.2.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-126123 - NVD - CVSS Score v4.0: 7.1</title>
@@ -375,6 +265,104 @@ This issue affects N-central: before 2026.4.1.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96437</link>
     <guid isPermaLink="false">95132a4bbf4387a3f7a703a8e4f58b1c</guid>
     <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.2 | The ai-azure-content-safety plugin in Kong Gateway Enterprise skips inspection of request bodies larger than the in-memory body buffer, allowing prompts to bypass input content-safety checks.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2024-36309 - NVD - CVSS Score v4.0: 4.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2024-36309</link>
+    <guid isPermaLink="false">0f8716f874fe5a46ab76b370a4d9b4b4</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 4.6 | Missing Lock Bit Protection in the Northbridge IO (NBIO) could allow a privileged attacker to use an intentionally disabled device as part of a remapping attack potentially impacting data confidentiality, integrity, or availability.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2025-0008 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-0008</link>
+    <guid isPermaLink="false">3ff624b1de197c8d03d0550037da4adb</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 8.4 | Insufficient verification of data authenticity may allow a local attacker to bypass Secure Debug Unlock (SDU), potentially resulting in unauthorized debug access.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2025-29941 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-29941</link>
+    <guid isPermaLink="false">76708ce97ddcfe53520d8c6fa0f912f0</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.0 | Incorrect usage of seeds in pseudo-random number generator in the Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor or migration agent to import a forged guest context potentially resulting in loss of confidentiality for derived guest keys.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2025-48504 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-48504</link>
+    <guid isPermaLink="false">cbc6cca4a7522720172a4e6182a0259b</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.8 | Operation on a resource after expiration or release in the Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor to manipulate metadata pages potentially resulting in the loss of confidentiality and integrity of guest memory.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-0003 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0003</link>
+    <guid isPermaLink="false">5c9fb62edc783ae4bf034714f0a58b1d</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.9 | Use of a per-part static key in the ASP Bootloader could allow an attacker to downgrade the Secure Encrypted Virtualization (SEV) firmware and exploit known vulnerabilities to decrypt memory potentially resulting in loss of confidentiality.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-0435 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0435</link>
+    <guid isPermaLink="false">e77743c03c29601448c51bea93763fd1</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.0 | Operation on a resource after expiration or release in the AMD Secure Encrypted Virtualization (SEV) firmware could allow an attacker with administrative privileges to swap out a guest device without the guest's knowledge, potentially resulting in a loss of confidentiality and integrity.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-0454 - NVD - CVSS Score v4.0: 4.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0454</link>
+    <guid isPermaLink="false">885772b92b079e088362d03398c1deb9</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 4.6 | An out-of-bounds write in the AMD Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor to corrupt global firmware variables, potentially resulting in loss of integrity.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-0480 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0480</link>
+    <guid isPermaLink="false">238b125c2f55d3d73243375ca89c94f5</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 6.0 | Missing Authentication for Critical Function in AMD Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor to forge SEV-TIO guest request messages potentially compromising SEV-SNP guest memory integrity and confidentiality.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123084 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123084</link>
+    <guid isPermaLink="false">84cc0aba9be812aced9a90322c58bda5</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 6.5 | An **expression language injection** has been found in the HeaderContentGuard.permit function in publication.py of the content guard in the **Pulpcore** package. The guard is supposed to check a value in a request header. It saves a jq filter and runs that filter against the header when a client asks for content. The filter is not limited to the header, and jq's env builtin also returns the environment of the content process. A low-privileged network attacker or user who can create a header content guard and attach it to a distribution can save a filter that reads that environment. The content request is allowed or denied according to the filter result. Repeating the request lets that attacker or user recover the environment, including Pulp settings held there, such as the Django secret key or the database password.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126187 - NVD - CVSS Score v4.0: 9.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126187</link>
+    <guid isPermaLink="false">adfa7ca0b93443dd0e14bd7a73a62cec</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 9.5 | React is a JavaScript library for building user interfaces. From 19.0.0 until 19.0.9, 19.1.10, 19.2.9, and 19.3.1, the react-server-dom-webpack, react-server-dom-parcel, and react-server-dom-turbopack packages are vulnerable to unauthenticated remote code execution through crafted payloads targeting frameworks that support React Server Components. The vulnerability only affects extremely rare cases where responses transport multiple typed arrays and an attacker-controlled value. Applications whose React code does not use a server are not affected. Applications that do not use a framework, bundler, or bundler plugin that supports React Server Components are not affected. This issue is fixed in versions 19.0.9, 19.1.10, 19.2.9, and 19.3.1.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126261 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126261</link>
+    <guid isPermaLink="false">6342e0c7f0146a4fb7ca27d4f193fb8f</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 9.8 | A improper authorization vulnerability in Fortinet FortiManager 8.0.0, FortiManager 7.6.0 through 7.6.7, FortiManager 7.4.0 through 7.4.5, FortiManager 7.2.0 through 7.2.8 may allow an unauthenticated attacker that can reach the FGFM port to execute code or commands via crafted FGFM packets.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-20183 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-20183</link>
+    <guid isPermaLink="false">56f0b592f51373793de459ba779ebf74</guid>
+    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 4.3 | A vulnerability in the web-based management interface of Cisco Identity Services Engine (ISE) could allow an authenticated, remote attacker to modify parts of the configuration on an affected device.
+
+This vulnerability is due to the lack of server-side validation of&amp;nbsp;Administrator&amp;nbsp;permissions. An attacker could exploit this vulnerability by submitting a crafted HTTP request to an affected system. A successful exploit could allow the attacker to modify descriptions of files on a specific page. To exploit this vulnerability, an attacker would need valid&amp;nbsp;Administrator credentials.</description>
     <category>NVD</category>
     <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
   </item>
