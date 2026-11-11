@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 01:02:39 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 02:02:25 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-126188 - NVD - CVSS Score v3.1: 3.7</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126188</link>
@@ -15,100 +15,100 @@
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126123 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126123</link>
-    <guid isPermaLink="false">15540fc96f127fc4721ae2426f9317ef</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 7.1 | BeeS Software Solutions ERP before 04 September 2026 allows any low-privileged user to navigate directly to the administrative dashboard endpoint and gain access to the administrative console, including unrestricted access to institutional, employee, and student data.</description>
+    <title>CVE-2026-126495 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126495</link>
+    <guid isPermaLink="false">6eba906378eef22e55553aeb18d7b6d8</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | MQTTX desktop through 1.13.3 contains a stored cross-site scripting vulnerability that allows attackers to inject script by publishing malicious MQTT topic names or payloads rendered unescaped in tooltips. Attackers controlling a broker or publishing to subscribed topics can execute script in the Electron renderer, which has nodeIntegration enabled, when victims hover Topic Tree or JSON tree nodes.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126129 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126129</link>
-    <guid isPermaLink="false">d797b3224a8a1f1cbceda25d7c0f3825</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS: não informado | The Auth0 ASP.NET Core Authentication SDK incorrectly determines a session's OIDC Back-Channel Logout status, which may result in a logged-out session being accepted for access to protected endpoints.</description>
+    <title>CVE-2026-126496 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126496</link>
+    <guid isPermaLink="false">707589a6dc1e8a77b58f57e4920d3ece</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | 1Panel-dev CordysCRM before 1.9.6 contains an authorization bypass vulnerability in CustomerContactController.get that allows authenticated users to read other users' contacts because no organization, owner or data-scope check is applied. Attackers holding ordinary contact or customer read permission can request GET /account/contact/get/{id} with another contact's ID to obtain names, phone numbers, owners, departments, linked customers and custom fields.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126186 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126186</link>
-    <guid isPermaLink="false">44efd2f34a3d207239f28065305578f8</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v3.1: 8.8 | Active Storage makes it simple to upload and reference files in cloud services and attach those files to Active Record objects. Prior to 8.1.4.1 and 8.0.5.2, ActiveStorage::Blob#open writes a blob to a tempfile whose name carries the extension of the uploaded filename, and hands that path to ffprobe (VideoAnalyzer, AudioAnalyzer), ffmpeg (VideoPreviewer) and ImageMagick (ImageAnalyzer, the :mini_magick variant processor). These tools select a decoder from the file extension when the content does not identify its own format, so an attacker who chooses the filename and declares the content type of an upload chooses which decoder processes it. An FFmpeg built with AviSynth support treats a file with the .avs extension as an AviSynth script and evaluates it, which could disclose files readable by the application process through the preview image, or load a native library the attacker has also uploaded, possibly leading to remote code execution in the FFmpeg process. ImageMagick selects its coders and delegates from the extension in the same way. An application is affected if it accepts uploads from untrusted users and analyzes video or audio attachments, generates video previews, or processes images with ImageMagick. The AviSynth attack additionally requires an FFmpeg built with --enable-avisynth and the AviSynthPlus runtime on the host. Upstream FFmpeg and the common Linux distribution and Homebrew packages do not enable it; the GPL builds distributed for Windows and Linux from ffmpeg.org do. Other decoders that FFmpeg or ImageMagick select from the extension may be reachable without AviSynth. This issue is fixed in versions 8.1.4.1 and 8.0.5.2.</description>
+    <title>CVE-2026-126497 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126497</link>
+    <guid isPermaLink="false">a8aecad3add9c68af05f860977439217</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.5 | LibreCAD through 2.2.1.6 contains a heap-based out-of-bounds write vulnerability in the bundled libdxfrw dwgReader18::parseDataPage() function due to unchecked buffer size and page offsets. Attackers can craft an AC1018 (R2004) DWG file with malicious startOffset values that cause decompress18 to write past the heap buffer when opened, causing crashes and potential code execution.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-28247 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-28247</link>
-    <guid isPermaLink="false">d59ed14d538819c6cfef44a21c15c8d5</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.9 | Improper Access Control Applied to Mirrored or Aliased Memory Regions in AMD Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor to change the encryption bit for guest context pages potentially resulting in loss of integrity.</description>
+    <title>CVE-2026-126498 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126498</link>
+    <guid isPermaLink="false">6626faf5b31a0ec482339ef7ff0d217c</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.1 | WriteFreely before 0.17.3 contains a stored cross-site scripting vulnerability that allows authenticated authors to inject HTML by supplying a malicious post slug via the CreatePost API. The raw slug is concatenated into an anchor by augmentReadingDestination() for paid-shortcode posts, executing script for RSS/Atom feed readers, newsletter recipients and ActivityPub viewers.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-28248 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-28248</link>
-    <guid isPermaLink="false">16afc86c5493bfc128cdbeb8a412a122</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.9 | Improper enforcement of behavioral workflow in AMD Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor to potentially launch a guest whose attestation report contains an ID key digest for an ID block that doesn't match the guest's measurement resulting in loss of integrity.</description>
+    <title>CVE-2026-126499 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126499</link>
+    <guid isPermaLink="false">12edae4cced3e2fe0d23e886cb2ce1c2</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.3 | Jellyfin before 12.0 contains a path traversal vulnerability in the DELETE /Library/VirtualFolders and POST /Library/VirtualFolders/Name endpoints that allows attackers to delete or move directories via unvalidated library names. Unauthenticated attackers can supply names like .. or absolute paths before setup completes to recursively delete the data directory and jellyfin.db.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-28249 - NVD - CVSS Score v4.0: 4.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-28249</link>
-    <guid isPermaLink="false">7baa6fdb424bbc5e89a1d74f764dbe8e</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 4.6 | Improper preservation of consistency between independent representations of shared state in AMD Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor to potentially affect cache coherency for guest context pages resulting in loss of integrity.</description>
+    <title>CVE-2026-126539 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126539</link>
+    <guid isPermaLink="false">4006eff0393f2f86f1836e11bd2b8289</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.2 | Directus before 12.1.0 contains an authorization bypass vulnerability that allows unauthenticated attackers to skip permission checks by sending a failed auth message on public-mode WebSocket connections. Attackers can send an invalid token so handleAuthRequest sets accountability to null, then read, create, update or delete records in any user-defined collection.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-40668 - NVD - CVSS Score v4.0: 4.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40668</link>
-    <guid isPermaLink="false">168a9f20fffce886cc3a6762bae0d157</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 4.6 | Authentication bypass by spoofing in AMD Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor to request attestation reports for VMPL 0.</description>
+    <title>CVE-2026-126541 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126541</link>
+    <guid isPermaLink="false">3ec45002fb6a7ec703b84d4609706a03</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.6 | WWBN AVideo through 29.7.1 contains a missing authorization vulnerability in Live plugin restream endpoints that allows authenticated streamers to obtain other users' stream keys by supplying arbitrary live_transmitions_history_id values. Attackers can redeem the issued action tokens at verifyTokenForAction.json.php to retrieve victims' HLS URLs and stream keys, then publish as the victim or restream private or pay-per-view lives.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-40669 - NVD - CVSS Score v4.0: 4.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40669</link>
-    <guid isPermaLink="false">f24f4a2b1c9f5e6b427809893448cbcf</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 4.0 | An off-by-one error in AMD Secure Encrypted Virtualization (SEV) firmware could allow an attacker with hypervisor access to corrupt the Reverse Map Table (RMP) table, potentially resulting in loss of guest memory integrity.</description>
+    <title>CVE-2026-126542 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126542</link>
+    <guid isPermaLink="false">f0710020a1a8514dec4e7a50b997f9d4</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.3 | WWBN AVideo 6.5 through 29.7.1 contains an authentication bypass vulnerability that allows unauthenticated attackers to log in as any user via Hybridauth social login display names. Attackers can set their X, Facebook, Yahoo or LinkedIn display name to a victim's username and withhold email, causing login.json.php or oauth2.php to log them in as that account, including administrators, without a password.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-40670 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40670</link>
-    <guid isPermaLink="false">cf43df75ac6eca732d67778e008acff6</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.9 | Improper check for unusual or exceptional conditions in AMD Secure Encrypted Virtualization - Secure Nested Paging (SEV-SNP) could allow a privileged attacker to potentially overlap MMIO regions with DRAM regions resulting in loss of integrity.</description>
+    <title>CVE-2026-126543 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126543</link>
+    <guid isPermaLink="false">a4c1393da48474a45753a65069ee151f</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.7 | WWBN AVideo through 29.7.1 contains an improper payment verification vulnerability in plugin/PayPalYPT/ipnV2.php that credits wallets from PayPal IPNs not bound to the site's merchant account. Unauthenticated attackers can forward genuine VERIFIED recurring-payment IPNs from their own PayPal account with a chosen users_id to add wallet balance each billing cycle.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-67175 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-67175</link>
-    <guid isPermaLink="false">dd3ca17e55cbf7c57d9812abb69c2c66</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.1 | Chargemap contains a stored cross-site scripting vulnerability that allows a remote, authenticated attacker to craft a malicious payload in the user profile page that executes when another user views the attacker's profile. Fixed 2026-07-17.</description>
+    <title>CVE-2026-126544 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126544</link>
+    <guid isPermaLink="false">df423dfcfcef495676f4ad85c4976708</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | WWBN AVideo 6.5 through 29.7.1 contains an email verification bypass vulnerability in User::verifyCode() in objects/user.php caused by PHP loose comparison of the recoverPass token. Registered users can reuse the installation-wide salt from their own verification link and craft a code with arbitrary users_id and recoverPass set to true to verify other accounts' emails, unlocking features such as live streaming.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-67176 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-67176</link>
-    <guid isPermaLink="false">b282e8a6a301a4b71d3471f2240f4592</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.1 | Chargemap contains an open redirect vulnerability in the authentication login endpoint. A remote, unauthenticated attacker could send a crafted URL to a victim and redirect them to an attacker controlled domain. Fixed 2026-07-17.</description>
+    <title>CVE-2026-126545 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126545</link>
+    <guid isPermaLink="false">b66d57fbe21923ebb08b7a55fc9df354</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | WWBN AVideo through 29.7.1 contains a missing authorization vulnerability in API::get_api_tags() in plugin/API/API.php that allows registered users to access restricted video data by querying the tags API. Attackers can subscribe to a tag and query APIName=tags to obtain filenames, titles and stored video_password values of unlisted, group-restricted and password-protected videos, enabling unauthorized viewing.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-67177 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-67177</link>
-    <guid isPermaLink="false">9604bc71d21b89681d3ae24a16537113</guid>
-    <description>Tuesday 10 November 2026 | NVD | CVSS Score v4.0: 5.1 | Chargemap contains a stored cross site scripting vulnerability. A remote, unauthenticated attacker could craft a payload in the username field of the account registration page and associate the new account with a victim's email. The attacker could send a forgotten password request to the victim, and the payload would execute when a victim opens the link. Fixed 2026-07-17.</description>
+    <title>CVE-2026-126546 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126546</link>
+    <guid isPermaLink="false">b5464e4b0bef3c013a81e9a121900e61</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | Viber for iOS through 29.4.0.24 fails to validate the logical screen width and height in received GIF headers, allowing attackers to crash the app. Attackers can send a crafted GIF with zero dimensions that triggers an uncaught NSInternalInconsistencyException, aborting the app with SIGABRT when opened.</description>
     <category>NVD</category>
-    <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-77685 - NVD - CVSS Score v3.1: 8.3</title>
