@@ -5,87 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 11:02:19 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-105948 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105948</link>
-    <guid isPermaLink="false">57b7c3eb645ace24b6319078003349cc</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 7.7 | In affected versions of Octopus Server, incorrect validation of permissions assigned to a user that would allow them to edit their own login identities could result in that user being granted elevated permissions, up to and including system administrator access. This issue affects instances using LDAP authentication with self-service login editing enabled.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111190 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111190</link>
-    <guid isPermaLink="false">c28629e98a266b2675924bcdcedb5db5</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.1 | The ARForms plugin for WordPress is vulnerable to arbitrary file upload in all versions up to, and including, 7.2.4 via its form file-upload handler. The name of the stored file is taken from an attacker-controlled request header and is not adequately restricted to safe file types, and the plugin's file-type and content-safety checks can be evaded, allowing files that contain executable PHP code to be written to a publicly accessible directory. This makes it possible for unauthenticated attackers to upload malicious files to the affected site's server, which may make remote code execution possible. Exploitation requires a published form containing a File field to be publicly accessible on the site.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116468 - NVD - CVSS Score v3.1: 6.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116468</link>
-    <guid isPermaLink="false">7c5420be1590f9d33b0d0e53ecd01513</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 6.6 | A flaw was found in the group-move and organization group reparenting endpoints of the keycloak-services component. This component is responsible for core authentication and authorization services in the Red Hat build of Keycloak. The issue occurs because the system fails to check if a target parent group confers administrative roles when a group is moved. A delegated administrator can exploit this to move a group they control under an administrative group, causing all members to inherit full realm-admin privileges and gain complete control over the realm.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119171 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119171</link>
-    <guid isPermaLink="false">ca8a767f1b29426598432345b8d47c36</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 5.3 | The Advanced Product Fields (Product Addons) for WooCommerce WordPress plugin from 1.6.22 to 1.7.3 does not validate that a submitted value for a required paid product option matches one of the configured choices, only that it is not empty, allowing unauthenticated users to add a product to the cart and complete an order while skipping the required option's surcharge and paying only the base product price.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119302 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119302</link>
-    <guid isPermaLink="false">cda89fbde6f3fb7e95e5295e50d7b6c4</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 6.5 | The NotificationX WordPress plugin before 3.3.7 does not perform any capability, authentication or nonce check on its notification preview path, allowing unauthenticated users to disclose the content of private, draft, pending and password-protected posts and to execute arbitrary registered shortcodes by supplying crafted preview data on any front-end request.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123659 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123659</link>
-    <guid isPermaLink="false">41486408c3b21c93d6daa7ae11ad701e</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 5.3 | The ProfilePress WordPress plugin before 4.17.6 does not restrict the role and user meta filters its member directories accept to those configured by the administrator, allowing unauthenticated users to list accounts a directory was set to hide and to recover user meta values of listed users.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123668 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123668</link>
-    <guid isPermaLink="false">d31da8bd1ba717c4bf943faa3223b3c1</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 5.3 | The GetPaid WordPress plugin from 2.8.63 to 2.8.64 does not ensure item quantities on its payment forms are whole numbers, allowing unauthenticated users to have an invoice for a priced item marked as paid without being charged.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-12062 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12062</link>
-    <guid isPermaLink="false">41935fbc72a1a7e4a2f66a253072b330</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.8 | Zoho Corporation ManageEngine ADAudit Plus versions below 8703 are vulnerable to an authenticated SQL injection vulnerability in ADAudit Plus Reports API.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-12424 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12424</link>
-    <guid isPermaLink="false">91808df9a7206d66e15e0c4b22476230</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.2 | The ARforms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Referer Header in all versions up to, and including, 7.2.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The arf_save_incomplete_form_data() AJAX handler is registered with wp_ajax_nopriv_, meaning unauthenticated attackers can store a malicious payload by submitting a partial form entry with a forged Referer header, with no authentication required at any step.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-12427 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12427</link>
-    <guid isPermaLink="false">33d0564b6ca53880da9415b6c5a2f653</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.2 | The ARforms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'description' parameter in all versions up to, and including, 7.2.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected payload is deserialized via maybe_unserialize() when an administrator views the affected entry; if the attacker's array contains a 'referrer' key, the attacker-controlled page_url and http_referrer values are used as-is and rendered unescaped into the admin entry detail view.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 11 Nov 2026 12:00:32 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-15785 - NVD - CVSS Score v3.1: 6.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15785</link>
@@ -323,6 +243,102 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124737</link>
     <guid isPermaLink="false">ad2097efc9553a7e87940aac2d3e76e4</guid>
     <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.5 | A flaw was found in BusyBox. When the TFTP (Trivial File Transfer Protocol) client requests a custom small block size and receives a standard response, it falls back to the default block size without resizing the allocated memory buffer. A malicious TFTP server can exploit this issue by sending standard-sized network packets during a transfer, causing a heap buffer overflow. This flaw allows an attacker to achieve arbitrary code execution or cause a Denial of Service (DoS) by crashing the application.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111792 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111792</link>
+    <guid isPermaLink="false">b06771b199b013b57662d9dabcb70631</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Uncontrolled Recursion vulnerability in Apache XML Graphics Batik.
+
+
+
+This issue affects Apache XML Graphics Batik: through 1.19.
+
+
+
+Users are recommended to upgrade to version 1.20, which fixes the issue.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118965 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118965</link>
+    <guid isPermaLink="false">c7c4b96ecf65baa35379c56986b54b84</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.4 | Path traversal in the discovered host label synchronization in Checkmk &lt;2.5.0p19, &lt;2.4.0p40 and 2.3.0 (EOL) allows an attacker in control of a remote site in a distributed monitoring setup to write arbitrary files on the central site and thereby execute code as the central site user.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120495 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120495</link>
+    <guid isPermaLink="false">9941f363e1f83366b625b96cd3b18685</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.4 | Path traversal in the Synthetic Monitoring &quot;Robotmk&quot; test service of Checkmk &lt;2.5.0p19, &lt;2.4.0p40, and 2.3.0 (EOL) allows an attacker who controls the agent output of a monitored host's check output for a host to inject a crafted robot output to define the contents and location for the generated HTML log, leading to code execution as the site user.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121374 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121374</link>
+    <guid isPermaLink="false">883b126d2eb8b6d0a9401ebe2849ce32</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.4 | Argument injection in the Kubernetes special agent in Checkmk &lt;2.5.0p19, &lt;2.4.0p40, and 2.3.0 (EOL) allows a user with permission to edit rules in at least one folder to write files to arbitrary locations writable by the site user via crafted node roles in the &quot;Exclude nodes based on their role&quot; rule option, leading to code execution as the site user.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123478 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123478</link>
+    <guid isPermaLink="false">9e112266024585b02a3d4d0399fd04aa</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Meow Apps AI Engine ai-engine allows Stored XSS.This issue affects AI Engine: from n/a through 3.9.1.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124253 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124253</link>
+    <guid isPermaLink="false">5707bb1fb4b5d521be98a27c96c1d694</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in codepeople Calculated Fields Form calculated-fields-form allows DOM-Based XSS.This issue affects Calculated Fields Form: from n/a through 5.5.2.8.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124739 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124739</link>
+    <guid isPermaLink="false">fb715b0487c875951bbf8367c2b52808</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.5 | A flaw was found in BusyBox. When the httpd web server processes subdirectory configuration files, an overly long index page name can trigger a stack-based buffer overflow. An attacker with permissions to write to a subdirectory configuration file could exploit this vulnerability to execute arbitrary code with elevated privileges or cause a denial of service (DoS) by crashing the server process.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124741 - NVD - CVSS Score v3.1: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124741</link>
+    <guid isPermaLink="false">36dcc4a67784a2033cb3f5183e37cafa</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.6 | A flaw was found in BusyBox. The udhcpc6 DHCPv6 client does not properly validate the size of network options sent by a server before copying them into memory. A malicious DHCPv6 server on the local network can exploit this flaw by sending a crafted reply, triggering a stack-based buffer overflow. This vulnerability could allow an attacker to achieve arbitrary code execution with root privileges or cause a denial of service (DoS) crash.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-78287 - NVD - CVSS Score v3.1: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78287</link>
+    <guid isPermaLink="false">95624253e185c738feb375ed1247eac3</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 10.0 | Improper Control of Generation of Code ('Code Injection') vulnerability in Staggs STAGGS staggs allows Remote Code Inclusion.This issue affects STAGGS: from n/a through 3.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-90993 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-90993</link>
+    <guid isPermaLink="false">635e1efa3c54c32f7db74104b7ba9f74</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | XXE vulnerability in Apache XML Graphics Batik.
+
+
+
+This issue affects Apache XML Graphics Batik: through 1.19.
+
+
+
+Users are recommended to upgrade to version 1.20, which fixes the issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
