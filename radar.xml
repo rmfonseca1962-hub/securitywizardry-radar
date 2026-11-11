@@ -5,324 +5,324 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 19:00:50 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Nov 2026 20:01:56 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-124693 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124693</link>
-    <guid isPermaLink="false">183960848f8cd2d2789b4a9b1251280a</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.1 | In Progress Kendo UI for jQuery versions 2026.3.1015 up to, but not including, 2026.4.1110, PivotGrid and PivotConfigurator axis field names are passed to a chip template without appropriate encoding. An attacker who can influence an axis field name can cause JavaScript to execute when a user views the rendered chip. The field name can be interpreted as HTML in both attribute and element contexts. Successful exploitation may compromise the confidentiality and integrity of data available in the user's browser context. The first affected release has not been established.</description>
+    <title>CVE-2026-123875 - NVD - CVSS Score v3.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123875</link>
+    <guid isPermaLink="false">f0f4e5e8e9e2e77b755d560dcb82e378</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 5.9 | A NULL pointer dereference in Node.js HTTP/2 lets an unauthenticated client crash the server, over both TLS and cleartext, by cancelling file downloads. When the server serves a file with stream.respondWithFile() or stream.respondWithFD() and the client cancels the request, a StreamPipe used for the transfer is torn down in an order that leaves a NULL pointer which is then dereferenced, aborting the process. No crafted frames are needed, and a handful of cancelled requests against a default file-serving handler is enough. This vulnerability affects Node.js 26.x, 24.x, and 22.x.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124694 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124694</link>
-    <guid isPermaLink="false">5805c03affb525d9b21ed89ba4f2d8da</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.1 | In Progress Kendo UI for jQuery versions 2026.3.1015 up to, but not including, 2026.4.1110, PropertyGrid does not encode bound property values and items[].description in its default configuration. An attacker who can influence either value can cause JavaScript to execute when a user views the grid. Successful exploitation may compromise the confidentiality and integrity of data available in the user's browser context. The first affected release has not been established.</description>
+    <title>CVE-2026-123877 - NVD - CVSS Score v3.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123877</link>
+    <guid isPermaLink="false">f76e2d32f7883a06d36a13c6f70725c6</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 6.8 | A certificate validation bypass in Node.js https.Agent lets a cached TLS session authenticated under one CA policy be reused by a later request with a stricter policy. https.Agent.prototype.getName() assigns the same Agent and session-cache key to a request that omits ca and one that explicitly supplies ca: [], because an omitted value appends nothing to the key while an empty array stringifies to an empty string. The two policies differ: omitting ca uses the default trust store, while supplying ca replaces it. Since they share a key, a TLS session authenticated under the broader default policy is handed to a new connection made under the later ca: [] policy, and TLS 1.3 session resumption carries the earlier authentication forward, so the second request reports authorized === true and transmits confidential data to a server its own CA policy would reject on a fresh connection. This vulnerability affects Node.js 26.x, 24.x, and 22.x.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126720 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126720</link>
-    <guid isPermaLink="false">d2562ba7f4850c2b15584cfd34d7ad98</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Rooxis RXR-12 Wi-Fi router contains an unauthenticated remote code execution vulnerability in /usr/bin/cloud_manage, where a server-controlled JSON diagnoseParameter field is passed unsanitized to popen(), enabling arbitrary command execution as root over cleartext HTTP when an attacker is positioned on-path and has access to the hard-coded cloud endpoint. Firmware 20260813_c2169ea5 fixes the vulnerability, and your router can be updated through the local web interface.</description>
+    <title>CVE-2026-126051 - NVD - CVSS Score v3.0: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126051</link>
+    <guid isPermaLink="false">2b743d2328d96580cc6314799034a36d</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 7.5 | A deferred-callback use-after-destroy in Node.js TLS server handshake handling allows a remote, unauthenticated attacker to terminate the server process. When a TLS server uses any of the SNICallback, OCSPRequest, newSession, or resumeSession hooks, or server.addContext(), the corresponding OpenSSL callbacks are deferred, and the deferred code does not handle the underlying socket being destroyed between scheduling and execution. By sending a client hello that reaches the vulnerable path (for example, no SNI together with an OCSP request) followed by padding and a socket FIN, an attacker makes OpenSSL deliver the client hello and the end-of-file in the same tick, so the socket is destroyed before the deferred callback runs and the process raises an uncaught exception instead of emitting an 'error' event. This vulnerability affects Node.js 26.x and 24.x.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126722 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126722</link>
-    <guid isPermaLink="false">c6e495320b4fa1fc05e7567d5ccd4c14</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Rooxis RXR-12 Wi-Fi router contains an undocumented telnet backdoor daemon (/usr/bin/telnetd_startup) that, upon receipt of a precomputed AES-128-CBC magic packet using a firmware-wide static key and IV, enables telnet service with default credentials, providing remote root access. Firmware 20260813_c2169ea5 removes the UDP listener entirely, and users can update through their local web interface.</description>
+    <title>CVE-2026-126766 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126766</link>
+    <guid isPermaLink="false">e150fdebd7c66b6df6abb12dbed64b26</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | OpsTree REMS through 1.0.0 contains an improper authorization vulnerability that allows authenticated users to set an incident's reporter to another user by supplying a client-controlled reporter field. Attackers can send crafted POST /api/v1/incidents or PATCH /api/v1/incidents/{id}/status requests to falsify incident attribution and corrupt the accountability audit trail.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126723 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126723</link>
-    <guid isPermaLink="false">2bf6815bcc6e85cf61309503bed38f40</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Rooxis RXR-12 Wi-Fi router contains an authenticated command injection vulnerability in the LuCI white_list RPC handler (/usr/lib/lua/luci/data/white_list_plt.lua), where unsanitized user-supplied MAC addresses are concatenated into os.execute() without validation, yielding root command execution via a malformed mac parameter. Firmware 20260813_c2169ea5 fixes the vulnerability, and users can update their router through the local web interface.</description>
+    <title>CVE-2026-126767 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126767</link>
+    <guid isPermaLink="false">8747a8b2d7a1b908872662153b38ce36</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | OpsTree REMS through 1.0.0 contains a prompt injection vulnerability that allows authenticated users to disclose the hidden system prompt by submitting crafted chat input to POST /api/v1/rca/chat. Attackers can instruct the assistant to ignore its rules and reveal internal orchestration instructions, aiding the crafting of further prompt injection attacks.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126724 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126724</link>
-    <guid isPermaLink="false">ad66d59311c9cc3a56a7b0cf109fd529</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Rooxis RXR-12 Wi-Fi router contains an undocumented UID-0 backdoor account (dg) with a firmware-wide default password (ivanlee) and interactive shell (/bin/ash), allowing authentication as root via SSH or local console without device-specific secrets. Firmware 20260813_c2169ea5 removes the account from the shipped root filesystem and disables root password authentication in SSH. Users can update their router can be through the local web interface.</description>
+    <title>CVE-2026-126768 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126768</link>
+    <guid isPermaLink="false">2f7ae581b3f8ab7beffd7374cd974ef6</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.3 | OpsTree REMS through 1.0.0 contains an authentication bypass vulnerability that allows unauthenticated attackers to obtain valid JWTs by setting the client-controlled is_local_auth field. Attackers can send a POST /api/v1/user/login/ request for the admin account with an invalid password and is_local_auth true to gain SuperUser administrative access.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77873 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77873</link>
-    <guid isPermaLink="false">8ca4f07f6cba2b910c911032dd4c936b</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 7.0 | An improper permissions vulnerability was reported in Lenovo System Update that could allow a local authenticated user to execute code with elevated privileges.</description>
+    <title>CVE-2026-126769 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126769</link>
+    <guid isPermaLink="false">34251e0359333d7036c7143ce42645dd</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.7 | OpsTree REMS through 1.0.0 contains a missing authentication vulnerability that allows unauthenticated remote attackers to access Governance API endpoints, including /api/v1/databases. Attackers can send requests without an Authorization header, or with invalid or tampered JWT tokens, to retrieve stored database hosts, usernames, and passwords.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77882 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77882</link>
-    <guid isPermaLink="false">309058ce085d936b819fbd2de19e662a</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.5 | A deserialization of untrusted data vulnerability was discovered in Lenovo System Update that could allow a local authenticated user to execute code with elevated privileges.</description>
+    <title>CVE-2026-126770 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126770</link>
+    <guid isPermaLink="false">aab87e5ffa618835f9f4dab043358af0</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | OpsTree REMS through 1.0.0 contains a server-side request forgery vulnerability that allows authenticated users to make the backend connect to arbitrary destinations through the database Test Connection feature. Attackers can set a database entry's host and port to localhost, internal addresses, or attacker-controlled servers to probe internal hosts and ports reachable from the REMS server.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-89061 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-89061</link>
-    <guid isPermaLink="false">6e6620fe30dacac8841740af309e5f6c</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.5 | During an internal security assessment, a potential vulnerability was discovered in Lenovo PC Manager, distributed exclusively in the Chinese market, that could allow a local user to escalate privileges.</description>
+    <title>CVE-2026-126771 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126771</link>
+    <guid isPermaLink="false">eeeaf229bae5f361770e84b8bfa45f0f</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.1 | OpsTree REMS through 1.0.0 contains a stored cross-site scripting vulnerability that allows authenticated attackers to inject scripts by uploading attachments with spoofed text/html Content-Type. Attackers can upload HTML files named like test.html.pdf that render in the REMS origin via Preview, executing JavaScript in victims' browsers.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-106133 - NVD - CVSS Score v3.1: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106133</link>
-    <guid isPermaLink="false">5fb004c469cb8858636f792b153d3fb6</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 6.3 | In Progress® Telerik® Report Server prior to version 12.3.26.1110, an incorrect authorization vulnerability in the Web Report Designer allows an authenticated attacker with low privileges to perform unauthorized operations on shared report resources, affecting their integrity and availability.</description>
+    <title>CVE-2026-126772 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126772</link>
+    <guid isPermaLink="false">d243afbc24c1fde3d0fdd4b521712142</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | OpsTree REMS through 1.0.0 contains an improper attribution vulnerability that allows authenticated users to post comments as the incident creator via POST /api/v1/incidents/{incident_id}/comment. Lower-privileged attackers can comment on incidents owned by users such as a Super User to impersonate them and corrupt the incident timeline and audit trail.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-106137 - NVD - CVSS Score v3.1: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106137</link>
-    <guid isPermaLink="false">e71b5c70d27f8e7d394c8f2cbc8736a0</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.6 | In affected versions of Progress® Telerik® UI for ASP.NET MVC `2012.2.710` through `2026.3.811`, ClassFactory updates a shared class dictionary without exclusive write protection and emits non-collectible dynamic assemblies that remain loaded for the AppDomain's lifetime. The dictionary lookup and insertion are not atomic, and case variations in aggregate descriptors can produce distinct retained types even though member resolution is case-insensitive. An unauthenticated remote attacker can exploit this if the application exposes an aggregation endpoint that is reachable without authentication, by submitting concurrent or repeated crafted requests. These requests may corrupt dictionary state or increase CPU and memory use, potentially degrading availability. The issue is fixed in version `2026.3.1015`.</description>
+    <title>CVE-2026-126774 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126774</link>
+    <guid isPermaLink="false">825d356ef03e29c870565142d51f7280</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.8 | @tinacms/mdx before 2.4.2 contains a code injection vulnerability in its MDX serializer, which writes rich-text values into MDX expressions without escaping them. Authenticated content editors can save crafted values that break out of list field or highlightColor expressions in the stored .mdx file, executing JavaScript in visitors' browsers or on build and server-side rendering hosts.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-106152 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106152</link>
-    <guid isPermaLink="false">82c89553e7c19724ff222c0a9a7bd287</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.8 | In Progress® Telerik® Report Server prior to version 12.3.26.1110, an external control of a system configuration setting vulnerability allows an unauthenticated remote attacker to influence the server address used by Report Server when generating links and notifications. With user interaction, this can lead to disclosure of sensitive information and account takeover.</description>
+    <title>CVE-2026-126775 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126775</link>
+    <guid isPermaLink="false">9bef5988bb1644486397742f72c68ed5</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 2.3 | Social-auth-core 4.7.0 before 7.0.0 contains a login cross-site request forgery vulnerability in the SAML backend that restores sessions named in the unsigned RelayState parameter. Attackers can deliver their own valid IdP response and RelayState to a victim's browser via an auto-submitting form, signing the victim into the attacker's account to capture entered data.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-106156 - NVD - CVSS Score v3.1: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106156</link>
-    <guid isPermaLink="false">5c278358ba6cdcdd53560c1cebc4edc5</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.6 | In Progress® Telerik® UI for ASP.NET Core versions `2015.1.318` through `2026.3.811`, repeated server-side aggregation requests, with or without grouping, cause dynamic assemblies and load contexts to be retained, resulting in accumulating process memory consumption. An unauthenticated remote attacker can exploit this if the application exposes an aggregation endpoint that is reachable without authentication. Repeated requests can cause memory growth that may exhaust available resources and affect application availability. Disabling grouping in the client-side interface does not prevent direct requests containing these descriptors. The issue is fixed in version `2026.3.1015`.</description>
+    <title>CVE-2026-126776 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126776</link>
+    <guid isPermaLink="false">301c7958187a8c9f0e478891a5da8ff9</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 6.0 | SiYuan 3.7.0 before 3.8.10 on Windows contains a path traversal vulnerability in kernel/util/webfetch.go that allows attackers to write files outside the import directory via backslash-encoded filenames. Attackers controlling a URL fetched by the MCP web_fetch or http_request tools can use %5C-encoded ..\ sequences to write chosen response bytes to directories above temp/import that are writable by the SiYuan user.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107247 - NVD - CVSS Score v3.0: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107247</link>
-    <guid isPermaLink="false">62a230f790d36c7a487111d614662863</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 8.1 | An authorization bypass in Revive Adserver 6.0.0 through 6.0.8 allows an authenticated manager restricted to one agency to access or modify resources belonging to another agency. Global input registration gives GET parameters precedence over POST parameters, while submitted administration forms use POST values. By supplying authorized object identifiers in the query string and different identifiers in the POST body, an attacker can cause permission checks and subsequent operations to target different objects. This permits unauthorized cross-agency changes, campaign ownership reassignment and disclosure of campaign and banner data. The regression was introduced in commit 156dee7bc3283c128f35e5a31bb305054cc8de1b and is fixed in Revive Adserver 6.0.9 by restoring POST precedence in global input registration.</description>
+    <title>CVE-2026-126777 - NVD - CVSS Score v4.0: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126777</link>
+    <guid isPermaLink="false">715d6db1476e715279fc173fdd2142c3</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.1 | Traccar 3.15 before 6.17.0 contains an authentication bypass vulnerability in LdapProvider.login() that fails to reject empty passwords, causing LDAP binds to be performed as unauthenticated binds when LDAP authentication is enabled. Unauthenticated attackers who know a valid username can log in via POST /api/session or HTTP Basic authentication with an empty password against directories that permit unauthenticated binds, obtaining sessions for any account including administrators.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107662 - NVD - CVSS Score v3.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107662</link>
-    <guid isPermaLink="false">dc04c3bff1155ec48a4d13010506b4c8</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 8.8 | Blind SQL injection in Revive Adserver 6.0.8 and earlier allows an authenticated manager restricted to one agency to extract arbitrary database values through the banner-zone.php and campaign-zone.php administration pages. Permission checks and database queries obtain identifiers through inconsistent request-input precedence, allowing an authorized numeric identifier to pass validation while a different, attacker-controlled value reaches an SQL query. Extracted data can include password hashes and active session identifiers. Reusing an unexpired administrator session can grant administrative access, allowing modification of configuration and disruption of ad delivery. The issue is fixed in Revive Adserver 6.0.9 by consistently selecting POST values before GET values in both global input registration and common input helpers, and excluding cookies from these helpers. Both commits e301dbbb7 and 0aa9d0124 are required for the complete correction.</description>
+    <title>CVE-2026-126778 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126778</link>
+    <guid isPermaLink="false">fbd28e5b31c1dee63c6f1ca861b4e508</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.1 | Wallos 4.4.0 before 5.10.3 contains a stored cross-site scripting vulnerability in endpoints/cronjobs/sendnotifications.php that allows registered users to inject scripts via unescaped notification service responses. Attackers can point their Mattermost webhook URL or Web Push endpoint at a controlled server returning JavaScript, which executes in the administrator's session when sendnotifications.php is opened.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-108558 - NVD - CVSS Score v3.0: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108558</link>
-    <guid isPermaLink="false">f39e0f85b968b110608b4d3ca7120a55</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 6.1 | A reflected cross-site scripting vulnerability in the conversion-statistics pages of Revive Adserver 6.0.8 and earlier allows an unauthenticated attacker to execute JavaScript in an authenticated user's browser by persuading them to visit a crafted URL. An incorrect ownership check validates the advertiser identifier instead of the supplied website identifier, allowing malicious website input to reach HTML output without appropriate encoding. A related output issue affects the hour parameter. The issue is fixed in Revive Adserver 6.0.9 by validating the correct website identifier and normalising the hour parameter before formatting.</description>
+    <title>CVE-2026-126779 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126779</link>
+    <guid isPermaLink="false">784547a77c85f8a4ba4571f94e5d4499</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.7 | Spatie Browsershot 2.2.0 before 5.5.0 contains a local file read vulnerability that allows attackers to read server files by supplying root-relative references in HTML passed to setHtml(). Attackers can embed iframe, img, link or script elements referencing paths like /etc/passwd, which resolve to file:// URLs and render file contents into the returned PDF or screenshot.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-108559 - NVD - CVSS Score v3.0: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108559</link>
-    <guid isPermaLink="false">d7378db978ca36b2476cba2f3e0fd495</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 6.1 | A reflected cross-site scripting vulnerability in the iframe invocation options of Revive Adserver 6.0.8 and earlier allows an unauthenticated attacker to execute JavaScript in an authenticated user's browser by persuading them to visit a crafted URL. When generating invocation tags for an any-size zone, the frame_width and frame_height request parameters are included in HTML attributes without appropriate encoding. The issue is fixed in Revive Adserver 6.0.9 by HTML-encoding the affected values in the invocation-option form fields.</description>
+    <title>CVE-2026-126780 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126780</link>
+    <guid isPermaLink="false">159d0a996415637c462ab9b199067bec</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.6 | Webmin through 2.670 contains a privilege escalation vulnerability in acl/save_group.cgi that allows delegated administrators to grant unauthorized modules by submitting arbitrary module lists in the mod parameter. Attackers with Webmin Users module access can create or edit groups holding modules like Command Shell and assign themselves membership to execute commands as root.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-108560 - NVD - CVSS Score v3.0: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108560</link>
-    <guid isPermaLink="false">e7b42d76879e8cf785d7a681a76c58ac</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 6.1 | A reflected cross-site scripting vulnerability in updates-history.php in Revive Adserver 6.0.8 and earlier allows an unauthenticated attacker to execute JavaScript in a victim's browser by persuading them to visit a crafted URL. Attacker-controlled values are included in XML command attributes without appropriate encoding, allowing injection of executable XHTML into the response. The preliminary session check omits GET xajax requests, exposing an unauthenticated attack path, while authenticated administrator requests also reach the unsafe output. The issue is fixed in Revive Adserver 6.0.9 by applying the session check to both GET and POST requests and encoding XML command attribute values in both response serializers.</description>
+    <title>CVE-2026-126781 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126781</link>
+    <guid isPermaLink="false">6d9d5d959fa3707bfadfe4bc1da8df71</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 7.7 | Webmin through 2.670 contains a users file injection vulnerability in acl/cert_issue.cgi that allows authenticated Webmin users to inject lines by supplying unvalidated certificate DN fields containing newlines. Attackers can end a DN field with a backslash and newline to add a second root entry with a known password hash, gaining Webmin root access after miniserv restarts.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-108561 - NVD - CVSS Score v3.0: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108561</link>
-    <guid isPermaLink="false">77736c4f175b996e43d12cb8ab08aecc</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 6.1 | A stored cross-site scripting vulnerability in the report date-selection controls of Revive Adserver 6.0.8 and earlier allows an unauthenticated attacker to execute JavaScript in a victim's browser by persuading them to follow a crafted report URL and complete normal reauthentication. An attacker-controlled period_preset value can be saved in the victim's session and inserted into JavaScript without appropriate encoding. The payload can execute on the initial report view and subsequent report views using the stored defaults. The issue is fixed in Revive Adserver 6.0.9 by applying JSON encoding appropriate for the JavaScript context to date-selection values.</description>
+    <title>CVE-2026-57500 - NVD - CVSS Score v3.1: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57500</link>
+    <guid isPermaLink="false">2ff3fd771f6ceda2b46fd57f4a6a4df8</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 6.3 | REVA is an interoperability platform. Prior to versions 2.40.5 and 2.46.4, Reva exposes internal metadata folders in the spaces of an authenticated user. This can lead to unwanted ways of interaction with the data. This issue has been patched in versions 2.40.5 and 2.46.4.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-108562 - NVD - CVSS Score v3.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108562</link>
-    <guid isPermaLink="false">750f3d4bda5484d5b63b733a5b0bd749</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 5.4 | A stored cross-site scripting vulnerability in maintenance-appendcode-check.php in Revive Adserver 6.0.8 and earlier allows an authenticated manager to execute JavaScript in an administrator's browser. A manager can store a malicious tracker name and cause the tracker to appear in the append-code maintenance results. When an administrator opens the affected maintenance page, the tracker name is included in HTML without appropriate encoding. The issue is fixed in Revive Adserver 6.0.9 by HTML-encoding tracker names when displaying the maintenance results.</description>
+    <title>CVE-2026-58505 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58505</link>
+    <guid isPermaLink="false">cd0f87f4a7e2beaa26c1e404ea87e64a</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.5 | geojson-vt is a JavaScript library for slicing GeoJSON data into vector tiles on the fly, primarily designed to enable rendering and interacting with large geospatial datasets on the browser side (without a server). Prior to version 6.1.1, @maplibre/geojson-vt contains an uncontrolled recursion vulnerability in its GeoJSON conversion logic. When a GeoJSONVT instance is constructed with a deeply nested GeometryCollection object, the mutually recursive functions featureToInternal and convertGeometryCollection in src/convert.ts exhaust the Node.js call stack, causing an unhandled RangeError: Maximum call stack size exceeded that terminates the process. Because the library is widely used in server-side tile services that accept GeoJSON over the network, a remote unauthenticated attacker can trigger a denial-of-service by sending a single crafted payload. No authentication is required, and no non-default library options are needed. This issue has been patched in version 6.1.1.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-108563 - NVD - CVSS Score v3.0: 4.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108563</link>
-    <guid isPermaLink="false">8690a7ab2b921514f96e0e4b49aec2ef</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 4.7 | Spreadsheet formula injection in conversion-tracking report exports in Revive Adserver 6.0.8 and earlier allows an unauthenticated attacker to submit conversion values that are written as formulas instead of text in an XLS workbook. When a user opens the exported report in a spreadsheet application, attacker-supplied formulas can be evaluated. The confirmed impact is formula execution within the workbook; disclosure of information to the attacker has not been established. The issue is fixed in Revive Adserver 6.0.9 by sanitising conversion values before writing them to the affected XLS report sections.</description>
+    <title>CVE-2026-61637 - NVD - CVSS Score v3.1: 3.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61637</link>
+    <guid isPermaLink="false">2a3782ce97cd41171cd95c62be4ef6e1</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 3.5 | Icinga Web 2 is an open source monitoring web interface, framework and command-line interface. Prior to versions 2.12.7 and 2.13.1, an attacker can craft a URL that, once visited by an authenticated user (or one that is able to authenticate), allows to manipulate the backend to redirect the user to any location. For this to succeed, the victim's locale in Icinga Web must be different from en_US. This issue has been patched in versions 2.12.7 and 2.13.1.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-108564 - NVD - CVSS Score v3.0: 4.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108564</link>
-    <guid isPermaLink="false">485715684e6c45c2c81b43caddea6e72</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 4.7 | A reflected cross-site scripting vulnerability in the invocation-tag generation interface of Revive Adserver 6.0.8 and earlier allows an unauthenticated attacker to execute JavaScript in an authenticated user's browser by persuading them to visit a crafted URL. When Direct Selection is enabled, an attacker-controlled banner identifier can be included in HTML form fields without appropriate encoding. Direct Selection is disabled by default. The issue is fixed in Revive Adserver 6.0.9 by HTML-encoding banner identifier values in the invocation-option form fields.</description>
+    <title>CVE-2026-63505 - NVD - CVSS Score v3.1: 4.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63505</link>
+    <guid isPermaLink="false">04e09243ced0fc59c1a74068640a6907</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 4.9 | Probo is a self-hostable governance, risk, and compliance (GRC) platform built for engineering and security teams. Prior to version 0.223.1, Probo's console GraphQL API is a multi-tenant GRC platform where all data is scoped to an organization. A Finding can reference a Risk via finding.riskId. That reference is stored without validating that the risk belongs to the caller's organization, and the Finding.risk field resolver authorizes the finding (caller's org) instead of the risk, then loads the risk with a tenant scope derived from the risk's own global ID. As a result, an authenticated member of organization A can attach an arbitrary organization B risk GID to a finding they own and then read organization B's Risk (name, description, treatment, category, severity, owner) — with no membership in B. The stored cross-tenant reference also blocks B from deleting its own risk (ON DELETE RESTRICT), a cross-tenant integrity/DoS. This issue has been patched in version 0.223.1.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-108565 - NVD - CVSS Score v3.0: 4.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108565</link>
-    <guid isPermaLink="false">805bb2741eca3e2013ff8e846784f0d2</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 4.7 | A reflected cross-site scripting vulnerability in the popup invocation options of Revive Adserver 6.0.8 and earlier allows an unauthenticated attacker to execute JavaScript in an authenticated user's browser by persuading them to visit a crafted URL. The top, left, timeout and delay request parameters are included in HTML attributes without appropriate encoding. Exploitation requires an existing popup zone, which can be created through the administrator API but is not offered by the normal zone-creation interface. The issue is fixed in Revive Adserver 6.0.9 by HTML-encoding the affected popup option values.</description>
+    <title>CVE-2026-64861 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-64861</link>
+    <guid isPermaLink="false">d7896bef572421d62b152c9ff30ad740</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 4.3 | Probo is a self-hostable governance, risk, and compliance (GRC) platform built for engineering and security teams. Prior to version 0.222.0, the GraphQL endpoint does not enforce restrictions on alias count, query depth, or query complexity. An attacker can send a single request containing thousands of aliased resolver calls, causing excessive server-side resource consumption and service degradation. This issue has been patched in version 0.222.0.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-117373 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117373</link>
-    <guid isPermaLink="false">8d50a37ee87c6c55463f681896833226</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Janus WebRTC Server 1.2.3 through 1.4.0 is vulnerable to Directory Traversal. The application accepts a caller supplied media path when an ondemand stream is created. The path is validated only by checking whether it contains one of the audio extensions and is then passed to the file source which opens it. No canonicalization is performed and no directory allowlist is enforced, so an unauthenticated caller can make the server open an arbitrary local file and use it as a media source, with the content delivered to viewers as RTP audio.</description>
+    <title>CVE-2026-65833 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65833</link>
+    <guid isPermaLink="false">5c76e25e4c18686c414daabf39a5ad1f</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 6.9 | iopress is a native HTTP server for Node.js with platform-specific async I/O. Prior to version 1.0.5, the chunked-transfer-encoding HTTP request parser in @iopress/core reads past the end of the input buffer when a request declares a chunk size larger than the body actually received. This results in a heap-buffer-over-read. This issue has been patched in version 1.0.5.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-61619 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61619</link>
-    <guid isPermaLink="false">cdef5fa3ac07df2a8579b579f3ab7b35</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.8 | The OWASP core rule set (CRS) is a set of generic attack detection rules for use with compatible web application firewalls. Prior to versions 3.3.10, 4.25.1, and 4.28.0, regular-expression denial of service (ReDoS) affects a shared regex-assembly include used to build 12 Unix RCE detection rules in CRS v4, and the same ambiguous pattern was present in the manually-assembled regexes in 4 rules in CRS v3.3. With a single, unauthenticated, crafted request, the generated pattern drives PCRE2 past its backtracking limit. When PCRE2 exceeds that limit, the @rx operator returns an error rather than a match result, which results in detection bypass and CPU denial of service. This issue has been patched in versions 3.3.10, 4.25.1, and 4.28.0.</description>
+    <title>CVE-2026-65840 - NVD - CVSS Score v3.1: 9.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65840</link>
+    <guid isPermaLink="false">0fc30d5163b4a1170d1105a0095a344a</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 9.6 | Fider is a feedback portal for feature requests and suggestions. Prior to version 0.36.0, in multi-tenant mode (HOST_MODE=multi), an attacker can use an email verification key issued by Tenant A to authenticate as the same email address on Tenant B. This completely bypasses tenant isolation and allows unauthorized account takeover across tenants. Single-host deployments (HOST_MODE=single, the default) are NOT affected. This issue has been patched in version 0.36.0.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-62971 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62971</link>
-    <guid isPermaLink="false">340f6e55f9f148a507048ffa0154b1f6</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.2 | The OWASP core rule set (CRS) is a set of generic attack detection rules for use with compatible web application firewalls. Prior to versions 3.3.10, 4.25.1, and 4.28.0, CRS rules in the 921 (protocol-attack), 930 (LFI), 931 (RFI), 932 (RCE), 933 (PHP), 934 (generic), 941 (XSS), 942 (SQLi), and 943 (session-fixation) families inspect XML request bodies via the XPath expression XML:/*. That expression matches only element text nodes — it does not match XML attribute values. As a result, an attacker who places an attack payload inside an XML attribute (e.g. &lt;a href=&quot;javascript:alert(1)=window.name&quot;&gt;&lt;/a&gt; or &lt;a value=&quot;' OR 1=1 --&quot;&gt;&lt;/a&gt;) bypasses CRS detection entirely. This is verified empirically against a local CRS test instance and against the public CRS sandbox. The bypass affects approximately 159 rules across 9 rule files and applies at every paranoia level (PL1 through PL4), since the variable list is more or less shared across PLs. The 944 (Java) family is the only one that correctly includes XML://@* in addition to XML:/* and is therefore unaffected. This issue has been patched in versions 3.3.10, 4.25.1, and 4.28.0.</description>
+    <title>CVE-2026-65843 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65843</link>
+    <guid isPermaLink="false">21c80a53b118cab4d9a587d72b244b88</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.7 | sync-rpc runs asynchronous commands synchronously by putting them in a separate proces. Prior to version 1.3.7, if an attacker could guess the correct port and it was not blocked via a firewall, it was possible to load and execute arbitrary JavaScript files stored on the server running sync-rpc. This issue has been patched in version 1.3.7.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-64858 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-64858</link>
-    <guid isPermaLink="false">9588b4ae012e90956305e08b4cc9f9b2</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 5.3 | vulnerability-operator scans SBOMs and Images for vulnerabilities. Prior to version 0.28.16, an unauthenticated information-disclosure vulnerability exposes all vulnerability scan reports served by the operator. The /report/ HTTP endpoint mounts a raw http.FileServer over the reports directory (default /reports) with no authentication, authorization, or middleware. Any client that can reach the operator's HTTP port (default 8080) can list and download every JSON vulnerability report, disclosing CVE IDs, affected package names/versions, and container image identifiers for every workload scanned in the cluster. This issue has been patched in version 0.28.16.</description>
+    <title>CVE-2026-65967 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65967</link>
+    <guid isPermaLink="false">7dbfee7caa7e03f2fb22958d41c1e438</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.1 | Fider is a feedback portal for feature requests and suggestions. Prior to version 0.34.0, a Server-Side Request Forgery (SSRF) vulnerability exists in Fider due to insufficient validation of webhook URLs. The application allows user-controlled URLs to be fetched by the server without restricting access to internal or external network resources. This enables attackers with administrative privileges to make arbitrary HTTP requests from the server, potentially accessing internal services or cloud metadata endpoints. This issue has been patched in version 0.34.0.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-65820 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65820</link>
-    <guid isPermaLink="false">470d9b61458d9d3a5c4c8925658a5a65</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.7 | aeon is a scikit-learn compatible Python library for learning from time series. Prior to version 1.5.0, a GitHub Actions workflow used pull_request_target for pre-commit checks on pull requests from forks. In this configuration, fork-controlled code could be checked out and executed in a privileged context. The vulnerable workflow also generated/used elevated credentials and could automatically commit or push fixes back to pull request branches. This created a potential token exposure and repository write path if an attacker submitted a malicious fork pull request designed to execute during the privileged workflow run. This issue has been patched in version 1.5.0.</description>
+    <title>CVE-2026-76078 - NVD - CVSS Score v3.1: 3.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76078</link>
+    <guid isPermaLink="false">581c0bdaf60102f9d32a8ee07058abcf</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 3.1 | Probo is a self-hostable governance, risk, and compliance (GRC) platform built for engineering and security teams. Prior to version 0.224.0, the public Trust Center GraphQL API exposes acceptElectronicSignature and recordSigningEvent, both gated only by @authentication(required: PRESENT) @sessionOnly — any self-provisioned trust center identity can call them. The underlying esign.Service.AcceptSignature and esign.Service.recordEvent build the tenant scope from the client-supplied signatureId GID (coredata.NewScopeFromObjectID(req.SignatureID)) and load the signature by that GID. At no point do they verify that the signature belongs to the caller or that the caller's email matches the signature's SignerEmail. As a result, any authenticated trust-center visitor who possesses another visitor's signature GID can: (1) complete that visitor's NDA signature — overwriting signer name/IP/UA with attacker data and setting status to Accepted, which triggers the sealing worker to generate a completion certificate; (2) inject arbitrary audit-trail events into any signature's log. Both attacks defeat the non-repudiation and integrity guarantees of the e-signature system. This issue has been patched in version 0.224.0.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-68485 - NVD - CVSS Score v3.0: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68485</link>
-    <guid isPermaLink="false">575c10327c9f28a9c987e1313d7f662f</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 4.3 | An authorization bypass in website-index.php in Revive Adserver 6.0.8 and earlier allows an authenticated manager restricted to one agency to view another agency's website listing by changing the agencyid request parameter. Disclosed information includes website names, identifiers and timestamps. Detailed website pages continue to enforce ownership checks. The issue is fixed in Revive Adserver 6.0.9 by obtaining the agency identifier from the authenticated account rather than the request.</description>
+    <title>CVE-2026-76079 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76079</link>
+    <guid isPermaLink="false">aff6a374606e2c2a3e8f24a01dbd1fef</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.2 | Probo is a self-hostable governance, risk, and compliance (GRC) platform built for engineering and security teams. Prior to version 0.224.0, an organization ADMIN can mint an OWNER membership via createUser, bypassing the owner-only set-owner authorization gate. This issue has been patched in version 0.224.0.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-68486 - NVD - CVSS Score v3.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68486</link>
-    <guid isPermaLink="false">f97aee023dbbb4dc98856d8c58cccbcb</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 5.4 | An authorization bypass in campaign-zone linking in Revive Adserver 6.0.8 and earlier allows an authenticated manager, or a trafficker with zone-linking permissions, to associate another agency's campaign with their own zone. Campaign ownership checks are missing from the bulk-linking and single-link operations in zone-include.php and the XML-RPC campaign-linking method. Although agency filtering prevents foreign banners from being linked, the unauthorized association can expose the foreign campaign's name, type and identifier in the linked-campaign listing. The issue is fixed in Revive Adserver 6.0.9 by validating campaign ownership in the affected operations.</description>
+    <title>CVE-2026-76080 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76080</link>
+    <guid isPermaLink="false">ce6c8866cb91ff85388552ff0bc5f7c3</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 3.7 | Probo is a self-hostable governance, risk, and compliance (GRC) platform built for engineering and security teams. Prior to version 0.224.0, the public Trust Center GraphQL API exposes Query.node(id:) with @authentication(required: OPTIONAL) — an unauthenticated internet visitor to any published trust center can call it. Six of its type branches — Organization, Framework, Audit, ThirdParty (subprocessor), TrustCenter, and TrustCenterReference — resolve the object with a tenant scope derived from the client-supplied GID itself (coredata.NewScopeFromObjectID(id)) and load it with a bare Get(scope, id) that performs no comparison to the current trust center's OrganizationID and no showOnTrustCenter/visibility check. (The Document and File branches, by contrast, correctly pass trustCenter.OrganizationID and check visibility). This issue has been patched in version 0.224.0.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-68862 - NVD - CVSS Score v3.1: 6.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68862</link>
-    <guid isPermaLink="false">7e760746ab6e230da728e8bbfb1fa4df</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 6.6 | Dell Terraform Provider for Dell PowerFlex contain(s) an OS Command Injection Vulnerability in the SDC host provisioning component. A high privileged remote attacker with access to the PowerFlex management plane could potentially exploit this vulnerability, leading to the execution of arbitrary OS commands on provisioned SDC hosts. Exploitation may lead to full compromise of affected SDC hosts.</description>
+    <title>CVE-2026-91150 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91150</link>
+    <guid isPermaLink="false">61357f8e7e9e174fff364bbbe1b74477</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.5 | A flaw was found in Cockpit. This vulnerability allows a remote attacker, without prior authentication, to send specially crafted fragmented WebSocket messages. These messages accumulate without a total-size limit, leading to unbounded memory exhaustion and a denial of service in the `cockpit-ws` service.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77168 - NVD - CVSS Score v3.0: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77168</link>
-    <guid isPermaLink="false">82079f08be645b6102e2bebb871c6f5d</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 4.3 | A cross-site request forgery vulnerability in tracker-invocation.php in Revive Adserver 6.0.8 and earlier allows an attacker to modify a tracker's name, description or advertiser assignment using an authenticated victim's permissions. A leftover state-changing handler accepts request parameters without verifying a CSRF token, although it is not used by the normal invocation-tag interface. Exploitation requires victim interaction and a request path that carries the victim's session credentials. The issue is fixed in Revive Adserver 6.0.9 by removing the unused tracker-modification handler.</description>
+    <title>CVE-2026-91873 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91873</link>
+    <guid isPermaLink="false">1c111dc6cd50f119f2ffa3b6049d8f8a</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.7 | Dell OpenManage Ansible Modules, versions 2.1.2 through 10.0.3, contains an Improper Certificate Validation vulnerability in the iDRACRedfishAPI component. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure and unauthorized access.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-82978 - NVD - CVSS Score v3.0: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82978</link>
-    <guid isPermaLink="false">83348744c8bf601738cc2ce580751ca2</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.0: 4.3 | An authorization bypass in channel-edit.php in Revive Adserver 6.0.8 and earlier allows an authenticated manager to create a delivery rule set belonging to another agency by changing the submitted agencyid parameter. The server trusts the submitted agency identifier when inserting the new rule set, allowing unauthorized creation of objects in another agency's account. The issue is fixed in Revive Adserver 6.0.9 by obtaining the agency identifier from the authenticated account rather than submitted form data and removing the agency identifier from the form's hidden fields.</description>
+    <title>CVE-2026-91874 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91874</link>
+    <guid isPermaLink="false">c3efb685204e38cf25668c962afc0c42</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.7 | Dell OpenManage Ansible Modules, versions 5.0.0 through 10.0.3, contains an Improper Certificate Validation vulnerability in the iDRACConnection component. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure and unauthorized access.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-86363 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86363</link>
-    <guid isPermaLink="false">384dbe6e4c97f51bfb9e49d505a3a4f2</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 5.5 | Dell Live Optics Collector, versions prior to 27.3.13.330 contains a Generation of Predictable IV with CBC Mode vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information exposure.</description>
+    <title>CVE-2026-91875 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91875</link>
+    <guid isPermaLink="false">4c346405c79a3a440dbbc803c03a9228</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.7 | Dell OpenManage Ansible Modules, versions 9.2.0 through 10.0.3, contains an Improper Certificate Validation vulnerability in the SessionAPI component. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure and unauthorized access.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-86364 - NVD - CVSS Score v3.1: 4.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86364</link>
-    <guid isPermaLink="false">52f02c2b1769959199a17ce574324ece</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 4.7 | Dell Live Optics Collector, versions prior to 27.3.8.317 contains a Use of Insufficiently Random Values vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to Information exposure.</description>
+    <title>CVE-2026-91876 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91876</link>
+    <guid isPermaLink="false">baff365cc6445276e306f708923b4f6e</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 5.5 | Dell OpenManage Ansible Modules, versions 2.0.4 through 10.0.3, contains an Improper Restriction of XML External Entity Reference vulnerability in the XML parsing component. A low privileged attacker with local access could potentially exploit this vulnerability, leading to information exposure.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91870 - NVD - CVSS Score v3.1: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91870</link>
-    <guid isPermaLink="false">33d6b26747fd6e19d007cdc2d690fd27</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.4 | Dell Ansible Storage for PowerFlex, versions prior to 3.2.0, contains an Improper Certificate Validation vulnerability in the API client component. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure and unauthorized access.</description>
+    <title>CVE-2026-91877 - NVD - CVSS Score v3.1: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91877</link>
+    <guid isPermaLink="false">d73584b7e46472555920fc6072660784</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.6 | Dell OpenManage Ansible Modules, versions 2.0.2 through 10.0.3, contains an Improper Neutralization of Special Elements in Data Query Logic vulnerability in the OData filter processing component. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to unauthorized data access, authorization bypass, and denial of service.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91871 - NVD - CVSS Score v3.1: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91871</link>
-    <guid isPermaLink="false">4ae9789e0e34d3345cc2e9c6f21eda24</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.4 | Dell Ansible Storage for PowerStore, versions prior to 3.9.0, contains an Improper Certificate Validation vulnerability in the API client component. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure and unauthorized access.</description>
+    <title>CVE-2026-91878 - NVD - CVSS Score v3.1: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91878</link>
+    <guid isPermaLink="false">632724e446e24af5831efb6d265104c8</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.6 | Dell OpenManage Ansible Modules, versions 6.0.0 through 10.0.3, contains an Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') vulnerability in the XML data conversion component. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to XML injection, malicious content injection, and XML parsing errors</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91872 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91872</link>
-    <guid isPermaLink="false">b537011fd9542a87b7be3a37047a3033</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 5.5 | Dell Ansible Storage for PowerStore, versions prior to 3.9.0,contains an Insertion of Sensitive Information into Log File vulnerability in the configuration module. A low privileged attacker with local access could potentially exploit this vulnerability, leading to information exposure.</description>
+    <title>CVE-2026-91880 - NVD - CVSS Score v3.1: 8.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91880</link>
+    <guid isPermaLink="false">28c800dd5e8e2aef57eefc2190d44592</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.9 | Dell Terraform Provider for PowerFlex, versions 1.5.0 through 1.8.0, contains an Improper Certificate Validation vulnerability in the SSH client component.Terraform PowerFlex provider uses ssh.InsecureIgnoreHostKey() as the default SSH host key callback. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure and unauthorized access.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91879 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91879</link>
-    <guid isPermaLink="false">8dee24ce27816667a94eb853f643e8d1</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.8 | Dell Terraform for ObjectScale and Powerstore, versions prior to 1.1.1 (ObjectScale) and versions 1.2.1 through 1.3.0 (PowerStore) contains an insertion of sensitive information into Log File vulnerability in the client initialization component.  A low privileged attacker with remote access could potentially exploit this vulnerability, leading to information exposure and unauthorized access.</description>
+    <title>CVE-2026-91891 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91891</link>
+    <guid isPermaLink="false">f15b29524db667bd7bfeab5e7b813496</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.5 | Dell Terraform Provider for PowerStore, versions prior to 1.3.1 , contains a  vulnerability that may cause sensitive authentication data to be insufficiently redacted in diagnostic logs. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91890 - NVD - CVSS Score v3.1: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91890</link>
-    <guid isPermaLink="false">b5cf589d85f0655eeafe7af4de82b6c8</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.7 | Dell Ansible Storage for Unity , versions prior to 1.2.13 contains an Improper Certificate Validation vulnerability in the UnityRESTConnector component. An unauthenticated attacker with remote access could potentially exploit this vulnerability,leading to information exposure and unauthorized access.</description>
+    <title>CVE-2026-91892 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91892</link>
+    <guid isPermaLink="false">16110ec9a3bc523e29ee38b394b133ab</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 3.7 | Dell Terraform Provider for PowerFlex, versions prior to 1.9.0, contains a vulnerability  that may permit the use of deprecated cryptographic protocols during secure communications. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
