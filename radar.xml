@@ -5,223 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Nov 2026 21:02:40 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-126777 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126777</link>
-    <guid isPermaLink="false">715d6db1476e715279fc173fdd2142c3</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.1 | Traccar 3.15 before 6.17.0 contains an authentication bypass vulnerability in LdapProvider.login() that fails to reject empty passwords, causing LDAP binds to be performed as unauthenticated binds when LDAP authentication is enabled. Unauthenticated attackers who know a valid username can log in via POST /api/session or HTTP Basic authentication with an empty password against directories that permit unauthenticated binds, obtaining sessions for any account including administrators.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126778 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126778</link>
-    <guid isPermaLink="false">fbd28e5b31c1dee63c6f1ca861b4e508</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.1 | Wallos 4.4.0 before 5.10.3 contains a stored cross-site scripting vulnerability in endpoints/cronjobs/sendnotifications.php that allows registered users to inject scripts via unescaped notification service responses. Attackers can point their Mattermost webhook URL or Web Push endpoint at a controlled server returning JavaScript, which executes in the administrator's session when sendnotifications.php is opened.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126779 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126779</link>
-    <guid isPermaLink="false">784547a77c85f8a4ba4571f94e5d4499</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.7 | Spatie Browsershot 2.2.0 before 5.5.0 contains a local file read vulnerability that allows attackers to read server files by supplying root-relative references in HTML passed to setHtml(). Attackers can embed iframe, img, link or script elements referencing paths like /etc/passwd, which resolve to file:// URLs and render file contents into the returned PDF or screenshot.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126780 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126780</link>
-    <guid isPermaLink="false">159d0a996415637c462ab9b199067bec</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.6 | Webmin through 2.670 contains a privilege escalation vulnerability in acl/save_group.cgi that allows delegated administrators to grant unauthorized modules by submitting arbitrary module lists in the mod parameter. Attackers with Webmin Users module access can create or edit groups holding modules like Command Shell and assign themselves membership to execute commands as root.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126781 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126781</link>
-    <guid isPermaLink="false">6d9d5d959fa3707bfadfe4bc1da8df71</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 7.7 | Webmin through 2.670 contains a users file injection vulnerability in acl/cert_issue.cgi that allows authenticated Webmin users to inject lines by supplying unvalidated certificate DN fields containing newlines. Attackers can end a DN field with a backslash and newline to add a second root entry with a known password hash, gaining Webmin root access after miniserv restarts.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-57500 - NVD - CVSS Score v3.1: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57500</link>
-    <guid isPermaLink="false">2ff3fd771f6ceda2b46fd57f4a6a4df8</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 6.3 | REVA is an interoperability platform. Prior to versions 2.40.5 and 2.46.4, Reva exposes internal metadata folders in the spaces of an authenticated user. This can lead to unwanted ways of interaction with the data. This issue has been patched in versions 2.40.5 and 2.46.4.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-58505 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58505</link>
-    <guid isPermaLink="false">cd0f87f4a7e2beaa26c1e404ea87e64a</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.5 | geojson-vt is a JavaScript library for slicing GeoJSON data into vector tiles on the fly, primarily designed to enable rendering and interacting with large geospatial datasets on the browser side (without a server). Prior to version 6.1.1, @maplibre/geojson-vt contains an uncontrolled recursion vulnerability in its GeoJSON conversion logic. When a GeoJSONVT instance is constructed with a deeply nested GeometryCollection object, the mutually recursive functions featureToInternal and convertGeometryCollection in src/convert.ts exhaust the Node.js call stack, causing an unhandled RangeError: Maximum call stack size exceeded that terminates the process. Because the library is widely used in server-side tile services that accept GeoJSON over the network, a remote unauthenticated attacker can trigger a denial-of-service by sending a single crafted payload. No authentication is required, and no non-default library options are needed. This issue has been patched in version 6.1.1.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-61637 - NVD - CVSS Score v3.1: 3.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61637</link>
-    <guid isPermaLink="false">2a3782ce97cd41171cd95c62be4ef6e1</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 3.5 | Icinga Web 2 is an open source monitoring web interface, framework and command-line interface. Prior to versions 2.12.7 and 2.13.1, an attacker can craft a URL that, once visited by an authenticated user (or one that is able to authenticate), allows to manipulate the backend to redirect the user to any location. For this to succeed, the victim's locale in Icinga Web must be different from en_US. This issue has been patched in versions 2.12.7 and 2.13.1.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-63505 - NVD - CVSS Score v3.1: 4.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63505</link>
-    <guid isPermaLink="false">04e09243ced0fc59c1a74068640a6907</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 4.9 | Probo is a self-hostable governance, risk, and compliance (GRC) platform built for engineering and security teams. Prior to version 0.223.1, Probo's console GraphQL API is a multi-tenant GRC platform where all data is scoped to an organization. A Finding can reference a Risk via finding.riskId. That reference is stored without validating that the risk belongs to the caller's organization, and the Finding.risk field resolver authorizes the finding (caller's org) instead of the risk, then loads the risk with a tenant scope derived from the risk's own global ID. As a result, an authenticated member of organization A can attach an arbitrary organization B risk GID to a finding they own and then read organization B's Risk (name, description, treatment, category, severity, owner) — with no membership in B. The stored cross-tenant reference also blocks B from deleting its own risk (ON DELETE RESTRICT), a cross-tenant integrity/DoS. This issue has been patched in version 0.223.1.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-64861 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-64861</link>
-    <guid isPermaLink="false">d7896bef572421d62b152c9ff30ad740</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 4.3 | Probo is a self-hostable governance, risk, and compliance (GRC) platform built for engineering and security teams. Prior to version 0.222.0, the GraphQL endpoint does not enforce restrictions on alias count, query depth, or query complexity. An attacker can send a single request containing thousands of aliased resolver calls, causing excessive server-side resource consumption and service degradation. This issue has been patched in version 0.222.0.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-65833 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65833</link>
-    <guid isPermaLink="false">5c76e25e4c18686c414daabf39a5ad1f</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 6.9 | iopress is a native HTTP server for Node.js with platform-specific async I/O. Prior to version 1.0.5, the chunked-transfer-encoding HTTP request parser in @iopress/core reads past the end of the input buffer when a request declares a chunk size larger than the body actually received. This results in a heap-buffer-over-read. This issue has been patched in version 1.0.5.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-65840 - NVD - CVSS Score v3.1: 9.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65840</link>
-    <guid isPermaLink="false">0fc30d5163b4a1170d1105a0095a344a</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 9.6 | Fider is a feedback portal for feature requests and suggestions. Prior to version 0.36.0, in multi-tenant mode (HOST_MODE=multi), an attacker can use an email verification key issued by Tenant A to authenticate as the same email address on Tenant B. This completely bypasses tenant isolation and allows unauthorized account takeover across tenants. Single-host deployments (HOST_MODE=single, the default) are NOT affected. This issue has been patched in version 0.36.0.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-65843 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65843</link>
-    <guid isPermaLink="false">21c80a53b118cab4d9a587d72b244b88</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.7 | sync-rpc runs asynchronous commands synchronously by putting them in a separate proces. Prior to version 1.3.7, if an attacker could guess the correct port and it was not blocked via a firewall, it was possible to load and execute arbitrary JavaScript files stored on the server running sync-rpc. This issue has been patched in version 1.3.7.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-65967 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65967</link>
-    <guid isPermaLink="false">7dbfee7caa7e03f2fb22958d41c1e438</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.1 | Fider is a feedback portal for feature requests and suggestions. Prior to version 0.34.0, a Server-Side Request Forgery (SSRF) vulnerability exists in Fider due to insufficient validation of webhook URLs. The application allows user-controlled URLs to be fetched by the server without restricting access to internal or external network resources. This enables attackers with administrative privileges to make arbitrary HTTP requests from the server, potentially accessing internal services or cloud metadata endpoints. This issue has been patched in version 0.34.0.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76078 - NVD - CVSS Score v3.1: 3.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76078</link>
-    <guid isPermaLink="false">581c0bdaf60102f9d32a8ee07058abcf</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 3.1 | Probo is a self-hostable governance, risk, and compliance (GRC) platform built for engineering and security teams. Prior to version 0.224.0, the public Trust Center GraphQL API exposes acceptElectronicSignature and recordSigningEvent, both gated only by @authentication(required: PRESENT) @sessionOnly — any self-provisioned trust center identity can call them. The underlying esign.Service.AcceptSignature and esign.Service.recordEvent build the tenant scope from the client-supplied signatureId GID (coredata.NewScopeFromObjectID(req.SignatureID)) and load the signature by that GID. At no point do they verify that the signature belongs to the caller or that the caller's email matches the signature's SignerEmail. As a result, any authenticated trust-center visitor who possesses another visitor's signature GID can: (1) complete that visitor's NDA signature — overwriting signer name/IP/UA with attacker data and setting status to Accepted, which triggers the sealing worker to generate a completion certificate; (2) inject arbitrary audit-trail events into any signature's log. Both attacks defeat the non-repudiation and integrity guarantees of the e-signature system. This issue has been patched in version 0.224.0.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76079 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76079</link>
-    <guid isPermaLink="false">aff6a374606e2c2a3e8f24a01dbd1fef</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.2 | Probo is a self-hostable governance, risk, and compliance (GRC) platform built for engineering and security teams. Prior to version 0.224.0, an organization ADMIN can mint an OWNER membership via createUser, bypassing the owner-only set-owner authorization gate. This issue has been patched in version 0.224.0.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76080 - NVD - CVSS Score v3.1: 3.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76080</link>
-    <guid isPermaLink="false">ce6c8866cb91ff85388552ff0bc5f7c3</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 3.7 | Probo is a self-hostable governance, risk, and compliance (GRC) platform built for engineering and security teams. Prior to version 0.224.0, the public Trust Center GraphQL API exposes Query.node(id:) with @authentication(required: OPTIONAL) — an unauthenticated internet visitor to any published trust center can call it. Six of its type branches — Organization, Framework, Audit, ThirdParty (subprocessor), TrustCenter, and TrustCenterReference — resolve the object with a tenant scope derived from the client-supplied GID itself (coredata.NewScopeFromObjectID(id)) and load it with a bare Get(scope, id) that performs no comparison to the current trust center's OrganizationID and no showOnTrustCenter/visibility check. (The Document and File branches, by contrast, correctly pass trustCenter.OrganizationID and check visibility). This issue has been patched in version 0.224.0.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91150 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91150</link>
-    <guid isPermaLink="false">61357f8e7e9e174fff364bbbe1b74477</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.5 | A flaw was found in Cockpit. This vulnerability allows a remote attacker, without prior authentication, to send specially crafted fragmented WebSocket messages. These messages accumulate without a total-size limit, leading to unbounded memory exhaustion and a denial of service in the `cockpit-ws` service.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91873 - NVD - CVSS Score v3.1: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91873</link>
-    <guid isPermaLink="false">1c111dc6cd50f119f2ffa3b6049d8f8a</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.7 | Dell OpenManage Ansible Modules, versions 2.1.2 through 10.0.3, contains an Improper Certificate Validation vulnerability in the iDRACRedfishAPI component. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure and unauthorized access.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91874 - NVD - CVSS Score v3.1: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91874</link>
-    <guid isPermaLink="false">c3efb685204e38cf25668c962afc0c42</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.7 | Dell OpenManage Ansible Modules, versions 5.0.0 through 10.0.3, contains an Improper Certificate Validation vulnerability in the iDRACConnection component. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure and unauthorized access.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91875 - NVD - CVSS Score v3.1: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91875</link>
-    <guid isPermaLink="false">4c346405c79a3a440dbbc803c03a9228</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.7 | Dell OpenManage Ansible Modules, versions 9.2.0 through 10.0.3, contains an Improper Certificate Validation vulnerability in the SessionAPI component. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure and unauthorized access.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91876 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91876</link>
-    <guid isPermaLink="false">baff365cc6445276e306f708923b4f6e</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 5.5 | Dell OpenManage Ansible Modules, versions 2.0.4 through 10.0.3, contains an Improper Restriction of XML External Entity Reference vulnerability in the XML parsing component. A low privileged attacker with local access could potentially exploit this vulnerability, leading to information exposure.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91877 - NVD - CVSS Score v3.1: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91877</link>
-    <guid isPermaLink="false">d73584b7e46472555920fc6072660784</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.6 | Dell OpenManage Ansible Modules, versions 2.0.2 through 10.0.3, contains an Improper Neutralization of Special Elements in Data Query Logic vulnerability in the OData filter processing component. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to unauthorized data access, authorization bypass, and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91878 - NVD - CVSS Score v3.1: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91878</link>
-    <guid isPermaLink="false">632724e446e24af5831efb6d265104c8</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.6 | Dell OpenManage Ansible Modules, versions 6.0.0 through 10.0.3, contains an Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') vulnerability in the XML data conversion component. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to XML injection, malicious content injection, and XML parsing errors</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91880 - NVD - CVSS Score v3.1: 8.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91880</link>
-    <guid isPermaLink="false">28c800dd5e8e2aef57eefc2190d44592</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 8.9 | Dell Terraform Provider for PowerFlex, versions 1.5.0 through 1.8.0, contains an Improper Certificate Validation vulnerability in the SSH client component.Terraform PowerFlex provider uses ssh.InsecureIgnoreHostKey() as the default SSH host key callback. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure and unauthorized access.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91891 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91891</link>
-    <guid isPermaLink="false">f15b29524db667bd7bfeab5e7b813496</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.5 | Dell Terraform Provider for PowerStore, versions prior to 1.3.1 , contains a  vulnerability that may cause sensitive authentication data to be insufficiently redacted in diagnostic logs. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91892 - NVD - CVSS Score v3.1: 3.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91892</link>
-    <guid isPermaLink="false">16110ec9a3bc523e29ee38b394b133ab</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 3.7 | Dell Terraform Provider for PowerFlex, versions prior to 1.9.0, contains a vulnerability  that may permit the use of deprecated cryptographic protocols during secure communications. An unauthenticated attacker with remote access could potentially exploit this vulnerability, leading to information exposure.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 11 Nov 2026 22:01:54 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-0323 - NVD - CVSS Score v4.0: 1.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0323</link>
@@ -353,6 +137,230 @@ Panorama is not affected by this vulnerability.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91151</link>
     <guid isPermaLink="false">8a1a5c8a9b2fc59c619463009d8adbe4</guid>
     <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 7.3 | A flaw was found in Cockpit. A local authenticated user with control over a target account's home directory can exploit a privileged symlink dereference vulnerability in the `ssh-add-public-key.sh` helper. When this helper runs with elevated privileges, it can be tricked into following attacker-controlled symlinks within the `.ssh` or `authorized_keys` paths. This allows the attacker to arbitrarily change file ownership and modes, potentially leading to local privilege escalation and impacting the integrity, confidentiality, and availability of the system.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-100307 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100307</link>
+    <guid isPermaLink="false">c4a455f7ce307f9c4ca05ef52fd67dda</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.7 | Missing authorization in the external management API in Amazon mcp-gateway-registry 1.0.9 through 1.24.7 might allow an authenticated remote user to assign the registry administrator scope to their own identity group and obtain administrative control of every registered gateway asset via a crafted group import request.
+
+
+
+To remediate this issue, users should upgrade to version 1.25.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-103980 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103980</link>
+    <guid isPermaLink="false">15bc29f2685a82ada9124378bda66d94</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 7.1 | ideon is a self-hosted visual workspace. Prior to version 0.9.6, the SSRF protection in safeFetch is bypassed by IPv6 transition addresses that embed private IPv4 addresses. The isPrivateIP function in src/app/lib/ssrf.ts checks only a narrow set of IPv6 ranges (loopback ::1, ULA fc/fd, link-local fe80) but does not recognize IPv4-mapped (::ffff:), NAT64 well-known (64:ff9b::/96, RFC 6052), NAT64 local-use (64:ff9b:1::/48, RFC 8215), 6to4 (2002::/16, RFC 3056), or Teredo (2001::/32, RFC 4380) encodings. An authenticated user can supply these addresses in link URLs to reach cloud metadata endpoints (169.254.169.254), localhost services, and RFC 1918 internal networks through the link preview metadata fetcher. This issue has been patched in version 0.9.6.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125926 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125926</link>
+    <guid isPermaLink="false">f70afa1ce3e730e7a7a576493f07f339</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 6.3 | Server-side request forgery (SSRF) in the server registration and update API in Amazon mcp-gateway-registry before 1.35.0 might allow an authenticated remote user to send requests from the gateway to internal network services and cloud instance metadata endpoints and read the responses via a crafted request.
+
+
+
+To remediate this issue, users should upgrade to version 1.35.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126797 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126797</link>
+    <guid isPermaLink="false">e5e9afd4b75dc0d6cfd0cbcfece853aa</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.3 | NextScan 1.1.0 through 1.2.0 contains an authentication bypass vulnerability in ns-admin that allows unauthenticated attackers to forge administrator tokens using a hardcoded JWT signing key. Attackers can sign an HS256 X-Access-Token carrying the public super administrator role ID to gain full access to user management, scan tasks and stored vulnerability results.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126798 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126798</link>
+    <guid isPermaLink="false">f97b85cfa44d97b2d0a753e3460f47d5</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 2.1 | NextScan 1.1.0 through 1.2.0 contains a stored cross-site scripting vulnerability in the ns-admin URL asset detail dialog that renders crawled form request bodies (Asset_URL.data) via innerHTML without encoding. Attackers can host crafted forms on crawled sites to store JavaScript that executes when users view asset details, stealing localStorage access tokens to hijack sessions, including administrators.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126799 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126799</link>
+    <guid isPermaLink="false">624f6dcc30b7f820174c16882375685e</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 6.9 | Gotenberg 8.31.0 before 8.38.0 contains a server-side request forgery vulnerability in IsPublicIP() that allows unauthenticated attackers to bypass private-IP deny-list protections using IPv6 zone identifiers. Attackers can append a zone such as %25eth0 to the unspecified address or blocked IPv6 prefixes in downloadFrom, webhook, or Chromium/LibreOffice URLs to reach internal services and read responses in the returned PDF.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126800 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126800</link>
+    <guid isPermaLink="false">72b2bc0a1cfd2f5d01a26b7ce09861fc</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.3 | Hydro @hydrooj/ui-default before 4.59.1 contains a stored cross-site scripting vulnerability that allows registered users to inject script by placing double quotes in language- class tokens within markdown-it-xss.ts. Attackers can store a payload in their profile bio that executes when administrators or other users view it, stealing the non-httpOnly sid session cookie for session hijacking.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126801 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126801</link>
+    <guid isPermaLink="false">78245fe03e226ab1fff30d23c9a7d149</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.7 | Rote 1.2.0 through 2.6.0 contains an authorization bypass in the OAuth bind/merge endpoint that allows authenticated users to merge any OAuth-bound account into their own. Attackers can submit a public existingUserId and GitHub or Apple user ID to take over notes, attachments, and API keys and delete the victim account.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126802 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126802</link>
+    <guid isPermaLink="false">cb8c5fe259a81857075e794e87629b3c</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.8 | NextScan 1.1.0 through 1.2.0 contains hardcoded HTTP Basic Auth credentials in ns-admin's AuthAgent and AuthExternal routers that allow unauthenticated attackers to access protected APIs. Attackers can call /agent/config to obtain Redis passwords, etcd details and the server token, and impersonate scan nodes via registration, heartbeat and logging endpoints.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126803 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126803</link>
+    <guid isPermaLink="false">d6f9c1a1ba9615b4c3a415558fbaed0c</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.6 | Rote through 2.6.0 contains a privilege escalation vulnerability that allows authenticated admins to obtain super_admin rights by reading or overwriting JWT signing secrets via /v2/api/admin/settings. Attackers can retrieve the unmasked jwtSecret from the security settings group and forge HS256 tokens for the super administrator to change user roles and escalate their own account.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126804 - NVD - CVSS Score v4.0: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126804</link>
+    <guid isPermaLink="false">30fab566acf237bff7721b1125935b38</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 7.2 | WWBN AVideo 12.4 through 29.7.1 contains a path traversal vulnerability in the ADs plugin deleteImage.json.php that allows authenticated users with custom ads to delete arbitrary files. Attackers can set the unvalidated is_regular_user parameter to another user's id or ../ sequences to delete other users' ads or files like videos/configuration.php, taking the site offline and re-exposing the installer.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126805 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126805</link>
+    <guid isPermaLink="false">6def6b0bebb23451158c4724e0dc02c0</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.6 | WWBN AVideo through 29.7.1 contains an incorrect authorization vulnerability that allows delegated Videos Admin users to obtain video_id_hash values bound to any video owner via encoder endpoints like aVideoEncoderStatus.json.php. Attackers can request the hash for an administrator-owned video and replay it through useVideoHashOrLogin() for password-less login, gaining plugin upload, configuration, and user management access.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126806 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126806</link>
+    <guid isPermaLink="false">d21dbc8302631c90eb4ecd98d2ed2e5b</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.3 | WWBN AVideo 14.3 through 29.7.1 contains a stored cross-site scripting vulnerability that allows uploaders to inject scripts via the videoDownloadedLink value stored unescaped through objects/aVideoEncoder.json.php. Attackers can embed event-handler payloads in the URL host rendered as a Source tag in view/managerVideos_body.php, executing in administrator sessions to install plugin archives containing PHP.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126807 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126807</link>
+    <guid isPermaLink="false">1153f48f7e9d4eb59fa0c052b334216a</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | WuzAPI through 1.1.0 contains a cross-tenant information disclosure vulnerability in the GetHistory handler that allows authenticated users to view other tenants' chat metadata. Attackers with message history enabled can request GET /chat/history with chat_jid=index to list every user's internal ID, stored chat JIDs, and last-message times.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126808 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126808</link>
+    <guid isPermaLink="false">f4a8cf910efd8de72e131b8e7c01a1ff</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | weDevs ERP (WP ERP) through 1.17.11 contains an incorrect authorization vulnerability that allows authenticated employees to edit their own HR records because HRM AJAX handlers check erp_edit_employee instead of erp_manage_jobinfo. Attackers can post their own user_id with the My Profile nonce to change designation, reporting manager, pay rate, and employment type, or delete job history.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126809 - NVD - CVSS Score v4.0: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126809</link>
+    <guid isPermaLink="false">887ad5d4131fdf34306ee8e40b7217f8</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 6.1 | WWBN AVideo through 29.7.1 contains a missing authorization vulnerability in objects/import.json.php that allows uploaders to import other users' MP4 files by referencing any folder under videos/. Attackers can copy private, unlisted, password-protected or pay-per-view videos, read victims' .txt/.html sidecars as descriptions, list files via objects/listFiles.json.php, and delete victims' media using the delete parameter.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126810 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126810</link>
+    <guid isPermaLink="false">12bc34c65d782a6cf89d328d7848e125</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.1 | WWBN AVideo 29.1.0 through 29.7.1 contains a stored cross-site scripting vulnerability that allows registered users to inject markup through the channel About field rendered in feed/index.php. Attackers can store an unquoted event-handler payload that bypasses feedHtmlDescription() filtering and executes via rss-style.xsl for any visitor, including administrators, viewing the channel feed.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126811 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126811</link>
+    <guid isPermaLink="false">d657f781c1d994c8cdcfd40f8737cd08</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | BookStack before 26.09.3 contains an incorrect authorization vulnerability that allows authenticated users to access other users' unpublished draft page images by checking only PageView permission without draft status. Attackers can read drawio data via the base64 endpoint or rename, replace, or delete draft images by sequential ID to disclose or tamper with unpublished work.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126812 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126812</link>
+    <guid isPermaLink="false">3a2b2fc8b575ae1eb8b915914fcc3662</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 9.3 | blueprintUE Self-Hosted Edition before 4.3.7 contains an insecure default configuration in its Docker Compose examples that sets MYSQL_ALLOW_EMPTY_PASSWORD=yes in database.env and publishes MariaDB on port 3306. Unauthenticated attackers reaching the Docker host on port 3306 can log in as root without a password to read, modify, or delete user accounts, blueprints, and all databases.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126813 - NVD - CVSS Score v4.0: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126813</link>
+    <guid isPermaLink="false">ee10521a61f63e8fccf55c4e4f680aa3</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 7.4 | Roundcube Webmail before 1.6.21 and 1.7.x before 1.7.6 contains an IMAP command injection vulnerability that allows attackers to inject commands via CRLF in the _uid parameter when messages_cache is enabled. Attackers can lure logged-in victims into opening crafted GET links to mail/show or mail/get, executing IMAP commands that delete messages, change flags, or grant mailbox access via SETACL.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126814 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126814</link>
+    <guid isPermaLink="false">309a80794973795a5c8998bf2e646544</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 4.8 | blueprintUE Self-Hosted Edition before 4.3.6 contains an iframe injection vulnerability that allows authenticated users to embed arbitrary third-party content by abusing the PeerTube video URL matcher in BlueprintService::findVideoProvider(). Attackers can set a blueprint video URL on an attacker-controlled host, which site.js loads in an unsandboxed iframe after consent, framing fake login forms or malware downloads.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-65957 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65957</link>
+    <guid isPermaLink="false">9497bbd4b56f6bd0738f5e04f2ba8259</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 6.9 | Helio is an MCP proxy that sits between AI agents and the tools they use. Prior to version 0.8.0, the dashboard sideband (default 127.0.0.1:3100) validated CORS request origins by matching the hostname against a private-network string prefix (10., 172.16.–172.31., 192.168.) rather than validating an IP address. A public DNS name such as 192.168.attacker.com, 10.evil.io, or 172.16.pwn.example also satisfies that prefix, so the proxy echoed the attacker origin in Access-Control-Allow-Origin. This issue has been patched in version 0.8.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-65965 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65965</link>
+    <guid isPermaLink="false">2f9d436340db19b43ad37d43b5664b03</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.7 | ideon is a self-hosted visual workspace. Prior to version 0.9.4, several project mutation endpoints under /api/projects/[id]/* resolve the caller's project role but never enforce it, so a user who was granted only the read-only viewer role on a project can perform write operations on that project. The most severe is POST /api/projects/[id]/graph, which deletes every block and link in the project and re-inserts client-supplied ones. A viewer can silently rewrite or wipe the entire canvas of a project they were invited to read. The application clearly intends viewer to be read-only: the collaborators endpoint, the automation endpoints, and the realtime Yjs sync path all reject write attempts from viewers. These specific HTTP handlers simply omit the guard their siblings enforce. This issue has been patched in version 0.9.4.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-65968 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65968</link>
+    <guid isPermaLink="false">4e8a15d77d5db09e293c18016dfcf40e</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | ideon is a self-hosted visual workspace. Prior to version 0.9.4, validateUrlForSSRF() / safeFetch() in lib/oauth/ssrf-protection.ts (and the parallel validateMcpUrl() in lib/security/validators.ts) perform SSRF host-blocking by string/regex matching on new URL(url).hostname. Their IPv6 branch only recognises the textual forms ::1, fe80:/fc00:/fd00: prefixes, and the dotted-decimal IPv4-mapped form ::ffff:127.x. It does not recognise the WHATWG-canonical IPv4-mapped-IPv6 host that Node emits for a mapped address, which is hex-compressed and bracket-wrapped: [::ffff:7f00:1] for 127.0.0.1, [::ffff:a9fe:a9fe] for 169.254.169.254. An authenticated user who registers a STREAMABLE_HTTP / SSE MCP server with URL http://[::ffff:7f00:1]:PORT/ (loopback) or http://[::ffff:a9fe:a9fe]/ (cloud metadata) passes both guards, and the server-side OAuth-discovery action then fetches that host, yielding server-side request forgery to loopback and to the cloud metadata service. This issue has been patched in version 0.9.4.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-65973 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65973</link>
+    <guid isPermaLink="false">2476f1045ad5301e59ea5f707d349f32</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 6.4 | Laradocs maintains version-controlled documentation inside a Laravel codebase. From version 0.4.0 to before version 1.0.0, Laradocs is vulnerable to local command injection in server-side KaTeX rendering via an unescaped Node.js binary path in a proc_open() command string. This issue has been patched in version 1.0.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-65982 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65982</link>
+    <guid isPermaLink="false">af30563285708977f3fcfbc24f2725b2</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 8.7 | nginx-http-flv-module is a media streaming server based on nginx-rtmp-module. Prior to version 1.2.14, if a server received an HTTP/1.0 request without a header Host, which was permitted by HTTP core of Nginx, then r-&gt;headers_in.host was NULL, nginx-http-flv-module used r-&gt;headers_in.host-&gt;value to make a pseudo tcUrl, so NULL-pointer dereference happened. This issue has been patched in version 1.2.14.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-68507 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68507</link>
+    <guid isPermaLink="false">7197ac66255c32168665ca0337e1bf5b</guid>
+    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 6.9 | ideon is a self-hosted visual workspace. Prior to version 0.9.5, ideon's link-preview endpoint requires no authentication at all and forwards any URL a caller supplies straight into a server-side fetch. The app does have a general-purpose SSRF guard (safeFetch/validateSafeUrl in src/app/lib/ssrf.ts), but this route sits behind no login check whatsoever, making it a fully open, anonymous URL-fetch relay - and the guard's IP blocklist itself has a gap that lets it reach the server's own loopback interface via the 0.0.0.0 &quot;any address&quot; bypass, a well-documented SSRF-filter evasion technique on Linux. This issue has been patched in version 0.9.5.</description>
     <category>NVD</category>
     <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
   </item>
