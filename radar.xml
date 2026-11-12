@@ -5,111 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 16:01:53 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-116320 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116320</link>
-    <guid isPermaLink="false">b79da046383a7112f54b5b729eef4b8c</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Use after free in PostgreSQL plperl allows an object creator to execute arbitrary code as the operating system user running the database, via dropping the final reference to a Perl array or hash while PostgreSQL is converting that object.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116321 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116321</link>
-    <guid isPermaLink="false">cf27d4000196e1466bf22c048575e5c0</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | Improper null termination in PostgreSQL array element assignment allows a database user to disclose server memory, via changing the final byte of a fixed-length name value to a nonzero byte and passing it to code that treats the value as a C string.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116322 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116322</link>
-    <guid isPermaLink="false">cada41fca99a5ae54aee6606672c6599</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper locking in PostgreSQL startup processing allows an unauthenticated network client to trigger a server restart, via arranging for authentication_timeout to arrive while it holds a spinlock during cancel handling.  Within major version 18, minor versions before PostgreSQL 18.7 are affected.  Versions before PostgreSQL 18 are unaffected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116323 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116323</link>
-    <guid isPermaLink="false">e45ffdc24f63cb7a8c3c8877c40e47d5</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Use after free in PostgreSQL pltcl allows an object creator to execute arbitrary code as the operating system user running the database, via a domain CHECK that re-enters the Tcl interpreter and frees or changes a string still used by the outer result conversion.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116325 - NVD - CVSS Score v3.1: 8.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116325</link>
-    <guid isPermaLink="false">9da282a8c7a2c2e72ae038ab154999e0</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.0 | SQL injection in PostgreSQL reindexdb allows an object creator to execute arbitrary SQL as the database user running reindexdb, via a crafted index name embedded in the parallel catalog query for --jobs with --index.  Within major versions 17-18, minor versions before PostgreSQL 18.7 and 17.12 are affected.  Versions before PostgreSQL 17 are unaffected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116326 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116326</link>
-    <guid isPermaLink="false">bb719634c956a274ae693ce7b72de5f6</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Uncaught exceptions in PostgreSQL plperl allow an object creator to cause use of a stale sigjmp_buf, via a tied Perl object, or a Perl object whose overloaded conversion throws while plperl is handling another error.  We have not ruled out arbitrary code execution on some platform.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116327 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116327</link>
-    <guid isPermaLink="false">ebac0735afae4630e5ce4717d9cc8452</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | Exposure of sensitive information in PostgreSQL security_barrier processing allows a database user to infer values hidden by a security_barrier view, via applying a leaky function to a CASE test value or internal parameter that indirectly represents a protected column.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116328 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116328</link>
-    <guid isPermaLink="false">f3997c0f26cc59c64575b0cc3b2ab1ec</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Integer wraparound in PostgreSQL generation memory contexts allows a database user to execute arbitrary code as the operating system user running the database, via freeing an allocation larger than 1 GB and causing its block to be reused for smaller chunks whose back-pointer offset cannot represent that position.  Within major versions 16-18, minor versions before PostgreSQL 18.7, 17.12, and 16.16 are affected.  Versions before PostgreSQL 16 are unaffected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116329 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116329</link>
-    <guid isPermaLink="false">1b8fde3a93b79256241efea489ba307a</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL statistics import allows a table maintainer to execute arbitrary code as the operating system user running the database, via nested SET DATA TYPE during conversion of values to import.  Within major version 18, minor versions before PostgreSQL 18.7 are affected.  Versions before PostgreSQL 18 are unaffected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116330 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116330</link>
-    <guid isPermaLink="false">097ef6ccb7b6c73e9e40a873fb8ab4ba</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Untrusted data inclusion in PostgreSQL pg_dump tar-format restore.sql allows a compromised origin server to execute arbitrary code as the client operating system account running psql, via the predictable restriction key in restore.sql.  This is a gap in the fix for CVE-2025-8714.  restore.sql is undocumented.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116331 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116331</link>
-    <guid isPermaLink="false">07ac4205be631216245ddd41850c0c95</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL min/max aggregate optimization allows an object creator to execute arbitrary code as the operating system user running the database, via a user-defined aggregate whose SORTOP option causes the planner to treat the aggregate's input and result as the same type when they differ.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116332 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116332</link>
-    <guid isPermaLink="false">3c470bb289f54abb923a311c44e4bcf6</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Use after free in PostgreSQL portal setup allows an object creator to execute arbitrary code as the operating system user running the database, via running user-defined code during planning or executor startup that closes the portal currently being prepared.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116333 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116333</link>
-    <guid isPermaLink="false">b11ada1db3bd33c27c615f9f37211d07</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.5 | Buffer over-read in PostgreSQL parallel B-tree scans allows an object creator to read attacker-chosen server-memory addresses, via a function incorrectly marked PARALLEL SAFE or STABLE to make participating workers build different scan-key arrays.  Within major versions 17-18, minor versions before PostgreSQL 18.7 and 17.12 are affected.  Versions before PostgreSQL 17 are unaffected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 12 Nov 2026 17:00:51 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-116335 - NVD - CVSS Score v3.1: 8.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116335</link>
@@ -323,6 +219,125 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-6467</link>
     <guid isPermaLink="false">5fbf8c452d732f0bf4b6cf012f2c4235</guid>
     <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.2 | Uncontrolled search path element in PostgreSQL CREATE EXTENSION allows an attacker with database-level CREATE privilege to execute arbitrary code as the bootstrap superuser, via ALTER SCHEMA ... RENAME or CREATE EXTENSION ... SCHEMA &quot;$user&quot;.  ALTER EXTENSION was also affected.  A trusted-extension script located the wrong object and executed arbitrary SQL of the attacker's choice.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126329 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126329</link>
+    <guid isPermaLink="false">8ef5b05107b6649b4f978e56e347ca0f</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 7.3 | Docker Sandboxes reuses existing state and configuration directories without verifying their ownership. If sbx or sandboxd is run as root with HOME or, on Linux, XDG_STATE_HOME pointing to an attacker-controlled location, a local unprivileged user can substitute control-plane sockets and configuration trusted by the root process, potentially executing commands as root. Exploitation requires a privileged invocation with an attacker-influenced environment. The issue affects Linux and macOS and is fixed in version 0.53.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126330 - NVD - CVSS Score v4.0: 2.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126330</link>
+    <guid isPermaLink="false">73a37f679e1f17ede03cbed4b4bb43d9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 2.4 | Docker Sandboxes can silently republish a sandbox service after an operator removes its automatically assigned host-port mapping. The daemon removes the active binding but retains the original publication request, allowing a later port change or sandbox restart to publish the service again on a new host port. An attacker able to reach the restored endpoint may regain access to the service. Both TCP and UDP mappings are affected. Exposure is limited to the original bind address, which defaults to loopback. The issue is fixed in version 0.53.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127109 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127109</link>
+    <guid isPermaLink="false">ece3d91c43072f21ab0d685e273c2ed9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | A code injection vulnerability in promzard’s template-loading functionality allows an attacker who can control property names in the context object (ctx) to execute arbitrary code with the privileges of the Node.js process. The library inserts context property names into a generated function’s parameter list without validation or escaping and evaluates the resulting source using `vm.runInThisContext()`. A crafted property name can escape the parameter list and inject JavaScript code, even when the template file is fully trusted.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127111 - NVD - CVSS Score v4.0: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127111</link>
+    <guid isPermaLink="false">4cd9687eab06b8aecd1cf01b07be9276</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 9.1 | SOGo before 5.12.13 contains an improper restriction of excessive authentication attempts vulnerability that allows unauthenticated attackers to reset account passwords by repeatedly guessing secret-question answers via the passwordRecoveryCheck endpoint without lockout or rate limiting. Attackers can submit unlimited candidate answers to obtain a valid recovery JWT, then use it to change the account password without the old credential and log in via the connect endpoint, achieving full account takeover on accounts without TOTP enabled.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127121 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127121</link>
+    <guid isPermaLink="false">f8975e64ceb0f162125a8e2fe1fd54f9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 7.1 | SOGo before 5.12.13 contains an improper cryptographic signature verification vulnerability that allows remote attackers to replace a victim's contact S/MIME certificate by sending a spoofed multipart/signed message with a mismatched signature and an impersonated From address. Attackers can deliver a crafted CMS signedData object containing their own self-signed certificate, which SOGo's UIxMailView stores on the contact card without validating signature authenticity or certificate identity, enabling subsequent encrypted communications to be decrypted with the attacker's private key.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127131 - NVD - CVSS Score v4.0: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127131</link>
+    <guid isPermaLink="false">8f9842b437f31b4ef4fb5bada37fb11a</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 9.1 | SOGo before 5.12.13 contains a missing rate limiting vulnerability in its web login TOTP verification that allows attackers who already possess a victim's password to brute-force the second-factor code without triggering any lockout. Attackers can send repeated POST requests to /SOGo/connect with wrong verification codes at high speed since failed TOTP attempts never increment the failed-login counter and SOGoMaximumFailedLoginCount does not apply, enabling indefinite guessing across 30-second code windows to bypass two-factor authentication.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127135 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127135</link>
+    <guid isPermaLink="false">82ff5cda8d7d5062be9f3c985de86585</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.3 | SOGo before 5.12.13 contains a Sieve script injection vulnerability that allows authenticated users to inject arbitrary Sieve directives by inserting unescaped notification address values into a generated Sieve script. Attackers can embed Sieve redirect or discard statements within the notificationAddress preference to bypass the administrator-configured forwarding-domain constraint and redirect or discard incoming mail.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127141 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127141</link>
+    <guid isPermaLink="false">d8fb6ea81cc9803d23325e0705b0c5cd</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 7.1 | SOGo before 5.12.13 contains a denial of service vulnerability that allows authenticated attackers to exhaust all worker processes by configuring an auxiliary IMAP mail account pointing to a controlled host that accepts a TCP connection but never sends an IMAP greeting response. Attackers can issue concurrent GET requests to the mail view of this account to hold workers indefinitely without an effective timeout, occupying every SOGo worker and denying service to all users for approximately five minutes until the watchdog kills and respawns the stuck workers.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127145 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127145</link>
+    <guid isPermaLink="false">092d7f60c07a79a8b922a011bbccb251</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.3 | SOGo before 5.12.13 contains a server-side request forgery vulnerability that allows authenticated users to make the server connect to arbitrary internal host:port destinations by supplying a user-controlled URL to the Calendar/addWebCalendar endpoint. Attackers can trigger a reload of the subscribed web calendar via the reload endpoint and distinguish response outcomes such as connection failures, timeouts, authentication prompts, or invalid content to probe the internal network from the server's position.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-19809 - NVD - CVSS Score v3.1: 3.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19809</link>
+    <guid isPermaLink="false">b2927e9bff2b584634cf40c34e073cde</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 3.3 | The user-mode system call verifier z_vrfy_charger_get_prop() in drivers/charger/charger_handlers.c declares an uninitialized union charger_propval k_val on the kernel (privileged) stack, passes it to the charger driver back end via z_impl_charger_get_prop(), and then copies the full sizeof(union charger_propval) back into the calling user thread's buffer with k_usermode_to_copy(). That discloses kernel stack contents on two paths:
+
+On error. The copy-out ignores the driver's return code. In-tree back ends return an error without writing through the value pointer for properties they do not implement: charger_gpio_get_prop() returns -ENOTSUP unconditionally, and bq24190_get_prop() has a default: return -ENOTSUP; arm that never touches val. The whole union is then stack residue.
+On success. A back end writes only the one union member the requested property selects (for example sbs_charger.c writes the one-byte val-&gt;present for CHARGER_PROP_PRESENT and returns 0), yet the handler still copies the whole union, so every byte beyond that member is uninitialized.
+
+The handler is compiled only when CONFIG_USERSPACE=y and is reachable by any user-mode thread that has been granted access to a charger device object. K_SYSCALL_DRIVER_CHARGER() validates only the device object and its API pointer, not the property identifier, so an unprivileged thread can choose prop freely: an unimplemented property forces the error path, a narrow one the success path, and the call can be repeated at will.
+
+Each call discloses up to the size of the union (12 bytes on a 32-bit target, 16 bytes on 64-bit targets where the function-pointer members widen it) of supervisor-stack memory. The bytes are residue of earlier kernel-side frames on the thread's privileged stack and can contain kernel object addresses and saved return addresses, which an unprivileged thread cannot otherwise observe and which help defeat address-layout assumptions when exploiting a separate memory-safety defect. There is no integrity or availability impact.
+
+Two commits fix it, and both are needed. 5054384e983c skips the copy-out when the back end reports an error. c31cac727d02 zeroes the union before the driver call, so the bytes copied out on success are driver-written data or zeros. A tree carrying only the first still leaks on every successful call.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-70641 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-70641</link>
+    <guid isPermaLink="false">3a189d130612dcc547bf5c7b8d9b520d</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority as a duplicate of CVE-2026-82873.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-70642 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-70642</link>
+    <guid isPermaLink="false">ca318bc5969ab388b7d8692fb3115e12</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.3 | ToolJet before 3.21.94, fixed in commit e5f387a, contains an authorization bypass vulnerability in the app environments init endpoint that allows authenticated users to read app version metadata belonging to other workspaces. Attackers can send GET requests to /api/app-environments/init with an editing_version_id from another workspace to retrieve the version name, description, status, current environment ID, and app ID, because the lookup is not scoped to the caller's organization.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-91007 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91007</link>
+    <guid isPermaLink="false">503f2d3afa2ce5ecda35606cfae53ba9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.8 | The user-mode syscall verifiers for the charger driver API in drivers/charger/charger_handlers.c did not inspect the prop argument before copying union charger_propval across the user/kernel boundary. Two members of that union are function pointers — status_notification (CHARGER_PROP_STATUS_NOTIFICATION) and online_notification (CHARGER_PROP_ONLINE_NOTIFICATION), declared in include/zephyr/drivers/charger.h — and z_vrfy_charger_set_prop() forwarded the caller-supplied union verbatim to the driver's set_property callback for any property. z_vrfy_charger_get_prop() had the mirror defect and copied the stored kernel callback address back out to user memory.
+
+With CONFIG_USERSPACE enabled, any user-mode thread that has been granted a charger device object could call charger_set_prop() with CHARGER_PROP_STATUS_NOTIFICATION or CHARGER_PROP_ONLINE_NOTIFICATION and an arbitrary pointer value. Drivers that implement these properties — drivers/charger/charger_max20335.c, drivers/charger/charger_pf1550.c and drivers/charger/charger_bq2518x.c — store the pointer in device data and later invoke it from their interrupt work handlers, which run in supervisor mode, on any charger state change such as a cable plug/unplug.
+
+The result is a control-flow hijack at kernel privilege from an unprivileged thread, defeating the isolation that CONFIG_USERSPACE is meant to provide; the read path additionally disclosed a kernel code address to user mode, and clearing a notifier installed by a supervisor thread let user mode suppress charger notifications. Supervisor-mode callers of charger_set_prop()/charger_get_prop() are unaffected.
+
+The fix makes both verifiers reject the two notifier properties outright — including when the supplied callback is NULL, since the notifiers are device state — and adds a BUILD_ASSERT on CHARGER_PROP_COMMON_COUNT so that new properties force a re-review of the union's user-mode safety.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
