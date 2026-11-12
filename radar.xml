@@ -5,243 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 06:02:56 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-121744 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121744</link>
-    <guid isPermaLink="false">eebb8d878e28c70bc6823fa8bcc7d858</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Ashlar-Vellum Cobalt XE File Parsing Stack-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ashlar-Vellum Cobalt. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of XE files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a stack-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28172.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121752 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121752</link>
-    <guid isPermaLink="false">12010409657a1dd310ce4e02a2f77140</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Ashlar-Vellum Cobalt LI File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ashlar-Vellum Cobalt. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of LI files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28447.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121753 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121753</link>
-    <guid isPermaLink="false">6cfd5d0422b153783fdcf9554ebdae27</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Ashlar-Vellum Cobalt XE File Parsing Use-After-Free Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ashlar-Vellum Cobalt. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of XE files. The issue results from the lack of validating the existence of an object prior to performing operations on the object. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28587.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122044 - NVD - CVSS Score v3.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122044</link>
-    <guid isPermaLink="false">fe62d261b432eb02db62df49b3862a75</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 8.8 | Philips Hue Bridge Pro Protection Mechanism Failure Authentication Bypass Vulnerability. This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of Philips Hue Bridge Pro. Authentication is not required to exploit this vulnerability.
-
-The specific flaw exists within the HTTP service, which listens on TCP port 443 by default. The issue results from the failure to apply a protection mechanism. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-33086.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126795 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126795</link>
-    <guid isPermaLink="false">41d2a6976b89dfdc53fe7d081f3689b0</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was determined in ToolJet up to 3.20.256-lts/3.21.93-beta. The impacted element is the function activateUserWithPassword of the file server/src/modules/onboarding/util.service.ts of the component Onboarding Signup Endpoint. Executing a manipulation of the argument email can lead to missing authentication. It is possible to launch the attack remotely. The exploit has been publicly disclosed and may be utilized. Upgrading to version 3.21.94-beta is sufficient to resolve this issue. This patch is called af8f17a745621ae418f1743440f63d315e8b8643. The affected component should be upgraded. The vendor was contacted early about this disclosure.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126957 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126957</link>
-    <guid isPermaLink="false">5adbc30ff209cfb3706d820e5fbbb7b9</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.9 | An integer underflow in Zephyr's IPv4 option handling allows a remote, unauthenticated attacker to read stack memory. When replying to an ICMP Echo Request that carries an IPv4 Record Route or Timestamp option, icmpv4_update_record_route() and icmpv4_update_time_stamp() in subsys/net/ip/icmpv4.c compute the length of the already recorded data as ptr - ptr_offset in uint8_t arithmetic. The attacker-controlled Pointer field is checked against the option length but not against the RFC 791 minimum (4 for Record Route, 5 for Timestamp), so a smaller value wraps the length to up to 252 bytes. net_pkt_write() then reads past the 40-byte opt_data stack buffer and up to 213 bytes of stack memory, which can include stack and heap pointers, are returned in the ICMP Echo Reply. A single packet triggers the leak and the device does not crash, so it can be repeated. Devices built with CONFIG_NET_IPV4_HDR_OPTIONS, which CONFIG_NET_IPV4_IGMP selects, are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-13269 - NVD - CVSS Score v3.0: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13269</link>
-    <guid isPermaLink="false">88c49d02b75e4873e2a03acb2f67fd93</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.5 | Quest NetVault Backup StnzCreateKey Numeric Truncation Error Denial-of-Service Vulnerability. This vulnerability allows remote attackers to create a denial-of-service condition on affected installations of Quest NetVault Backup. Authentication is not required to exploit this vulnerability.
-
-The specific flaw exists within the StnzCreateKey function. The issue results from the lack of proper validation of user-supplied data, which can result in a numeric truncation error before allocating a buffer. An attacker can leverage this vulnerability to create a denial-of-service condition on the system. Was ZDI-CAN-28743.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-13270 - NVD - CVSS Score v3.0: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13270</link>
-    <guid isPermaLink="false">74932ecf6aae77ea3eb16ae2f2a7b890</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.5 | Quest NetVault Backup nvpmgr Integer Underflow Denial-of-Service Vulnerability. This vulnerability allows remote attackers to create a denial-of-service condition on affected installations of Quest NetVault Backup. Authentication is not required to exploit this vulnerability.
-
-The specific flaw exists within the nvpmgr service, which listens on UDP port 20031 by default. The issue results from the lack of proper validation of user-supplied data, which can result in an integer underflow before allocating a buffer. An attacker can leverage this vulnerability to create a denial-of-service condition on the system. Was ZDI-CAN-28744.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111433 - NVD - CVSS Score v3.1: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111433</link>
-    <guid isPermaLink="false">0312c3d61c3b1888ecf1d5f637b2afbe</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.6 | UNIX symbolic link (symlink) following vulnerability in openEuler iSulad on Linux.
-
-This vulnerability is associated with program file src/daemon/modules/spec/specs_mount.c.
-
-
-
-This issue affects iSulad: through 2.1.6.
-
-
-
-If an attacker can get the victim or the platform to run their crafted malicious image, they can cause the iSulad daemon to copy sensitive host directories into an anonymous volume when creating a container, which the container can then read.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111434 - NVD - CVSS Score v3.1: 5.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111434</link>
-    <guid isPermaLink="false">285a7ec479c71b02eaea32fa1ef76256</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.6 | Use of Externally-Controlled format string vulnerability in openEuler iSulad on Linux.
-
-This vulnerability is associated with program file src/daemon/modules/image/oci/oci_load.c.
-
-
-
-This issue affects iSulad: through 2.1.6.
-
-
-
-When the iSulad daemon performs container lifecycle operations (such as create, start, exec, stop, etc.) through the isula runtime (shim), the daemon reads the stderr output of the shim process via a pipe for error information display. If the buffer contains format specifiers such as %s, %x, or %n, it may trigger a format string vulnerability, potentially leading to information leakage, denial of service, or the risk of arbitrary writes.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111435 - NVD - CVSS Score v3.1: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111435</link>
-    <guid isPermaLink="false">fd28c4de228a4e603d1b100c0162928e</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.4 | Relative path traversal vulnerability in openEuler iSulad on Linux.
-
-This vulnerability is associated with program file src/daemon/modules/image/oci/oci_load.c.
-
-
-
-This issue affects iSulad: through 2.1.6.
-
-
-
-In oci_load.c, oci_load_process_manifest() does not sanitize the Config path of manifest.json. A malicious tar package can enable the isulad with the root permission to read any file on the host.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111436 - NVD - CVSS Score v3.1: 4.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111436</link>
-    <guid isPermaLink="false">87e4a0dc57219e8491d5b04081b0da75</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.4 | Missing release of memory after effective lifetime vulnerability in openEuler iSulad on Linux.
-
-This vulnerability is associated with program file src/daemon/modules/spec/specs_mount.c.
-
-
-
-This issue affects iSulad: through 2.1.6.
-
-
-
-The memory leak vulnerability causes the iSulad daemon to be triggered frequently, exhausting the host machine's memory and ultimately leading to an OOM crash of the daemon, resulting in a denial of service (DoS).</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-117687 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117687</link>
-    <guid isPermaLink="false">eafb8f424ebc132017463f803d329941</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.9 | Movable Type provided by Six Apart Ltd. contains a code injection vulnerability in its Dynamic Publishing functionality. By sending a specially crafted request that is processed by the Dynamic Publishing, an attacker may be able to execute arbitrary PHP code on the affected product.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124993 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124993</link>
-    <guid isPermaLink="false">2609da894962959b79c7ebdc395b4b57</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.3 | An incorrect authorization vulnerability in the Security Advisor in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote attackers to read specific files.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-13656 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13656</link>
-    <guid isPermaLink="false">51cff89ee5f95b1a5050efe3139041b0</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.4 | An improper neutralization of input during web page generation vulnerability in the Audio Player in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read or write specific files.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-13672 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13672</link>
-    <guid isPermaLink="false">a42ab5a191888866c2470b87c625cdaf</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | An authorization bypass through user-controlled key vulnerability in the SSOAuth in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read or write arbitrary files and conduct denial-of-service attacks.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-15198 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15198</link>
-    <guid isPermaLink="false">78d5ac8cbbbd2cd8b5e4cc0b46e27cbd</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.5 | A missing authentication for critical functionality vulnerability in the Webdav API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote attackers to read specific files and conduct limited denial-of-service attacks.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-15201 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15201</link>
-    <guid isPermaLink="false">4a0ac4aba6deff4c26954c26b89bd5b0</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.9 | An improper certificate validation vulnerability in the Support Form in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows man-in-the-middle attackers to read arbitrary files and write specific files during support form submission.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-16550 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16550</link>
-    <guid isPermaLink="false">7a0460d9f50edf71437b8656469cbfb9</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.5 | An external control of file name or path vulnerability in the Media Parser in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to write arbitrary files.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-18596 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18596</link>
-    <guid isPermaLink="false">8dd0000b9de664c8b91ebfc8b7a42e96</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | An authentication bypass using an alternate path or channel vulnerability in the OTP in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote attackers with valid user credentials to read or write arbitrary files and conduct denial-of-service attacks.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-18633 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18633</link>
-    <guid isPermaLink="false">5710486d29a7fc6c328b33cc9c5c285a</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.5 | An access of uninitialized pointer vulnerability in the nfsd in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote attackers to conduct denial-of-service attacks.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-18792 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18792</link>
-    <guid isPermaLink="false">2cbe9f41674c4b51b6adfe5ecd15532d</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | An improper limitation of a pathname to a restricted directory vulnerability in the Sharing API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read or write arbitrary files and conduct denial-of-service attacks.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-19048 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19048</link>
-    <guid isPermaLink="false">a6cca891a6eaac83bbaa6c74db647ef4</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | An improper link resolution before file access vulnerability in the thumb in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to write arbitrary files and conduct denial-of-service attacks.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 12 Nov 2026 07:01:30 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-19414 - NVD - CVSS Score v3.1: 4.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19414</link>
@@ -375,6 +139,190 @@ The memory leak vulnerability causes the iSulad daemon to be triggered frequentl
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92379</link>
     <guid isPermaLink="false">41c83f33181d3953f6073aa5a0024d00</guid>
     <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.4 | An improper neutralization of input during web page generation vulnerability in the Notification API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read or write specific files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101107 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101107</link>
+    <guid isPermaLink="false">501b8e903fec5c1eaab2109c858face9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.6 | An OS command Injection issue exists in Air Terminal 6 provided by SoftBank Corp. Arbitrary commands may be executed with the root privilege by a user who can log in to the web management console of the affected product.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-106027 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106027</link>
+    <guid isPermaLink="false">73c39750f7756987e0c45e838358a4e5</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Oxygen MyData for WooCommerce WordPress plugin before 3.0.9 does not have proper authorisation, nor validate the authenticity of the request, on one of its payment callbacks, allowing unauthenticated users to mark arbitrary WooCommerce orders as completed.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110041 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110041</link>
+    <guid isPermaLink="false">b591bf2f9c1201be44f92f6ceea0fe19</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Crop Thumbnails WordPress plugin before 1.10.0 does not perform object-level authorization when reading and re-cropping media attachments, allowing any authenticated user with the upload capability (the Author role by default) to read the metadata of, and overwrite the generated thumbnail files and stored metadata of, media attachments belonging to other users.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110072 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110072</link>
+    <guid isPermaLink="false">e23c5e56317d0d5ad445f9324e45bf07</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Photo Gallery by 10Web  WordPress plugin before 1.8.49 does not escape a shortcode attribute that sets a gallery watermark image before rendering it into an HTML image attribute, and decodes percent-encoded characters in the value, allowing users with Contributor-level access and above to perform Stored Cross-Site Scripting that executes in the browser of any user, including an administrator, who views the published gallery.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110959 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110959</link>
+    <guid isPermaLink="false">b36fa77173735bc64fa4084da2464525</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Descope WordPress plugin before 1.2.0 does not validate the authentication token it receives before creating a WordPress session, accepting any non-empty token, so an unauthenticated attacker can obtain a session for any existing account, including an administrator, by supplying that account's email address.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118421 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118421</link>
+    <guid isPermaLink="false">549f7d0659dcdcd05c2c845a85ce6f2d</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The WP Directory Kit WordPress plugin before 1.6.3 does not properly sanitise and escape a parameter used to order results on one of its admin screens before using it in a SQL statement, relying on a keyword deny-list whose replacement order can be bypassed, making it possible for users holding the WP Directory Kit WordPress plugin before 1.6.3's custom Listing Admin role, and above, to perform SQL injection attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118531 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118531</link>
+    <guid isPermaLink="false">5dbf343fafb329de7d7ab8a3b2c3627a</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Directorist: AI-Powered Business Directory, Listings &amp; Classified Ads WordPress plugin before 8.11.1 does not prevent a listing's own author from changing its status from pending to published, allowing users with a Subscriber-level account and above to bypass the administrator's listing moderation and publish their own pending listings.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118597 - NVD - CVSS Score v4.0: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118597</link>
+    <guid isPermaLink="false">a3d83cbc8e2fbd8ae8974dc134e657f7</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 7.2 | Akaunting 3.3.0 contains a stored cross-site scripting vulnerability in custom invoice payment terms. An authenticated Manager can save a crafted custom payment-term value. When an authorized user opens Invoice Settings for the same company, Akaunting inserts the stored value into a client-side event-handler expression, causing attacker-controlled JavaScript to execute in the victim's authenticated origin.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119039 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119039</link>
+    <guid isPermaLink="false">3ead38d15368334cd01920d5b03721ed</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Defender Security  WordPress plugin before 6.4.1 does not verify that the client IP address it derives for its firewall and lockout decisions actually originates from a trusted source, trusting a user-supplied value by default, allowing unauthenticated attackers to spoof their IP address and evade IP-based protections such as login lockout and IP banning, impersonate an allowlisted address, and poison the Defender Security  WordPress plugin before 6.4.1's activity logs.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119040 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119040</link>
+    <guid isPermaLink="false">2234d47af22f19c962b4b68597e56bc1</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Defender Security  WordPress plugin before 6.4.1 does not limit the number of failed two-factor authentication attempts in its default configuration, allowing an attacker who already knows a victim's password to brute-force the one-time code and defeat the second authentication factor.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121498 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121498</link>
+    <guid isPermaLink="false">67a41156136c57c322ffcfe8b57aa910</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The AskAny  WordPress plugin before 2.2.1 does not verify that a chat session belongs to the requester before returning or changing it, allowing unauthenticated users who obtain or guess another visitor's session identifier to read that visitor's chat transcript, name, email address and IP address, and to add messages to their conversation or overwrite their details.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-122003 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122003</link>
+    <guid isPermaLink="false">e9e232ad1c54ad4fa57d95ee88779ae2</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Abilities Bridge WordPress plugin before 1.4.2 does not require a valid nonce before re-authenticating a REST API request from the logged-in session cookie, allowing attackers to make a logged-in administrator perform any REST API action, including creating a new administrator account and taking over the site, by tricking them into opening a crafted page (CSRF).</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123044 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123044</link>
+    <guid isPermaLink="false">5a00eff9403af519d3db1343d58d683d</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The ContentPen WordPress plugin before 1.1.1 discloses its REST API key to unauthenticated users, who can then use it to create posts containing unfiltered JavaScript, leading to Stored XSS that executes in the browser of any visitor, including administrators.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123092 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123092</link>
+    <guid isPermaLink="false">24558cdfd2b5a869b8d8feba0fbef95e</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The WP Remote Users Sync WordPress plugin before 2.3.0 does not restrict which user metadata keys may be written through its incoming user synchronisation requests, allowing a site that holds the shared synchronisation keys to set the capabilities of any existing account and escalate it to administrator.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124647 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124647</link>
+    <guid isPermaLink="false">ff9d650fb5c118dec63f970c69e9121d</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The TI WooCommerce Wishlist WordPress plugin before 2.0.7 does not sanitise and escape user input before using it in a SQL statement in a front-end endpoint, allowing unauthenticated users to perform SQL injection attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124648 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124648</link>
+    <guid isPermaLink="false">2ce02efa84295e12c09e5135b789cdca</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The TI WooCommerce Wishlist WordPress plugin before 2.13.0 does not verify that a visitor who is not logged in owns a registered user's wishlist before letting them manage it, allowing unauthenticated users who know or guess a wishlist's share key to delete items from other customers' wishlists.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124652 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124652</link>
+    <guid isPermaLink="false">eca3233a8a61d273ea5b22357047acf5</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Mine CloudVod WordPress plugin before 2.6.6 does not verify that an order belongs to the requesting user before returning its payment status, allowing any authenticated user, such as subscriber, to read other customers' order status, the purchased item and, while an Alipay payment is in progress, the buyer's Alipay account identifier.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124653 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124653</link>
+    <guid isPermaLink="false">85bf2af47b39a890cd61b62e87f6edd9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Mine CloudVod WordPress plugin before 2.6.6 does not restrict who can request cloud storage upload credentials from several of its REST API routes, allowing unauthenticated attackers to obtain signed upload policies and temporary credentials for the site's configured Alibaba Cloud OSS, Tencent Cloud COS and Dogecloud accounts and use them to upload or overwrite files in the site's storage.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124665 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124665</link>
+    <guid isPermaLink="false">09d532b8e52ea256133d040d54f31f10</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Order Tracking  WordPress plugin before 3.6.2 does not verify that a visitor owns the customer or sales representative account whose orders they request, and the account numbers default to sequential values, allowing unauthenticated users to retrieve the order history of every customer and sales representative, including order contact email addresses in some versions.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124814 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124814</link>
+    <guid isPermaLink="false">c281330636a7130dc1205f42087ccf50</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Ultimate Addons for Elementor Forms WordPress plugin before 1.0.8 does not properly validate the extension of uploaded files in its bundled file upload field, allowing unauthenticated users to upload arbitrary files such as PHP scripts and achieve remote code execution.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124815 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124815</link>
+    <guid isPermaLink="false">d81533753d87a9eebffa00b86b40f05c</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Clockinator Lite WordPress plugin before 1.1.0 does not restrict access to several of its record deletion actions, and uses a user-supplied table name in a SQL query without validating or escaping it, allowing unauthenticated users to perform SQL injection attacks, deleting data from any database table and extracting sensitive information such as password hashes.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124817 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124817</link>
+    <guid isPermaLink="false">9dd8bf49973fa302f291b00070002bfd</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The Clockinator Lite WordPress plugin before 1.1.0 does not check authorisation or ownership when updating leave requests, allowing unauthenticated users to modify any leave record, including approving or rejecting requests and reassigning them to other users.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-76792 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76792</link>
+    <guid isPermaLink="false">0d3e32161872ceac9d20653c63f1e4eb</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | The User Verification by PickPlugins WordPress plugin before 2.0.49 does not rate limit the verification step of its one-time-password login, and does not expire the generated code, allowing unauthenticated attackers to brute force it and log in as any user, including administrators, where the code is configured to use digits only.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
