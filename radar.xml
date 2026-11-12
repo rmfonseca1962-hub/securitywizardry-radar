@@ -5,281 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 18:02:46 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-14661 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14661</link>
-    <guid isPermaLink="false">4b8ec724e324769f791e0106b64da649</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | External control of file name in PostgreSQL dblink and CREATE/ALTER SUBSCRIPTION allows a user to achieve persistent denial of service, via appending invalid data to a chosen file.  Specifically, the &quot;sslkeylogfile&quot; connection parameter appends data, in NSS keylog format, to a file of the user's choosing.  This &quot;sslkeylogfile&quot; mechanism cannot add arbitrary bytes.  Within major version 18, minor versions before PostgreSQL 18.7 are affected.  Versions before PostgreSQL 18 are also affected if libpq version 18 or later is installed and in use by the server.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-16237 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16237</link>
-    <guid isPermaLink="false">1b0ae4078ffdaf692d0623f5d588c847</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.4 | Improper protection in PostgreSQL INSERT ... ON CONFLICT on auto-updatable views allows an attacker having INSERT and UPDATE privileges on the view to read and modify every row in the view's base table, via iterated INSERT ... ON CONFLICT DO UPDATE.  This bypasses the view's WHERE condition, whether or not the view is a security_barrier view.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-16240 - NVD - CVSS Score v3.1: 3.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16240</link>
-    <guid isPermaLink="false">875d0892b70e47772962622e95aad45f</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 3.7 | Use of externally-controlled format string in PostgreSQL pg_basebackup allows an attacker having already compromised a server to achieve disclosure from pg_basebackup memory, via backup manifest bytes.  The vulnerability does not return the improperly-read bytes back to the attacker's server, so a successful attack would need separate implementation-specific secrets for that.  Integrity impact is unlikely; in particular, the applicable formatter does not support %n.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-18447 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18447</link>
-    <guid isPermaLink="false">b4d547d0f3384c61853ad32a249d46f2</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL SQL-language functions allows an object creator to execute arbitrary code as the operating system user running the database, via an output parameter of type &quot;any&quot;.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-6460 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-6460</link>
-    <guid isPermaLink="false">a8dda48863c2c4e17a406609d6837250</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL allows an object creator to execute arbitrary code as the operating system user running the database, via ALTER ... SET DATA TYPE primarily.  Other DDL attack routes exist, such as &quot;ALTER TABLE ... ADD COLUMN; ROLLBACK; ALTER TABLE ... ADD COLUMN&quot;.  The system had inadequate tracking of typed values, and values were not self-identifying.  Stale values could appear in data dictionary entries, PL/pgSQL variables, and many other parts of the system.  PostgreSQL Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-6467 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-6467</link>
-    <guid isPermaLink="false">5fbf8c452d732f0bf4b6cf012f2c4235</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.2 | Uncontrolled search path element in PostgreSQL CREATE EXTENSION allows an attacker with database-level CREATE privilege to execute arbitrary code as the bootstrap superuser, via ALTER SCHEMA ... RENAME or CREATE EXTENSION ... SCHEMA &quot;$user&quot;.  ALTER EXTENSION was also affected.  A trusted-extension script located the wrong object and executed arbitrary SQL of the attacker's choice.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126329 - NVD - CVSS Score v4.0: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126329</link>
-    <guid isPermaLink="false">8ef5b05107b6649b4f978e56e347ca0f</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 7.3 | Docker Sandboxes reuses existing state and configuration directories without verifying their ownership. If sbx or sandboxd is run as root with HOME or, on Linux, XDG_STATE_HOME pointing to an attacker-controlled location, a local unprivileged user can substitute control-plane sockets and configuration trusted by the root process, potentially executing commands as root. Exploitation requires a privileged invocation with an attacker-influenced environment. The issue affects Linux and macOS and is fixed in version 0.53.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126330 - NVD - CVSS Score v4.0: 2.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126330</link>
-    <guid isPermaLink="false">73a37f679e1f17ede03cbed4b4bb43d9</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 2.4 | Docker Sandboxes can silently republish a sandbox service after an operator removes its automatically assigned host-port mapping. The daemon removes the active binding but retains the original publication request, allowing a later port change or sandbox restart to publish the service again on a new host port. An attacker able to reach the restored endpoint may regain access to the service. Both TCP and UDP mappings are affected. Exposure is limited to the original bind address, which defaults to loopback. The issue is fixed in version 0.53.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127109 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127109</link>
-    <guid isPermaLink="false">ece3d91c43072f21ab0d685e273c2ed9</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | A code injection vulnerability in promzard’s template-loading functionality allows an attacker who can control property names in the context object (ctx) to execute arbitrary code with the privileges of the Node.js process. The library inserts context property names into a generated function’s parameter list without validation or escaping and evaluates the resulting source using `vm.runInThisContext()`. A crafted property name can escape the parameter list and inject JavaScript code, even when the template file is fully trusted.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127111 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127111</link>
-    <guid isPermaLink="false">4cd9687eab06b8aecd1cf01b07be9276</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 9.1 | SOGo before 5.12.13 contains an improper restriction of excessive authentication attempts vulnerability that allows unauthenticated attackers to reset account passwords by repeatedly guessing secret-question answers via the passwordRecoveryCheck endpoint without lockout or rate limiting. Attackers can submit unlimited candidate answers to obtain a valid recovery JWT, then use it to change the account password without the old credential and log in via the connect endpoint, achieving full account takeover on accounts without TOTP enabled.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127121 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127121</link>
-    <guid isPermaLink="false">f8975e64ceb0f162125a8e2fe1fd54f9</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 7.1 | SOGo before 5.12.13 contains an improper cryptographic signature verification vulnerability that allows remote attackers to replace a victim's contact S/MIME certificate by sending a spoofed multipart/signed message with a mismatched signature and an impersonated From address. Attackers can deliver a crafted CMS signedData object containing their own self-signed certificate, which SOGo's UIxMailView stores on the contact card without validating signature authenticity or certificate identity, enabling subsequent encrypted communications to be decrypted with the attacker's private key.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127131 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127131</link>
-    <guid isPermaLink="false">8f9842b437f31b4ef4fb5bada37fb11a</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 9.1 | SOGo before 5.12.13 contains a missing rate limiting vulnerability in its web login TOTP verification that allows attackers who already possess a victim's password to brute-force the second-factor code without triggering any lockout. Attackers can send repeated POST requests to /SOGo/connect with wrong verification codes at high speed since failed TOTP attempts never increment the failed-login counter and SOGoMaximumFailedLoginCount does not apply, enabling indefinite guessing across 30-second code windows to bypass two-factor authentication.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127135 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127135</link>
-    <guid isPermaLink="false">82ff5cda8d7d5062be9f3c985de86585</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.3 | SOGo before 5.12.13 contains a Sieve script injection vulnerability that allows authenticated users to inject arbitrary Sieve directives by inserting unescaped notification address values into a generated Sieve script. Attackers can embed Sieve redirect or discard statements within the notificationAddress preference to bypass the administrator-configured forwarding-domain constraint and redirect or discard incoming mail.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127141 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127141</link>
-    <guid isPermaLink="false">d8fb6ea81cc9803d23325e0705b0c5cd</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 7.1 | SOGo before 5.12.13 contains a denial of service vulnerability that allows authenticated attackers to exhaust all worker processes by configuring an auxiliary IMAP mail account pointing to a controlled host that accepts a TCP connection but never sends an IMAP greeting response. Attackers can issue concurrent GET requests to the mail view of this account to hold workers indefinitely without an effective timeout, occupying every SOGo worker and denying service to all users for approximately five minutes until the watchdog kills and respawns the stuck workers.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127145 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127145</link>
-    <guid isPermaLink="false">092d7f60c07a79a8b922a011bbccb251</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.3 | SOGo before 5.12.13 contains a server-side request forgery vulnerability that allows authenticated users to make the server connect to arbitrary internal host:port destinations by supplying a user-controlled URL to the Calendar/addWebCalendar endpoint. Attackers can trigger a reload of the subscribed web calendar via the reload endpoint and distinguish response outcomes such as connection failures, timeouts, authentication prompts, or invalid content to probe the internal network from the server's position.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-19809 - NVD - CVSS Score v3.1: 3.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19809</link>
-    <guid isPermaLink="false">b2927e9bff2b584634cf40c34e073cde</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 3.3 | The user-mode system call verifier z_vrfy_charger_get_prop() in drivers/charger/charger_handlers.c declares an uninitialized union charger_propval k_val on the kernel (privileged) stack, passes it to the charger driver back end via z_impl_charger_get_prop(), and then copies the full sizeof(union charger_propval) back into the calling user thread's buffer with k_usermode_to_copy(). That discloses kernel stack contents on two paths:
-
-On error. The copy-out ignores the driver's return code. In-tree back ends return an error without writing through the value pointer for properties they do not implement: charger_gpio_get_prop() returns -ENOTSUP unconditionally, and bq24190_get_prop() has a default: return -ENOTSUP; arm that never touches val. The whole union is then stack residue.
-On success. A back end writes only the one union member the requested property selects (for example sbs_charger.c writes the one-byte val-&gt;present for CHARGER_PROP_PRESENT and returns 0), yet the handler still copies the whole union, so every byte beyond that member is uninitialized.
-
-The handler is compiled only when CONFIG_USERSPACE=y and is reachable by any user-mode thread that has been granted access to a charger device object. K_SYSCALL_DRIVER_CHARGER() validates only the device object and its API pointer, not the property identifier, so an unprivileged thread can choose prop freely: an unimplemented property forces the error path, a narrow one the success path, and the call can be repeated at will.
-
-Each call discloses up to the size of the union (12 bytes on a 32-bit target, 16 bytes on 64-bit targets where the function-pointer members widen it) of supervisor-stack memory. The bytes are residue of earlier kernel-side frames on the thread's privileged stack and can contain kernel object addresses and saved return addresses, which an unprivileged thread cannot otherwise observe and which help defeat address-layout assumptions when exploiting a separate memory-safety defect. There is no integrity or availability impact.
-
-Two commits fix it, and both are needed. 5054384e983c skips the copy-out when the back end reports an error. c31cac727d02 zeroes the union before the driver call, so the bytes copied out on success are driver-written data or zeros. A tree carrying only the first still leaks on every successful call.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-70641 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-70641</link>
-    <guid isPermaLink="false">3a189d130612dcc547bf5c7b8d9b520d</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority as a duplicate of CVE-2026-82873.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-70642 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-70642</link>
-    <guid isPermaLink="false">ca318bc5969ab388b7d8692fb3115e12</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.3 | ToolJet before 3.21.94, fixed in commit e5f387a, contains an authorization bypass vulnerability in the app environments init endpoint that allows authenticated users to read app version metadata belonging to other workspaces. Attackers can send GET requests to /api/app-environments/init with an editing_version_id from another workspace to retrieve the version name, description, status, current environment ID, and app ID, because the lookup is not scoped to the caller's organization.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91007 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91007</link>
-    <guid isPermaLink="false">503f2d3afa2ce5ecda35606cfae53ba9</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.8 | The user-mode syscall verifiers for the charger driver API in drivers/charger/charger_handlers.c did not inspect the prop argument before copying union charger_propval across the user/kernel boundary. Two members of that union are function pointers — status_notification (CHARGER_PROP_STATUS_NOTIFICATION) and online_notification (CHARGER_PROP_ONLINE_NOTIFICATION), declared in include/zephyr/drivers/charger.h — and z_vrfy_charger_set_prop() forwarded the caller-supplied union verbatim to the driver's set_property callback for any property. z_vrfy_charger_get_prop() had the mirror defect and copied the stored kernel callback address back out to user memory.
-
-With CONFIG_USERSPACE enabled, any user-mode thread that has been granted a charger device object could call charger_set_prop() with CHARGER_PROP_STATUS_NOTIFICATION or CHARGER_PROP_ONLINE_NOTIFICATION and an arbitrary pointer value. Drivers that implement these properties — drivers/charger/charger_max20335.c, drivers/charger/charger_pf1550.c and drivers/charger/charger_bq2518x.c — store the pointer in device data and later invoke it from their interrupt work handlers, which run in supervisor mode, on any charger state change such as a cable plug/unplug.
-
-The result is a control-flow hijack at kernel privilege from an unprivileged thread, defeating the isolation that CONFIG_USERSPACE is meant to provide; the read path additionally disclosed a kernel code address to user mode, and clearing a notifier installed by a supervisor thread let user mode suppress charger notifications. Supervisor-mode callers of charger_set_prop()/charger_get_prop() are unaffected.
-
-The fix makes both verifiers reject the two notifier properties outright — including when the supplied callback is NULL, since the notifiers are device state — and adds a BUILD_ASSERT on CHARGER_PROP_COMMON_COUNT so that new properties force a re-review of the union's user-mode safety.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-10698 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-10698</link>
-    <guid isPermaLink="false">d263a6c00ce486e3d6ec01673b6199fb</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.0 | Incorrect default permissions and Product released in Non-Release configuration vulnerability in OpenText Identity Console on Windows, Linux, and 64 bit allows Retrieve Embedded Sensitive Data.
-
-This issue affects Identity Console: from 1.8 through 25.2.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121876 - NVD - CVSS Score v3.1: 7.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121876</link>
-    <guid isPermaLink="false">1c41e12befa5d3bc477d9d70beaa6e6e</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.9 | A flaw was found in the interaction between systemd-gpt-auto-generator and 
-confidential computing guest VM images in OpenShift Sandboxed Containers 
-(confidential peer pods). systemd-gpt-auto-generator automatically discovers 
-and mounts GPT partitions by type GUID at boot with no user confirmation. In 
-the confidential computing threat model, where the host/hypervisor is the 
-adversary, a malicious host can inject partitions into the guest's virtual 
-disk. Most critically, injecting a swap partition causes the guest kernel to 
-page out TEE-encrypted memory to a host-controlled block device, breaking the 
-confidentiality guarantee of the hardware TEE (AMD SEV-SNP, Intel TDX).
-
-The PodVM images use a GPT-partitioned disk with dm-verity on the root 
-partition. However, the roothash= kernel parameter only disables root 
-auto-discovery — non-root partitions (swap, /home, /var, /srv, /var/tmp) are 
-still auto-discovered and mounted. The generator is shipped unmasked in the 
-RHEL systemd-udev subpackage, and no kernel command line parameter in the 
-measured UKI addon disables it. Additionally, the PodVM measurement script 
-captures PCRs 3, 9, 11, and 12, but not PCR 5 (GPT partition table), so 
-partition table modifications are not detected by remote attestation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124691 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124691</link>
-    <guid isPermaLink="false">b9901b8583a71bae1f2a6476576b1cb5</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.1 | In Progress Kendo UI for jQuery Gantt, the task editor's Parent dropdown renders task titles as HTML. An attacker who can influence a task title shown in the dropdown can cause attacker-controlled markup to execute as JavaScript when a user opens or interacts with the task editor. Successful exploitation may compromise the confidentiality and integrity of data available in the user's browser context. The first affected version is 2020.3.915; the latest vulnerable version is 2026.3.1015. The issue is fixed in version 2026.4.1111.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124695 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124695</link>
-    <guid isPermaLink="false">1d65ccca4b4d74c9a52f7017d6b83b70</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.1 | In Progress Kendo UI for jQuery Form, the items[].hint option is documented as a string but is rendered as HTML. An attacker who can influence a Form item's hint can cause attacker-controlled markup to execute as JavaScript when a user views the rendered form. Successful exploitation may compromise the confidentiality and integrity of data available in the user's browser context. The first affected version is 2020.2.513; the latest vulnerable version is 2026.3.1015. The issue is fixed in version 2026.4.1111.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124696 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124696</link>
-    <guid isPermaLink="false">bde6ab118103021f0db4e8bf6ee4fff3</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.1 | In Progress Kendo UI for jQuery, Spreadsheet sheet names are inserted into the SheetsBar menu button's data-sheet-name attribute without encoding. An attacker who can influence a sheet name can inject an event-handler attribute and execute JavaScript when a user hovers over the menu button. Successful exploitation may compromise the confidentiality and integrity of data available in the user's browser context. The first affected version is 2024.4.1112; the latest vulnerable version is 2026.3.1015. The issue is fixed in version 2026.4.1111.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124697 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124697</link>
-    <guid isPermaLink="false">db4aafe7e910fa0265277d1e0a662eeb</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.1 | In Progress Kendo UI for jQuery, Chart shared-tooltip rendering treats bound category and series-name values as raw HTML. An attacker who can influence values consumed by an affected Chart can inject markup that executes as JavaScript when a user displays the shared tooltip. Successful exploitation may compromise the confidentiality and integrity of data available in the user's browser context. Version 2016.2.607 or earlier may be affected, but earlier releases have not been verified. The latest vulnerable version is 2026.3.1015; the issue is fixed in version 2026.4.1111.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124698 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124698</link>
-    <guid isPermaLink="false">934cac8a5d52340f9dc66434df51c752</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.1 | In Progress Kendo UI for jQuery, the Chart default tooltip renders point values as raw HTML. An attacker who can influence a string point value can inject markup that executes as JavaScript when a user hovers over the point. Successful exploitation may compromise the confidentiality and integrity of data available in the user's browser context. Version 2016.2.607 or earlier may be affected, but earlier releases have not been verified. The latest vulnerable version is 2026.3.1015; the issue is fixed in version 2026.4.1111.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126189 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126189</link>
-    <guid isPermaLink="false">a89227998e74fe73f51c3b7fdcb8d4be</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.3 | Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4. Prior to 4.0.1, Soup Sieve repeatedly searches descendant subtrees for each candidate evaluated by :has() and repeatedly reevaluates a parent containing :has(&gt; ...) for each child, causing quadratic matching on deeply nested or wide attacker-influenced HTML or XML. Applications using ordinary fixed selectors through select(), select_one(), or Beautiful Soup CSS APIs against untrusted documents can have a worker occupied for seconds or minutes, while applications that process only trusted documents are not affected. Selectors compiled with NOCACHE continue to use the old uncached behavior. This issue is fixed in version 4.0.1.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126190 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126190</link>
-    <guid isPermaLink="false">09c40f27b18df56c79be122d1835776c</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.5 | Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4. Prior to 4.0, Soup Sieve repeatedly walks the same ancestors while matching descendant combinators, and each additional descendant combinator raises the polynomial degree of the work on deeply nested attacker-influenced HTML or XML. Applications using selectors such as section div div through select(), select_one(), or Beautiful Soup CSS APIs against untrusted documents can have a worker occupied for seconds or minutes, while trusted-only document processing is not affected. Selectors compiled with NOCACHE continue to use the old uncached behavior. This issue is fixed in version 4.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126191 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126191</link>
-    <guid isPermaLink="false">12da2b1f1581fba95c4e6f7cd9f44f49</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.5 | Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4. Prior to 3.0, the CSS_ESCAPES and IDENTIFIER regular-expression subpatterns can backtrack exponentially on runs of ambiguous digit escapes in an attribute-name or tag position of an otherwise valid selector. The failure occurs during selector compilation through soupsieve.compile() or Beautiful Soup select() before SELECTOR_LIMIT is applied, so an application that accepts untrusted selector strings can have a worker stalled by a short input. This issue is fixed in version 3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126192 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126192</link>
-    <guid isPermaLink="false">4a0a15195be907ac3be0387960ac88ba</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.3 | Soup Sieve is a CSS selector library designed to be used with Beautiful Soup 4. Prior to 2.10, matching a developer-authored selector that places the general sibling combinator inside :has() repeatedly scans each candidate element's following siblings when the right-hand side is absent, producing quadratic work on attacker-controlled HTML. Applications that evaluate a fixed selector such as div:has(a ~ b) over untrusted markup can have a worker occupied for minutes by a small document, while the adjacent sibling form and trusted-only document processing are not affected in the same way. This issue is fixed in version 2.10.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 12 Nov 2026 19:02:41 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-126193 - NVD - CVSS Score v3.1: 5.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126193</link>
@@ -362,6 +88,270 @@ restrictions.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82977</link>
     <guid isPermaLink="false">d5490217b4f8eaf5c093c2ff50d3acce</guid>
     <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.4 | The Plesk GoAccess statistics integration in Plesk Obsidian for Linux, versions 18.0.77 to 18.0.81.7, 18.0.82 to 18.0.82.2, allows cross-subscription information disclosure.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-106146 - NVD - CVSS Score v3.1: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106146</link>
+    <guid isPermaLink="false">abcf20334a677d0df417313fbcac9480</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.6 | In Progress® Telerik® UI for ASP.NET MVC versions `2012.2.710` through `2026.3.1015`, server-side filter processing does not properly validate descriptor types, null values, or stack state in FilterNodeVisitor and does not catch FilterParserException within the affected assembly. An unauthenticated remote attacker can exploit this if the application exposes an endpoint reachable without authentication that accepts crafted filter parameters. Affected requests can trigger uncaught cast, null-reference, or empty-stack exceptions and return HTTP 500. The report does not demonstrate worker-process termination or disruption of unrelated requests. The issue is fixed in version `2026.4.1111`.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-106154 - NVD - CVSS Score v3.1: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106154</link>
+    <guid isPermaLink="false">ea8bdec83e8b979ce34099c8a11cb417</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.6 | In Progress® Telerik® UI for ASP.NET Core versions `2015.1.318` through `2026.3.1015`, the server-side FilterParser processes nested expressions in untrusted filter parameters through recursive parsing without a recursion-depth limit, while FilterLexer does not enforce an input-length limit. An unauthenticated remote attacker can exploit this if the application exposes an endpoint using DataSourceRequest model binding that is reachable without authentication. Deeply nested filters can trigger parsing errors during model binding or cause `StackOverflowException`. This issue is fixed in version `2026.4.1111`.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-106472 - NVD - CVSS Score v3.1: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106472</link>
+    <guid isPermaLink="false">ee7c9548907241d15b9e792f6d81154c</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.3 | Grafana's Prometheus data source passes the resource path supplied by the caller to the configured Prometheus server without restricting it to the supported API endpoints [missing path allowlist]. A user with permission to query the data source can read responses from other endpoints on that server using the data source's credentials.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-106475 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106475</link>
+    <guid isPermaLink="false">239c208d499ccd66e661b8f4fa1eb609</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.1 | The Elasticsearch data source resource proxy forwards the request method and path to Elasticsearch using the data source's own credentials, without restricting them to the operations the plugin needs. A user who can query the data source can alter index mappings or reach other indices on the cluster. [Improper authorization / path validation]</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107365 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107365</link>
+    <guid isPermaLink="false">e4e3775065908d97eda71725e1bdda02</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.3 | A user with query access to a Google Cloud Monitoring data source can use its resource proxy to send requests to other Cloud Monitoring API paths with the data source's credentials, and read data from any project those credentials can reach. When the data source forwards the user's OAuth identity or uses Workload Identity Federation, the impact depends on that credential's permissions. Fixed in Google Cloud Monitoring plugin 12.6.7.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-117543 - NVD - CVSS Score v4.0: 8.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117543</link>
+    <guid isPermaLink="false">66af50258ec9a51b08dede760470848e</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.9 | Joomla Extension - jdownloads.com - SSRF via external download URL field jDownloads &lt; 4.1.8 -  HTTP redirects when retrieving external download URLs could bypass validation of the original destination. This allowed server-side requests to internal or otherwise prohibited destinations and disclosure of their responses (SSRF).</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-117550 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117550</link>
+    <guid isPermaLink="false">f31757205d4c6aaa767f772ee9de7dfc</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 7.1 | Joomla Extension - jdownloads.com - Publishing of files without approval in jDownloads &lt; 4.1.8 -  Manipulated frontend submission parameters could bypass the intended publication and ownership rules. In particular, submissions could be published despite automatic publication being disabled, and ownership could be assigned contrary to the intended policy.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-117551 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117551</link>
+    <guid isPermaLink="false">81a69d8d89481f9b2e2aa675b06fcfd9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 10.0 | Joomla Extension - jdownloads.com - RCE through file upload in jDownloads &lt; 4.1.8 -  Insufficient validation of frontend thumbnail uploads allowed users with upload permission to place executable files on the server. This results in PHP code execution.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118495 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118495</link>
+    <guid isPermaLink="false">d06b39576d657bca6bc535ba37bf767d</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.8 | Joomla / WordPress Extension - acymailing.com - Exposure of sensitive information to an unauthorized actor in AcyMailing 6.0.0 - 11.1.1 - Exposure of sensitive information to an unauthorized actor in AcyMailing 6.0.0 through 11.1.1. An unauthenticated attacker who knows a subscriber's email address can read that subscriber's record, including the per-subscriber secret key that authorises the subscription management links. Holding that key, the attacker can act as that subscriber on those endpoints, which includes triggering the GDPR data export and the GDPR account deletion where those options are enabled.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119275 - NVD - CVSS Score v4.0: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119275</link>
+    <guid isPermaLink="false">703b2196c387b748dd84c4b99a3e2ef0</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 7.0 | Akaunting 3.3.0 contains a stored cross-site scripting vulnerability in the XLSX invoice-import workflow. An authenticated Manager can import a child invoice whose invoice number contains HTML and is linked to a recurring invoice. When a victim opens that recurring invoice, Akaunting raw-renders the stored child number in an anchor, causing attacker-controlled markup to execute in the victim's browser.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120466 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120466</link>
+    <guid isPermaLink="false">b7757c0584d9f0e5b57912aa0721ae52</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.8 | Joomla / WordPress Extension - acymailing.com - Missing authorization on subscription changes in AcyMailing 1.0.0 - 11.1.1 - An unauthenticated attacker who knows a subscriber's email address can unsubscribe that subscriber from one mailing list or from every mailing lists, without proving that the address is theirs. The affected feature also lets an attacker determine whether a given email address belongs to a subscriber of the site.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120468 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120468</link>
+    <guid isPermaLink="false">614f04df350c7888a31771986a585a58</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.9 | Joomla Extension - acymailing.com - Unauthenticated disclosure of mailing list metadata in AcyMailing 1.0.0 - 11.1.1 - An unauthenticated attacker can retrieve every mailing list of the site, including lists that are not publicly visible and lists restricted to an access level, together with their descriptions, access levels, owning user account and subscriber counts. The WordPress plugin is not affected.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120469 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120469</link>
+    <guid isPermaLink="false">0932482e27e52e827c844e0fe6b19a14</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.1 | Joomla / WordPress Extension - acymailing.com - Open redirect on the subscription and unsubscription endpoints in AcyMailing 1.0.0 - 11.1.1 - On a default configuration, an attacker can craft a link on the affected site that redirects the visitor to an arbitrary external site, which is usable for phishing under the trusted domain.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120470 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120470</link>
+    <guid isPermaLink="false">f375b5ab4a9063cb9732491ee904ebf4</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.9 | Joomla / WordPress Extension - acymailing.com - Online version of an email readable without the visibility check in AcyMailing 1.0.0 - 11.1.1 - An unauthenticated attacker can read the online version of campaigns that were never made public, including campaigns unpublished after being sent and campaigns sent to a restricted audience.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120471 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120471</link>
+    <guid isPermaLink="false">fcc268fae91b5aaaebfa40bf53135a12</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.9 | Joomla Extension - acymailing.com - Site modules rendered outside their access level in AcyMailing 1.0.0 - 11.1.1 - An unauthenticated visitor can cause a site module to be rendered regardless of the Joomla access level that module is restricted to, which discloses content reserved for a higher view level. The WordPress plugin is not affected.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124700 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124700</link>
+    <guid isPermaLink="false">c93fc169d8b32cc3da4aed14690eceb6</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.8 | In Telerik UI for WinForms, versions prior to 2026.4.1111, an untrusted URL redirection vulnerability exists that allows an attacker to launch arbitrary operating system protocol handlers with attacker-controlled arguments via crafted documents and hyperlinks with a non-allowlisted URI scheme that the user opens.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124702 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124702</link>
+    <guid isPermaLink="false">25b8900f00a38e79bb5d7b8deb55e231</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.8 | In Telerik UI for WPF, versions prior to 2026.4.1110, an untrusted URL redirection vulnerability exists that allows an attacker to launch arbitrary operating system protocol handlers with attacker-controlled arguments via crafted documents and hyperlinks with a non-allowlisted URI scheme that the user opens.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125324 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125324</link>
+    <guid isPermaLink="false">5d9babf276785807f68e79327531511c</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE is a duplicate of another CVE.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126196 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126196</link>
+    <guid isPermaLink="false">3162a4319d6fe2721df24dd6f6582fce</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | pgEdge Postgres MCP Server enables SQL queries against PostgreSQL databases through Model Context Protocol compatible clients. Prior to 1.1.0, query_database on a read_only connection could send unrecognized statements through pgx Exec without bind parameters, selecting PostgreSQL's simple query protocol and allowing multiple semicolon-separated statements in one request. A caller could combine transaction or session state changes with database writes, and pooled session state could leave later calls writable, when the connecting role held write privileges. The flaw affected deployments relying on read_only as a safety boundary, could compromise integrity and availability, and did not add confidentiality impact beyond the reads already permitted by the connection. This issue is fixed in 1.1.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126197 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126197</link>
+    <guid isPermaLink="false">52880d18d666583d79a3a8c19569df2d</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | pgEdge Postgres MCP Server enables SQL queries against PostgreSQL databases through Model Context Protocol compatible clients. Prior to 1.1.0, custom pl-do tools interpolated JSON arguments into a PostgreSQL DO block delimited by fixed dollar-quote tags. An argument containing $mcp_custom_tool$ could terminate the block and inject arbitrary SQL statements, while $mcp_args$ could inject procedural code into a plpgsql block. Because the statement used the simple query protocol, injected text could include additional statements and transaction control, bypassing read_only and accessing data or modifying resources available to the connecting role. The issue requires at least one pl-do custom tool; sql and pl-func tools pass arguments as bind parameters and are not affected by this injection mechanism. This issue is fixed in 1.1.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126198 - NVD - CVSS Score v3.1: 3.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126198</link>
+    <guid isPermaLink="false">28e4dacaf2046f819f68aeeec316e1c7</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 3.1 | pgEdge Postgres MCP Server enables SQL queries against PostgreSQL databases through Model Context Protocol compatible clients. Prior to 1.1.0, the bundled clients, including the CLI and web client, decided whether to request write confirmation by checking only for the query_database tool name instead of server-published write annotations. Custom pl-do, pl-func, and writing sql tools therefore ran without confirmation on allow_writes connections, including when a model followed instructions in retrieved content. The affected control is a bundled-client warning rather than a server authorization boundary, and other MCP clients do not inherit that prompt. This issue is fixed in 1.1.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126199 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126199</link>
+    <guid isPermaLink="false">f064894debe2baaa0cce965122d7d9bd</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.8 | pgEdge Postgres MCP Server enables SQL queries against PostgreSQL databases through Model Context Protocol compatible clients. Prior to 1.1.0, the bundled CLI and web clients classified query_database statements only by their first keyword before deciding whether to display a write confirmation. SELECT INTO, data-modifying common table expressions beginning with WITH, and EXPLAIN ANALYZE of a write were treated as reads and could execute without confirmation on an allow_writes connection. Read-only connections remain protected by PostgreSQL transaction access mode, and EXPLAIN without ANALYZE and SELECT FOR UPDATE remain classified as reads. This issue is fixed in 1.1.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126831 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126831</link>
+    <guid isPermaLink="false">ed130954ea37ba832cf9e6b6d80a2442</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.5 | A flaw was found in cpio. A local user can cause a Denial of Service (DoS) by triggering a stack-based buffer overflow when creating archives in tar or ustar formats. When archiving files owned by users or groups with names exceeding 32 characters, cpio copies these names into fixed-size memory without verifying their length. This unbounded copy corrupts stack memory and causes the application to crash.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127063 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127063</link>
+    <guid isPermaLink="false">67ec087beda30b96cdd84477f88a9ee2</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 9.3 | The
+third-party RMM+ extension for ConnectWise ScreenConnect uses a static API
+secret by default. The value can be changed by an administrator; however,
+environments retaining the default value may allow unauthorized access to
+extension API functionality, including the ability to send commands to managed
+agents. This issue is specific to the third-party extension and does not affect
+the ScreenConnect server or client.
+
+
+
+
+
+Scope: This issue affects the third-party RMM+
+extension for ConnectWise ScreenConnect. Deployments without the extension are
+not affected. ScreenConnect server or client software are not impacted.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127099 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127099</link>
+    <guid isPermaLink="false">e826a7f44c84e3bd0cb3c76f4d5980ee</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.9 | A flaw was found in SSSD's conversion of X.509 certificate RSA public keys to SSH keys. Missing size checks before copying RSA components into fixed-size stack buffers can cause a stack buffer overflow. An attacker able to supply a certificate with oversized RSA components that passes the configured certificate checks can cause denial of service and corrupt SSH responder memory.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127100 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127100</link>
+    <guid isPermaLink="false">1394b5063e6b190f34ba751f6fa45b02</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.5 | A flaw was found in SSSD's PAM responder on builds with the JSON PAM extension enabled. A local attacker can submit a crafted authentication request containing a non-string OAuth2 code value. Missing JSON type validation leads to a NULL pointer dereference, terminating the PAM responder and disrupting SSSD-backed authentication.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127101 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127101</link>
+    <guid isPermaLink="false">82f529397a53a36184683f9e3a2bd987</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.5 | A flaw was found in SSSD's PAM responder. A local attacker can send an authentication request without first negotiating the client protocol version. The responder dereferences a NULL protocol-version pointer and crashes, disrupting SSSD-backed authentication. Repeated crafted requests can sustain the denial of service.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127204 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127204</link>
+    <guid isPermaLink="false">b7389be67618a09f726fb56b7e35d508</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.7 | WooCommerce PayPal Pro Payment Gateway plugin before 4.1.1 contains an unauthenticated payment bypass vulnerability that allows remote attackers to mark unpaid orders as paid by exploiting the pp_capture_order AJAX handler, which is gated only by a public checkout nonce and fails to properly validate the PayPal capture response status. Attackers can supply a valid _paypal_order_id to trigger payment_complete() without verifying the capture status or amount, causing the store to fulfill goods or services that were never paid for and resulting in direct financial loss to the merchant.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-71363 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71363</link>
+    <guid isPermaLink="false">585868ea011300344cbe01d75cd40219</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.3 | A flaw was found in AWX. The debug API endpoints (/api/debug/task_manager/, /api/debug/dependency_manager/, /api/debug/workflow_manager/) are registered unconditionally in the URL configuration and use AllowAny permission class with _ignore_model_permissions=True. This allows an unauthenticated remote attacker to repeatedly invoke scheduler operations that acquire database advisory locks and open transactions, potentially leading to resource exhaustion and degraded service availability.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81843 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81843</link>
+    <guid isPermaLink="false">a56640e08cb873ef49cdf25ee4356550</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.5 | Grafana is an open-source platform for monitoring and observability.
+
+When an Elasticsearch data source is configured with a time-based index pattern, Grafana
+generated one index name for every interval in the requested query time range without any upper
+limit. A user with permission to query the data source, which includes users holding only the
+Viewer role in a default configuration, could submit a single small query with an extreme time
+range and cause the server to allocate memory until it was terminated. The allocation occurred
+before any request was sent to Elasticsearch, so the condition applied whether or not the
+Elasticsearch cluster was reachable.
+
+Data sources configured with a static index name are not affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
