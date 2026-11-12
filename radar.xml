@@ -5,115 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 21:01:36 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-127236 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127236</link>
-    <guid isPermaLink="false">ff7235eb4a4cb9441e28b86a6e3ca3b2</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.4 | An argument injection vulnerability exists in the ad-hoc RRD graph feature of multiple versions of OpenNMS Meridian and Horizon. The ad-hoc graph endpoint (GET /graph/graph.png?adhoc=true) copies request parameters into the rrdtool command line without validation. A low-privileged authenticated user (ROLE_USER or ROLE_DASHBOARD) can insert extra rrdtool arguments. An injected --daemon argument makes the server connect to an attacker-chosen address, which is a server-side request forgery. An injected DEF statement reads a local RRD file by absolute path. The command runs through exec with an argument array and no shell, so arbitrary operating system command execution is not possible. The fix validates the ad-hoc graph parameters against allowlists.
-
-
-
-The solution is to upgrade to Meridian 2024.3.15, 2025.0.12, 2026.0.2 and Horizon 36.0.6 or newer. Meridian and Horizon installation instructions state that they are intended for installation within an organization's private networks and should not be directly accessible from the Internet.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-18379 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18379</link>
-    <guid isPermaLink="false">dbf53d1ff4b410ab20a50dba25079099</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | A flaw was found in yggdrasil-worker-package-manager. An authenticated attacker can exploit this issue to achieve arbitrary file modification or potential privilege escalation. The vulnerability exists because repository management operations fail to sanitize directory traversal sequences (such as '../') within repository names. By supplying a crafted repository name, an attacker can manipulate the root-level worker process into creating or deleting files outside the intended directory, compromising host system integrity.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2024-21963 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2024-21963</link>
-    <guid isPermaLink="false">fc028a3c5c85387b9b9ce01b2818ac52</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.0 | An out-of-bounds read vulnerability in the IOMMU could allow a malicious guest to corrupt hypervisor (HV) pages and potentially cause a host crash leading to loss of availability.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2024-36344 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2024-36344</link>
-    <guid isPermaLink="false">b85295cba8e232f8d91cfa57b6f75680</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.9 | Insufficient parameter sanitization in AMD Secure Processor (ASP) TEE DrvSys could allow an attacker with local access to the Trusted Execution Environment (TEE) interface or Trusted Application (TA) to cause an out-of-bounds write, potentially resulting in a loss of platform integrity or denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-0043 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-0043</link>
-    <guid isPermaLink="false">2e4b505c30efe29ac07046870753652a</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 7.0 | Incorrect directory permissions within AMD Vivado™ Lab Solutions could allow a local user-privileged attacker to escalate their privileges, potentially resulting in arbitrary code execution.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-54507 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-54507</link>
-    <guid isPermaLink="false">b2deba8f19e8a2aa3c22433535248c8b</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.9 | Improper validation of consistency within input in AMD SEV (Secure Encrypted Virtualization) firmware could allow an attacker with administrative privileges to create multiple RMP entries for the same guest physical address, potentially resulting in loss of guest integrity.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-0455 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0455</link>
-    <guid isPermaLink="false">984a0234042c0572f1567d4ddf236ddb</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.9 | The Versal™ AI Edge Series Gen 2 Peripheral Protection Unit (XPPU) for the inter-processor interrupt (IPI) buffers does not block unauthorized access as expected. This allows processors in the SoC with any IPI channel access the ability to both read and write to the entire IPI buffer register space as well as the IPI no-buffer register control space.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-0460 - NVD - CVSS Score v4.0: 1.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0460</link>
-    <guid isPermaLink="false">09be7462b1cab1f93d01b6fb2b157cc3</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 1.0 | Improper authentication in Bootgen could result in the use of a fixed salt value for RSA padding instead of a randomly generated salt, potentially impacting data integrity.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107152 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107152</link>
-    <guid isPermaLink="false">481bdd0b343d35762972d9a5ed8c3669</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.1 | An improper authentication vulnerability has been found in the task console in the smart_proxy_dynflow package. The console accepts any client certificate signed by the capsule's certificate authority. It does not check the list of servers the capsule trusts. A low-privileged network attacker or user must already hold such a certificate. They can open the console and read job details. Those details include passwords when a job was given them. They can also cancel a running task.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107360 - NVD - CVSS Score v3.1: 9.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107360</link>
-    <guid isPermaLink="false">9673390078134f10662ab0cf5fd2cab4</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 9.6 | A flaw was found in rubygem-safemode. Compound assignment expressions in sandboxed code are evaluated without mediating method calls through the Jail allow-list. An authenticated attacker who can supply template content can invoke arbitrary no-argument methods on objects exposed to the template renderer without Jail mediation, including destructive operations such as host deletion and disclosure of non-allow-listed object state.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107443 - NVD - CVSS Score v3.1: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107443</link>
-    <guid isPermaLink="false">91cfc9709cab7b0b9e3c14c4e2972396</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.7 | A flaw was found in Foreman. An authenticated user with view_hosts privileges can retrieve rendered provisioning template content for a host via the hosts template API endpoint, disclosing sensitive data such as the host root password. This is an incomplete fix of CVE-2026-96659, which hardened the web UI preview path but left the API host-template render path authorized for Viewer-level users.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111456 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111456</link>
-    <guid isPermaLink="false">b578fd40220eb6e5570b379a8bfa445d</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.1 | A missing authorization check has been found in ConsumerResource.setupOwner() function of consumer registration module in the Candlepin package. The registration method checks permission to create a consumer only when the caller is a user. A consumer that authenticates with its identity certificate does not go through that check. A low-privileged network attacker or user who has a valid consumer certificate for one organization can register a new consumer in a different organization by supplying that organization's key. The response includes an identity certificate for the new consumer. With that certificate, the attacker can view the target organization's subscription pools. When the organization is not using simple content access, the attacker can attach that organization's entitlements to the new consumer.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124002 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124002</link>
-    <guid isPermaLink="false">99d3624dd0943e5b0031256f31a66cc7</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 9.3 | XWEB EVO versions 5.2.3 through before 5.7.0 contains a pre-authentication OS command injection vulnerability that allows unauthenticated remote attackers to execute arbitrary OS commands by injecting shell metacharacters into the username field of login.lua, cleanout.lua, or api.lua before the password check occurs. Attackers can exploit this flaw combined with the setuid-root wlua interpreter to execute commands with root privileges, achieving full system compromise. This product line reached it's end of service date in March 2026.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 12 Nov 2026 22:00:24 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-124003 - NVD - CVSS Score v4.0: 8.5</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124003</link>
@@ -327,6 +219,116 @@ The solution is to upgrade to Meridian 2024.3.15, 2025.0.12, 2026.0.2 and Horizo
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68548</link>
     <guid isPermaLink="false">4212b027787bcea2cd84b360f62fe92d</guid>
     <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 9.4 | Algernon is a small self-contained pure-Go web server. Prior to version 1.17.10, Algernon's URL-prefix authorization gate matches its protected prefixes (/admin, /repo, /data) with case-sensitive strings.HasPrefix, while the exact same raw req.URL.Path is later resolved against the filesystem. On case-insensitive filesystems (Windows NTFS — always; macOS APFS/HFS+ — default), a request for /Admin/secret.lua evades every protected-prefix check, falls through to the public-prefix accept branch, and then resolves on disk to admin/secret.lua. The result is an unauthenticated bypass of the /admin, /repo, and /data authorization boundary, enabling read (and, for Lua files, execution) of protected content. The permission system is active in the default configuration. This issue has been patched in version 1.17.10.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-106018 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106018</link>
+    <guid isPermaLink="false">b59a4a209ec46fb6d7009cae920a2071</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.7 | Authentication bypass using an alternate path or channel vulnerability in Johnson Controls EasyIO FW allows Authentication Bypass.
+
+This issue affects EasyIO FW: through 3.0b25.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126205 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126205</link>
+    <guid isPermaLink="false">21b8844c5b79579d56cb9a6bd946003b</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.3 | Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. Prior to 2.25.3, the Loofah HTML5 sanitizer checks href and xlink:href on elements in SVG_ALLOW_LOCAL_HREF with a regular expression whose line anchor and newline-matching whitespace cause an all-whitespace value to be rescanned from every line start. An attacker can submit an SVG reference element with a long multiline-whitespace attribute and consume CPU quadratically during sanitization. CRuby 3.1 and earlier and JRuby are affected, while CRuby 3.2 and later uses linear-time regular-expression matching. The default safelist reaches the vulnerable check without a configuration change. This issue is fixed in version 2.25.3.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126206 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126206</link>
+    <guid isPermaLink="false">412a22b9ccb3260ddb3563b276234848</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.3 | Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. In 2.25.2, Loofah::HTML5::Scrub.allowed_uri? treats a data URI mediatype containing the HTML5 named solidus reference &amp;sol; as malformed and falls back to the allowed text/plain, while a browser decodes the reference and interprets the same value as text/html. An application that validates a user-controlled URL with this helper and renders the approved value in href or another browser-interpreted URI attribute can allow cross-site scripting. Rails::HTML::Sanitizer.allowed_uri? re-exports the affected helper. Loofah's default sanitize() path is not affected because Nokogiri decodes the entity before URI validation. This issue is fixed in version 2.25.3.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126207 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126207</link>
+    <guid isPermaLink="false">eb66a35961190847dd4d4e4ecb06c764</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.7 | Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. Prior to 2.25.3, Loofah::HTML5::Scrub.scrub_css checks only the first parse of a style attribute, then rebuilds CSS with identifier escapes decoded so escaped parentheses, property names, comments, or quotes can become a live url() without a second safety check. An attacker can use list-style to make a viewer's browser request an attacker-chosen URL when content renders, or cursor to make the request on hover. The request can disclose the viewer's IP address, user agent, access timing, and access to internal-network hosts, but no script survives sanitization and the attacker cannot read the response. This issue is fixed in version 2.25.3.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126208 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126208</link>
+    <guid isPermaLink="false">47f990feb215b5a493d063e43c9baa3d</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.7 | Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. Prior to 2.25.3, Loofah's SVG_ALLOW_LOCAL_HREF safelist lists textPath with lowercase spelling that does not match the HTML5 parser's element name and omits mpath, so external href and xlink:href values on those elements survive sanitization. Firefox fetches the attacker-chosen URL when a viewer renders the content, which can disclose the viewer's IP address, user agent, referrer, and access to hosts routable only from the viewer's network. Chrome and WebKit do not fetch these references, and the impact is a network request rather than script execution. The rails-html-sanitizer PermitScrubber reuses the affected safelist when SVG elements are permitted. This issue is fixed in version 2.25.3.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126209 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126209</link>
+    <guid isPermaLink="false">f35127f86ba126a08ce303e91d759232</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.3 | Loofah is a general library for manipulating and transforming HTML/XML documents and fragments, built on top of Nokogiri. From 2.25.0 until 2.25.3, Loofah::HTML5::Scrub.allowed_uri? strips whitespace and control characters before decoding a semicolon-less numeric character reference, changing where the reference ends and hiding a javascript: or vbscript: scheme that a browser reconstructs. The bypass applies to encoded colons and encoded scheme letters when a stripped character terminates the numeric reference. An application that renders the approved value in href or another browser-interpreted URI attribute can allow cross-site scripting, and Rails::HTML::Sanitizer.allowed_uri? re-exports the affected helper. Loofah's default sanitize() path is not affected because Nokogiri decodes entities before URI evaluation. This issue is fixed in version 2.25.3.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126793 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126793</link>
+    <guid isPermaLink="false">6693d294294d003d9589538c05abd9b9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.6 | An untrusted search path issue in Aurora PostgreSQL dialect detection in the AWS Advanced Go Wrapper from release 2026-04-06 (awssql/v2.0.0) and before release 2026-07-29 (awssql/v2.0.3) could allow a remote authenticated user to escalate privileges to those of another database user, including a member of the rds_superuser role, via a crafted function that runs when that user connects to an Aurora PostgreSQL cluster through an affected version of the wrapper.
+
+
+
+To remediate this issue, users should upgrade to the AWS Advanced Go Wrapper release 2026-07-29 (awssql/v2.0.3) or later.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127206 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127206</link>
+    <guid isPermaLink="false">99d9b03bd71da8847c49c30de99ddb77</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.9 | Image CAPTCHA for Contact Form 7 and WPForms through 3.3.29 contains a CAPTCHA bypass vulnerability that allows unauthenticated attackers to defeat the anti-automation control by exploiting a hardcoded static answer in the Contact Form 7 integration. Attackers can submit kc_captcha=kc_human to pass validation in cf7ic_check_if_spam() on every protected form, enabling automated contact-form spam and abuse of actions gated only by this CAPTCHA.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127207 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127207</link>
+    <guid isPermaLink="false">5b543e4090b338a96c71283e7459c544</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.3 | Sendcloud for WooCommerce through 1.0.41 contains a missing authorization vulnerability that allows authenticated low-privileged users, including Subscribers, to access the sc_support_get and sc_support_save AJAX actions due to the absence of capability and nonce checks in SCCSP_Support_Controller. Attackers can call these wp_ajax_ handlers directly or via cross-site request forgery to disclose integration configuration data such as INTEGRATION_ID, SERVICE_POINT, CARRIERS, and MIN_LOG_LEVEL, and to modify the plugin's logging verbosity. This is an incomplete fix of CVE-2026-57760.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127208 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127208</link>
+    <guid isPermaLink="false">e18aadcbc09fd111863cb185f9a918a9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.6 | datamodel-code-generator before 0.84.0 contains a code injection vulnerability that allows attackers to achieve arbitrary code execution by supplying a malicious JSON Schema with a crafted x-python-type annotation containing a string ast.Constant node in a subscript slice position, which bypasses validation in parse_python_type_annotation and _python_type_expr_from_ast. Attackers can embed malicious Python expressions such as __import__ calls within quoted string literals in the generated source code, which Pydantic v2 evaluates as a ForwardRef via eval() during model_rebuild(), resulting in arbitrary code execution on developer workstations, CI/CD pipelines, or applications that generate and import the produced models at runtime.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-86322 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86322</link>
+    <guid isPermaLink="false">6a93123aebd89caa5fedbd85d604fd38</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | A flaw was found in Foreman’s Api::V2::PersonalAccessTokensController, where Foreman::Controller::UserAware#find_user resolves the target account using User.find(params[:user_id]) without applying the required parent-user authorization check. An attacker with the create_personal_access_tokens permission can therefore invoke POST /api/v2/users/:user_id/personal_access_tokens with another user’s ID and create a Personal Access Token on their behalf. The resulting plaintext token is returned in the API response, while PersonalAccessToken#check_permissions_after_save only validates create_personal_access_tokens on the token and does not enforce edit_users authorization on the target user. The attacker can then use the forged token to authenticate as the victim, potentially resulting in complete account takeover, including administrator accounts.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-86323 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86323</link>
+    <guid isPermaLink="false">507eff20f02303063ec26d365128a0d6</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | A flaw was found in Foreman’s Api::V2::MailNotificationsController, where authorization checks on user-specific mail-notification resources are insufficient. The GET /api/v2/users/:id/mail_notifications endpoint resolves the target account using User.find(params[:id]) without verifying that the authenticated user is authorized to access that user’s notification configuration. Additionally, the POST and PUT /api/v2/users/:user_id/mail_notifications paths call deny_access when the requester is unauthorized but fail to halt execution, allowing the request to continue and persist the unauthorized change despite a 403 response or subsequent DoubleRenderError. This can allow a user to disclose another user’s mail-notification configuration, including mail_query values, and, where write permissions apply, modify or create notification settings for another user.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-86324 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86324</link>
+    <guid isPermaLink="false">01adda42c02e25c8e05d1af7a415d683</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | A flaw was found in Foreman’s Api::V2::SshKeysController, where the target user is resolved through Foreman::Controller::UserAware#find_user using User.find(params[:user_id]) without enforcing the required parent-user authorization check. An attacker with the create_ssh_keys permission can exploit this authorization bypass by submitting POST /api/v2/users/:user_id/ssh_keys with another user’s ID and injecting their own public SSH key into the targeted account. The injected key is subsequently propagated to hosts provisioned by that user, potentially allowing the attacker to authenticate to and gain SSH access to the victim’s managed hosts.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
