@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 03:01:44 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 04:01:59 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-126759 - NVD - CVSS Score v4.0: 5.5</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126759</link>
@@ -59,220 +59,270 @@ An attacker who supplies a pattern that an application compiles, dumps and later
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126894 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126894</link>
-    <guid isPermaLink="false">c22d616a1195f3fd063977360200a6a0</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Out of bounds read in Skia in Google Chrome prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2025-10935 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-10935</link>
+    <guid isPermaLink="false">7c4252e776cbe4187382d8d5c9baad76</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | libilbm ILBM File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of libilbm. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of ILBM files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-27792.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126895 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126895</link>
-    <guid isPermaLink="false">ca0a2460f400049a74c160f1589ec5fb</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Use after free in CSS in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Critical)</description>
+    <title>CVE-2026-114556 - NVD - CVSS Score v3.0: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114556</link>
+    <guid isPermaLink="false">c26142dc6b8e29df6bbb1652fe024bd0</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.4 | MailEnable Save Directory Traversal Arbitrary File Creation Vulnerability. This vulnerability allows remote attackers to create arbitrary files on affected installations of MailEnable. Authentication is not required to exploit this vulnerability.
+
+The specific flaw exists within the implementation of the Save method. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this in conjunction with other vulnerabilities to execute code in the context of SYSTEM. Was ZDI-CAN-29161.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126896 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126896</link>
-    <guid isPermaLink="false">d77be65113b0a2be1985b0206e3f9621</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Missing authorization in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to bypass web origin policy via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-114558 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114558</link>
+    <guid isPermaLink="false">2a7ca72cb20fcb305ab1e98400e87c88</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OPJU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OPJU files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30738.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126897 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126897</link>
-    <guid isPermaLink="false">39bccc55112ee72170ee1814bf67634b</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Type confusion in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-114559 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114559</link>
+    <guid isPermaLink="false">bc86b902f965aa8ddae82a38fdaac5b5</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGG File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OGG files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30431.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126898 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126898</link>
-    <guid isPermaLink="false">07c41735e39ff3a7fdbc54e261a9b07b</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Uninitialized resource in Skia in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to obtain cross-origin data via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-114560 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114560</link>
+    <guid isPermaLink="false">3fc1feb0e739955f092ff35f8ada91b2</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OPJ File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OPJ files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30432.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126899 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126899</link>
-    <guid isPermaLink="false">fac4d1a6c106f3356bd3d13080f186ae</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Use after free in Elements in Google Chrome prior to 157.0.8103.78 allowed a remote attacker leveraging social engineering to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-114561 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114561</link>
+    <guid isPermaLink="false">2fa96088ca981de4abb3957077c6c3e1</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OPJU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OPJU files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30433.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126900 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126900</link>
-    <guid isPermaLink="false">00cb51693794b578f258bfaddb0d5390</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Use after free in CSS in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-114562 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114562</link>
+    <guid isPermaLink="false">6380233aaa7060d12179bbfe1804a666</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGWU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OGWU files. The issue results from the lack of proper validation of user-supplied data, which can result in a write before the start of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30736.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126901 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126901</link>
-    <guid isPermaLink="false">4bbf575d403393811f32ecdb44e4740a</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Use after free in PDF in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-114563 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114563</link>
+    <guid isPermaLink="false">5a23b6b8e9d1dbcbf37934997c2644b3</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGWU File Parsing Stack-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OGWU files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a stack-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30737.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126902 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126902</link>
-    <guid isPermaLink="false">2edfee334b8ad80921bd1bf5ee43f3d9</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Incorrect reference resolution in Browser in Google Chrome on on Mac prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-114564 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114564</link>
+    <guid isPermaLink="false">e8f1d10394006e7d4d9be4bcdec300cd</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGG File Parsing Out-Of-Bounds Write  Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OGG files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30768.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126903 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126903</link>
-    <guid isPermaLink="false">25279ea3890e0d2a38bb244c470eb1af</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Improper state validation in ANGLE in Google Chrome on on Windows prior to 157.0.8103.78 allowed a remote attacker to bypass web origin policy via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-114565 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114565</link>
+    <guid isPermaLink="false">34a7145621adeff30781b03c76e6fbee</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGG File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OGG files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30769.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126904 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126904</link>
-    <guid isPermaLink="false">61b7911e464f997594df7dd71fee6033</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Use after free in Compositing in Google Chrome prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-114566 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114566</link>
+    <guid isPermaLink="false">0b2b075361bfa47bae8e677374622ad7</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGM File Parsing Memory Corruption Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OGM files. The issue results from the lack of proper validation of user-supplied data, which can result in a memory corruption condition. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30770.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126905 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126905</link>
-    <guid isPermaLink="false">cc017830185745af7a8c2deff8fc9bc7</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Incomplete cleanup in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-114567 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114567</link>
+    <guid isPermaLink="false">8508375f53f394c0c14fa948335c05fc</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGWU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OGWU files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30771.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126906 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126906</link>
-    <guid isPermaLink="false">2efa98b3df5ce2a156a69f2e42a3228f</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Race condition in Extensions in Google Chrome on on Mac prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to obtain sensitive information via crafted network traffic. (Chromium security severity: High)</description>
+    <title>CVE-2026-114568 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114568</link>
+    <guid isPermaLink="false">c537ed0203a8c457a5d49a1461c5de5b</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OPJ File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OPJ files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-31587.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126907 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126907</link>
-    <guid isPermaLink="false">1cd3103ea7a636e3a2011d3bf45ccf71</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Uninitialized resource in Media in Google Chrome on on Windows prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to potentially read memory outside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-114569 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114569</link>
+    <guid isPermaLink="false">b0de70579990ac9a12253f6e3dfbe193</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGWU File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of OGWU files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30430.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126908 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126908</link>
-    <guid isPermaLink="false">c260ab2acbd0360ca1c409cd80a19efa</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Type confusion in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-118631 - NVD - CVSS Score v3.0: 3.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118631</link>
+    <guid isPermaLink="false">6b95df80465f96be78a6a98de50498fb</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 3.8 | Philips Hue Bridge Pro Argument Injection Restricted File Write Vulnerability. This vulnerability allows local attackers to modify files on affected installations of Philips Hue Bridge Pro. An attacker must first obtain the ability to execute low-privileged code within a container on the target system, in order to exploit this vulnerability.
+
+The specific flaw exists within the factory data service, which listens on TCP port 5001 by default. The issue results from the lack of proper validation of a user-supplied string before using it to execute a system call. An attacker can leverage this vulnerability to modify files in the context of the service account. Was ZDI-CAN-33090.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126909 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126909</link>
-    <guid isPermaLink="false">9c4114de0f487c99ec9a0b12d33fde6e</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Use after free in Passwords in Google Chrome prior to 157.0.8103.78 allowed a remote attacker leveraging social engineering to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-118632 - NVD - CVSS Score v3.0: 8.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118632</link>
+    <guid isPermaLink="false">2e1d2a2566bf0db4e0e38fc8ca7dbdb3</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 8.0 | Philips Hue Bridge Pro SQL Injection Remote Code Execution Vulnerability. This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Philips Hue Bridge Pro. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed.
+
+The specific flaw exists within the HTTP service, which listens on TCP port 443 by default. The issue results from the lack of proper validation of a user-supplied string before using it to construct SQL queries. An attacker can leverage this vulnerability to execute code in the context of root. Was ZDI-CAN-33089.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126910 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126910</link>
-    <guid isPermaLink="false">ae9c190e5abdc725e99ee70cd6eb231e</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Type confusion in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-121741 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121741</link>
+    <guid isPermaLink="false">84af6de8d66afbfbc0b8c91289256fdb</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Trimble SketchUp SKP File Parsing Use-After-Free Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Trimble SketchUp. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of SKP files. The issue results from the lack of validating the existence of an object prior to performing operations on the object. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30421.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126911 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126911</link>
-    <guid isPermaLink="false">46b6f05b05f14d5769ad6f555b6bbc4f</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Use after free in Accessibility in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: Critical)</description>
+    <title>CVE-2026-121742 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121742</link>
+    <guid isPermaLink="false">ab09cfd4349696f02eeb3bfd6fac3920</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Ashlar-Vellum Cobalt XE File Parsing Use-After-Free Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ashlar-Vellum Cobalt. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of XE files. The issue results from the lack of validating the existence of an object prior to performing operations on the object. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28757.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126912 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126912</link>
-    <guid isPermaLink="false">70306a8e5b26c423a96789466e86d40d</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Buffer overflow in Skia in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-121743 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121743</link>
+    <guid isPermaLink="false">9fa9b86771803b378d79f74392f61ed9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Ashlar-Vellum Cobalt AR File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ashlar-Vellum Cobalt. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of AR files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28675.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126913 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126913</link>
-    <guid isPermaLink="false">a546f528d3340f49ba1ec6069ac6f7d5</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Out of bounds read in Compositing in Google Chrome prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to read memory outside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-121744 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121744</link>
+    <guid isPermaLink="false">eebb8d878e28c70bc6823fa8bcc7d858</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Ashlar-Vellum Cobalt XE File Parsing Stack-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ashlar-Vellum Cobalt. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of XE files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a stack-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28172.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126914 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126914</link>
-    <guid isPermaLink="false">a34df12ee4f82cb163efff59f62fef9e</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Uninitialized resource in Skia in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to obtain cross-origin data via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-121752 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121752</link>
+    <guid isPermaLink="false">12010409657a1dd310ce4e02a2f77140</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Ashlar-Vellum Cobalt LI File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ashlar-Vellum Cobalt. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of LI files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28447.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126915 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126915</link>
-    <guid isPermaLink="false">e9ecf32d5dc96b01e01e5b663cf26ea8</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Use of uninitialized variable in Skia in Google Chrome on on Android prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-121753 - NVD - CVSS Score v3.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121753</link>
+    <guid isPermaLink="false">6cfd5d0422b153783fdcf9554ebdae27</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Ashlar-Vellum Cobalt XE File Parsing Use-After-Free Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ashlar-Vellum Cobalt. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
+
+The specific flaw exists within the parsing of XE files. The issue results from the lack of validating the existence of an object prior to performing operations on the object. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28587.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126916 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126916</link>
-    <guid isPermaLink="false">5d5687e30940e9939a2f259ecc6bc3a2</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Integer overflow in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-122044 - NVD - CVSS Score v3.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122044</link>
+    <guid isPermaLink="false">fe62d261b432eb02db62df49b3862a75</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 8.8 | Philips Hue Bridge Pro Protection Mechanism Failure Authentication Bypass Vulnerability. This vulnerability allows network-adjacent attackers to bypass authentication on affected installations of Philips Hue Bridge Pro. Authentication is not required to exploit this vulnerability.
+
+The specific flaw exists within the HTTP service, which listens on TCP port 443 by default. The issue results from the failure to apply a protection mechanism. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-33086.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126917 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126917</link>
-    <guid isPermaLink="false">4cc9d3d319a3cf863f6e948e9d888b9e</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Memory corruption in V8 in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to potentially execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-126795 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126795</link>
+    <guid isPermaLink="false">41d2a6976b89dfdc53fe7d081f3689b0</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was determined in ToolJet up to 3.20.256-lts/3.21.93-beta. The impacted element is the function activateUserWithPassword of the file server/src/modules/onboarding/util.service.ts of the component Onboarding Signup Endpoint. Executing a manipulation of the argument email can lead to missing authentication. It is possible to launch the attack remotely. The exploit has been publicly disclosed and may be utilized. Upgrading to version 3.21.94-beta is sufficient to resolve this issue. This patch is called af8f17a745621ae418f1743440f63d315e8b8643. The affected component should be upgraded. The vendor was contacted early about this disclosure.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126918 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126918</link>
-    <guid isPermaLink="false">a63f160a783c6ce97ab8fff63e5dcff7</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Use after free in Layout in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-126957 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126957</link>
+    <guid isPermaLink="false">5adbc30ff209cfb3706d820e5fbbb7b9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.9 | An integer underflow in Zephyr's IPv4 option handling allows a remote, unauthenticated attacker to read stack memory. When replying to an ICMP Echo Request that carries an IPv4 Record Route or Timestamp option, icmpv4_update_record_route() and icmpv4_update_time_stamp() in subsys/net/ip/icmpv4.c compute the length of the already recorded data as ptr - ptr_offset in uint8_t arithmetic. The attacker-controlled Pointer field is checked against the option length but not against the RFC 791 minimum (4 for Record Route, 5 for Timestamp), so a smaller value wraps the length to up to 252 bytes. net_pkt_write() then reads past the 40-byte opt_data stack buffer and up to 213 bytes of stack memory, which can include stack and heap pointers, are returned in the ICMP Echo Reply. A single packet triggers the leak and the device does not crash, so it can be repeated. Devices built with CONFIG_NET_IPV4_HDR_OPTIONS, which CONFIG_NET_IPV4_IGMP selects, are affected.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126919 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126919</link>
-    <guid isPermaLink="false">a5700d536763e94797c96c65d4b355b3</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Use after free in BrowserTag in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-13269 - NVD - CVSS Score v3.0: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13269</link>
+    <guid isPermaLink="false">88c49d02b75e4873e2a03acb2f67fd93</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.5 | Quest NetVault Backup StnzCreateKey Numeric Truncation Error Denial-of-Service Vulnerability. This vulnerability allows remote attackers to create a denial-of-service condition on affected installations of Quest NetVault Backup. Authentication is not required to exploit this vulnerability.
+
+The specific flaw exists within the StnzCreateKey function. The issue results from the lack of proper validation of user-supplied data, which can result in a numeric truncation error before allocating a buffer. An attacker can leverage this vulnerability to create a denial-of-service condition on the system. Was ZDI-CAN-28743.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126920 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126920</link>
-    <guid isPermaLink="false">cdc6fc52f68ec436265d37cc8e64952e</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Information leak in Skia in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to obtain cross-origin data via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-13270 - NVD - CVSS Score v3.0: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13270</link>
+    <guid isPermaLink="false">74932ecf6aae77ea3eb16ae2f2a7b890</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.5 | Quest NetVault Backup nvpmgr Integer Underflow Denial-of-Service Vulnerability. This vulnerability allows remote attackers to create a denial-of-service condition on affected installations of Quest NetVault Backup. Authentication is not required to exploit this vulnerability.
+
+The specific flaw exists within the nvpmgr service, which listens on UDP port 20031 by default. The issue results from the lack of proper validation of user-supplied data, which can result in an integer underflow before allocating a buffer. An attacker can leverage this vulnerability to create a denial-of-service condition on the system. Was ZDI-CAN-28744.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-126921 - NVD - CVSS: não informado</title>
