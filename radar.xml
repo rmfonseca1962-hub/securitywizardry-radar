@@ -5,249 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 04:01:59 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-126759 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126759</link>
-    <guid isPermaLink="false">4e40322da5b5b24fbdd2b35bf25ed7dc</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.5 | A flaw has been found in H3C ICG2000 Unified Communication Gateway 2023. This issue affects some unknown processing of the file /wnm/check.j of the component Web Management Module. Executing a manipulation can lead to missing authentication. The attack may be performed from remote. The exploit has been published and may be used. The researcher claims that the vendor has acknowledged receipt of the vulnerability report. No further response has been received.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125785 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125785</link>
-    <guid isPermaLink="false">49fa76f9b35e215a47cda79d0d347ca9</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Crocoblock JetEngine jet-engine allows Stored XSS.This issue affects JetEngine: from n/a through 3.9.1.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125786 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125786</link>
-    <guid isPermaLink="false">525d7e122149575234fa177107e0a7b4</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in ExpressTech Quiz And Survey Master quiz-master-next allows Code Injection.This issue affects Quiz And Survey Master: from n/a through 11.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125787 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125787</link>
-    <guid isPermaLink="false">82efd27b02c1af4fcd6a99765bcffbdc</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.4 | Missing Authorization vulnerability in ExpressTech Quiz And Survey Master quiz-master-next allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Quiz And Survey Master: from n/a through 11.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126673 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126673</link>
-    <guid isPermaLink="false">e41e7f44e76e40a17ff69af1b2bb6d5a</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | Data::Dump::Streamer versions before 3.00 for Perl allow code injection via unescaped Regexp patterns in _dump_qr.
-
-A Regexp's pattern is written into a qr literal without escaping &quot;$&quot; or &quot;@&quot;, so &quot;@{[ ... ]}&quot; and &quot;${\ ... }&quot; in the pattern run as code when the dump is evaluated. An already escaped delimiter gets a second backslash, which leaves the delimiter bare and ends the qr literal early.
-
-An attacker who supplies a pattern that an application compiles, dumps and later restores with eval or do can run arbitrary Perl code.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126785 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126785</link>
-    <guid isPermaLink="false">9afbee61623e36e8c25f268694fb2a2d</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 9.3 | A vulnerability has been found in rmalright TR-VISION HOME 2.0.5. Impacted is the function sub_11504 in the library WFanManager.sys of the component IOCTL Handler. Such manipulation leads to incorrect default permissions. The attack must be carried out locally. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-10935 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-10935</link>
-    <guid isPermaLink="false">7c4252e776cbe4187382d8d5c9baad76</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | libilbm ILBM File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of libilbm. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of ILBM files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-27792.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114556 - NVD - CVSS Score v3.0: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114556</link>
-    <guid isPermaLink="false">c26142dc6b8e29df6bbb1652fe024bd0</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.4 | MailEnable Save Directory Traversal Arbitrary File Creation Vulnerability. This vulnerability allows remote attackers to create arbitrary files on affected installations of MailEnable. Authentication is not required to exploit this vulnerability.
-
-The specific flaw exists within the implementation of the Save method. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this in conjunction with other vulnerabilities to execute code in the context of SYSTEM. Was ZDI-CAN-29161.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114558 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114558</link>
-    <guid isPermaLink="false">2a7ca72cb20fcb305ab1e98400e87c88</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OPJU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OPJU files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30738.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114559 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114559</link>
-    <guid isPermaLink="false">bc86b902f965aa8ddae82a38fdaac5b5</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGG File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OGG files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30431.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114560 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114560</link>
-    <guid isPermaLink="false">3fc1feb0e739955f092ff35f8ada91b2</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OPJ File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OPJ files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30432.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114561 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114561</link>
-    <guid isPermaLink="false">2fa96088ca981de4abb3957077c6c3e1</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OPJU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OPJU files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30433.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114562 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114562</link>
-    <guid isPermaLink="false">6380233aaa7060d12179bbfe1804a666</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGWU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OGWU files. The issue results from the lack of proper validation of user-supplied data, which can result in a write before the start of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30736.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114563 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114563</link>
-    <guid isPermaLink="false">5a23b6b8e9d1dbcbf37934997c2644b3</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGWU File Parsing Stack-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OGWU files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a stack-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30737.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114564 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114564</link>
-    <guid isPermaLink="false">e8f1d10394006e7d4d9be4bcdec300cd</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGG File Parsing Out-Of-Bounds Write  Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OGG files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30768.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114565 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114565</link>
-    <guid isPermaLink="false">34a7145621adeff30781b03c76e6fbee</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGG File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OGG files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30769.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114566 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114566</link>
-    <guid isPermaLink="false">0b2b075361bfa47bae8e677374622ad7</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGM File Parsing Memory Corruption Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OGM files. The issue results from the lack of proper validation of user-supplied data, which can result in a memory corruption condition. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30770.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114567 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114567</link>
-    <guid isPermaLink="false">8508375f53f394c0c14fa948335c05fc</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGWU File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OGWU files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated data structure. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30771.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114568 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114568</link>
-    <guid isPermaLink="false">c537ed0203a8c457a5d49a1461c5de5b</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OPJ File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OPJ files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-31587.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114569 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114569</link>
-    <guid isPermaLink="false">b0de70579990ac9a12253f6e3dfbe193</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | OriginLab Origin Viewer OGWU File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of OriginLab Origin Viewer. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of OGWU files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30430.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118631 - NVD - CVSS Score v3.0: 3.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118631</link>
-    <guid isPermaLink="false">6b95df80465f96be78a6a98de50498fb</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 3.8 | Philips Hue Bridge Pro Argument Injection Restricted File Write Vulnerability. This vulnerability allows local attackers to modify files on affected installations of Philips Hue Bridge Pro. An attacker must first obtain the ability to execute low-privileged code within a container on the target system, in order to exploit this vulnerability.
-
-The specific flaw exists within the factory data service, which listens on TCP port 5001 by default. The issue results from the lack of proper validation of a user-supplied string before using it to execute a system call. An attacker can leverage this vulnerability to modify files in the context of the service account. Was ZDI-CAN-33090.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118632 - NVD - CVSS Score v3.0: 8.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118632</link>
-    <guid isPermaLink="false">2e1d2a2566bf0db4e0e38fc8ca7dbdb3</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 8.0 | Philips Hue Bridge Pro SQL Injection Remote Code Execution Vulnerability. This vulnerability allows network-adjacent attackers to execute arbitrary code on affected installations of Philips Hue Bridge Pro. Although authentication is required to exploit this vulnerability, the existing authentication mechanism can be bypassed.
-
-The specific flaw exists within the HTTP service, which listens on TCP port 443 by default. The issue results from the lack of proper validation of a user-supplied string before using it to construct SQL queries. An attacker can leverage this vulnerability to execute code in the context of root. Was ZDI-CAN-33089.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121741 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121741</link>
-    <guid isPermaLink="false">84af6de8d66afbfbc0b8c91289256fdb</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Trimble SketchUp SKP File Parsing Use-After-Free Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Trimble SketchUp. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of SKP files. The issue results from the lack of validating the existence of an object prior to performing operations on the object. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-30421.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121742 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121742</link>
-    <guid isPermaLink="false">ab09cfd4349696f02eeb3bfd6fac3920</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Ashlar-Vellum Cobalt XE File Parsing Use-After-Free Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ashlar-Vellum Cobalt. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of XE files. The issue results from the lack of validating the existence of an object prior to performing operations on the object. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28757.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121743 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121743</link>
-    <guid isPermaLink="false">9fa9b86771803b378d79f74392f61ed9</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.0: 7.8 | Ashlar-Vellum Cobalt AR File Parsing Heap-based Buffer Overflow Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Ashlar-Vellum Cobalt. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of AR files. The issue results from the lack of proper validation of the length of user-supplied data prior to copying it to a heap-based buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28675.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 12 Nov 2026 05:02:51 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-121744 - NVD - CVSS Score v3.0: 7.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121744</link>
@@ -325,60 +83,300 @@ The specific flaw exists within the nvpmgr service, which listens on UDP port 20
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126921 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126921</link>
-    <guid isPermaLink="false">ecabe49c0cb8beece273c7df6a168598</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Use after free in Accessibility in Google Chrome prior to 157.0.8103.78 allowed a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-111433 - NVD - CVSS Score v3.1: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111433</link>
+    <guid isPermaLink="false">0312c3d61c3b1888ecf1d5f637b2afbe</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.6 | UNIX symbolic link (symlink) following vulnerability in openEuler iSulad on Linux.
+
+This vulnerability is associated with program file src/daemon/modules/spec/specs_mount.c.
+
+
+
+This issue affects iSulad: through 2.1.6.
+
+
+
+If an attacker can get the victim or the platform to run their crafted malicious image, they can cause the iSulad daemon to copy sensitive host directories into an anonymous volume when creating a container, which the container can then read.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126922 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126922</link>
-    <guid isPermaLink="false">fca2e91d5dc05e61308373336957f838</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS: não informado | Out of bounds read in Skia in Google Chrome prior to 157.0.8103.78 allowed a remote attacker who had compromised the renderer process to leak cross-origin data via a crafted HTML page. (Chromium security severity: High)</description>
+    <title>CVE-2026-111434 - NVD - CVSS Score v3.1: 5.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111434</link>
+    <guid isPermaLink="false">285a7ec479c71b02eaea32fa1ef76256</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.6 | Use of Externally-Controlled format string vulnerability in openEuler iSulad on Linux.
+
+This vulnerability is associated with program file src/daemon/modules/image/oci/oci_load.c.
+
+
+
+This issue affects iSulad: through 2.1.6.
+
+
+
+When the iSulad daemon performs container lifecycle operations (such as create, start, exec, stop, etc.) through the isula runtime (shim), the daemon reads the stderr output of the shim process via a pipe for error information display. If the buffer contains format specifiers such as %s, %x, or %n, it may trigger a format string vulnerability, potentially leading to information leakage, denial of service, or the risk of arbitrary writes.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126932 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126932</link>
-    <guid isPermaLink="false">e05c1292e46d3038c15c6db25e150309</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | Zipline 4.6.2 before 4.8.0 contains a policy bypass vulnerability that allows authenticated users to evade administrator-disabled MIME types by editing file metadata. Attackers can upload a permitted file, then set a disabled type such as text/html through PATCH /api/user/files/:id so /raw/:id serves that Content-Type.</description>
+    <title>CVE-2026-111435 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111435</link>
+    <guid isPermaLink="false">fd28c4de228a4e603d1b100c0162928e</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.4 | Relative path traversal vulnerability in openEuler iSulad on Linux.
+
+This vulnerability is associated with program file src/daemon/modules/image/oci/oci_load.c.
+
+
+
+This issue affects iSulad: through 2.1.6.
+
+
+
+In oci_load.c, oci_load_process_manifest() does not sanitize the Config path of manifest.json. A malicious tar package can enable the isulad with the root permission to read any file on the host.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126933 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126933</link>
-    <guid isPermaLink="false">dbdde9033e10cfee94d070bf00a8fa78</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 5.3 | Zipline 4.0.0 before 4.8.0 contains an upload filter bypass vulnerability that allows users with upload access to store blocked file types due to extension format mismatch. The upload and partial handlers compare dotted, case-sensitive extensions against undotted disabledExtensions entries, letting authenticated or permitted unauthenticated folder uploaders bypass administrator restrictions.</description>
+    <title>CVE-2026-111436 - NVD - CVSS Score v3.1: 4.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111436</link>
+    <guid isPermaLink="false">87e4a0dc57219e8491d5b04081b0da75</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.4 | Missing release of memory after effective lifetime vulnerability in openEuler iSulad on Linux.
+
+This vulnerability is associated with program file src/daemon/modules/spec/specs_mount.c.
+
+
+
+This issue affects iSulad: through 2.1.6.
+
+
+
+The memory leak vulnerability causes the iSulad daemon to be triggered frequently, exhausting the host machine's memory and ultimately leading to an OOM crash of the daemon, resulting in a denial of service (DoS).</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126934 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126934</link>
-    <guid isPermaLink="false">728bb7a0365c34c37df233807c0f539b</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 6.9 | Zipline 4.3.2 before 4.8.0 contains a rate limit bypass vulnerability that allows unauthenticated attackers to evade throttling by spoofing X-Forwarded-For headers when core.trustProxy is enabled. Attackers can send a different X-Forwarded-For value per request to obtain fresh rate-limit buckets, enabling unlimited guessing of login passwords, TOTP codes, and file and URL passwords.</description>
+    <title>CVE-2026-117687 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117687</link>
+    <guid isPermaLink="false">eafb8f424ebc132017463f803d329941</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.9 | Movable Type provided by Six Apart Ltd. contains a code injection vulnerability in its Dynamic Publishing functionality. By sending a specially crafted request that is processed by the Dynamic Publishing, an attacker may be able to execute arbitrary PHP code on the affected product.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126935 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126935</link>
-    <guid isPermaLink="false">8fe28b6cc66c3ea0303c2205f7af7cd3</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v4.0: 6.3 | Zipline before 4.8.0 contains a race condition vulnerability in src/server/routes/raw/[id].ts that allows remote attackers to bypass file maxViews limits through non-atomic view counting. Attackers holding a file link can send parallel requests that read the same pre-increment count, viewing view-limited or delete-on-max-views files beyond their limit.</description>
+    <title>CVE-2026-124993 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124993</link>
+    <guid isPermaLink="false">2609da894962959b79c7ebdc395b4b57</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.3 | An incorrect authorization vulnerability in the Security Advisor in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote attackers to read specific files.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-68549 - NVD - CVSS Score v3.1: 3.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68549</link>
-    <guid isPermaLink="false">73ddcbc63a307bf553b46ba86c0aa1ac</guid>
-    <description>Wednesday 11 November 2026 | NVD | CVSS Score v3.1: 3.3 | ClickMigrate is a database migration tool for ClickHouse with automatic SQL migration management and version tracking. Prior to version 1.0.3, a path traversal vulnerability in the revision command allowed a crafted migration name supplied via the -m argument to escape the intended migrations directory. Under specific conditions, an attacker could cause the tool to create a .sql file in an arbitrary location writable by the user executing the command. This issue is only exploitable if an attacker can influence the migration name passed to the revision command, such as through an insecure automation or CI/CD pipeline that forwards untrusted input. This issue has been patched in version 1.0.3.</description>
+    <title>CVE-2026-13656 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13656</link>
+    <guid isPermaLink="false">51cff89ee5f95b1a5050efe3139041b0</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.4 | An improper neutralization of input during web page generation vulnerability in the Audio Player in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read or write specific files.</description>
     <category>NVD</category>
-    <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-13672 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13672</link>
+    <guid isPermaLink="false">a42ab5a191888866c2470b87c625cdaf</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | An authorization bypass through user-controlled key vulnerability in the SSOAuth in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read or write arbitrary files and conduct denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-15198 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15198</link>
+    <guid isPermaLink="false">78d5ac8cbbbd2cd8b5e4cc0b46e27cbd</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.5 | A missing authentication for critical functionality vulnerability in the Webdav API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote attackers to read specific files and conduct limited denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-15201 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15201</link>
+    <guid isPermaLink="false">4a0ac4aba6deff4c26954c26b89bd5b0</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.9 | An improper certificate validation vulnerability in the Support Form in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows man-in-the-middle attackers to read arbitrary files and write specific files during support form submission.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-16550 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16550</link>
+    <guid isPermaLink="false">7a0460d9f50edf71437b8656469cbfb9</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.5 | An external control of file name or path vulnerability in the Media Parser in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to write arbitrary files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-18596 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18596</link>
+    <guid isPermaLink="false">8dd0000b9de664c8b91ebfc8b7a42e96</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | An authentication bypass using an alternate path or channel vulnerability in the OTP in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote attackers with valid user credentials to read or write arbitrary files and conduct denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-18633 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18633</link>
+    <guid isPermaLink="false">5710486d29a7fc6c328b33cc9c5c285a</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.5 | An access of uninitialized pointer vulnerability in the nfsd in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote attackers to conduct denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-18792 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18792</link>
+    <guid isPermaLink="false">2cbe9f41674c4b51b6adfe5ecd15532d</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | An improper limitation of a pathname to a restricted directory vulnerability in the Sharing API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read or write arbitrary files and conduct denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-19048 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19048</link>
+    <guid isPermaLink="false">a6cca891a6eaac83bbaa6c74db647ef4</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | An improper link resolution before file access vulnerability in the thumb in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to write arbitrary files and conduct denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-19414 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19414</link>
+    <guid isPermaLink="false">546d15eac1d57127a5c5b5224713b739</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | A missing authorization vulnerability in the Promotion API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to write specific files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-19833 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19833</link>
+    <guid isPermaLink="false">0fe6a36483c1b3ac5197dea66a5b38e1</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.4 | A missing authorization vulnerability in the ACL API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read or write specific files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-74850 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-74850</link>
+    <guid isPermaLink="false">0728456a3e2d289bc05ee4f18fe119a7</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | An improper limitation of a pathname to a restricted directory vulnerability in the contentextract in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read specific files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-74857 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-74857</link>
+    <guid isPermaLink="false">60eefb24a1a542965d11e9e8efb64db8</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | A missing critical step in authentication vulnerability in the Auth API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read or write arbitrary files and conduct denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-75785 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75785</link>
+    <guid isPermaLink="false">e9e68796d4a7e4f5e9ad275c07708a92</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.2 | An improper neutralization of special elements used in an OS command vulnerability in the VPN API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users with administrator privileges to read or write arbitrary files and conduct denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-76954 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76954</link>
+    <guid isPermaLink="false">8d60f1508a16f570fd4ed8f4efa47bbd</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 9.8 | An improper neutralization of special elements used in an SQL command vulnerability in the Auth API in Synology DiskStation Manager (DSM) before 7.2.1-69057-13, 7.2.2-72806-10, 7.3.2-86009-5, and 7.4.1-90080-1 allows remote attackers to read or write arbitrary files and conduct denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77738 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77738</link>
+    <guid isPermaLink="false">5d7cba506295bda447cfcd6f96816b02</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | A server-side request forgery vulnerability in the Credential API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read specific files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81557 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81557</link>
+    <guid isPermaLink="false">2993b59cb8320ac8acdee1a4371aee8b</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.4 | An improper neutralization of input during web page generation vulnerability in the DSMNotify in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read or write specific files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81558 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81558</link>
+    <guid isPermaLink="false">d3c273f71ae06e4a614c5a41e27ff9e0</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | A missing authorization vulnerability in the SocketIo API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to write specific files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81559 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81559</link>
+    <guid isPermaLink="false">6ec9fcb59fd7c08b8aa5cc57c3fcb5fc</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | A missing authorization vulnerability in the TaskScheduler API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to write specific files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81584 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81584</link>
+    <guid isPermaLink="false">716e3848bb4d479da76c7f1ad08f5afa</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | An improper neutralization of special elements used in an SQL command vulnerability in the User API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote attackers with control over a compromised LDAP or Active Directory server to read or write arbitrary files and conduct denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-85098 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85098</link>
+    <guid isPermaLink="false">7986baafe77a418d3ef8d2c6155fc0e4</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.3 | A reachable assertion vulnerability in the synoscgi in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote attackers to conduct limited denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-85101 - NVD - CVSS Score v3.1: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85101</link>
+    <guid isPermaLink="false">f546b8fbc3095a7edbd23cc8f01aac35</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.6 | An authentication bypass using an alternate path or channel vulnerability in the rsync in Synology DiskStation Manager (DSM) before 7.2.1-69057-13, 7.2.2-72806-10, 7.3.2-86009-5, and 7.4.1-90080-1 allows remote attackers to read specific files, write arbitrary files, and conduct limited denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-86343 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86343</link>
+    <guid isPermaLink="false">ce03f4b279edb7d73931c33dc147145b</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.8 | An improper neutralization of CRLF sequences vulnerability in the SNMP API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users with administrator privileges to read or write arbitrary files and conduct denial-of-service attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-87801 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87801</link>
+    <guid isPermaLink="false">55b03149c6a79b7e9a0f1da0d9b2be60</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.5 | An insertion of sensitive information into sent data vulnerability in the API framework in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read arbitrary files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-88266 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88266</link>
+    <guid isPermaLink="false">42603089c1f09a2b1dab28c622864585</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | An external control of system or configuration setting vulnerability in the synomount in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to write specific files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-92379 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92379</link>
+    <guid isPermaLink="false">41c83f33181d3953f6073aa5a0024d00</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.4 | An improper neutralization of input during web page generation vulnerability in the Notification API in Synology DiskStation Manager (DSM) before 7.3.2-86009-5 and 7.4.1-90080-1 allows remote authenticated users to read or write specific files.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   </channel>
 </rss>
