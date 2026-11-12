@@ -5,340 +5,324 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Nov 2026 15:02:32 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 16:01:53 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-126644 - NVD - CVSS Score v3.1: 3.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126644</link>
-    <guid isPermaLink="false">f09f321375afc6c644a66c6d8f68aba7</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 3.9 | A link-following flaw was found in the authorized_key module of the ansible.posix collection, residual to the fix for CVE-2026-11837. That fix guards only the final path component (os.chown with follow_symlinks=False and O_NOFOLLOW in _safe_open_write()). When an unprivileged local user replaces their ~/.ssh directory with a symlink to a directory they do not own, and an operator subsequently runs the authorized_key task as root (a common provisioning pattern), the module resolves its path operations through the symlink: atomic_move() writes the temporary file in the symlink target and renames it to &lt;target&gt;/authorized_keys, creating or overwriting a file in the attacker-chosen directory, and os.chmod(sshdir, 0o700) follows the symlink and changes the target directory's permissions. The written file is chowned to the unprivileged user, so this is not a privilege escalation, but it allows an attacker to create or overwrite files (for example in /etc/apt/apt.conf.d/, which APT reads regardless of file ownership) to cause integrity and availability impacts.</description>
+    <title>CVE-2026-116320 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116320</link>
+    <guid isPermaLink="false">b79da046383a7112f54b5b729eef4b8c</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Use after free in PostgreSQL plperl allows an object creator to execute arbitrary code as the operating system user running the database, via dropping the final reference to a Perl array or hash while PostgreSQL is converting that object.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-114369 - NVD - CVSS Score v4.0: 2.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114369</link>
-    <guid isPermaLink="false">eb165b72ccbac944416fb16b5ea55c45</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 2.7 | Resource exhaustion vulnerability in the Qt Framework QWebSocket and QWebSocketServer classes of the Qt WebSockets module</description>
+    <title>CVE-2026-116321 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116321</link>
+    <guid isPermaLink="false">cf27d4000196e1466bf22c048575e5c0</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | Improper null termination in PostgreSQL array element assignment allows a database user to disclose server memory, via changing the final byte of a fixed-length name value to a nonzero byte and passing it to code that treats the value as a C string.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124705 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124705</link>
-    <guid isPermaLink="false">0674716b48429fb1032e976cf91a6154</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.8 | In Progress® Telerik® UI for .NET MAUI prior to version 16.0.0, an untrusted URL redirection vulnerability in the RadRichTextEditor hyperlink handling and the RadPdfViewer link annotation handling allows an unauthenticated attacker to launch arbitrary operating system protocol handlers with attacker-controlled arguments via a crafted document or PDF link with a non-allowlisted URI scheme that the user opens.</description>
+    <title>CVE-2026-116322 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116322</link>
+    <guid isPermaLink="false">cada41fca99a5ae54aee6606672c6599</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper locking in PostgreSQL startup processing allows an unauthenticated network client to trigger a server restart, via arranging for authentication_timeout to arrive while it holds a spinlock during cancel handling.  Within major version 18, minor versions before PostgreSQL 18.7 are affected.  Versions before PostgreSQL 18 are unaffected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-127036 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127036</link>
-    <guid isPermaLink="false">9a3a0632a079eaea42f4176002da3b02</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.6 | Improper neutralization of CRLF sequences ('CRLF injection') vulnerability in ibi WebFOCUS.
-
-This issue affects WebFOCUS: 9.1, from 9.2 through 7, and from 9.3 through 7.</description>
+    <title>CVE-2026-116323 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116323</link>
+    <guid isPermaLink="false">e45ffdc24f63cb7a8c3c8877c40e47d5</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Use after free in PostgreSQL pltcl allows an object creator to execute arbitrary code as the operating system user running the database, via a domain CHECK that re-enters the Tcl interpreter and frees or changes a string still used by the outer result conversion.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-127046 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127046</link>
-    <guid isPermaLink="false">902f58d248f30cb617e602f2bd6632c4</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 9.2 | The MISP Modules website component contains an information disclosure vulnerability in the external tools management interface. The /external_tools/list endpoint returned stored API keys (the api_key field) in its JSON response via the ExternalTools model serializer. Additionally, the browser-based edit form pre-populated the API key input field with the stored credential value, exposing it in the DOM.
-
-The /external_tools/list endpoint is accessible without authentication (the regression tests verify the response for both authenticated and unauthenticated clients), meaning any network-reachable client could retrieve the API keys for all configured external tools. These keys are used by the server to authenticate submissions to external analysis or enrichment services, so their disclosure allows an attacker to impersonate the MISP instance or directly access those external services.
-
-The vulnerability also affected the edit workflow: the change_config endpoint previously required the API key to be present and non-empty on every save, forcing the key to round-trip through the client. The browser JavaScript stored the key in a reactive state object and updated the in-memory tool list with the credential value, further increasing the window of exposure in client-side memory and network traffic.
-
-Affected component: the website sub-application of MISP Modules, specifically the external_tools module (serializer in models.py, list endpoint, and the external_tools_index.html template). The impact is limited to confidentiality of the stored API keys; no integrity or availability impact on the MISP Modules website itself is indicated by the patch.</description>
+    <title>CVE-2026-116325 - NVD - CVSS Score v3.1: 8.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116325</link>
+    <guid isPermaLink="false">9da282a8c7a2c2e72ae038ab154999e0</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.0 | SQL injection in PostgreSQL reindexdb allows an object creator to execute arbitrary SQL as the database user running reindexdb, via a crafted index name embedded in the parallel catalog query for --jobs with --index.  Within major versions 17-18, minor versions before PostgreSQL 18.7 and 17.12 are affected.  Versions before PostgreSQL 17 are unaffected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-13764 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13764</link>
-    <guid isPermaLink="false">3ff4ecba6bbcb9fc29c7388d6ed7086e</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | The Masterstudy - Education WordPress Theme theme for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 4.8.151. This is due to missing authorization and nonce validation on the `masterstudy_ms_stm_set_discard_transient` AJAX action. This makes it possible for authenticated attackers, with Subscriber-level access and above, to elevate their privileges to Administrator by setting the `stm_developer_access_token` transient and using the developer access auto-login flow to obtain administrator session cookies.</description>
+    <title>CVE-2026-116326 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116326</link>
+    <guid isPermaLink="false">bb719634c956a274ae693ce7b72de5f6</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Uncaught exceptions in PostgreSQL plperl allow an object creator to cause use of a stale sigjmp_buf, via a tied Perl object, or a Perl object whose overloaded conversion throws while plperl is handling another error.  We have not ruled out arbitrary code execution on some platform.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-15309 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15309</link>
-    <guid isPermaLink="false">5035bfafaa34ceccd713171c83b78b58</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | The CourseCure Courses plugin for WordPress is vulnerable to Privilege Escalation in versions up to, and including, 1.5.1. This is due to a missing capability check in the ajax_save_settings() function, which accepts arbitrary POST parameters and calls update_option() with attacker-controlled keys and values without any authorization verification. This makes it possible for authenticated attackers, with subscriber-level access and above, to elevate their privileges to administrator by setting the default_role WordPress option to 'administrator' and users_can_register to '1', then registering a new account that is automatically granted full administrator access.</description>
+    <title>CVE-2026-116327 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116327</link>
+    <guid isPermaLink="false">ebac0735afae4630e5ce4717d9cc8452</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | Exposure of sensitive information in PostgreSQL security_barrier processing allows a database user to infer values hidden by a security_barrier view, via applying a leaky function to a CASE test value or internal parameter that indirectly represents a protected column.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-16135 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16135</link>
-    <guid isPermaLink="false">facf211e64d1d5bfd31ab9d585a81a81</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | The VibeBP plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 1.9.9.8.1. This is due to the plugin allowing arbitrary user meta updates through the set_email_notification_settings() function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to grant themselves administrator privileges by updating their own 'wp_capabilities' user meta value.</description>
+    <title>CVE-2026-116328 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116328</link>
+    <guid isPermaLink="false">f3997c0f26cc59c64575b0cc3b2ab1ec</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Integer wraparound in PostgreSQL generation memory contexts allows a database user to execute arbitrary code as the operating system user running the database, via freeing an allocation larger than 1 GB and causing its block to be reused for smaller chunks whose back-pointer offset cannot represent that position.  Within major versions 16-18, minor versions before PostgreSQL 18.7, 17.12, and 16.16 are affected.  Versions before PostgreSQL 16 are unaffected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-19421 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19421</link>
-    <guid isPermaLink="false">fed6365f0141da53ea1d394fa4efc917</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Zohocorp ManageEngine DDI Central versions below 6301 is affected by a PowerShell injection vulnerability due to insufficient validation of user-supplied TXT record values in Windows DNS operations.</description>
+    <title>CVE-2026-116329 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116329</link>
+    <guid isPermaLink="false">1b8fde3a93b79256241efea489ba307a</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL statistics import allows a table maintainer to execute arbitrary code as the operating system user running the database, via nested SET DATA TYPE during conversion of values to import.  Within major version 18, minor versions before PostgreSQL 18.7 are affected.  Versions before PostgreSQL 18 are unaffected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-2982 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-2982</link>
-    <guid isPermaLink="false">75fd31a453d3382376bd326d8f0859dc</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.4 | The WP Table Builder – Drag &amp; Drop Table Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'url' parameter in versions up to, and including, 2.1.7 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level permissions and higher, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation by lower-privileged users requires an administrator to explicitly allow those roles in plugin settings. While it is possible to assign subscriber-level roles with the ability to create tables, such privileges are usually assigned to the more appropriate contributor, author, or editor level roles.</description>
+    <title>CVE-2026-116330 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116330</link>
+    <guid isPermaLink="false">097ef6ccb7b6c73e9e40a873fb8ab4ba</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Untrusted data inclusion in PostgreSQL pg_dump tar-format restore.sql allows a compromised origin server to execute arbitrary code as the client operating system account running psql, via the predictable restriction key in restore.sql.  This is a gap in the fix for CVE-2025-8714.  restore.sql is undocumented.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-110951 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110951</link>
-    <guid isPermaLink="false">e1f52235156af31600fc8ee051455d0a</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.5 | Weak Password Recovery Mechanism for Forgotten Password vulnerability in Hyper Teknoloji Ltd. Şti. Hyper E-Commerce Infrastructure, Hyper Teknoloji Ltd. Şti. Hyper E-Commerce Infrastructure - dealer integration, and Hyper Teknoloji Ltd. Şti. Hyper E-Commerce Infrastructure - Storefront application and management panel allows Password Recovery Exploitation.
-
-This issue affects Hyper E-Commerce Infrastructure: before 1.1; Hyper E-Commerce Infrastructure - dealer integration: before 1.2; Hyper E-Commerce Infrastructure - Storefront application and management panel: before 2.1796.</description>
+    <title>CVE-2026-116331 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116331</link>
+    <guid isPermaLink="false">07ac4205be631216245ddd41850c0c95</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL min/max aggregate optimization allows an object creator to execute arbitrary code as the operating system user running the database, via a user-defined aggregate whose SORTOP option causes the planner to treat the aggregate's input and result as the same type when they differ.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-111552 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111552</link>
-    <guid isPermaLink="false">e02e88bf62a67a38f2e55d1f0b8f1254</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.1 | Use of single-factor authentication vulnerability in Hyper Teknoloji Ltd. Şti. Hyper E-Commerce Infrastructure, Hyper Teknoloji Ltd. Şti. Hyper E-Commerce Infrastructure - dealer integration, and Hyper Teknoloji Ltd. Şti. Hyper E-Commerce Infrastructure - Storefront application and management panel allows Authentication Bypass.
-
-This issue affects Hyper E-Commerce Infrastructure: before 1.1; Hyper E-Commerce Infrastructure - dealer integration: before 1.2; Hyper E-Commerce Infrastructure - Storefront application and management panel: before 2.1796.</description>
+    <title>CVE-2026-116332 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116332</link>
+    <guid isPermaLink="false">3c470bb289f54abb923a311c44e4bcf6</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Use after free in PostgreSQL portal setup allows an object creator to execute arbitrary code as the operating system user running the database, via running user-defined code during planning or executor startup that closes the portal currently being prepared.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123139 - NVD - CVSS Score v4.0: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123139</link>
-    <guid isPermaLink="false">213f3b398b8f581cb10f1546886405b4</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.8 | Improper verification of the source of a communication channel vulnerability in Opera Neon on macOS and Windows allows a malicious browser extension to take control of the browser by sending commands through MCP Hub to the built-in Browser Operator extension. This issue affects Opera Neon MCP Hub extension: 0.0.1.</description>
+    <title>CVE-2026-116333 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116333</link>
+    <guid isPermaLink="false">b11ada1db3bd33c27c615f9f37211d07</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 6.5 | Buffer over-read in PostgreSQL parallel B-tree scans allows an object creator to read attacker-chosen server-memory addresses, via a function incorrectly marked PARALLEL SAFE or STABLE to make participating workers build different scan-key arrays.  Within major versions 17-18, minor versions before PostgreSQL 18.7 and 17.12 are affected.  Versions before PostgreSQL 17 are unaffected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125285 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125285</link>
-    <guid isPermaLink="false">003848a591bda2b09a9544bc69d76ed9</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.8 | Authentication bypass using an alternate path or channel vulnerability in TIBCO TIBCO Platform’s Self-Hosted Control Plane.
-
-This issue affects TIBCO Platform’s Self-Hosted Control Plane: from 1 through 1.21.</description>
+    <title>CVE-2026-116335 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116335</link>
+    <guid isPermaLink="false">f407999dcbbb16e7b40b28a4b0bdd99d</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL operator commutator and negator links allows an object creator to execute arbitrary code as the operating system user running the database, via linking operators having different result types or creating inconsistent reciprocal links.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125870 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125870</link>
-    <guid isPermaLink="false">0e253be7a81db1cb32249c4aa61e6d35</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 2.3 | BookStack before 26.09.3 contains a missing authorization vulnerability in ImageController::checkImagePermission() that allows authenticated non-admin users to bypass page-level content restrictions for images whose owning page has been moved to the recycle bin, because the permission check relies on Page::getPage() which returns null for soft-deleted pages and silently skips the PageView check. Attackers can enumerate sequential image IDs via GET /images/edit/{id} to disclose metadata of restricted images, and users with image-update-all/image-delete-all privileges can rename, replace, or permanently delete images belonging to content they cannot view, persisting the damage even after the page is restored.</description>
+    <title>CVE-2026-116336 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116336</link>
+    <guid isPermaLink="false">93902f656662ae3d7444693bb04844fa</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Operation on a dropped index in PostgreSQL REINDEX CONCURRENTLY allows an object creator to execute arbitrary code as the operating system user running the database, via an index expression that issues DROP INDEX.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126993 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126993</link>
-    <guid isPermaLink="false">b3737419d6ffc8a07f7bebe8d83d8453</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security flaw has been discovered in SiteServer SSCMS up to 7.2.2. Impacted is an unknown function of the file /api/v1/captcha. Performing a manipulation of the argument Value results in inadequate encryption strength. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-120139 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120139</link>
+    <guid isPermaLink="false">3120e9cea10d35b2cfa4fc5a9797af17</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Integer wraparound in PostgreSQL in-memory tuple-size calculations allows a database user to execute arbitrary code as the operating system user running the database, via oversized tuple data.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126994 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126994</link>
-    <guid isPermaLink="false">b9fafe60800ac4e7a5bdf5ffe2cb6fa1</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability has been found in braindecode up to 1.8.1. Affected is the function resolve_type_kwargs of the file braindecode/models/util.py of the component Model Config Deserialization. Such manipulation of the argument Activation leads to use of externally-controlled input to select classes or code. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 2.0.0 is able to address this issue. The name of the patch is 05b764d93b9a50400f523206fbe03d73d0cf5edb. The affected component should be upgraded.</description>
+    <title>CVE-2026-120141 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120141</link>
+    <guid isPermaLink="false">46cc66cf250e1419b977c42af7ba2ec6</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL materialized set-returning functions allows a database user to execute arbitrary code as the operating system user running the database, via returning rows having different dynamic RECORD return types.  json_populate_recordset() is one affected function.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-127050 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127050</link>
-    <guid isPermaLink="false">ceee316b80fbf9efa91010293019fb77</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 7.1 | Backup Migration before 2.1.8 for WordPress contains a path traversal vulnerability in its PclZip restore fallback that allows an attacker to achieve arbitrary file write when an administrator restores a malicious backup archive on a server lacking the PHP zip extension. Attackers can craft a zip archive with entry names containing &quot;..&quot; sequences, which PclZip's extract() processes without the PCLZIP_OPT_EXTRACT_DIR_RESTRICTION option, writing a PHP file outside the intended extraction directory into the web-servable tree to achieve remote code execution.</description>
+    <title>CVE-2026-120142 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120142</link>
+    <guid isPermaLink="false">89dac36c4f377b879e6dd88c787a6c6b</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL anonymous RECORD types allows an object creator to execute arbitrary code as the operating system user running the database, via row types having dropped attributes in the same positions but with different widths or alignments.  Within major versions 17-18, minor versions before PostgreSQL 18.7 and 17.12 are affected.  Versions before PostgreSQL 17 are unaffected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-127056 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127056</link>
-    <guid isPermaLink="false">492280cf1c57338ceae52b2bf5c20b2f</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.7 | PapaParse before 5.7.1 contains an inefficient algorithmic complexity vulnerability that allows remote unauthenticated attackers to cause denial of service by submitting delimiter-free quoted CSV input to Papa.parse(). Attackers can supply a single-column quoted CSV with no delimiters, triggering repeated full-buffer indexOf scans per row that grow quadratically with input size, exhausting CPU and blocking the Node.js event loop or freezing a browser tab.</description>
+    <title>CVE-2026-120143 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120143</link>
+    <guid isPermaLink="false">595cc879eb2afcb9d73feaa7086253c2</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Use after free in PostgreSQL trigger functions allows an object creator to execute arbitrary code as the operating system user running the database, via a cursor over a transition table.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-19422 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19422</link>
-    <guid isPermaLink="false">f32ad36b56f0c38f626ac555a9cc68a8</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 9.1 | Zohocorp ManageEngine DDI Central versions below 6301 is affected by an authentication bypass vulnerability in Windows DNS and DHCP agent synchronization APIs, allowing unauthenticated user to impersonate onboarded Windows servers and perform unauthorized DNS and DHCP modifications.</description>
+    <title>CVE-2026-120144 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120144</link>
+    <guid isPermaLink="false">7ef8c8cd5db7bcbdba44407c0f1d37c6</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion from incomplete PostgreSQL type-cache invalidation allows an object creator to execute arbitrary code as the operating system user running the database, via a composite type change while its cache entry is being populated.  Within major version 18, minor versions before PostgreSQL 18.7 are affected.  Versions before PostgreSQL 18 are unaffected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75864 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75864</link>
-    <guid isPermaLink="false">c1667874529a34a1d0491e04439b6a5e</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | Zohocorp ManageEngine DDI Central versions below 6301 is affected by an improper authorization vulnerability that allowed authenticated non-administrative users to delete DNS zones outside their assigned scope.</description>
+    <title>CVE-2026-120145 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120145</link>
+    <guid isPermaLink="false">8ea557de9d099aaf87a397d96ae5eb7e</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Missing authorization in PostgreSQL logical replication allows a compromised publisher to execute arbitrary code as the operating system user running the superuser-owned subscription, via naming a system catalog as a replication target.  Only subscriptions owned by a superuser are vulnerable.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75867 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75867</link>
-    <guid isPermaLink="false">777b3092d932519c7613a869bb13db5f</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | Zohocorp ManageEngine DDI Central versions below 6301 is affected by an authorization bypass vulnerability that allowed authenticated non-administrative users to modify Windows DHCP filter-list configurations across unauthorized clusters.</description>
+    <title>CVE-2026-120146 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120146</link>
+    <guid isPermaLink="false">3b9570337448e03d51af72630b94e895</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing authorization in PostgreSQL REASSIGN OWNED allows a role granted INHERIT but not SET to transfer objects to the granted role.  It also allows reassignment of database ownership without the CREATEDB privilege.  The equivalent ALTER ... OWNER commands block this.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75868 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75868</link>
-    <guid isPermaLink="false">850af57e99e3b6ade6d6733a920032fb</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | Zohocorp ManageEngine DDI Central versions below 6301 is affected by an authorization bypass vulnerability that allowed authenticated non-administrative users to modify DHCP options on subnets belonging to unauthorized clusters.</description>
+    <title>CVE-2026-120147 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120147</link>
+    <guid isPermaLink="false">2f69790db62664f77960750605e964bd</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Use after free in the PostgreSQL dblink extension allows an object creator to execute arbitrary code as the operating system user running the database, via type conversion code that re-enters dblink and closes a connection whose results an outer dblink call is reading.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75869 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75869</link>
-    <guid isPermaLink="false">263db81b8b33629ab4f10ce36126dd3d</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Zohocorp ManageEngine DDI Central versions below 6301 is affected by an authorization bypass and PowerShell command injection vulnerability that allowed authenticated non-administrative users to target unauthorized Windows DHCP subnets and potentially execute arbitrary commands on managed Windows DHCP servers through crafted DNS suffix values.</description>
+    <title>CVE-2026-120148 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120148</link>
+    <guid isPermaLink="false">58079b515bd8c7e2320a48b66b755901</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | Type confusion in PostgreSQL extended statistics allows an object creator to execute arbitrary code as the operating system user running the database, via a statistics expression of an anonymous RECORD type whose backend-local type identifier denotes a different row type in another session.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107484 - NVD - CVSS Score v3.1: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107484</link>
-    <guid isPermaLink="false">62b8e9fdc06518054a5af042d4b3bb39</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.3 | An input and authorization validation vulnerability in Gaia Portal backend handlers could allow an authenticated, non-administrative user to perform privileged operations that should be restricted to administrators.</description>
+    <title>CVE-2026-120149 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120149</link>
+    <guid isPermaLink="false">f83714a122310461eca0b28f252cbfe1</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Heap-based buffer overflow in PostgreSQL foreign batch inserts allows a foreign server to execute arbitrary code, via reporting that it inserted more rows than the server supplied.  postgres_fdw can legitimately encounter this when a rule on the remote table expands an INSERT into additional rows.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-114466 - NVD - CVSS Score v3.1: 4.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114466</link>
-    <guid isPermaLink="false">9035ba42804b308e2f030abf39a287a2</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.4 | Arbitrary data can be read or written through git-fast-import(1) and git-fast-export(1) features not marked unsafe</description>
+    <title>CVE-2026-120150 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120150</link>
+    <guid isPermaLink="false">34a8deac834c629d8325adc48511a998</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Use after free in PostgreSQL expanded-record domain checks allows an object creator to execute arbitrary code as the operating system user running the database, via repeated checks of a domain over a composite type that cause reuse of a dangling memory-context pointer.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-114467 - NVD - CVSS Score v3.1: 3.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114467</link>
-    <guid isPermaLink="false">3bf8ef4cd237ab8c44fef48602503246</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 3.3 | Out-of-bounds write possible in Git when git-merge(1) used on tag with more than two GPG signatures</description>
+    <title>CVE-2026-120151 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120151</link>
+    <guid isPermaLink="false">8f737971e006b18621b04cbc8e4a8e3a</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL plpgsql record-field assignment allows an object creator to execute arbitrary code as the operating system user running the database, via a reentrant domain CHECK that changes a RECORD variable's row type while a value is being cast.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-114469 - NVD - CVSS Score v3.1: 4.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114469</link>
-    <guid isPermaLink="false">e09ab4e02d9e0d51b887b17df0a35252</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.4 | Out-of-bounds read can crash git-apply(1) when binary patch inflates to very large size</description>
+    <title>CVE-2026-120152 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120152</link>
+    <guid isPermaLink="false">96a72e7e5a46f038855032077508f2cf</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | Use after free in PostgreSQL pg_show_all_settings() allows a database user to retrieve memory contents, via loading a module while the function is scanning custom-variable placeholders that the module replaces and frees.  Within major versions 16-18, minor versions before PostgreSQL 18.7, 17.12, and 16.16 are affected.  Versions before PostgreSQL 16 are unaffected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-116835 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116835</link>
-    <guid isPermaLink="false">0139e79bc45454b99689c41b6b2dd619</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.7 | In affected versions of Octopus Server, insufficient validation of custom claims on OIDC accounts allowed a user with permission to edit accounts to cause Octopus Server to issue signed OIDC tokens that impersonate a different project. This could grant access to external systems, such as cloud providers or other Octopus instances, that trust that project's identity.</description>
+    <title>CVE-2026-120153 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120153</link>
+    <guid isPermaLink="false">c7ddf8c13e45b77e18363ed32f5a4863</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.2 | SQL injection in PostgreSQL extension-script substitutions allows an attacker with database-level CREATE privilege to execute arbitrary code as the bootstrap superuser, via a schema or owner name containing newlines or other special substrings.  This is similar to CVE-2023-39417, but it requires a non-bundled extension with a vulnerable script pattern.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120490 - NVD - CVSS Score v3.1: 3.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120490</link>
-    <guid isPermaLink="false">1470361b65e21655ced5580ef51ec986</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 3.8 | On Scalable Platforms, an administrator with permissions to edit and install the Access Control Policy and NAT rules can create a NAT rule that redirects traffic to the Gateway's Sync interface, bypassing the built-in Sync protection. This could allow the administrator to execute operating system commands and write files on the Gateway with superuser privileges.</description>
+    <title>CVE-2026-120154 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120154</link>
+    <guid isPermaLink="false">177508cd57376fa50428f713a54c632e</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | Improper protection in PostgreSQL INSERT ... ON CONFLICT allows an attacker having INSERT, UPDATE, and applicable SELECT privileges on the table to read every row despite row security policies, via iterated INSERT ... ON CONFLICT DO UPDATE.  Unlike CVE-2026-16237, this does not facilitate improper writes.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120869 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120869</link>
-    <guid isPermaLink="false">248d3ebfb9ffd95c938ac2c38efa64b6</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 9.3 | An unauthenticated attacker can bypass authentication controls to access restricted resources on the Citrix NetScaler Console appliance</description>
+    <title>CVE-2026-123790 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123790</link>
+    <guid isPermaLink="false">e12eee1f166842dfb3e5f468b74daa90</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS: não informado | ComfyUI-Easy-Use version 1.3.6 contains a path traversal vulnerability in the `save_preview()` handler for POST `/easyuse/save/{name}`. The handler checks the source directory before appending a user-supplied filename and allows the request to select the `custom_nodes` directory as a copy destination. An unauthenticated attacker who can reach the ComfyUI server can overwrite an installed custom node’s Python entry point with an uploaded file. When ComfyUI restarts and loads the modified node, the attacker’s code runs with the privileges of the ComfyUI process.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123039 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123039</link>
-    <guid isPermaLink="false">11343631f856adefb5f5a8eeeced2431</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.8 | The Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket (/tmp/dynamic_socket) without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.</description>
+    <title>CVE-2026-126996 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126996</link>
+    <guid isPermaLink="false">4d53694fea55850d0ca5cb09291d0b2e</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was determined in SakanaAI text-to-LoRA 0.0.1. Affected by this issue is the function get_tokenizer of the file src/hyper_llm_modulator/utils/model_loading.py of the component Checkpoint Loading. Executing a manipulation of the argument base_model_name_or_path can lead to path traversal. The attack may be launched remotely. The exploit has been publicly disclosed and may be utilized. The project was informed of the problem early through an issue report but has not responded yet.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124018 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124018</link>
-    <guid isPermaLink="false">94f587b5d025d40467b3d32d8200fa1f</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.3 | Gutenverse Form plugin for WordPress before 3.2.2 contains a CSV formula injection vulnerability that allows unauthenticated attackers to inject spreadsheet formula-trigger characters by submitting free-text field values to the public form-submit REST route, which sanitizes input with sanitize_text_field() without stripping characters such as =, +, @, or a leading minus. Attackers can store malicious formulas in entry-data post meta that are later exported unneutralized via fputcsv() or esc_html() in the CSV export functions, causing the formula to execute when an administrator opens the exported file, enabling data exfiltration to an attacker-controlled URL or command execution on the administrator's workstation.</description>
+    <title>CVE-2026-126997 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126997</link>
+    <guid isPermaLink="false">a743c406a20ae59199be5f394e0fca65</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was identified in JeecgBoot up to 3.9.6. This affects the function RestTemplate.exchange of the file org/jeecg/modules/airag/flow/c/a.class of the component flow-run Endpoint. The manipulation leads to server-side request forgery. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124627 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124627</link>
-    <guid isPermaLink="false">1a976f9ec83a46ebb0529e2b1f599bce</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.7 | In affected versions of Octopus Server, incorrect validation of the external identity linked to a newly registered user could result in that user receiving the LDAP-mapped team memberships and associated permissions of another user. This issue only affects instances with LDAP authentication enabled and LDAP groups mapped to Octopus teams.</description>
+    <title>CVE-2026-126998 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126998</link>
+    <guid isPermaLink="false">15ec3ee49fdaacd5006be03a5db87824</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security flaw has been discovered in JeecgBoot up to 3.9.5. This vulnerability affects the function OpenApiController.call of the file /openapi/call of the component Authentication Filter. The manipulation results in server-side request forgery. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124628 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124628</link>
-    <guid isPermaLink="false">c36c888c9678f439872a0aaa38e07eef</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 8.7 | In affected versions of Octopus Server, incorrect validation of changes a user made to their own LDAP identity allowed them to edit that identity even when an Administrator had disabled self-service identity editing. This could result in the user gaining membership of teams mapped to external LDAP groups they do not belong to, and potentially escalating to full administrative privileges if any of those teams are privileged.</description>
+    <title>CVE-2026-14661 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14661</link>
+    <guid isPermaLink="false">4b8ec724e324769f791e0106b64da649</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.1 | External control of file name in PostgreSQL dblink and CREATE/ALTER SUBSCRIPTION allows a user to achieve persistent denial of service, via appending invalid data to a chosen file.  Specifically, the &quot;sslkeylogfile&quot; connection parameter appends data, in NSS keylog format, to a file of the user's choosing.  This &quot;sslkeylogfile&quot; mechanism cannot add arbitrary bytes.  Within major version 18, minor versions before PostgreSQL 18.7 are affected.  Versions before PostgreSQL 18 are also affected if libpq version 18 or later is installed and in use by the server.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126995 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126995</link>
-    <guid isPermaLink="false">1cd55c994ac96da19d6ca806e26829a8</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was found in tjake Jlama up to 0.8.4/0.9.0-beta. Affected by this vulnerability is the function SafeTensorIndex.loadWeights of the file jlama-core/src/main/java/com/github/tjake/jlama/safetensors/SafeTensorIndex.java. Performing a manipulation of the argument weight_map results in path traversal. The attack may be initiated remotely. The exploit has been made public and could be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <title>CVE-2026-16237 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16237</link>
+    <guid isPermaLink="false">1b0ae4078ffdaf692d0623f5d588c847</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 5.4 | Improper protection in PostgreSQL INSERT ... ON CONFLICT on auto-updatable views allows an attacker having INSERT and UPDATE privileges on the view to read and modify every row in the view's base table, via iterated INSERT ... ON CONFLICT DO UPDATE.  This bypasses the view's WHERE condition, whether or not the view is a security_barrier view.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-127058 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127058</link>
-    <guid isPermaLink="false">5960fc8a958de841dbadf8f1f487b2fa</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 6.9 | WonderCMS before 3.7.0 contains an unverified password change vulnerability in the saveAction functionality that allows an authenticated attacker to change the administrator password without re-authentication. Attackers can exploit this missing re-verification check during password changes to bypass re-authentication controls and maintain or escalate unauthorized access to the administrative account.</description>
+    <title>CVE-2026-16240 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16240</link>
+    <guid isPermaLink="false">875d0892b70e47772962622e95aad45f</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 3.7 | Use of externally-controlled format string in PostgreSQL pg_basebackup allows an attacker having already compromised a server to achieve disclosure from pg_basebackup memory, via backup manifest bytes.  The vulnerability does not return the improperly-read bytes back to the attacker's server, so a successful attack would need separate implementation-specific secrets for that.  Integrity impact is unlikely; in particular, the applicable formatter does not support %n.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-71367 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71367</link>
-    <guid isPermaLink="false">9d8c59c320ecc95a5824fcd745d43a0b</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 4.3 | An incorrect authorization vulnerability was found in AWX's WebSocket consumer. The consumer_access() function only enforces access controls for object-level event groups (job_events, workflow_events, ad_hoc_command_events) but does not restrict subscriptions to global broadcast groups such as 'jobs-status_changed'. When an authenticated user subscribes to a global broadcast group, the server accepts the subscription without verifying that the user has permission to view the associated resources. In multi-organization deployments, this allows a low-privilege user in one organization to receive real-time job status metadata from all organizations, including job IDs, status transitions, timestamps, and infrastructure topology details such as instance group names, bypassing the organization isolation enforced by the REST API.</description>
+    <title>CVE-2026-18447 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18447</link>
+    <guid isPermaLink="false">b4d547d0f3384c61853ad32a249d46f2</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL SQL-language functions allows an object creator to execute arbitrary code as the operating system user running the database, via an output parameter of type &quot;any&quot;.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-92083 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92083</link>
-    <guid isPermaLink="false">6760c5a5f2d6d250ab2f241b39c05cc6</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.8 | Missing Authorization vulnerability in TÜBİTAK BİLGEM Yazılım Teknolojileri Araştırma Enstitüsü pardus-image-writer allows Privilege Escalation.
-
-This issue affects pardus-image-writer: before 0.9.0.</description>
+    <title>CVE-2026-6460 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-6460</link>
+    <guid isPermaLink="false">a8dda48863c2c4e17a406609d6837250</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 8.8 | Type confusion in PostgreSQL allows an object creator to execute arbitrary code as the operating system user running the database, via ALTER ... SET DATA TYPE primarily.  Other DDL attack routes exist, such as &quot;ALTER TABLE ... ADD COLUMN; ROLLBACK; ALTER TABLE ... ADD COLUMN&quot;.  The system had inadequate tracking of typed values, and values were not self-identifying.  Stale values could appear in data dictionary entries, PL/pgSQL variables, and many other parts of the system.  PostgreSQL Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97845 - NVD - CVSS Score v4.0: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97845</link>
-    <guid isPermaLink="false">49142f52d2446df7fb9d20370bacaa2d</guid>
-    <description>Thursday 12 November 2026 | NVD | CVSS Score v4.0: 4.3 | An uncontrolled recursion vulnerability has been discovered in the Qt QXmlSimpleReader XML parsing functionality of the Qt 5 Core Compatibility APIs module (Qt 6) and the Qt XML module (Qt 5).</description>
+    <title>CVE-2026-6467 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-6467</link>
+    <guid isPermaLink="false">5fbf8c452d732f0bf4b6cf012f2c4235</guid>
+    <description>Thursday 12 November 2026 | NVD | CVSS Score v3.1: 7.2 | Uncontrolled search path element in PostgreSQL CREATE EXTENSION allows an attacker with database-level CREATE privilege to execute arbitrary code as the bootstrap superuser, via ALTER SCHEMA ... RENAME or CREATE EXTENSION ... SCHEMA &quot;$user&quot;.  ALTER EXTENSION was also affected.  A trusted-extension script located the wrong object and executed arbitrary SQL of the attacker's choice.  Versions before PostgreSQL 18.7, 17.12, 16.16, 15.20, and 14.25 are affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
   </item>
