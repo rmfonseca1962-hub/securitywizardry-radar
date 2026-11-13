@@ -5,103 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 03:00:48 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-126363 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126363</link>
-    <guid isPermaLink="false">227d3e67348ee97030e2611919485df2</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.3 | Astro is a web framework for content-driven websites. From 0.2.0 until 7.1.2, the @astrojs/solid-js renderer inserted a named slot into the quoted name attribute of an astro-slot wrapper without HTML escaping. A request-controlled slot name containing a quote could terminate the attribute and inject active HTML. Exploitation required a hydrated Solid component using a client:* directive and dynamic access to the attacker-chosen slot property; a component that did not render that slot emitted only escaped fallback content. This issue is fixed in version 7.1.2.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126364 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126364</link>
-    <guid isPermaLink="false">73d234ffa6c9f5e468597951208091b0</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.3 | Astro is a web framework for content-driven websites. From 5.14.3 until 7.4.7, Astro's /_image endpoint compared the requested local-image path with the build output directory without preserving case on case-sensitive filesystems. A sibling directory whose path differed from the output directory only by letter case could therefore pass the containment check, allowing an unauthenticated requester to read image files accepted by the image service from outside the output directory. Exploitation required on-demand rendering with the @astrojs/node adapter, a case-sensitive filesystem, and a preexisting case-variant sibling directory; ordinary traversal to unrelated paths was already rejected. This issue is fixed in Astro version 7.4.7.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126365 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126365</link>
-    <guid isPermaLink="false">aa74b0365dfcd89026c5e725d6ba12c7</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.4 | Astro is a web framework for content-driven websites. Prior to @astrojs/prism 4.1.2, and from @astrojs/markdoc 0.3.0 until 2.1.2, runHighlighterWithAstro() returned code unchanged when Prism had no grammar for the requested language, and callers inserted that result as raw HTML. A code block labeled with an unsupported language could therefore render embedded HTML and script instead of displaying it as text. The Prism component was affected when applications supplied untrusted code with an unsupported or attacker-controlled lang, and the @astrojs/markdoc prism() extension was affected for less-trusted content authors even when Markdoc's ordinary HTML rendering was disabled. This issue is fixed in @astrojs/prism 4.1.2 and @astrojs/markdoc 2.1.2.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126366 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126366</link>
-    <guid isPermaLink="false">3a8d709edca42aeb29ab490a8bd10a48</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 7.5 | MessagePack for Ruby is an implementation of the MessagePack binary serialization format. Prior to 1.8.7, the Java-platform msgpack gem for JRuby allocated arrays and byte buffers directly from attacker-controlled array32, str32, and bin32 declared sizes before confirming that corresponding elements or bytes were available. A short MessagePack header could therefore trigger a very large allocation or sustained heap growth when an application decoded untrusted input through MessagePack.unpack or MessagePack::Unpacker, potentially exhausting the shared JVM heap. map32 and declared counts at or above 2^31 did not use the affected allocation behavior. This issue is fixed in version 1.8.7.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126367 - NVD - CVSS Score v3.1: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126367</link>
-    <guid isPermaLink="false">60ffdc92c9b11de5645c63ec2ff551eb</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 4.8 | @grpc/grpc-js implements the core functionality of gRPC purely in JavaScript, without a C++ addon. Before 1.13.2, and from 1.14.0 through 1.14.1, the @grpc/grpc-js-xds SafeRegexValueMatcher and PathSafeRegexValueMatcher add start and end anchors without grouping a supplied top-level alternation. An expression intended to match one of several complete values can therefore match a prefix, substring, or suffix. The affected matchers are used for route selection, xDS credential identity matching, and RBAC URL path, principal name, server name, and header rules. An ALLOW policy using an alternation can consequently accept a method, certificate identity, or header value outside the intended set, while a DENY policy becomes broader rather than permissive. This issue is fixed in versions 1.13.2 and 1.14.2.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126792 - NVD - CVSS Score v4.0: 5.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126792</link>
-    <guid isPermaLink="false">3319ca988d24f81e0f619ff20da934eb</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.7 | A memory-safety flaw in the key-management request-building component of the library can lead to an out-of-bounds write on the heap. A fixed-size output buffer is used under an assumption about cryptographic key size that is never validated, so when the library is embedded by a caller that supplies its own cryptographic callback implementation, data larger than the buffer can be written past its end. Exploitation requires the ability to control the embedding application's in-process key-management provider configuration, a high-privilege position. The demonstrated impact is memory corruption resulting in abnormal termination of the client process.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126839 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126839</link>
-    <guid isPermaLink="false">f6ec21ed49c9e4bf8e3b54d16e1ac2d1</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.3 | A deserialization type-restriction control in the BSON serialization component can be bypassed because the check used to recognize a class of compiler-generated types relies on an overly permissive heuristic rather than a precise identification. An unauthorized party able to supply BSON content that an application later deserializes into a loosely typed member can cause types outside the intended allow-list to be constructed and populated with unauthorized party-supplied values inside the consuming application. This can lead to unexpected object state and errors in downstream application logic. No elevated privileges beyond the ability to place unauthorized party-influenced content in the deserialization path are required.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126982 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126982</link>
-    <guid isPermaLink="false">4597f0ed8cff81c895213631183da7b2</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.7 | A type allow-list bypass in the BSON serialization library of the MongoDB C# Driver allows a type-restriction check to be circumvented when polymorphic data is deserialized into loosely typed members. An unauthorized party who can supply or plant BSON/JSON data that the application later deserializes can cause the application process to instantiate .NET types outside the intended allow-list and populate them with unauthorized party-controlled values. In applications that contain a suitable gadget type, this can lead to arbitrary code execution in the context of the application, with corresponding loss of confidentiality, integrity, and availability. No special privileges beyond the ability to introduce data the application reads are required.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127212 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127212</link>
-    <guid isPermaLink="false">226cad275beaa49a1035fbabe8fa891a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.3 | Dokploy before 0.31.1 contains a missing ownership check vulnerability in the readAppMonitoring tRPC procedure that allows authenticated attackers to access container metrics belonging to other organizations by supplying an arbitrary appName. Attackers can query getApplicationStats with any application name, including the fixed &quot;dokploy&quot; control-plane service name, to read CPU, memory, network I/O, and block I/O metrics for containers they do not own on self-hosted multi-tenant instances.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127273 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127273</link>
-    <guid isPermaLink="false">c776d0acd15bc668f1764fa47f2fcbcf</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability has been found in Linksys EA8100 1.0.3.216940. This affects the function GetWANStatus/GetWANStatus3/IsAdminPasswordDefault of the component JNAP API. The manipulation leads to missing authentication. The attack is possible to be carried out remotely. The exploit has been disclosed to the public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127274 - NVD - CVSS Score v4.0: 2.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127274</link>
-    <guid isPermaLink="false">6a0eefa4d21db69f6aedd0f6622c2d4d</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.9 | A vulnerability was found in Linksys EA8100 1.0.3.216940. This vulnerability affects unknown code of the file /jnap/core/CheckAdminPassword. The manipulation results in improper restriction of excessive authentication attempts. The attack may be performed from remote. The attack requires a high level of complexity. It is stated that the exploitability is difficult. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127275 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127275</link>
-    <guid isPermaLink="false">52cb5653d64a875fa52cc205bb69e161</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | A vulnerability was determined in Linksys EA8100 1.0.3.216940. This issue affects the function SetRemoteSetting/SetUnsecuredWiFiWarning of the file ui_server.lua of the component JNAP API. This manipulation of the argument isEnabled/enabled causes missing authentication. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Fri, 13 Nov 2026 05:01:36 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-128065 - NVD - CVSS Score v4.0: 6.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128065</link>
@@ -154,7 +58,7 @@
     <title>CVE-2026-107407 - NVD - CVSS Score v4.0: 9.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107407</link>
     <guid isPermaLink="false">4d37fc0ce9fbb98e5b0652280b618475</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory overflow in SMPP traffic can lead to unpredictable or erroneous behavior or Denial of Service in NetScaler ADC and NetScaler Gateway.</description>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory overflow in SMPP traffic can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
@@ -162,7 +66,7 @@
     <title>CVE-2026-107408 - NVD - CVSS Score v4.0: 9.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107408</link>
     <guid isPermaLink="false">f21706c68b0b8adab67ba8872188ec3c</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory corruption in DNS / DNS-over-HTTPS (DoH) can lead to unpredictable or erroneous behavior or Denial of Service in NetScaler ADC and NetScaler Gateway.</description>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory corruption in DNS / DNS-over-HTTPS (DoH) can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
@@ -170,7 +74,7 @@
     <title>CVE-2026-107409 - NVD - CVSS Score v4.0: 9.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107409</link>
     <guid isPermaLink="false">34734c46d0678547d8d420f92bfa58e3</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory corruption in DNS-over-HTTPS (DoH) can lead to unpredictable or erroneous behavior or a Denial of Service in NetScaler ADC and NetScaler Gateway.</description>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory corruption in DNS-over-HTTPS (DoH) can lead to unpredictable or erroneous behavior or a Denial of Service in Citrix NetScaler</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
@@ -178,7 +82,7 @@
     <title>CVE-2026-107410 - NVD - CVSS Score v4.0: 9.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107410</link>
     <guid isPermaLink="false">4c4df9517806c073599b5a1025a745db</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory overflow in NetScaler Push can lead to unpredictable or erroneous behavior or Denial of Service in NetScaler ADC and NetScaler Gateway.</description>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory overflow in NetScaler Push can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
@@ -379,6 +283,110 @@ This vulnerability was reported independently twice: by NVIDIA Project Vanessa o
 The overflow is only present in a non-default configuration: the legacy Mynewt split-image feature must be compiled (split_go()/split_image_check(), i.e. neither MCUBOOT_DIRECT_XIP nor MCUBOOT_RAM_LOAD), the digest must be larger than 32 bytes (MCUBOOT_SHA512 or MCUBOOT_SIGN_EC384), and MCUBOOT_SIGN_PURE must be off. split_go() is a public API with no caller inside MCUboot; it is invoked from a Mynewt application. In the default SHA-256 build there is no overflow.
 
 The over-written bytes are the one-way digest of the loader image and the overflow length is fixed at build time, so the contents are not meaningfully attacker-controlled and the size is not attacker-chosen. The realistic impact is bounded, uncontrolled corruption of the bootloader's stack on the split-boot path, manifesting as instability or failed boot in the affected configuration rather than reliable code execution. The fix is to size loader_hash to IMAGE_HASH_SIZE and pass IMAGE_HASH_SIZE as the matching seed length.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107411 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107411</link>
+    <guid isPermaLink="false">35f8bea50a816e92dbe29f421ef7e9ad</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in RTSP ALG can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107412 - NVD - CVSS Score v4.0: 9.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107412</link>
+    <guid isPermaLink="false">2a1db443e1ad043b7a58233c2d0888f4</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.5 | Multiple Memory overflow vulnerabilities can lead to unpredictable or erroneous behavior and Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107413 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107413</link>
+    <guid isPermaLink="false">74fb835fcfed4ca20d2d38027d03c631</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in SAML authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107414 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107414</link>
+    <guid isPermaLink="false">a30a9ece1d03a4f09e44ac1500a05600</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in WebAuth authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127285 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127285</link>
+    <guid isPermaLink="false">dda9220b696ef65f969fbda30e748672</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.1 | A flaw has been found in Cairo-dock Glx-Dock 3.4.0. The affected element is an unknown function of the file bg_forum.php of the component href Attribute Handler. This manipulation of the argument f causes cross site scripting. The attack may be initiated remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127286 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127286</link>
+    <guid isPermaLink="false">87953c516f408d61887a34dffeb3ab7a</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was identified in Zackriya-Solutions Meetily up to 0.4.1. Affected is an unknown function of the file backend/app/main.py. The manipulation leads to missing authentication. The attack is possible to be carried out remotely. The exploit is publicly available and might be used. The legacy backend was not removed yet. Vulnerable code is still present on main. The vendor explains: &quot;[W]e are moving towards a single unified application using the tauri framework, and we deprecated the client-server architecture of this application.&quot;</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-49747 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49747</link>
+    <guid isPermaLink="false">43c0be69561b242f039c6ee744df5d3b</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS: não informado | Software installed and run as a non-privileged user may conduct GPU system calls to trigger an integer overflow and allow OOB writes to GPU buffers.
+
+
+
+The integer overflow caused when mapping a GPU buffer &gt;4GB causes corruption of array length, and can lead to kernel panics or out of bounds access.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-74911 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-74911</link>
+    <guid isPermaLink="false">f2ebc07e5d904620a8289b0f06893e55</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS: não informado | Software installed and run as a non-privileged user may conduct improper GPU system calls to the execution of an error path that triggers an OOB read &amp; write.
+
+
+
+An error can be triggered which causes the index of the array element to be cleaned up by the error path would be outside of the array bounds.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107415 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107415</link>
+    <guid isPermaLink="false">0b71d534f2c032b40258d84959c83127</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory overflow in Email OTP authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111340 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111340</link>
+    <guid isPermaLink="false">27cd4de2907c2337d9d6b8bd1e9dc8f1</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in KBA (knowledge-based authentication) can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111341 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111341</link>
+    <guid isPermaLink="false">fa9d26764b2ef5ce3c349b3a177bf93b</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in client-certificate authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111342 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111342</link>
+    <guid isPermaLink="false">482eb7a8ab63c8a46837dada399cbd7a</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in LDAP authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
