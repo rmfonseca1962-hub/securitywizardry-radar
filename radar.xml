@@ -5,387 +5,345 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 08:01:38 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 10:01:52 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-127916 - NVD - CVSS Score v3.1: 2.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127916</link>
-    <guid isPermaLink="false">31818d595e9845238234e5011eaae319</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 2.9 | bootutil_img_hash() computes the image digest over ih_hdr_size + ih_img_size + ih_protect_tlv_size bytes, all three taken from the candidate image's header, and reads that span out of the slot without checking that it fits in the flash area. The three sizes are also summed without an overflow check. Nothing earlier on the validation path bounds the whole span either: bootutil_img_validate() compares the image size against bootutil_max_image_size() only after the hash has been computed.
-
-The callers bound part of the span, or none of it:
-
-On the swap and overwrite upgrade path, boot_validate_slot() first runs the image header check (boot_is_header_valid(), later boot_check_header_valid()). Before MCUboot 2.2.0 that check covered only ih_hdr_size + ih_img_size, so for every image the protected-TLV area (ih_protect_tlv_size, a uint16_t, up to 65535 bytes) was hashed without being bounded. From 2.2.0 the check includes ih_protect_tlv_size, except for a compressed image in the secondary slot when MCUBOOT_DECOMPRESS_IMAGES (CONFIG_BOOT_DECOMPRESSION) is enabled, which leaves the same gap of up to 64 KB.
-The serial recovery image-list and image-state handlers (bs_list() and bs_set() in boot/boot_serial/src/boot_serial.c) and Zephyr's single-slot and firmware loaders (boot/zephyr/single_loader.c, boot/zephyr/firmware_loader.c) call bootutil_img_validate() with no header check at all, so on those paths ih_img_size is unbounded as well.
-
-The image is hashed before its signature is checked, so anyone who can place an image in a slot (an OTA or SMP update delivered through the application, or serial recovery) reaches this read before authentication.
-
-Whether a malformed header produces an actual read beyond the area depends on the flash backend:
-
-Backends whose flash_area_read() bounds-checks the request (Zephyr, Espressif, NuttX, Mbed) return an error once the chunked read crosses the end of the area. Validation fails and the image is rejected, with no over-read.
-With MCUBOOT_HASH_STORAGE_DIRECTLY (Zephyr CONFIG_BOOT_IMG_HASH_DIRECTLY_ON_STORAGE, available from 2.2.0, not enabled by default) the span is hashed through a single direct pointer into memory-mapped flash, with no bounds check.
-The Cypress PSoC6 port's flash_area_read() (boot/cypress/cy_flash_pal/cy_flash_map.c, from 1.6.0) does not bound the read: its assert()s compare against the area's absolute offset rather than its size, and it copies with memcpy().
-
-The bytes read past the area feed only the digest, which is compared internally and never returned, so nothing is disclosed. The realistic effect is a read fault during image validation: up to 64 KB past the slot on the upgrade path, and potentially much further on the paths that skip the header check. Where validation is repeated at every boot (a pending upgrade, or the single-slot loader checking its image), the fault can recur on each reset and keep the device from booting.
-
-The fix makes bootutil_img_hash() add the three sizes with boot_u32_safe_add() and reject an image whose span, including the sector offset used in swap-using-offset mode, does not fit in the flash area, before any of it is hashed. Because the bound is applied where the bytes are read, it covers every caller.</description>
+    <title>CVE-2026-111334 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111334</link>
+    <guid isPermaLink="false">acb07a1709a72b07ea77b5403b693f87</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory overflow in Endpoint Analysis (EPA/EPAS) can lead to unpredictable or erroneous behavior or a Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-127928 - NVD - CVSS Score v3.1: 2.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127928</link>
-    <guid isPermaLink="false">9dfc9865cd26fef7bde1c31e2872ecfd</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 2.0 | In MCUboot's serial-recovery encrypted-image support (boot/boot_serial/src/boot_serial_encryption.c), decrypt_image_inplace() and boot_image_validate_encrypted() each keep a stack-local struct boot_status. boot_enc_load() writes the plaintext per-image AES key into its enckey[] field. Neither function cleared this structure before returning. In addition, a decrypt failure inside the per-sector loop of decrypt_image_inplace() returned early and skipped the total_out: cleanup, which left the expanded AES key context (enc_data) on the stack as well. The error paths of boot_image_validate_encrypted() similarly skipped boot_enc_zeroize().
-
-The affected code is built when encrypted images (MCUBOOT_ENC_IMAGES, Zephyr CONFIG_BOOT_ENCRYPT_IMAGE) are combined with serial recovery. It runs when an encrypted image is uploaded to the primary slot over the recovery protocol, and when the image list or state is queried while an encrypted image is in the secondary slot. After these functions return, the image's AES content key remains in dead stack memory. An attacker who can later read device RAM, for example through a debug port or retained RAM, can recover it.
-
-This weakens the confidentiality of image-encryption keys within the bootloader trust boundary. A recovered key exposes the plaintext of the encrypted firmware image it protects. The device's long-term private decryption key is not exposed. No remote or recovery-protocol channel that returns this memory is known, so exploitation requires a separate memory-read capability.</description>
+    <title>CVE-2026-111335 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111335</link>
+    <guid isPermaLink="false">4a0886f25e8a8dcb9be44c951a6f65bf</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | Improper request handling can lead to a denial-of-service / reboot-loop condition in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128091 - NVD - CVSS Score v3.1: 2.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128091</link>
-    <guid isPermaLink="false">e96632c4b36820dc88d1ffba059b77e9</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 2.0 | When MCUboot is built with the TinyCrypt crypto backend (MCUBOOT_USE_TINYCRYPT), bootutil_aes_ctr_drop() in boot/bootutil/include/bootutil/crypto/aes_ctr_tinycrypt.h was an empty stub. The AES-CTR context for this backend is the fully expanded AES-128 key schedule (struct tc_aes_key_sched_struct). Generic code relies on this hook to release and clear key state, so with TinyCrypt nothing was cleared. The mbedTLS and PSA backends do free or destroy their key state here.
-
-As a result, boot_state_clear(), which boot_go() calls before handing off to the application, left the image's AES content-encryption key schedule in the static boot_data state. This is the case after an encrypted upgrade in single-image builds, where boot_enc_zeroize() is not called. boot_decrypt_key() likewise left the ECIES-derived key-encryption key schedule on the stack. The affected build uses MCUBOOT_ENC_IMAGES with TinyCrypt, which is the default ECDSA and Ed25519 backend in the Zephyr port.
-
-The first AES-128 round key equals the cipher key, so anyone who can read the leftover bootloader RAM after boot can recover the image content key and decrypt that encrypted image. That includes a physical attacker with debug or RAM access, or code later running on the device. This weakens image-encryption key confidentiality (and so the confidentiality of the encrypted image's plaintext). The device's long-term private decryption key is not exposed, and image authenticity is not affected. The fix wipes the context with bootutil_wipe_memory().</description>
+    <title>CVE-2026-111336 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111336</link>
+    <guid isPermaLink="false">4b43c49ffed5f21de5011074dabbfd3d</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.3 | Memory overflow in HTTP/2 handling can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128321 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128321</link>
-    <guid isPermaLink="false">7fc40ff5bd19056a64222b41172fabae</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | Tight JPEG decoding in TightVNC and UltraVNC viewers contains a heap-based buffer overflow because an attacker-controlled framebuffer rectangle width is not validated against a fixed-size decoding buffer. A malicious VNC server can cause an out-of-bounds heap write when a user connects, resulting in application crash and potentially other memory-corruption impacts.</description>
+    <title>CVE-2026-111337 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111337</link>
+    <guid isPermaLink="false">c9c570b0ec86382db6e4f1bc9a9e8506</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in Base64 decoding in advanced policy expressions leading to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-15465 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15465</link>
-    <guid isPermaLink="false">1c29e13506eef1d3ab7de1569d2c2982</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | Software installed and run as a non-privileged user may conduct improper GPU system calls through the DDK kernel module interface. Under unsupported use of the interface, a use-after-free condition may occur that can lead to kernel memory corruption, platform instability, or system reboot.
-
-
-
-The weakness occurs when software references memory after it has been released. Accessing memory after free may result in corruption of valid data structures, unexpected program behaviour, process crashes, or execution of unintended operations.</description>
+    <title>CVE-2026-111338 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111338</link>
+    <guid isPermaLink="false">a54e40b501570566dc8529650c2d0662</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | Sensitive authentication material written to a log file in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-16659 - NVD - CVSS Score v3.1: 4.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16659</link>
-    <guid isPermaLink="false">68fab9775b438d6d06bcdecbe87fdae6</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 4.0 | MCUboot's serial-recovery image-upload handler bs_upload() in boot/boot_serial/src/boot_serial.c declares const struct flash_area *fap = NULL and assigns it only via flash_area_open() part-way through the function. Two early validation failures (goto out_invalid_data) — a CBOR map that fails to decode, or an upload packet missing the off/data members — branch past the open while fap is still NULL, then fall into the shared epilogue. In MCUBOOT_ENC_IMAGES builds that epilogue unconditionally calls boot_handle_enc_fw(fap), which reaches boot_image_load_header() and flash_area_read() and dereferences the NULL flash_area.
-
-The defect is reachable pre-authentication: the trigger is the very first serial-recovery upload command carrying a malformed payload. The guarding conditions are default-true on a fresh recovery session — img_num, curr_off and img_size are zero-initialized statics, so curr_off == img_size and the primary-slot test both hold. It requires a non-default build: encrypted images (MCUBOOT_ENC_IMAGES / Zephyr CONFIG_BOOT_ENCRYPT_IMAGE) together with an active serial-recovery transport, on the Zephyr or Mynewt port (the two that build both boot/boot_serial/src/boot_serial.c and boot_serial_encryption.c with MCUBOOT_ENC_IMAGES).
-
-The impact is a transient denial of service of the bootloader during recovery. fap is a hard NULL rather than an attacker-controlled value, so there is no memory-corruption or information-leak primitive and image authentication is unaffected. Whether the dereference faults is platform-dependent — on targets where address 0x0 is mapped readable flash the read merely returns an error and execution continues, while targets that trap NULL (MPU / null-pointer-exception detection) take a hard fault. Because serial recovery is unauthenticated by design and already permits the console attacker to write the secondary slot, the added capability is only a low-value transient crash.
-
-The related unconditional flash_area_close(fap) call in the same epilogue is a safe no-op on the ports that reach it, so it does not contribute to the dereference.
-
-The affected ports are the Zephyr port — boot/zephyr/CMakeLists.txt compiles boot_serial.c under CONFIG_MCUBOOT_SERIAL and boot_serial_encryption.c under CONFIG_BOOT_ENCRYPT_IMAGE — and the Mynewt port, whose mcuboot_config.h defines MCUBOOT_SERIAL unconditionally and MCUBOOT_ENC_IMAGES under any BOOTUTIL_ENCRYPT_ syscfg, with boot/boot_serial/pkg.yml declaring no explicit source list so the whole directory is built. The Espressif port is not affected**: it compiles boot_serial.c but not boot_serial_encryption.c, and defines no MCUBOOT_ENC_IMAGES, so the #ifdef MCUBOOT_ENC_IMAGES block containing the call is preprocessed away. The NuttX, Cypress and Mbed ports do not build boot_serial.c at all.</description>
+    <title>CVE-2026-111339 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111339</link>
+    <guid isPermaLink="false">76990d488ce61517db849d5565b7063f</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | Memory overflow in Application Firewall data decompression/inspection can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-16662 - NVD - CVSS Score v3.1: 2.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16662</link>
-    <guid isPermaLink="false">80cac72cb83433a742641f350b488690</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 2.4 | boot_save_boot_status() in boot/bootutil/src/boot_record.c reads the image's EXPECTED_HASH_TLV into a stack buffer image_hash[IMAGE_HASH_SIZE] that is never zero-initialised. The TLV handler validates only the upper bound (len &gt; sizeof(image_hash)) and then reads exactly len bytes, so a TLV shorter than IMAGE_HASH_SIZE leaves the tail of image_hash holding stale stack content. The subsequent copy into the boot record, memcpy(buf + offset, image_hash, sizeof(image_hash)), uses the fixed buffer size rather than len, so up to IMAGE_HASH_SIZE - 1 bytes of uninitialised bootloader stack are written into the measured-boot record.
+    <title>CVE-2026-116432 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116432</link>
+    <guid isPermaLink="false">c3e063e7ce2c3a72f6b95274c768d024</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 4.3 | Dell PowerScale InsightIQ, versions 6.3.0 through 6.4.0, contains an Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120860 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120860</link>
+    <guid isPermaLink="false">81d8c50335039c95512ff7a5bbce44c0</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in protocol load-balancing traffic handling (Diameter, SIP-over-TCP, MQTT, RADIUS) can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120861 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120861</link>
+    <guid isPermaLink="false">a2bc629091294e46e9c5bce432a4ef73</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow / improper handling in GSLB and geolocation (MEP, static-proximity, config-sync) can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120862 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120862</link>
+    <guid isPermaLink="false">701ee5cc00db30cde2bc23b79f658d6d</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in SIP ALG (LSN) and DNS answer-section logging datapaths can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120863 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120863</link>
+    <guid isPermaLink="false">c4ec3e0088c0bae5fdda4c994f357627</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in the management plane can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128637 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128637</link>
+    <guid isPermaLink="false">1415c822ae403e42ce59db5282ab1fbe</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.1 | The MISP Modules website component contains an open redirect vulnerability in its login endpoint. The /login route accepted a user-supplied next query parameter and passed it directly to Flask's redirect() function without validating the destination. An attacker could craft a URL such as https://victim-host/login?next=https://attacker.example/phish and deliver it to a user (e.g., via email or a lookalike page). After the user successfully authenticated, the application issued a 302 redirect to the attacker-controlled external URL. This enables phishing attacks where a user, believing they are still on the legitimate MISP Modules site, may enter additional credentials or sensitive information on the attacker's page. It can also be used to obscure the true destination of a link, bypassing user trust in the legitimate domain. The vulnerability requires the victim to interact with the crafted URL and complete a login, but no prior authentication or special configuration is needed on the attacker's side. The affected component is the website sub-project of misp-modules, specifically the account blueprint in website/app/account/account.py. No version boundaries are specified in the patch metadata.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-59074 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59074</link>
+    <guid isPermaLink="false">fa9353ed1c2b10352dc1ae138bc78188</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Edito CMS is vulnerable to improper cryptographic signature verification in the JWT refresh logic. An authenticated low-privilege user can submit self-crafted​ ​JWT​ containing​ ​an existing user​ ​identifier and, due to the lack of signature validation,​​  obtain​ ​a ​​valid,​​ fully-signed​​ session ​​token​​ for​​ any ​​account ​​in​ ​the​ ​system. This allows the attacker to impersonate any user, including administrators.
+This issue was fixed in version 5.10.2607.  Hotfixes for older versions (5.8) have also been released.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-59075 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59075</link>
+    <guid isPermaLink="false">3a0e1a8516b5afd1488663d2951f3a4c</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.1 | Edito CMS is vulnerable to Dynamic LINQ injection. Due to improper input validation, an authenticated attacker can inject conditional expressions into the sort parameter of paginated administrative endpoints. Analyzing the returned result order allows the attacker to extract value of any field character by character, leading to potential exposure of sensitive data.
 
-The defect is reachable only under MCUBOOT_MEASURED_BOOT, and only when the image reaching boot_save_boot_status() was not hash-validated on that boot. bootutil_img_validate() rejects a hash TLV whose length is not exactly sizeof(hash) (boot/bootutil/src/image_validate.c:345), and primary-slot validation is on by default (Zephyr's CONFIG_BOOT_VALIDATE_SLOT0 defaults to y), so in a default build the malformed image never reaches this code. The direct-XIP and RAM-load strategies in boot/bootutil/src/loader.c validate the selected slot unconditionally and are not affected. The short TLV survives only where the integrator has turned primary-slot validation off: the swap and overwrite loader built without MCUBOOT_VALIDATE_PRIMARY_SLOT, which checks only the image magic before calling boot_add_shared_data(), and the Zephyr single-slot loader (boot/zephyr/single_loader.c) built without it, including the MCUBOOT_VALIDATE_PRIMARY_SLOT_ONCE variant, which skips validation once the trailer records an earlier successful one. It is also reachable through a time-of-check/time-of-use change to tamperable external flash between validation and the boot-record read. Placing the crafted image requires physical or flash-write access to the device; in a single-slot build with serial recovery enabled, the serial-recovery upload writes the primary slot directly and can place it as well.
 
-In these configurations the boot record's measurement is already not trustworthy: with validation off, the hash copied into the record is the image's own unverified EXPECTED_HASH_TLV, which the attacker chooses. The defect therefore does not weaken attestation integrity any further. What it adds is a path for bootloader memory to leave the device: up to 63 bytes (IMAGE_HASH_SIZE - 1) of uninitialised bootloader stack are embedded in the measurement field that a downstream attestation service sends to a remote verifier. In the configurations analysed the residue is bootloader internal state (TLV offsets and lengths, flash addresses, loop state), not key material, but what occupies that stack region depends on configuration and on which code ran before boot_save_boot_status(). It is reported as a low-severity, defense-in-depth disclosure with no integrity or availability impact.
+This issue was fixed in version 5.10.2607.  Hotfixes for older versions (5.8) have also been released.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-59076 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59076</link>
+    <guid isPermaLink="false">1d517e787db6a547e684b1cb98a485db</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.1 | Edito CMS is vulnerable to Stored Cross-Site Scripting (XSS). Due to improper input validation, an authenticated attacker can inject malicious scripts into givenName and surname parameters via the /api/auth/profile endpoint. When an administrator visits the admin changelog logs, the injected script is automatically executed, in his browser.
 
-This is distinct from the already-fixed record_len integer underflow in the same routine (GHSA-8hrv-4cp5-4rg3). The fix rejects any EXPECTED_HASH_TLV whose length is not exactly IMAGE_HASH_SIZE.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-16664 - NVD - CVSS Score v3.1: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16664</link>
-    <guid isPermaLink="false">3c2f194325d604aaeb895488db39f38a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.1 | MCUboot's Zephyr serial-recovery upload handler bs_upload() in boot/boot_serial/src/boot_serial.c decodes the host-supplied image field of an MCUmgr image-upload request into img_num (a full 32-bit value) and latches it on the off == 0 packet without any range check. It then passes img_num straight to flash_area_id_from_multi_image_slot(img_num, 0), which on the Zephyr port resolves to __flash_area_ids_for_slot() in boot/zephyr/include/sysflash/sysflash.h and indexes the static const int all_slots[] table as all_slots[img_num  2]. That table holds only MCUBOOT_IMAGE_NUMBER  2 entries, so any img_num &gt;= MCUBOOT_IMAGE_NUMBER is an out-of-bounds read.
 
-The path is reachable by anyone with access to the serial / SMP recovery console, which is unauthenticated by design, and the bad value is supplied before any image signature is verified. The defect is specific to the default non-direct upload path (MCUBOOT_SERIAL_DIRECT_IMAGE_UPLOAD disabled) on the Zephyr port with the array-backed slot layout (not CONFIG_SINGLE_APPLICATION_SLOT). It is not gated on a multi-image configuration: MCUBOOT_IMAGE_NUMBER defaults to 1, so even a default single-image build is affected for any image &gt;= 1. The MCUBOOT_SERIAL_DIRECT_IMAGE_UPLOAD path is safe (its flash_area_id_from_direct_image() switch returns -EINVAL for unknown indices).
+This issue was fixed in version 5.10.2607.  Hotfixes for older versions (5.8) have also been released.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-59077 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59077</link>
+    <guid isPermaLink="false">fc3fa074a063e44da63e5b7b9fa7292f</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.1 | Edito CMS is vulnerable to Stored XSS via content parameter in Tiny editor functionality. Authenticated attacker can inject arbitrary HTML and JS into website, which will be rendered/executed when user tries to edit changed entry.
 
-flash_area_id_from_multi_image_slot() takes a signed int image_index while img_num is uint32_t, so the attacker controls the sign of the index as well as its magnitude: an image of 0xFFFFFFFF converts to -1 and reads all_slots[-2], off the front of the table, while large positive values read off the end (CWE-192). Either way the index multiply img * 2 is performed in int, so a wild offset yields a bus/hard fault, giving a reliable denial of service of the bootloader during recovery. For moderately out-of-range indices the read returns adjacent .rodata as a garbage flash-area id that is handed to flash_area_open(); this normally fails with MGMT_ERR_EINVAL, but if the garbage id happens to match a valid non-image partition, the subsequent erase/write can target a partition outside the image set (CWE-787). The attacker-supplied value is never echoed back, so there is no information disclosure. The fix is to reject img_num &gt;= BOOT_IMAGE_NUMBER on the off == 0 packet, before the slot lookup. The comparison must be made on the unsigned img_num: an equivalent guard applied after the conversion to int would not reject the negative case above. __flash_area_ids_for_slot() should bounds-check its own arguments as defence in depth.
-This vulnerability was reported independently twice: by NVIDIA Project Vanessa on 2026-06-22, and by Kai Phan (@kaimandalic) on 2026-07-19 as GHSA-8v33-88p6-jffj, which is closed as a duplicate of this advisory. Both original reports are reproduced in full below.</description>
+This issue was fixed in version 5.10.2607.  Hotfixes for older versions (5.8) have also been released.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-16671 - NVD - CVSS Score v3.1: 2.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16671</link>
-    <guid isPermaLink="false">4840b9e95ed636b903d6be6ecc925c8e</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 2.9 | split_image_check() in boot/bootutil/src/loader.c declares a fixed uint8_t loader_hash[32] buffer and passes it as the out_hash out-parameter to bootutil_img_validate(). That routine copies IMAGE_HASH_SIZE bytes into out_hash (memcpy(out_hash, hash, IMAGE_HASH_SIZE) in boot/bootutil/src/image_validate.c), where IMAGE_HASH_SIZE is a compile-time constant of 64 for MCUBOOT_SHA512 or 48 for MCUBOOT_SIGN_EC384/SHA-384 (boot/bootutil/include/bootutil/crypto/sha.h). The buffer tracks SHA-256 (32 bytes) while the copy length tracks the configured algorithm, so the write overruns the buffer by 16 or 32 bytes.
+    <title>CVE-2026-59078 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59078</link>
+    <guid isPermaLink="false">0690edfd6d474da9d6aa3a3aa39c2827</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.1 | Edito CMS is vulnerable to Stored XSS in avatar upload functionality. Authenticated attacker can inject arbitrary HTML and JS into website, which will be rendered/executed when visiting an URL leading to a edited avatar.
 
-The overflow is only present in a non-default configuration: the legacy Mynewt split-image feature must be compiled (split_go()/split_image_check(), i.e. neither MCUBOOT_DIRECT_XIP nor MCUBOOT_RAM_LOAD), the digest must be larger than 32 bytes (MCUBOOT_SHA512 or MCUBOOT_SIGN_EC384), and MCUBOOT_SIGN_PURE must be off. split_go() is a public API with no caller inside MCUboot; it is invoked from a Mynewt application. In the default SHA-256 build there is no overflow.
-
-The over-written bytes are the one-way digest of the loader image and the overflow length is fixed at build time, so the contents are not meaningfully attacker-controlled and the size is not attacker-chosen. The realistic impact is bounded, uncontrolled corruption of the bootloader's stack on the split-boot path, manifesting as instability or failed boot in the affected configuration rather than reliable code execution. The fix is to size loader_hash to IMAGE_HASH_SIZE and pass IMAGE_HASH_SIZE as the matching seed length.</description>
+This issue was fixed in version 5.10.2607.  Hotfixes for older versions (5.8) have also been released.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107411 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107411</link>
-    <guid isPermaLink="false">35f8bea50a816e92dbe29f421ef7e9ad</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in RTSP ALG can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler</description>
+    <title>CVE-2026-59079 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59079</link>
+    <guid isPermaLink="false">fa5aedceb75de9c0e4c2fabc918f449d</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.1 | Edito CMS restricts the ability to upload files via the UI to specific file types. However, an avatar upload functionality allows an attacker to upload files of any type and extension without restriction.
+This issue was fixed in version 5.10.2607.  Hotfixes for older versions (5.8) have also been released.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107412 - NVD - CVSS Score v4.0: 9.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107412</link>
-    <guid isPermaLink="false">2a1db443e1ad043b7a58233c2d0888f4</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.5 | Multiple Memory overflow vulnerabilities can lead to unpredictable or erroneous behavior and Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107413 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107413</link>
-    <guid isPermaLink="false">74fb835fcfed4ca20d2d38027d03c631</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in SAML authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107414 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107414</link>
-    <guid isPermaLink="false">a30a9ece1d03a4f09e44ac1500a05600</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in WebAuth authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127285 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127285</link>
-    <guid isPermaLink="false">dda9220b696ef65f969fbda30e748672</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.1 | A flaw has been found in Cairo-dock Glx-Dock 3.4.0. The affected element is an unknown function of the file bg_forum.php of the component href Attribute Handler. This manipulation of the argument f causes cross site scripting. The attack may be initiated remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127286 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127286</link>
-    <guid isPermaLink="false">87953c516f408d61887a34dffeb3ab7a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was identified in Zackriya-Solutions Meetily up to 0.4.1. Affected is an unknown function of the file backend/app/main.py. The manipulation leads to missing authentication. The attack is possible to be carried out remotely. The exploit is publicly available and might be used. The legacy backend was not removed yet. Vulnerable code is still present on main. The vendor explains: &quot;[W]e are moving towards a single unified application using the tauri framework, and we deprecated the client-server architecture of this application.&quot;</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-49747 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49747</link>
-    <guid isPermaLink="false">43c0be69561b242f039c6ee744df5d3b</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | Software installed and run as a non-privileged user may conduct GPU system calls to trigger an integer overflow and allow OOB writes to GPU buffers.
+    <title>CVE-2026-59080 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59080</link>
+    <guid isPermaLink="false">0e26148bd6dabb0564416e94e24b0a19</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.1 | Edito CMS sends JWT token via GET requests. This allows a local attacker with access to browser history to obtain valid JWT token and perform action on behalf of the victim. The token is valid for only short period of time; after that time, it expires and can no longer be used.
 
 
 
-The integer overflow caused when mapping a GPU buffer &gt;4GB causes corruption of array length, and can lead to kernel panics or out of bounds access.</description>
+The vendor assessed the likelihood of exploitation as very low and determined that a fix is not necessary.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-74911 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-74911</link>
-    <guid isPermaLink="false">f2ebc07e5d904620a8289b0f06893e55</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | Software installed and run as a non-privileged user may conduct improper GPU system calls to the execution of an error path that triggers an OOB read &amp; write.
+    <title>CVE-2026-59081 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59081</link>
+    <guid isPermaLink="false">72a381724ff5d162e08020de0ca2d9d5</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.4 | Edito CMS deserializes JSON data without further validation. A user (even an administrator) cannot exploit this vulnerability through the application's normal functionality. An attacker who could modify cache entries or inject them could execute code on the server.
 
 
 
-An error can be triggered which causes the index of the array element to be cleaned up by the error path would be outside of the array bounds.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107415 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107415</link>
-    <guid isPermaLink="false">0b71d534f2c032b40258d84959c83127</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory overflow in Email OTP authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111340 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111340</link>
-    <guid isPermaLink="false">27cd4de2907c2337d9d6b8bd1e9dc8f1</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in KBA (knowledge-based authentication) can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111341 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111341</link>
-    <guid isPermaLink="false">fa9d26764b2ef5ce3c349b3a177bf93b</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in client-certificate authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111342 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111342</link>
-    <guid isPermaLink="false">482eb7a8ab63c8a46837dada399cbd7a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in LDAP authentication can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116059 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116059</link>
-    <guid isPermaLink="false">a1a656d9f50ca4191591e2989e033d91</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The LetsRecover  WordPress plugin through 1.2.0 does not sanitize a user-supplied value that is used as a database column name in one of its unauthenticated AJAX actions, allowing unauthenticated attackers to append SQL to the query and read arbitrary data from the database, which is then returned through a second unauthenticated action.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118063 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118063</link>
-    <guid isPermaLink="false">4659ce2b36803dfb32420decdc49a41a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The Advance Guest Post WordPress plugin through 1.9 does not properly validate uploaded files, relying on a case-sensitive and incomplete extension check that unauthenticated users can trivially bypass, allowing them to upload arbitrary files, including executable PHP variants, into a web-reachable directory, which can lead to remote code execution depending on the server configuration.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118064 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118064</link>
-    <guid isPermaLink="false">b86ff6e22e70577d6f50229300e6621b</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The Advance Guest Post WordPress plugin through 1.9 does not properly restrict or validate file uploads, authorizing an upload action with a nonce exposed to every front-end visitor and checking only a file's leading bytes, allowing unauthenticated users to upload arbitrary PHP files and execute code remotely.
 
-Successful exploitation additionally requires the target to run PHP 7.x; on PHP 8.0 and later the vulnerable code path raises a fatal error before the file is written.</description>
+This issue was fixed in version 5.10.2607.  Hotfixes for older versions (5.8) have also been released.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-118065 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118065</link>
-    <guid isPermaLink="false">0d362758339feeb020b002f046b776ca</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The Advance Guest Post WordPress plugin through 1.9 does not perform any authorization or ownership check when deleting media attachments, relying only on a nonce exposed to every site visitor, allowing unauthenticated users to permanently delete arbitrary Media Library attachments and their files.</description>
+    <title>CVE-2026-116417 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116417</link>
+    <guid isPermaLink="false">c2c0e018ca3bcd5d0d38a3b12800b8b3</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 8.1 | Dell PowerScale InsightIQ, versions 6.3.0 through 6.4.0, contains a Weak Password Requirements vulnerability. An unauthenticated attacker with adjacent network access could potentially exploit this vulnerability, leading to Information disclosure and Unauthorized access.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120407 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120407</link>
-    <guid isPermaLink="false">e8259bc50af34105ab27665e1a1f1d6a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The Contact Form 7 WordPress plugin before 6.2.5 does not restrict which user properties a form field's default value can be populated from, allowing users with the Editor role and above to obtain the password hash and sensitive user meta (such as two-factor secrets) of higher-privileged users, including administrators, who view and submit the form.</description>
+    <title>CVE-2026-116419 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116419</link>
+    <guid isPermaLink="false">2556cffb58cd47de60676e7883dde1d1</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.4 | Dell PowerScale InsightIQ, versions 6.3.0 through 6.4.0, containsan Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-121853 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121853</link>
-    <guid isPermaLink="false">c4ebc6eab842ecf2db7021f10787472c</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The AppPresser  WordPress plugin before 5.0.0 does not restrict access to two of its REST API endpoints, allowing unauthenticated visitors to retrieve the installed versions of AppPresser, its add-ons, several third-party AppPresser  WordPress plugin before 5.0.0 and its .</description>
+    <title>CVE-2026-116420 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116420</link>
+    <guid isPermaLink="false">c64802f902393dd7b30787bff1dbc83f</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.4 | Dell PowerScale InsightIQ, versions 6.3.0 through 6.4.0, containsan Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123093 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123093</link>
-    <guid isPermaLink="false">cb263b4b9750b1563ba2f18e2c925636</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The WP Remote Users Sync WordPress plugin before 2.2.1 does not have authorisation and CSRF checks in one of its AJAX actions, allowing any authenticated user, such as a subscriber, to delete the WP Remote Users Sync WordPress plugin before 2.2.1's entire activity log.</description>
+    <title>CVE-2026-116421 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116421</link>
+    <guid isPermaLink="false">c0a45a85b2fbb5fd14d1721a185178a2</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.4 | Dell PowerScale InsightIQ, Versions 6.3.0 through 6.4.0, contains an Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123097 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123097</link>
-    <guid isPermaLink="false">e02ccce69faf054b74511ee8e2a25077</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The WP Remote Users Sync WordPress plugin before 2.2.1 does not restrict which account fields a synchronised site may set when it creates or updates users, allowing a site holding the shared synchronisation keys to assign the administrator role, modify any existing account and write arbitrary user metadata, bypassing the receiving site's role and metadata restrictions.</description>
+    <title>CVE-2026-116422 - NVD - CVSS Score v3.1: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116422</link>
+    <guid isPermaLink="false">4d35a94b0618e7740737d65aff7b2ab2</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.3 | Dell PowerScale InsightIQ, versions 6.3.0 through 6.4.0, contains an Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure and Information exposure.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123124 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123124</link>
-    <guid isPermaLink="false">1b247f306c8e1eb9199b6839055c7cb9</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The WooCommerce Vindi Pagamento WordPress plugin through 0.8.3 does not perform any authorisation check when updating an order's shipment tracking code, and does not escape that code when displaying it on the order edit page, allowing unauthenticated attackers to perform Stored Cross-Site Scripting attacks against administrators and shop managers who view an order paid through the gateway.
-The stored payload is only rendered on sites using WooCommerce's legacy (WordPress posts) order storage.</description>
+    <title>CVE-2026-116423 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116423</link>
+    <guid isPermaLink="false">e331e3cce88f3b8d6e0102084154f255</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.4 | Dell PowerScale InsightIQ, versions 6.3.0 through 6.4.0, contains an Improper Verification of Cryptographic Signature vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges and Information tampering.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123670 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123670</link>
-    <guid isPermaLink="false">30a30df3082fd2994f5458735844e7f3</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The Essential Real Estate WordPress plugin before 5.3.6 does not verify that the recipients it allows for its contact email action are legitimate, allowing users with the self-registered Customer role to add any address to that allowlist so that unauthenticated users can then send emails with attacker-controlled content to it through the site.</description>
+    <title>CVE-2026-116424 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116424</link>
+    <guid isPermaLink="false">655f799396b459354341ad822d887417</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.4 | Dell PowerScale InsightIQ, versions 6.3.0 through 6.4.0, contains Unauthorized access vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information tampering and Unauthorized access.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123711 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123711</link>
-    <guid isPermaLink="false">1439a16b3a8195d74c30aa089ddccc4c</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The WPCOM Member WordPress plugin before 1.8.3 does not limit or bind attempts to verify WeChat login codes, allowing unauthenticated attackers to brute-force a code issued to another user and log in as that user, including administrators, when WeChat official-account keyword login is enabled.</description>
+    <title>CVE-2026-116425 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116425</link>
+    <guid isPermaLink="false">e8a53778351b4e8521868eb036cfd8bd</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.4 | Dell PowerScale InsightIQ, Versions 6.3.0 through 6.4.0, contains unauthorized access vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information tampering and Unauthorized access.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124664 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124664</link>
-    <guid isPermaLink="false">7a1a44f7908b63fa95df500398552157</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The Mine CloudVod WordPress plugin before 2.6.7 does not check whether the requester is enrolled in a course, or authorised at all, before returning the course's full curriculum together with the raw content of every published lesson, allowing unauthenticated visitors to retrieve paid lesson content, such as direct video source URLs, and the passwords of password-protected lessons.</description>
+    <title>CVE-2026-116426 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116426</link>
+    <guid isPermaLink="false">6e7963ac5ffd24f88ad300d89f1d74d9</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 4.3 | Dell PowerScale InsightIQ, Versions 6.3.0 through 6.4.0, contains an Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information exposure.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124763 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124763</link>
-    <guid isPermaLink="false">aa150e793d35811d831fa2ed62a1644a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The Woocommerce Wishlist WordPress plugin through 1.1.0 does not have authorisation and CSRF checks in one of its unauthenticated AJAX actions, allowing unauthenticated users to overwrite any site option with the URL of an uploaded image or an empty value, breaking the site (for example by changing its URL or active , or deactivating every Woocommerce Wishlist WordPress plugin through 1.1.0).</description>
+    <title>CVE-2026-116427 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116427</link>
+    <guid isPermaLink="false">9201bc060d41d1dae251d39e9322e6c9</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.4 | Dell PowerScale InsightIQ, Versions 6.3.0 through 6.4.0, contains a Missing Authorization vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Elevation of privileges.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124822 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124822</link>
-    <guid isPermaLink="false">b4d11495dc5141b9f18f2e75a2c63fe9</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The Easy DragDrop File Uploader WordPress plugin before 1.1.10 does not validate a user-supplied path before deleting it, allowing unauthenticated users to delete arbitrary files and directories on the server, such as wp-config.php.</description>
+    <title>CVE-2026-116430 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116430</link>
+    <guid isPermaLink="false">e429eb98b2b27cb743741c693d196a1c</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 4.3 | Dell PowerScale InsightIQ, Version 6.4.0, contain an Insufficient Verification of Data Authenticity vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information tampering.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124833 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124833</link>
-    <guid isPermaLink="false">7bbce8743e18d278760f6f8b3b61b356</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The Ahime Image Printer WordPress plugin through 1.0.0 does not validate the name, extension or type of uploaded files before writing them to disk, allowing unauthenticated attackers to upload arbitrary files, including PHP, and execute code on the server.</description>
+    <title>CVE-2026-116431 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116431</link>
+    <guid isPermaLink="false">75f364ae7d96a9de7bb0ab9d3ebf27f6</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 4.3 | Dell PowerScale InsightIQ, Versions 6.3.0 through 6.4.0, contains a Cleartext Storage of Sensitive Information vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information disclosure.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125711 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125711</link>
-    <guid isPermaLink="false">705029c032e851bc7fdc0e4653a224cd</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The Widgets for Google Reviews WordPress plugin before 14.3, WP Tripadvisor Review Widgets WordPress plugin before 14.3, Widgets for Booking.com Reviews WordPress plugin before 14.3, Widgets for Reviews &amp; Recommendations WordPress plugin before 14.3, Widgets for Airbnb Reviews WordPress plugin before 14.3, Widgets for Yelp Reviews WordPress plugin before 14.3, Widgets for Amazon Reviews WordPress plugin before 14.3, Widgets for Thumbtack Reviews WordPress plugin before 14.3, Widgets for Ebay Reviews WordPress plugin before 14.3, Widgets for Zillow Reviews WordPress plugin before 14.3, Widgets for Capterra Reviews WordPress plugin before 14.3, Widgets for Expedia Reviews WordPress plugin before 14.3, Widgets for Opentable Reviews WordPress plugin before 14.3, Widgets for WordPress Reviews WordPress plugin before 14.3, Widgets for Hotels.com Reviews WordPress plugin before 14.3, Review Widgets for Szallas.hu WordPress plugin before 14.3, Widgets for AliExpress Reviews WordPress plugin before 14.3, Widgets for Árukereső Reviews WordPress plugin before 14.3, Widgets for Foursquare Reviews WordPress plugin before 14.3, Widgets for Alibaba Reviews WordPress plugin before 14.3, Widgets for SourceForge Reviews WordPress plugin before 14.3 do not sanitise and escape the connected business details before outputting them in their review widgets, which could allow users with the Editor role and above to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in a multisite setup).</description>
+    <title>CVE-2026-116436 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116436</link>
+    <guid isPermaLink="false">74365467bc22158b4feef6f7a664b560</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 4.3 | Dell PowerScale InsightIQ, Versions 6.3.0 through 6.4.0, contains an Insertion of Sensitive Information into Log File vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Unauthorized access.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125912 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125912</link>
-    <guid isPermaLink="false">1f39a16a7f5ebba709449d9b39b16069</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The WP Ultimate CSV Importer  WordPress plugin before 9.2 does not restrict the destination filename and extension, nor validate the fetched content type, when importing remote media, allowing an Administrator of a Multisite subsite to write and execute arbitrary PHP in the shared WordPress context despite not being a Network Administrator and being unable to install WP Ultimate CSV Importer  WordPress plugin before 9.2 or edit files.</description>
+    <title>CVE-2026-116438 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116438</link>
+    <guid isPermaLink="false">ecd8d78c1220d1b8833586f980b438b9</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.4 | Dell PowerScale InsightIQ, Versions 6.3.0 through 6.4.0 , contains a Missing Authorization vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Denial of service.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126119 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126119</link>
-    <guid isPermaLink="false">058edbe7b884409baaa3ddad1683765a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | The Streamit WordPress plugin before 1.3.10 does not perform any authorization or nonce verification on one of its unauthenticated AJAX routes, which invokes an attacker-supplied PHP function with an attacker-supplied argument array, allowing unauthenticated attackers to call arbitrary functions (for example to create an administrator account), leading to privilege escalation and remote code execution.</description>
+    <title>CVE-2026-116453 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116453</link>
+    <guid isPermaLink="false">6effccc7afc6dc0e041f6503b6abfc88</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.4 | Dell PowerScale InsightIQ, Versions 6.3.0 through 6.4.0, contains a Missing Authorization vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Information tampering and Unauthorized access.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128424 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128424</link>
-    <guid isPermaLink="false">421df4c093202115b0bbca3a4d70a510</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.3 | A flaw was found in Kroxylicious. The ACL authorizer's rules-file parser unquotes `matching /…/` regular-expression literals using the string unquoting rules, which strips every backslash escape. As a result, an allow rule such as `matching /orders\.v1/` is compiled as the regex `orders.v1`, which also matches unintended names such as `ordersXv1`, and character classes such as `\d` and `\w` lose their special meaning. Allow rules written with regex escapes can therefore apply to more resources than the author intended. Depending on the ACL configuration, this may allow an authenticated Kafka client to access a resource (such as read or write a topic) that should have been denied.</description>
+    <title>CVE-2026-120864 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120864</link>
+    <guid isPermaLink="false">9caa0d96b3d2c426f86ae8e5fcc246d4</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | Memory overflow in ICA proxy can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120865 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120865</link>
+    <guid isPermaLink="false">ccd3c7c5cbaecd7a47582bcebdef6ebe</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in HTTP/3 (QUIC) can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120866 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120866</link>
+    <guid isPermaLink="false">5c1b94580def1062691ba5392ce1b0c7</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.7 | Memory overflow / improper handling in BGP dynamic routing can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120867 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120867</link>
+    <guid isPermaLink="false">d7ccb8e5c6fdfd84bbfa828acf0316dd</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Memory overflow in SSL/TLS/DTLS can lead to unpredictable or erroneous behavior or Denial of Service in Citrix NetScaler ADC and Citrix NetScaler Gateway.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128824 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128824</link>
+    <guid isPermaLink="false">9fce44a7bedea3c63f03b8ba3d93e64c</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.4 | A flaw was found in Red Hat Quay. The v1 registry API error handler reflects the attacker-supplied image_id path segment in a response served as text/html, allowing a reflected cross-site scripting (XSS) attack. By tricking a user into visiting a specially crafted URL, a remote attacker can execute arbitrary JavaScript in the victim's browser within the Quay origin, potentially compromising the user's session.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
