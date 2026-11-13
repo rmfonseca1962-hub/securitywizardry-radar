@@ -5,324 +5,346 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 11:01:35 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 15:02:31 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-128238 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128238</link>
-    <guid isPermaLink="false">25f1ead0709c252528f481e665f4249c</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | Scapy before 2.8.0 contains an uncontrolled recursion vulnerability in the BER/ASN.1 decoder in scapy/asn1/ber.py that allows unauthenticated remote attackers to crash parsing applications. Attackers can send a single 833-byte packet with 250 nested ASN.1 SEQUENCE structures to trigger an unhandled RecursionError, terminating TLS, SNMP, X.509, or LDAP parsers even with safe=True.</description>
+    <title>CVE-2026-120221 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120221</link>
+    <guid isPermaLink="false">24ddcbfcc8af1337113aecdccf56c75b</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.2 | In FRRouting 8.4 and later, bgpd frees the same memory twice when dynamic BGP neighbors disconnect, if the peer-group used by a &quot;bgp listen range&quot; also has a Site-of-Origin configured (&quot;neighbor PG soo&quot;). Each dynamic neighbor shares the peer-group's SoO value instead of getting its own copy, but frees it as its own when the neighbor is deleted, which happens as soon as its connection closes. The first disconnect leaves the peer-group pointing at freed memory, and the second disconnect frees it again, causing bgpd to abort and drop all BGP sessions on the router. Any host whose address falls inside the listen range can trigger this by opening and closing two TCP connections to the BGP port, without sending any BGP message and without knowing the AS number, and can repeat it each time bgpd restarts. If the peer-group has a TCP-MD5 password, only hosts that know the password can trigger it. Two ordinary flaps of legitimate dynamic neighbors have the same effect. Between the two frees, displaying the configuration (&quot;show running-config&quot;) or establishing a dynamic neighbor also reads the freed memory, which can crash bgpd after a single disconnect. Only configurations that combine a listen range with a SoO on the same peer-group are affected.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128239 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128239</link>
-    <guid isPermaLink="false">61b39824452d140a35a518231bd829be</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC through 26.07.0 contains a NULL pointer dereference vulnerability in the MPEG-4 Form spatial-constraint handlers in src/compositor/mpeg4_form.c that lets attackers crash the process via unchecked group lookups. Attackers can supply a crafted XMT scene whose Form constraints reference a non-existent group, crashing tools like MP4Box during chapter import for denial of service.</description>
+    <title>CVE-2025-41725 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-41725</link>
+    <guid isPermaLink="false">cde9a9b5cad8efed894e44d2918bb769</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | Affected devices running firmware versions prior to 4.1.0 may crash and become unavailable when receiving specific malformed Bluetooth messages from an unauthenticated attacker.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128240 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128240</link>
-    <guid isPermaLink="false">d2cb214895b73952adddedf014ac4e96</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC through 26.07.0 contains a use-after-free vulnerability in gf_sg_proto_del() in src/scenegraph/vrml_proto.c because gf_sg_reset() frees unregistered prototypes still referenced by scene commands. Attackers can supply a crafted XMT/BT scene declaring prototypes via commands, processed by MP4Box -chap, to trigger freed memory access and crash the process.</description>
+    <title>CVE-2026-105880 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105880</link>
+    <guid isPermaLink="false">5a93b8509456f2bb7769123d892b0f80</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.3 | Authorization Bypass Through User-Controlled Key vulnerability in Tobias WebinarIgnition webinar-ignition allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WebinarIgnition: from n/a through 4.27.125.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128241 - NVD - CVSS Score v4.0: 4.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128241</link>
-    <guid isPermaLink="false">c9f0d10f5818a0987e34bd3028ec495a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 4.1 | The xmlwf tool in libexpat through 2.10.0 contains a symlink following vulnerability because -d output mode opens files with fopen(&quot;wb&quot;), which follows symbolic links. Local attackers with write access to the output directory can plant a symlink at the expected output name to truncate or overwrite files writable by the xmlwf user.</description>
+    <title>CVE-2026-107525 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107525</link>
+    <guid isPermaLink="false">21b0806992330bf81d0a05a377658887</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.3 | Dell PowerStore contains an information disclosure vulnerability. An unauthenticated attacker could exploit this vulnerability to obtain service metadata useful for further attacks.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128242 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128242</link>
-    <guid isPermaLink="false">cca3cc0a11c18a88cd8e27462047752c</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | actix-http before 3.20.1 and actix-web before 4.18.2 contain an unbounded decompression vulnerability in encoding::Decoder that lets remote attackers exhaust memory and CPU via compressed bodies. Attackers can send small highly compressed gzip, deflate, Brotli or zstd request bodies to Json, Form, Bytes or String extractors, or serve them to awc clients, causing denial of service.</description>
+    <title>CVE-2026-107526 - NVD - CVSS Score v3.1: 4.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107526</link>
+    <guid isPermaLink="false">ca36319b35663342fa23d202943a2314</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 4.6 | Dell PowerStore contains an improper input validation vulnerability. An authenticated low-privileged attacker could exploit this vulnerability, potentially leading to stored cross-site scripting in the management interface.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128328 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128328</link>
-    <guid isPermaLink="false">9446c1382b8a8f7c1e05dacaacdd87b4</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.3 | Dokploy 0.28.0 before 0.31.1 contains a path traversal vulnerability that allows authenticated organization members to list tracked files of any git repository by supplying an arbitrary repoPath to patch.readRepoDirectories. Attackers with read access to one service can enumerate file and directory names of other tenants' application and compose source trees on the host or managed servers.</description>
+    <title>CVE-2026-112830 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112830</link>
+    <guid isPermaLink="false">1ba07e977fc386a64c211ea1c4d820fc</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Brizy Brizy brizy allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Brizy: from n/a through 2.8.25.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128329 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128329</link>
-    <guid isPermaLink="false">9471469b7e7487a412d5dc2c2de0ae3d</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.3 | Dokploy 0.28.0 before 0.31.1 contains a path traversal vulnerability that allows authenticated organization members to read arbitrary files by supplying ../ sequences in the filePath of patch.readRepoFile. Attackers with service read permission can read /etc/shadow, SSH private keys, and secret environment files on the Dokploy host or managed remote servers.</description>
+    <title>CVE-2026-119518 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119518</link>
+    <guid isPermaLink="false">f7e8b971b6e24fc1df5266fc11346570</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WProyal Royal Elementor Addons royal-elementor-addons allows Stored XSS.This issue affects Royal Elementor Addons: from n/a through 1.7.1070.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128330 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128330</link>
-    <guid isPermaLink="false">860ea8357f0bc8020c18e71a4dbe12f2</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.3 | Miniflux before 2.3.5 contains an insufficient session expiration vulnerability that allows attackers to retain account access because password changes do not revoke existing web sessions. Attackers holding a leaked password or copied session cookie keep access for up to 30 days, reading integration credentials, creating API keys, or registering passkeys.</description>
+    <title>CVE-2026-121721 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121721</link>
+    <guid isPermaLink="false">fda6477e9057128ac7c72b5d9b45f88e</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in PublishPress Gutenberg Blocks advanced-gutenberg allows Stored XSS.This issue affects Gutenberg Blocks: from n/a through 3.7.6.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128331 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128331</link>
-    <guid isPermaLink="false">7902bff32cd7f01f536debf7307f3997</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.0 | Miniflux before 2.3.5 contains an unverified password change vulnerability that allows holders of a signed-in session to change the account password without supplying the current password. Attackers with a stolen session cookie or unattended device can submit new password fields via updateSettings to lock out the owner and take over the account.</description>
+    <title>CVE-2026-121771 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121771</link>
+    <guid isPermaLink="false">3a8011b94afa33cdf8a9c3aeb3ed11a6</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.3 | Insertion of Sensitive Information Into Sent Data vulnerability in PublishPress Gutenberg Blocks advanced-gutenberg allows Retrieve Embedded Sensitive Data.This issue affects Gutenberg Blocks: from n/a through 3.7.6.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128332 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128332</link>
-    <guid isPermaLink="false">2e2f6065a8018f23338ec029fb32cb81</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.1 | Listmonk 6.0.0 before 7.0.0-beta.2 contains a 2FA bypass vulnerability that allows attackers with a valid password to brute-force TOTP codes because the attempt counter resets on every new password login. Attackers can repeatedly submit credentials to POST /admin/login to obtain fresh tokens, each allowing 15 more guesses, gaining sessions for 2FA-protected accounts including Super Admin.</description>
+    <title>CVE-2026-125801 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125801</link>
+    <guid isPermaLink="false">c440949ec8ebc3bd5db20d6c1623d4da</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') vulnerability in Automattic WooCommerce woocommerce allows Leveraging Race Conditions.This issue affects WooCommerce: from 11.0.0 through 11.2.2.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128333 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128333</link>
-    <guid isPermaLink="false">5ab289e286e32477584406350735ea68</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.1 | listmonk 6.0.0 before 7.0.0-beta.2 contains an authentication bypass vulnerability in doResetPassword that skips TOTP verification after a password reset. Attackers who can complete a reset, such as by reading the victim's reset email, obtain fully authenticated sessions including Super Admin without the TOTP code.</description>
+    <title>CVE-2026-125814 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125814</link>
+    <guid isPermaLink="false">3c79e8df3986d3466a3cd3eacbc0322f</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Rymera Web Co Product Feed PRO for WooCommerce woo-product-feed-pro allows Code Injection.This issue affects Product Feed PRO for WooCommerce: from n/a through 13.5.8.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128334 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128334</link>
-    <guid isPermaLink="false">63a4863c70ac6af7fbc08dce9b57f06f</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.3 | listmonk 6.2.0 before 7.0.0-beta.2 contains a missing authentication vulnerability that allows unauthenticated attackers to submit Azure Event Grid bounce webhooks when no shared secret is configured. Attackers can POST forged EmailDeliveryReportReceived events with Bounced status to /webhooks/service/azure to blocklist, unsubscribe, or delete arbitrary subscribers.</description>
+    <title>CVE-2026-125815 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125815</link>
+    <guid isPermaLink="false">53ad06e9f3e487aba4ccda611189b6b9</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Noah Hearle We’re Open! opening-hours allows Code Injection.This issue affects We’re Open!: from n/a through 2.8.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128335 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128335</link>
-    <guid isPermaLink="false">53517c4fd6a2b4f1db3caf00e8344162</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.1 | Contao 4.6.0 before 5.3.54, 5.4.0-RC1 before 5.7.17, and 6.0.0-RC1 before 6.0.6 fails to invalidate existing user sessions when two-factor authentication is enabled or disabled. Because Contao\User::isEqualTo() and serialized session data omit two-factor state, attackers already holding a session keep it after the owner changes 2FA settings.</description>
+    <title>CVE-2026-125816 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125816</link>
+    <guid isPermaLink="false">6a238103a138bea13856e1ff9f7ebbbb</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in PT Norther Lights Production MapSVG mapsvg-lite-interactive-vector-maps allows Stored XSS.This issue affects MapSVG: from n/a through 9.0.4.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128336 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128336</link>
-    <guid isPermaLink="false">6a1e98b85cea5d97ba87e6df0dc40405</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.3 | ExcelJS through 4.4.0 contains a prototype pollution vulnerability that allows attackers to add numeric keys to Object.prototype through a crafted defined name referencing a __proto__ sheet. Attackers can supply an xlsx whose xl/workbook.xml definedName range targets __proto__, causing CellMatrix to write empty arrays onto Object.prototype process-wide when workbook.xlsx.load() runs.</description>
+    <title>CVE-2026-125833 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125833</link>
+    <guid isPermaLink="false">e90487fa70ec68621f6f84bf956c7e3e</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in YITH YITH WooCommerce Ajax Product Filter yith-woocommerce-ajax-navigation allows Stored XSS.This issue affects YITH WooCommerce Ajax Product Filter: from n/a through 5.24.0.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128337 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128337</link>
-    <guid isPermaLink="false">e093b183ed6740519af7df5ad0a05974</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.3 | ExcelJS through 4.4.0 contains a prototype pollution vulnerability in mergeConditionalFormattings that allows attackers to modify Object.prototype by supplying an x14:cfRule id of __proto__. Attackers can craft an xlsx file that, when loaded with xlsx.load(), sets properties such as type, direction, border and cfvo on every object in the process until it restarts.</description>
+    <title>CVE-2026-128834 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128834</link>
+    <guid isPermaLink="false">c34e6e207fd1a942dd50f87ee89b5bec</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Brainstorm Force Spectra ultimate-addons-for-gutenberg allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Spectra: from n/a through 2.20.5.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128338 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128338</link>
-    <guid isPermaLink="false">6da30950828fe39b23c6631d71c91751</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | exceljs through 4.4.0 contains a memory exhaustion vulnerability that allows attackers to crash applications by supplying a worksheet col element with an unbounded max attribute. Attackers can craft a small workbook with a huge max value, causing xlsx.load() to allocate hundreds of millions of Column objects and abort the process with an uncatchable heap out-of-memory error.</description>
+    <title>CVE-2026-86355 - NVD - CVSS Score v3.1: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86355</link>
+    <guid isPermaLink="false">6f42dd8d8747eabaa812864862fc5f82</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 8.3 | Dell PowerStore contains an External Control of File Name or Path vulnerability. A remote authenticated attacker could exploit this vulnerability, potentially leading to privilege escalation on the appliance.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128339 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128339</link>
-    <guid isPermaLink="false">bebb429b68522941c95d50b891bf0d28</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | ExcelJS through 4.4.0 contains a memory exhaustion vulnerability in Worksheet._parseMergeCells that allows attackers to crash applications by supplying unbounded mergeCell ranges. Attackers can craft a small workbook with a mergeCell ref like A1:XFD1048576, causing xlsx.load() to create billions of Row and Cell objects and abort the process.</description>
+    <title>CVE-2026-86356 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86356</link>
+    <guid isPermaLink="false">f2638c829d86cd02cdfcc600e18755d0</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 8.8 | Dell PowerStore contains an authorization-bypass vulnerability that could lead to elevation of privilege to administrator.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128340 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128340</link>
-    <guid isPermaLink="false">d24c3c9630e1d17b0f742a13f58407da</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | ExcelJS through 4.4.0 contains a memory exhaustion vulnerability that allows attackers to crash applications by supplying a workbook with an oversized defined-name range. DefinedNames.addEx expands ranges such as S!$A$1:$XFD$1048576 from xl/workbook.xml cell by cell, causing an uncatchable fatal heap out-of-memory error during xlsx.load().</description>
+    <title>CVE-2026-95518 - NVD - CVSS Score v3.1: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95518</link>
+    <guid isPermaLink="false">7e390ef1489b243191bf599b9bdf0514</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 7.0 | Time-of-check time-of-use (TOCTOU) race condition vulnerability in TÜBİTAK BİLGEM Yazılım Teknolojileri Araştırma Enstitüsü Pardus Package Installer allows Leveraging Time-of-Check and Time-of-Use (TOCTOU) Race Conditions.
+
+This issue affects Pardus Package Installer: from 0.7.0 before 0.7.1.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128341 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128341</link>
-    <guid isPermaLink="false">c78cc400b2ffc6e444c4b79f7e7b2398</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | ExcelJS through 4.4.0 contains a resource exhaustion vulnerability in data-validations-xform.js that allows attackers to exhaust CPU and memory by supplying unbounded sqref ranges. Attackers can provide a small crafted workbook with a sqref of A1:XFD1048576 to make xlsx.load() iterate billions of addresses, blocking the event loop and crashing the process with an uncatchable out-of-memory error.</description>
+    <title>CVE-2026-109095 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109095</link>
+    <guid isPermaLink="false">4c2cf18a0766eef59f5836a3c0f67b8e</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | A integer overflow in glamor Xv Image Size handling in X.Org xwayland before 24.1.15 and X server before 21.1.26 could be used by authenticated clients to crash the X server or leak out data.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128342 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128342</link>
-    <guid isPermaLink="false">3500fe3d20758a77636b914151d4a959</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | ExcelJS through 4.4.0 contains a denial of service vulnerability that allows attackers to block the event loop by supplying an unbounded sheetId in xl/workbook.xml. Attackers can provide a workbook with a huge sheetId, making the sparse worksheet array walk stall worksheets, getWorksheet and writeBuffer for seconds.</description>
+    <title>CVE-2026-109096 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109096</link>
+    <guid isPermaLink="false">21c63df34540d197deb2a2bea76d3acb</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.5 | Incorrect handling of negative returns from ddQueryImageAttributes()  when processing XvPutImage requests in X.Org xwayland before 24.1.15 and X Server before 21.1.26 could be used by authenticated X clients to crash the X server.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128343 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128343</link>
-    <guid isPermaLink="false">1534ed5a980a912a4f6d3566709a4e57</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | exceljs through 4.4.0 contains a denial of service vulnerability that allows attackers to block the event loop by supplying unbounded row r attributes parsed in row-xform.js. Attackers can craft an XLSX file with a row numbered far beyond Excel's limit, making getSheetValues(), workbook writes and CSV export consume time proportional to that number.</description>
+    <title>CVE-2026-116411 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116411</link>
+    <guid isPermaLink="false">6a6990a5ad7f96a4392a90548a500b36</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 8.8 | Dell PowerStore contains a Server-Side Request Forgery (SSRF) vulnerability. An authenticated user with limited privileges could potentially exploit this vulnerability, potentially leading to information disclosure via requests to internal services.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128344 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128344</link>
-    <guid isPermaLink="false">f2aceeb6e13df02e44e11ddd5ff4f9cf</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | ExcelJS through 4.4.0 contains a memory exhaustion vulnerability that allows attackers to crash applications by supplying a workbook with an unbounded image anchor column in the drawing part. Attackers can set an anchor column such as 300000000 in xl/drawings/drawing1.xml so reading getImages() anchor positions makes Worksheet.getColumn allocate millions of Column objects and abort with a heap out-of-memory error.</description>
+    <title>CVE-2026-116412 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116412</link>
+    <guid isPermaLink="false">31adf96d43a5e994c1835cad42a1a061</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.5 | Dell PowerStore contains an insecure-file-permissions vulnerability. A local low-privileged attacker could exploit this vulnerability to disclose administrative credentials.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128345 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128345</link>
-    <guid isPermaLink="false">00d51b5a6b002eabcf0da00176d7e9c6</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | ExcelJS through 4.4.0 contains a regular expression denial of service vulnerability in slideFormula in lib/utils/shared-formula.js when translating shared formulas to child cells. Attackers can supply a crafted spreadsheet with very long master formulas, such as runs of hyphens, causing quadratic regex backtracking that blocks the Node.js event loop.</description>
+    <title>CVE-2026-116413 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116413</link>
+    <guid isPermaLink="false">0e66c2b1529ce41a3b2810f26b10d42a</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 7.1 | Dell PowerStore contains a use-of-broken-cryptography vulnerability. A low-privileged attacker could exploit it to impersonate another identity, potentially leading to unauthorized access.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128346 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128346</link>
-    <guid isPermaLink="false">11fed386cae689c523b4148339d519ba</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | ExcelJS through 4.4.0 contains a resource leak vulnerability in the streaming WorkbookReader.parse that leaves temporary files and open descriptors when sheet parsing fails or iteration stops early. Attackers can repeatedly upload malformed multi-sheet workbooks with worksheets placed before xl/sharedStrings.xml to fill the temporary directory and exhaust file descriptors.</description>
+    <title>CVE-2026-124758 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124758</link>
+    <guid isPermaLink="false">5c509c7e22f3cf09f4dc6b5328112ca7</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.3 | P-Net before 1.0.4 does not check the record data length of an IODWrite request to a non-user record index against the size of the record block header. The 32-bit length is reduced by the header size before it is passed to the record handlers, so a length smaller than the header underflows and the handlers receive a data length of about 65530. The fixed-size reads of the I&amp;M and PDPort handlers can then read past the end of the session buffer. The result of the write is discarded. The attacker must have an established Application Relationship or be able to send in the context of one, and requires ADJACENT network access.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128347 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128347</link>
-    <guid isPermaLink="false">77bd93e6472a4a0ce22e0e63f670749f</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | ExcelJS through 4.4.0 contains an arbitrary file read vulnerability in the streaming WorkbookWriter that allows attackers to read local files by supplying crafted image filenames to addImage. Attackers can inject ../ path segments into user-controlled image paths, causing addMedia to embed any file readable by the Node.js process under xl/media in the generated workbook.</description>
+    <title>CVE-2026-124759 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124759</link>
+    <guid isPermaLink="false">4e2261846b71db64f1244ddae28cdb16</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.1 | P-Net before 1.0.4 routes a received RTA alarm frame to an Application Relationship using only the destination alarm reference in the frame, without checking the source of the frame. A host with ADJACENT network access can abort an established Application Relationship with a single alarm ERROR frame, or deliver forged alarm notifications with chosen type, slot, subslot, USI and payload to the application.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-128348 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128348</link>
-    <guid isPermaLink="false">b5db856183417752c8b5cadd1c4ce7d9</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.3 | ExcelJS through 4.4.0 contains a formula injection vulnerability in the totals row formula getter in lib/doc/table.js that fails to escape [, ], # and ' characters in structured reference column names. Attackers can supply column names containing ] via untrusted input like imported CSV headers to inject formulas such as HYPERLINK that exfiltrate cell values when users open and click the generated workbook.</description>
+    <title>CVE-2026-124760 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124760</link>
+    <guid isPermaLink="false">c3e9f76ad67ff65426c2cc307fad0c30</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.3 | P-Net before 1.0.4 sets the alarm receiver state to waiting for confirmation before the data of a received alarm notification is parsed. If the parsing fails the state is not restored, and later alarm notifications of the same priority are discarded without acknowledge until the Application Relationship is released. The Application Relationship and the cyclic data exchange keep working. The attacker must be able to send an alarm notification in the context of an established Application Relationship and requires ADJACENT network access.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-61417 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61417</link>
-    <guid isPermaLink="false">3a2f5970efb6a2c1f32ca574f271b781</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | Dell SmartFabric OS10 Software, versions prior to 10.6.0.10, contains an Improper Access Control vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Denial of service.</description>
+    <title>CVE-2026-124761 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124761</link>
+    <guid isPermaLink="false">224c9ffc5f62524556e2863d1e1cfcc9</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.1 | P-Net before 1.0.4 copies the IP suite of a DCP Set request to the current and the non-volatile configuration, and starts saving it, before the state of the device is checked. If the request is refused, for example because an Application Relationship is active, the configuration is not restored and is still saved. After a restart the device uses the refused address, and may not answer the controller or may use its address. A host with ADJACENT network access can use this while an Application Relationship is active.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-61418 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61418</link>
-    <guid isPermaLink="false">e106400918983916a751f938c31c15b3</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 7.5 | Dell SmartFabric OS10 Software, versions prior to 10.6.0.10, contains an Incorrect Authorization vulnerability. A low privileged attacker with remote access could potentially exploit this vulnerability, leading to Command execution.</description>
+    <title>CVE-2026-124762 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124762</link>
+    <guid isPermaLink="false">f51f2b811d79eedfdb1273b6fb1cba29</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.0 | P-Net before 1.0.4 finds the RPC session of a received PDU by its activity UUID only, and a reject, fault or cancel PDU for the session aborts the Application Relationship, without checking that the PDU is the answer to a call of the device or where it comes from. A host with ADJACENT network access that has observed the activity UUID of the connection, which is sent in clear in every RPC request, can abort the Application Relationship with one PDU. It also allocates a session for an unknown activity UUID and changes the address stored for an existing session.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75487 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75487</link>
-    <guid isPermaLink="false">4f6147a430ef723777932fd1f9a9e419</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | Cudy TR3000 before 2.5.42 contains a command injection vulnerability that allows authenticated administrators to execute commands as root via the WireGuard server private_key option. Attackers can save a private key containing $() command substitution, which runs when action_wireguards_export() passes it to luci.sys.exec during configuration export.</description>
+    <title>CVE-2026-125800 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125800</link>
+    <guid isPermaLink="false">2c94c38f04644f8164dd1f6598674c60</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Brainstorm Force Spectra ultimate-addons-for-gutenberg allows Stored XSS.This issue affects Spectra: from n/a through 2.20.5.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75488 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75488</link>
-    <guid isPermaLink="false">90d02e9b5b738117056cad33e91ce7d8</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.2 | Cudy TR3000 before 2.5.42 contains a stack buffer overflow vulnerability in the CWMP client that allows a malicious ACS to corrupt stack memory via oversized credentials. Attackers controlling the ACS can send Username and Password values up to 256 bytes in TR-069 Download or Upload requests, overflowing 128-byte stack buffers and crashing the CWMP process.</description>
+    <title>CVE-2026-127122 - NVD - CVSS Score v4.0: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127122</link>
+    <guid isPermaLink="false">8f7a2d6e782365904466898ed8c07340</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.2 | P-Net before 1.0.4 does not check the number of MCR request blocks in a Connect request against the number of multicast communication relations that an Application Relationship has room for (PNET_MAX_MC_CR, 1 by default). Each further block is written past the end of the array, into the rest of the Application Relationship and, with more blocks, into the following one. The written data comes from the request. No established Application Relationship is needed, and the attacker requires ADJACENT network access. Builds with PNET_OPTION_MC_CR disabled are not affected.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75489 - NVD - CVSS Score v4.0: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75489</link>
-    <guid isPermaLink="false">784d4ad28b7687da8e8aa174d09de63d</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.1 | Cudy TR3000 before 2.5.42 contains an insufficient verification of data authenticity vulnerability in the mt_wifi Smart Mesh Technology (SMT) onboarding, which protects messages only with an AES-CBC key derived from public values and a CRC32 check. Adjacent unauthenticated attackers can forge SMT messages in Probe Request vendor IEs carrying an attacker-chosen SSID and pre-shared key, forcing unpaired devices to join attacker-controlled access points.</description>
+    <title>CVE-2026-127123 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127123</link>
+    <guid isPermaLink="false">0de638dd54eace78bfa802a3603c1921</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.0 | P-Net before 1.0.4 releases the Application Relationship of an RPC session, without the abort procedure, when a fragment of a request has another data representation (endianness) than the first fragment of the call. The application is not told that the Application Relationship is gone, the cyclic data stops, and the resources of the Application Relationship are left referencing a cleared structure. Another host can then connect in its place. A host with ADJACENT network access that has observed the activity UUID of the connection, which is sent in clear in every RPC request, can do this with one PDU.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75490 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75490</link>
-    <guid isPermaLink="false">fa566e9afa78c34d389a15b20a5dfea6</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.7 | Cudy TR3000 before 2.5.42 contains a remote code execution vulnerability that allows unauthenticated adjacent attackers to run root commands by advertising a rogue automesh controller over mDNS. Attackers on the upstream Ethernet segment can advertise _cudycmagent._tcp records pointing to a malicious MQTT broker, then send commands encrypted with a fixed AES key that router/batchcmd.lua executes as root.</description>
+    <title>CVE-2026-127124 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127124</link>
+    <guid isPermaLink="false">6684a9e94df9ba414f92d3f93006c1fc</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.1 | P-Net before 1.0.4 keeps the RPC session that is allocated for a fragment of a request with an unknown activity UUID, without a timeout, when the rest of the request never arrives. A session that does not get an Application Relationship is also kept after the response. Repeated fragments or requests with different activity UUIDs exhaust the available sessions, one UDP packet per session. Once they are exhausted the device no longer answers a Connect request until it is restarted. An unauthenticated attacker with ADJACENT network access can use this to cause a denial of service.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75491 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75491</link>
-    <guid isPermaLink="false">811746397242ac1dc98eeaab90ae3f19</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.2 | Cudy TR3000 before 2.5.42 contains an authentication bypass vulnerability in the Mosquitto plugin auth_plugin_jwt.so that accepts unsigned JWTs using alg none. Attackers holding any Cudy-trusted client certificate can authenticate as admincudydevice on port 8883 and publish batchcmd requests to execute commands as root.</description>
+    <title>CVE-2026-127125 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127125</link>
+    <guid isPermaLink="false">decc3cec1ae18c0f1d1dbdf714befb03</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.0 | P-Net before 1.0.4 aborts the Application Relationship of an RPC session when a fragment of a response has been resent without being acknowledged, without checking that the session has an Application Relationship. A request for an existing Application Relationship that is sent on another activity than its Connect, and gets a fragmented response, is handled on a session without one. If the response is not acknowledged, a NULL pointer is dereferenced and the device crashes. A conformant IO-controller does not send such requests. The attacker must have observed the AR UUID of an established Application Relationship and requires ADJACENT network access.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75492 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75492</link>
-    <guid isPermaLink="false">38706210ae8a16c2dcb9176a20e4bb74</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Cudy TR3000 before 2.5.42 contains an unauthenticated stack buffer overflow vulnerability in the stun_client TR-111 UDP Connection Request parser that parses requests before verifying username or HMAC. Remote attackers can send a single crafted UDP datagram lacking a space in the request line, causing strncpy() to overflow a 10-byte stack buffer and crash stun_client for denial of service.</description>
+    <title>CVE-2026-128790 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128790</link>
+    <guid isPermaLink="false">765a780dc8892f6a26d2aa5c7bee537f</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.1 | In Eclipse BaSyx Go Components versions up to and including 1.1.2, ABAC-enabled deployments of the Submodel Repository and the AAS Environment do not apply an access rule's `FILTERLIST` fragment filters to single Submodel reads.
+
+
+
+`GET /submodels` removes the fields that a rule's `FILTERLIST` hides, but `GET /submodels/{submodelIdentifier}` and `GET /submodels/{submodelIdentifier}/$metadata` return them unfiltered. An authenticated caller with READ access to a Submodel can therefore read fields that the access rules hide from them, for example `supplementalSemanticIds` keys that name the other parties allowed to read the Submodel.
+
+
+
+If versioning is enabled (`history.mode` set to `api` or `audit`), `GET /submodels/{submodelIdentifier}/$history` and `GET /shells/{aasIdentifier}/$history` in the Submodel Repository, AAS Repository and AAS Environment return the complete stored version without applying the rule's formula or fragment filters. A caller whose rules grant READ on these routes can read fields that the access rules hide, and Submodels and Asset Administration Shells that the direct read does not return to them at all.
+
+
+
+The issue is fixed in Eclipse BaSyx Go Components v1.1.3.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75493 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75493</link>
-    <guid isPermaLink="false">90665bb58107902f202902ebd9c38818</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.2 | Cudy TR3000 before 2.5.42 contains a stack buffer overflow vulnerability in an obuspa getter for the TR-098 WLANConfiguration KeyPassphrase parameter, which copies the stored value with strcpy() into a 4,096-byte stack buffer without a length check. A malicious or compromised ACS can set a 5,000-byte passphrase via SetParameterValues, and a later read of the parameter overflows the buffer and crashes obuspa, causing denial of service.</description>
+    <title>CVE-2026-77706 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77706</link>
+    <guid isPermaLink="false">02b0593bc0980b7f034020d2f20fea3a</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper handling of highly compressed data (data amplification) vulnerability in Fileorbis Bilişim Hizmetleri Ticaret Anonim Şirketi FileOrbis NextGen FileServer allows Sustained Client Engagement.
+
+This issue affects FileOrbis NextGen FileServer: before 12.7.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75494 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75494</link>
-    <guid isPermaLink="false">677b101d5814b045094d70b00e9a9810</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.3 | Cudy TR3000 before 2.5.42 contains an argument injection vulnerability that allows a malicious or compromised ACS to inject curl options through unfiltered Username and Password values in the easycwmpd Upload handler. Attackers can embed whitespace to add options like -o and --url to the root-run curl command, writing attacker-controlled HTTP responses to arbitrary files on the device.</description>
+    <title>CVE-2026-82177 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82177</link>
+    <guid isPermaLink="false">c0f6cf86de09002be013b275806fd0de</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 7.2 | Dell PowerStore contains an OS Command Injection vulnerability. A high-privileged attacker could exploit this vulnerability, potentially leading to arbitrary root command execution on the appliance.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75495 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75495</link>
-    <guid isPermaLink="false">70464bd375991e81fba66c95c35f050a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.2 | Cudy TR3000 before 2.5.42 contains an OS command injection vulnerability that allows a malicious or compromised ACS to execute commands as root by supplying a crafted InternetGatewayDevice.User.{i}.Password value. Attackers can send a SetParameterValues request with shell metacharacters that obuspa_system.lua concatenates into a luci.util.exec() command string, gaining root command execution.</description>
+    <title>CVE-2026-82179 - NVD - CVSS Score v3.1: 4.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82179</link>
+    <guid isPermaLink="false">03c1f588e025af8bf06335b0c47b83e2</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 4.9 | Dell PowerStore contains an authorization bypass vulnerability. An authenticated administrator could exploit this vulnerability to bypass multi-approver controls on critical operations.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75576 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75576</link>
-    <guid isPermaLink="false">c77017ec42c1ba20270df4e047e08319</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | Cudy TR3000 before 2.5.42 contains a command injection vulnerability that allows authenticated administrators to execute commands as root via an unvalidated multipart filename in the CBI FileUpload handler. Attackers can upload a valid OpenVPN configuration file through the VPN client config page with a filename containing $() shell substitution, which is passed through Lua %q to /bin/sh -c.</description>
+    <title>CVE-2026-86353 - NVD - CVSS Score v3.1: 5.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86353</link>
+    <guid isPermaLink="false">2c1ca5a47d3bcc5df0eb178c69d7f5ad</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.0 | Dell PowerStore contains a use of a weak cryptographic algorithm vulnerability that could allow an attacker with existing privileged access to the appliance to recover stored credentials.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75577 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75577</link>
-    <guid isPermaLink="false">7a9b62681a2dfa1056bac5339348bd17</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | Cudy TR3000 before 2.5.42 contains a command injection vulnerability that allows authenticated administrators to execute commands as root by storing a malicious WireGuard private key. Attackers can save a private_key containing $() shell substitution and call the vpn.export_conf method on the /cgi-bin/luci/rpc/app JSON-RPC endpoint, which passes the key to a wg pubkey shell command.</description>
+    <title>CVE-2026-91094 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91094</link>
+    <guid isPermaLink="false">5e5bec5aab2d772edb82691ed5f65d8f</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS: não informado | A directory traversal bug was discovered when unpacking 3.0 (quilt) source packages, where the packaging tarball could contain the quilt database directory (.pc) with attacker controlled symlinks, where that in combination with patches that would fail to apply, could be used to make the code used to restore the backup files to either modify or remove the files pointed to by the attacker controlled symlinks.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75578 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75578</link>
-    <guid isPermaLink="false">ed41ca7c4122280e408b550504b94c92</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | Cudy TR3000 before 2.5.42 contains a command injection vulnerability in luci/model/cbi/vpn/openvpn/client.lua, which embeds the shellquote()-quoted remote host token of an uploaded OpenVPN configuration inside an already single-quoted sed program run by os.execute(), so the nested quotes terminate the outer quote. Authenticated administrators can upload an .ovpn file whose remote host token contains a semicolon to execute arbitrary commands as root.</description>
+    <title>CVE-2026-92241 - NVD - CVSS Score v3.1: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92241</link>
+    <guid isPermaLink="false">afa21bb46e47593ab6d1f5e02ec3a97f</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.7 | The AVRCP browsing channel's L2CAP receive-buffer callback, browsing_avrcp_l2cap_alloc_buf() in subsys/bluetooth/host/classic/avrcp.c, allocated from the shared avctp_browsing_rx_pool with K_FOREVER. L2CAP invokes that callback from the Bluetooth RX work queue thread (bt_workq, &quot;BT RX WQ&quot;), both for the head buffer of a new SDU and — through l2cap_br_alloc_frag() and net_buf_append_bytes() — for every further fragment of a reassembled SDU. That same thread is the only context that ever releases these buffers, after bt_l2cap_br_recv_seg() delivers a completed SDU and calls net_buf_unref(), so a wait taken there can never be satisfied.
+
+The pool holds CONFIG_BT_MAX_CONN + 1 buffers of CONFIG_BT_AVRCP_BROWSING_L2CAP_MTU bytes (two buffers of 339 bytes in the default configuration). A connected browsing peer can drain it because bt_l2cap_br_recv_seg() in subsys/bluetooth/host/classic/l2cap_br.c accepts the SDU length declared in an SAR_START segment without bounding it by br_chan-&gt;rx.mtu: a peer that announces a large SDU and then streams continuation segments forces one pool buffer per segment-worth of data. Once the pool is empty the next allocation blocks forever inside the callback.
+
+Triggering the flaw requires a build with CONFIG_BT_CLASSIC and the experimental CONFIG_BT_AVRCP_BROWSING option, an application that registers AVRCP callbacks, and a BR/EDR peer that has established the AVRCP control channel and then the browsing channel, which requires an encrypted (paired) link. No malformed packet is needed — a few hundred bytes of ordinary segmented L2CAP traffic suffice.
+
+The consequence is a permanent hang of the whole Bluetooth host, not just of AVRCP: the blocked thread drains bt_dev.rx_queue for all HCI ACL data and low-priority events and also runs the host's internal work items, so all connections stop being serviced and the state is unrecoverable without a reboot. There is no memory-corruption or information-disclosure component. The fix allocates with K_NO_WAIT, so an empty pool now yields a local-busy indication or a channel disconnect that the application can recover from.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
