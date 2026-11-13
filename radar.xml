@@ -5,259 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 17:01:17 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-105671 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105671</link>
-    <guid isPermaLink="false">b02a5a57d3d464aef4582d296f3935c4</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | The login flow in Zenitel Connect before 1.11.0 returns different error responses depending on whether a submitted username exists, which allows remote attackers to enumerate valid user accounts via crafted login requests.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-109091 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109091</link>
-    <guid isPermaLink="false">126c10f8df0db06061c72c86e7701e0b</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 7.8 | A buffer overflow in handling EDID Display-Range descriptors in X.Org xwayland before 24.1.15 and X Server before 21.1.26 could be used by malicious monitors to crash the x server or execute cote.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111545 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111545</link>
-    <guid isPermaLink="false">083843cd776734e7533dc9873e0a7a30</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 8.8 | Dell PowerStore contains a SQL Injection vulnerability. An authenticated attacker could exploit this vulnerability, potentially leading to disclosure of stored private keys and tampering with trusted certificates.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121808 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121808</link>
-    <guid isPermaLink="false">72c6dcfa3c8ce7b61af820cd809a69d4</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.2 | Improper Handling of Highly Compressed Data (Data Amplification) vulnerability in elixir-grpc grpc_core and grpc allows unauthenticated attackers to exhaust server memory via a compressed Erlang external term in a gRPC message body.
-
-GRPC.Codec.Erlpack.decode/2 (grpc_core/lib/grpc/codec/erlpack.ex, and lib/grpc/codec/erlpack.ex before the package split) passes the message body to :erlang.binary_to_term/2. That function inflates a compressed term in full before it returns. The codec sets no limit on the decoded size, and its type checks run only on the decoded term. The server's max_body_size limit counts the compressed bytes of the request. A request with Content-Type: application/grpc+erlpack can therefore make the server allocate a term much larger than the request body.
-
-This issue affects grpc: from 0.4.0 before 1.0.0; grpc_core: from 1.0.0 before 1.1.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123635 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123635</link>
-    <guid isPermaLink="false">7aff1ee35419c8c14bd30113ad4fb850</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.3 | Missing Release of Resource after Effective Lifetime vulnerability in elixir-grpc grpc_server allows a client to stall all later calls on a shared HTTP/2 connection via calls that the server refuses while their DATA frames are in flight.
-
-The stream handler grpc_stream_h (grpc_server/src/grpc_stream_h.erl) requests flow from Cowboy only for request data that has arrived. When the server refuses a call early, for example because the body exceeds max_body_size or the method is not implemented, Cowboy drops the DATA frames still in flight for that stream. Their bytes are not returned to the connection flow-control window. After enough refused calls the window is empty. No call on that connection can then send a request body, and each call waits until its deadline. Other connections are not affected.
-
-This issue affects grpc_server: from 1.0.0 before 1.1.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124278 - NVD - CVSS Score v4.0: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124278</link>
-    <guid isPermaLink="false">11ee2cbf8cba18faa3fea6a807975a1a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.6 | Authorization Bypass Through User-Controlled Key vulnerability in elixir-grpc grpc_server and grpc allows an attacker to make a handler act on a resource other than the one named in the URL of an HTTP-transcoded route, via a request with a gRPC Content-Type.
-
-Only the transcoding clause of GRPC.Server.do_handle_request/4 (grpc_server/lib/grpc/server.ex, and lib/grpc/server.ex before the package split) applies the route's path bindings to the request message. The Cowboy handler picks that clause from the request Content-Type, not from the route. A request to a transcoded URL with application/grpc or application/grpc-web is decoded from the body alone, so every path-bound field takes its value from the body. A gateway, proxy rule or WAF that authorizes on the URL path sees one resource while the handler receives another.
-
-This issue affects grpc_server: from 1.0.0 before 1.1.0; grpc: from 0.8.0 before 1.0.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126817 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126817</link>
-    <guid isPermaLink="false">96afc583d081ff1e3774bb1c501bb887</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.0 | A flaw in the automatic client-side encryption schema generation of the Mongoid ODM may cause values that an application declared for encryption to be written and stored as cleartext when more than one model is mapped onto the same storage location. No error or warning is raised. A party holding an ordinary read-only database account, with no access to the encryption key material, may then obtain those values in clear form.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126818 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126818</link>
-    <guid isPermaLink="false">341d02d588b45e4fd29d6877fff75aa3</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.1 | A Ruby object-document mapper does not apply its automatic field-level encryption configuration to certain fields when the data model uses class inheritance. Values the application designated for encryption are written to the database in readable form without any error or warning. A database account holding only read access to the application's collections, and no access to the encryption key store, may obtain those values.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-128034 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128034</link>
-    <guid isPermaLink="false">15d745b2bec3d90bd9ab4227b71ff98f</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.5 | In gittuf before 0.18.0, verification of file protection rules uses the quoted, escaped pathnames that Git prints by default for files with special characters (for example non-ASCII characters) instead of the raw paths. Such paths do not match patterns like file:internal/*, so the files are treated as unprotected, and a user who is not authorized by a file protection rule can change a protected file whose name contains special characters and still pass verification.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-128035 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128035</link>
-    <guid isPermaLink="false">25951eb34124a98caf8bb4a9e0ddf664</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.5 | In gittuf 0.10.0 through 0.17.0, the verification workflow does not load policy updates that are propagated from an upstream (controller) repository and recorded in the reference state log after the first entry being verified. Only the propagated policy in effect at the start of verification is applied, so later controller changes to global rules, such as threshold requirements and force-push blocks, are ignored and changes that these rules should block pass verification.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-128036 - NVD - CVSS Score v3.1: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128036</link>
-    <guid isPermaLink="false">a9d043a524d5194b4f19b6619c204903</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 2.3 | In gittuf 0.4.0 through 0.16.0, when a policy update appears within the range of reference state log entries being verified, verification checks only the root of trust signatures of the new policy and not the signatures of its other metadata (rule files). A user trusted to push to the repository who bypasses gittuf policy apply and writes the policy reference and reference state log directly can make an invalid policy apply during verification, weakening or strengthening the rules for later changes. The update is still recorded in the reference state log.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-128037 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128037</link>
-    <guid isPermaLink="false">c7aec30edb1f1fb7615465627bc5977b</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | In gittuf 0.10.0 through 0.15.0, when a minimum threshold global rule and a policy rule protect the same namespace, verification gives the global rule's check over all trusted users in the policy precedence over the policy rule's own authorized users. A user listed in the policy file but not authorized by the policy rule, or fewer users than the rule's threshold, can make changes to the protected namespace that pass verification.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129094 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129094</link>
-    <guid isPermaLink="false">59b3600e837bf56b034b2601c58b9a26</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.3 | @utcp/http before 1.1.14 contains a server-side request forgery vulnerability that allows remote manuals to reach loopback services by bypassing the remote-loopback check with a {host} placeholder. Attackers can supply host arguments like 127.0.0.1 or register tools via Streamable HTTP and SSE discovery to access internal services on the agent machine.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129099 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129099</link>
-    <guid isPermaLink="false">6c38e595ee631524a2e0469e6269637a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | Cudy TR3000 before 2.5.42 contains a remote code execution vulnerability that allows authenticated administrators to run root commands by importing a malicious OpenVPN client configuration. Attackers can include tls-verify or ipchange directives, which the incomplete denylist does not filter, to execute commands as root when the router connects to an attacker-controlled VPN endpoint.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129100 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129100</link>
-    <guid isPermaLink="false">6223221ddddd92fb8627346b9cd25dc3</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | Cudy TR3000 before 2.5.42 contains a remote code execution vulnerability that allows authenticated administrators to execute commands as root by uploading crafted OpenVPN private or tls-auth keys. Attackers can close the inline key block with &lt;/key&gt;, inject directives such as tls-verify that bypass the .ovpn denylist, and have OpenVPN execute the hook as root.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129101 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129101</link>
-    <guid isPermaLink="false">b44e710294e7f076009b9ba9e1d61d6d</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | Cudy TR3000 before 2.5.42 contains a mass assignment vulnerability in the vpn.set_conf App RPC method that allows authenticated administrators to inject arbitrary OpenVPN server options. Attackers can set enabled=1 and a malicious up option in the openvpns object, which the openvpn-hotplug wrapper executes via /bin/sh as root.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129102 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129102</link>
-    <guid isPermaLink="false">c7ee01b4f05e4634de5f7736f3facdfa</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | Cudy TR3000 before 2.5.42 contains a command injection vulnerability that allows authenticated administrators to execute commands as root by injecting newlines into the IPsec keyexchange field of the vpn.set_conf RPC method. Attackers can append a second leftupdown directive to ipsec.conf, which StrongSwan's updown plugin runs as root when an attacker-controlled peer establishes the CHILD_SA.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129103 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129103</link>
-    <guid isPermaLink="false">b92fea00d3df17d6b1f4b2b7c075d965</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | Cudy TR3000 before 2.5.42 contains a command injection vulnerability that allows authenticated administrators to execute commands as root by injecting newlines into reboot_time. Attackers can submit a reboot_time value followed by a newline and crontab line, which /etc/init.d/autoreboot writes to the root crontab for crond to run.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129104 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129104</link>
-    <guid isPermaLink="false">f4c336fb8d662e20d4e669239efaafd8</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.0 | Cudy TR3000 before 2.5.42 contains a dnsmasq configuration injection vulnerability that allows authenticated administrators to inject directives by embedding a newline in the net.set_dhcp leasetime field. Attackers can append address= entries via /etc/init.d/dnsmasq to alter DNS answers for LAN clients, or insert invalid lines that stop dnsmasq.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129105 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129105</link>
-    <guid isPermaLink="false">90c49ee11742dea148d939808978b387</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.0 | Cudy TR3000 before 2.5.42 contains an option injection vulnerability that allows authenticated administrators to inject arbitrary pppd options by embedding quotes and newlines in L2TP credentials. Attackers can submit crafted usernames or passwords to the net.set_wan RPC method, which l2tp.sh writes into a pppd options file, adding options like logfile to the root pppd process.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129110 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129110</link>
-    <guid isPermaLink="false">ff196db7f6e896c6624538a58e652b81</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | sysPass 3.0.1 through 3.2.11 contains an authentication bypass vulnerability that allows unauthenticated attackers to reinstall an already-installed instance by POSTing to the install/install handler, which never checks isInstalled(). Attackers can overwrite config.xml, point the application at an attacker-controlled database, create an administrator account, and plant serialized PublicLink gadget chains triggered via account/viewLink to execute commands.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-49341 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49341</link>
-    <guid isPermaLink="false">c9fba37db90addb08e80d27186614ee0</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 7.5 | BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to version 1.5.1, there is a remotely reachable denial-of-service vulnerability in bacnet-stack affecting the default demo server built from the unmodified apps/server/main.c. This issue has been patched in version 1.5.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-49990 - NVD - CVSS Score v3.1: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49990</link>
-    <guid isPermaLink="false">a2d23804173c1f4206653f7c6e581a74</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 8.6 | BACnet Stack is a BACnet open source protocol stack C library for embedded systems. From versions 1.4.2 to before 1.4.5, and 1.5.0 to before 1.5.1, a signed fileStartPosition taken from AtomicReadFile and AtomicWriteFile stream-access requests is not validated tightly enough before it reaches the RAM file backends. Practical impact includes: reliable denial of service via process crash, out-of-bounds read that may expose adjacent memory contents, or out-of-bounds write that may corrupt heap memory and destabilize the process. This issue has been patched in versions 1.4.5 and 1.5.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-52787 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-52787</link>
-    <guid isPermaLink="false">63ea6742f98a9bce8c1cc95f1fb35939</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 7.5 | BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to versions 1.4.5, 1.5.1, and 1.6.0-rc2, a reachable out-of-bounds write exists when encoding the device.address-binding property. This issue has been patched in versions 1.4.5, 1.5.1, and 1.6.0-rc2.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-52788 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-52788</link>
-    <guid isPermaLink="false">77ede9a8eab3ac27a4c7fabc30a2d039</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.8 | BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to versions 1.4.5, 1.5.1, and 1.6.0, the bsc_node_parse_urls() function in src/bacnet/datalink/bsc/bsc-node.c contains three distinct bugs when parsing space-separated WebSocket URIs from a BACnet/SC Address Resolution ACK message. Two bugs cause out-of-bounds writes past the utf8_urls[10][129] array in the static BSC_ADDRESS_RESOLUTION structure. This issue has been patched in versions 1.4.5, 1.5.1, and 1.6.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-52789 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-52789</link>
-    <guid isPermaLink="false">6bab0af742e68bbaa5f771831329de7e</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 7.5 | BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to versions 1.4.5, 1.5.1, and 1.6.0, a Denial of Service (DoS) vulnerability exists in the BACnet stack's ReadPropertyMultiple (RPM) handler. When processing a malformed RPM request packet that lacks the expected closing tags, the function handler_read_property_multiple enters an infinite loop. This issue has been patched in versions 1.4.5, 1.5.1, and 1.6.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-52790 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-52790</link>
-    <guid isPermaLink="false">df789426562b8bb66ed8f7228a08a1de</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 7.5 | BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to versions 1.4.5, 1.5.1, and 1.6.0, there is a library-level memory safety issue that is reachable from an unmodified official sample server (apps/server-basic/main.c) over BACnet/IP resulting in a stack-use-after-return in writable Device string properties. This issue has been patched in versions 1.4.5, 1.5.1, and 1.6.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-58265 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58265</link>
-    <guid isPermaLink="false">2cad4a400d068bb49760a80dd776e09d</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to versions 1.4.5, 1.5.1, and 1.6.0, a BACnet/SC peer can trigger a heap out-of-bounds read (up to 3 bytes), pre-authentication, in the BACnet/SC header-option decoder. bvlc_sc_decode_proprietary_option() reads the vendor-id and option-type at fixed offsets [3],[4],[5] before checking the option's declared header length, and the option-list validator never enforces a minimum length for proprietary options. This issue has been patched in versions 1.4.5, 1.5.1, and 1.6.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-58498 - NVD - CVSS Score v3.1: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58498</link>
-    <guid isPermaLink="false">3c50c97447c868e110ca6aefc0a4f5a5</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 8.6 | BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to versions 1.4.5, 1.5.1, and 1.6.0, there is a remote global-buffer-overflow in the official router-ipv6 application shipped with bacnet-stack, this results in an out-of-bounds write to the global transmit buffer under ASan. This issue has been patched in versions 1.4.5, 1.5.1, and 1.6.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62972 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62972</link>
-    <guid isPermaLink="false">22c0e1ef9c8dc5f9fc5ab5f4934889ae</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | BACnet Stack is a BACnet open source protocol stack C library for embedded systems. Prior to versions 1.4.5, 1.5.1, and 1.6.0, lighting_command_decode in src/bacnet/lighting.c decodes its first field with the bounded apdu_size - apdu_len, but every nested decode in the operation switch is called with the original full apdu_size while the read pointer has been advanced to &amp;apdu[apdu_len]. The leaf decoders bound their reads against the size they are told, so they read up to apdu_len bytes past the end of the caller's buffer, resulting in an out-of-bounds read. This issue has been patched in versions 1.4.5, 1.5.1, and 1.6.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Fri, 13 Nov 2026 18:02:26 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-62973 - NVD - CVSS Score v3.1: 7.5</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62973</link>
@@ -347,6 +95,262 @@ This can be used to cause denial of service or render the device inoperable by r
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95615</link>
     <guid isPermaLink="false">2a3efb39085cbf5b801c116b7b374c6c</guid>
     <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | OS command injection vulnerability in audio messages API in Zenitel Connect before 1.11.0 allows remote authenticated users to execute arbitrary OS commands as root in the hiatus application container via filename parameter to the /api/system/audio_messages endpoint.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121809 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121809</link>
+    <guid isPermaLink="false">3e2399226344df9ceddabddb2a194bee</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.2 | Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in elixir-grpc grpc_server and grpc allows unauthenticated attackers to occupy a BEAM scheduler indefinitely via a client-streaming or bidirectional-streaming request whose body ends inside a gRPC message.
+
+GRPC.Server.Adapters.Cowboy.read_stream/1 (grpc_server/lib/grpc/server/adapters/cowboy.ex, and the Cowboy adapter in grpc before the package split) asks for more data whenever the buffer does not hold a complete message. Once the request body has ended, every further read returns an empty chunk, so the buffer never changes and the function retries without end. A single 5-byte length prefix sent with END_STREAM keeps one scheduler busy for as long as the connection stays open, and repeated requests exhaust all schedulers.
+
+This issue affects grpc_server: from 1.0.0 before 1.1.0; grpc: from 0.3.1 before 1.0.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124279 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124279</link>
+    <guid isPermaLink="false">b7659262c36ac1096f3148ac60a23e3f</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.2 | Allocation of Resources Without Limits or Throttling vulnerability in elixir-grpc grpc_server allows unauthenticated attackers to exhaust server memory via client-streaming or bidirectional-streaming requests.
+
+The streaming read clause of GRPC.Server.Adapters.Cowboy.Handler.info/3 (grpc_server/lib/grpc/server/adapters/cowboy/handler.ex) asks Cowboy for up to 8,000,000 bytes per read and compares the running total with max_body_size only after the read returns. The gRPC length prefix of a message is not checked before the message is buffered. Each stream can therefore buffer up to one full read beyond the configured limit before it is refused, and many concurrent streams exhaust node memory. Releases before 1.0.6 apply no limit to streaming requests at all.
+
+This issue affects grpc_server: from 1.0.0 before 1.1.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128986 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128986</link>
+    <guid isPermaLink="false">127e980ee26cd2510878f6893ecd717c</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.0 | In Eclipse BaSyx Go Components versions up to and including 1.1.3, ABAC-enabled deployments match `ROUTE` access rules against the fully decoded request path, while the router routes on the raw, still encoded path. An encoded slash (`%2F`) inside a path value is a segment separator for the access check but part of the value for the router, so a request can match a narrow `ROUTE` rule while the handler returns a different, larger resource.
+
+
+
+An authenticated caller whose rules grant READ only on parts of a resource can therefore read the whole resource. In the DPP API, a rule such as `/v1/dpps/*/elements/*`, meant to grant only passport elements, also grants the complete passport whose identifier contains `/elements/`. In the Submodel Repository, AAS Repository and AAS Environment, a rule such as `/submodels/*/submodel-elements/*/attachment`, meant to grant only file attachments, also grants the complete element whose stored idShort contains `%2F`.
+
+
+
+The issue is fixed in Eclipse BaSyx Go Components v1.1.4.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129116 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129116</link>
+    <guid isPermaLink="false">a1fbd85ef70a5e6c25cfecbda89a11ad</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.7 | C-Kermit from 7.0.197 before 11.1.515 contains an authentication bypass vulnerability in the IKSD SSL build that leaves Telnet authentication state at AUTH_VALID after a refused certificate login. Attackers holding a trusted certificate mapped to a refused account can log in as any other account with any password, gaining that account's shell access.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129117 - NVD - CVSS Score v4.0: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129117</link>
+    <guid isPermaLink="false">a66722080fad714554807bbe4775b0ec</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.6 | C-Kermit 8.0.200 before 11.1.515 contains an improper certificate validation vulnerability that allows machine-in-the-middle attackers to impersonate Telnet servers because ssl_reply() never calls ssl_check_server_name(). Attackers can refuse START-TLS, offer Telnet AUTHENTICATION SSL, and present any trusted CA certificate to capture user credentials and session data.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129118 - NVD - CVSS Score v4.0: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129118</link>
+    <guid isPermaLink="false">629f191bff7f55efb2deebbab3d9af6b</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.6 | C-Kermit 8.0.200 before 11.1.515 contains an improper certificate hostname validation vulnerability that allows attackers to impersonate hosts by abusing wildcard matching in dNSName_cmp() in ck_ssl.c. Attackers holding a trusted certificate with over-matching names containing asterisks, question marks, brackets, or empty labels can intercept credentials and data over Telnet, FTP, and HTTP TLS connections.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129119 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129119</link>
+    <guid isPermaLink="false">62d5b2f549ca271103a19e31ecd6de81</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.1 | C-Kermit from 6.0.192 before 11.1.515 contains a file collision protection bypass that allows malicious senders to append data to existing files by marking transfers as RESEND. The gattr() function in ckcfn3.c clears the REJECT discard flag and switches to APPEND without a RECEIVE CONFIRM prompt, letting attackers modify files such as shell startup files.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129120 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129120</link>
+    <guid isPermaLink="false">7a7c85a4d518fb928e8be69cfcc52707</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.9 | C-Kermit 11.0.506 before 11.1.515 contains a RECEIVE CONFIRM bypass vulnerability that allows malicious Kermit servers to write unrequested files without prompting by abusing recursive GET root computation in ckcfns.c. Attackers can send files such as .ssh/authorized_keys or shell startup files under the current directory, which rq_under_root() accepts silently, enabling persistent access or code execution.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129121 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129121</link>
+    <guid isPermaLink="false">6b05e906f4034f6d0d25b5a019097347</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | C-Kermit 8.0.200 before 11.1.515 contains a path traversal vulnerability in doftpget() in ckcftp.c that allows malicious FTP servers to write files outside the intended directory. Attackers can return absolute paths, tilde names, or dot-dot components in NLST or MLSD listings during MGET /RECURSIVE to overwrite files like .bashrc, leading to code execution.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129122 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129122</link>
+    <guid isPermaLink="false">d224b7af0d330075ddbcd31211f46e8d</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.7 | C-Kermit 6.0.192 before 11.1.515 contains a buffer overflow vulnerability in tn_snenv() in ckctel.c that allows malicious Telnet servers to corrupt client memory via crafted NEW-ENVIRON SEND subnegotiation. Malicious or machine-in-the-middle servers can send oversized variable names before authentication, overflowing a 16-byte stack buffer and a miscomputed heap buffer to corrupt stack and heap memory.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129123 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129123</link>
+    <guid isPermaLink="false">27fdf04a4784e40341ef42ac0581815d</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | C-Kermit 8.0.200 before 11.1.515 contains a buffer overflow vulnerability in getreply() in ckcftp.c that allows malicious FTP servers to overwrite client memory by sending overlong security replies. Attackers controlling or intercepting an FTP server can send long PBSZ replies after AUTH TLS, or long ADAT replies in GSSAPI, Kerberos 4, and SRP builds, overflowing the static reply_buf with attacker-controlled bytes.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129124 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129124</link>
+    <guid isPermaLink="false">21b9ffc13e65110c97b72f0c64251142</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.2 | C-Kermit before 11.1.515 contains an OS command injection vulnerability that allows remote clients to execute shell commands by supplying unquoted arguments to REMOTE WHO or REMOTE SPACE. Attackers can append shell metacharacters to arguments passed through WHOCMD or SPACM2 to syscmd(), executing commands on the server host even when DISABLE HOST is set.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129125 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129125</link>
+    <guid isPermaLink="false">c8a2720f248826badbc8b5ee72475fee</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.2 | C-Kermit 6.0.192 before 11.1.515 contains a remote code execution vulnerability that allows Kermit clients to run shell commands on servers with host commands disabled by abusing REMOTE QUERY evaluation. Attackers can send a REMOTE QUERY invoking the command function, or define a macro via REMOTE ASSIGN and call execute to reach RUN, bypassing the nopush restriction and DISABLE HOST.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129126 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129126</link>
+    <guid isPermaLink="false">5a3fa1fa521fe6eedd271a6ec4a44b56</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.2 | C-Kermit before 11.1.515 contains a heap buffer overflow vulnerability in putsrv() in ckcfns.c that allows malicious peers to write past the srvcmd buffer by sending crafted packets. Attackers can use Kermit repeat-count compression in server command, GET, or file-header packets to write attacker-chosen bytes beyond the heap buffer on servers or receiving instances.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129127 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129127</link>
+    <guid isPermaLink="false">858e40ff4de3803068666bf29b56fac6</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.9 | SQLBot through 1.10.3 contains a weak password hashing vulnerability that stores local account passwords in sys_user.password as unsalted MD5 digests via md5pwd() in security.py. Attackers who obtain the user table can recover passwords, including administrator passwords, using precomputed tables or GPU cracking, since identical passwords produce identical hashes.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129128 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129128</link>
+    <guid isPermaLink="false">468cf83b1cb850a8ca2db0f94016b038</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.4 | Goose CLI 1.35.0 before 1.53.0 contains a local code execution vulnerability that allows attackers to run commands by setting diff.external in a repository's .git/config. Attackers can ship a crafted repository that, when the victim runs goose review, executes git diff without --no-ext-diff, running commands as the user and exposing credentials and provider API keys.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129129 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129129</link>
+    <guid isPermaLink="false">19860d0a4c445d4a3ce6967651c23029</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | AiSOC 12.1.0 before 23.3.0 contains a missing authentication vulnerability that allows unauthenticated attackers to query the enrichment service through Next.js console rewrite routes. Attackers can send requests to /api/v1/enrichment/lookup or /api/v1/enrichment/bulk to retrieve threat-intelligence results and set force to true to consume commercial provider API quota.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129130 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129130</link>
+    <guid isPermaLink="false">60a88b904b9bd8ee3b6b28539e7c86a3</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.1 | agent-device from 0.21.36 before 0.21.37 contains a local file disclosure vulnerability that allows authenticated remote callers to read daemon-host files by opening file:// URLs. Attackers can send an open command with a file:// target through /rpc, then issue snapshot to read any plaintext file readable by the daemon account.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129131 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129131</link>
+    <guid isPermaLink="false">5f3e71fb06af9d24d2f95c9be9d05a48</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | Gameyfin before 2.6.2 contains a missing authorization vulnerability that allows unauthenticated attackers to bypass login-required mode by calling Hilla endpoints annotated with @AnonymousAllowed. Attackers can POST to synchronous endpoint methods such as GameEndpoint.sync, which LiveSubscriptionSecurity never checks, to retrieve game catalog metadata, libraries, platforms, plugins and game requests.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129132 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129132</link>
+    <guid isPermaLink="false">f49801e805d9225d42f017a9824f6b59</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 2.3 | MRBS before 1.13.0 contains an LDAP injection vulnerability in web/lib/MRBS/Auth/AuthLdap.php that interpolates unescaped login usernames into DN search and group-membership filters. Attackers with valid directory credentials outside the required group can submit crafted usernames that make the group filter always true, bypassing access restrictions.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129133 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129133</link>
+    <guid isPermaLink="false">d69c329a4a4a6bae51e39d336d31e016</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.1 | MRBS before 1.13.0 contains a CSV formula injection vulnerability that allows authenticated users to inject spreadsheet formulas because the escape() function in web/report.php fails to neutralize leading formula characters. Attackers can store formulas in booking names, descriptions or custom fields that execute when privileged users open exported CSV reports, enabling data exfiltration or command execution via DDE.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129134 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129134</link>
+    <guid isPermaLink="false">92e23cc38319ae96ad6ca2713d07e2f4</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | MRBS before 1.13.0 contains a password reset poisoning vulnerability that allows unauthenticated attackers to redirect reset links by forging the Host header when $url_base is unset. Attackers can request a reset for a victim so AuthDb::notifyUser() emails a link pointing to their host, capturing the reset key when opened to take over accounts including administrators.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129135 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129135</link>
+    <guid isPermaLink="false">888167a562900d1384aa1edc5481c0e1</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.3 | picoquic before 2026.11.05.3e2e3d3 contains an integer overflow vulnerability in picoquic_decode_time_stamp_frame() that allows remote QUIC peers to corrupt stored timestamps by sending oversized TIME_STAMP values. Attackers on connections negotiating the TIME_STAMP extension can send large values shifted by ack_delay_exponent to wrap the result, corrupting RTT and bandwidth estimation and degrading congestion control.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63150 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63150</link>
+    <guid isPermaLink="false">c3118e264aad371faa3282228d020436</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | Omnispace Agora Project through 26.10.0 contains a cross-site request forgery vulnerability that allows remote attackers to forge privileged actions such as administrator user creation by merging $_GET and $_POST parameters without requiring an anti-CSRF token. Attackers can craft a malicious link or auto-navigating page that issues a plain GET request, exploiting the lack of CSRF protection and SameSite=Lax cookie behavior on top-level navigations to create unauthorized administrator accounts.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63151 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63151</link>
+    <guid isPermaLink="false">45e87bcd47ab0171eb146719bfa8e452</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.7 | Omnispace Agora Project through 26.10.0 contains a predictable token generation vulnerability that allows unauthenticated attackers to access private calendar data by exploiting a missing dateCrea value that causes the md5Id token to collapse to md5(calendarId.userId), both small enumerable integers. Attackers can compute valid tokens and request the misc&amp;action=DisplayIcal endpoint with a forged md5Id to read any user's private calendar events without authentication.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63155 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63155</link>
+    <guid isPermaLink="false">4f39c4b1aa86a36db4dffc9a2a99c718</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.3 | Omnispace Agora Project through 26.10.0 contains an open redirect vulnerability that allows remote attackers to redirect users to arbitrary external URLs by manipulating the objUrl parameter in Ctrl.php's redir() function. Attackers can craft login links with objUrl set to a malicious site, causing the application to issue an HTTP 302 redirect to that external URL, which can be abused for phishing and credential theft.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63164 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63164</link>
+    <guid isPermaLink="false">195556d402f6018609559d26ffc744ff</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.1 | Omnispace Agora Project through 26.10.0 contains an insecure direct object reference vulnerability that allows authenticated attackers to access another user's private mail by supplying a crafted reloadMailTypeId parameter to Ctrl::getCurObj() without a readRight() ownership check in CtrlMail.php. Attackers can manipulate the mail identifier value, such as reloadMailTypeId=mail-1, to retrieve the title and body of private messages belonging to other users, resulting in unauthorized disclosure of sensitive communications.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63166 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63166</link>
+    <guid isPermaLink="false">7dbe562a9386f3de1c2750ab9806648e</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.3 | Omnispace Agora Project through 26.10.0 contains a stored cross-site scripting vulnerability that allows attackers to inject malicious HTML markup by controlling imported directory data or an uploaded CSV file, as values are rendered into table cell text and value attributes after only Txt::utf8Encode() with no HTML escaping in VuePersonsImportExport.php. Attackers can craft a CSV cell containing an attribute-breakout payload that is rendered verbatim and executed in the browser of the administrator performing the import, leading to arbitrary script execution in the administrative context.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63167 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63167</link>
+    <guid isPermaLink="false">fe75f4e8c50f951a65f4c543dd81a796</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.5 | Omnispace Agora Project through 26.10.0 contains a SQL injection vulnerability that allows authenticated general administrators to inject arbitrary SQL by setting the personsSort session value, which is concatenated unsanitized into ORDER BY clauses in MdlUser.php and MdlSpace.php. Attackers can submit an error-based extractvalue payload through personsSort to leak database information, such as the MariaDB version, via the user and space listing pages.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63170 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63170</link>
+    <guid isPermaLink="false">5390818b08a3d763347d5ea358eb7e98</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.3 | Omnispace Agora Project through 26.10.0 contains a predictable token generation vulnerability that allows unauthenticated attackers to forge the shared-calendar iCal share token by deriving md5Id() from predictable fields such as object creation time, which is self-disclosed through autorDate and the iCal CREATED field. Attackers can compute the creation minute and forge the md5Id token to access and read a shared calendar's iCal feed without authorization.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
