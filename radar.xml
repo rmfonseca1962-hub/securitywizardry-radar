@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Nov 2026 12:01:38 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 13:02:22 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-124969 - NVD - CVSS Score v3.1: 7.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124969</link>
@@ -210,84 +210,113 @@ Remediation: remove the Quick Page/Post Redirect Plugin WordPress plugin before 
     <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129137 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129137</link>
-    <guid isPermaLink="false">88e1b50545486b50102beea5c2fde9be</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS: não informado | Incorrect default permissions in the agent configuration folder in Devolutions PowerShell Universal 2026.3.4 and earlier allows a local unprivileged user to execute arbitrary code as SYSTEM via a crafted agent configuration file that points the agent to an attacker-controlled server.</description>
+    <title>CVE-2026-124536 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124536</link>
+    <guid isPermaLink="false">63e7cb55a66066efcad940c5a10b6d8d</guid>
+    <description>Saturday 14 November 2026 | NVD | CVSS: não informado | JSON::XS versions before 4.05 for Perl allow memory exhaustion by buffering incremental input past max_size after a NUL byte in incr_parse.
+
+The parser appends each chunk to its buffer and compares max_size with how far it has progressed, not with the buffer length. It treats a NUL byte as the end of the input, so a NUL within the first max_size bytes keeps it short of the limit. The buffer keeps growing, and incr_skip cannot remove the NUL.
+
+A peer streaming data to an incr_parse consumer can exhaust process memory regardless of max_size.</description>
     <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-19194 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19194</link>
-    <guid isPermaLink="false">ee0d0838a7f1f4774c0a2ee370d6febe</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.9 | The HashiCorp cap JWT validation library before version 0.14.0 is vulnerable to a claims validation bypass that may cause downstream applications to make authorization decisions using claim values different from those validated. Exploitation requires attacker-controlled claims in a JWT signed by a key trusted by the application. This vulnerability (CVE-2026-19194) is fixed in cap 0.14.0.</description>
+    <title>CVE-2026-124539 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124539</link>
+    <guid isPermaLink="false">02f2542dc613a387f0009334ffc41407</guid>
+    <description>Saturday 14 November 2026 | NVD | CVSS: não informado | JSON::XS versions before 4.05 for Perl leak the decoded key of an object rejected for a missing colon in decode_hv.
+
+Unless it is short plain ASCII, a quoted key is decoded into a new scalar. Nothing frees that scalar when the object is rejected for a missing ':' after the key.
+
+A process that keeps running after a failed decode retains one key per rejected document, with its size chosen by the sender. Repeated requests exhaust process memory.</description>
     <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-5514 - NVD - CVSS Score v3.1: 3.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-5514</link>
-    <guid isPermaLink="false">ddafd1502fd8ec7eb14e3185f92c0aa8</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 3.3 | IBM Bob 2.0.3 allows unauthorized extensions to retrieve session tokens via the authentication provider API. The token is exposed in the account identifier field during account enumeration, without requiring explicit user consent. This may allow malicious extensions to access sensitive session information and potentially perform unauthorized actions on behalf of the user.</description>
+    <title>CVE-2026-124540 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124540</link>
+    <guid isPermaLink="false">5009cafe7f24ef1581f28040762a6eef</guid>
+    <description>Saturday 14 November 2026 | NVD | CVSS: não informado | JSON::XS versions before 4.05 for Perl allow stack exhaustion via nested tagged values under allow_tags in decode_tag.
+
+With allow_tags, &quot;(&quot; starts a tagged value. Its tag and value are decoded recursively, and each can start another tagged value. Unlike arrays and objects, this nesting is not counted against max_depth.
+
+A run of &quot;(&quot; bytes exhausts the C stack and triggers an uncatchable segmentation fault regardless of max_depth.</description>
     <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-82102 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82102</link>
-    <guid isPermaLink="false">81e6273e197f425dcf30fae6aa299d68</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.4 | IBM DataStage on Cloud Pak for Data 5.4.0.0 could allow a remote authenticated attacker to obtain sensitive information due to a server-side request forgery vulnerability.</description>
+    <title>CVE-2026-124541 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124541</link>
+    <guid isPermaLink="false">88e7b245742f38d65156932b54cb5f76</guid>
+    <description>Saturday 14 November 2026 | NVD | CVSS: não informado | JSON::XS versions before 4.05 for Perl leak the decoded part of a rejected long string in decode_str.
+
+A string is decoded through a fixed-size buffer (16 KiB in 4.04), and each time the buffer fills its contents move into a new scalar. Nothing frees that scalar when the string is then rejected for a control character, an invalid escape, malformed UTF-8 or the end of the input.
+
+A process that keeps running after a failed decode retains the decoded part of each rejected string, with its size chosen by the sender. Repeated requests exhaust process memory.</description>
     <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91868 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91868</link>
-    <guid isPermaLink="false">bf5422afd77f2aff3a6b422d4668263a</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | IBM Security QRadar EDR 3.12 through 3.12.26 could allow a remote authenticated attacker to obtain sensitive information due to improper access control.</description>
+    <title>CVE-2026-129113 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129113</link>
+    <guid isPermaLink="false">db53d37aaa954dbb2b3acd28867a13af</guid>
+    <description>Saturday 14 November 2026 | NVD | CVSS: não informado | JSON::XS versions from 4.0_00 before 4.05 for Perl corrupt the incremental buffer length by chopping past its end in incr_skip after a top-level number.
+
+The incremental parser scans any run of digits, signs, dots and exponent markers as one number, but the decoder stops at the end of a valid number, so the parser keeps an offset into bytes it has not decoded. It then empties the buffer without clearing those bytes, and a later incr_parse call without new input reads them again and moves the offset past the end of the buffer. incr_skip, the documented recovery after an error, removes that many bytes and the buffer length wraps.
+
+A peer sending input such as &quot;1-2&quot; to an incr_parse consumer can make the next read of incr_text exit the process through perl's uncatchable out-of-memory path.</description>
     <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-91869 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91869</link>
-    <guid isPermaLink="false">a7703915a86fc5fc56e804b324ca1647</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 8.1 | IBM Security QRadar EDR 3.12 through 3.12.26 could allow a remote authenticated attacker to bypass security restrictions due to improper rate limiting on TOTP verification.</description>
+    <title>CVE-2026-129114 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129114</link>
+    <guid isPermaLink="false">46f52561e2f3b04856015c2f03858c84</guid>
+    <description>Saturday 14 November 2026 | NVD | CVSS: não informado | JSON::XS versions from 3.04 before 4.05 for Perl write one byte past a heap buffer when appending a one-byte chunk in incr_parse.
+
+The incremental buffer grows to one and a half times the length it must hold, with no room reserved for the terminating NUL. For an empty buffer and a one-byte chunk that request is one byte, which a buffer whose front was removed by earlier decodes can already have, so nothing is reallocated and the NUL lands one byte past the allocation.
+
+A peer streaming data to an incr_parse consumer, choosing how the input is split into reads, can cause a one-byte heap out-of-bounds write.</description>
     <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-94407 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94407</link>
-    <guid isPermaLink="false">e76a68ff4354e7503ebdb8ffc4328f3c</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.5 | IBM ContextForge MCP Gateway 1.0.0 through 1.0.11 is potentially vulnerable to denial of service due to uncontrolled regular expression complexity (CWE-400 / ReDoS). An authenticated user with tool-registration privileges can embed catastrophically backtracking regex patterns in a tool's JSON Schema `pattern` field; when ContextForge validates arguments against that schema, the validation call may consume unbounded CPU, potentially degrading gateway availability.</description>
+    <title>CVE-2026-129115 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129115</link>
+    <guid isPermaLink="false">ed58f8b85319208ad915b725d81f45d8</guid>
+    <description>Saturday 14 November 2026 | NVD | CVSS: não informado | JSON::XS versions from 3.0 before 4.05 for Perl read freed stack memory when a FREEZE result's serialisation grows the Perl stack under allow_tags in encode_rv.
+
+With allow_tags, an object's FREEZE method is called in list context and each returned value is encoded through a saved Perl stack pointer. When encoding a returned value calls back into Perl, through TO_JSON under convert_blessed or another FREEZE, and that callback grows the stack, the stack is reallocated while the saved pointer still refers to the freed block.
+
+Encoding such objects reads freed memory, and encode can return undef without an error.</description>
     <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-97683 - NVD - CVSS Score v3.1: 2.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97683</link>
-    <guid isPermaLink="false">4e902fedacb7d42e9b5cb597b2976b66</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 2.5 | IBM Cyber Fraud 1.0.0 through 1.1.0 could allow a local attacker to bypass security restrictions due to a missing or misconfigured security context.</description>
+    <title>CVE-2026-129250 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129250</link>
+    <guid isPermaLink="false">054755dc8097ee7b946f2be30dc6fa44</guid>
+    <description>Saturday 14 November 2026 | NVD | CVSS Score v4.0: 8.6 | A security vulnerability has been detected in Edimax BR6478ACV2 1.23. The impacted element is the function formPPTPSetup of the file webs. The manipulation of the argument pptpUserName leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-9661 - NVD - CVSS Score v4.0: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9661</link>
-    <guid isPermaLink="false">3a26f7335e5df23bda4d9e41437ff346</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.3 | Poste Italiane Postecert FIRMAOK! 1.6.29 on Windows contains a local privilege escalation vulnerability caused by an uncontrolled OpenSSL search path, where launcher.exe and dependent executables such as updater.exe and tslupdater.exe load OpenSSL configuration and library files from a hardcoded, user-writable directory that does not exist by default. A low-privileged local attacker can create this missing directory and place malicious OpenSSL configuration or library files inside it, causing the application to load and execute attacker-controlled code with the privileges of the user running it, enabling horizontal or, when a higher-privileged user runs the application, vertical privilege escalation up to full system compromise.</description>
+    <title>CVE-2026-129251 - NVD - CVSS Score v4.0: 1.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129251</link>
+    <guid isPermaLink="false">7de66808a108f7e62c32049538619c66</guid>
+    <description>Saturday 14 November 2026 | NVD | CVSS Score v4.0: 1.9 | A vulnerability was detected in hrshadhin CloudSchool up to 3.0.1. This affects an unknown function of the file app/Http/Controllers/Backend/EventController.php of the component Event Description Handler. The manipulation of the argument data results in cross site scripting. It is possible to launch the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-9821 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9821</link>
-    <guid isPermaLink="false">2c808ca803b9a48ea46ac4b342a071d7</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.3 | IBM Cyber Fraud 1.0.0 through 1.1.0 could allow an unauthorized user to inject data into log messages due to improper neutralization of special elements when written to log files.</description>
+    <title>CVE-2026-129427 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129427</link>
+    <guid isPermaLink="false">fea13c7cf5011f09fc846659dece4c8a</guid>
+    <description>Saturday 14 November 2026 | NVD | CVSS Score v3.1: 8.7 | Stored XSS via avatar upload chained with an authentication bypass in /Attachments leads to ATO
+in Cervantes version v1.3-beta could allow an attacker to execute arbitrary code in another user's browser with elevated privileges</description>
     <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-9870 - NVD - CVSS Score v3.1: 6.1</title>
