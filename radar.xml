@@ -5,47 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Nov 2026 23:01:16 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-128885 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128885</link>
-    <guid isPermaLink="false">fbbe81806c0787fd50b42e8bd8cc5105</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 5.5 | A flaw was found in D-Bus. In configurations where the daemon falls back to using the Unix select() mechanism for event monitoring, it does not verify whether file descriptor numbers exceed allocated limits. A local attacker can exploit this flaw by opening a large number of concurrent connections to trigger an out-of-bounds write on the stack. This can cause the daemon to crash, resulting in a Denial of Service (DoS).</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-128987 - NVD - CVSS Score v3.1: 6.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128987</link>
-    <guid isPermaLink="false">c7d9da3618d0f4176236c65314e0f9ae</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.2 | A flaw was found in dbus. A local attacker can exploit this vulnerability by connecting to an affected service, requesting a response, and stopping socket reads while keeping the connection open. Because the socket transport handles broken pipe write errors as retryable, the application enters a continuous retry loop. This can lead to excessive CPU consumption, resulting in a denial of service (DoS) for the target process.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-82504 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82504</link>
-    <guid isPermaLink="false">694e857ee6733176461400b50ac42675</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 9.3 | VITEC EZ TV Platform Server before 8.5.0 contains an unrestricted file upload vulnerability in the upload handler that allows unauthenticated remote attackers to upload arbitrary files by supplying a target filename in the X-FILENAME request header with no authentication or file type validation required. Attackers can upload a malicious ASPX file directly to the web-accessible uploads directory, where it is immediately executable by the web server, achieving remote code execution in the context of the web server process. Patches are available for versions 8.3.0, 8.3.1, 8.4.0, and 8.4.1. Users running releases prior to 8.3.0 should upgrade to 8.5.0+.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-89037 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-89037</link>
-    <guid isPermaLink="false">142284d91b60e51c996009a2f5c05287</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 7.1 | Dolibarr before 24.0.2 contains an insecure direct object reference vulnerability in the REST Documents API for the ticket module that allows authenticated API users to access ticket attachments belonging to other companies by omitting a company-scope check that is only applied via a session variable set during public ticket authentication, which REST API authentication never sets. Attackers with ticket read permission can enumerate predictable ticket identifiers and supply them to the documents endpoint or download path to retrieve sensitive attachments such as invoices and contracts belonging to other third parties.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-92738 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92738</link>
-    <guid isPermaLink="false">fe35afea6c03b2b2b8f3c44a6091dddb</guid>
-    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.8 | Vault's Login MFA feature did not consistently enforce the lifetime of pending two-phase login requests. This may allow a user who previously completed the first authentication factor to complete MFA and obtain a Vault token after the pending request should have expired, including after the user's primary credential has been rotated. This vulnerability (CVE-2026-92738) is fixed in Vault Community Edition 2.2.2 and Vault Enterprise 2.2.2, 1.21.14, and 1.19.26.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 14 Nov 2026 00:03:11 +0000</lastBuildDate>
   <item>
     <title>CVE-2025-43874 - NVD - CVSS Score v4.0: 8.7</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2025-43874</link>
@@ -333,6 +293,46 @@ This issue affects iSTAR Ultra: before 6.9.2.CU02; iSTAR Ultra SE: before 6.9.2.
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9870</link>
     <guid isPermaLink="false">e7542251e02ac4a70cc0b1e503bd17b9</guid>
     <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 6.1 | IBM Cyber Fraud 1.0.0 through 1.1.0 is vulnerable to cross-site scripting. This vulnerability allows an unauthenticated attacker to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128134 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128134</link>
+    <guid isPermaLink="false">75dcfd05c4be361c7bf084f1aa4c2008</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v3.1: 7.8 | NLTK (Natural Language Toolkit) is a suite of open source Python modules, data sets, and tutorials supporting research and development in Natural Language Processing. Prior to 3.10.4, nltk.parse.dependencygraph.dot2img resolves the Graphviz dot executable through PATH but invokes the resulting absolute executable without routing through spawn_trusted, so resolve_trusted_executable ownership and writability validation and safe_env loader environment scrubbing do not run. A local low-privileged attacker who can write to a directory on a POSIX victim's PATH can plant or replace dot, and code executes as the victim when dot2img is called directly or DependencyGraph.repr_svg renders a graph. The current-working-directory-only bare-name vector is blocked and is not this vulnerability; this issue is the residual writable absolute PATH element bypass after CVE-2026-78680. This issue is fixed in version 3.10.4.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129173 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129173</link>
+    <guid isPermaLink="false">c67a2683ad072d5aab6319088dd696bc</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 6.9 | A security flaw has been discovered in Stirling-Tools Stirling-PDF up to 3.3.0. Affected is the function WorkflowParticipantController.getParticipantDetails of the file app/proprietary/src/main/java/stirling/software/proprietary/workflow/controller/WorkflowParticipantController.java of the component Participant Details Endpoint. Performing a manipulation results in insufficient session timeout value. Remote exploitation of the attack is possible. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129180 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129180</link>
+    <guid isPermaLink="false">c32cdf4f2409025602cafdf12b2ba86b</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 5.5 | A flaw has been found in projectworlds Visitor Management System 1.0. This vulnerability affects the function mysqli_query of the file actionpage.php. This manipulation of the argument purpose causes sql injection. It is possible to initiate the attack remotely. The exploit has been published and may be used.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-71519 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71519</link>
+    <guid isPermaLink="false">4991dedc8ee6fb8d544a69426d1d57aa</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | PrestaShop before 8.2.9 and 9.2.1 contains a broken access control vulnerability that allows an authenticated Webservice API key holder to read and modify customer records belonging to any shop in a multi-shop installation. Attackers can exploit the missing record-level shop ownership check in shopHasRight() and saveEntityFromXml() to read sensitive customer data such as password hashes and secure keys, and change a customer's email and password via create, update, and delete requests, resulting in account takeover.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-71531 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71531</link>
+    <guid isPermaLink="false">7663bc74e5a92bb1a51b39eed94b3dc3</guid>
+    <description>Friday 13 November 2026 | NVD | CVSS Score v4.0: 8.6 | PrestaShop before 8.2.9 and 9.2.1 contains an authorization flaw in the Webservice API that allows an attacker holding a key restricted to one shop to act on data of every shop by submitting requests with id_shop=all or id_shop_group=N, which expand the shop context without validating the key's actual shop associations and cause shopHasRight() to evaluate the expanded set as a disjunction. Attackers can exploit this flaw via classes/webservice/WebserviceRequest.php to read, modify, or delete data belonging to shops they are not authorized for, including full customer records such as email addresses, secure_key, and password hashes across the installation.</description>
     <category>NVD</category>
     <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
   </item>
