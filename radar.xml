@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2026 04:02:08 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 05:03:08 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-129353 - NVD - CVSS Score v4.0: 9.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129353</link>
@@ -103,12 +103,12 @@
     <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-120522 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120522</link>
-    <guid isPermaLink="false">69eb0c7bc1bc8b005fc81a934dc85d4e</guid>
-    <description>Saturday 14 November 2026 | NVD | CVSS Score v3.1: 9.8 | The Cloud Storage Manager for Fluent Forms – Google Drive, Dropbox, OneDrive, S3 Uploads plugin for WordPress is vulnerable to Arbitrary File Write in all versions up to, and including, 1.2.0. This is due to missing authorization checks on the `connection/{driver}/save` and `/download/single-file` REST endpoints, combined with insufficient path validation in the Google Drive `downloadFile()` function, where the Google Drive metadata `name` value is concatenated into a local path without `basename()`, `sanitize_file_name()`, or canonical path validation. This makes it possible for unauthenticated attackers to store attacker-controlled Google Drive credentials, trigger a download of an attacker-owned file whose provider-returned filename contains path traversal, and write attacker-controlled content outside the intended `downloads` directory. When the written file has a PHP extension and lands in a web-accessible location, this can lead to remote code execution.</description>
+    <title>CVE-2026-129360 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129360</link>
+    <guid isPermaLink="false">0dc3f15d1cff07ce3b69545f3bac752c</guid>
+    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 6.9 | A weakness has been identified in Linux Foundation Magma up to 1.9.0. The impacted element is an unknown function of the file orc8r/cloud/go/services/obsidian/access/operator.go of the component Obsidian REST. Executing a manipulation of the argument X-Magma-Client-Cert-Serial can lead to authentication bypass by spoofing. The attack can be launched remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-129254 - NVD - CVSS Score v4.0: 2.1</title>
