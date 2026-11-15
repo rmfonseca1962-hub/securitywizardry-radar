@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Nov 2026 02:03:31 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Nov 2026 04:02:08 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-129353 - NVD - CVSS Score v4.0: 9.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129353</link>
@@ -31,93 +31,76 @@
     <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124541 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124541</link>
-    <guid isPermaLink="false">88e7b245742f38d65156932b54cb5f76</guid>
-    <description>Saturday 14 November 2026 | NVD | CVSS: não informado | JSON::XS versions before 4.05 for Perl leak the decoded part of a rejected long string in decode_str.
-
-A string is decoded through a fixed-size buffer (16 KiB in 4.04), and each time the buffer fills its contents move into a new scalar. Nothing frees that scalar when the string is then rejected for a control character, an invalid escape, malformed UTF-8 or the end of the input.
-
-A process that keeps running after a failed decode retains the decoded part of each rejected string, with its size chosen by the sender. Repeated requests exhaust process memory.</description>
+    <title>CVE-2026-129356 - NVD - CVSS Score v4.0: 1.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129356</link>
+    <guid isPermaLink="false">8ad9d184824314ce000474a5d48a6089</guid>
+    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 1.3 | A vulnerability was found in vllm-project vllm 0.30.0/0.31.0. This vulnerability affects unknown code of the file single_type_kv_cache_manager.py of the component Common Prefix Handler. The manipulation results in race condition. The attack may be performed from remote. Attacks of this nature are highly complex. It is stated that the exploitability is difficult. The exploit has been made public and could be used. Upgrading to version 0.32.0 is able to resolve this issue. The patch is identified as e687a251bb056fa527846633f7a1b0a6c0f42374. You should upgrade the affected component.</description>
     <category>NVD</category>
-    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129113 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129113</link>
-    <guid isPermaLink="false">db53d37aaa954dbb2b3acd28867a13af</guid>
-    <description>Saturday 14 November 2026 | NVD | CVSS: não informado | JSON::XS versions from 4.0_00 before 4.05 for Perl corrupt the incremental buffer length by chopping past its end in incr_skip after a top-level number.
-
-The incremental parser scans any run of digits, signs, dots and exponent markers as one number, but the decoder stops at the end of a valid number, so the parser keeps an offset into bytes it has not decoded. It then empties the buffer without clearing those bytes, and a later incr_parse call without new input reads them again and moves the offset past the end of the buffer. incr_skip, the documented recovery after an error, removes that many bytes and the buffer length wraps.
-
-A peer sending input such as &quot;1-2&quot; to an incr_parse consumer can make the next read of incr_text exit the process through perl's uncatchable out-of-memory path.</description>
+    <title>CVE-2026-129454 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129454</link>
+    <guid isPermaLink="false">b3c7714478ed966cb5472be1b706d935</guid>
+    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 7.1 | Zr.Admin.NET commit 85cff6a through commit eb9228a contains an insecure direct object reference vulnerability in GET /workflow/instance/{instanceId} that lets logged-in users view others' workflow instances. Authenticated low-privilege attackers can enumerate sequential instance IDs to read other users' approval requests, including submitted form contents, applicant details and approval records.</description>
     <category>NVD</category>
-    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129114 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129114</link>
-    <guid isPermaLink="false">46f52561e2f3b04856015c2f03858c84</guid>
-    <description>Saturday 14 November 2026 | NVD | CVSS: não informado | JSON::XS versions from 3.04 before 4.05 for Perl write one byte past a heap buffer when appending a one-byte chunk in incr_parse.
-
-The incremental buffer grows to one and a half times the length it must hold, with no room reserved for the terminating NUL. For an empty buffer and a one-byte chunk that request is one byte, which a buffer whose front was removed by earlier decodes can already have, so nothing is reallocated and the NUL lands one byte past the allocation.
-
-A peer streaming data to an incr_parse consumer, choosing how the input is split into reads, can cause a one-byte heap out-of-bounds write.</description>
+    <title>CVE-2026-129455 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129455</link>
+    <guid isPermaLink="false">ccd7477e4043a267df23a4c53d0e91d6</guid>
+    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 5.3 | Zr.Admin.NET commit e6ceaf4 through commit eb9228a contains an insecure direct object reference vulnerability in FrontArticleController that allows authenticated users to change other users' article visibility and pin state. Attackers can send PUT /front/article/changePublic with their own UserId in the body to make private articles public, then read them anonymously via GET /front/article/{id}.</description>
     <category>NVD</category>
-    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129115 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129115</link>
-    <guid isPermaLink="false">ed58f8b85319208ad915b725d81f45d8</guid>
-    <description>Saturday 14 November 2026 | NVD | CVSS: não informado | JSON::XS versions from 3.0 before 4.05 for Perl read freed stack memory when a FREEZE result's serialisation grows the Perl stack under allow_tags in encode_rv.
-
-With allow_tags, an object's FREEZE method is called in list context and each returned value is encoded through a saved Perl stack pointer. When encoding a returned value calls back into Perl, through TO_JSON under convert_blessed or another FREEZE, and that callback grows the stack, the stack is reallocated while the saved pointer still refers to the freed block.
-
-Encoding such objects reads freed memory, and encode can return undef without an error.</description>
+    <title>CVE-2026-129464 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129464</link>
+    <guid isPermaLink="false">8da4a965260f114e5aa8bdd053043fab</guid>
+    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 8.7 | Zr.Admin.NET commit 0ee1ab8 through commit eb9228a contains a path traversal vulnerability that allows any logged-in user to read arbitrary server files via the path parameter of /common/DownloadFile. Attackers can supply absolute paths or ../ sequences to read appsettings files and use the JwtSettings SecretKey to forge administrator tokens.</description>
     <category>NVD</category>
-    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129250 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129250</link>
-    <guid isPermaLink="false">054755dc8097ee7b946f2be30dc6fa44</guid>
-    <description>Saturday 14 November 2026 | NVD | CVSS Score v4.0: 8.6 | A security vulnerability has been detected in Edimax BR6478ACV2 1.23. The impacted element is the function formPPTPSetup of the file webs. The manipulation of the argument pptpUserName leads to buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-129465 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129465</link>
+    <guid isPermaLink="false">176fdd275c39c7e6d88b50b29e7a1852</guid>
+    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 8.7 | Zr.Admin.NET commit af07ffc through commit eb9228a contains an insecure direct object reference vulnerability in SysProfileController.UpdateProfile that allows any authenticated user to modify other accounts via UserId. Attackers can set the administrator's phone number to one they control, request an SMS code via /checkMobile, and log in through /PhoneLogin to take over the administrator account.</description>
     <category>NVD</category>
-    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129251 - NVD - CVSS Score v4.0: 1.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129251</link>
-    <guid isPermaLink="false">7de66808a108f7e62c32049538619c66</guid>
-    <description>Saturday 14 November 2026 | NVD | CVSS Score v4.0: 1.9 | A vulnerability was detected in hrshadhin CloudSchool up to 3.0.1. This affects an unknown function of the file app/Http/Controllers/Backend/EventController.php of the component Event Description Handler. The manipulation of the argument data results in cross site scripting. It is possible to launch the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-129466 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129466</link>
+    <guid isPermaLink="false">4c40dd58678804c6c501261bee4ea703</guid>
+    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 5.3 | Zr.Admin.NET commit 1845017 through commit eb9228a contains a missing authorization vulnerability in TasksController.Get that allows any logged-in user to read scheduled task details without the monitor:job permission. Attackers can obtain task ids from the unprotected /monitor/jobLog/list endpoint and retrieve job parameters, API URLs, cron expressions, and stored SQL statements.</description>
     <category>NVD</category>
-    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129427 - NVD - CVSS Score v3.1: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129427</link>
-    <guid isPermaLink="false">fea13c7cf5011f09fc846659dece4c8a</guid>
-    <description>Saturday 14 November 2026 | NVD | CVSS Score v3.1: 8.7 | Stored XSS via avatar upload chained with an authentication bypass in /Attachments leads to ATO
-in Cervantes version v1.3-beta could allow an attacker to execute arbitrary code in another user's browser with elevated privileges</description>
+    <title>CVE-2026-129357 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129357</link>
+    <guid isPermaLink="false">e0fbfa149183e35a95a7612a10b56bd8</guid>
+    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was determined in Linux Foundation Magma up to 1.9.0. This issue affects the function hostOrgMiddleware of the file nms/server/host/middleware.ts of the component Host Middleware. This manipulation of the argument role causes missing authorization. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2025-71464 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-71464</link>
-    <guid isPermaLink="false">672d0ac735f1648fc14742fb08ad67e8</guid>
-    <description>Saturday 14 November 2026 | NVD | CVSS Score v4.0: 5.3 | @kolkov/angular-editor before 3.0.4 contains a cross-site scripting vulnerability in toggleEditorMode() that assigns source view text to innerHTML without DomSanitizer sanitization. Attackers can induce users to paste HTML with event handlers such as img onerror into source mode, executing script in the application's origin when toggling views.</description>
+    <title>CVE-2026-129358 - NVD - CVSS Score v4.0: 1.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129358</link>
+    <guid isPermaLink="false">f3be490435acb016c50e2f743502ee22</guid>
+    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 1.9 | A vulnerability was identified in Linux Foundation Magma up to 1.9.0. Impacted is the function handleReact of the file nms/server/main/routes.ts of the component NMS. Such manipulation leads to cross site scripting. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2025-71465 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-71465</link>
-    <guid isPermaLink="false">9928c46c92396f710fe19afa5aa557a2</guid>
-    <description>Saturday 14 November 2026 | NVD | CVSS Score v4.0: 5.3 | @kolkov/angular-editor before 3.0.3 contains a cross-site scripting vulnerability in refreshView() that writes HTML from ngModel or reactive form controls to innerHTML without DomSanitizer, bypassing the default sanitize option. Attackers can store HTML with event-handler attributes in content later loaded into the editor to execute script in the application's origin for users opening it.</description>
+    <title>CVE-2026-129359 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129359</link>
+    <guid isPermaLink="false">321e3185cecb827fb4d5eb600046193c</guid>
+    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security flaw has been discovered in Linux Foundation Magma up to 1.9.0. The affected element is an unknown function of the file orc8r/lib/go/registry/interceptors.go. Performing a manipulation results in hard-coded credentials. The attack can be initiated remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-120522 - NVD - CVSS Score v3.1: 9.8</title>
