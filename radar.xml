@@ -5,159 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Nov 2026 21:02:06 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-119348 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119348</link>
-    <guid isPermaLink="false">48d2df4bc122dd54eed3dcd865ce2935</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.3 | Next.js is a React framework for building full-stack web applications. Prior to 15.5.29 and 16.4.5, self-hosted Next.js App Router route handlers and the fetch cache that return a fetched upstream response unchanged can emit a response whose declared framing does not match the body actually sent. When the application is behind an HTTP/1.1 reverse proxy that permits pipelined response queueing, a crafted upstream response can desynchronize responses between clients. The resulting desynchronization can inject a response into another client's queue or disclose another client's response. This issue is fixed in versions 16.4.5 and 15.5.29.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119349 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119349</link>
-    <guid isPermaLink="false">5cc360d6a654ba138e9eae81ee017ec4</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.3 | Next.js is a React framework for building full-stack web applications. From 16.0.0 until 16.4.5, Next.js App Router applications that pass binary arguments, such as Uint8Array or Blob values, to functions using the 'use cache' directive can generate identical cache keys for distinct arguments. Requests with different binary arguments can therefore share a cached result, causing cross-user disclosure of cached data or allowing one request to poison results returned to another user. This issue is fixed in version 16.4.5.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119350 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119350</link>
-    <guid isPermaLink="false">2c5131bad3fd16e126905d8eb0c6eb87</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.3 | Next.js is a React framework for building full-stack web applications. From 16.4.0 until 16.4.5, self-hosted Next.js applications served with next start can allow an unauthenticated request to poison a shared fallback shell when cacheComponents is true and partialPrefetching is unset or false. The affected dynamic route must have a prerenderable param declared by generateStaticParams whose requested value was not generated at build time, at least two never-prerenderable params below it, a layout that reads the shallower param inside a Suspense boundary, and a blocking fallback shell. A request-supplied placeholder route param whose path segment equals the percent-encoded bracketed name of its own deeper route param is incorrectly treated as unresolved, while the shallower concrete value is rendered into the shared shell and its HTTP status is persisted. Depending on application behavior, subsequent routes sharing that shell can receive a persistent 404 or attacker-selected substituted param text. Client hydration corrects substituted text, and the issue does not enable markup or script injection or disclose data. This issue is fixed in version 16.4.5.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119351 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119351</link>
-    <guid isPermaLink="false">c13ecc04955c40a68e270fef72e0ed83</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.3 | Next.js is a React framework for building full-stack web applications. From 16.2.0 until 16.4.5, Next.js applications with Cache Components enabled can reuse an outer 'use cache' entry across root param values when a nested 'use cache' call reads a root param through next/root-params and returns a value containing pending promises. React Flight can deliver the ready portion to the outer function before the inner cache finishes publishing its root-param dependencies. The outer entry can then complete and be persisted under a key that omits the root param, causing the first written value to be served for other root param values and allowing the outer entry to ignore nested cache tag invalidation and lifetimes. The leaked value is not attacker controlled and depends on which invocation writes the entry first. This variant does not require an existing inner cache entry or a slow cache handler and is not covered by the fix for CVE-2026-103004. This issue is fixed in version 16.4.5.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119790 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119790</link>
-    <guid isPermaLink="false">dbc5e2eeeb019548b8387464319f87ba</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.3 | Next.js is a React framework for building full-stack web applications. From 16.3.0 until 16.4.5, Next.js applications using the same 'use cache' function directly during rendering and through unstable_cache() can disclose cached data across root params when that function reads a root param. During the first fill after a cold process start, cross-request deduplication allows a concurrent unstable_cache() request to join the direct call's in-flight fill and receive its result before the root param mismatch is rejected. unstable_cache() then persists that result under a key that omits root params, causing later requests for other root param values to receive the same entry until revalidation or eviction. Exploitation requires the unstable_cache() request to arrive while the first fill is in flight. Outside this race, nesting 'use cache' inside unstable_cache() raises an unsupported-operation error, and avoiding that nesting prevents the issue. This issue is fixed in version 16.4.5.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125442 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125442</link>
-    <guid isPermaLink="false">9404da7ff5aa9cda35788d0ec72e7d4b</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in PluginUs.Net HUSKY woocommerce-products-filter allows Code Injection.This issue affects HUSKY: from n/a through 1.4.7.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125453 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125453</link>
-    <guid isPermaLink="false">290f4fafad1c2e8e9472df46129c88e1</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in ThimPress LearnPress learnpress allows Code Injection.This issue affects LearnPress: from n/a through 4.4.13.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125681 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125681</link>
-    <guid isPermaLink="false">29acc2e37a715a1beb0bcd2ef862a607</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in ThimPress LearnPress learnpress allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects LearnPress: from n/a through 4.4.13.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125739 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125739</link>
-    <guid isPermaLink="false">9541a6fb39229f86c6f6b943ab714cdb</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in ThimPress LearnPress learnpress allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects LearnPress: from n/a through 4.4.13.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125770 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125770</link>
-    <guid isPermaLink="false">6986e021d8fe19b10d2b3d1883be83ee</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in ThimPress LearnPress learnpress allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects LearnPress: from n/a through 4.4.13.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125773 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125773</link>
-    <guid isPermaLink="false">a66110ab8a03a7123c22b187b8da1db9</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in VillaTheme Lucky Wheel for WooCommerce – Spin a Sale woo-lucky-wheel allows Code Injection.This issue affects Lucky Wheel for WooCommerce – Spin a Sale: from n/a through 1.2.4.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125797 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125797</link>
-    <guid isPermaLink="false">80ea5301899c67766722762728afeb35</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Arraytics Timetics timetics allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Timetics: from n/a through 1.0.66.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127218 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127218</link>
-    <guid isPermaLink="false">2d433292ffd3a59340fd7d5b0267cb9d</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.7 | Axigen Mail Server 10.3.3.67 through 10.3.3.x, 10.4.42 through 10.4.x, 10.5.29 through 10.5.x, 10.6.x before 10.6.41, and 10.7.x before 10.7.3 contains an unauthenticated denial of service vulnerability caused by uncontrolled recursion when validating query parameter and cookie values with a recursive regular expression engine before authentication in the WebAdmin and WebMail services. Attackers can send a single HTTP request with a query parameter or cookie value of a few thousand characters to exhaust the worker thread stack and crash the server process, taking down SMTP, IMAP, POP3, and web services repeatedly.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-128995 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128995</link>
-    <guid isPermaLink="false">4e56c06ad05cdf86e8c7cf13fa037f5c</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.4 | Missing Authorization vulnerability in Very Good Plugins WP Fusion Lite wp-fusion-lite allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP Fusion Lite: from n/a through 3.48.0.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-128998 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128998</link>
-    <guid isPermaLink="false">6dade8daa399c0bf3d1362a960c70e08</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Automattic WP Job Manager wp-job-manager allows Code Injection.This issue affects WP Job Manager: from n/a through 2.4.10.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129018 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129018</link>
-    <guid isPermaLink="false">ab899cd19bde894519c43a03c5644212</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Gora Tech Cooked cooked allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Cooked: from n/a through 1.17.0.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129026 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129026</link>
-    <guid isPermaLink="false">82b3fc2f404e936f5db7816b48f4ee19</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in YITH YITH WooCommerce Product Add-Ons yith-woocommerce-product-add-ons allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects YITH WooCommerce Product Add-Ons: from n/a through 4.35.0.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129035 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129035</link>
-    <guid isPermaLink="false">30e02b45007c2ead422e33c7f05df069</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in weDevs WP User Frontend wp-user-frontend allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP User Frontend: from n/a through 4.3.14.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129038 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129038</link>
-    <guid isPermaLink="false">a9aafab061839426f44b6e09e2c5a7d0</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in weDevs WP ERP erp allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP ERP: from n/a through 1.17.11.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Mon, 16 Nov 2026 22:01:33 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-129046 - NVD - CVSS Score v3.1: 5.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129046</link>
@@ -331,6 +179,162 @@ To remediate this issue, users should upgrade to version 1.0.31 or later. Users 
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95839</link>
     <guid isPermaLink="false">08161e4737361b2db5e53ac432a3ed1e</guid>
     <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 7.1 | containerd is an open-source container runtime. From 2.2.0 until 2.2.10, 2.3.7, and 2.4.2, image manifest processing through the transfer service can encounter a child descriptor containing the io.containerd.manifest.subject annotation and a malformed digest. Pulling or importing such an image, including through a default CRI PullImage request, can trigger an unrecovered panic and crash the containerd daemon. In Kubernetes, kubelet retries can repeatedly trigger the crash and disrupt container operations on the worker node. This issue is fixed in versions 2.2.10, 2.3.7, and 2.4.2.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-102892 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102892</link>
+    <guid isPermaLink="false">6c0da462939165189aeeb530fc593c86</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260416.0, public TAXII 2.1 collections configured with taxii_public set to true are served under the high-privilege SYSTEM_USER context rather than a restricted public-sharing user context. Unauthenticated requests can therefore bypass object markings, organization segregation, and authorized_members restrictions and retrieve restricted threat-intelligence objects that match the collection filters; a broad or absent filter can expose most of the database. Version 7.260416.0 remediates this issue for new configurations, but public-sharing configurations created before that version are not covered and are tracked separately in GHSA-25r9-q6rp-j7jw.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104253 - NVD - CVSS Score v3.1: 5.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104253</link>
+    <guid isPermaLink="false">9c41f8cd2952be4793be0fb26fde97db</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.2 | OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260715.0, a ProfileQuery response can expose the user's TOTP MFA secret after activation. A person who can access the profile response can recover the secret, enroll a duplicate authenticator, and generate valid one-time codes, undermining the account's second-factor protection. This issue is fixed in version 7.260715.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104258 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104258</link>
+    <guid isPermaLink="false">61ce1ea890caf36878676dce91837175</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.5 | OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. In 7.260722.0 and earlier, a user with the SETTINGS_SETCUSTOMIZATION capability can configure a webhook notifier with an arbitrary destination URL and invoke notifierTest to make the OpenCTI server send the request immediately. The request can target internal services or cloud metadata endpoints that are reachable from the server, enabling server-side request forgery without waiting for a notifier event. No fixed release is verified by the available evidence; later releases remain unclassified.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104840 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104840</link>
+    <guid isPermaLink="false">1a10d5982371c9fe596add89aa8873ba</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 9.2 | OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260428.0, the token GraphQL mutation used for primary login has no endpoint-specific rate limit, while the global Express limiter defaults to permitting 10,000 requests in a one-second window. An unauthenticated remote attacker can make password guesses at network speed against a chosen user account and, if a credential is recovered, access the account's threat-intelligence data and permitted operations. This issue is fixed in version 7.260428.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111760 - NVD - CVSS Score v3.1: 8.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111760</link>
+    <guid isPermaLink="false">7168550e00d265f6b8546761bf7cc571</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 8.0 | Git is a fast, scalable, distributed revision control system with an unusually rich command set that provides both high-level operations and full access to internals. Prior to 2.50.2, 2.51.3, 2.52.1, 2.53.1, 2.54.1, 2.55.1, and 2.56.1, an attacker-controlled repository hosted by the attacker rather than on a normal forge site can exploit git clone --recurse-submodules by causing Git to overwrite a submodule gitfile with a symbolic link. The symbolic link can point to a directory containing attacker-controlled Git configuration or hooks, allowing those hooks or configuration to execute code on the cloning user's system. The issue requires the recursive-submodule option, and users should avoid cloning repositories from untrusted sources. This issue is fixed in versions 2.50.2, 2.51.3, 2.52.1, 2.53.1, 2.54.1, 2.55.1, and 2.56.1.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-114505 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114505</link>
+    <guid isPermaLink="false">ab11866ab510fb6f4baef71eed948656</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.3 | OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260722.0, the GraphQL endpoint accepts query operations over HTTP GET because CSRF prevention is disabled (csrfPrevention: false), placing the complete GraphQL query and its arguments in the request URL. Server and reverse-proxy logs, browser history, and shared caches can retain sensitive filters, marking-restricted identifiers, and investigation search arguments, allowing a person with access to those records to recover legitimate users' query contents. GraphQL mutations are not accepted over GET, and the issue does not permit code execution. This issue is fixed in version 7.260722.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115563 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115563</link>
+    <guid isPermaLink="false">85be4f629ca6e4089a0c2fe5966ea453</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 7.5 | The Model Context Protocol Python SDK is the official Python SDK for Model Context Protocol servers and clients. From 1.9.1 until 1.30.0 and 2.2.0, OAuth client support in mcp.client.auth can send credentials to an authorization server chosen by an untrusted MCP server. ClientCredentialsOAuthProvider and PrivateKeyJWTOAuthProvider cannot identify the authorization server that owns their credentials. Affected HTTP clients using those providers, OAuthClientProvider, or the deprecated 1.x RFC7523OAuthClientProvider can disclose a client_secret, authorization code, PKCE code_verifier, or signed client assertion. MCP servers, stdio clients, and clients that attach their own tokens or headers are not affected. Interactive OAuthClientProvider use requires a person to start sign-in, while the unattended providers do not. For ClientCredentialsOAuthProvider and PrivateKeyJWTOAuthProvider, callers must configure issuer= after upgrading because omission still follows the MCP server's advertised authorization server, and the deprecated RFC7523OAuthClientProvider must be replaced because it has no issuer option. A stored client registration without an issuer remains unbound after upgrading, so stored OAuth client information must be cleared once to register again or a manually pre-registered record must be updated with its issuer. This issue is fixed in versions 1.30.0 and 2.2.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120699 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120699</link>
+    <guid isPermaLink="false">323b59667a625887c0fdf79c470e9dda</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 9.4 | CubeSandbox is an instant, concurrent, secure, and lightweight sandbox for AI agents. Prior to 0.5.1, any authenticated tenant permitted to call POST /sandboxes can supply metadata[&quot;host-mount&quot;] with an arbitrary existing host path because the control plane performs no authorization check or allowed-prefix validation for the path. injectHostDirMounts forwards the path to prepareHostDirVolume, where Cubelet uses mount --rbind through the function to perform a recursive bind mount as root and exposes the host subtree to the tenant's MicroVM through virtio-fs, read-write by default. This allows host-root file access and modification, host code execution, access to the container runtime, and compromise of co-resident tenants without a kernel or virtual-machine-monitor flaw. This issue is fixed in version 0.5.1.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121708 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121708</link>
+    <guid isPermaLink="false">3db21112e135cf324d86f3c95129f723</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 8.1 | OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260513.0, Draft Workspace identifiers are accepted without verifying that the authenticated user can access the referenced draft. Any authenticated user can enumerate draftWorkspaces, use a disclosed DRAFT_ID with draftWorkspaceEntities to read unpublished reports, descriptions, observables, and other staged intelligence, or place the identifier in the opencti-draft-id header and run mutations that inject entities and relationships into another user's private workspace. The flaw permits cross-user disclosure and tampering but does not cause a denial of service. This issue is fixed in version 7.260513.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124017 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124017</link>
+    <guid isPermaLink="false">c750fe5697ddb38b2fb4e232d3c8741a</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.4 | Phison E12 and E18 PCIe SSD controllers contain a Secure Boot bypass vulnerability that allows a privileged local attacker to inject persistent boot-patch tuples into the unsigned, CRC-protected flash ID page read by the BootROM. By overwriting a fuse-derived RAM variable via a crafted patch entry using Phison Vendor Specific Commands, an attacker can force CRC-only firmware verification instead of signature checking, enabling an unsigned firmware image to load and creating a persistent controller-level implant that survives firmware reinstallation and operates below the host operating system.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126681 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126681</link>
+    <guid isPermaLink="false">e6bf0f7881ed32dd08dc657167112b83</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.8 | Improper restriction of intended endpoints in the connection configuration handling of the AWS Labs Timestream for InfluxDB MCP Server (awslabs.timestream-for-influxdb-mcp-server) before 0.0.19 might allow a remote unauthenticated actor (via prompt injection) to obtain the InfluxDB API token configured on the server, sent to a crafted endpoint controlled through an InfluxDB URL introduced in the MCP client context.
+
+
+
+To remediate this issue, users should upgrade to version 0.0.19 or later and rotate any InfluxDB API tokens configured for the server.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-57150 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57150</link>
+    <guid isPermaLink="false">5ba6091b983ed50bccc4e673564df70d</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.7 | GLPI is a free asset and IT management software package. Prior to 10.0.28, 11.0.10, and 12.0.1, authenticated users can craft a URL that invokes massive actions without all required object- and action-specific authorization checks. The bypass permits operations outside the user's granted rights, including unauthorized plugin activation, deactivation, and uninstallation for plugins already present on the filesystem and other state-changing maintenance actions. This issue is fixed in versions 10.0.28, 11.0.10, and 12.0.1.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-57151 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-57151</link>
+    <guid isPermaLink="false">78ba53f5beb6b405108e90a48705fdc6</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.9 | GLPI is a free asset and IT management software package. From 11.0.0 until 11.0.10 and 12.0.1, an authenticated technician can modify the two-factor authentication security of a user with higher privileges because the affected operations do not enforce all required authorization checks for the target user. This allows the technician to disable or take control of the higher-privileged user's two-factor authentication protection. This issue is fixed in versions 11.0.10 and 12.0.1.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63477 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63477</link>
+    <guid isPermaLink="false">7071c9a646b31b7637edc41425cc66df</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 8.8 | OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260624.0, an Organization Administrator with VIRTUAL_ORGANIZATION_ADMIN and KNOWLEDGE_KNUPDATE can use organizationFieldPatch to replace the administered organization's grantable_groups without a SETTINGS_SETACCESSES authorization check. The administrator can add the built-in Administrators group to that grant scope and then bypass the grantable_groups guard added by the incomplete CVE-2026-44730 remediation to add their own account to Administrators. Membership grants the BYPASS capability after session cache refresh, escalating the tenant-scoped account to global administrator with access across organizations, users, settings, markings, connectors, and ingestion. This issue is fixed in version 7.260624.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-65683 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65683</link>
+    <guid isPermaLink="false">f377d133471e97c7b4380bcab87557e1</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS: não informado | Rejected reason: This CVE ID has been rejected or withdrawn by its CVE Numbering Authority.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-71306 - NVD - CVSS Score v3.1: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71306</link>
+    <guid isPermaLink="false">8c12a3198e812610d217fcd027c7afed</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.8 | Mikochi is a minimalist file manager with streaming capabilities. Prior to 1.10.1, authenticated users of bare-metal instances configured with a non-default trailing-slash DATA_DIR can use the Move endpoint to supply traversal-containing source or destination paths. The affected path validation can resolve those paths outside the configured data directory, allowing files to be written beyond Mikochi's intended storage boundary. Docker deployments that confine the data directory to a mounted volume and configurations whose DATA_DIR lacks a trailing slash are not affected by the described attack. This issue is fixed in version 1.10.1.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-76822 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76822</link>
+    <guid isPermaLink="false">c0c13624d906b1e120e8bb9c688e5d69</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.3 | OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260701.0, the caseIncidentAdd, caseRfiAdd, and caseRftAdd GraphQL mutations require only authentication and do not require a capability check. An authenticated user with reader-level permissions can therefore create incident, request-for-information, and request-for-takedown case objects regardless of the user's assigned role, causing unauthorized changes to platform data. This issue is fixed in version 7.260701.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-76823 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76823</link>
+    <guid isPermaLink="false">b9241412f257aba3a05bb234a6e18f56</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.7 | OpenCTI is an open source platform for managing cyber threat intelligence knowledge and observables. Prior to 7.260706.0, the logsWorkerConfig GraphQL query is authorized with the broad CONNECTORAPI capability and returns Elasticsearch connection details including elasticsearch_username, elasticsearch_password, elasticsearch_api_key, the URL, index, proxy, and TLS-verification setting. A holder of any connector API bearer token can retrieve this credential material. If the returned credentials are valid and Elasticsearch is reachable, the caller can directly read, modify, or delete OpenCTI indices and audit history outside application-layer role, marking, organization, and audit controls, with the practical impact bounded by the credentials' privileges and network reachability. This issue is fixed in version 7.260706.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77597 - NVD - CVSS Score v3.1: 3.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77597</link>
+    <guid isPermaLink="false">ba683d93b0bc8977cd3e14d474650526</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 3.5 | iSponsorBlockTV is a SponsorBlock client for YouTube TV clients. Prior to 2.11.0, src/iSponsorBlockTV/dial_client.py trusts the SSDP LOCATION URL supplied by a local-network responder without validating its destination. During automatic discovery, this can cause an attacker-directed GET request and a constrained POST request to a path ending in /YouTube; the POST uses application-defined headers and an application-defined payload rather than attacker-selected request contents. The requests can reach internal services, but the detailed request behavior states that response data and errors are not returned to the attacker, making the demonstrated behavior blind SSRF with bounded integrity impact. This issue is fixed in version 2.11.0.</description>
     <category>NVD</category>
     <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
   </item>
