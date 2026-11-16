@@ -5,289 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Nov 2026 18:01:18 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-101351 - NVD - CVSS Score v4.0: 1.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101351</link>
-    <guid isPermaLink="false">d3f54afbf145b1c47e231e244c1b350f</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 1.9 | LibreOffice can import PICT images, which may be embedded in documents. Parts of a crafted image could be left unwritten, so leftover memory became part of the imported image and could be saved with the document. In fixed versions the pixels of a new image start out cleared, so any part the image data does not fill is blank.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-101352 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101352</link>
-    <guid isPermaLink="false">2ea3b7b462192d51121a543262357583</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.5 | A document can carry its own user interface customizations, such as keyboard shortcuts, menus and toolbars, which take effect while the document is open. A command bound in these customizations could run a macro or a script even when the macro security settings did not allow the macros of the document, so a user who pressed a shortcut or chose a menu item in a crafted document could run code without any warning. In fixed versions the customizations of a document are treated like its other macro content, and the macro and script commands in them are only kept when the macros of the document are allowed.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-101353 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101353</link>
-    <guid isPermaLink="false">3c959fd64f8417cd6998fe0cfd69b771</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.8 | LibreOffice Base documents can contain an embedded HSQLDB database, and other documents can use such a database as a data source. The definition of the database in a crafted document could make the database engine create or write files at locations outside the document, chosen by the document. In fixed versions the files of an embedded database are kept in a private location, and an embedded database cannot create table files anywhere else.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-101892 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101892</link>
-    <guid isPermaLink="false">664b40abc6803452a10ff579f3f16211</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.5 | LibreOffice documents in ODF format can contain form controls, such as buttons and text fields, and each control names the component that implements it. The component a control named was created even when it was not a form control, and the settings stored with the control were applied to it, so a crafted document could change the configuration of LibreOffice in a way that led to code being run. In fixed versions a control whose component is not a form control is ignored.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-101929 - NVD - CVSS Score v4.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101929</link>
-    <guid isPermaLink="false">e5486d25b292770929a97f70eccac08c</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.4 | LibreOffice documents can contain Basic macro libraries. A library protected by a password is stored in the document in a compiled form, which may be read when the document is loaded. When a value in the compiled form used an older record format, it could be read as a different type from the one the existing value held, which corrupted memory. In fixed versions the existing value is cleared before a value in the older format is read.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-101930 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101930</link>
-    <guid isPermaLink="false">4d9789b1a5dc1c9fd34c15656272eae2</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.5 | LibreOffice Writer can open HTML documents, and an HTML document can bind macros to events of the document as a whole, such as the document being opened or closed. Macros bound to these events were not taken into account by the macro security check, so they could run when the document was opened, whatever the macro security level. In fixed versions these macros follow the macro security settings like any other macro in the document.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-101933 - NVD - CVSS Score v4.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101933</link>
-    <guid isPermaLink="false">4f3cc9cc13741f9abec397a544565380</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.4 | LibreOffice documents can contain Basic macro libraries. A library protected by a password is stored in the document in a compiled form, which may be read when the document is loaded. An out-of-bounds write existed when the compiled form was read, because the positions of its strings were not checked against the size of the data they refer to, and a type found by name was not checked to be of the right kind. In fixed versions these positions are checked, a library that fails the check is not loaded, and a type of the wrong kind is ignored.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104007 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104007</link>
-    <guid isPermaLink="false">95dd21ace19b681bf6190768912f3565</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.5 | LibreOffice can connect to databases through JDBC drivers written in Java. A spreadsheet can use a database as the source of a pivot table, and the database document that describes the connection names the driver to use. The location the driver was loaded from was taken from the database document itself, so a crafted document could make LibreOffice load and run Java code that the document supplied when it was opened. This is a different route to the problem fixed for CVE-2026-63277. In fixed versions the driver location is taken only from the driver configuration of the user, and a pivot table whose source is a database document named by a URL connects only once the user allows links to be updated.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104692 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104692</link>
-    <guid isPermaLink="false">9c939cc1f6538507631b54d58faf7d7f</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.5 | LibreOffice bundles the HSQLDB database engine, which can be used through the generic JDBC database driver as well as through the support for embedded databases. HSQLDB lets SQL statements call Java methods, limited to the classes that are permitted. When HSQLDB was used through the generic JDBC driver this limit did not apply, so SQL in a crafted document could call any Java method and run code. In fixed versions SQL can call only the built-in functions of HSQLDB, whichever way the database is reached.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104920 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104920</link>
-    <guid isPermaLink="false">999811176415b2c137daddc4d20fd6c4</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.5 | LibreOffice Calc can link a cell range to an external data source, and the link is saved in the document. A Java database driver for such a link is loaded from a class path. Opening a crafted document could still load a Java database driver from a location outside the local machine and run its code, by a route that the fix for CVE-2026-63277 did not cover. In fixed versions an entry in a Java class path has to be a file URL that names a file on the local machine.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104933 - NVD - CVSS Score v4.0: 6.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104933</link>
-    <guid isPermaLink="false">f7d5fba3b46df06ff5835e6cb5c74d85</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.7 | LibreOffice can embed audio and video in documents. Where it plays media with GStreamer, as on Linux, the media is opened when the document is loaded, and a preview image of a video is shown in the document and in its exports, such as PDF. A crafted media file could make GStreamer read a local file and draw its text into the preview image, so that the content of the file ended up in an exported document. This is a different route to the problem fixed for CVE-2026-63269. In fixed versions GStreamer opens only media in a short list of common, self-contained container formats.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-106535 - NVD - CVSS Score v4.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106535</link>
-    <guid isPermaLink="false">6cb97da663be814e11c350144792ca03</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.4 | libvisio is a library that reads drawings in the VSD and VSDX formats. LibreOffice and other applications use it to import such drawings. An out-of-bounds write existed when a crafted VSDX file contained a malformed path from one part of the drawing to another. In fixed versions a malformed path is handled without writing outside its data.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-108169 - NVD - CVSS Score v4.0: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108169</link>
-    <guid isPermaLink="false">4af2d75c8626f8f6fe6aab4722dc58f5</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 7.3 | LibreOffice can open a web query file (.iqy), which names a web page to import into a spreadsheet, when the file is given on its command line, for example when a file manager or another program opens the file with LibreOffice. The address in such a file was used without the checks that apply to an address given on the command line directly, so a crafted file could make LibreOffice do something other than open a web page, up to running code. In fixed versions only an http or https address is taken from a web query file.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-113630 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113630</link>
-    <guid isPermaLink="false">1e363202ee82b5787ed07b9af419d394</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 7.8 | Command injection in the documentserver-flush-cache.sh maintenance helper in ONLYOFFICE Docs (Document Server) 9.4.0-129 on the official onlyoffice/documentserver container allows a local attacker with command execution as the ds user to execute arbitrary commands as root via a crafted --hash argument that is interpolated unvalidated into a GNU sed expression, where the sed e flag runs attacker-controlled commands. The packaged sudoers policy permits ds to run the helper as root without a password and with unrestricted arguments.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-113631 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113631</link>
-    <guid isPermaLink="false">f1ae032a178da9d0cd242e4c49c2162c</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 6.5 | Incorrect authorization in the sendForm RPC handler and Session JWT reconnect handling in ONLYOFFICE Docs (Document Server) 9.4.0-129 on the official onlyoffice/documentserver container allows an authenticated view-only user to export a reconstructed copy of a document, including content the viewer never displayed such as custom XML, custom document properties and field instruction text, even when download and form-filling are disabled. The attacker reconnects with a valid Session JWT while substituting an attacker-controlled callback URL, which the Session JWT does not bind, then invokes sendForm over RPC, causing DocumentServer to send the reconstructed DOCX to that URL.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129235 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129235</link>
-    <guid isPermaLink="false">3b35e0b7230936ea4bb9b2afe52de5a6</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Kubeshark is an eBPF-powered network observability tool for Kubernetes. From 53.1.0 until 53.4.0, the download_file tool in cmd/mcpRunner.go accepts caller-controlled path and dest values, fetches a selected Kubeshark Hub API response, and writes the returned bytes through os.Create(dest) in callDownloadFile without confining the destination. An attacker who influences arguments through an AI agent driving kubeshark mcp can write Hub-supplied bytes to any path writable by the local MCP user and can read captured network traffic from default auth-disabled Hub deployments. The tool is registered without --allow-destructive; reliable code execution is not demonstrated because the bytes are constrained to Hub API responses. Hub-side default authentication remains outside this remediation, so captured traffic can remain readable in default auth-disabled Hub deployments after the local destination-write fix. The destination-write issue is fixed in version 53.4.0.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129236 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129236</link>
-    <guid isPermaLink="false">504c2858d305190c09ec433686b2991d</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 7.2 | Kubeshark is an eBPF-powered network observability tool for Kubernetes. From 53.1.0 until 53.4.0, the start_kubeshark MCP tool in cmd/mcpRunner.go uses callStartKubeshark to append caller-controlled pod_regex as a bare positional argument to kubeshark tap without a -- end-of-options separator, allowing a value beginning with --set to be parsed as a Helm value override. An attacker who influences tool arguments against kubeshark mcp --allow-destructive can redirect the privileged worker, Hub, and front images through tap.docker.registry and tap.docker.tag to an attacker-controlled registry. Because the deployed worker DaemonSet runs privileged with host networking and host filesystem access, a malicious image can obtain node and cluster-admin access when the host already has permission to deploy it. This issue is fixed in version 53.4.0.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129237 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129237</link>
-    <guid isPermaLink="false">4417e16acab4b1da817c7236e060d179</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.4 | qbee-agent is the device agent component of the qbee.io IoT device management platform. Prior to 2026.41, the unpackTar extraction logic in app/utils/tar.go validates cleaned archive entry paths with strings.HasPrefix(targetPath, destdirClean) without enforcing a path-separator boundary. When UseContext enables the Docker Compose build context path in app/configuration/bundle_docker_compose.go, a less-privileged archive supplier with delegated configuration and/or file-manager access can provide a sibling-prefix traversal entry that passes the check, causing utils.UnpackTar to create directories and regular files outside the intended context extraction directory with qbee-agent process privileges, despite the supplier lacking authority to write those sibling files. In deployments where only full device or fleet administrators can provide Docker Compose context archives, this behavior is hardening rather than a crossed security boundary. The demonstrated impact is limited to nearby cache or project paths sharing the destination prefix, may affect integrity or availability of qbee-agent-managed Docker Compose state, and does not establish arbitrary absolute-path writes or direct code execution. This issue is fixed in version 2026.41.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129239 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129239</link>
-    <guid isPermaLink="false">9b5f286219dd90da826dea76d882e47d</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 6.5 | Directus is a real-time API and App dashboard for managing SQL database content. Prior to 12.3.1, Directus allows an authenticated non-admin with update permission on directus_shares to modify user_created, role, item, and collection on an existing owned share because authorization checks the pre-update row and does not revalidate the merged row. The update path does not force user_created to the acting user or rerun share access checks when item or collection changes. Setting user_created and role to administrator identifiers causes guest share authentication to derive administrator accountability from both fields, exposing data reachable from the shared item beyond the owner and share role permissions. The issue requires update permission on directus_shares, an item the account can share, and knowledge of administrator user and role identifiers, and it does not issue an administrator token or provide write or availability impact. This issue is fixed in version 12.3.1.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-18563 - NVD - CVSS Score v4.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18563</link>
-    <guid isPermaLink="false">d53d9e0a10d85761d9c12bb406fb8cd9</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.4 | LibreOffice supports fonts embedded in documents. When a document is exported to PDF, the fonts it uses are embedded in the PDF, and a font in CFF (Compact Font Format) is converted to another font format on the way. An out-of-bounds write existed when the charstring program of a crafted font was interpreted, because some indexes and ranges taken from the font were not checked against the size of the data they refer to. In fixed versions these indexes and ranges are checked, and a font that fails the checks is not converted.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-18564 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18564</link>
-    <guid isPermaLink="false">59dd3bb3419e9fb4a19eac1bbc90dcd7</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.9 | LibreOffice can export documents to PDF protected by a password. With the PDF 2.0 option the file is encrypted with 256-bit AES, using a file encryption key and salts that are meant to be random. The key and the salts were drawn from a pseudo-random number generator that is not suitable for cryptography, so the encryption key of an exported PDF could be recovered without knowing the password. In fixed versions the key and the salts are drawn from the random source of the operating system.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-18565 - NVD - CVSS Score v4.0: 1.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18565</link>
-    <guid isPermaLink="false">fc252b2268f853e7b04447e40e9cc6b3</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 1.1 | LibreOffice has an option, called stealth mode in earlier advisories, that stops documents from outside the trusted file locations from loading linked images and other content. The option is not on by default. With the option on, a linked background image in an HTML document was still fetched while the document was imported. In fixed versions a linked background image is checked against the option like other linked images, and is not fetched when the option blocks it.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-18566 - NVD - CVSS Score v4.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18566</link>
-    <guid isPermaLink="false">441c67d29d3e3208defdfeff63c9811e</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.4 | LibreOffice can import EMF, EMF+ and WMF images, which may be embedded in documents. Several out-of-bounds reads existed in the readers for these formats, because sizes, counts and offsets taken from a crafted image were not checked against the data the image actually holds. In fixed versions these values are checked against the size of each record and the data that remains, and a record that fails the checks is not used.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-64890 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-64890</link>
-    <guid isPermaLink="false">20023a18406a171cda060401c7afd12e</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.5 | : Cleartext Storage of Sensitive Information vulnerability in Johnson Controls Open Blue Companion Android App on Android allows : Retrieve Embedded Secrets from Software.
-
-This issue affects Open Blue Companion Android App: before R2.22.0.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-84234 - NVD - CVSS Score v4.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84234</link>
-    <guid isPermaLink="false">12814a61913cbd210c9081101454b494</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.4 | LibreOffice can open PDF files in Draw, where the PDF import converts each page into drawing objects that can be edited. Images in the PDF, including images with a transparency mask, are converted along the way. An out-of-bounds write existed when an image with a transparency mask was converted, because positions taken from a crafted image were not checked against the size of the image buffer. In fixed versions the image size is limited, and the position of each mask pixel is checked before it is written.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-84443 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84443</link>
-    <guid isPermaLink="false">0dcd77971dd1d705d89df8710ab1470c</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.5 | LibreOffice Base documents can bind macros to document events, such as opening or closing the document. The macro security setting decides whether macros that come with a document may run. Macros bound to the events of a Base document were run without the macro security setting being applied, so opening or converting a crafted database document could run a macro and, through it, any command. In fixed versions macros bound to the events of a Base document follow the macro security setting, as macros in other documents do.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-86046 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86046</link>
-    <guid isPermaLink="false">b1f4542eff362c341af7ac82d06d2a0d</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 7.1 | termux-sync is an open source tool for backing up and restoring a Termux environment across devices. Prior to 1.2.4, termux-sync restore uses the parent directory of the untrusted manifest.json files.*.source value as an extraction destination, and extract_archive calls tarfile.extract on archive members without enforcing a destination boundary. A victim who restores a malicious or tampered backup from local, shared, GitHub, or Google Drive storage can have files written anywhere the Termux user can write, including shell startup files or executable scripts that can lead to code execution when later used. The restore path also accepts unsafe backup_name values for temporary paths, and archive members are not constrained to the intended destination. This issue is fixed in version 1.2.4.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-87932 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87932</link>
-    <guid isPermaLink="false">9332659fcbea2bdcb4e528b77ba0b30a</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.8 | LibreOffice Writer can save documents in DOCX format. A document can contain content controls whose values are bound to custom XML data, and that data is updated with the current values when the document is exported, including in a conversion run from the command line. Values taken from the document were not escaped where they were used, so a crafted document could write a file of its choosing anywhere the user can write when it was exported to DOCX. In fixed versions these values are written into the document directly, and the XSLT transformations LibreOffice runs can no longer write files or use the network.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-88987 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88987</link>
-    <guid isPermaLink="false">68f4520cde06fa6c655b543fdd067ef7</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.4 | Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. Prior to 6.2.13, the HTML sanitiser does not remove script-capable XHTML and XML data URIs from stored CMS content. A CMS author can save such content, and JavaScript executes in the browser of another user who views it. This issue is fixed in version 6.2.13.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-88988 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88988</link>
-    <guid isPermaLink="false">b2ddc736944cf9b0194e1be2219e9cb7</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.4 | Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. Prior to 6.2.13, the HTML sanitiser does not remove SVG data URIs from stored CMS content even though SVG documents can execute script. A CMS author can save such content, and JavaScript executes in the browser of another user who views it. This issue is fixed in version 6.2.13.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-88989 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88989</link>
-    <guid isPermaLink="false">a4f4ca51a61b2cb1297f7aafafdb9d91</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.3 | Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. Prior to 6.2.13, a CMS user who can edit records through a GridField detail form can send a direct save request that creates a new record even when the user does not have permission to create that record type. The server-side save path checks edit access but does not enforce the required create permission before persistence. This issue is fixed in version 6.2.13.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91110 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91110</link>
-    <guid isPermaLink="false">24485d9c1cc57f02819b3797b305e951</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 6.4 | Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. Prior to 6.2.13, the HTML sanitiser does not normalize certain control bytes that browsers ignore when parsing URLs. A CMS author can place those bytes before a javascript: URL in stored content so the sanitiser misses the dangerous scheme, and JavaScript executes in the browser of another user who views the content. This issue is fixed in version 6.2.13.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91112 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91112</link>
-    <guid isPermaLink="false">1ae5bdfbcbaed712e6697e05254705d4</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 6.8 | Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. Prior to 6.2.13, a user with CMS_ACCESS_SecurityAdmin but without ADMIN can edit or reparent a group that grants ADMIN-equivalent permissions through an assigned role or a parent group, thereby escalating to full administrative privileges. This issue is fixed in version 6.2.13.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91113 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91113</link>
-    <guid isPermaLink="false">a61a317135eba622885946e8dd043a42</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.3 | Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. Prior to 6.2.13, a CMS user who can edit a record through a GridField detail form can submit a user-controlled ClassName value to change the record into an unrelated class without the create and edit permission checks required for that target class. This permits an unauthorized record type change outside the GridField's intended model hierarchy. This issue is fixed in version 6.2.13.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91114 - NVD - CVSS Score v3.1: 4.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91114</link>
-    <guid isPermaLink="false">d14d7e1cdc19f298b5fcfcee09e3b59c</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.4 | Silverstripe Framework is a PHP framework which powers the Silverstripe CMS. Prior to 6.2.13, PermissionCheckboxSetField accepts permission codes that the field did not offer and stores them without an allowlist, then renders permission codes without escaping them. A user with access to the Security section can save attacker-controlled content as a permission code, causing JavaScript to execute in the browser of another user who views the field. This issue is fixed in version 6.2.13.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Mon, 16 Nov 2026 20:01:39 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-91115 - NVD - CVSS Score v3.1: 8.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91115</link>
@@ -325,6 +43,290 @@ This issue affects Open Blue Companion Android App: before R2.22.0.</description
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-98100</link>
     <guid isPermaLink="false">4a0017b0c3dbe56d00876cc6a96d3170</guid>
     <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.4 | LibreOffice can import documents in the HWP format, including pictures that link to an external file. An out-of-bounds read existed when the link target of a crafted picture was read, so memory past the picture data could end up in the converted document. In fixed versions the link target is taken only from the picture data.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129295 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129295</link>
+    <guid isPermaLink="false">0489236929b8a0b2befe20b7acb1e9d1</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 7.5 | mail-parser is a tool that parses emails by enhancing the Python standard library and extracting message details into a comprehensive object. From 4.2.0 until 4.6.1, attacker-controlled email headers can cause polynomial regular-expression backtracking during ordinary parse_from_string(), parse_from_bytes(), or parse_from_file() calls. In src/mailparser/utils.py, get_addresses() invokes the _ADDR_FALLBACK_RE fallback when strict address parsing yields no usable address, and overlapping quantifiers rescan padded address headers quadratically or cubically. In src/mailparser/const.py, parse_received() applies _CLAUSE_SPLITTER to uncollapsed whitespace in a Received header, causing quadratic backtracking when a whitespace run is not followed by a clause keyword. A small, well-formed message can keep mail gateway, ticketing, quarantine, or archival parsing workers busy for extended periods. This issue is fixed in version 4.6.1.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129296 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129296</link>
+    <guid isPermaLink="false">4a5010fe01ef0a6187b5089f10204ab2</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 6.5 | mail-parser is a tool that parses emails by enhancing the Python standard library and extracting message details into a comprehensive object. From 3.8.0 until 4.6.0, the write_attachments() and write_sample() APIs use attacker-controlled attachment filenames without sufficient sanitization and path containment validation. Directory traversal sequences and absolute filesystem paths can cause an attachment to be written outside the intended output directory. An attacker can overwrite files accessible to the parsing process when an application extracts attachments from a crafted message. This issue is fixed in version 4.6.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129297 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129297</link>
+    <guid isPermaLink="false">1ec5d49555b52265c97f5166194b7629</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 7.5 | mail-parser is a tool that parses emails by enhancing the Python standard library and extracting message details into a comprehensive object. Prior to 4.6.2, get_server_ipaddress() can select an attacker-controlled address from attacker-controlled Received headers. The minimum mechanism needed to distinguish this spoofing issue, derived from the advisory's remediation analysis and verified fix evidence, is appearance-based candidate selection that can treat bracketed IPv4 or IPv6 addresses or HELO markers in sender-written text as MTA-recorded addresses and can continue past a trusted hop that names no address. Applications that rely on the returned value can attribute a message to an attacker-selected sender IP address. This issue is fixed in version 4.6.2.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129299 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129299</link>
+    <guid isPermaLink="false">2e7268e03210fd2f98742758e22a8787</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 6.5 | mail-parser is a tool that parses emails by enhancing the Python standard library and extracting message details into a comprehensive object. Prior to 4.6.2, multiple message-processing behaviors can raise exceptions or silently lose content. Headers colliding with methods such as Parse, Message, and Write_Attachments can place bound method objects into parsed output and raise TypeError when a caller requests JSON serialization such as mail_json. When byte input is parsed through parse_from_bytes(), an 8-bit header value returned as email.header.Header can likewise raise TypeError when an X_raw accessor passes the value to json.dumps; both exceptions are outside the MailParserError hierarchy. Separately, rewritten names such as Subject_json and X_Spam_Flag can be substituted or disappear from mail, headers, and JSON output while has_defects remains false, and a headerless message can be treated as falsy before parser state is initialized, causing body and attachment properties to return empty values without an error signal. These behaviors can abort message processing or hide malicious indicators from downstream scanners. This issue is fixed in version 4.6.2.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129300 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129300</link>
+    <guid isPermaLink="false">6dfa2b32b825786e977a08faa4def59c</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | mail-parser is a tool that parses emails by enhancing the Python standard library and extracting message details into a comprehensive object. From 3.7.0 until 4.6.3, receiveds_format() in src/mailparser/utils.py catches only TypeError and ValueError while converting the trailing date of an attacker-controlled Received header. An out-of-range year can cause calendar.timegm() to raise OverflowError, and a sufficiently large timezone offset can cause datetime.fromtimestamp() to raise OSError. These exceptions are outside the MailParserError hierarchy, so one crafted header can abort the entire message parse through every parse_from_* entry point and may drop a queued batch. This issue is fixed in version 4.6.3.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129301 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129301</link>
+    <guid isPermaLink="false">bc530d2eeae1df1560d3964111a2b890</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 6.5 | mail-parser is a tool that parses emails by enhancing the Python standard library and extracting message details into a comprehensive object. From 4.6.0 until 4.6.3, write_attachments() calls _safe_attachment_filename() and write_sample() without isolating failures for individual attacker-controlled MIME parts. An RFC 2231 filename containing a NUL, a basename exceeding NAME_MAX, or an undecodable base64 payload can raise ValueError, OSError, or binascii.Error and abort the entire save loop. Later attachments remain unwritten; when a caller catches only MailParserError, the failure is not surfaced through the expected library-exception path. If a downstream scanner or sandbox reads only the extraction directory, a payload after the crafted part can be missed even though it remains in the delivered message, and the aborted batch also causes availability loss. This issue is fixed in version 4.6.3.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129306 - NVD - CVSS Score v3.1: 4.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129306</link>
+    <guid isPermaLink="false">a4a0d9929d3c2130e92f7f3fcf8f2aea</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.4 | libspdm is a sample implementation that follows the DMTF SPDM specifications. Prior to 3.8.3 and 4.0.0-rc2, libspdm_x509_verify_cert_chain() in os_stub/cryptlib_openssl/pk/x509.c and os_stub/cryptlib_mbedtls/pk/x509.c validates certificate signatures one link at a time instead of validating the complete X.509 path. In deployments using a pinned root with a constrained multi-tier PKI, an attacker holding a valid issuer credential below a constrained CA can present a subordinate certificate that exceeds pathLenConstraint or nameConstraints and may be accepted for SPDM identity validation. Exploitation requires the application to use libspdm's backend validation without an additional certificate-chain validation mechanism, the pinned root cannot be substituted, and the deployment's measurement policy must allow identity impersonation alone to satisfy its acceptance requirements. The mbedTLS backend remains unable to enforce nameConstraints because upstream mbedTLS does not implement that check. The full-chain validation changes are released in versions 3.8.3 and 4.0.0-rc2.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101327 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101327</link>
+    <guid isPermaLink="false">69248ef587d04c6e387ed95b47886eee</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 7.8 | A maliciously crafted DLL placed in a predictable, attacker-writable temporary directory used by the Autodesk Installer can lead to privilege escalation to NT AUTHORITY\SYSTEM due to insufficient validation of loaded libraries. An attacker with local and low-privilege access could exploit this vulnerability to execute arbitrary code as SYSTEM.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119346 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119346</link>
+    <guid isPermaLink="false">40809c0383cd4c391dffffc021f7618f</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.0 | Next.js is a React framework for building full-stack web applications. From 15.0.0 until 15.5.29 and 16.4.5, Next.js applications that use NextResponse to set cookies on Edge runtime routes expose the internal x-middleware-set-cookie header in the public response. This affects App Router route handlers and Pages Router Edge API routes. The header duplicates each cookie value and its attributes, so JavaScript already running on the same origin can read values that the Set-Cookie header marks HttpOnly, including sensitive session tokens set on an affected response. This issue is fixed in versions 16.4.5 and 15.5.29.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119347 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119347</link>
+    <guid isPermaLink="false">7e735e54b5d316acf64e03408b09692d</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.9 | Next.js is a React framework for building full-stack web applications. From 15.0.0 until 15.5.29 and 16.4.5, the /_next/image optimizer in self-hosted Next.js deployments can process attacker-supplied SVG content even when dangerouslyAllowSVG is false, which is the default. The SVG reaches a parser that the application intended to keep disabled, increasing exposure to denial of service and vulnerabilities in SVG decoding. This issue is fixed in versions 16.4.5 and 15.5.29.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119348 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119348</link>
+    <guid isPermaLink="false">48d2df4bc122dd54eed3dcd865ce2935</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.3 | Next.js is a React framework for building full-stack web applications. Prior to 15.5.29 and 16.4.5, self-hosted Next.js App Router route handlers and the fetch cache that return a fetched upstream response unchanged can emit a response whose declared framing does not match the body actually sent. When the application is behind an HTTP/1.1 reverse proxy that permits pipelined response queueing, a crafted upstream response can desynchronize responses between clients. The resulting desynchronization can inject a response into another client's queue or disclose another client's response. This issue is fixed in versions 16.4.5 and 15.5.29.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119349 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119349</link>
+    <guid isPermaLink="false">5cc360d6a654ba138e9eae81ee017ec4</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.3 | Next.js is a React framework for building full-stack web applications. From 16.0.0 until 16.4.5, Next.js App Router applications that pass binary arguments, such as Uint8Array or Blob values, to functions using the 'use cache' directive can generate identical cache keys for distinct arguments. Requests with different binary arguments can therefore share a cached result, causing cross-user disclosure of cached data or allowing one request to poison results returned to another user. This issue is fixed in version 16.4.5.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119350 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119350</link>
+    <guid isPermaLink="false">2c5131bad3fd16e126905d8eb0c6eb87</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.3 | Next.js is a React framework for building full-stack web applications. From 16.4.0 until 16.4.5, self-hosted Next.js applications served with next start can allow an unauthenticated request to poison a shared fallback shell when cacheComponents is true and partialPrefetching is unset or false. The affected dynamic route must have a prerenderable param declared by generateStaticParams whose requested value was not generated at build time, at least two never-prerenderable params below it, a layout that reads the shallower param inside a Suspense boundary, and a blocking fallback shell. A request-supplied placeholder route param whose path segment equals the percent-encoded bracketed name of its own deeper route param is incorrectly treated as unresolved, while the shallower concrete value is rendered into the shared shell and its HTTP status is persisted. Depending on application behavior, subsequent routes sharing that shell can receive a persistent 404 or attacker-selected substituted param text. Client hydration corrects substituted text, and the issue does not enable markup or script injection or disclose data. This issue is fixed in version 16.4.5.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119351 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119351</link>
+    <guid isPermaLink="false">c13ecc04955c40a68e270fef72e0ed83</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.3 | Next.js is a React framework for building full-stack web applications. From 16.2.0 until 16.4.5, Next.js applications with Cache Components enabled can reuse an outer 'use cache' entry across root param values when a nested 'use cache' call reads a root param through next/root-params and returns a value containing pending promises. React Flight can deliver the ready portion to the outer function before the inner cache finishes publishing its root-param dependencies. The outer entry can then complete and be persisted under a key that omits the root param, causing the first written value to be served for other root param values and allowing the outer entry to ignore nested cache tag invalidation and lifetimes. The leaked value is not attacker controlled and depends on which invocation writes the entry first. This variant does not require an existing inner cache entry or a slow cache handler and is not covered by the fix for CVE-2026-103004. This issue is fixed in version 16.4.5.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119790 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119790</link>
+    <guid isPermaLink="false">dbc5e2eeeb019548b8387464319f87ba</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.3 | Next.js is a React framework for building full-stack web applications. From 16.3.0 until 16.4.5, Next.js applications using the same 'use cache' function directly during rendering and through unstable_cache() can disclose cached data across root params when that function reads a root param. During the first fill after a cold process start, cross-request deduplication allows a concurrent unstable_cache() request to join the direct call's in-flight fill and receive its result before the root param mismatch is rejected. unstable_cache() then persists that result under a key that omits root params, causing later requests for other root param values to receive the same entry until revalidation or eviction. Exploitation requires the unstable_cache() request to arrive while the first fill is in flight. Outside this race, nesting 'use cache' inside unstable_cache() raises an unsupported-operation error, and avoiding that nesting prevents the issue. This issue is fixed in version 16.4.5.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125442 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125442</link>
+    <guid isPermaLink="false">9404da7ff5aa9cda35788d0ec72e7d4b</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in PluginUs.Net HUSKY woocommerce-products-filter allows Code Injection.This issue affects HUSKY: from n/a through 1.4.7.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125453 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125453</link>
+    <guid isPermaLink="false">290f4fafad1c2e8e9472df46129c88e1</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in ThimPress LearnPress learnpress allows Code Injection.This issue affects LearnPress: from n/a through 4.4.13.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125681 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125681</link>
+    <guid isPermaLink="false">29acc2e37a715a1beb0bcd2ef862a607</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in ThimPress LearnPress learnpress allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects LearnPress: from n/a through 4.4.13.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125739 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125739</link>
+    <guid isPermaLink="false">9541a6fb39229f86c6f6b943ab714cdb</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in ThimPress LearnPress learnpress allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects LearnPress: from n/a through 4.4.13.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125770 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125770</link>
+    <guid isPermaLink="false">6986e021d8fe19b10d2b3d1883be83ee</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in ThimPress LearnPress learnpress allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects LearnPress: from n/a through 4.4.13.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125773 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125773</link>
+    <guid isPermaLink="false">a66110ab8a03a7123c22b187b8da1db9</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in VillaTheme Lucky Wheel for WooCommerce – Spin a Sale woo-lucky-wheel allows Code Injection.This issue affects Lucky Wheel for WooCommerce – Spin a Sale: from n/a through 1.2.4.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125797 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125797</link>
+    <guid isPermaLink="false">80ea5301899c67766722762728afeb35</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Arraytics Timetics timetics allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Timetics: from n/a through 1.0.66.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127218 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127218</link>
+    <guid isPermaLink="false">2d433292ffd3a59340fd7d5b0267cb9d</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.7 | Axigen Mail Server 10.3.3.67 through 10.3.3.x, 10.4.42 through 10.4.x, 10.5.29 through 10.5.x, 10.6.x before 10.6.41, and 10.7.x before 10.7.3 contains an unauthenticated denial of service vulnerability caused by uncontrolled recursion when validating query parameter and cookie values with a recursive regular expression engine before authentication in the WebAdmin and WebMail services. Attackers can send a single HTTP request with a query parameter or cookie value of a few thousand characters to exhaust the worker thread stack and crash the server process, taking down SMTP, IMAP, POP3, and web services repeatedly.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128995 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128995</link>
+    <guid isPermaLink="false">4e56c06ad05cdf86e8c7cf13fa037f5c</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.4 | Missing Authorization vulnerability in Very Good Plugins WP Fusion Lite wp-fusion-lite allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP Fusion Lite: from n/a through 3.48.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128998 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128998</link>
+    <guid isPermaLink="false">6dade8daa399c0bf3d1362a960c70e08</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Automattic WP Job Manager wp-job-manager allows Code Injection.This issue affects WP Job Manager: from n/a through 2.4.10.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129018 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129018</link>
+    <guid isPermaLink="false">ab899cd19bde894519c43a03c5644212</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Gora Tech Cooked cooked allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Cooked: from n/a through 1.17.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129026 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129026</link>
+    <guid isPermaLink="false">82b3fc2f404e936f5db7816b48f4ee19</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in YITH YITH WooCommerce Product Add-Ons yith-woocommerce-product-add-ons allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects YITH WooCommerce Product Add-Ons: from n/a through 4.35.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129035 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129035</link>
+    <guid isPermaLink="false">30e02b45007c2ead422e33c7f05df069</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in weDevs WP User Frontend wp-user-frontend allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP User Frontend: from n/a through 4.3.14.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129038 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129038</link>
+    <guid isPermaLink="false">a9aafab061839426f44b6e09e2c5a7d0</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in weDevs WP ERP erp allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP ERP: from n/a through 1.17.11.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129046 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129046</link>
+    <guid isPermaLink="false">4d26e61e4b865efdb270f11d795b15ca</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Crocoblock JetFormBuilder jetformbuilder allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects JetFormBuilder: from n/a through 3.6.8.1.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129266 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129266</link>
+    <guid isPermaLink="false">f3bb15915f005712b744641e40dcc093</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.7 | External control of a file path in Amazon Deep Java Library (DJL) versions 0.7.0 through 0.38.0 might allow a remote unauthenticated third party to read arbitrary files that the library process can access. To do this, the third party supplies a crafted model archive.
+
+
+
+To remediate this issue, users should upgrade to version 0.39.0 or later.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129307 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129307</link>
+    <guid isPermaLink="false">39b54aee89767b98049ce3d6c48f0810</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | eml_parser serves as a python module for parsing eml files and returning various information found in the e-mail as well as computed information. In 3.0.3 and earlier, eml_parser.routing.parserouting() in eml_parser/routing.py builds a regular expression with multiple greedy capture groups and appends the npdate date literal extracted from a normalized copy of an attacker-controlled Received header, then searches that expression against the original unnormalized line. A formatting difference can make the trailing literal impossible to match, causing exhaustive backtracking across the greedy groups at each start position. The unsliced Received-header path is invoked by decode_email, decode_email_bytes, and parse_email, so one small unauthenticated message can pin a parser worker and create sustained queue backlog. This issue is fixed in version 3.0.4.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-83816 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83816</link>
+    <guid isPermaLink="false">5bfe9dce675fb2ebd6dd10bb077872d7</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 8.1 | CodeWhale is a DeepSeek and MiMo coding agent for the terminal. Prior to 0.9.0, the ExecShellTool::approval_requirement_for path used is_parallel_readonly_command to downgrade commands to automatic approval based on a flag-stripped command allowlist. The allowlist treated fd, rg, and git grep as read-only even when fd -x or fd --exec, rg --pre, or git grep --open-files-in-pager selected an external program. registered_tool_approval_required returned without displaying a prompt for that automatic classification, and the later command-safety check also treated the base utilities as safe. Attacker-controlled content that influenced an agent tool call could therefore cause arbitrary program execution on the developer host without the approval promised by the default interactive profile, resulting in unauthorized access, modification, or disruption. This issue is fixed in version 0.9.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-83817 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83817</link>
+    <guid isPermaLink="false">c7379327d1911c742f893c60cc98ca6d</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 7.5 | CodeWhale is a DeepSeek and MiMo coding agent for the terminal. Prior to 0.9.0, DEFAULT_AUTOMATION_AUTO_APPROVE caused AutomationRecord::task_auto_approve to resolve an omitted setting to true, and the automation_create schema advertised the same insecure default. enqueue_run_task converted that omission into an explicit true value, bypassing the safer task-path fallback and selecting ApprovalMode::Bypass for each scheduled run. After a user approved creation of an apparently benign recurring automation, subsequent executions could silently authorize mutating tools without a human present, and an automation created with shell access could repeatedly execute commands. This issue is fixed in version 0.9.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-87027 - NVD - CVSS Score v4.0: 5.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87027</link>
+    <guid isPermaLink="false">bcad5d64fa8380c83962f50bac54094c</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.6 | In EDB Postgres Extended Server and EDB Postgres Advanced Server versions 15 through 18 with Transparent Data Encryption (TDE) enabled, the key used to encrypt temporary files was incompletely initialized. The code applied sizeof() to a pointer to the key buffer rather than to the buffer itself, so only 8 of the intended 32 bytes were filled from a secure random source and the remaining 24 bytes kept whatever was already in memory. This reduces the guaranteed randomness of the temporary-file key from 256 bits to 64 bits. Exploiting this requires local read access to the server's temporary-file directory, and those files normally exist only while the server is running; they persist only after a crash and are removed at the next server start. Permanent data files and WAL are not affected. The issue is fixed in EDB Postgres Extended Server 15.20, 16.16, 17.12 and 18.7 and EDB Postgres Advanced Server 15.20.0, 16.16.0, 17.12.0 and 18.7.0; the server must be restarted after upgrading.</description>
     <category>NVD</category>
     <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
   </item>
