@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Nov 2026 02:01:59 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 05:03:06 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-129491 - NVD - CVSS Score v4.0: 5.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129491</link>
@@ -39,60 +39,60 @@
     <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2025-71469 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-71469</link>
-    <guid isPermaLink="false">1ba3123b1748c0e2e4d263160e361814</guid>
-    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.02.0 contains a type confusion vulnerability in ctxload_process() that passes non-object descriptors to ODS_SetupOD() without checking the descriptor tag. Attackers can supply a crafted XMT file with a URL-bearing descriptor that crashes MP4Box or other GPAC-based applications in gf_scene_ns_connect_object(), causing denial of service.</description>
+    <title>CVE-2026-129539 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129539</link>
+    <guid isPermaLink="false">4d452dafb536a61be5c0f81ddefd05c7</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 7.1 | SSCMS 7.2.0 through 7.4.0 contains an arbitrary file read vulnerability that allows any registered user-center account to copy server files by supplying source paths to the layerImageUpload endpoint. Attackers can send siteId 0 with crafted filePaths entries to copy configuration files into their public sitefiles/home upload directory and download them anonymously.</description>
     <category>NVD</category>
-    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2025-71470 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-71470</link>
-    <guid isPermaLink="false">70a20a7be44c82d78122b99207deda0b</guid>
-    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 6.8 | MicroQuickJS (mquickjs) before commit 99eed3f contains an out-of-bounds read vulnerability because JS_Call() raises exceptions during frame setup without updating ctx-&gt;sp and ctx-&gt;fp. Attackers can supply JavaScript that calls a non-function value, causing build_backtrace() to walk stale frame pointers and crash the engine for denial of service.</description>
+    <title>CVE-2026-129540 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129540</link>
+    <guid isPermaLink="false">ad5365cbdaf0366737a15b497d6d5d8f</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.7 | VoAPI 1.0.0 through 1.2.0 contains a sql injection vulnerability that allows authenticated users to inject SQL by supplying crafted column names as search[...] filter keys on list endpoints such as GET /api/log. Attackers can read the HS256 JWT signing secret from the option table and forge a manager role token to take over the /api/m/* management API.</description>
     <category>NVD</category>
-    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129484 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129484</link>
-    <guid isPermaLink="false">7fdfd066b62cc91e1e8ca884fa787281</guid>
-    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 5.3 | Kroki before 0.36.0 contains a reflected cross-site scripting vulnerability that allows unauthenticated attackers to inject scripts via unvalidated svg-color-dark-scheme and svg-color-light-scheme options. Attackers can craft a GET /goat/svg URL whose option value closes the SVG style element, executing JavaScript in the Kroki origin when victims open it.</description>
+    <title>CVE-2026-129541 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129541</link>
+    <guid isPermaLink="false">ceab2dbd53ea4e31fa06ce5fcfc3eb48</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.1 | EdgeChat 2.5.0 through 2.21.0 contains a cross-site scripting vulnerability that allows invited users to inject HTML through unescaped usernames in the Vditor @-mention autocomplete. Attackers can register with a username containing an img onerror payload that executes when mentioned, stealing the localStorage session token to take over victim accounts.</description>
     <category>NVD</category>
-    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129485 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129485</link>
-    <guid isPermaLink="false">821f0d78891f3a7096d5540d20a9d9ef</guid>
-    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 6.9 | Kroki before 0.36.0 contains a server-side request forgery vulnerability in the BlockDiag family of engines that allows unauthenticated attackers to make server requests via node icon and background attributes. Attackers can send crafted diagrams to POST /blockdiag/svg or sibling endpoints to query internal services or cloud metadata and read local image files from the server.</description>
+    <title>CVE-2026-129542 - NVD - CVSS Score v3.1: 3.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129542</link>
+    <guid isPermaLink="false">96f52aed6ace0db0aae3976e35962faf</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 3.1 | Files or directories accessible to external parties vulnerability in Samsung Open Source Starfish allows Probe System Files.</description>
     <category>NVD</category>
-    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129490 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129490</link>
-    <guid isPermaLink="false">024aa645d43b6ee544190a67fbdcc5c2</guid>
-    <description>Sunday 15 November 2026 | NVD | CVSS Score v4.0: 6.8 | littlefs through 2.11.3, when built with LFS_MIGRATE, contains a type confusion vulnerability in lfs_dir_traverse() that treats a stack lfs_diskoff struct as an lfs_attr array. Attackers can supply a crafted littlefs v1 image whose metadata is read as LFS_FROM_USERATTRS during migration, causing out-of-bounds stack reads and process crashes.</description>
+    <title>CVE-2026-129543 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129543</link>
+    <guid isPermaLink="false">7d04ab999039b6c769fb5e4814ce57f8</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 6.4 | Access of resource using incompatible type ('type confusion') vulnerability in Samsung Open Source Starfish allows Input Data Manipulation.</description>
     <category>NVD</category>
-    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125760 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125760</link>
-    <guid isPermaLink="false">52fce6b25739f05f374fc548b69e10aa</guid>
-    <description>Sunday 15 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Bit Apps Bit Assist bit-assist allows DOM-Based XSS.This issue affects Bit Assist: from n/a through 1.8.4.</description>
+    <title>CVE-2026-107520 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107520</link>
+    <guid isPermaLink="false">eff908b59d4eb495269be49da2c5e74d</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.4 | Dell PowerStore contains a stored cross-site scripting (XSS) vulnerability. A low-privileged authenticated attacker could exploit this vulnerability, potentially leading to execution of malicious script in a higher-privileged user's session.</description>
     <category>NVD</category>
-    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125796 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125796</link>
-    <guid isPermaLink="false">f653ba1491d1b983cf68d763b7179509</guid>
-    <description>Sunday 15 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing Authorization vulnerability in Ahmad JS Help Desk js-support-ticket allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects JS Help Desk: from n/a through 5.0.5.</description>
+    <title>CVE-2026-82156 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82156</link>
+    <guid isPermaLink="false">9ea4b78b4b8a79ee6c4171029fb58ab8</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 8.8 | Dell PowerStore contains an authorization-bypass vulnerability. A low-privileged attacker could exploit it, potentially leading to elevation of privilege to administrator.</description>
     <category>NVD</category>
-    <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-125798 - NVD - CVSS Score v3.1: 7.1</title>
