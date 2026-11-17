@@ -5,328 +5,324 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Nov 2026 05:00:19 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 06:02:49 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-130349 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130349</link>
-    <guid isPermaLink="false">e9d8fb72bb3cc71f4e3e6c62a76396db</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an incorrect authorization vulnerability that allows category- or language-restricted editors to bypass scoped rights via public REST write endpoints. Attackers with a scoped right and the shared API token can use PUT faq/update, POST faq/create, and POST category to rewrite published FAQs and create root categories outside their scope.</description>
+    <title>CVE-2026-101358 - NVD - CVSS Score v3.1: 3.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101358</link>
+    <guid isPermaLink="false">e4310fd961ca5b4960a3efbc11c2c937</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 3.1 | GitLab has remediated an issue in GitLab EE affecting all versions from 17.10 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to read CI/CD variable metadata from projects they did not have access to due to improper authorization in pipeline execution policies.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130350 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130350</link>
-    <guid isPermaLink="false">344a483ff6ee8321cd36e5ae2eec7602</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.1 | phpMyFAQ before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an incorrect authorization vulnerability that allows delegated group or user admins to remove rights they do not hold by submitting empty rights lists. Attackers can send an empty rightIds or userRights array to group/permissions or user/update-rights to wipe all rights of more-privileged groups or administrators.</description>
+    <title>CVE-2026-102907 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102907</link>
+    <guid isPermaLink="false">cf2d75fef09c47f2746849cce5200eb5</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 14.0 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to create issues with locked discussions despite lacking the required permissions due to improper authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130351 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130351</link>
-    <guid isPermaLink="false">8ab72306b89c5378c43ad7c1bd4b7d0a</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.1 | phpMyFAQ from 4.2.0-alpha before 4.2.0-RC.2 contains an authorization bypass vulnerability in the multisite Redis configuration store that is not tenant-scoped. As a result, tenant administrators can read and overwrite the master instance's effective configuration. Attackers can save configuration through /admin/api/configuration, optionally resetting storage.redisPrefix, to redirect master SMTP, set a known API token, or alter authentication settings.</description>
+    <title>CVE-2026-104717 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104717</link>
+    <guid isPermaLink="false">5d918b585073426cd2ee5a9351a3da4d</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab EE affecting all versions from 13.4 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to view iteration details from private groups they did not have access to due to missing authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130352 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130352</link>
-    <guid isPermaLink="false">ef041730efd9c999ebd646802b2fca00</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | phpMyFAQ before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an information disclosure vulnerability that allows unauthenticated attackers to read editor-only Private Notes by querying the public FAQ list API. Attackers can page through GET /api/v4.0/faqs or /api/v3.1/faqs without credentials to retrieve the notes field of every anonymously readable FAQ, exposing internal remarks and ticket details.</description>
+    <title>CVE-2026-104902 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104902</link>
+    <guid isPermaLink="false">782a2b91b7ed26df0cead49c7e21b35d</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab EE affecting all versions from 17.7 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to read GitLab Duo seat assignments and usage data from other groups due to improper authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130353 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130353</link>
-    <guid isPermaLink="false">60f63a69d78e75aab9e86282a4c40936</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | phpMyFAQ before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an information disclosure vulnerability in its public FAQ REST API that exposes author names and e-mail addresses to unauthenticated callers. Attackers can query the faq and paginated faqs endpoints to bulk-harvest e-mails and de-anonymise users who opted out of GDPR author visibility.</description>
+    <title>CVE-2026-104934 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104934</link>
+    <guid isPermaLink="false">f416f8510f709cf150ba709c3cc5b1e8</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.0 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an unauthenticated user to read files from a project's private repository due to missing authorization checks in snippets.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130354 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130354</link>
-    <guid isPermaLink="false">95616a865b81d511e72d6390ab1973f5</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | phpMyFAQ 4.1.0 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an authentication bypass vulnerability in POST /api/webauthn/prepare that creates accounts as active, bypassing manual activation and domain whitelisting. Anonymous attackers can obtain the freely issued CSRF token and register an activated account with an unverified email to access registered-user-only content and functions.</description>
+    <title>CVE-2026-105739 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105739</link>
+    <guid isPermaLink="false">d424fd24cd1736b590fb555c486a1858</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.7 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.2 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to execute arbitrary JavaScript in the browser of users viewing a wiki page due to improper sanitization of user input.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130355 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130355</link>
-    <guid isPermaLink="false">82f411321ed1efc1fe52862f3ad41a02</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an incorrect authorization vulnerability in POST /admin/api/faq/import that lets FAQ_ADD users bypass the FAQ_PUBLISH right. Authenticated contributors can upload a CSV with column 8 set to true to publish unreviewed, optionally sticky FAQs such as phishing content.</description>
+    <title>CVE-2026-108150 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108150</link>
+    <guid isPermaLink="false">d377972e18a615e307748cf11d5fc4e7</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.12 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to read private CI/CD template files from projects they did not have access to due to missing authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130356 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130356</link>
-    <guid isPermaLink="false">289437b7a20c8b07ff7e67b3692e6188</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an authorization bypass that lets category- or language-restricted editors rewrite visibility ACLs and tags of any FAQ. Attackers send faq/update requests with a target faqId and an untranslated lang to expose restricted FAQs, wipe tags, or overwrite orphaned FAQs.</description>
+    <title>CVE-2026-108153 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108153</link>
+    <guid isPermaLink="false">67480bbac77ceb56887dd765892eee92</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.7 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 16.1 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to execute arbitrary JavaScript in the browser of users viewing Error Tracking pages due to improper sanitization of user input.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130357 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130357</link>
-    <guid isPermaLink="false">9a6ef4cc3ce3cdfad69159a16dfa6129</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.0 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an improper authorization vulnerability in updateUserRights that lets USER_EDIT admins drop category restrictions on group rights. Attackers can re-save rights through the user update-rights API to convert category-restricted group rights into global direct rights, then edit, publish or delete FAQs in withheld categories.</description>
+    <title>CVE-2026-108154 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108154</link>
+    <guid isPermaLink="false">b2406eb30ff76cbdb7aad0a832faa4eb</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 8.0 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to import Git repositories into projects despite administrator restrictions on import sources due to missing authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130358 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130358</link>
-    <guid isPermaLink="false">fec591c7cf8982e0b145c82299c9a6ef</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | AdminNeo before 5.9.1 contains a missing authentication vulnerability in the ClaudeSqlPlugin, GeminiSqlPlugin, and OpenWebUiPlugin sendHeaders() handlers that run on the login page. Unauthenticated attackers can POST claude, gemini, or openwebui fields to relay arbitrary prompts using the operator's API key or bearer token, including to internal Open WebUI endpoints.</description>
+    <title>CVE-2026-108155 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108155</link>
+    <guid isPermaLink="false">6f9645f1c2eb766c5252aaa5c61f762a</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 8.12 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to read Git LFS objects from restricted projects due to incorrect authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130359 - NVD - CVSS Score v4.0: 2.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130359</link>
-    <guid isPermaLink="false">8b9cc98740e0d3ae71788d174ec8db8b</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.0 | AdminNeo before 5.9.1 contains a stored cross-site scripting vulnerability in SlugifyEditPlugin::getFieldInput() that embeds column names unescaped in an inline initSlugField() call. Attackers with DDL privileges can create a slug column whose name contains a single quote, injecting JavaScript that runs under the page's CSP nonce when victims open the table's edit form.</description>
+    <title>CVE-2026-110750 - NVD - CVSS Score v3.1: 2.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110750</link>
+    <guid isPermaLink="false">a958e0ccda96a73814d8fac74ef11aaa</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 2.2 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 11.2 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to read Git LFS objects from projects restricted by External Authorization due to missing authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130360 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130360</link>
-    <guid isPermaLink="false">d6ac5b3b6d6b163155b2e7e03ba83d7f</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | AdminNeo before 5.9.1 contains a reflected cross-site scripting vulnerability in EditorNeo that allows remote attackers to execute JavaScript by injecting quote characters into the request URI. Attackers can lure authenticated users to crafted edit links whose path breaks out of the CSP-nonced whisper script in editor/core/Admin.php, enabling session theft and database credential disclosure.</description>
+    <title>CVE-2026-110990 - NVD - CVSS Score v3.1: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110990</link>
+    <guid isPermaLink="false">020886870bfe75c8d0ba449229326805</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 2.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.1.7 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed sensitive credential values submitted in GraphQL requests to be written to logs in plaintext due to incomplete filtering of sensitive data.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130361 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130361</link>
-    <guid isPermaLink="false">d5fd6f5af46d3f6c4b711eb8f39746d0</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | AdminNeo before 5.9.1 contains a parameter injection vulnerability in its ClickHouse driver that allows attackers to inject ClickHouse HTTP query parameters through an unencoded db GET parameter. Attackers can lure a logged-in victim into opening a crafted GET link that injects a query parameter, bypassing the POST-only CSRF token. ClickHouse then executes attacker-chosen SQL under the victim's credentials to read, modify, or drop data.</description>
+    <title>CVE-2026-111747 - NVD - CVSS Score v3.1: 3.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111747</link>
+    <guid isPermaLink="false">52ca8084eff25f85b75bfa082c576b7d</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 3.5 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.0 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to hide changes from reviewers in merge request diffs due to improper handling of file names.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130362 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130362</link>
-    <guid isPermaLink="false">e18ad179e1efad152e2fced484584758</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | phpMyFAQ 4.1.9 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an account enumeration vulnerability that allows unauthenticated attackers to identify valid logins through differing POST /api/webauthn/prepare responses. Attackers can submit wordlists of usernames, reusing one unconsumed CSRF token without rate limiting, to discover administrator logins for password spraying and phishing.</description>
+    <title>CVE-2026-112203 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112203</link>
+    <guid isPermaLink="false">e4705f3700397332bec7b53cef6bc0e7</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.9 | GitLab has remediated an issue in GitLab EE affecting all versions from 18.2 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an individual controlling an upstream repository to alter cached Maven packages from other repositories in the same virtual registry due to improper response validation.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130363 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130363</link>
-    <guid isPermaLink="false">ca778ee802d05b58db75436a8a370ec1</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.1 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an incorrect authorization vulnerability that lets scoped editors view out-of-scope draft FAQs because the dashboard and admin search ignore category/language-scoped FAQ_EDIT rights. Authenticated editors can load the unpublished FAQs widget with the lang parameter or query /admin/api/faq/search to leak draft titles, ids, and confirm words in draft bodies.</description>
+    <title>CVE-2026-115218 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115218</link>
+    <guid isPermaLink="false">990d823140f12025681f032f572beb78</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.8 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to read NuGet package metadata that should not have been accessible due to missing authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130364 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130364</link>
-    <guid isPermaLink="false">f2a24f6724cf35c86446f84ad75e0b0d</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.3 | AdminNeo before 5.9.1 contains a reflected HTML injection vulnerability that allows remote attackers to inject markup by supplying crafted array keys in the where URL parameter. Attackers can trick logged-in users into opening a link whose unescaped keys land in select search form name attributes, enabling meta refresh redirects and content spoofing.</description>
+    <title>CVE-2026-115219 - NVD - CVSS Score v3.1: 3.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115219</link>
+    <guid isPermaLink="false">6fe8c0a4105abc7751a36167e8e52824</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 3.8 | GitLab has remediated an issue in GitLab EE affecting all versions from 19.2 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to enable Amazon Q automatic code reviews on a project despite an administrator lock due to improper enforcement of instance-level settings.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130365 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130365</link>
-    <guid isPermaLink="false">fca524dd23ff9545dd59bea091382449</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.1 | phpMyFAQ from 4.2.0-alpha before 4.2.0-RC.2 contains a stored cross-site scripting vulnerability that allows FAQ_EDIT users to bypass SvgSanitizer using namespace-prefixed elements like &lt;x:script&gt;. Attackers can upload malicious SVGs through the admin image upload so script runs in the site origin on IIS, hijacking sessions of users like super-admins.</description>
+    <title>CVE-2026-115428 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115428</link>
+    <guid isPermaLink="false">16ea0465449fc89f5166ecbcd74642a6</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 6.5 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.2 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user with a valid agent token to cause a denial of service in the GitLab agent server (KAS) due to improper input validation.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130366 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130366</link>
-    <guid isPermaLink="false">3a791a5bc69ade943b766aef38ec7876</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 9.2 | AdminNeo before 5.9.1 contains an authentication bypass vulnerability in the ClickHouse driver that allows remote attackers to log in to passwordless accounts without the configured defaultPasswordHash password. Attackers who know the name of a ClickHouse no_password account can submit any non-empty password, because connect() skips openPasswordless(), and obtain a session with that account's rights.</description>
+    <title>CVE-2026-115736 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115736</link>
+    <guid isPermaLink="false">1530fe4f0c686cc246b435898db6dcf7</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab EE affecting all versions from 19.1 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to view unredacted secret values from secret detection findings they had access to through GitLab Duo Agent Platform due to improper authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130367 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130367</link>
-    <guid isPermaLink="false">a8d8130e664f90f81a1c96e2849f14db</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | phpMyFAQ through 4.1.12 and from 4.2.0-alpha before 4.2.0-RC.2 contains an authorization bypass vulnerability in the admin FAQ copy and translate pages, which check only global FAQ_ADD or FAQ_TRANSLATE rights. Authenticated add-only or category-scoped editors can open any FAQ to read drafts, ACL-restricted records, private notes, and author e-mail addresses.</description>
+    <title>CVE-2026-118961 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118961</link>
+    <guid isPermaLink="false">e48fce2b3bea8e19c505103d2267dc2f</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.11 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an unauthenticated user to read commit comments from a private source fork through a public project's merge request discussions due to missing authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130368 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130368</link>
-    <guid isPermaLink="false">81e4d091610897f1972f87a475f3db27</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.3 | phpMyFAQ 4.1.9 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an improper restriction of excessive authentication attempts vulnerability in PasswordChangeController::update() that bypasses the step-up throttle. Attackers holding a hijacked admin-area session can repeatedly guess faqpassword_old with a reusable CSRF token to learn the original password and take over the account.</description>
+    <title>CVE-2026-11768 - NVD - CVSS Score v3.1: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-11768</link>
+    <guid isPermaLink="false">07c260045701f8ca9bcbfff1693e9d66</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.8 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 12.4 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to read private CI/CD job artifacts belonging to other projects through GitLab Pages due to improper validation of file paths.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130369 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130369</link>
-    <guid isPermaLink="false">3deb6a1268571ca2e1ca8c23192a4144</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 9.2 | phpMyFAQ 4.1.9 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an authorization bypass vulnerability in multisite deployments that allows attackers to overwrite passkeys of accounts on other tenants via a shared PHP session store. Attackers can run WebAuthn prepare() for a login on one tenant, then replay the session against /api/webauthn/register on another tenant or the master to replace that user's passkeys and log in as admin.</description>
+    <title>CVE-2026-120387 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120387</link>
+    <guid isPermaLink="false">14a6a82db27eadf337a5bbfe04cf92e5</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 10.0 | An improper JWT signature verification vulnerability in CIRCUTOR PowerStudio SCADA WAVE desktop version allows an unauthenticated remote attacker to bypass authentication by submitting an unsigned JWT with the algorithm set to “none”. The shared JWT validation component accepts the token without verifying a cryptographic signature, allowing the attacker to impersonate another user and access protected functionality with that user's privileges.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130370 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130370</link>
-    <guid isPermaLink="false">7f37d3b369fdaa0f27bb37cd3f07cf81</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.3 | phpMyFAQ 4.1.9 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains a missing authentication vulnerability that allows attackers holding a hijacked session to enroll passkeys using only the session and webauthn CSRF token. Attackers can call /api/webauthn/prepare and /api/webauthn/register to replace the owner's passkeys, gaining persistent passwordless login that survives password changes and resets.</description>
+    <title>CVE-2026-121533 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121533</link>
+    <guid isPermaLink="false">463ff20acca99282311ccba1fbb434e7</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.8 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an unauthenticated user to read restricted job artifact data due to missing authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130371 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130371</link>
-    <guid isPermaLink="false">f76476f985cd59ca3bf247fd87d9172f</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 9.2 | phpMyFAQ before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an authentication bypass vulnerability because the web installer ignores the legacy config/database.php during 3.x upgrades. Unauthenticated attackers can reinstall the site against an attacker-controlled database and create their own administrator account to take over the application.</description>
+    <title>CVE-2026-121684 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121684</link>
+    <guid isPermaLink="false">0bb481f7cfd289e73175333e4e3ec9a6</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.1 | The Soledad theme for WordPress is vulnerable to unauthenticated Remote Code Execution in versions up to, and including, 8.7.7 The public penci_more_post_ajax AJAX action feeds infeedads[ads_code] (base64+urldecoded) to penci_safe_shortcode(), whose allowlist regex inspects only the hyphen-truncated outer shortcode name (e.g. 'adinserter') and never the nested [elementor-element k=.. data=..] tag, so do_shortcode() renders an attacker-chosen Elementor element. The rendered penci-featured-sliders widget passes its unsanitized 'style' setting to include dirname(__FILE__).&quot;/{$style}.php&quot;, a path-traversal local file inclusion.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130372 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130372</link>
-    <guid isPermaLink="false">7e907691f58728ec2094417c9c4aa604</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | AdminNeo before 5.9.1 contains an open redirect vulnerability that allows unauthenticated attackers to redirect authenticated users by injecting an external URL through the HTTP Referer header into the hidden referer field of the edit form. Attackers can lure users from a page with an unsafe-url referrer policy whose URL contains &amp;select=, redirecting them to phishing sites after record edits.</description>
+    <title>CVE-2026-121948 - NVD - CVSS Score v3.1: 2.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121948</link>
+    <guid isPermaLink="false">8856ce2a75eaea25834dc06b7c8d0eb4</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 2.7 | GitLab has remediated an issue in GitLab EE affecting all versions from 19.2 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to change the GitLab Duo Code Review consent setting of a parent group due to incorrect authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130373 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130373</link>
-    <guid isPermaLink="false">f1a017b637831d259e0bba3d1e1d4da2</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.1 | AdminNeo before 5.9.1 contains a stored HTML injection vulnerability that allows database users to inject markup by creating FULLTEXT indexes with crafted names. Attackers with CREATE, ALTER or INDEX rights can store markup rendered unescaped in the selection search form, enabling meta refresh redirects, content spoofing and form tampering against other users.</description>
+    <title>CVE-2026-122045 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122045</link>
+    <guid isPermaLink="false">d3a28130d9472de1fb4744942ec8c782</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab EE affecting all versions from 16.10 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to configure GitLab Duo settings for groups without an eligible license due to missing authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130374 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130374</link>
-    <guid isPermaLink="false">a77d915eaa587a5c666243e02aea743e</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.7 | AdminNeo before 5.9.1 contains an sql injection vulnerability that allows remote attackers to inject SQL by supplying crafted IN and NOT IN search values that process_length() passes unescaped. Attackers can send a logged-in user a cross-site GET link using a backslash-escaped apostrophe to run blind SQL with that user's database rights on PostgreSQL, SQLite, MS SQL, Oracle, or MySQL in NO_BACKSLASH_ESCAPES mode.</description>
+    <title>CVE-2026-122226 - NVD - CVSS Score v3.1: 2.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122226</link>
+    <guid isPermaLink="false">042147dcc8f8bb481c7297fc4033b5b2</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 2.2 | GitLab has remediated an issue in GitLab EE affecting all versions from 18.8 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to access GitLab Duo features restricted by group-based access rules due to improper handling of failed updates to those rules.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130375 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130375</link>
-    <guid isPermaLink="false">143668c8b6ce32cb4553b851211f59c9</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.6 | AdminNeo before 5.9.1 contains a remote code execution vulnerability that allows authenticated SQLite users to bypass the check_sqlite_name() extension guard using PDO_SQLite file: URI database names. Attackers can select the PDO driver with ext=pdo and submit names like file:/webroot/x.php?x=.db to create a .php file, then store PHP source as table data for code execution.</description>
+    <title>CVE-2026-123142 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123142</link>
+    <guid isPermaLink="false">6168116d36c038658a13493966030e41</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 18.4 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user holding an MCP-scoped OAuth token to perform unauthorized issuable state changes on issues and merge requests, including approving and merging, due to incorrect authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130376 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130376</link>
-    <guid isPermaLink="false">15a5be703968d7bdbe736ff8a5606004</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.1 | AdminNeo before 5.9.1 contains a stored cross-site scripting vulnerability in FileUploadPlugin that allows database users to store script-bearing SVG files by uploading unsanitized content. Attackers can upload a malicious SVG to a *_path field, executing script in the same-origin session of any administrator who opens the file link.</description>
+    <title>CVE-2026-125920 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125920</link>
+    <guid isPermaLink="false">685159457aa2bab8dbdcb885c5a6eefc</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab EE affecting all versions from 17.4 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to cause a denial of service affecting Duo usage analytics due to improper input validation.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130377 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130377</link>
-    <guid isPermaLink="false">f064cde351e61e95babda2c935de8575</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.1 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an incorrect authorization vulnerability in DELETE /admin/api/faq/delete that lets language-scoped FAQ_DELETE admins bypass their language scope. Attackers can submit a faqId with an in-scope faqLanguage lacking a translation to wipe shared ACL, tags, votes, comments, and attachments of other translations.</description>
+    <title>CVE-2026-126141 - NVD - CVSS Score v3.1: 3.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126141</link>
+    <guid isPermaLink="false">b838a062d1dc74221a9aed3a1392d106</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 3.5 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 11.11 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to make requests to internal network services through repository import functionality due to insufficient validation of destination addresses.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130378 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130378</link>
-    <guid isPermaLink="false">5e40d4517469da9f5f6d4163c437e24c</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.1 | AdminNeo before 5.9.1 contains a filter injection vulnerability in its MongoDB driver that allows attackers to affect other documents by embedding ' AND ' or ') OR (' delimiters in a string _id or searched value. Attackers who can store a crafted document can cause a victim's delete or edit to match unintended documents, deleting the entire collection or modifying another document.</description>
+    <title>CVE-2026-128849 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128849</link>
+    <guid isPermaLink="false">ca77a07577de0d5a888b439306b4de77</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab EE affecting all versions from 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to start a Duo Workflow session with elevated privileges beyond those declared by the foundational flow due to improper enforcement of privilege boundaries in certain client environments.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130379 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130379</link>
-    <guid isPermaLink="false">3f76a716a8c2078bacc6aef8c20c2e39</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | AdminNeo before 5.9.1 contains a server-side request forgery vulnerability that allows unauthenticated attackers to bypass the privileged-port restriction by injecting separator characters or connection-string keywords into the login server field. Attackers can make pgsql, Mongo, Oracle and PDO drivers parse a different host and port, reaching internal services and leaking limited information through driver responses and errors.</description>
+    <title>CVE-2026-129252 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129252</link>
+    <guid isPermaLink="false">aa765c3a7f49949925c35c7857bad34f</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 3.7 | GitLab has remediated an issue in GitLab CE/EE affecting all versions before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user with an unconfirmed email address to be automatically granted Group Owner-level membership during a group import operation, due to insufficient email verification enforcement in the member identity mapping process.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130380 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130380</link>
-    <guid isPermaLink="false">56e94156612a923d2344f3ce652907b5</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 9.2 | AdminNeo before 5.9.1 contains an authentication bypass vulnerability in the sqlsrv-based MS SQL driver that allows unauthenticated attackers to log in by submitting an empty username. Attackers can supply any non-empty password, triggering Windows integrated authentication that grants a full session with the web server identity's SQL Server privileges.</description>
+    <title>CVE-2026-129253 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129253</link>
+    <guid isPermaLink="false">cb79e426a1751540019e74e71a8ff0be</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab EE affecting all versions from 19.1 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user with developer-role permissions to bypass admin-configured AI tool governance controls in a governed namespace due to improper binding of authorization tokens to their intended workflow execution context.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130381 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130381</link>
-    <guid isPermaLink="false">0f9d4a8c8afd44eaeb7c0e312c1a4761</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an authorization bypass vulnerability that allows language-scoped editors to read other translations by checking FAQ_EDIT against the route language but loading the ?lang= UI-language row. Attackers can request the admin.faq.edit route with an authorized language and a different lang parameter to read drafts, private notes, author e-mails and revisions.</description>
+    <title>CVE-2026-129321 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129321</link>
+    <guid isPermaLink="false">2580645a186a52ea1a6d6659dac882a5</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.8 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user with planner-role permissions to set a future merge scheduling date on merge requests they authored, a capability restricted to developer-role permissions and above, due to insufficient permission enforcement on the merge scheduling field during merge request updates.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130382 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130382</link>
-    <guid isPermaLink="false">1ea03045c85000d6d3dd1e4cc8fd87c4</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | AdminNeo before 5.9.1 contains an authentication bypass vulnerability in OtpLoginPlugin that allows attackers knowing the database password to skip TOTP verification by abusing the permanent-login cookie. Attackers can submit a login with a wrong OTP and permanent=1 to obtain a neo_permanent cookie, then replay it to gain full authenticated database access.</description>
+    <title>CVE-2026-16545 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16545</link>
+    <guid isPermaLink="false">5e976848d55515240187d61a11a76e19</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.3 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 12.10 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an unauthenticated user to read private project metadata from packages published by other projects due to incorrect authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130383 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130383</link>
-    <guid isPermaLink="false">c09f41009a0bb2135cf2d76642f71a25</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.1 | phpMyFAQ before 4.1.12 and 4.2.0-alpha.2 before 4.2.0-RC.2 contains an authorization bypass vulnerability that allows authenticated editors to manipulate search index documents by supplying an arbitrary solutionId to the /admin/api/faq/update endpoint. On Elasticsearch or OpenSearch deployments, category-restricted editors can remove published FAQs from search, overwrite other FAQs' search documents, or plant entries that remain searchable after unpublishing.</description>
+    <title>CVE-2026-16609 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16609</link>
+    <guid isPermaLink="false">398332916c68cefc167e3ba6a938b266</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.4 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 13.2 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user with owner-role permissions to execute arbitrary JavaScript in another user's browser through the Confluence integration due to improper input validation.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-79614 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-79614</link>
-    <guid isPermaLink="false">c09e62f6e8a8428faa5a3c4d0e4e9452</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 9.8 | An out-of-bounds write vulnerability in “libclinkc.so” in Zyxel DX3301-T0/EX3301-T0 firmware versions through 5.50(ABVY.8.3)C0 could allow an unauthenticated attacker to elevate privileges and potentially execute arbitrary commands by sending a crafted HTTP request. WAN access is disabled by default on these devices.</description>
+    <title>CVE-2026-18241 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18241</link>
+    <guid isPermaLink="false">c2cd4889ab2c9147e8330f8be9214816</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.2 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 9.3 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to access protected CI/CD variables and resources due to a race condition in pipeline job authorization.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-86676 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86676</link>
-    <guid isPermaLink="false">cc6f118323b092c415d471281768c4be</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.2 | A post-authentication command injection vulnerability in the “Description” parameter of a CGI program  in Zyxel DX3300-T0 firmware versions through 5.50(ABVY.8.3)C0 could allow an authenticated attacker with administrator privileges to execute OS commands by sending a crafted HTTP request.</description>
+    <title>CVE-2026-18491 - NVD - CVSS Score v3.1: 4.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18491</link>
+    <guid isPermaLink="false">5e80d4cdd921f23b8139c4560b7e6467</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 4.9 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 19.2 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user holding a granular personal access token with limited scope to authorize Kubernetes API proxy access beyond the token's intended boundaries due to missing granular scope enforcement in the Kubernetes agent proxy-user authorization flow.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125275 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125275</link>
-    <guid isPermaLink="false">5dc36db8c23ab48be54ab8fc2e8806ab</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.2 | Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in device certificate verification in nerves-hub nerves_hub_web allows an unauthenticated remote attacker to cause a denial of service via a TLS client certificate whose CA is not registered. When a client certificate chains to a root in the device endpoint's trust store but no CA in the chain is registered in NervesHub, NervesHub.SSL.decide/2 refuses it with the reason :unknown_ca. Erlang/OTP ssl reads that reason as a missing trust anchor, looks for an alternative root, finds the same root and validates again without end. The handshake process queries the database on each pass and keeps running after the client disconnects, until the node restarts.
-
-The device endpoint trusts the public roots from CAStore unless DEVICE_SSL_CACERTFILE is set, so a client certificate from a public CA whose chain allows client authentication is sufficient. A chain that ends at a root outside the trust store is refused once.
-
-This issue affects nerves_hub: from 1.0.0 before 2.5.4.</description>
+    <title>CVE-2026-85778 - NVD - CVSS Score v3.1: 6.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85778</link>
+    <guid isPermaLink="false">f93afc49271901817c9e885c2fb6a5e0</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 6.2 | GitLab has remediated an issue in GitLab EE affecting all versions from 19.1 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to run code in protected pipelines through a scheduled pipeline execution policy after the policy had been unassigned due to incorrect authorization checks.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107901 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107901</link>
-    <guid isPermaLink="false">162e5448b7c5cd65a44f5a4400b84819</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.8 | TELLUS and TELLUS Lite provided by FUJI ELECTRIC CO., LTD. contain an out-of-bounds read vulnerability. Opening a specially crafted V9 file may lead to information exposure or arbitrary code execution on the affected product.</description>
+    <title>CVE-2026-97187 - NVD - CVSS Score v3.1: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97187</link>
+    <guid isPermaLink="false">11b5576022603a7bd77513a9d66e8cb8</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.6 | GitLab has remediated an issue in GitLab CE/EE affecting all versions from 17.6 before 19.3.9, 19.4 before 19.4.8, and 19.5 before 19.5.6 that under certain conditions could have allowed an authenticated user to read Kubernetes Secrets from other namespaces in clusters connected through the GitLab agent for Kubernetes due to incorrect authorization in workspaces.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107902 - NVD - CVSS Score v4.0: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107902</link>
-    <guid isPermaLink="false">f3b06ea9c5a51ac41f40aede650b34e5</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.4 | TELLUS and TELLUS Lite provided by FUJI ELECTRIC CO., LTD. contain a use after free vulnerability. Opening a specially crafted V9 file may lead to information exposure or arbitrary code execution on the affected product.</description>
+    <title>CVE-2026-97639 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97639</link>
+    <guid isPermaLink="false">098b464fb0bb0083ed2114b6f203ec76</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.3 | The Everest Backup – WordPress Cloud Backup, Migration, Restore &amp; Cloning Plugin plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.3.14 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for unauthenticated attackers to activate any already-installed inactive plugin on the site.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
