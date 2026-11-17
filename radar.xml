@@ -5,15 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Nov 2026 03:02:30 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-130346 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130346</link>
-    <guid isPermaLink="false">044d525581474238b89cfac69dc5b1c1</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.3 | AdminNeo before 5.9.1 contains an sql injection vulnerability in the ClickHouse driver because idf_escape() doubles backticks but does not escape backslashes in identifiers. Attackers can lure a logged-in user into opening a GET link with a column name ending in a backslash in columns, where, or order parameters, causing query text to be parsed as SQL.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 17 Nov 2026 04:01:05 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-130347 - NVD - CVSS Score v4.0: 6.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130347</link>
@@ -323,6 +315,18 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86676</link>
     <guid isPermaLink="false">cc6f118323b092c415d471281768c4be</guid>
     <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.2 | A post-authentication command injection vulnerability in the “Description” parameter of a CGI program  in Zyxel DX3300-T0 firmware versions through 5.50(ABVY.8.3)C0 could allow an authenticated attacker with administrator privileges to execute OS commands by sending a crafted HTTP request.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125275 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125275</link>
+    <guid isPermaLink="false">5dc36db8c23ab48be54ab8fc2e8806ab</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.2 | Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in device certificate verification in nerves-hub nerves_hub_web allows an unauthenticated remote attacker to cause a denial of service via a TLS client certificate whose CA is not registered. When a client certificate chains to a root in the device endpoint's trust store but no CA in the chain is registered in NervesHub, NervesHub.SSL.decide/2 refuses it with the reason :unknown_ca. Erlang/OTP ssl reads that reason as a missing trust anchor, looks for an alternative root, finds the same root and validates again without end. The handshake process queries the database on each pass and keeps running after the client disconnects, until the node restarts.
+
+The device endpoint trusts the public roots from CAStore unless DEVICE_SSL_CACERTFILE is set, so a client certificate from a public CA whose chain allows client authentication is sufficient. A chain that ends at a root outside the trust store is refused once.
+
+This issue affects nerves_hub: from 1.0.0 before 2.5.4.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
