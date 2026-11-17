@@ -5,191 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Nov 2026 17:00:57 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-130626 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130626</link>
-    <guid isPermaLink="false">eafea6e5f63f29f7ccbafc3d785fb02f</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.5 | The core JDK HTTP client (a2a-java-sdk-http-client) applies the GHSA-9rhm redirect-neutralization only to the POST path. JdkGetBuilder.get(), JdkGetBuilder.getAsyncSSE(), and JdkDeleteBuilder.delete() call the injected httpClient directly, with no redirect gate. An application that supplies a redirect-capable HttpClient (Redirect.NORMAL/ALWAYS) — which is the SDK-documented way to enable POST redirects — silently follows cross-authority redirects on every credentialed GET/DELETE request. The JDK strips Authorization cross-origin, but forwards the four allowlisted custom credential headers (X-API-Key, API-Key, X-Auth-Token, X-Authentication) to the attacker-controlled authority. This is an incomplete-fix variant of GHSA-9rhm: the fix hardened the default client and added a POST-only two-step opt-in, but never covered GET/DELETE.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130627 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130627</link>
-    <guid isPermaLink="false">00bb275dd850294c22a64cf30e824bff</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.5 | The Vert.x HTTP client transport (a2a-java-sdk-http-client-vertx) hand-rolls a POST redirect follower that, when the documented PostBuilder.followRedirects(true) opt-in is enabled, re-issues the redirected request with the full request header map copied verbatim and performs no credential stripping and no same-authority check. A malicious, compromised, or mistyped agent that returns a 30x response with an absolute cross-host Location causes the client to forward the standard Authorization header (Bearer/Basic/OAuth) — plus every other header, including the allowlisted API-key headers — to the attacker-controlled authority. This breaks the project's own cross-transport invariant (SECURITY.md §8, OkHttpPostRedirectHeaderLeakTest) that credentials are stripped on cross-authority redirects even when redirects are followed. The sibling JDK and OkHttp/Android transports strip Authorization; Vert.x uniquely does not. This is a &quot;fix introduced the bug&quot; variant — the follower was added by the GHSA-9rhm hardening PR (3ae82912, refined by a5e76a0b).</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130628 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130628</link>
-    <guid isPermaLink="false">18b5e8ef1092995a3ed28650ffc3f9fa</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | react-native-webview 13.7.0 through 17.1.0 on Windows contains an unrestricted URI scheme launch vulnerability in the WebView2 OnCoreWebView2NewWindowRequested handler, which passes requested URIs to LaunchUriAsync without scheme or user-initiation checks. Malicious web content can call window.open() or use target=_blank links with schemes like ms-settings: to launch Windows protocol handlers without the external-protocol confirmation prompt.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130629 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130629</link>
-    <guid isPermaLink="false">aa837634ab08972630421fd2a09ecca2</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.3 | react-native-webview 13.8.0 through 17.1.0 contains a code injection vulnerability that allows attackers to execute JavaScript by placing unescaped backticks or ${} sequences in injectedJavaScriptObject string values. Attackers who control values like profile fields or API responses can break out of the template literal to access the page DOM, non-HttpOnly cookies, and the ReactNativeWebView message bridge.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130630 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130630</link>
-    <guid isPermaLink="false">ddf596283f33b65f7360eb9410d292a6</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC 26.02.0 contains a NULL pointer dereference vulnerability in dasher_configure_pid() in src/filters/dasher.c that dereferences ds2-&gt;set without checking for NULL. Attackers can supply a crafted MPEG-2 TS file processed with MP4Box -dash to disconnect a PID and crash MP4Box, causing denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130631 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130631</link>
-    <guid isPermaLink="false">549763d4734550e446cc049e46d4ad46</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains an uninitialized pointer access vulnerability in GetESD() in src/isomedia/track.c that allows attackers to trigger invalid memory reads via crafted MP4 files. Attackers can supply an MP4 with an rvcc box having predefined_rvc_config set to 0 and no meta item index, causing strcmp() on an uninitialized mime_type pointer and crashing MP4Box -add.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130632 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130632</link>
-    <guid isPermaLink="false">97abbddb0539234a3d55362cbaeee065</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.02.0 contains an out-of-bounds read vulnerability in m2tsdmx_send_packet() in src/filters/dmx_m2ts.c caused by double-skipping the VC-1 start-code offset. Attackers can supply a crafted MPEG-2 TS VC-1 stream that underflows the remaining length, causing memcpy() to over-read and crash MP4Box on import.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130633 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130633</link>
-    <guid isPermaLink="false">9fe6c7cb2e0316dfba5b3dd7ed727bcb</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.02.0 contains a use-after-free vulnerability in gf_filter_pid_set_args_internal() that leaves a stale pointer after gf_props_reset_single() frees a parsed PID property value. Attackers can supply a crafted filelist input processed by MP4Box with -add, causing gf_props_del_property() to access freed memory and crash the application.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130634 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130634</link>
-    <guid isPermaLink="false">209be55616c1c44d88e35596adf7d9be</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains a heap-based buffer overflow in gf_mpd_resolve_url() in src/media_tools/mpd.c that allows attackers to write past a heap buffer via crafted DASH manifests. Attackers can supply a crafted MPD whose segment template expands beyond the allocation through unchecked strcat() calls, crashing MP4Box and causing denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130635 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130635</link>
-    <guid isPermaLink="false">7c02474b84ec9d989cc8cbc1fa1ef2a2</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains an uncontrolled recursion vulnerability in dasher_gather_deps() in src/filters/dasher.c that fails to detect cyclic stream dependency chains. Attackers can supply a crafted MPEG-2 TS file that MP4Box processes with -dash, exhausting the stack and crashing the process for denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77224 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77224</link>
-    <guid isPermaLink="false">d6100e32a160f91307a3d5f0141512ae</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | Camunda 7.24.0 before 7.24.14 and 7.23.0 before 7.23.17 contains an XML External Entity (XXE) injection vulnerability in the camunda-external-task-client's DomXmlDataFormat.defaultDocumentBuilderFactory(), which fails to disable external entity resolution when parsing object variables serialized with application/xml. An attacker able to write a process variable can trigger arbitrary file read and out-of-band outbound HTTP requests from every worker JVM that deserializes the variable, enabling exfiltration of credentials, service-account tokens, and private key material from network segments deeper than the engine itself.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100963 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100963</link>
-    <guid isPermaLink="false">541772af485d8555d299ceafdcca9b7c</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.1 | NVIDIA TensorRT for Linux contains a vulnerability where a user could cause an integer overflow issue. A successful exploit of this vulnerability might lead to denial of service and data tampering.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100970 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100970</link>
-    <guid isPermaLink="false">6ed7fd8f428bb5e0b616da42cb488f66</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 6.4 | NVIDIA OpenShell for Linux contains a vulnerability in the network policy hot-reload component where a local attacker with low privileges could bypass updated network policy restrictions through existing L7-inspected tunnels that continue to use the previous policy after a reload. A successful exploit of this vulnerability might lead to information disclosure and data tampering.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100971 - NVD - CVSS Score v3.1: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100971</link>
-    <guid isPermaLink="false">1f68cb538dc0c15e7c0371f720622217</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.4 | NVIDIA OpenShell for Linux contains a vulnerability in the L7 path allowlist enforcement component where a local attacker with low privileges could cause path traversal by using semicolon-dot path sequences to bypass allowlist restrictions. A successful exploit of this vulnerability might lead to information disclosure, data tampering, and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100972 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100972</link>
-    <guid isPermaLink="false">d28907265bcd621787345f7b10b98558</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.1 | NVIDIA OpenShell for Linux contains a vulnerability in resource-level authorization for create, read, update, and delete operations where an authenticated remote attacker with low privileges could access or modify resources without the required authorization checks. A successful exploit of this vulnerability might lead to information disclosure and data tampering.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100973 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100973</link>
-    <guid isPermaLink="false">1f09d3639673040795da4ad0383e3ff7</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 6.4 | NVIDIA OpenShell for Linux contains a vulnerability in L7 policy enforcement for HTTP CONNECT tunnels where a local attacker with low privileges could cause a protection mechanism failure by using nonstandard HTTP methods to bypass policy restrictions. A successful exploit of this vulnerability might lead to information disclosure and data tampering.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100974 - NVD - CVSS Score v3.1: 6.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100974</link>
-    <guid isPermaLink="false">04315b83ac5c2bc8ff8c335e130778ca</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 6.7 | NVIDIA OpenShell for Linux contains a vulnerability in the sandbox SSH authentication component where a remote attacker with high privileges could gain unauthorized access to other sandboxes by using an SSH handshake secret shared across sandboxes. A successful exploit of this vulnerability might lead to information disclosure, data tampering, and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100975 - NVD - CVSS Score v3.1: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100975</link>
-    <guid isPermaLink="false">9abbaf5b45d7b44343bc6af5e53450e8</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.6 | NVIDIA OpenShell for Linux contains a vulnerability in the Kubernetes sandbox SSH authentication configuration where a local attacker with low privileges could obtain sensitive authentication information by accessing an SSH handshake secret stored in a plaintext environment variable and reuse the shared secret to gain unauthorized access to other sandboxes. A successful exploit of this vulnerability might lead to information disclosure, data tampering, and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100976 - NVD - CVSS Score v3.1: 5.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100976</link>
-    <guid isPermaLink="false">b4a5b0eef25c66c123bc4bdd4f02082b</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.2 | NVIDIA OpenShell for Linux contains a vulnerability in Kubernetes network policy enforcement where a local attacker with low privileges could cause the proxy to attribute network traffic to a different process due to TCP source-port identity confusion, allowing the attacker to bypass process-based network policy restrictions. A successful exploit of this vulnerability might lead to information disclosure and data tampering.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100977 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100977</link>
-    <guid isPermaLink="false">f49f33ed296ef772c40c753fcbebcb9b</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.5 | NVIDIA OpenShell for Linux contains a vulnerability in L7 REST policy enforcement where a local attacker with low privileges could exploit inconsistent HTTP interpretation by using cleartext HTTP/2 (h2c) over an HTTP CONNECT tunnel to bypass policy restrictions. A successful exploit of this vulnerability might lead to information disclosure and data tampering.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100978 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100978</link>
-    <guid isPermaLink="false">f12756bee0b69022e34db08386e107c9</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 6.4 | NVIDIA OpenShell for Linux contains a vulnerability in its gateway-to-sandbox transport where a network attacker positioned on the internal path could intercept credentials and tamper with commands and data because the transport accepts any host key without verification, permitting a machine-in-the-middle to impersonate the sandbox endpoint. A successful exploit of this vulnerability might lead to information disclosure, data tampering, and code execution.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100979 - NVD - CVSS Score v3.1: 6.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100979</link>
-    <guid isPermaLink="false">b87d1c9b5fca4060cd357d74611c04f3</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 6.6 | NVIDIA OpenShell for Linux contains a vulnerability in its gateway connection-proxy component where an attacker who can manipulate a sandbox's status metadata could cause the control-plane server to initiate connections to arbitrary internal hosts because the connection target is derived from that metadata and used without validation against the expected address range. A successful exploit of this vulnerability might lead to information disclosure and data tampering.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100980 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100980</link>
-    <guid isPermaLink="false">dab33fabe4539e93f8b3407f09ba21ca</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.5 | NVIDIA OpenShell for Linux contains a vulnerability in its command-line diagnostic interface where an attacker could cause OS command injection because user- or configuration-supplied values are incorporated into a command that is interpreted by two successive shell layers in the remote path while being escaped for only one layer. A successful exploit of this vulnerability might lead to code execution, escalation of privileges, information disclosure, data tampering, and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 17 Nov 2026 18:02:06 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-100981 - NVD - CVSS Score v3.1: 6.4</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100981</link>
@@ -330,6 +146,203 @@ An attacker who can cause a device to trust an attacker-controlled certificate a
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65167</link>
     <guid isPermaLink="false">f34b6b92571ba59eaa1cd2bde50ceda8</guid>
     <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.5 | NVIDIA TensorRT contains a vulnerability where a user could cause memory allocation with excessive size value by crafting a malicious TRT engine. A successful exploit of this vulnerability might lead to denial of service.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-100967 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100967</link>
+    <guid isPermaLink="false">0cbc6abdc68d39ee83cd907c55019f25</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.8 | NVIDIA Megatron-LM contains a vulnerability where an attacker could cause deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, information disclosure, and data tampering.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-100968 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100968</link>
+    <guid isPermaLink="false">f92ed975949ee0044393555476acca5d</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.8 | NVIDIA Megatron-LM contains a vulnerability in dataset loading where an attacker could cause deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, information disclosure, and data tampering.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119725 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119725</link>
+    <guid isPermaLink="false">9081023cf987b2acc38901af45fa6ae2</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.2 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in PocketBook / Obreey Products PocketBook Reader (Android) allows Exposure of Sensitive Information to an Unauthorized Actor.
+
+This issue affects PocketBook Reader (Android): 5.65.0.39561.release (com.obreey.reader).</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119726 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119726</link>
+    <guid isPermaLink="false">5446608585520677149de0d548575610</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.3 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in PocketBook / Obreey Products PocketBook Reader (Android) allows Exposure of Sensitive Information to an Unauthorized Actor.
+
+This issue affects PocketBook Reader (Android): 5.65.0.39561.release (com.obreey.reader).</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120287 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120287</link>
+    <guid isPermaLink="false">ed135d47de3d7dbbd751470dc7e3193a</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | Allocation of Resources Without Limits or Throttling vulnerability in Plug.Parsers.MULTIPART in elixir-plug plug allows an unauthenticated remote attacker to exhaust memory via a multipart request body built from parts without headers, or from header lines without a name and a value. The parser charges the :length limit only with the name and value bytes of each part header and the bytes of each part body. The part delimiter, the header separator, and the line endings cost nothing.
+
+In lib/plug/parsers/multipart.ex, Plug.Parsers.MULTIPART.parse_multipart_headers/5 keeps an entry for every part without a content-disposition header, together with its header list, until the whole body is read. A request made of such parts does not reach the limit at any size, and the parser process holds a multiple of the request size in memory until parsing completes. Any endpoint that uses Plug.Parsers with the :multipart parser is reachable.
+
+This issue affects plug: from 1.13.0 before 1.20.4.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126547 - NVD - CVSS Score v4.0: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126547</link>
+    <guid isPermaLink="false">d8c0e29ded08d843c6a2fa7678a4fa22</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.8 | Missing Authorization vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Accessing Functionality Not Properly Constrained by ACLs.This issue affects AutoSys Workload Automation: from 12.1 through 24.2.00.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126548 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126548</link>
+    <guid isPermaLink="false">76213c6d6e7bb058372147578a86356b</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.1 | Server-Side Request Forgery (SSRF) vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Server Side Request Forgery.This issue affects AutoSys Workload Automation: from 12.1.01 Cum 03 through 12.1.01 Cum 06, from 24.0 through 24.2.00.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126549 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126549</link>
+    <guid isPermaLink="false">6fc1bdf087280d39fea4230a6df3da22</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.1 | Insertion of Sensitive Information into Log File vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Collect Data from Common Resource Locations.This issue affects AutoSys Workload Automation: from 12.1.00 through 24.2.00.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126550 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126550</link>
+    <guid isPermaLink="false">b6469540a4ee02e642c23573e9aa44b6</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.6 | Insertion of Sensitive Information into Log File, Insufficiently Protected Credentials vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Reusing Session IDs (Session Replay).This issue affects AutoSys Workload Automation: from 12.1.00 through 24.2.00.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126551 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126551</link>
+    <guid isPermaLink="false">68a0bdb5ff2fd99355ab0601ad483372</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 9.3 | Use of Hard-coded Cryptographic Key vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Session Credential Falsification through Forging.This issue affects AutoSys Workload Automation: from 12.1 through 24.2.00.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126552 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126552</link>
+    <guid isPermaLink="false">edf2693a21b95e086f12e5dfa7a8c3fe</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 9.3 | Missing Authentication for Critical Function, OS Command Injection vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows OS Command Injection.This issue affects AutoSys Workload Automation: from 12.1 through 24.0.01.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126553 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126553</link>
+    <guid isPermaLink="false">977190d751cf94a97d112549a0348322</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 9.3 | Deserialization of Untrusted Data vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Object Injection.This issue affects AutoSys Workload Automation: from 12.1 through 24.0.01.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126555 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126555</link>
+    <guid isPermaLink="false">825d0f3d0d70ac95de5b0f5f2bf0faa0</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | Missing Authorization, Hidden Functionality vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows Accessing Functionality Not Properly Constrained by ACLs, Exploit Non-Production Interfaces.This issue affects AutoSys Workload Automation: from 12.1.00 through 24.2.00.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126556 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126556</link>
+    <guid isPermaLink="false">357a6fa451cdb09decf59283be46aecd</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.1 | Invocation of Process Using Visible Sensitive Information, Insufficiently Protected Credentials vulnerability in Broadcom AutoSys Workload Automation (AutoSys engine (AE) native clients modules) on Windows, Linux allows Collect Data from Common Resource Locations.This issue affects AutoSys Workload Automation: 24.2.00-0210 and earlier (verified on 24.2.00-0210; earlier range unestablished), 24.2.01 (when the -pw/-pwx options are used).</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126557 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126557</link>
+    <guid isPermaLink="false">53a4b23526edc1d735b0c286834af5b7</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 4.8 | Out-of-bounds Write vulnerability in Broadcom AutoSys Workload Automation (AutoSys engine (AE) native clients modules) on Windows, Linux allows Overflow Buffers.This issue affects AutoSys Workload Automation: from 12.1.00.00-0305 through 24.2.00-0210.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126558 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126558</link>
+    <guid isPermaLink="false">070dd840d3283fe7a7ef51099479b99a</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | OS Command Injection, Incomplete List of Disallowed Inputs vulnerability in Broadcom AutoSys Workload Automation (Workload Control Center (WCC) modules) on Windows, Linux allows OS Command Injection, Command Delimiters.This issue affects AutoSys Workload Automation: from 12.1 through 24.2.00.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129246 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129246</link>
+    <guid isPermaLink="false">8693b6c4a26bb87685db81eb274da179</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.8 | Due to a Debian-specific patch, the directory used to share data between the
+LightDM and the users logging in was writable by the lightdm user of the
+unprivileged greeter process. A process running under the lightdm identity
+could leverage write access to that directory to force the LightDM process
+(running as root) to change ownership and permissions on other root-owned
+directories and escalate privileges from the lightdm user to root.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130801 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130801</link>
+    <guid isPermaLink="false">7f3fc867a96c89b494c7d205549d88ad</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | The device's command parser does not require asymmetric cryptographic signatures to validate incoming APDU packets. This enables an attacker to inject forged, unauthorized commands to manipulate device features and configurations once the initial handshake is bypassed.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130802 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130802</link>
+    <guid isPermaLink="false">1ba5fc38f149f9251f7b2f3656e3c012</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | The NFC authentication handshake relies on a fixed, static challenge instead of a unique, random value for every session. This allows an attacker to perform a &quot;replay attack,&quot; successfully authenticating by simply sending the same pre-recorded response.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130803 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130803</link>
+    <guid isPermaLink="false">15780c19efa969ee0bb34c41d5ddca8f</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | The firmware and flash memory store critical cryptographic secrets, such as global AES keys and network master keys, in unencrypted formats. Additionally, active session tokens (Store Pairing Tokens) are written to the flash in plaintext, exposing live network credentials.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130804 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130804</link>
+    <guid isPermaLink="false">d0fe01fe2f215eb4228fc4e14a391052</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | The microcontroller lacks enabled debug lock bits, leaving the physical Single-Wire (SWS) debugging interface completely unrestricted. This allows an attacker with physical access to use a hardware programmer to dump the entire production firmware.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-65132 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65132</link>
+    <guid isPermaLink="false">c63f09f971d9286d2db03cb3764e6de3</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.8 | NVIDIA Megatron-LM contains a vulnerability in checkpoint loading where an attacker could cause deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, information disclosure, and data tampering.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-67455 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-67455</link>
+    <guid isPermaLink="false">797a90866f29d53988de7418c2ef722f</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.8 | NVIDIA Model Optimizer for Linux and Windows contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, denial of service, and information disclosure.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
