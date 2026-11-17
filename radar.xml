@@ -5,23 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 16 Nov 2026 23:01:26 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-123353 - NVD - CVSS Score v3.1: 3.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123353</link>
-    <guid isPermaLink="false">80a398282472888981555f5e187fa26d</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 3.3 | Docmost is open-source collaborative wiki and documentation software. Prior to 0.96.0, two concurrent role-demotion requests from a space admin or workspace owner can each pass the last-admin or last-owner count check before either update is committed because the validation and role update are not serialized in one transaction. The requests can therefore demote the final two space admins or workspace owners and leave the affected space without an admin or the workspace without an owner, preventing normal administrative recovery. This issue is fixed in version 0.96.0.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126828 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126828</link>
-    <guid isPermaLink="false">d7e290f2d3630d4638edbf5359966e82</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS: não informado | A vulnerability in Phison SSD controller firmwares (Phison E18; EIFM80.0, Phison E18; EIFK51.2) allows a local attacker with administrative privileges to bypass the &quot;Security Access&quot; handshake by leveraging leaked RSA parameters found in vendor utility binaries. By successfully completing the authentication, an attacker can access vendor-specific commands that permit arbitrary memory read and write operations. Because the firmware's code regions lack protection, these primitives can be used to overwrite existing handlers and achieve volatile code execution on the SSD controller.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 17 Nov 2026 00:01:59 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-127219 - NVD - CVSS Score v4.0: 6.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127219</link>
@@ -371,6 +355,22 @@ ctx-&gt;sec_accept_ok is the sole WebSocket-specific gate in websocket_connect()
 The Sec-WebSocket-Accept exchange is not a secret-based authentication -- an endpoint or on-path attacker that sees the request can compute the expected value -- so the impact is bounded to parties that never observed the handshake request: a caching or transparent intermediary replaying a canned response, an off-path attacker injecting a spoofed response, or a non-WebSocket endpoint the client was induced to talk to. For those, the per-connection binding that RFC 6455 requires the client to enforce provided no protection at all, letting a single crafted response convince the device it holds a live WebSocket session and causing it to send application data to, and accept frames from, an unverified peer. There is no memory-safety consequence.
 
 The fix compares each delivered chunk against the expected value at the position reached so far, refuses a chunk that would overrun it, and accepts only once every byte of the expected value -- and no more -- has been matched; on_header_field() now also clears the flag for any other header so a partial value cannot be continued across an intervening header.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130320 - NVD - CVSS Score v3.1: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130320</link>
+    <guid isPermaLink="false">591969d95249f01e313335dd12640857</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 9.3 | In Open Object Rexx (ooRexx) before 5.2.0, RXAPI mishandles nameArg and userid bounds checking, possibly leading to arbitrary code execution via crafted messages.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130327 - NVD - CVSS Score v3.1: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130327</link>
+    <guid isPermaLink="false">00c96dd2a76c5df5cd3e2940df85cf0a</guid>
+    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 9.3 | In Open Object Rexx (ooRexx) before 5.2.0, RXAPI relies on a world-writable /tmp file unless XDG_RUNTIME_DIR is set, or localhost TCP port 10010, allowing RXAPI communication by any local user, e.g., for injection of a macro that will be executed by a REXX script.</description>
     <category>NVD</category>
     <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
   </item>
