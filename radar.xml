@@ -5,198 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Nov 2026 18:02:06 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-100981 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100981</link>
-    <guid isPermaLink="false">2d8900f2df315646d1d446ea7a325be5</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 6.4 | NVIDIA OpenShell for Linux contains a vulnerability in its layer-7 REST proxy where a sandboxed actor could bypass the proxy's policy enforcement by sending a request whose body framing is interpreted differently by the proxy and the upstream server, allowing a second request to be smuggled past policy checks. A successful exploit of this vulnerability might lead to data tampering and information disclosure.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100982 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100982</link>
-    <guid isPermaLink="false">70f37984306e0348df05720dc36dbb5b</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 6.5 | NVIDIA OpenShell for Linux contains a vulnerability in its inference-interception request parser where a sandboxed actor could exhaust processing resources by sending a chunked request that lacks body-size and chunk-count limits, causing excessive parsing work. A successful exploit of this vulnerability might lead to denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121590 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121590</link>
-    <guid isPermaLink="false">15151820f0c5eed11eb82e70b1a5931b</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 6.5 | Mattermost Desktop App versions &lt;=6.3 6.0.3 6.3.2.0 fail to validate the SiteURL value returned in a server's client configuration before constructing a server object from it which allows an operator of a server configured in the Desktop app to render the application persistently unusable across restarts via an unparseable SiteURL that triggers an uncaught exception reaching the process-level critical error handler. Mattermost Advisory ID: MMSA-2026-00770</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122055 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122055</link>
-    <guid isPermaLink="false">5872fcadafe01dc7cd01481b0fa18b2c</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | ICRTouch PocketTouch version 1.700 build 2025.3726 contains a default socket password set to the literal value password. Where the default value remains unchanged and is accepted by a TouchPoint POS terminal, an attacker with network access to the terminal’s socket service may authenticate using publicly known credentials.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122122 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122122</link>
-    <guid isPermaLink="false">c299e6692a566046a04b3e0eb295510e</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | The order-tracking functionality in ICRTouch ByTable and TouchTakeaway does not adequately verify that a requester is authorized to access the specified order. An unauthenticated remote attacker can modify an order identifier to retrieve information associated with other customers’ orders.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122125 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122125</link>
-    <guid isPermaLink="false">043b00b43d16dcfda952c7c2a58b58e6</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | ICRTouch ByTable and TouchTakeaway do not consistently implement anti-CSRF protections for state-changing web requests. The affected functionality does not require a per-session CSRF token or otherwise verify that requests originated from an authorized application context.
-
-An attacker who convinces an authenticated user to visit a malicious website may cause the user’s browser to submit unauthorized requests to the platform using the user’s active session.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122141 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122141</link>
-    <guid isPermaLink="false">026fae0ffd76f9f4b189366584cbeed0</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | The wallet top-up functionality in ICRTouch ByTable and TouchTakeaway does not adequately protect state-changing requests against CSRF. An attacker-controlled website can cause an authenticated customer’s browser to submit a wallet top-up request and add an attacker-selected charge to the customer’s active cart.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122142 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122142</link>
-    <guid isPermaLink="false">7fc7d1a859cbe2d660c97a764ddc8a7a</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | ICRTouch Commander administrative login interface does not adequately restrict repeated authentication attempts. The interface also returns distinguishable responses for multiple authentication states, including different behavior when a `siteID` value is supplied.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122143 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122143</link>
-    <guid isPermaLink="false">2850889f281f0361bf5f8f8f89e39105</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | ICRTouch Commander administrative interface performs security-sensitive operations through HTTP GET requests and includes an API key in the request query string. GET requests are commonly retained in browser history, proxy logs, server logs, analytics systems, referrer headers, and other intermediary records.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122145 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122145</link>
-    <guid isPermaLink="false">0ac9685700e1acca8da0c4161761f392</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | ICRTouch PocketTouch version 1.700 build 2025.3726 transmits the POS socket password in plaintext XML over an unencrypted TCP connection. The protocol does not provide transport-layer encryption to protect credentials from interception.
-
-An attacker able to observe network traffic between a PocketTouch device and a TouchPoint POS terminal can recover the socket password from captured packets.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122147 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122147</link>
-    <guid isPermaLink="false">b7c4400dd6cbbdd600dc4497f8ab1980</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | ICRTouch PocketTouch version 1.700 build 2025.3726 defines hard-coded default values for multiple credential fields, including a socket password and configuration and shutdown passwords. An additional email-related password field is initialized without a value.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122149 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122149</link>
-    <guid isPermaLink="false">57acdea4099320605fa32023237a6c85</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | The PocketTouch and TouchPoint POS protocol includes a `SAVECONFIG` command that appears capable of overwriting till configuration files remotely. 
-An attacker with network access to the POS socket service may be able to submit a crafted `SAVECONFIG` command and replace or modify terminal configuration data.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122150 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122150</link>
-    <guid isPermaLink="false">a6a0f89706097457744b1d45f2de5538</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | The PocketTouch and TouchPoint POS `CHECKPAYMENT` workflow accepts a caller-supplied clerk number without adequately verifying that the requesting client is authorized to act as that clerk.
-An attacker with access to the POS protocol may be able to specify another employee’s clerk identifier and submit payment-related requests under that identity.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122152 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122152</link>
-    <guid isPermaLink="false">04c8b814efc446c903f880c129796b42</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | The ICRTouch white-label TouchTakeaway Cordova applications do not implement certificate or public-key pinning for backend HTTPS connections. The applications therefore rely exclusively on the device’s system trust store when validating server certificates.
-An attacker who can cause a device to trust an attacker-controlled certificate authority, or who operates through a compromised or improperly issued trusted certificate, may be able to intercept and modify application traffic.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122153 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122153</link>
-    <guid isPermaLink="false">2620ab749cd96e2aa6da7a09be272946</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | The TouchOffice API `clerkList` endpoint appears to return sensitive clerk authentication data, including clerk PINs and iButton serial numbers. If the endpoint is accessible to callers who do not require access to these values, the API exposes reusable authentication material beyond the minimum information necessary for clerk-list functionality.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-65106 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65106</link>
-    <guid isPermaLink="false">4a05572545029b1d7f13c2a7be0e37e2</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.8 | NVIDIA Transformer Engine for Linux contains a vulnerability where a user could cause deserialization by loading  untrusted data. A successful exploit of this vulnerability might lead to code execution, information disclosure, and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-65167 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65167</link>
-    <guid isPermaLink="false">f34b6b92571ba59eaa1cd2bde50ceda8</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.5 | NVIDIA TensorRT contains a vulnerability where a user could cause memory allocation with excessive size value by crafting a malicious TRT engine. A successful exploit of this vulnerability might lead to denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100967 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100967</link>
-    <guid isPermaLink="false">0cbc6abdc68d39ee83cd907c55019f25</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.8 | NVIDIA Megatron-LM contains a vulnerability where an attacker could cause deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, information disclosure, and data tampering.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100968 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100968</link>
-    <guid isPermaLink="false">f92ed975949ee0044393555476acca5d</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.8 | NVIDIA Megatron-LM contains a vulnerability in dataset loading where an attacker could cause deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, information disclosure, and data tampering.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119725 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119725</link>
-    <guid isPermaLink="false">9081023cf987b2acc38901af45fa6ae2</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.2 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in PocketBook / Obreey Products PocketBook Reader (Android) allows Exposure of Sensitive Information to an Unauthorized Actor.
-
-This issue affects PocketBook Reader (Android): 5.65.0.39561.release (com.obreey.reader).</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119726 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119726</link>
-    <guid isPermaLink="false">5446608585520677149de0d548575610</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.3 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in PocketBook / Obreey Products PocketBook Reader (Android) allows Exposure of Sensitive Information to an Unauthorized Actor.
-
-This issue affects PocketBook Reader (Android): 5.65.0.39561.release (com.obreey.reader).</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120287 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120287</link>
-    <guid isPermaLink="false">ed135d47de3d7dbbd751470dc7e3193a</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | Allocation of Resources Without Limits or Throttling vulnerability in Plug.Parsers.MULTIPART in elixir-plug plug allows an unauthenticated remote attacker to exhaust memory via a multipart request body built from parts without headers, or from header lines without a name and a value. The parser charges the :length limit only with the name and value bytes of each part header and the bytes of each part body. The part delimiter, the header separator, and the line endings cost nothing.
-
-In lib/plug/parsers/multipart.ex, Plug.Parsers.MULTIPART.parse_multipart_headers/5 keeps an entry for every part without a content-disposition header, together with its header list, until the whole body is read. A request made of such parts does not reach the limit at any size, and the parser process holds a multiple of the request size in memory until parsing completes. Any endpoint that uses Plug.Parsers with the :multipart parser is reachable.
-
-This issue affects plug: from 1.13.0 before 1.20.4.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 17 Nov 2026 19:02:01 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-126547 - NVD - CVSS Score v4.0: 7.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126547</link>
@@ -343,6 +152,367 @@ directories and escalate privileges from the lightdm user to root.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-67455</link>
     <guid isPermaLink="false">797a90866f29d53988de7418c2ef722f</guid>
     <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.8 | NVIDIA Model Optimizer for Linux and Windows contains a vulnerability where an attacker could cause a deserialization of untrusted data. A successful exploit of this vulnerability might lead to code execution, data tampering, denial of service, and information disclosure.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104100 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104100</link>
+    <guid isPermaLink="false">5f7776935cc74c4af11f95198344ec68</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.8 | Teable is an AI spreadsheet for business. Prior to release.2026-07-21T11-27-40Z.2320, a registered user can supply path traversal sequences in the hash field accepted by POST /api/attachments/signature when the default local storage provider is in use. In apps/nestjs-backend/src/features/attachments/plugins/local.ts, LocalStorage.presigned uses the client-controlled hash as the storage filename, and LocalStorage.save resolves that path and copies the uploaded request body without calling assertPathWithinStorage on the write path. The read path uses the jail, but the write path does not, allowing the resolved destination to escape the configured storage directory. Because the backend container runs as uid 0, the attacker can write or overwrite arbitrary root-owned files, which can corrupt the instance or lead to root code execution. Object-storage deployments that do not use LocalStorage.save are not affected by this sink. This issue is fixed in release.2026-07-21T11-27-40Z.2320.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110782 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110782</link>
+    <guid isPermaLink="false">eb9f6bcbae4c28eb10231b5f69225d10</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.7 | The SimpleSAMLphp SAML2 library is a PHP library for SAML2 related functionality. From 6.2.2 until 6.2.4 and 7.0.0-rc2, HTTPArtifact::receive() in src/Binding/HTTPArtifact.php verifies a signed outer ArtifactResponse but returns an unsigned embedded SAML Response before calling verifyMessageSignature(). The signed path verifies with the artifact issuer's metadata keys without requiring the embedded Response issuer to match that artifact issuer. In a multi-IdP federation, an attacker controlling one trusted IdP can therefore return a validly signed outer ArtifactResponse containing an unsigned Response that claims a different IdP, bypassing the binding's embedded-message authentication. End-to-end impersonation requires a service provider using HTTP-Artifact and a downstream consumer that relies on the binding to authenticate the embedded Response rather than independently requiring a signature. This issue is fixed in versions 6.2.4 and 7.0.0-rc2.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21590 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21590</link>
+    <guid isPermaLink="false">04f7318e78c477e5e257f91255c0b242</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | This High severity Information Path Traversal (Arbitrary Read/Write) vulnerability was introduced in versions 9.12.0, 10.3.0, and 11.3.0 of Jira Software Data Center. 
+	
+	This Path Traversal (Arbitrary Read/Write) vulnerability, with a CVSS Score of 8.7, allows a remote unauthenticated attacker to read files from the Jira web application root. 
+	
+	Atlassian recommends that Jira Software Data Center customers upgrade to latest version, if you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+		
+		Jira Software Data Center 9.12: Upgrade to a release greater than or equal to 9.12.40
+		
+		Jira Software Data Center 10.3: Upgrade to a release greater than or equal to 10.3.26
+		
+		Jira Software Data Center 11.3: Upgrade to a release greater than or equal to 11.3.12
+		
+		
+	
+	See the release notes (https://confluence.atlassian.com/jirasoftware/jira-software-data-center-release-notes.html). You can download the latest version of Jira Software Data Center from the download center (https://www.atlassian.com/software/jira/download-archives). 
+	
+	This vulnerability was reported via our Bug Bounty program.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21591 - NVD - CVSS Score v4.0: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21591</link>
+    <guid isPermaLink="false">388d4c00ebf944ee7ef753ae674ca4f7</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.4 | This High severity PrivEsc (Privilege Escalation) vulnerability was introduced in versions 10.2.0, 11.0.0, 12.0.0, and 12.1.0 of Bamboo Data Center.
+
+This PrivEsc (Privilege Escalation) vulnerability, with a CVSS Score of 7.4, allows an authenticated attacker to perform actions as a higher-privileged user.
+
+Atlassian recommends that Bamboo Data Center customers upgrade to latest version, if you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+ Bamboo Data Center 10.2: Upgrade to a release greater than or equal to 10.2.26
+
+ Bamboo Data Center 12.1: Upgrade to a release greater than or equal to 12.1.13
+
+ Bamboo Data Center 13.0: Upgrade to a release greater than or equal to 13.0.1
+
+See the release notes ([https://confluence.atlassian.com/bambooreleases/bamboo-release-notes-1189793869.html]). You can download the latest version of Bamboo Data Center from the download center ([https://www.atlassian.com/software/bamboo/download-archives]).
+
+This vulnerability was reported via our Penetration Testing program.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21592 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21592</link>
+    <guid isPermaLink="false">6f921205e320f145b6c799e87111e9bd</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.7 | This High severity Path Traversal (Arbitrary Read/Write) vulnerability known as CVE-2026-21592 was introduced in version 4.9.0.
+
+This Path Traversal (Arbitrary Read/Write) vulnerability, with a CVSS Score of 7.7 and a CVSS Vector of CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P allows an unauthenticated attacker to disclose protected application configuration files, which has high impact to confidentiality, no impact to integrity, no impact to availability, and requires no user interaction.
+
+Atlassian recommends that Crucible Server customers upgrade to the latest version. If you are unable to do so, upgrade your instance to the specified supported fixed version:
+ Crucible Server 4.9: Upgrade to a release greater than or equal to 4.9.16
+
+See the Crucible Server release notes ([https://confluence.atlassian.com/crucible/crucible-releases-298977378.html]). You can download the latest version of Crucible from the Crucible Download Archives ([https://www.atlassian.com/software/crucible/download-archives]).
+
+The following description summarizes the vulnerability reported via our Penetration Testing program:
+
+Crucible do not account for path parameters when validating protected paths requested through the static-resource route. A crafted path segment passes validation, after which Jetty removes the path parameter during dispatch and resolves the request to a protected resource. This can expose files under WEB-INF and permit direct invocation of admin-area JSPs outside the normal interceptor and administrative password checks. An ordinary authenticated user can exploit the issue, and unauthenticated exploitation is possible when anonymous access is enabled.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21593 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21593</link>
+    <guid isPermaLink="false">9be07e249c026ebf6bdf5119631b0783</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.7 | This High severity OS Command Injection vulnerability known as CVE-2026-21593 was introduced in version 4.9.0.
+
+This OS Command Injection vulnerability, with a CVSS Score of 7.7 and a CVSS Vector of CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N allows an authenticated attacker to execute arbitrary commands.
+
+Atlassian recommends that Fisheye and Crucible Data Center and Server customers upgrade to the latest version. If you are unable to do so, upgrade your instance to the specified supported fixed version:
+
+Fisheye and Crucible 4.9: Upgrade to a release greater than or equal to 4.9.16
+
+See the Fisheye release notes (https://confluence.atlassian.com/fisheye/fisheye-release-notes-965552419.html) and Crucible release notes (https://confluence.atlassian.com/crucible/crucible-releases-298977378.html). You can download the latest version of Fisheye and Crucible from the Crucible Download Archives (https://www.atlassian.com/software/crucible/download-archives).</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21594 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21594</link>
+    <guid isPermaLink="false">4211cfa4aa19df57f0816eb9713d3286</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | This High severity Path Traversal (Arbitrary Read/Write) vulnerability known as CVE-2026-21594 was introduced in versions 10.2.0, 11.0.0, 12.0.0, and 12.1.0.
+
+This Path Traversal (Arbitrary Read/Write) vulnerability, with a CVSS Score of 8.7 and a CVSS Vector of CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N allows an unauthenticated attacker to disclose protected files from the Bamboo web application root, which has high impact to confidentiality, no impact to integrity, no impact to availability, and requires no user interaction.
+
+Atlassian recommends that Bamboo Data Center customers upgrade to the latest version. If you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+
+Bamboo Data Center 12.1: Upgrade to a release greater than or equal to 12.1.13
+Bamboo Data Center 10.2: Upgrade to a release greater than or equal to 10.2.26
+
+See the release notes (https://confluence.atlassian.com/bambooreleases/bamboo-release-notes-1189793869.html). You can download the latest version of Bamboo Data Center from the download center (https://www.atlassian.com/software/bamboo/download-archives).</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21595 - NVD - CVSS Score v4.0: 7.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21595</link>
+    <guid isPermaLink="false">efabf951bb717b5adf792806e4562113</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.6 | This High severity Improper Authorization vulnerability was introduced in versions 10.2.0, 11.0.0, 12.0.0, and 12.1.0 of Bamboo Data Center.
+
+This Improper Authorization vulnerability, with a CVSS Score of 7.6, allows an unauthenticated attacker to gain unintended access and can lead to the exposure of resources or functionality, possibly providing attackers with sensitive information or even execute arbitrary code.
+
+Atlassian recommends that Bamboo Data Center customers upgrade to latest version, if you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+ Bamboo Data Center 10.2: Upgrade to a release greater than or equal to 10.2.26
+
+ Bamboo Data Center 12.1: Upgrade to a release greater than or equal to 12.1.13
+
+ Bamboo Data Center 13.0: Upgrade to a release greater than or equal to 13.0.1
+
+See the release notes ([https://confluence.atlassian.com/bambooreleases/bamboo-release-notes-1189793869.html]). You can download the latest version of Bamboo Data Center from the download center ([https://www.atlassian.com/software/bamboo/download-archives]).
+
+This vulnerability was reported via our Penetration Testing program.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21596 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21596</link>
+    <guid isPermaLink="false">c4099b2360f2cc904be0af895ea124da</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.7 | This High severity SSTI (Server-side Template Injection) vulnerability known as CVE-2026-21596 was introduced in version 12.0.0, 12.1.0.
+
+This SSTI (Server-side Template Injection) vulnerability, with a CVSS Score of 7.7 and a CVSS Vector of CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N allows an authenticated attacker to execute arbitrary commands, which has high impact to confidentiality, high impact to integrity, high impact to availability, and requires no user interaction.
+
+Atlassian recommends that Bamboo Data Center customers upgrade to the latest version. If you are unable to do so, upgrade your instance to the specified supported fixed version:
+ Bamboo Data Center 12.1: Upgrade to a release greater than or equal to 12.1.13
+
+See the release notes ([https://confluence.atlassian.com/bambooreleases/bamboo-release-notes-1189793869.html]). You can download the latest version of Bamboo Data Center from the download center ([https://www.atlassian.com/software/bamboo/download-archives]).</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21598 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21598</link>
+    <guid isPermaLink="false">500498361ef5cea86ed08c36540bbc38</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | This High severity Path Traversal (Arbitrary Read/Write) vulnerability known as CVE-2026-21598 was introduced in versions 10.2.0, 11.0.0, 12.0.0 and 12.1.0.
+
+This Path Traversal (Arbitrary Read/Write) vulnerability, with a CVSS Score of 8.7 and a CVSS Vector of CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N allows an unauthenticated attacker to potentially disclose sensitive information from the deployed Bamboo web application root, which has high impact to confidentiality, no impact to integrity, no impact to availability, and requires no user interaction.
+
+Atlassian recommends that Bamboo Data Center customers upgrade to the latest version. If you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+ Bamboo Data Center 12.1: Upgrade to a release greater than or equal to 12.1.13
+ Bamboo Data Center 10.2: Upgrade to a release greater than or equal to 10.2.26
+
+See the release notes ([https://confluence.atlassian.com/bambooreleases/bamboo-release-notes-1189793869.html]). You can download the latest version of Bamboo Data Center from the download center ([https://www.atlassian.com/software/bamboo/download-archives]).</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21599 - NVD - CVSS Score v4.0: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21599</link>
+    <guid isPermaLink="false">b2b1f3638517d2ad1f1bda17a2c7ec8c</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.5 | This High severity Path Traversal (Arbitrary Read/Write) vulnerability known as CVE-2026-21599 was introduced in versions 10.2.0, 11.0.0, 12.0.0, and 12.1.0.
+
+This Path Traversal (Arbitrary Read/Write) vulnerability, with a CVSS Score of 7.5 and a CVSS Vector of CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N allows an authenticated attacker to expose assets in your environment susceptible to exploitation.
+
+Atlassian recommends that Bamboo Data Center customers upgrade to the latest version. If you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+
+Bamboo Data Center 13.0: Upgrade to a release greater than or equal to 13.0.1
+Bamboo Data Center 12.1: Upgrade to a release greater than or equal to 12.1.13
+Bamboo Data Center 10.2: Upgrade to a release greater than or equal to 10.2.26
+
+See the release notes (https://confluence.atlassian.com/bambooreleases/bamboo-release-notes-1189793869.html). You can
+download the latest version of Bamboo Data Center from the download center
+(https://www.atlassian.com/software/bamboo/download-archives).</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21600 - NVD - CVSS Score v4.0: 8.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21600</link>
+    <guid isPermaLink="false">42ba6f696d936d3deee7a8e531e59d12</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.9 | This High severity Security Misconfiguration vulnerability was introduced in versions 10.2.0, 11.0.0, 12.0.0, and 12.1.0 of Bamboo Data Center.
+
+This Security Misconfiguration vulnerability, with a CVSS Score of 8.9, allows an authenticated attacker to to get into the system utilizing loopholes exposed from security best-practices being overlooked.
+
+Atlassian recommends that Bamboo Data Center customers upgrade to latest version, if you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+ Bamboo Data Center 10.2: Upgrade to a release greater than or equal to 10.2.26
+
+ Bamboo Data Center 12.1: Upgrade to a release greater than or equal to 12.1.13
+
+ Bamboo Data Center 13.0: Upgrade to a release greater than or equal to 13.0.1
+
+See the release notes ([https://confluence.atlassian.com/bambooreleases/bamboo-release-notes-1189793869.html]). You can download the latest version of Bamboo Data Center from the download center ([https://www.atlassian.com/software/bamboo/download-archives]).
+
+This vulnerability was reported via our Atlassian (Internal) program.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21601 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21601</link>
+    <guid isPermaLink="false">4b225c2ba76bb20fa535dd2961973b9a</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | This High severity BASM (Broken Authentication &amp; Session Management) vulnerability was introduced in versions 10.0.0 and 11.0.0 of Jira Service Management Data Center. 
+	
+	This BASM (Broken Authentication &amp; Session Management) vulnerability, with a CVSS Score of 8.7, allows an unauthenticated attacker to perform actions as another user. 
+	
+	Atlassian recommends that Jira Service Management Data Center customers upgrade to latest version, if you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+		
+		* Jira Service Management Data Center 10.3: Upgrade to a release greater than or equal to 10.3.27
+		
+		* Jira Service Management Data Center 11.3: Upgrade to a release greater than or equal to 11.3.13
+		
+		
+	
+	See the release notes (https://confluence.atlassian.com/servicemanagement/jira-service-management-release-notes-780083086.html). You can download the latest version of Jira Service Management Data Center from the download center (https://www.atlassian.com/software/jira/service-management/download-archives). 
+	
+	This vulnerability was discovered by Nagli and reported via our Bug Bounty program</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21602 - NVD - CVSS Score v4.0: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21602</link>
+    <guid isPermaLink="false">75318658c5dedd6c8c105616ce1201ac</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.4 | This High severity Stored XSS vulnerability was introduced in version 10.3.26 of Jira Core Data Center and Jira Software Data Center. 
+	
+	This Stored XSS vulnerability, with a CVSS Score of 7.4, allows an authenticated attacker to execute arbitrary HTML or JavaScript code on a victims browser. 
+	
+	Atlassian recommends that Jira Core Data Center and Jira Software Data Center customers upgrade to latest version, if you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+		
+		* Jira Core Data Center and Jira Software Data Center 10.3: Upgrade to a release greater than or equal to 10.3.27
+		
+		* Jira Core Data Center and Jira Software Data Center 11.3: Upgrade to a release greater than or equal to 11.3.13
+		
+		
+	
+	See the release notes (https://www.atlassian.com/software/jira/download-archives). You can download the latest version of Jira Core Data Center and Jira Software Data Center from the download center (https://www.atlassian.com/software/jira/download-archives). 
+	
+	This vulnerability was reported via our Penetration Testing program.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21603 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21603</link>
+    <guid isPermaLink="false">408737bfc1e872279582ca7a312f8733</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.4 | This High severity Stored XSS vulnerability was introduced in version 10.3.26 of Jira Core Data Center and Jira Software Data Center. 
+	
+	This Stored XSS vulnerability, with a CVSS Score of 8.4, allows an authenticated attacker to execute arbitrary HTML or JavaScript code on a victims browser. 
+	
+	Atlassian recommends that Jira Core Data Center and Jira Software Data Center customers upgrade to latest version, if you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+		
+		* Jira Core Data Center and Jira Software Data Center 10.3: Upgrade to a release greater than or equal to 10.3.27
+		
+		* Jira Core Data Center and Jira Software Data Center 11.3: Upgrade to a release greater than or equal to 11.3.13
+		
+		
+	
+	See the release notes (https://www.atlassian.com/software/jira/download-archives). You can download the latest version of Jira Core Data Center and Jira Software Data Center from the download center (https://www.atlassian.com/software/jira/download-archives). 
+	
+	This vulnerability was reported via our Penetration Testing program.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21605 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21605</link>
+    <guid isPermaLink="false">e2a99d1b1fade888816bdc850d3297a3</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | This High severity Path Traversal (Arbitrary Read/Write) vulnerability known as CVE-2026-21605 was introduced in versions 2.0.0, 3.0.0, 4.0.0, 5.0.0, 6.0.1, 6.1.0, 6.2.0, 6.3.1, 6.4.0, 6.5.0, 6.6.0 ,6.7.0, 6.8.0, 6.9.0, 6.10.0, 6.11.0, 6.12.0, 6.13.0, 6.14.0, 6.15.1, 7.0.1, 7.1.0, 7.2.0, 7.3.1, 7.4.0, 7.5.0, 7.6.0, 7.7.2, 7.8.0, 7.9.0, 7.11.0, 7.12.0, 7.13.0, 7.14.0, 7.15.0, 7.16.0, 7.17.0, 7.18.0, 7.19.0, 7.20.0, 8.0.0, 8.1.0, 8.2.0, 8.3.0, 8.4.0, 8.5.0, 8.6.0, 8.7.1, 8.8.0, 8.9.0, 9.0.1, 9.1.0, 9.2.0, 9.3.1, 9.4.0, 9.5.1, 10.0.2, 10.1.0, 10.2.0, and 11.0.0 of Confluence Data Center.
+
+This Path Traversal (Arbitrary Read/Write) vulnerability, with a CVSS Score of 8.7 and a CVSS Vector of CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N allows an unauthenticated attacker to expose assets in your environment susceptible to exploitation, which has high impact to confidentiality, no impact to integrity, no impact to availability, and requires no user interaction.
+
+Atlassian recommends that Confluence Data Center and Server customers upgrade to the latest version. If you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+ Confluence Data Center 11.0: Upgrade to a release greater than or equal to 11.0.1
+ Confluence Data Center 10.2: Upgrade to a release greater than or equal to 10.2.20
+ Confluence Data Center 9.2: Upgrade to a release greater than or equal to 9.2.27
+
+See the release notes ([https://confluence.atlassian.com/doc/confluence-release-notes-327.html]). You can download the
+latest version of Confluence Data Center and Server from the download center
+([https://www.atlassian.com/software/confluence/download-archives]).
+
+The following description summarizes the vulnerability reported internally:
+
+Confluence CssServlet forwards a request-controlled path to ServletRequest.getRequestDispatcher. The dispatcher URL-decodes and normalizes the path, allowing an unauthenticated attacker to use an encoded traversal sequence to access protected web application resources such as /WEB-INF/web.xml. The demonstrated impact is disclosure of protected files that may contain configuration or secrets; no integrity or availability impact was demonstrated.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21606 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21606</link>
+    <guid isPermaLink="false">2dd79cc2a0c2097909494b02dd26650b</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | This High severity Path Traversal (Arbitrary Read/Write) vulnerability known as CVE-2026-21606 was introduced in versions 10.3.26 and 11.3.12.
+
+This Path Traversal (Arbitrary Read/Write) vulnerability, with a CVSS Score of 8.7 and a CVSS Vector of CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N allows an unauthenticated attacker to disclose protected resources outside declared resource directories, which has high impact to confidentiality, no impact to integrity, no impact to availability, and requires no user interaction.
+
+Atlassian recommends that Jira Software Data Center customers upgrade to the latest version. If you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+
+Jira Software Data Center 11.3: Upgrade to a release greater than or equal to 11.3.13
+Jira Software Data Center 10.3: Upgrade to a release greater than or equal to 10.3.27
+
+See the release notes (https://confluence.atlassian.com/jirasoftware/jira-software-data-center-release-notes.html). You can download the latest version of Jira Software Data Center from the Jira Data Center Download Archives (https://www.atlassian.com/software/jira/download-archives).</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-21607 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-21607</link>
+    <guid isPermaLink="false">91757f86d17053c73bfe4fc8ed6dd375</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | This High severity Path Traversal (Arbitrary Read/Write) vulnerability known as CVE-2026-21607 was introduced in versions 10.3.26 and 11.3.12.
+
+This Path Traversal (Arbitrary Read/Write) vulnerability, with a CVSS Score of 8.7 and a CVSS Vector of CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N allows an unauthenticated attacker to disclose protected web application files outside the intended resource location, which has high impact to confidentiality, no impact to integrity, no impact to availability, and requires no user interaction.
+
+Atlassian recommends that Jira Software Data Center customers upgrade to the latest version. If you are unable to do so, upgrade your instance to one of the specified supported fixed versions:
+
+Jira Software Data Center 11.3: Upgrade to a release greater than or equal to 11.3.13
+Jira Software Data Center 10.3: Upgrade to a release greater than or equal to 10.3.27
+
+See the release notes (https://confluence.atlassian.com/jirasoftware/jira-software-data-center-release-notes.html). You can download the latest version of Jira Software Data Center from the Jira Data Center Download Archives (https://www.atlassian.com/software/jira/download-archives).</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80322 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80322</link>
+    <guid isPermaLink="false">174e83532777606640c0558d53cdfd1b</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.3 | Under specific conditions, PingAuthorize in Gateway mode can continue an asynchronous upstream request after its 30-second gateway timeout. If the underlying keep-alive connection is reused for another request before the original response arrives, the late response can be written to the newer exchange. This could cause a subsequent caller to receive response data intended for an earlier request. This behaviour affects all releases and primarily risks unauthorized information disclosure between separate requests.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84974 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84974</link>
+    <guid isPermaLink="false">a25d4e0dd7d86e73214ab77e8bf748a9</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.4 | code16 Sharp is a Laravel-based framework for building content-management and administrative interfaces. Prior to 9.23.0, an authenticated attacker can submit an arbitrary PHP class name through the embed_key parameter to multiple embed API endpoints. The application passes the selected class to the Laravel service container, which invokes the class's __construct() method and recursively instantiates constructor dependencies, potentially causing unauthorized integrity or availability effects. The attacker cannot supply constructor parameter values or invoke an arbitrary method. This issue is fixed in version 9.23.0.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84987 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84987</link>
+    <guid isPermaLink="false">08416432ac72ea5f52165f1f9f2fd659</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 5.4 | code16 Sharp is a Laravel-based framework for building content-management and administrative interfaces. Prior to 9.23.0, an authenticated attacker can call the autocomplete API with a request endpoint that contains the configured remote endpoint only as a substring. The endpoint validation uses an unanchored regular expression, so a different internal route can satisfy the check and be invoked server-side through the autocomplete request. The vulnerable path uses SharpFormAutocompleteRemoteField::setRemoteEndpoint(); applications using SharpFormAutocompleteRemoteField::setRemoteCallback() are not affected by this endpoint-selection flaw. This issue is fixed in version 9.23.0.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-86061 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86061</link>
+    <guid isPermaLink="false">24dc773de30ccfd30a13b5a638a19445</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.8 | Teable is an AI spreadsheet for business. Prior to release.2026-07-17T05-20-38Z.2264, the routes for PluginService::regenerateSecret and PluginService::delete carry no @Permissions decorator, and the methods omit plugin ownership checks. An authenticated attacker can directly target another plugin's identifier to rotate and disclose its OAuth secret or delete the plugin, including system plugins. Separately, PermissionGuard authorizes several nested API requests using a caller-controlled parent tableId, baseId, or spaceId, while the services resolve the requested child object only by its globally unique identifier. An authenticated attacker can provide a parent resource the attacker owns together with a victim's child identifier. ViewService::getViewById can then disclose another tenant's view configuration, embedded filter values, field layout, and shareId. DashboardService::updatePluginStorage and the view-position updatePluginStorage path can overwrite another tenant's plugin storage because the plugin installation is not rebound to the authorized base, dashboard, table, or view. This issue is fixed in release.2026-07-17T05-20-38Z.2264.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
