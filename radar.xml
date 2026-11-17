@@ -5,374 +5,326 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Nov 2026 02:01:49 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Nov 2026 03:02:30 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-130335 - NVD - CVSS Score v3.1: 2.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130335</link>
-    <guid isPermaLink="false">a8ab4f3f10c79fc217f0da78df3fd66d</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 2.9 | Info-ZIP Zip 3.0 (and 3.1 beta through 3.1c) allows OS command injection by an attacker who controls the command line. The victim must use the -T option followed by a filename containing shell metacharacters, on a platform (such as Linux) where a suitable shell is run. This occurs because the system C library function is used. NOTE: there is no known common scenario in which an untrusted filename reaches a zip -T call.</description>
+    <title>CVE-2026-130346 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130346</link>
+    <guid isPermaLink="false">044d525581474238b89cfac69dc5b1c1</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.3 | AdminNeo before 5.9.1 contains an sql injection vulnerability in the ClickHouse driver because idf_escape() doubles backticks but does not escape backslashes in identifiers. Attackers can lure a logged-in user into opening a GET link with a column name ending in a backslash in columns, where, or order parameters, causing query text to be parsed as SQL.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129187 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129187</link>
-    <guid isPermaLink="false">b4bb800de8918f9008926a764e307792</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS: não informado | A vulnerability in the Phison SSD controller firmware Phison E16; EGFM13.2 allows a local attacker with administrative privileges to bypass the &quot;Security Access&quot; handshake by leveraging leaked RSA parameters found in vendor utility binaries. By successfully completing the authentication, an attacker can access vendor-specific commands that permit arbitrary memory read and write operations. Because the firmware's code regions lack protection, these primitives can be used to overwrite existing handlers and achieve volatile code execution on the SSD controller.</description>
+    <title>CVE-2026-130347 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130347</link>
+    <guid isPermaLink="false">15112d3b2267836334a2b870b57a3ea9</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.3 | phpMyFAQ before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an authentication bypass in password reset, letting external-identity accounts receive local passwords. Attackers with mailbox access can request reset tokens for OIDC, Keycloak, Entra ID, LDAP, SSO, or WebAuthn accounts and log in locally, skipping IdP MFA and deprovisioning.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129190 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129190</link>
-    <guid isPermaLink="false">9921eeeb7f201299a7032daa0f0a50aa</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS: não informado | A vulnerability in the Phison SSD controller firmware Phison E12; ECFM32.2 allows a local attacker with administrative privileges to bypass the &quot;Security Access&quot; handshake by leveraging leaked RSA parameters found in vendor utility binaries. By successfully completing the authentication, an attacker can access vendor-specific commands that permit arbitrary memory read and write operations. Because the firmware's code regions lack protection, these primitives can be used to overwrite existing handlers and achieve volatile code execution on the SSD controller.</description>
+    <title>CVE-2026-130348 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130348</link>
+    <guid isPermaLink="false">ab5a628e14cae0283e9e4d6f0e9e49ab</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | phpMyFAQ 4.1.0 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains a missing authorization vulnerability that exposes restricted and inactive category metadata to unauthenticated visitors. Attackers can enumerate category IDs via /category/{id}/{slug}.html or query /api/v4.0/categories to read names, descriptions, images and FAQ counts of restricted categories.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130061 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130061</link>
-    <guid isPermaLink="false">b33aeb320c35d175cd11e901b8020176</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains a double free vulnerability in gf_sg_sfcommand_del() that allows attackers to crash the process via crafted XMT scenes. Attackers can supply a crafted XMT/MP4 file where a Conditional node's SFCommandBuffer references a command freed twice during scene teardown, causing MP4Box to crash.</description>
+    <title>CVE-2026-130349 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130349</link>
+    <guid isPermaLink="false">e9d8fb72bb3cc71f4e3e6c62a76396db</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an incorrect authorization vulnerability that allows category- or language-restricted editors to bypass scoped rights via public REST write endpoints. Attackers with a scoped right and the shared API token can use PUT faq/update, POST faq/create, and POST category to rewrite published FAQs and create root categories outside their scope.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130062 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130062</link>
-    <guid isPermaLink="false">a89188085bf076963244117edf463c77</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains a NULL pointer dereference vulnerability in gf_node_get_tag() that allows attackers to crash the process via crafted XMT connect elements. Attackers can supply an XMT scene file whose connect element has a parent with no node, crashing MP4Box during processing and causing denial of service.</description>
+    <title>CVE-2026-130350 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130350</link>
+    <guid isPermaLink="false">344a483ff6ee8321cd36e5ae2eec7602</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.1 | phpMyFAQ before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an incorrect authorization vulnerability that allows delegated group or user admins to remove rights they do not hold by submitting empty rights lists. Attackers can send an empty rightIds or userRights array to group/permissions or user/update-rights to wipe all rights of more-privileged groups or administrators.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130063 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130063</link>
-    <guid isPermaLink="false">d12c0385af8020d6d12e9ea771af169c</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains a use-after-free vulnerability in the XMT scene loader that allows attackers to read freed heap memory via discarded nodes left on the parser node stack. Attackers can supply a crafted XMT scene file processed by MP4Box, causing xmt_text_content() to call gf_node_get_tag() on a freed node and crash the process.</description>
+    <title>CVE-2026-130351 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130351</link>
+    <guid isPermaLink="false">8ab72306b89c5378c43ad7c1bd4b7d0a</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.1 | phpMyFAQ from 4.2.0-alpha before 4.2.0-RC.2 contains an authorization bypass vulnerability in the multisite Redis configuration store that is not tenant-scoped. As a result, tenant administrators can read and overwrite the master instance's effective configuration. Attackers can save configuration through /admin/api/configuration, optionally resetting storage.redisPrefix, to redirect master SMTP, set a known API token, or alter authentication settings.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130064 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130064</link>
-    <guid isPermaLink="false">9bf2966b5482780bd92488aa098d205a</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains a use-after-free vulnerability in gf_sg_command_del() that allows attackers to trigger reads of freed memory through aliased XMT-A SFCommandBuffer command ownership. Attackers can supply a crafted XMT scene file processed by MP4Box, causing commands freed during node destruction to be reaccessed during access unit cleanup, crashing the process.</description>
+    <title>CVE-2026-130352 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130352</link>
+    <guid isPermaLink="false">ef041730efd9c999ebd646802b2fca00</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | phpMyFAQ before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an information disclosure vulnerability that allows unauthenticated attackers to read editor-only Private Notes by querying the public FAQ list API. Attackers can page through GET /api/v4.0/faqs or /api/v3.1/faqs without credentials to retrieve the notes field of every anonymously readable FAQ, exposing internal remarks and ticket details.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130065 - NVD - CVSS Score v4.0: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130065</link>
-    <guid isPermaLink="false">3a8992b751fd726417a877c6e14f4f3d</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.8 | msgpack-c through 7.0.2 contains a heap buffer overflow vulnerability in msgpack_vrefbuffer_migrate() in src/vrefbuffer.c that checks capacity against the source array's end pointer. When migrating between vrefbuffers of unequal size, the realloc is skipped and memcpy() writes iovec entries past the destination array, corrupting adjacent heap memory or crashing the application.</description>
+    <title>CVE-2026-130353 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130353</link>
+    <guid isPermaLink="false">60f63a69d78e75aab9e86282a4c40936</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | phpMyFAQ before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an information disclosure vulnerability in its public FAQ REST API that exposes author names and e-mail addresses to unauthenticated callers. Attackers can query the faq and paginated faqs endpoints to bulk-harvest e-mails and de-anonymise users who opted out of GDPR author visibility.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130066 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130066</link>
-    <guid isPermaLink="false">2b13fdf7876a6c006435bdc3f46545c6</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 7.1 | Alinto SOGo before 5.12.13 contains an SQL injection vulnerability in SQLSource contact lookup that allows authenticated users to inject SQL by placing a backslash before a quote in the object name. Attackers can send requests under a SQL-backed address book path on MySQL or MariaDB to perform UNION or boolean-based reads of the user-source table, including password hashes.</description>
+    <title>CVE-2026-130354 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130354</link>
+    <guid isPermaLink="false">95616a865b81d511e72d6390ab1973f5</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | phpMyFAQ 4.1.0 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an authentication bypass vulnerability in POST /api/webauthn/prepare that creates accounts as active, bypassing manual activation and domain whitelisting. Anonymous attackers can obtain the freely issued CSRF token and register an activated account with an unverified email to access registered-user-only content and functions.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130067 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130067</link>
-    <guid isPermaLink="false">f3f7fd37b4e0e544cca9daacbd82be58</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.5 | 7-Zip File Manager before 26.03 fails to detect archive entry names padded with Unicode space characters, allowing attackers to bypass the deceptive file name warning in CPanel::IsVirus_Message. Attackers can craft archive entries like a PDF name followed by ideographic spaces and .hta to hide the real extension, executing script content via ShellExecuteExW when opened.</description>
+    <title>CVE-2026-130355 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130355</link>
+    <guid isPermaLink="false">82f411321ed1efc1fe52862f3ad41a02</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an incorrect authorization vulnerability in POST /admin/api/faq/import that lets FAQ_ADD users bypass the FAQ_PUBLISH right. Authenticated contributors can upload a CSV with column 8 set to true to publish unreviewed, optionally sticky FAQs such as phishing content.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130068 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130068</link>
-    <guid isPermaLink="false">89d8194ad8539bcf478995d0645745f2</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.3 | Umbraco CMS 17.0.0 before 17.7.1 and 18.0.0 before 18.2.1 contains an authorization bypass vulnerability in Management API document version endpoints that skip per-document ContentPermissionByResource checks. Authenticated back-office users restricted to a start node can list and read document versions outside their tree by GUID, exposing unpublished values and altering prevent-cleanup flags.</description>
+    <title>CVE-2026-130356 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130356</link>
+    <guid isPermaLink="false">289437b7a20c8b07ff7e67b3692e6188</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an authorization bypass that lets category- or language-restricted editors rewrite visibility ACLs and tags of any FAQ. Attackers send faq/update requests with a target faqId and an untranslated lang to expose restricted FAQs, wipe tags, or overwrite orphaned FAQs.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130069 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130069</link>
-    <guid isPermaLink="false">691d8becca091e8fc8d981adb9c78598</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.3 | Frappe Framework before 15.123.0 and 16.x before 16.50.0 contains a server-side request forgery vulnerability in the frappe.email.email_body.get_email_html method, which lacks role checks. Authenticated users, including portal Website Users, can inject stylesheet link tags into unescaped email templates, causing Premailer to fetch internal or external hosts and return the content.</description>
+    <title>CVE-2026-130357 - NVD - CVSS Score v4.0: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130357</link>
+    <guid isPermaLink="false">9a6ef4cc3ce3cdfad69159a16dfa6129</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.0 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an improper authorization vulnerability in updateUserRights that lets USER_EDIT admins drop category restrictions on group rights. Attackers can re-save rights through the user update-rights API to convert category-restricted group rights into global direct rights, then edit, publish or delete FAQs in withheld categories.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130070 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130070</link>
-    <guid isPermaLink="false">58d933969091aa131d4193c69b8be044</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 9.3 | Ghost by muneeb141 on the main branch from commit c731cdf through commit 672dfec contains an authentication bypass vulnerability in the whitelisted ghost.api.ghost.convert_to_real_user method that allows unauthenticated attackers to skip OTP verification by setting the client-supplied bypass_otp parameter. Attackers can obtain a ghost session from the guest-accessible create_ghost_session endpoint, then call convert_to_real_user with an arbitrary real_email and bypass_otp=1 to receive OAuth tokens for existing accounts and take them over.</description>
+    <title>CVE-2026-130358 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130358</link>
+    <guid isPermaLink="false">fec591c7cf8982e0b145c82299c9a6ef</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | AdminNeo before 5.9.1 contains a missing authentication vulnerability in the ClaudeSqlPlugin, GeminiSqlPlugin, and OpenWebUiPlugin sendHeaders() handlers that run on the login page. Unauthenticated attackers can POST claude, gemini, or openwebui fields to relay arbitrary prompts using the operator's API key or bearer token, including to internal Open WebUI endpoints.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130071 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130071</link>
-    <guid isPermaLink="false">b3908dbfb42c9c1be7588e63e8526d4d</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 9.3 | TridotsTech go1cms master branch through commit 7f68d05 and version-3 branch before commit ead8da3 contains a missing authentication vulnerability in the guest-whitelisted update_doc method that allows unauthenticated attackers to modify any document. Attackers can supply a doctype, name and arbitrary fields that are saved with ignore_permissions=True, altering User records to escalate privileges, take over accounts or tamper with business data.</description>
+    <title>CVE-2026-130359 - NVD - CVSS Score v4.0: 2.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130359</link>
+    <guid isPermaLink="false">8b9cc98740e0d3ae71788d174ec8db8b</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.0 | AdminNeo before 5.9.1 contains a stored cross-site scripting vulnerability in SlugifyEditPlugin::getFieldInput() that embeds column names unescaped in an inline initSlugField() call. Attackers with DDL privileges can create a slug column whose name contains a single quote, injecting JavaScript that runs under the page's CSP nonce when victims open the table's edit form.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130072 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130072</link>
-    <guid isPermaLink="false">0f699057dcb4922b9d3770ec3c490a97</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.8 | Cloud Commander (cloudcmd) before 19.21.4 contains an authentication bypass and path traversal vulnerability that allows unauthenticated attackers to rename files by sending PUT /rename requests handled before authentication middleware. Attackers can supply absolute or ../ paths in the from and to arrays to move any file the Node.js process can access outside the configured root, causing data loss or denial of service.</description>
+    <title>CVE-2026-130360 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130360</link>
+    <guid isPermaLink="false">d6ac5b3b6d6b163155b2e7e03ba83d7f</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | AdminNeo before 5.9.1 contains a reflected cross-site scripting vulnerability in EditorNeo that allows remote attackers to execute JavaScript by injecting quote characters into the request URI. Attackers can lure authenticated users to crafted edit links whose path breaks out of the CSP-nonced whisper script in editor/core/Admin.php, enabling session theft and database credential disclosure.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130073 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130073</link>
-    <guid isPermaLink="false">fd5e7d1c17501ee99355c5d9f7c2a916</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 7.2 | CBoard before commit 7bd8180 contains a missing authorization vulnerability that allows any authenticated user to reach admin functions because AdminController and DashboardController methods bypass AOP role checks. Attackers with no role grants can call deleteUser, deleteRole, getUserList, getAllWidgetList and getAllDatasetList to read query configurations and delete accounts including the administrator.</description>
+    <title>CVE-2026-130361 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130361</link>
+    <guid isPermaLink="false">d5fd6f5af46d3f6c4b711eb8f39746d0</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | AdminNeo before 5.9.1 contains a parameter injection vulnerability in its ClickHouse driver that allows attackers to inject ClickHouse HTTP query parameters through an unencoded db GET parameter. Attackers can lure a logged-in victim into opening a crafted GET link that injects a query parameter, bypassing the POST-only CSRF token. ClickHouse then executes attacker-chosen SQL under the victim's credentials to read, modify, or drop data.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130074 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130074</link>
-    <guid isPermaLink="false">730f66dc3d41e4801388bdd12a73f32f</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.6 | free5GC WebConsole through 1.4.6 contains an authorization flaw in the ChangePasswordInfo handler that allows authenticated tenant users to change other members' passwords. Attackers can send POST /api/change-password with another tenant member's email and a new password, without the current password, to take over that account.</description>
+    <title>CVE-2026-130362 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130362</link>
+    <guid isPermaLink="false">e18ad179e1efad152e2fced484584758</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | phpMyFAQ 4.1.9 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an account enumeration vulnerability that allows unauthenticated attackers to identify valid logins through differing POST /api/webauthn/prepare responses. Attackers can submit wordlists of usernames, reusing one unconsumed CSRF token without rate limiting, to discover administrator logins for password spraying and phishing.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130075 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130075</link>
-    <guid isPermaLink="false">1749c985da82c28f79b35e469ee2527b</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.3 | SplitPro through 2.1.6 contains a missing authorization vulnerability in the addOrEditExpense and addOrEditCurrencyConversion tRPC mutations that allows authenticated users to assign expenses to arbitrary users. Attackers can enumerate sequential user IDs and supply them in participants or paidBy fields to fabricate debts on victims' balances, even in unseen groups.</description>
+    <title>CVE-2026-130363 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130363</link>
+    <guid isPermaLink="false">ca778ee802d05b58db75436a8a370ec1</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.1 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an incorrect authorization vulnerability that lets scoped editors view out-of-scope draft FAQs because the dashboard and admin search ignore category/language-scoped FAQ_EDIT rights. Authenticated editors can load the unpublished FAQs widget with the lang parameter or query /admin/api/faq/search to leak draft titles, ids, and confirm words in draft bodies.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130076 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130076</link>
-    <guid isPermaLink="false">f11bab2b442b2ee24b8dcaa67a609895</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.9 | crw-server before 0.45.1 contains a server-side request forgery vulnerability that allows unauthenticated attackers to reach internal services by supplying an unvalidated baseUrl to the /v1/scrape endpoint. Attackers can set llmApiKey and request the summary format, making the server POST to loopback or private addresses and use returned warnings as a reachability oracle.</description>
+    <title>CVE-2026-130364 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130364</link>
+    <guid isPermaLink="false">f2a24f6724cf35c86446f84ad75e0b0d</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.3 | AdminNeo before 5.9.1 contains a reflected HTML injection vulnerability that allows remote attackers to inject markup by supplying crafted array keys in the where URL parameter. Attackers can trick logged-in users into opening a link whose unescaped keys land in select search form name attributes, enabling meta refresh redirects and content spoofing.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130077 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130077</link>
-    <guid isPermaLink="false">339806208f6c47c86b4121413bb8b0d5</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.9 | crw-server before 0.45.1 contains a server-side request forgery vulnerability that allows unauthenticated attackers to reach internal hosts via caller-controlled proxy and proxy_list fields in /v1/scrape. Attackers can supply proxy entries pointing to loopback, private-network or link-local hosts, bypassing page URL checks to open HTTP-proxy or SOCKS connections internally.</description>
+    <title>CVE-2026-130365 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130365</link>
+    <guid isPermaLink="false">fca524dd23ff9545dd59bea091382449</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.1 | phpMyFAQ from 4.2.0-alpha before 4.2.0-RC.2 contains a stored cross-site scripting vulnerability that allows FAQ_EDIT users to bypass SvgSanitizer using namespace-prefixed elements like &lt;x:script&gt;. Attackers can upload malicious SVGs through the admin image upload so script runs in the site origin on IIS, hijacking sessions of users like super-admins.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130078 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130078</link>
-    <guid isPermaLink="false">35215f85197d35dacbdedec14698cdac</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 7.1 | B3log Solo through 4.4.0 contains a missing authorization vulnerability in B3Receiver.receiveArticle that allows visitor accounts to modify any article via the POST /apis/symphony/article endpoint. Attackers can supply their username as userB3Key, since OAuth-created visitors receive it as their B3 key, and overwrite any article's title, content and tags.</description>
+    <title>CVE-2026-130366 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130366</link>
+    <guid isPermaLink="false">3a791a5bc69ade943b766aef38ec7876</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 9.2 | AdminNeo before 5.9.1 contains an authentication bypass vulnerability in the ClickHouse driver that allows remote attackers to log in to passwordless accounts without the configured defaultPasswordHash password. Attackers who know the name of a ClickHouse no_password account can submit any non-empty password, because connect() skips openPasswordless(), and obtain a session with that account's rights.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130079 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130079</link>
-    <guid isPermaLink="false">3c3dd0d1c4a6a51180a40b3d78f71a81</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 5.1 | B3log Solo through 4.4.0 contains a stored cross-site scripting vulnerability that allows attackers to inject script by setting a malicious article title rendered without escaping. Attackers can set titles, including via the B3 sync endpoint, so admin/article-pwd.ftl, skin templates, and js/page.js article lists execute script in visitors' and administrators' browsers.</description>
+    <title>CVE-2026-130367 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130367</link>
+    <guid isPermaLink="false">a8d8130e664f90f81a1c96e2849f14db</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | phpMyFAQ through 4.1.12 and from 4.2.0-alpha before 4.2.0-RC.2 contains an authorization bypass vulnerability in the admin FAQ copy and translate pages, which check only global FAQ_ADD or FAQ_TRANSLATE rights. Authenticated add-only or category-scoped editors can open any FAQ to read drafts, ACL-restricted records, private notes, and author e-mail addresses.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130080 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130080</link>
-    <guid isPermaLink="false">4922ace2fb45e07f7b25f8fabefd60bd</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 7.1 | B3log Solo through 4.4.0 contains an SQL injection vulnerability in the console article update API that allows authenticated authors to inject SQL through unvalidated JSON property names. Attackers can send a PUT request to /console/article/ with crafted property names used as UPDATE column names, then read query results back through the updated article.</description>
+    <title>CVE-2026-130368 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130368</link>
+    <guid isPermaLink="false">81e4d091610897f1972f87a475f3db27</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.3 | phpMyFAQ 4.1.9 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an improper restriction of excessive authentication attempts vulnerability in PasswordChangeController::update() that bypasses the step-up throttle. Attackers holding a hijacked admin-area session can repeatedly guess faqpassword_old with a reusable CSRF token to learn the original password and take over the account.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130081 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130081</link>
-    <guid isPermaLink="false">9a5171097537f0d80117ee297b9196d8</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.7 | B3log Solo through 4.4.0 contains an information disclosure vulnerability that allows unauthenticated attackers to obtain article view passwords by querying the public GET /articles API. The ArticleProcessor.getArticlesByPage handler leaves the articleViewPwd property in JSON responses, letting attackers read passwords for encrypted articles and access their protected content.</description>
+    <title>CVE-2026-130369 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130369</link>
+    <guid isPermaLink="false">3deb6a1268571ca2e1ca8c23192a4144</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 9.2 | phpMyFAQ 4.1.9 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an authorization bypass vulnerability in multisite deployments that allows attackers to overwrite passkeys of accounts on other tenants via a shared PHP session store. Attackers can run WebAuthn prepare() for a login on one tenant, then replay the session against /api/webauthn/register on another tenant or the master to replace that user's passkeys and log in as admin.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130082 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130082</link>
-    <guid isPermaLink="false">272e082d8feaa3789384d8cf71250ca5</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.7 | django-tenants 3.4.8 before 4.0.1 contains an SQL injection vulnerability in its PostgreSQL backend that allows attackers to inject SQL through unescaped tenant schema names. Attackers who can choose or influence a schema name can supply quote characters that are interpolated into SET search_path and CREATE, DROP or ALTER SCHEMA statements, letting them read other tenants' data or run SQL as the application's database user.</description>
+    <title>CVE-2026-130370 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130370</link>
+    <guid isPermaLink="false">7f37d3b369fdaa0f27bb37cd3f07cf81</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.3 | phpMyFAQ 4.1.9 before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains a missing authentication vulnerability that allows attackers holding a hijacked session to enroll passkeys using only the session and webauthn CSRF token. Attackers can call /api/webauthn/prepare and /api/webauthn/register to replace the owner's passkeys, gaining persistent passwordless login that survives password changes and resets.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130083 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130083</link>
-    <guid isPermaLink="false">2260060128d8a242c19804b608f6a86b</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 6.9 | BookStack before 26.09.2 contains an uncontrolled resource consumption vulnerability in the ZIP content importer that allows authenticated users with the Import Content permission to exhaust server storage. Attackers can upload a small ZIP whose data.json references one bundled file many times, causing ZipImportRunner::importAttachment() to write a full copy per reference.</description>
+    <title>CVE-2026-130371 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130371</link>
+    <guid isPermaLink="false">f76476f985cd59ca3bf247fd87d9172f</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 9.2 | phpMyFAQ before 4.1.12 and 4.2.0-alpha before 4.2.0-RC.2 contains an authentication bypass vulnerability because the web installer ignores the legacy config/database.php during 3.x upgrades. Unauthenticated attackers can reinstall the site against an attacker-controlled database and create their own administrator account to take over the application.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130206 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130206</link>
-    <guid isPermaLink="false">2f805e966b4c91ff3fbff15e8a1ed1ee</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.9 | Chyrp Lite (xenocrat/chyrp-lite) contains a missing brute-force protection vulnerability in the main_login() function that allows remote attackers to repeatedly submit login attempts against the admin account without any attempt counter, lockout, delay, or CAPTCHA enforcement. Attackers can send unlimited password guesses via POST requests to the login action until a correct credential is found, gaining full administrative control including post publishing, user management, and file uploads.</description>
+    <title>CVE-2026-130372 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130372</link>
+    <guid isPermaLink="false">7e907691f58728ec2094417c9c4aa604</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | AdminNeo before 5.9.1 contains an open redirect vulnerability that allows unauthenticated attackers to redirect authenticated users by injecting an external URL through the HTTP Referer header into the hidden referer field of the edit form. Attackers can lure users from a page with an unsafe-url referrer policy whose URL contains &amp;select=, redirecting them to phishing sites after record edits.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130290 - NVD - CVSS Score v3.1: 7.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130290</link>
-    <guid isPermaLink="false">5637aebf9912a33c06d999c6839107ca</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 7.9 | In Open Object Rexx (ooRexx) before 5.2.0, RXAPI has a heap buffer over-read in a QueueManager DataQueue::addmethod. In particular, the code blindly trusts the message.parameter1 value provided by the client as the size used to fill the data from the queueData heap buffer. An attacker sends a large parameter1 value in an ADD_TO_SESSION_QUEUE or ADD_TO_NAMED_QUEUE message and then retrieves data with a PULL_FROM_SESSION_QUEUE message. (A very large value causes a process crash.)</description>
+    <title>CVE-2026-130373 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130373</link>
+    <guid isPermaLink="false">f1a017b637831d259e0bba3d1e1d4da2</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.1 | AdminNeo before 5.9.1 contains a stored HTML injection vulnerability that allows database users to inject markup by creating FULLTEXT indexes with crafted names. Attackers with CREATE, ALTER or INDEX rights can store markup rendered unescaped in the selection search form, enabling meta refresh redirects, content spoofing and form tampering against other users.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-68934 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68934</link>
-    <guid isPermaLink="false">ca3d7fbd3912e7c46911b3b8c482d66e</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v4.0: 8.7 | code-review-mcp-server automates code review and can post comments directly on GitHub pull requests. Prior to 1.5.3, the getLocalGitDiff, codeReview, createPR, and getPRTemplate MCP tools accept caller-controlled folderPath and baseBranch string parameters that are interpolated into command strings executed by child_process.execSync through /bin/sh. Shell metacharacters, command substitution, or quote-breaking input can therefore execute arbitrary commands with the privileges of the host process running the MCP server. This issue is fixed in version 1.5.3.</description>
+    <title>CVE-2026-130374 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130374</link>
+    <guid isPermaLink="false">a77d915eaa587a5c666243e02aea743e</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.7 | AdminNeo before 5.9.1 contains an sql injection vulnerability that allows remote attackers to inject SQL by supplying crafted IN and NOT IN search values that process_length() passes unescaped. Attackers can send a logged-in user a cross-site GET link using a backslash-escaped apostrophe to run blind SQL with that user's database rights on PostgreSQL, SQLite, MS SQL, Oracle, or MySQL in NO_BACKSLASH_ESCAPES mode.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-69154 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69154</link>
-    <guid isPermaLink="false">16823f1f65ea9432f760afca06c27d34</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 7.8 | The Coder VS Code extension opens Coder workspaces in VS Code with a single click. From 0.1.20 until 1.14.6, a malicious repository can provide .vscode/settings.json values for security-sensitive Coder settings because the extension permits workspace and folder scope to override those settings. Values such as coder.headerCommand and coder.tlsCertRefreshCommand are later executed as shell commands, while other affected settings can redirect the Coder CLI binary or download source, inject CLI or SSH flags, replace TLS material, disable TLS verification, or change identity and credential-storage behavior. A victim with the extension installed must open the malicious workspace or repository; when the extension activates, attacker-controlled commands can run with the victim user's privileges. The issue also affects untrusted workspaces because the extension declares untrusted-workspace support without preventing consumption of the workspace-controlled settings. This issue is fixed in version 1.14.6.</description>
+    <title>CVE-2026-130375 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130375</link>
+    <guid isPermaLink="false">143668c8b6ce32cb4553b851211f59c9</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.6 | AdminNeo before 5.9.1 contains a remote code execution vulnerability that allows authenticated SQLite users to bypass the check_sqlite_name() extension guard using PDO_SQLite file: URI database names. Attackers can select the PDO driver with ext=pdo and submit names like file:/webroot/x.php?x=.db to create a .php file, then store PHP source as table data for code execution.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-93666 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93666</link>
-    <guid isPermaLink="false">b1cfc5220e3cf19f219860645c6e5362</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | The Bluetooth Classic SDP client built its outgoing request PDUs with bt_sdp_create_pdu(), which allocates from the sdp_pool net-buf pool with a K_FOREVER timeout and no failure handling, in sdp_client_ss_search(), sdp_client_sa_search() and sdp_client_ssa_search() in subsys/bluetooth/host/classic/sdp.c. All of these run on the Bluetooth workqueue bt_workq (via sdp_client_work_handler(), the L2CAP sdp_client_connected() callback, or the continuation-state follow-up from a received response), which is the same single thread that dispatches incoming HCI ACL and event traffic, drives L2CAP, and performs connection and channel teardown. sdp_pool holds only CONFIG_BT_MAX_CONN buffers (one by default) and is shared with the SDP server role.
-
-An unauthenticated peer within BR/EDR range can drive both halves of the trigger. The SDP L2CAP server is registered at BT_SECURITY_L0, so any inbound SDP request makes the device allocate the pool's buffer for a response, which is held until the controller has transmitted it. The same peer can then cause a client request to be issued while the pool is empty: in-tree profiles start SDP discovery from inbound connection callbacks (for example hfp_hf_accept() calls bt_sdp_discover() through hfp_hf_create(), and hfp_ag.c mirrors this), and a peer acting as an SDP server can force repeated client requests by answering with partial responses carrying continuation state.
-
-With the pool empty, the allocation blocks uninterruptibly and freezes the entire Bluetooth host. The stall becomes permanent when the release of the outstanding buffer itself depends on the blocked workqueue: if the link carrying the queued PDU is dropped or stalls, hci_disconn_complete() and the L2CAP channel cleanup that purges the channel TX queue are themselves bt_workq work items, so the buffer is never returned. The result is an unrecoverable denial of service of all Bluetooth functionality until reboot; there is no memory-safety, confidentiality or integrity impact.
-
-The fix allocates client PDUs with K_NO_WAIT via a new sdp_client_create_pdu(), propagates -ENOBUFS, parks the session on a new SDP_CLIENT_FLAG_WAIT_FOR_TX_BUF flag, and adds an sdp_pool destructor that re-submits the SDP client worker when a buffer becomes available. Note that the SDP server role still allocated from the same pool with K_FOREVER at this commit; that path was addressed separately.</description>
+    <title>CVE-2026-130376 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130376</link>
+    <guid isPermaLink="false">15a5be703968d7bdbe736ff8a5606004</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.1 | AdminNeo before 5.9.1 contains a stored cross-site scripting vulnerability in FileUploadPlugin that allows database users to store script-bearing SVG files by uploading unsanitized content. Attackers can upload a malicious SVG to a *_path field, executing script in the same-origin session of any administrator who opens the file link.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-93667 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93667</link>
-    <guid isPermaLink="false">9525bec28d9e28b94d90e43923d9a3d7</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.9 | The Virtual L2 receive handler virtual_recv() in subsys/net/l2/virtual/virtual.c ends with a fall-through path meant for a virtual interface that has nothing attached below it: it takes net_if_get_device(iface)-&gt;api, treats it as a struct virtual_interface_api, and calls api-&gt;recv(iface, pkt). That handler is however also invoked with a non-virtual interface: ethernet_recv() in subsys/net/l2/ethernet/ethernet.c deliberately passes the Ethernet interface so that a tagged frame can be dispatched over the VLAN interfaces attached to it. For an Ethernet interface dev-&gt;api is a struct ethernet_api, whose layout only shares the leading struct net_if_api, so the slot read as recv is actually get_config() (default) or get_capabilities() (when CONFIG_NET_STATISTICS_ETHERNET is enabled).
-
-The fall-through is reached whenever no attached virtual interface claims the frame - most simply when the VLAN interface owning the frame's tag exists but is administratively down, since net_eth_get_vlan_iface() resolves the tag without checking link state while virtual_recv() skips interfaces that are not up. Any host able to place an 802.1Q-tagged Ethernet frame on the same link can then trigger the mistyped indirect call; no authentication, IP reachability or user interaction is required, because the frame is consumed at L2 before any address check.
-
-The resulting call passes a struct net_if  where the driver expects a struct device  and a struct net_pkt  where it expects a struct net_if , with the callee's remaining parameters left as whatever the call site happens to leave in the argument registers. Driver implementations dereference these values: get_capabilities() typically reads dev-&gt;config/dev-&gt;data (a wild read through a non-pointer field of struct net_if), and get_config() implementations write through the uninitialized struct ethernet_config * argument. The practical impact is undefined behaviour in the network RX path - crashes and uncontrolled memory corruption - plus mis-handling of the packet when a capability bitmask is returned as a net_verdict. The attacker controls neither the corrupted address nor the value written, so this is a denial-of-service and memory-corruption issue rather than a controllable write primitive.
-
-The same defective fall-through is reachable through any_recv() in subsys/net/l2/dummy/any/any.c, which passes a dummy interface whose struct dummy_api is shorter than the offset read, producing an out-of-bounds read of the driver's API object followed by an indirect call. The fix drops any packet whose interface is not a Virtual L2 interface, closing both entry points.</description>
+    <title>CVE-2026-130377 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130377</link>
+    <guid isPermaLink="false">f064cde351e61e95babda2c935de8575</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.1 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an incorrect authorization vulnerability in DELETE /admin/api/faq/delete that lets language-scoped FAQ_DELETE admins bypass their language scope. Attackers can submit a faqId with an in-scope faqLanguage lacking a translation to wipe shared ACL, tags, votes, comments, and attachments of other translations.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-93668 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93668</link>
-    <guid isPermaLink="false">49ae275d44756c878b2ae90a0a0f113f</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 6.5 | The Bluetooth Classic SDP server in subsys/bluetooth/host/classic/sdp.c allocated every response PDU through bt_sdp_create_pdu(), which expands to bt_l2cap_create_pdu() and therefore uses a K_FOREVER timeout. The allocation is made from sdp_pool, a fixed pool holding only CONFIG_BT_MAX_CONN buffers (one in the default configuration) that is shared with the SDP client role. When the pool is empty the call blocks without a bound.
-
-The allocation is reached from bt_sdp_recv() on the Bluetooth host's RX context: the bt_workq &quot;BT RX WQ&quot; workqueue in the default configuration since v3.1.0, and the dedicated &quot;BT RX&quot; thread before that. This context processes all normal-priority HCI events and all received ACL data. The SDP L2CAP server is registered on PSM 0x0001 with no security requirement (BT_SECURITY_L0), so an unpaired, unauthenticated BR/EDR peer within radio range of a connectable device can drive it. Every malformed or unrecognised SDP PDU reaches send_err_rsp(), and the sdp_svc_search_req(), sdp_svc_att_req() and sdp_svc_search_att_req() handlers allocate as well, so a short burst of pipelined requests drains the pool and parks the RX context in the blocking allocation.
-
-A pool buffer is released only once its response has been sent, and a peer that withholds baseband acknowledgements keeps the controller's buffers for the link full, so the response is never sent. While the RX context is blocked, the entire Bluetooth host, for all connections and both LE and BR/EDR, stops processing normal-priority HCI events and received data. In most affected releases the stall is permanent. Queued PDUs are freed only by connection or channel teardown, which waits for the normal-priority Disconnection Complete handler, and that handler runs on the blocked RX context, so the host does not recover without a reset. In v3.7.0 through v4.1.x the TX processor discards the queued response once the link supervision timeout drops the connection, so each stall ends at that timeout, but the peer can reconnect and repeat it for as long as it stays in range. The impact is limited to availability; no memory corruption or information disclosure is involved.
-
-The fix adds sdp_svc_create_pdu() using K_NO_WAIT, pre-allocates the response buffer once in bt_sdp_recv(), stashes the request in sdp-&gt;recv_pending when no buffer is available, and retries it from a work handler once a buffer is freed by the pool destroy callback.</description>
+    <title>CVE-2026-130378 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130378</link>
+    <guid isPermaLink="false">5e40d4517469da9f5f6d4163c437e24c</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 2.1 | AdminNeo before 5.9.1 contains a filter injection vulnerability in its MongoDB driver that allows attackers to affect other documents by embedding ' AND ' or ') OR (' delimiters in a string _id or searched value. Attackers who can store a crafted document can cause a victim's delete or edit to match unintended documents, deleting the entire collection or modifying another document.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-93669 - NVD - CVSS Score v3.1: 4.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93669</link>
-    <guid isPermaLink="false">f5978b640ef4319d31b53c33920e2c3b</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.7 | The ITE IT8xxx2 SHI host-command backend in subsys/mgmt/ec_host_cmd/backends/ec_host_cmd_backend_shi_ite.c arms the SPI peripheral before its receive context exists. shi_ite_init_registers() sets the state machine to SHI_STATE_READY_TO_RECV and calls irq_enable() while the device initializes at POST_KERNEL priority CONFIG_KERNEL_INIT_PRIORITY_DEFAULT (40), but data-&gt;rx_ctx and data-&gt;tx are only assigned later by shi_ite_backend_init(), which ec_host_cmd_init() invokes at CONFIG_EC_HOST_CMD_INIT_PRIORITY (default 80).
-
-If the attached host processor starts a SPI transaction inside that window, the Rx-valid-length interrupt fires, shi_ite_int_handler() passes its state check and calls shi_ite_parse_header(), which stores the host-derived request length through the still-NULL data-&gt;rx_ctx. On the IT8xxx2 low addresses are not backed by RAM, and with CONFIG_NULL_POINTER_EXCEPTION_DETECTION_PMP the first bytes of the address space are explicitly made inaccessible, so the store raises a fatal access fault in interrupt context. The window widens further when CONFIG_EC_HOST_CMD_INITIALIZE_AT_BOOT is disabled and the application calls ec_host_cmd_init() itself.
-
-The result is a kernel panic on the embedded controller: with Zephyr's default fatal handler the CPU halts, so the controller stops servicing host commands until a hardware reset. Because the trigger is traffic from the attached host processor -- an untrusted peer from the controller firmware's point of view -- software on that host can provoke the fault by forcing a controller reset and issuing transactions during the reboot, turning a recoverable reset into a persistent outage. Impact is limited to availability: the faulting address is fixed and not attacker-chosen, so no memory-corruption primitive follows.
-
-The fix leaves the interface at SHI_STATE_DISABLED with the interrupt masked during device init, moves irq_enable() into shi_ite_backend_init() after the buffers are published, and makes shi_ite_int_handler() reject a NULL data-&gt;rx_ctx while write-clearing IT83XX_SPI_ISR and IT83XX_SPI_RX_VLISR so that an unexpected early interrupt cannot storm.</description>
+    <title>CVE-2026-130379 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130379</link>
+    <guid isPermaLink="false">3f76a716a8c2078bacc6aef8c20c2e39</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | AdminNeo before 5.9.1 contains a server-side request forgery vulnerability that allows unauthenticated attackers to bypass the privileged-port restriction by injecting separator characters or connection-string keywords into the login server field. Attackers can make pgsql, Mongo, Oracle and PDO drivers parse a different host and port, reaching internal services and leaking limited information through driver responses and errors.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-93670 - NVD - CVSS Score v3.1: 3.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93670</link>
-    <guid isPermaLink="false">c201812084623443dca5e5ff49023197</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 3.5 | The Synopsys DesignWare I3C controller driver (drivers/i3c/i3c_dw.c) tracks free Device Address Table (DAT) slots with get_free_pos(), which signals an exhausted table by returning -1. The helper declared its return type as uint8_t, so the sentinel was truncated to 255, and both consumers (dw_i3c_attach_device() and dw_i3c_i2c_attach_device()) also stored it in a uint8_t before testing if (pos &lt; 0) — a comparison that is never true for an unsigned value. The exhaustion guard was therefore inert in every build.
-
-With the guard defeated, an attach attempted on a full DAT proceeds with pos == 255: it writes data-&gt;dw_i3c_i2c_priv_data[255].id, more than 200 bytes past the end of the 32-element dw_i3c_i2c_priv_data array and past the end of struct dw_i3c_data; it stores the resulting out-of-bounds address in desc-&gt;controller_priv, from which later detach, reattach and IBI operations read the slot index back; and it performs a 32-bit MMIO store 1020 bytes beyond the hardware DAT base, outside the table the controller reports. The attach still returns success, so the upper layer believes the device is bound.
-
-The DAT is smaller than the software array (its depth is read from DEVICE_ADDR_TABLE_POINTER, commonly 8 or 16 entries), so exhaustion is reachable. In a dual-role build (CONFIG_I3C_DUAL_ROLE with CONFIG_I3C_USE_IBI) acting as a secondary controller, the attach count is supplied by the bus's active controller: i3c_sec_handoffed() attaches one device per entry of the received DEFTGTS list, so a hostile or malfunctioning controller on the local I3C bus that declares more targets than the local DAT depth triggers the condition once per surplus entry. Exhaustion can also be reached from a devicetree that declares more devices than the table holds, or by repeated i3c attach shell commands.
-
-Impact is bounded: the out-of-bounds store is a single byte of fixed value at a fixed displacement, with no attacker-chosen data or offset, so the realistic outcomes are corruption of neighbouring static driver state, writes into reserved controller registers, and inconsistent driver bookkeeping (a crash or a wedged I3C bus) rather than a controllable memory-write primitive. The attack vector is the local chip-to-chip I3C bus; there is no network-reachable path.</description>
+    <title>CVE-2026-130380 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130380</link>
+    <guid isPermaLink="false">56e94156612a923d2344f3ce652907b5</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 9.2 | AdminNeo before 5.9.1 contains an authentication bypass vulnerability in the sqlsrv-based MS SQL driver that allows unauthenticated attackers to log in by submitting an empty username. Attackers can supply any non-empty password, triggering Windows integrated authentication that grants a full session with the web server identity's SQL Server privileges.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-93671 - NVD - CVSS Score v3.1: 3.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93671</link>
-    <guid isPermaLink="false">2d906d74a77752e34127eb4219e3317e</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 3.7 | The websocket client's HTTP header callback on_header_value() in subsys/net/lib/websocket/websocket.c receives the Sec-WebSocket-Accept header value as a pointer/length pair from the HTTP parser. The referenced bytes live inside the application-supplied receive buffer and are not NUL terminated. When the received value did not match the expected accept key, the pointer was passed directly to a %s conversion in a NET_DBG() call, so the logging code measured the string with strlen() and read on past the end of the header value looking for a terminator.
-
-The value is supplied by the peer during the WebSocket handshake, before any application-level authentication, so a malicious or man-in-the-middle server reached over a ws:// (or otherwise attacker-terminated) connection can trigger the mismatch branch at will simply by answering with a wrong accept key. By sizing the response so the header value ends at the tail of the buffer passed to websocket_connect() as wreq-&gt;tmp_buf, the peer can make the scan run off the end of that buffer and into adjacent memory. The defective log statement is compiled in only when websocket debug logging is enabled (CONFIG_NET_WEBSOCKET_LOG_LEVEL_DBG=y, or CONFIG_LOG_DEFAULT_LEVEL=4); it is absent from a default build, which bounds exposure to diagnostic configurations.
-
-The consequence is an out-of-bounds read whose contents are emitted to the log stream: memory adjacent to the receive buffer is disclosed wherever the device's logs are collected or displayed. On targets where the memory following the buffer is not mapped, the scan can instead fault and terminate the connection or thread. No out-of-bounds write occurs, so there is no integrity impact.
-
-The fix copies at most sizeof(got) - 1 bytes of the parser-provided slice into a bounded stack buffer, NUL terminates the copy, and logs that instead, so the formatter never reads beyond the bytes the parser actually offered.</description>
+    <title>CVE-2026-130381 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130381</link>
+    <guid isPermaLink="false">0f9d4a8c8afd44eaeb7c0e312c1a4761</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | phpMyFAQ from 4.2.0-alpha.2 before 4.2.0-RC.2 contains an authorization bypass vulnerability that allows language-scoped editors to read other translations by checking FAQ_EDIT against the route language but loading the ?lang= UI-language row. Attackers can request the admin.faq.edit route with an authorized language and a different lang parameter to read drafts, private notes, author e-mails and revisions.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-93672 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93672</link>
-    <guid isPermaLink="false">87c7b355532f5d0e776cd787d934c510</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 5.3 | bt_att_find_req_by_user_data() in subsys/bluetooth/host/att.c walks every ATT channel attached to a connection and dereferences chan-&gt;req-&gt;user_data without checking chan-&gt;req. An ATT channel with no client request in flight holds chan-&gt;req == NULL — that is its normal idle state, set by att_handle_rsp() when a response resolves the transaction and tested by att_req_send_process() to pick a free channel — so the lookup reads through a NULL pointer as soon as it visits an idle channel. Every other chan-&gt;req user in the file already guards the pointer.
-
-The lookup is reached from the public bt_gatt_cancel() API and, more importantly, from the host itself: bt_gatt_unsubscribe() calls bt_gatt_cancel() while a subscribe CCC write is still outstanding (BT_GATT_SUBSCRIBE_FLAG_WRITE_PENDING), and call_notify_cb_and_maybe_unsubscribe() in subsys/bluetooth/host/gatt.c invokes bt_gatt_unsubscribe() from the RX path whenever an application notify callback returns BT_GATT_ITER_STOP. A malicious or malfunctioning peer can hold the trigger window open by withholding the ATT Write Response to the CCC write and then sending a notification for the subscribed handle. With CONFIG_BT_EATT the traversal is very likely to meet an idle sibling channel, since ATT channels are prepended to the list and a channel opened after the pending request was sent is visited first.
-
-The dereference is a read of a small constant offset from address zero, so the impact is availability only: no memory corruption, no attacker-chosen address and no information disclosure. On platforms and configurations where a near-NULL read traps — TrustZone non-secure images, MMU targets, native_sim, or builds with CONFIG_NULL_POINTER_EXCEPTION_DETECTION_MPU/_DWT — the fault occurs in the Bluetooth RX context and results in a fatal error and device reset. On a plain Cortex-M build with the vector table mapped at address 0 and null-pointer detection disabled (the default) the read succeeds and the defect is inert.
-
-The fix adds an explicit chan-&gt;req != NULL test to the channel traversal and additionally rejects a NULL user_data argument, which would otherwise have matched, and cancelled, an unrelated request.</description>
+    <title>CVE-2026-130382 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130382</link>
+    <guid isPermaLink="false">1ea03045c85000d6d3dd1e4cc8fd87c4</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | AdminNeo before 5.9.1 contains an authentication bypass vulnerability in OtpLoginPlugin that allows attackers knowing the database password to skip TOTP verification by abusing the permanent-login cookie. Attackers can submit a login with a wrong OTP and permanent=1 to obtain a neo_permanent cookie, then replay it to gain full authenticated database access.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-93673 - NVD - CVSS Score v3.1: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93673</link>
-    <guid isPermaLink="false">dd667caf162ca2fa9bdbeeb499e4fb6b</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 4.8 | The Zephyr WebSocket client validates the server's handshake response in on_header_value() in subsys/net/lib/websocket/websocket.c. The comparison was performed as strncmp(at, str, length), where length is the length of the value the server sent rather than the length of the expected value, so the check only asked whether the received value was a prefix of the expected base64(SHA-1(key || GUID)). A server that returned a handful of correct characters passed, and a response carrying an empty Sec-WebSocket-Accept: header caused strncmp() to be called with a count of zero, which returns 0 and set ctx-&gt;sec_accept_ok with no comparison performed at all. The header-value callback also cleared ctx-&gt;sec_accept_present after the first chunk, so a value split across receive-buffer boundaries was only ever examined in part.
-
-ctx-&gt;sec_accept_ok is the sole WebSocket-specific gate in websocket_connect(); the client does not check the HTTP status code or the Upgrade:/Connection: headers. Any HTTP response containing an empty or prefix-matching Sec-WebSocket-Accept header therefore completed the handshake, after which the socket is finalized as a WebSocket and all further peer bytes are parsed as frames. The affected path is driven directly by remote input through subsys/net/lib/http/http_parser.c, and is reached by every user of websocket_connect(), including MQTT over WebSocket (subsys/net/lib/mqtt/mqtt_transport_websocket.c) and subsys/net/lib/ocpp/ocpp.c.
-
-The Sec-WebSocket-Accept exchange is not a secret-based authentication -- an endpoint or on-path attacker that sees the request can compute the expected value -- so the impact is bounded to parties that never observed the handshake request: a caching or transparent intermediary replaying a canned response, an off-path attacker injecting a spoofed response, or a non-WebSocket endpoint the client was induced to talk to. For those, the per-connection binding that RFC 6455 requires the client to enforce provided no protection at all, letting a single crafted response convince the device it holds a live WebSocket session and causing it to send application data to, and accept frames from, an unverified peer. There is no memory-safety consequence.
-
-The fix compares each delivered chunk against the expected value at the position reached so far, refuses a chunk that would overrun it, and accepts only once every byte of the expected value -- and no more -- has been matched; on_header_field() now also clears the flag for any other header so a partial value cannot be continued across an intervening header.</description>
+    <title>CVE-2026-130383 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130383</link>
+    <guid isPermaLink="false">c09f41009a0bb2135cf2d76642f71a25</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.1 | phpMyFAQ before 4.1.12 and 4.2.0-alpha.2 before 4.2.0-RC.2 contains an authorization bypass vulnerability that allows authenticated editors to manipulate search index documents by supplying an arbitrary solutionId to the /admin/api/faq/update endpoint. On Elasticsearch or OpenSearch deployments, category-restricted editors can remove published FAQs from search, overwrite other FAQs' search documents, or plant entries that remain searchable after unpublishing.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130320 - NVD - CVSS Score v3.1: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130320</link>
-    <guid isPermaLink="false">591969d95249f01e313335dd12640857</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 9.3 | In Open Object Rexx (ooRexx) before 5.2.0, RXAPI mishandles nameArg and userid bounds checking, possibly leading to arbitrary code execution via crafted messages.</description>
+    <title>CVE-2026-79614 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-79614</link>
+    <guid isPermaLink="false">c09e62f6e8a8428faa5a3c4d0e4e9452</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 9.8 | An out-of-bounds write vulnerability in “libclinkc.so” in Zyxel DX3301-T0/EX3301-T0 firmware versions through 5.50(ABVY.8.3)C0 could allow an unauthenticated attacker to elevate privileges and potentially execute arbitrary commands by sending a crafted HTTP request. WAN access is disabled by default on these devices.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130327 - NVD - CVSS Score v3.1: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130327</link>
-    <guid isPermaLink="false">00c96dd2a76c5df5cd3e2940df85cf0a</guid>
-    <description>Monday 16 November 2026 | NVD | CVSS Score v3.1: 9.3 | In Open Object Rexx (ooRexx) before 5.2.0, RXAPI relies on a world-writable /tmp file unless XDG_RUNTIME_DIR is set, or localhost TCP port 10010, allowing RXAPI communication by any local user, e.g., for injection of a macro that will be executed by a REXX script.</description>
+    <title>CVE-2026-86676 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86676</link>
+    <guid isPermaLink="false">cc6f118323b092c415d471281768c4be</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.2 | A post-authentication command injection vulnerability in the “Description” parameter of a CGI program  in Zyxel DX3300-T0 firmware versions through 5.50(ABVY.8.3)C0 could allow an authenticated attacker with administrator privileges to execute OS commands by sending a crafted HTTP request.</description>
     <category>NVD</category>
-    <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   </channel>
 </rss>
