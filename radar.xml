@@ -5,143 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Nov 2026 13:01:36 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-119643 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119643</link>
-    <guid isPermaLink="false">ec9313aae4d8d8425c2fc00bfab786a4</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 7.2 | The MembershipWorks - Membership, Events &amp; Directory plugin for WordPress is vulnerable to Stored Cross-Site Scripting in all versions up to, and including, 6.17. This is due to insufficient output escaping on member-supplied data retrieved from the MembershipWorks SaaS API in the sf_shortcode(), sf_widget_event_do(), and sf_widget_folder_do() functions, where the 'nam' (member name), 'ttl' (event title), 'url', 'adn' (venue name), 'szp', and 'ezp' fields are output into page HTML without escaping, or, in sf_widget_folder_do(), placed in an image alt attribute that an onerror handler copies into innerHTML. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121864 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121864</link>
-    <guid isPermaLink="false">eaa245f2257223e80b4889bb6d9f62b4</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.7 | In nanobot, when sandboxed exec is enabled, the shell executable used to run commands can be selected by the caller and is launched before the sandbox is applied. An attacker who can induce the agent to create an executable in the workspace and select it as the shell can cause that executable to run outside the sandbox (e.g. Linux bubblewrap), with the operating-system permissions of the nanobot process.
-
-This issue affects nanobot (nanobot-ai) from 0.2.1 before 0.4.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121865 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121865</link>
-    <guid isPermaLink="false">f5763e216938647cb1f6a19d1513833d</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.2 | In nanobot, the WebSocket gateway allows a standard client holding a valid client token to select an existing directory outside the operator-configured workspace as the root of a new conversation. The agent can then read and expose files in that directory that are readable by the nanobot service account.
-
-This issue affects nanobot (nanobot-ai) from 0.3.5 before 0.4.1.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124709 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124709</link>
-    <guid isPermaLink="false">d2da274c01a6f00d695be79acc7b7002</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | Issue summary: A QUIC server that rejects a stream opened by the peer may
-retain that stream's state for the lifetime of the connection if the peer
-resets the stream before the rejection is signalled, even though the peer's
-stream credit is returned.
-
-Impact summary: A remote client that completes a QUIC handshake can repeatedly
-open and reset streams, causing server memory to grow without bound until the
-process runs out of memory and every connection on it is lost. This is a
-Denial of Service.
-
-CWE: CWE-401: Missing Release of Memory after Effective Lifetime
-
-Description: QUIC servers track each stream the peer opens. When the incoming
-stream policy rejects a stream, OpenSSL schedules a STOP_SENDING frame, marks
-the stream deleted and returns the peer's stream credit. A deleted stream is
-collected only once its receive part is fully drained, which for a rejected
-stream means the STOP_SENDING has been acknowledged. If the peer sends
-RESET_STREAM first, the reset cancels the pending STOP_SENDING, so it is never
-sent or acknowledged and the stream is never collected.
-
-The default configuration reaches this path. Once a connection has a default
-stream, meaning the application has read from or written to the connection as
-the tutorial server does, the effective incoming stream policy rejects streams
-the application does not accept. Applications that set the REJECT policy
-explicitly are affected too.
-
-Each retained stream costs about 300 bytes, and the peer's stream credit
-window paces how quickly they accumulate. A client that keeps the connection
-open and keeps opening and resetting streams grows server memory without
-bound. The severity is Low because growth is slow, needs a long-lived
-connection, and causes no memory corruption or disclosure.
-
-FIPS impact: no
-The affected code is outside the FIPS module boundary.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-35190 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-35190</link>
-    <guid isPermaLink="false">14effd56d30aabbc7b35caa4f66234f7</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS: não informado | Issue summary: A server configured with the Suite B certificate flag through
-SSL_CTX_set_cert_flags() and with TLS 1.3 enabled may read past the end of a
-fixed group list when it processes a ClientHello whose supported_groups and
-key_share contain no Suite B group.
-
-Impact summary: A remote client can send a ClientHello that makes the server
-read past the end of a static array. The values read are never returned to the
-client, so no memory is disclosed; on builds with sanitizers or hardened
-allocators the read may crash the process, causing Denial of Service.
-
-CWE: CWE-125: Out-of-bounds Read
-
-Description: When the Suite B certificate flag is set, OpenSSL restricts the
-accepted groups to P-256 and P-384 by substituting a fixed two-element list
-for the configured group list. The tuple machinery used for key-share
-selection was not updated for this substitution: tls1_get_group_tuples() still
-returns the configured tuples, which by default describe eight groups. The
-server-side walk in tls_parse_ctos_key_share() then advances through the
-two-element list using those tuple counts without checking the cumulative
-offset against the number of groups present.
-
-Only applications that call SSL_CTX_set_cert_flags() with
-SSL_CERT_FLAG_SUITEB_128_LOS and leave TLS 1.3 enabled are affected. The
-openssl s_server -suiteB_128 option sets an X.509 verification parameter
-instead, so the stock command line server is not vulnerable. Default
-configurations do not reach this code.
-
-A client that offers only groups outside the Suite B set, such as X25519,
-forces every tuple to be walked and the read to run past the array. The bytes
-read are compared against client group IDs and never sent back, so no memory
-is disclosed. On builds with address sanitizers or hardened allocators the
-read can abort the process; in ordinary release builds it reads a few bytes of
-adjacent constant data.
-
-FIPS impact: no
-The affected code is outside the FIPS module boundary.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-112209 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112209</link>
-    <guid isPermaLink="false">860da5a5ac367704475bed1585fa85e2</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | A Cross-Site Scripting (XSS) vulnerability reflected in the GET parameters `cod_primaria` and `cod_secundaria` of the Novanet Web endpoints `NNws_ShwNewDup` and `NPcd/NFG_VerNoticia`. User-provided data is reflected within a JavaScript block without proper sanitization or context-appropriate output encoding. An unauthenticated remote attacker could craft a manipulated URL that, when visited by a victim, would execute arbitrary JavaScript code in the victim’s browser, within the context of the affected site. The flaw resides in the platform’s shared code, so it could affect organizations using that vulnerable code.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118496 - NVD - CVSS Score v4.0: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118496</link>
-    <guid isPermaLink="false">e70779c415545a0174ddead847bea715</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.5 | The affected products process a server-supplied URL without sufficient validation. An unauthenticated remote attacker controlling a malicious Automation Server and tricking a user to trust it or performing a man-in-the-middle attack, can exploit this vulnerability by causing the affected product to process unintended content. Successful exploitation may result in arbitrary code execution with the privileges of the user running the affected product.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118497 - NVD - CVSS Score v4.0: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118497</link>
-    <guid isPermaLink="false">ba20604d2c020ce44a8d931b6b5c6251</guid>
-    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 7.4 | The affected products do not sufficiently validate CODESYS Automation Server TLS certificates when a user starts the certificate enrollment. An unauthenticated remote attacker performing a man-in-the-middle attack can exploit this vulnerability by supplying an untrusted certificate that is accepted as trusted. Successful exploitation may allow an attacker to intercept and manipulate communications between the CODESYS Automation Server and the PLC network.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 17 Nov 2026 14:01:31 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-118498 - NVD - CVSS Score v4.0: 7.5</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118498</link>
@@ -413,6 +277,94 @@ Successful exploitation of this vulnerability could allow the attacker to gain u
     <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.9 | This vulnerability exists in e-Sushrut HMIS due to the exposure of internal hospital operational statistics through data structure embedded in the HTML response of the login page. An unauthenticated remote attacker could exploit this vulnerability by accessing the affected login page and extracting the returned HTML content.
 
 Successful exploitation of this vulnerability could allow the attacker to gain unauthorized access to internal hospital operational information associated with the targeted healthcare organization.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124645 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124645</link>
+    <guid isPermaLink="false">50c63fcfc1caf895f7237cfd9bbcc6a0</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | This vulnerability exists in e-Sushrut HIMS due to the use of a static and predictable value in the client-side password hashing mechanism, which is embedded in the login page and accessible to unauthenticated users. An unauthenticated remote attacker could exploit this vulnerability by accessing the login page, extracting the embedded value and using it to reproduce the password hashing process.
+
+Successful exploitation of this vulnerability could weaken the security of the authentication mechanism and potentially facilitate authentication related attacks on the targeted healthcare organization.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124646 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124646</link>
+    <guid isPermaLink="false">8687dcd508bbc980437d351417020d2e</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 8.7 | This vulnerability exists in e-Sushrut HMIS due to insufficient server side object level authorization validation in the API endpoint. An unauthenticated remote attacker could exploit this vulnerability by modifying the parameter value in the API request.
+
+Successful exploitation of this vulnerability could allow the attacker to enumerate and gain unauthorized access to sensitive information of patients on the targeted healthcare organization.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127138 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127138</link>
+    <guid isPermaLink="false">97c16d4c7a309ae6c94ca2659e8dd9ad</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 6.8 | pretix provides a mechanism where ticket QR codes are cryptographically signed and can be verified by our pretixSCAN apps in offline mode without any database of valid tickets. pretixSCAN checks the signature to verify that the ticket was issued by the correct pretix event and compares the QR code against a list of revoked QR codes. A QR code becomes revoked when the order is canceled, or the ticket is changed in a way that a new QR code needs to be generated.
+
+
+
+
+However, the parsing of the QR code in all of our pretixSCAN apps contained a faulty computation, rendering the check for the correct length of the contents faulty. This way, an attacker is able to craft multiple QR codes for the same ticket which have the same content, but look different and therefore do not match against the revocation list. This does not allow to fabricate entirely new tickets, but it does allow to enter the event with e.g. a canceled ticket. This attack requires pretixSCAN to be scanning in offline mode and the &quot;pretix signature scheme 1&quot; to be used for the event's QR codes.
+
+
+
+
+If the attack is executed, the ticket unfortunately shows as valid (green) on the scanner but as invalid (red) on the server since the server later cannot match it to a ticket. We scanned the entire database of scans on pretix Hosted and could not find any traces of this being exploited in the past.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127139 - NVD - CVSS Score v4.0: 4.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127139</link>
+    <guid isPermaLink="false">3dd304b9f21a6adf529c624cda8f03e4</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 4.4 | pretixSCAN Proxy does not use a secure random generator to generate initialization tokens and API keys for the connection between pretixSCAN devices and the pretixSCAN Proxy. This could allow a skilled attacker with access to at least some of the tokens to predict the value of other tokens more easily.
+
+
+
+
+pretixSCAN is usually used on local networks and the level of exposure heavily depends on the structure of that network. If you want to be extra careful, it might make sense to reconnect your devices to the proxy after the update.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127140 - NVD - CVSS Score v4.0: 3.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127140</link>
+    <guid isPermaLink="false">c6b94b26f20334563064cf24bd79737b</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 3.8 | Our WordPress plugin for the pretix Widget performs HTTP calls to pre-fetch CSS and JS files into a local cache and stores them publicly on the WordPress instance. These HTTP calls are made with wp_remote_get, not wp_safe_remote_get, and therefore allow SSRF with body extraction. Exploiting this requires sufficient WordPress permissions to create or modify pages.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127174 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127174</link>
+    <guid isPermaLink="false">335a70891867018a6a73b8d9b5e16984</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.1 | When changing the settings of a scheduled export, no permission checks are done to see whether the user making the change has access to the exporter after the change. This way, an attacker with access to change organizer settings and e.g. access to all orders could change the export to refer to gift cards instead, even if they do not have access to gift cards.
+
+
+
+
+The fix for this is technically a breaking API change, since changing the export type of existing scheduled exports is no longer allowed, but we don't expect this to affect any typical API usage.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-12239 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12239</link>
+    <guid isPermaLink="false">100319a8dfecf43f0c84c2667ffac33d</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v3.1: 8.8 | The WP Abstracts plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 2.7.6. This is due to a missing capability check on the wpabs_save_regform AJAX action and the use of a static, frontend-exposed nonce that allows any authenticated user to persist attacker-controlled form schemas with arbitrary wpSync mappings that are later used as user meta keys in the wpabstracts_sync_wpfields function. This makes it possible for authenticated attackers, with subscriber-level access and above, to elevate their privileges to administrator.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130384 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130384</link>
+    <guid isPermaLink="false">241ee54b44137f839aa0a8d98a2a8aed</guid>
+    <description>Tuesday 17 November 2026 | NVD | CVSS Score v4.0: 5.3 | Zammad before 7.2.3 contains a missing authorization vulnerability that allows authenticated customers to delete agents' shared ticket drafts by supplying a shared_draft_id. Attackers can create tickets via POST /api/v1/tickets or reply to accessible tickets referencing a draft id, destroying draft text prepared by agents.</description>
     <category>NVD</category>
     <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
   </item>
