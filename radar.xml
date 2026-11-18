@@ -5,221 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 06:00:51 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-111801 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111801</link>
-    <guid isPermaLink="false">810ddcbc321a95c2e7747bd26a3b80c8</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | An authorization bypass through user-controlled key vulnerability was identified in GitHub Enterprise Server that allowed authenticated users to read review-thread data from private repositories they could not access. An attacker required an authenticated account, a readable repository and pull request to use as the request context, and target review-thread identifiers. The thread-preview endpoint resolved supplied identifiers without restricting them to the authorized pull request, exposing private file paths and, when positioning and diff data were available, source-code excerpts, commit identifiers, and line metadata without victim interaction. This vulnerability affected supported GitHub Enterprise Server releases in the 3.21, 3.22 series and was fixed in versions 3.21.10, 3.22.5. This vulnerability was reported via the GitHub Bug Bounty program.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-112740 - NVD - CVSS Score v4.0: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112740</link>
-    <guid isPermaLink="false">8608dc7e5a8ad289d62d9c9d7170f96b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.4 | A command injection vulnerability was identified in GitHub Enterprise Server that allowed an authenticated site administrator to execute arbitrary commands as the host git user on peer Git server nodes outside the pre-receive hook sandbox by supplying a crafted pre-receive environment download URL. Exploitation required a clustered deployment using custom pre-receive hook environments and at least one peer Git server node. This vulnerability affected all versions of GitHub Enterprise Server prior to 3.23 and was fixed in versions 3.22.5, 3.21.10, 3.20.12, and 3.19.16. This vulnerability was reported via the GitHub Bug Bounty program.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-105929 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105929</link>
-    <guid isPermaLink="false">ff015e2f43080455bf317da108aa9c8b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.1 | A path traversal vulnerability (CWE-22) was found in ansible-core's ansible-galaxy role installation. An explicit role &quot;name&quot; taken from a role's meta/requirements.yml is used to construct the on-disk installation path without validating that the resulting destination stays within the selected roles directory. A name containing &quot;../&quot; escapes that directory, and an absolute name replaces it entirely. Because ansible-galaxy processes transitive dependencies from an installed role's meta/requirements.yml, a malicious role publisher can cause attacker-supplied files to be written outside the operator's chosen roles directory when the operator installs the role, and, when --force is used, can cause an existing role directory outside that path to be removed and replaced. The impact is bounded by the invoking user's filesystem permissions and requires the operator to install the attacker-influenced content.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-106096 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106096</link>
-    <guid isPermaLink="false">f19987c960a915f9f89a7cce9f887b4e</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.4 | A flaw was found in CRI-O. When the optional Linux LinkLogs feature is enabled, the host pod log directory is bind-mounted into a pod emptyDir and is intended to be read-only, but Linux ignores MS_RDONLY on the initial bind and the CRI mount stays writable. A non-privileged UID 0 container can place a symlink at a future kubelet log path so that privileged conmon later appends attacker-controlled log data to an existing host file. This is an append-only host integrity issue, not universal remote code execution; LinkLogs is not enabled by default.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-110307 - NVD - CVSS Score v4.0: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110307</link>
-    <guid isPermaLink="false">af88c0e21f05e2ad4fae097400270897</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.4 | An incorrect authorization vulnerability was identified in GitHub Enterprise Server that allowed an authenticated user whose numeric user ID matched an enterprise's numeric ID to manage that enterprise's GitHub Apps and generate private keys without enterprise membership. GitHub App ownership checks compared numeric IDs without checking the owner's account type. Exploitation required control of a session for the colliding user account and an enterprise-owned GitHub App. A generated private key could be used to authenticate as the App and access repositories where it was installed, within its granted permissions. On standard fresh installations, the documented collision involved the non-loginable built-in ghost account; the reported GHES reproduction used site administrator impersonation. This vulnerability affected supported GitHub Enterprise Server releases prior to 3.23 and was fixed in versions 3.19.16, 3.20.12, 3.21.10, and 3.22.5. This vulnerability was reported via the GitHub Bug Bounty program.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-112115 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112115</link>
-    <guid isPermaLink="false">713936a08697572e1747e38c8ff2a3f8</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.5 | An untrusted search path in ASUS Armoury Crate allows a local, low-privileged user to achieve privilege escalation by executing a crafted library at a high integrity level, via user-controlled environment settings inherited by an elevated process.
-Refer to the '
-Security Update for Armoury Crate App ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-112117 - NVD - CVSS Score v4.0: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112117</link>
-    <guid isPermaLink="false">07e10be147e20467b514e5d4f714ea4c</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.3 | A Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') in ASUS System Control Interface , allows a local, low-privileged user to gain full control over arbitrary existing files and folders outside the allowed directories via a crafted path containing dot-segment sequences that satisfies a folder prefix check, which can lead to unauthorized read and modification of protected files and may result in local privilege escalation.
-Refer to the '
-Security Update for ASUS System Control Interface  ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114202 - NVD - CVSS Score v4.0: 10.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114202</link>
-    <guid isPermaLink="false">3c1abd7c8f9dc7931b89ba46c5cf9483</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 10.0 | Use of Hard-coded Cryptographic Key in ASUS Control Center Express allows a remote user to gain administrative privileges via a forged authentication token.
-Refer to the '
-Security Update for ASUS Control Center Express Agent  ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114204 - NVD - CVSS Score v4.0: 9.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114204</link>
-    <guid isPermaLink="false">fc9c1c32828c6055ec3697bbcf4bb30a</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.0 | Use of Hard-coded Cryptographic Key in ASUS Control Center Express allows a remote user to bypass authentication by forging a session token for an account with a recent valid login, resulting in administrative control of the management console and of the clients it manages.
-Refer to the ' Security Update for ASUS Control Center Express Agent  ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-114205 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114205</link>
-    <guid isPermaLink="false">612099e544b6da4f312b089a591d2c3c</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.4 | Incorrect authorization in ASUS Control Center Express allows a remote authenticated user with a low-privileged role to create an administrator account, resulting in administrative control of the management console and of the clients it manages.
-Refer to the '
-Security Update for ASUS Control Center Express Agent  ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116637 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116637</link>
-    <guid isPermaLink="false">5633d6a43d9ba4660a44f8df8209c6fb</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | A site administrator could modify files on the appliance host with root privileges and disclose private repository data due to improper path validation in GitHub Enterprise Server. Exploitation required a crafted pre-receive hook environment. This vulnerability affected supported GitHub Enterprise Server versions prior to 3.23 and was fixed in versions 3.19.16, 3.20.12, 3.21.10, and 3.22.5. This vulnerability was reported via the GitHub Bug Bounty program.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116643 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116643</link>
-    <guid isPermaLink="false">ff3df86082e5a6f59ade75cc1eef148a</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | An SSH certificate authentication bypass vulnerability in GitHub Enterprise Server allowed an authenticated organization member to read and modify another user's private repositories within the trusted certificate authority's scope. Exploitation required an instance using built-in authentication and a valid certificate issued to the attacker by a trusted SSH certificate authority. This vulnerability affected supported GitHub Enterprise Server releases prior to 3.23 and was fixed in versions 3.19.16, 3.20.12, 3.21.10, and 3.22.5. This vulnerability was reported via the GitHub Bug Bounty program.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119469 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119469</link>
-    <guid isPermaLink="false">aaf0579767657d253ded7635d10beed8</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.0 | Incorrect default permissions in the ASUS DisplayWidget Center allow a local, low-privileged user to achieve arbitrary code execution in the security context of another user via a crafted executable placed in that user-writable directory, which the application launches when the other user runs it and uses a particular feature.Refer to the '
-Security Update for ASUS Display Widget Center ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126574 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126574</link>
-    <guid isPermaLink="false">da499d22f8015beab598c43a0439f0c8</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.4 | Missing authorization vulnerability in ASUS Control Center Datacenter and Control Center Enterprise allows remote authenticated users with a low-privileged Viewer role to change the password of an Administrator account, thereby obtaining administrative privileges, via a crafted password update request. 
-Refer to the '
-Security Update for ASUS Control Center  ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131647 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131647</link>
-    <guid isPermaLink="false">bee31360d85b4b92ecbf6f0d54645cd8</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | A CRLF injection vulnerability was identified in GitHub Enterprise Server that allowed a user with write access to a repository to bypass branch protections and update branches or tags in that repository through specially crafted input when resolving pull request conflicts. This vulnerability affected all versions of GitHub Enterprise Server prior to 3.23 and was fixed in versions 3.19.16, 3.20.12, 3.21.10, and 3.22.5. This vulnerability was reported via the GitHub Bug Bounty program.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131820 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131820</link>
-    <guid isPermaLink="false">90e83c39bbf12952b029a13feb26481c</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.7 | A server-side request forgery vulnerability in GitHub Enterprise Server allowed an authenticated user with repository write access to send requests to internal services through Slack webhook validity checks, potentially leading to remote code execution on the appliance. Exploitation required Secret Protection with secret scanning and validity checks for partner patterns enabled. This vulnerability affected all versions prior to 3.23 and was fixed in versions 3.22.5, 3.21.10, and 3.20.12. This vulnerability was reported via the GitHub Bug Bounty program.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-19399 - NVD - CVSS Score v4.0: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19399</link>
-    <guid isPermaLink="false">70b65710feacaa6f26b0b54d08483127</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.1 | Improper Authentication and Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') in ASUS Router firmware allow an unauthenticated nearby user to perform file operations or read files in an unintended directory via crafted HTTP requests during an active user session.
-Refer to the '
-Security Update for ASUS Router Firmware ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-88711 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88711</link>
-    <guid isPermaLink="false">ae368e18e7ff693d3c25ea3795469210</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | Improper neutralization of special elements used in an OS command in certain ASUS Router firmware models allows an remote attacker to to execute arbitrary commands with root privileges by inducing a logged-in administrator to visit a malicious website.
-Refer to the ' Security Update for ASUS Router Firmware ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-88760 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88760</link>
-    <guid isPermaLink="false">deb216accddabd591123617829c204ed</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | Missing Authentication for Critical
-Function in certain ASUS Router firmware allows unauthenticated nearby users to
-obtain router information and resources (e.g., multimedia files) via HTTP
-requests.
-Refer to the ' Security Update for ASUS Router Firmware ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-93458 - NVD - CVSS Score v4.0: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93458</link>
-    <guid isPermaLink="false">2d89804a1103f53a04c4d80631976895</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.1 | Insertion of sensitive information into sent data in certain ASUS Router firmware allows a remote attacker to obtain router’s UID or login authorization tokens for the victim's linked account via a crafted web page, which requires a logged-in router administrator to actively complete the third-party authorization flow.
-Refer to the '
-Security Update for ASUS Router Firmware ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-93459 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93459</link>
-    <guid isPermaLink="false">8a85c4789c5a3e1cfbfd1da92d2bc8d9</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.5 | Use of externally-controlled format string in certain ASUS Router firmware allows a nearby administrator to read or write memory, potentially resulting in a denial-of-service, via crafted format specifiers sent to the logging/summary function.
-Refer to the ' Security Update for ASUS Router Firmware ' section on the ASUS Security Advisory for more information.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107949 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107949</link>
-    <guid isPermaLink="false">37b6847a5c9b88d3fa61ef4ea1d8b1c0</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.5 | A SQL injection vulnerability affects an administrative API in HCL Commerce versions 8, 9.0.1 and 9.1.0 - 9.1.21.  A remote attacker with an administrative role could use a crafted URL to infer unauthorized data from the database.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107950 - NVD - CVSS Score v3.1: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107950</link>
-    <guid isPermaLink="false">f8428496240449cb80628a6e9bacab30</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.2 | An XML External Entity (XXE) vulnerability affects a Storefront REST API in HCL Commerce versions 8, 9.0.1 and 9.1.x.  A remote attacker, using a specially crafted XML, could potentially view internal files or consume memory resources.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-117634 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117634</link>
-    <guid isPermaLink="false">6538f2bb8df0fbc9c7a695bb9affe344</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.9 | Pleasanter contains an incorrect authorization vulnerability in Publishing feature. If this vulnerability is exploited, a remote unauthenticated attacker who can access a site published using the product may obtain, by sending a specially crafted request, information on records of unpublished sites (e.g., titles), as well as the names of users, groups, and organizations registered in the same tenant. Note that the vulnerability only affects configurations where both of the following conditions are met: a site is published using the Publishing feature, and the published site contains link items (items linked to other sites, users, groups, or organizations).</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 18 Nov 2026 07:01:43 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-120472 - NVD - CVSS Score v3.1: 5.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120472</link>
@@ -345,6 +131,198 @@ Refer to the ' Security Update for ASUS Router Firmware ' section on the ASUS S
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118900</link>
     <guid isPermaLink="false">62fe7912eb10f9046504392706077591</guid>
     <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.4 | An OS command injection vulnerability exists in the Android application &quot;Imperial Palaces Guide&quot; provided by The Imperial Household Agency. An attacker may be able to execute arbitrary OS commands with the privileges of the application.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104683 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104683</link>
+    <guid isPermaLink="false">e7ce9ee6fc9294e6304b83c963f6da22</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Envira Gallery  WordPress plugin before 1.16.4 does not apply its own gallery-permission policy until an administrator first opens its permissions screen, instead copying gallery-management capabilities onto each role from that role's core post capabilities after activation, which lets Contributor accounts create, edit and delete galleries that the policy is meant to restrict to higher roles.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107099 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107099</link>
+    <guid isPermaLink="false">80be81a60e6afa6e23504300f5045b5c</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Royal Addons for Elementor  WordPress plugin before 1.7.1071 does not restrict or validate the post meta keys used when counting or rendering a filtered grid, and does not reject private (hidden) meta keys, allowing unauthenticated users to disclose the value of arbitrary private post meta one value at a time from the filtered result count. This is an incomplete fix of CVE-2026-17585, whose 1.7.1067 patch covered only a separate search-based path and left the grid filtering path affected.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107739 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107739</link>
+    <guid isPermaLink="false">9981fb6fa7a5240a91cc88e7b0a4ebfc</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Search &amp; Replace WordPress plugin before 3.2.4 does not correctly restrict which database tables an administrator of a single site may operate on in a multisite network, allowing subsite administrators to read and modify the tables of other sites and of the network, and to make themselves Super Admin.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107740 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107740</link>
+    <guid isPermaLink="false">385a521cf86b6de1f83f2f560a58d09b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Search &amp; Replace WordPress plugin before 3.2.4 does not restrict one of its database tools to network administrators on multisite installations, allowing administrators of a single subsite to run arbitrary SQL against the whole network's database and make themselves Super Admin.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-111825 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111825</link>
+    <guid isPermaLink="false">6174747590ccd9f4892e90122587630f</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Event Tickets with Ticket Scanner plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'code' parameter in all versions up to, and including, 3.3.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The payload persists through WooCommerce session data into order-item metadata and executes when rendered in the ticket scanner interface.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-117489 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117489</link>
+    <guid isPermaLink="false">245df149dcd82602021a1618f770b668</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Flatsome WordPress theme before 3.20.13 does not perform a capability or nonce check on an AJAX action available to authenticated users, allowing users with a role as low as Subscriber to disclose the name and content of non-public templates stored on the site.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-117491 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117491</link>
+    <guid isPermaLink="false">5031f81867ed0a712b7b68e925f3462f</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Flatsome WordPress theme before 3.20.13 does not verify that the acting user is authorised to modify the target post when saving a template, allowing users with a role as low as Contributor to overwrite the content and type of an arbitrary post, including another user's published page, removing it from the front end.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-117492 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117492</link>
+    <guid isPermaLink="false">627a0e8c65b8010aa50a9f73b1f72bd7</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Flatsome WordPress theme before 3.20.13 does not sanitise post meta saved through an AJAX action, nor escape it when rendering the product page, allowing users with a role as low as Contributor (who lack the unfiltered_html capability) to store JavaScript that executes in the browser of anyone who views the product, including administrators.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-117520 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117520</link>
+    <guid isPermaLink="false">73bdee04774a4430c3c12395ba1b068b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Dynific Addons for Elementor (formerly Anywhere Elementor) WordPress plugin before 1.3.1 does not perform a capability check on an AJAX action that stores a configuration value, allowing any authenticated user, including Subscribers, to store a value that is later output without proper escaping in a quoted attribute on an administrator settings page, resulting in Stored Cross-Site Scripting that executes in the administrator's session.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120390 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120390</link>
+    <guid isPermaLink="false">0447f8c32a8200476aaca1a4018e6876</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The WPvivid — Backup, Migration &amp; Staging WordPress plugin before 0.9.140 does not limit its table prefix rewrite to table names when restoring a database backup, which corrupts the length of stored serialized values and allows users with a role as low as Subscriber to plant a PHP object that WordPress instantiates after an administrator restores a backup.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120391 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120391</link>
+    <guid isPermaLink="false">248f01cab45695bb7c75513aa83d32ad</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The WPvivid — Backup, Migration &amp; Staging WordPress plugin before 0.9.140 does not prevent serialized data it cannot safely unserialize from being re-serialized as a PHP object during a site migration, allowing users with a role as low as Subscriber to plant a PHP object that WordPress instantiates after an administrator restores a backup onto a different URL.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120406 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120406</link>
+    <guid isPermaLink="false">b50a0cbce6c5b8e65aaf2241d03d15e1</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Contact Form 7 WordPress plugin before 6.2.5 does not check that the post a form submission says it was sent from is publicly viewable before resolving post-related mail-tags, allowing unauthenticated users to obtain the title, URL, author name and author email of private, draft and trashed posts where such tags are used in an email or message returned to the submitter.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123132 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123132</link>
+    <guid isPermaLink="false">bc1b7f28abc4afe977926362c77a736b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Otter Blocks  WordPress plugin before 3.2.10 does not use URL-aware escaping when it resolves its dynamic data tags inside HTML attributes, which could allow unauthenticated users to post comments containing links that execute arbitrary JavaScript when clicked, for example by a logged-in administrator.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123662 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123662</link>
+    <guid isPermaLink="false">c7a4de02616510dd1394fd3822f3c329</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The ProfilePress  WordPress plugin before 4.18.1 does not atomically consume the source subscription when processing a membership plan change, allowing a customer to submit concurrent plan-change checkouts against a single paid subscription and obtain several active memberships for the price of one.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126040 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126040</link>
+    <guid isPermaLink="false">c2d10a8473f53a1eff999db7cbbbf24d</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Hide My WP Ghost  WordPress plugin before 7.0.19 only enforces two-factor authentication on the interactive login flow and not on other authentication paths, allowing an attacker who already has a user's valid password to authenticate as that user without completing the second factor.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126041 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126041</link>
+    <guid isPermaLink="false">b8fe24e7a2dce69c70039d7a2f6b0226</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Hide My WP Ghost  WordPress plugin before 7.0.19 does not remove or restrict a debug branch in its output rewriting, allowing unauthenticated attackers to reveal the hidden login page, the hidden admin path and the renamed content folders the Hide My WP Ghost  WordPress plugin before 7.0.19 is meant to conceal.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127003 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127003</link>
+    <guid isPermaLink="false">da6e4bfb6cb15f49d28074a12b046f97</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The RSVP and Event Management WordPress plugin before 2.7.19 does not sanitise and escape attendee data imported from a spreadsheet before outputting it on the frontend RSVP form, which could allow users with the Author role and above to perform Stored Cross-Site Scripting attacks against anyone, including administrators, viewing the affected attendee, even when the unfiltered_html capability is disallowed.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127021 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127021</link>
+    <guid isPermaLink="false">71dcd29c9a9148e63b671594eafda0c1</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Flamix: Bitrix24 and WooCommerce Products Sync WordPress plugin before 1.7.0 does not restrict or validate an unauthenticated file-exchange request, allowing anyone to write a file with an attacker-chosen name, extension and path to a web-served location and thereby execute arbitrary PHP.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128851 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128851</link>
+    <guid isPermaLink="false">66686d4810375c32f721af224966aecd</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Probono Form Basic WordPress plugin before 1.3.3 does not validate the real type of files uploaded through its public form, trusting the client-declared MIME type instead, which could allow unauthenticated attackers to upload PHP files to a public directory and execute them before they are deleted, on servers that do not honour the Probono Form Basic WordPress plugin before 1.3.3's Apache-only access restriction.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129434 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129434</link>
+    <guid isPermaLink="false">6db0ce04221a2ea55a5190bf9e58b427</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The OneLogin SAML SSO WordPress plugin before 3.7.1 does not validate a user-supplied parameter before using it to redirect an already-authenticated user, allowing unauthenticated attackers to redirect a logged-in user to an arbitrary external domain via a crafted link (e.g. for phishing).</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-5765 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-5765</link>
+    <guid isPermaLink="false">42db190e29b6a5382b30c940ef1b76e2</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.8 | The Essential Real Estate plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 5.3.3 via deserialization of untrusted input in the 'saved_search_check_result' function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-75795 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75795</link>
+    <guid isPermaLink="false">f9bc7ad19bc6ae66a5d330ea9b2471d8</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Edwiser Bridge  WordPress plugin before 4.3.5 does not correctly scope one of its REST API authentication checks, disabling WordPress's REST nonce validation for every route on the site, which allows attackers to make a logged-in administrator perform arbitrary privileged actions, such as creating a new administrator account, via CSRF.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97329 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97329</link>
+    <guid isPermaLink="false">2b95f213ff8b5d3f5f3da402aaf967f1</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Team Members WordPress plugin before 5.4.2 does not properly escape a team member field when it is rendered back in the administration area, allowing users with the contributor role and above to perform Stored Cross-Site Scripting attacks against higher-privileged users who edit the team.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97330 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97330</link>
+    <guid isPermaLink="false">40138700bea308f2b183d29359e01130</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Team Members WordPress plugin before 5.4.2 does not properly escape team member social link URLs when they are rendered back in the administration area, allowing users with the Contributor role and above to perform Stored Cross-Site Scripting attacks against higher privileged users who edit the team.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
