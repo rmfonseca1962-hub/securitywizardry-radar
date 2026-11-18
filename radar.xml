@@ -5,197 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 22:00:55 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-127222 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127222</link>
-    <guid isPermaLink="false">c0d9af93feaeff8fef0207a6be33c243</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | SGLang through 0.5.23, fixed in commit 7b5fb39, contains a missing authorization vulnerability in the POST /load_lora_adapter_from_tensors HTTP endpoint, which lacks the @auth_level(AuthLevel.ADMIN_OPTIONAL) decorator applied to its sibling admin endpoints, allowing unauthenticated network-reachable attackers to invoke it without an API key. Attackers can load a LoRA adapter from attacker-supplied serialized tensors to manipulate the served model, and when combined with a separately documented deserialization bypass, achieve unauthenticated remote code execution as root.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-128974 - NVD - CVSS Score v4.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128974</link>
-    <guid isPermaLink="false">cfbb0dab23887a3b9a036030dd848ad6</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.4 | Cleartext storage of the WhatsApp Noise static private key in the shared application container (cck.dat) in WhatsApp Messenger for iOS allows an attacker with access to a full filesystem extraction or equivalent application data copy to recover long-term authentication material and impersonate the victim account.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130089 - NVD - CVSS Score v4.0: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130089</link>
-    <guid isPermaLink="false">ef738f20caa8d9df6b7df426df24d61e</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.3 | A caller who can send requests to the temporal-proxy gRPC listener can obtain the static API key of an upstream whose address is templated from the request namespace, and then use that key directly against the upstream Temporal service. temporal-proxy does not validate the request namespace before rendering it into a templated upstream address, so when an upstream's hostPort is templated from the namespace, as in the published Temporal Cloud configuration example, a crafted namespace changes the host the proxy dials. If that upstream verifies TLS against the system trust store and sets no literal server name, a caller-controlled host with a publicly trusted certificate passes verification and receives the key. The built-in static-token and JWKS authenticators do not restrict namespaces, so any caller they admit can do this; an external authenticator that admits only listed namespaces prevents it. temporal-proxy versions 0.1.0 through 1.2.0 are affected. The issue is fixed in 1.0.2, 1.1.2, and 1.2.1, and releases before 1.0.0 receive no fix. Upgrade to the fixed release for the deployed minor release line, and rotate any upstream API key that untrusted callers could reach.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130090 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130090</link>
-    <guid isPermaLink="false">d0ea8209983115065269759c79705598</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 2.3 | When two templated upstreams in temporal-proxy render the same address, a request routed to one upstream can be sent under the other upstream's credential, namespace translation, and payload encryption keys. temporal-proxy pools connections for templated upstreams by rendered address and TLS server name only, although each upstream's outbound credential, namespace translation, and payload encryption keys, where configured, are attached to its connection. A request routed to one upstream can therefore be sent over the connection the other created, and the upstream Temporal service authorizes it as the other upstream's principal. Configuration validation rejects only identical hostPort values, so templates that differ in text but render the same address are accepted. This mixes the two upstreams' ordinary traffic, and a caller that an external authenticator restricts to one upstream's namespaces can use it to act under the other upstream's credential. Deployments with at most one templated upstream are not affected. temporal-proxy versions 0.1.0 through 1.1.1 are affected. The issue is fixed in 1.0.2, 1.1.2, and 1.2.0, and releases before 1.0.0 receive no fix. Upgrade to the fixed release for the deployed minor release line.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130091 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130091</link>
-    <guid isPermaLink="false">e90126093a10ec7edc0b1fbf91436eb8</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | A caller with write permission in a namespace can terminate temporal-proxy through memory exhaustion by storing highly compressed payloads in Workflow history, and the stored history causes the same failure on every later read. temporal-proxy 1.2.0 decompresses every payload marked as compressed in the responses it forwards, whether or not compression is configured. Each payload is limited to 4 MiB after decompression, but the total for a response is not, and the decoded payloads are held in memory together. The caller can store many small, highly compressed payloads through the proxy or directly at the upstream Temporal service. When that history is read through the proxy, for example by a Worker processing a task, the proxy can run out of memory and be terminated. The codec server's /decode endpoint is affected in the same way when it is enabled. Only temporal-proxy 1.2.0 is affected; earlier versions do not decompress payloads. The issue is fixed in 1.2.1. Upgrade to 1.2.1 or later.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130092 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130092</link>
-    <guid isPermaLink="false">9acf77a289f2b1e98ff5e67c79a8cd6c</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | A caller who can reach the temporal-proxy gRPC listener, with or without a valid credential, can grow the proxy's memory until the process is terminated by sending requests with many distinct gRPC method names. temporal-proxy labels its request metrics with the method name exactly as the caller sent it, and records every request, including those that authentication or routing reject. Each distinct method name adds metric series that are never removed. The series grow whether or not the metrics endpoint is scraped, and metric labels configured from request metadata multiply the growth. temporal-proxy versions 0.1.0-alpha.20260716 through 1.2.0 are affected. The issue is fixed in 1.0.2, 1.1.2, and 1.2.1, and releases before 1.0.0 receive no fix. Upgrade to the fixed release for the deployed minor release line.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132137 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132137</link>
-    <guid isPermaLink="false">d7df5a851cc03759cdf5842ae53c2c1b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was identified in Relaticle up to 3.10.0. This affects the function mapToField of the file packages/ImportWizard/src/Livewire/Steps/MappingStep.php of the component Import Wizard. Such manipulation of the argument Target leads to authorization bypass. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132139 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132139</link>
-    <guid isPermaLink="false">eb376b0ff0e79ee0ed55eceec0a347f7</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | A weakness has been identified in DrayTek Vigor2960 up to 1.5.1.6. Affected is the function setSWMProfile of the file /cgi-bin/mainfunction.cgi. Executing a manipulation of the argument filename can lead to stack-based buffer overflow. The attack may be performed from remote. The exploit has been made available to the public and could be used for attacks. Upgrading to version 1.5.1.7 is able to address this issue. It is recommended to upgrade the affected component. The vendor recommends: &quot;1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.&quot;</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132140 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132140</link>
-    <guid isPermaLink="false">8743873557f1b9e1c81bf05d05cff654</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.7 | A security vulnerability has been detected in DrayTek Vigor2960 up to 1.5.1.6. Affected by this vulnerability is an unknown functionality of the file mainfunction.cgi of the component Apmcfg Upload. The manipulation leads to null pointer dereference. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. Upgrading to version 1.5.1.7 addresses this issue. Upgrading the affected component is advised. The vendor recommends: &quot;1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.&quot;</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132144 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132144</link>
-    <guid isPermaLink="false">f7b0381b756bd18ae61e4c9030b119da</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.3 | MISP contains an authorization flaw in the user login-email change logic. When an external authentication backend is configured (LDAP, Shibboleth, ApacheSecureAuth, or CustomAuth), the login email address serves as the key by which the directory service resolves a user's identity, organization, and role on each login. The __canChangeLogin() method in UsersController only checked the MISP.disable_user_login_change setting and site-admin status; it did not account for whether an external authentication backend was active. As a result, any authenticated non-admin user (including org admins) could change their own login email to an address that matches a higher-privilege account in the external directory. On the user's next login, the external backend would resolve that email to the target directory identity, granting the attacker the organization and role associated with that identity. This constitutes an account-identity capture and privilege escalation: the attacker effectively assumes the identity of any directory account whose email they can guess or discover. The vulnerability requires an authenticated session with a valid API key or session token and a MISP instance configured with at least one external authentication backend. The impact is limited to the scope of the captured directory identity's privileges within MISP.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132559 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132559</link>
-    <guid isPermaLink="false">119c79d28a8097824d6923e8aead63ab</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 2.3 | When payload encryption is enabled, failure messages and stack traces that temporal-proxy is configured to keep from the upstream Temporal service can reach it in plaintext, where anyone who can read the Workflow's history at the upstream can read them. When the proxy returns a failure to a Worker, it decrypts the failure's encoded attributes and copies the message and stack trace back onto the failure, keeping the attributes. A Worker that sends that failure back through the proxy, as SDKs do when an Activity failure becomes the cause of a Workflow failure, sends the restored text with it, and the proxy forwards the text unchanged because the failure already has encoded attributes. The upstream then stores the text in plaintext beside its encrypted copy. This affects deployments that enable failure encryption in the proxy, and deployments that leave it off while the SDK encodes failure attributes itself. Payloads are not affected. temporal-proxy versions 0.9.0 through 1.2.0 are affected. The issue is fixed in 1.0.2, 1.1.2, and 1.2.1, and releases before 1.0.0 receive no fix. Upgrade to the fixed release for the deployed minor release line.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132636 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132636</link>
-    <guid isPermaLink="false">c2f41591fa178bb42e12069ae1a3e8e6</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP contains an authorization bypass in its event search and filter functionality. When a user performed searches through events/restSearch (value, value prefix, searchall, type, uuid, attribute tags, object filters), objects/restSearch, or the event index tag, galaxy, and quick filters, the underlying SQL subqueries matched against attributes and objects without enforcing the per-attribute distribution, sharing-group, or soft-deleted visibility rules that apply when fetching individual elements.
-
-A user who could view an event (for example, a community-distributed event) could therefore use search to determine whether organisation-only, sharing-group-restricted, or soft-deleted attributes and objects existed within that event. Because the value filter supports prefix matching (LIKE), an attacker could enumerate the full value of a hidden attribute one character at a time. Tags attached exclusively to hidden attributes also leaked through the tag, galaxy, and quick-filter paths on the event index.
-
-The vulnerability affects the EventsController quick-filter and index-filter logic, the Event model wildcard/value/uuid/tag filter methods, the MispAttribute tag filter, the MispObject buildFilterConditions and restSearch methods, and the ReportFromEvent object filter. Site administrators and users belonging to the event's own organisation retain full visibility, and sync users continue to match soft-deleted elements as intended.
-
-The issue was reported by ENISA.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132637 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132637</link>
-    <guid isPermaLink="false">6a3488a57865da9af8c2daf9fab11c46</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP contains an authorization bypass in the correlations/eventCorrelations endpoint and the underlying correlation engines (Default and OnDemand). The CorrelationsController::eventCorrelations action did not verify that the requesting user was permitted to view the event specified by the event ID parameter. Any authenticated user could supply the ID of an event belonging to another organisation (distribution level 0, organisation-only) and receive its full correlation results, including attribute identifiers and values. Additionally, for events the user could partially view, the correlation engines filtered only the related (target) side of each correlation row and did not vet the queried event's own source attributes. As a result, correlations keyed by attributes hidden from the user (organisation-only attributes, attributes in sharing groups the user is not a member of, or attributes inside organisation-only objects) were returned with their IDs and values. The Default engine's related-event listing (used in events/view) also included events related solely through such hidden attributes. The vulnerability was reported by ENISA. Successful exploitation requires a valid authenticated session with any role and knowledge or enumeration of a target event ID. The security impact is disclosure of threat-intelligence attribute values (IP addresses, domain names, etc.) and attribute identifiers that the user is not authorised to see, as well as confirmation of the existence of otherwise invisible events.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132641 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132641</link>
-    <guid isPermaLink="false">2ef029805a22920fd0d7d03f2c07812a</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP's EventDelegationsController delegateEvent method accepted a user-supplied sharing_group_id parameter without verifying that the requesting user was a member of the referenced sharing group. When a delegation request was submitted with distribution set to 4 (sharing-group distribution), the raw sharing_group_id value was stored directly into the EventDelegation record. The delegation view subsequently rendered the stored sharing group's name back to the requester. Because no authorization check was performed, any authenticated user with delegation permission could enumerate sharing group identifiers (by guessing sequential IDs or other values) and read the names of sharing groups to which their organisation did not belong, including hidden or restricted groups. Hidden, missing, and malformed identifiers were not distinguished in the response, but the successful case still leaked the group name. The vulnerability required an authenticated session with the perm_delegate capability and knowledge of a valid event ID to delegate. The security impact is limited to disclosure of sharing group names (a low-impact confidentiality breach) and does not grant access to the group's contents or modify any data.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132642 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132642</link>
-    <guid isPermaLink="false">dd75651c3b2137caa971b9b310066e79</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP contains an access control flaw in its tag management endpoints: events/addTag (single and bulk), events/removeTag, and attributes/removeTag. These endpoints loaded their target event or attribute using an unscoped database query (recursive = -1) that did not apply the calling user's ACL visibility rules. As a result, two distinct security issues existed: (1) Information disclosure: the removeTag endpoint returned different responses depending on whether a given tag was present on a hidden event, allowing an authenticated user to enumerate which tags were applied to events they had no visibility into. (2) Unauthorized modification: users belonging to the host organisation, who are permitted to set local tags on records they can see, could add or remove local tags on events and attributes they could not see, because the canModifyTag ACL check operated on the unscoped object without first verifying the caller's visibility. The fix replaces the unscoped find() calls with ACL-aware fetch methods (fetchSimpleEvent and fetchAttributeSimple) that apply the user's visibility before the object is returned, and adds an explicit empty-object check in removeTag so that a hidden event responds identically to a non-existent one. Affected components include the EventsController (addTag, removeTag), the AttributesController (removeTag), and the ACLComponent (canModifyTag). The vulnerability requires an authenticated user with at least the tagger role (perm_tagger) or host-organisation membership.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132643 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132643</link>
-    <guid isPermaLink="false">5ed5ab3db1972157d1c572589453e5d4</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP contains an information disclosure vulnerability in the Sighting model when the Sightings_anonymise setting is enabled. The listSightings and sightings/restSearch endpoints accepted a caller-supplied org_id filter parameter and applied it directly to the SQL query without verifying whether the requesting user was authorized to filter by that organisation. Because the anonymization mechanism masks the reporter's organisation in the returned records, a non-site-admin user could bypass the anonymization by specifying another organisation's ID in the filter. The query would then return only that organisation's sightings, effectively naming the reporter and defeating the purpose of the anonymization feature. A negated filter (NOT IN) similarly revealed which sightings belonged to the target organisation by exclusion. The vulnerability requires an authenticated user with sighting read permissions (perm_sighting) who is not a site administrator, and the Sightings_anonymise plugin setting must be enabled. The security impact is the disclosure of which organisation reported a given sighting, undermining the privacy guarantees that the anonymization feature is designed to provide. This issue was reported by ENISA.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-55169 - NVD - CVSS Score v4.0: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55169</link>
-    <guid isPermaLink="false">920144330e0bf8ee0a58acf134e376ed</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.4 | Open OnDemand is an open-source high-performance computing portal. Prior to 4.1.6 and 4.2.3, the Open OnDemand dashboard includes noVNC passwords in query parameters generated by apps/dashboard/app/helpers/batch_connect/sessions_helper.rb and apps/dashboard/app/views/batch_connect/sessions/connections/_novnc.html.erb. The server records those query strings in per-user PUN access logs, and insufficiently protected log directories can allow another local user to recover and replay a launch URL. Replaying the credential grants access to the running remote desktop and can result in horizontal or vertical privilege escalation according to the privileges of the desktop owner. This issue is fixed in versions 4.1.6 and 4.2.3.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-55171 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55171</link>
-    <guid isPermaLink="false">f017fa426964080052dc167229b4a2ef</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.1 | Open OnDemand is an open-source high-performance computing portal. Prior to Open OnDemand 4.1.6 and 4.2.3, and prior to ood-ansible 4.2.1, the portal generator defaults OIDCCryptoPassphrase to SHA1(servername), and the templates/ood_portal.yml.j2 role checks a different variable from the documented passphrase setting. Administrators who set ood_oidc_crypto_passphrase can therefore believe a strong secret is configured while the deployment continues to use an attacker-derivable value. In OIDCSessionType client-cookie deployments, an unauthenticated remote attacker can derive the encryption key and forge a mod_auth_openidc_session cookie for another user, while server-cache deployments permit lower-impact tampering with protected OIDC state and nonce cookies. This issue is fixed in Open OnDemand versions 4.1.6 and 4.2.3 and ood-ansible version 4.2.1.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-55172 - NVD - CVSS Score v4.0: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55172</link>
-    <guid isPermaLink="false">9a039610222e32b80808287ca55583c9</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.4 | Open OnDemand is an open-source high-performance computing portal. Prior to 4.1.6 and 4.2.3, apps/dashboard/config/initializers/session_store.rb stores dashboard sessions by default in a predictable /var/tmp/&lt;username&gt; directory, or in another location configured by an administrator, but omits PUN user directory ownership and mode 0700 validation. A local attacker can pre-create another user's directory, read the victim's session identifier and CSRF token after login, or stage a predetermined session identifier. ActiveSupport file-store deserialization of attacker-controlled cache data may also occur in the victim's context, enabling file modification or code execution with the victim's privileges. This issue is fixed in versions 4.1.6 and 4.2.3.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-55505 - NVD - CVSS Score v3.1: 4.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55505</link>
-    <guid isPermaLink="false">a37331acf08dc82ea9ea2e7302635ecf</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 4.9 | Wavelog is web-based amateur radio logging software. Prior to 3.2.4, the application/controllers/Lotw.php import() workflow passes the lotw_download_url configuration value to curl without scheme validation, accepts file:// content, and writes the response to a predictable path under ./uploads/ that can be retrieved through an unauthenticated HTTP request. A standard user can trigger the LotW import, although changing lotw_download_url normally requires installer administrator access, and related vulnerabilities can remove that prerequisite. The same missing status-validation pattern affects the LotW lotw_users fetch helper and per-user download helper. This exposes files readable by the www-data user, including environment data, mounted secrets, and application configuration. This issue is fixed in version 3.2.4.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-55506 - NVD - CVSS Score v3.1: 9.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55506</link>
-    <guid isPermaLink="false">c35b0641eaeb0dab8d266c423c62f1fd</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 9.6 | Wavelog is web-based amateur radio logging software. Prior to 2.5, the filename parameter accepted by POST /qsl/addQsoToQsl in application/controllers/Qsl.php addQsoToQsl() is stored without rejecting directory separators or relative path components, and POST /qsl/delete reaches application/models/Qsl_model.php deleteQsl(), which passes the planted qsl_images filename to unlink(). A standard authenticated user can associate the malicious filename with the user's own QSO, satisfy the ownership check, escape the per-user QSL image directory, and delete files writable by the PHP worker. Deleting configuration or operational files can cause denial of service, while deleting installer gate files can reopen the unauthenticated installer and enable application identity takeover through attacker-controlled database configuration. This issue is fixed in version 2.5.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-55507 - NVD - CVSS Score v3.1: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55507</link>
-    <guid isPermaLink="false">73445caf2973e7de9b23446a830e0585</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.0 | Wavelog is web-based amateur radio logging software. In 3.2.5 and earlier, the Hams of Note feature stores the administrator-supplied hon_url configuration value through application/controllers/Options.php hon_save() and application/models/Update_model.php update_hams_of_note() fetches that URL without restricting the scheme, host, loopback, link-local, or private network destinations. An administrator can cause the Wavelog server to request arbitrary HTTP or HTTPS destinations from its network position and have parsed response content rendered in the administrator interface, providing a read primitive against otherwise unreachable internal HTTP services. The HTTP status requirement prevents file scheme responses from succeeding, so this issue does not provide local file disclosure. No fixed version is available as of this review.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-55508 - NVD - CVSS Score v3.1: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55508</link>
-    <guid isPermaLink="false">5e13d1d46817c91fed95fbb063ce34b8</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 9.4 | Wavelog is web-based amateur radio logging software. Prior to 2.5, the callsign parameter accepted by POST /oqrs/search_log in application/controllers/Oqrs.php search_log() reaches application/models/Oqrs_model.php search_log(), where it is concatenated directly into a raw SQL WHERE clause without parameter binding. An unauthenticated remote attacker can use UNION-based SQL injection to read arbitrary application database records, including account data, password hashes, API keys, station credentials, reset tokens, QSO data, and station metadata. Disclosure of password reset tokens can be combined with the forgot_password workflow to take over accounts, including administrator accounts. This issue is fixed in version 2.5.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 18 Nov 2026 23:02:49 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-59964 - NVD - CVSS Score v3.1: 5.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59964</link>
@@ -329,6 +139,196 @@ The issue was reported by ENISA.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77297</link>
     <guid isPermaLink="false">2f43aaccdd688dce135f8a5b20272897</guid>
     <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.3 | MyMangaDB is a self-hosted manga collection manager with automatic metadata, MyAnimeList import, Docker support, and collection statistics. Prior to 2.7.2, the unauthenticated /api/v1/database/import handler in backend/app/api/v1/endpoints/database.py accepts a ZIP archive and moves an included database file to DATABASE_PATH while also replacing IMAGE_PATH content. An attacker can supply a database containing an attacker-controlled users table and administrative account, then authenticate as that account; invalid replacement data can also destroy application data or availability. This issue is fixed in version 2.7.2.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-106094 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106094</link>
+    <guid isPermaLink="false">f9b7ab3702a9eba0a5bc32af662b122e</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.4 | Improper neutralization of special elements used in an OS command ('OS command injection') vulnerability in Westell Technologies, Inc Remote series products on Linux allows OS Command Injection.
+
+This issue affects several generations of Westell Remotes: through firmware version 9.14.  It has been reproduced across multiple devices. However, it is confirmed to affect only devices configured for RAS (Remote Access Server - e.g., RADIUS, TACACS).</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121720 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121720</link>
+    <guid isPermaLink="false">fda9519cfab9a08e35b228df699f2da6</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.5 | OpenVPN 2.4.0 through 2.6.23 and 2.7_alpha1 through 2.7.8 on Windows allows local authenticated users to execute arbitrary code via a privileged service using user-controlled environment variables.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129987 - NVD - CVSS Score v3.1: 9.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129987</link>
+    <guid isPermaLink="false">63cba1769277286403268d55fada1a6f</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 9.9 | Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, the database password validation used by the MySQL, PostgreSQL, MariaDB, MongoDB, and Redis change-password procedures permits backticks, and the procedures interpolate attacker-controlled passwords into Bash command strings. An authenticated user who can update a database password can trigger command substitution before the database command runs, resulting in arbitrary operating-system command execution with the Dokploy process privileges, which are typically root. This issue is fixed in version 0.31.1.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129993 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129993</link>
+    <guid isPermaLink="false">69ab60672b7d80705edf812299261ddf</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.5 | Dokploy is a free, self-hostable Platform as a Service (PaaS). Prior to 0.31.1, the settings.getWebServerSettings protected procedure returns the complete global web-server settings object to any authenticated member, including the stored sshPrivateKey, even though settings.saveSSHPrivateKey requires an administrator. A default member can therefore retrieve infrastructure, deployment, or server-management credentials that only an administrator can configure. This issue is fixed in version 0.31.1.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132141 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132141</link>
+    <guid isPermaLink="false">598c3083a30741123d0f3a3ae43b9fc3</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | A vulnerability was detected in DrayTek Vigor2960 up to 1.5.1.6. Affected by this issue is the function json_load_lock of the file /cgi-bin/mainfunction.cgi of the component Jsonstatus. The manipulation of the argument usefile results in stack-based buffer overflow. It is possible to launch the attack remotely. The exploit is now public and may be used. Upgrading to version 1.5.1.7 can resolve this issue. It is advisable to upgrade the affected component. The vendor recommends: &quot;1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.&quot;</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132142 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132142</link>
+    <guid isPermaLink="false">19601ab9c90ebff2419e003a784a42a1</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.5 | A flaw has been found in DrayTek Vigor2960 up to 1.5.1.6. This affects the function dataflowstatus of the file /cgi-bin/mainfunction.cgi of the component CGI Process. This manipulation of the argument option causes stack-based buffer overflow. The attack can be initiated remotely. The exploit has been published and may be used. Upgrading to version 1.5.1.7 is able to mitigate this issue. You should upgrade the affected component. The vendor recommends: &quot;1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.&quot;</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132143 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132143</link>
+    <guid isPermaLink="false">3eeb93612a620ef557c8a5cefad14b42</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | A vulnerability has been found in DrayTek Vigor2960 up to 1.5.1.6. This vulnerability affects the function doWebBackup of the file /cgi-bin/mainfunction.cgi of the component Backup Handler. Such manipulation of the argument path/value leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. Upgrading to version 1.5.1.7 is able to resolve this issue. The affected component should be upgraded. The vendor recommends: &quot;1.5.1.6 isn't the latest version of 2960, the latest version fixes many security issues. And we have another one in our release plan which should solve the issues reported.&quot;</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132252 - NVD - CVSS Score v4.0: 1.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132252</link>
+    <guid isPermaLink="false">8c0ae96250853a058f21ae7bf6ef8e47</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 1.2 | A vulnerability was found in October CMS up to 4.4.6. This affects the function validateExternalImageHost of the file modules/system/classes/resizeimages/ValidatesExternalImages.php of the component Image Resizer. Performing a manipulation of the argument url results in server-side request forgery. The attack may be initiated remotely. The complexity of an attack is rather high. The exploitability is reported as difficult. The exploit has been made public and could be used. Upgrading to version 4.4.7 mitigates this issue. The patch is named f6372867006c03141944e7b57396a726eb02acf0. You should upgrade the affected component.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132644 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132644</link>
+    <guid isPermaLink="false">811ff6200548780946b1ae20fec02c8d</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.3 | MISP contains an authorization flaw in the GalaxyCluster model's captureCluster() function, which handles the import and synchronization of Galaxy Clusters. Prior to the fix, any authenticated user holding the galaxy editor role could replace an existing locked Galaxy Cluster by supplying its UUID in an import request, regardless of which organization owned the cluster. The function unconditionally called captureOrganisationAndSG() before the save operation, overwriting the cluster's org_id and orgc_id fields with the importing user's organization, effectively transferring ownership of the cluster to the attacker's organization. Additionally, the save operation was not restricted to a specific set of fields, allowing arbitrary field modification.
+
+The vulnerable behavior required the attacker to possess a valid MISP account with the perm_galaxy_editor role and to know or discover the UUID of a target cluster belonging to another organization. No site-admin or owner-organization privilege was enforced for the update path. The result was that a low-privilege galaxy editor in one organization could modify the content (value, description, distribution, etc.) of clusters owned by other organizations and seize ownership, corrupting the integrity of shared threat-intelligence data across the MISP instance.
+
+The vulnerability was reported by ENISA and CERT.pl. The fix introduces an explicit authorization gate that restricts cluster updates to the owner organization, a sync user who can see the cluster via sharing-group rules, or a site administrator, and enforces a field allow-list that excludes org_id and orgc_id from update writes, preserving original ownership.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132645 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132645</link>
+    <guid isPermaLink="false">2080890901bb5db59039b73724e6ccd7</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.3 | MISP contains an authorization bypass vulnerability in the Galaxy import/sync functionality (captureGalaxy in app/Model/Galaxy.php). The captureGalaxy() method matched an incoming galaxy payload to an existing galaxy by UUID and unconditionally overwrote the matched record, regardless of whether the importing user belonged to the owning organization or whether the galaxy was a system-provided default galaxy. Any authenticated user holding the perm_galaxy_editor role could therefore: (1) demote a default galaxy by setting its default flag to false, (2) reassign the galaxy's org_id and orgc_id to the attacker's organization, effectively taking ownership, and (3) modify other galaxy fields (name, description, distribution, version). Additionally, the role-level permission check (perm_site_admin or perm_galaxy_editor) was executed after the captureOrganisationAndSG() call, meaning organization and sharing-group data was already captured before the authorization decision was made. The vulnerability requires an authenticated user with the perm_galaxy_editor role and the ability to submit a galaxy import payload containing a UUID that matches an existing galaxy. The security impact is loss of data integrity across the MISP instance: default galaxy definitions are corrupted, cross-organization ownership is silently transferred, and the integrity of shared threat-intelligence galaxy metadata is compromised for all users of the instance.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-59961 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59961</link>
+    <guid isPermaLink="false">34ba5d4f0ff300b0d944a86ad0919244</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.2 | mini-snmpd is a minimal SNMP agent implementation. Prior to 1.7, the ASN.1 BER parser in protocol.c does not verify that an attacker-controlled field length is no greater than the remaining packet size before decode_str(), decode_oid(), and decode_ptr() evaluate size - len + 1. When len exceeds size, unsigned size_t arithmetic wraps and bypasses the bounds check, allowing the decoder to read beyond the 2048-byte packet buffer. Parsing occurs before the SNMP community string is checked, so a remote unauthenticated attacker can send one crafted request to UDP port 161 to crash the process and potentially disclose adjacent heap memory. This issue is fixed in version 1.7.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-62964 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62964</link>
+    <guid isPermaLink="false">bffa82ae8c46a939d6848c52a9b659ed</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.8 | Gortex is a high-performance code-intelligence engine for AI agents and integrated development environments. Prior to 0.55.0, resolveFilePath in internal/mcp/tools_fileops.go accepts absolute paths without checking indexed repository roots, while write_file, edit_file, and move_inline in internal/mcp/tools_move_inline.go omit guardSymlinkWithinRepo before reaching AtomicWriteFile and related write sinks. A caller that can influence MCP tool arguments can therefore create or overwrite files anywhere the daemon user can access, including startup or hook files that execute code on a later trigger. The flaw violates Gortex's repository-confinement invariant and can lead to arbitrary host code execution. This issue is fixed in version 0.55.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63411 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63411</link>
+    <guid isPermaLink="false">e2b52cfa20830c52de70ffaa3fb1e453</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.3 | Jane is a set of PHP libraries that generates models and API clients from JSON Schema and OpenAPI specifications. Prior to 7.12.0, the Jane open-api-3 generator emits an OpenAPI parameter description verbatim in generated Client/Endpoint method docblocks. A parameter description containing a PHPDoc closing delimiter can terminate the comment early and place attacker-controlled PHP in class-body position, including an __construct method that runs when the generated Client is instantiated. Exploitation requires generating a client from an attacker-influenced OpenAPI document and then using the generated SDK, and can execute arbitrary PHP with the consuming application's privileges. This issue is fixed in version 7.12.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63412 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63412</link>
+    <guid isPermaLink="false">33a088add4592f02d0b435275501fe34</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.3 | Jane is a set of PHP libraries that generates models and API clients from JSON Schema and OpenAPI specifications. Prior to 7.12.0, the Jane open-api-3 generator emits an OpenAPI query parameter name verbatim as an array key in generated Client/Endpoint method docblocks. A query parameter name containing a PHPDoc closing delimiter can terminate the comment early and place attacker-controlled PHP in class-body position, including an __construct method that runs when the generated Client is instantiated. Exploitation requires generating a client from an attacker-influenced OpenAPI document and then using the generated SDK, and can execute arbitrary PHP with the consuming application's privileges. This issue is fixed in version 7.12.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63413 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63413</link>
+    <guid isPermaLink="false">ca92a31c70b77fc1052d8647c1a3d7fd</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.3 | Jane is a set of PHP libraries that generates models and API clients from JSON Schema and OpenAPI specifications. Prior to 7.12.0, the Jane open-api-3 generator emits an OpenAPI header parameter name verbatim as an array key in generated Client/Endpoint method docblocks. A header parameter name containing a PHPDoc closing delimiter can terminate the comment early and place attacker-controlled PHP in class-body position, including an __construct method that runs when the generated Client is instantiated. Exploitation requires generating a client from an attacker-influenced OpenAPI document and then using the generated SDK, and can execute arbitrary PHP with the consuming application's privileges. This issue is fixed in version 7.12.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63415 - NVD - CVSS Score v4.0: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63415</link>
+    <guid isPermaLink="false">6623981d2c64943b3eadb99e996263cb</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.0 | Jane is a set of PHP libraries that generates models and API clients from JSON Schema and OpenAPI specifications. Prior to 7.12.0, Jane's Reference.php::doResolve passes an attacker-controlled OpenAPI $ref target to file_get_contents without restricting its scheme or resolved local path. When a victim generates code from an attacker-influenced document, an HTTP or HTTPS reference can cause requests to attacker-chosen or internal services, while an absolute or parent-relative path can read local JSON or YAML files and inline the retrieved content into generated output. Exploitation occurs during generation or CI processing and can disclose local files and internal-service responses. This issue is fixed in version 7.12.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-68522 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68522</link>
+    <guid isPermaLink="false">6650ff1156ae11e38c4d47e63966f72a</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.9 | QPixel is a Q&amp;A-based community knowledge-sharing software. Prior to 0.13.0, the unauthenticated comments#show action in app/controllers/comments_controller.rb resolves user-controlled comment IDs with Comment.unscoped, bypassing the Comment community default scope, and performs no deletion or post-visibility authorization check. A remote unauthenticated attacker can enumerate sequential IDs and read the full content of comments belonging to other communities, soft-deleted comments, and comments under access-restricted categories. The JSON response exposes the stored comment columns because the model has no limiting as_json override. This issue is fixed in version 0.13.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-69139 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69139</link>
+    <guid isPermaLink="false">fae9f5bcff3cb0c7b05954df7c9424b4</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 4.3 | djangocms-moderation provides an approval workflow mechanism for organizations that require content approval before publication. Prior to 2.4.0, CollectionCommentAdmin and RequestCommentAdmin in the Django admin use changelist_view and changeform_view to scope comment access through caller-controlled object identifiers and model-level view_collectioncomment or view_requestcomment permissions without invoking ModerationRequest.user_can_view_comments() or an equivalent collection participant check. An authenticated staff user with either view permission can enumerate collection or moderation-request identifiers and read full comment messages for workflows they do not participate in. The exposure affects confidentiality of internal editorial discussions; comment creation, modification, and deletion remain protected, and integrity and availability are unaffected. This issue is fixed in version 2.4.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73971 - NVD - CVSS Score v3.1: 8.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73971</link>
+    <guid isPermaLink="false">1c0d292941f08ae4553357e82a33ed5b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.0 | Music Assistant is an open-source media library manager that integrates streaming services with connected speakers. Prior to 2.8.0, parse_arguments() passes the caller-controlled return_type parameter for config/core/get_value, config/providers/get_value, and config/players/get_value to parse_value() and Python eval() when resolving type parameters in music_assistant/helpers/api.py. Any authenticated user, regardless of role, can reach these commands through the WebSocket /ws endpoint or the REST JSON-RPC /api endpoint, causing arbitrary Python code to run with the Music Assistant server process privileges before command-handler validation, even if the request later fails. A default installation requires no special configuration, and compromise can expose secrets and configuration, alter library data, and control the application container. This issue is fixed in version 2.8.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-75518 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75518</link>
+    <guid isPermaLink="false">98d2d868e73a748f1876bd386b50e73d</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 4.8 | DOMShell is a Chrome automation project whose MCP server exposes Unix-style tools for AI agents. Prior to 2.0.8, the DOMShell MCP server classifies the domshell_eval tool and eval command as read-tier operations that can run without --allow-write, even though eval shares the Runtime.evaluate dispatch path with the write-tier js command and has no side-effect gate. An MCP caller with tool-session access can therefore use domshell_eval to mutate DOM, window, or global state while the host approval interface, server authorization flags, denial messages, and audit records represent the operation as read-only. The bypass does not expose a capability beyond domshell_js for callers already authorized to write, but it violates the configured permission boundary for callers lacking that authorization. This issue is fixed in version 2.0.8.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-75612 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75612</link>
+    <guid isPermaLink="false">e7b511a49489aed923866f57e2922aef</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.5 | yt-mcp is a YouTrack MCP server for Claude Code. Prior to 1.18.1, add_attachment in src/yt_mcp/tools/attachments.py accepts a caller-controlled file_path, checks only that the file exists, reads it without directory confinement, and uploads the bytes to a YouTrack issue. A compromised MCP client or an LLM steered by indirect prompt injection can read any file accessible to the server process and exfiltrate secrets through an issue the caller can access. The same release also permits get_project_health to interpolate a caller-controlled project value into snapshot filenames, allowing parent-directory traversal to write JSON files outside the snapshots directory. This issue is fixed in version 1.18.1.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-76101 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76101</link>
+    <guid isPermaLink="false">0688d2791804fe3f773be211e29131a8</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.1 | keystore-go is a Go implementation of the Java KeyStore encoder and decoder. In 2.1.0 and earlier, keystore.Decode in decoder.go does not check the error returned when reading the trailing SHA-1 integrity digest and bounds its comparison by the length of the digest actually read. If an attacker with write access removes the final 20-byte digest from a modified JKS file, the empty actual digest causes the comparison loop to execute zero times and Decode returns the parsed keystore without an error. For certificate-only stores using TrustedCertificateEntry values, this bypasses both tamper detection and password verification, allowing trusted CA certificates to be added or replaced without knowing the keystore password and potentially enabling interception or modification of TLS connections that trust the forged CA. This issue is fixed in version 3.0.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-76818 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76818</link>
+    <guid isPermaLink="false">486b76d0da7b3ca9ca6bbd28cf1430bd</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.5 | Axon is an agent-agnostic context engine that gives AI coding agents continuous memory across sessions, tools, and machines. Prior to 0.1.1, rtk-install in src/axon/context/rtk_bootstrap.py uses _http_download() to fetch a prebuilt rtkx release archive and _extract_binary() to mark it executable, after which compress_text_with_rtk() invokes it without verifying a checksum, signature, or build attestation. If the sammyjdev/rtkx release pipeline or maintainer release credentials are compromised, an attacker can supply a modified binary that executes with the Axon process privileges when a user installs or automatically bootstraps rtkx. This issue is fixed in version 0.1.1.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
