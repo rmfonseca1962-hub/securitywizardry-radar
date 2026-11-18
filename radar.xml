@@ -5,103 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 09:00:50 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-131876 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131876</link>
-    <guid isPermaLink="false">1e03470a4a4cd2a3882d6cb41b2d9269</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | fqterm 0.9.9 before 0.9.11 contains an out-of-bounds memory access vulnerability in its SSH client that trusts unchecked server-supplied length fields for allocations, copies and read positions. Malicious servers or man-in-the-middle attackers can send crafted lengths in getString(), KEXINIT name-lists, key parsing or packet framing before host key verification to crash the client.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-101113 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101113</link>
-    <guid isPermaLink="false">60803758459ad12e373a6f95d463d95d</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | Multiple ELECOM wireless LAN routers contain an OS command injection vulnerability that may cause an arbitrary OS command to be executed by an attacker who can access the administrative interface of the affected product.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130121 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130121</link>
-    <guid isPermaLink="false">0ce7af6167b043d53de01e69c4a19e6b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The AI Puffer - MCP Server for Claude &amp; ChatGPT, with AI Chatbot plugin for WordPress is vulnerable to Stored Cross-Site Scripting via AI-generated comment replies in all versions up to, and including, 2.5.28 due to insufficient sanitization of the AI model's output in the insert_comment_reply_logic() function, which saves replies with wp_insert_comment() and bypasses the kses filtering WordPress normally applies to comment content. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page, by submitting a comment that leads the AI model to reproduce an HTML payload in its automated reply. This is only exploitable when an administrator has configured a Comment Auto-Reply automation task with 'Action on reply' set to 'Approve' (the default is 'Hold for moderation'), and the attacker's comment has been approved.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130644 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130644</link>
-    <guid isPermaLink="false">1b1036c7f41813bd0642478d0eb94aef</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.1 | A path traversal flaw was found in ansible-core. When installing a collection with ansible-galaxy collection install, the install destination directory is derived from the namespace and name fields declared inside the collection artifact's own metadata, which are not validated as well-formed collection identifiers or checked for path containment. A malicious collection artifact -- delivered as a local file, a remote URL, a source directory, a git repository, or as a dependency -- can use a crafted name value to redirect the install destination outside the configured collections path, causing ansible-galaxy to delete an existing directory writable by the invoking user and then write attacker-controlled files to that location.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-117657 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117657</link>
-    <guid isPermaLink="false">75936e825cc8b0151e5943a978c45fae</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 2.3 | A Cleartext Transmission of Sensitive Information (CWE-319) vulnerability exists in the Android application &quot;Imperial Palaces Guide&quot; provided by The Imperial Household Agency. A man-in-the-middle attacker may be able to tamper with data transmitted between the application and the server, resulting in the display of modified content to users.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118900 - NVD - CVSS Score v4.0: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118900</link>
-    <guid isPermaLink="false">62fe7912eb10f9046504392706077591</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.4 | An OS command injection vulnerability exists in the Android application &quot;Imperial Palaces Guide&quot; provided by The Imperial Household Agency. An attacker may be able to execute arbitrary OS commands with the privileges of the application.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104683 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104683</link>
-    <guid isPermaLink="false">e7ce9ee6fc9294e6304b83c963f6da22</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Envira Gallery  WordPress plugin before 1.16.4 does not apply its own gallery-permission policy until an administrator first opens its permissions screen, instead copying gallery-management capabilities onto each role from that role's core post capabilities after activation, which lets Contributor accounts create, edit and delete galleries that the policy is meant to restrict to higher roles.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107099 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107099</link>
-    <guid isPermaLink="false">80be81a60e6afa6e23504300f5045b5c</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Royal Addons for Elementor  WordPress plugin before 1.7.1071 does not restrict or validate the post meta keys used when counting or rendering a filtered grid, and does not reject private (hidden) meta keys, allowing unauthenticated users to disclose the value of arbitrary private post meta one value at a time from the filtered result count. This is an incomplete fix of CVE-2026-17585, whose 1.7.1067 patch covered only a separate search-based path and left the grid filtering path affected.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107739 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107739</link>
-    <guid isPermaLink="false">9981fb6fa7a5240a91cc88e7b0a4ebfc</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Search &amp; Replace WordPress plugin before 3.2.4 does not correctly restrict which database tables an administrator of a single site may operate on in a multisite network, allowing subsite administrators to read and modify the tables of other sites and of the network, and to make themselves Super Admin.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107740 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107740</link>
-    <guid isPermaLink="false">385a521cf86b6de1f83f2f560a58d09b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Search &amp; Replace WordPress plugin before 3.2.4 does not restrict one of its database tools to network administrators on multisite installations, allowing administrators of a single subsite to run arbitrary SQL against the whole network's database and make themselves Super Admin.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-111825 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-111825</link>
-    <guid isPermaLink="false">6174747590ccd9f4892e90122587630f</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Event Tickets with Ticket Scanner plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'code' parameter in all versions up to, and including, 3.3.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The payload persists through WooCommerce session data into order-item metadata and executes when rendered in the ticket scanner interface.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-117489 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117489</link>
-    <guid isPermaLink="false">245df149dcd82602021a1618f770b668</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | The Flatsome WordPress theme before 3.20.13 does not perform a capability or nonce check on an AJAX action available to authenticated users, allowing users with a role as low as Subscriber to disclose the name and content of non-public templates stored on the site.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 18 Nov 2026 10:01:43 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-117491 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117491</link>
@@ -323,6 +227,306 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-1212</link>
     <guid isPermaLink="false">667bb38ea4debb39957c7dcb639444e9</guid>
     <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 5.4 | The BuddyPress plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 14.4.0. This is due to the `get_item_permissions_check` function in the Messages REST API endpoint trusting a client-supplied `user_id` parameter instead of using the authenticated user's ID. This makes it possible for authenticated attackers with Subscriber-level access and above to read, update, or delete other users' private message threads by specifying the victim's user ID in the request.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-113497 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113497</link>
+    <guid isPermaLink="false">560e5c80bcf74453d58ce0c5e3f163ec</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | A low-privileged remote attacker can change the password of arbitrary users using the REST API, including administrative accounts. By changing the administrator password, an attacker can obtain full administrative access to the device and modify all configuration settings.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128981 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128981</link>
+    <guid isPermaLink="false">a68816a9afd8fb3fb73bdeef531a03ae</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | ** UNSUPPORTED WHEN ASSIGNED ** 
+
+
+
+Improper Authentication in Apache SeaTunnel Web 1.0.2 allows a user whose account has been disabled to authenticate with valid credentials and obtain a new login token. The login query does not check the account status, so disabling an account does not prevent new logins or access to protected APIs using the newly issued token. This issue requires valid credentials for the disabled account; it is not a credential-free authentication bypass.
+
+
+
+Apache SeaTunnel Web is no longer maintained. The affected 1.0.2 release does not contain the account-status check added to the main branch in pull request #264. There is no maintained fixed release. Users should discontinue use of this unsupported component.
+
+
+
+NOTE: This vulnerability only affects products that are no longer supported by the maintainer.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-95643 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95643</link>
+    <guid isPermaLink="false">71716c8b3f0e8f8ff0ff6d050c5bf461</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 9.1 | Zohocorp Manageengine DDI Central build below 6500 are affected by a authenticated PowerShell command injection vulnerability in the Telnet connectivity feature, allowing specially crafted IPv6 scope identifiers to execute arbitrary commands on managed Windows nodes.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-95645 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95645</link>
+    <guid isPermaLink="false">3bd3b4631b1522625b45a681d4ac0e30</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 9.1 | Zohocorp Manageengine DDI Central build below 6500 are affected by a authenticated command injection vulnerability in the Windows DDI Agent's clear_blocked_domains functionality, allowing specially crafted blocked-domain values to trigger arbitrary command execution on Windows systems.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99312 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99312</link>
+    <guid isPermaLink="false">1d6174768fbf899d50d32bfaefaed862</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+KVM: x86: Unconditionally reset MMU context when emulating INIT
+
+Force an MMU reset when emulating an INIT even if paging was already
+disabled, as the MMU page role includes guest_mode (L2), i.e. an INIT while
+L2 is running with CR0.PG=0 will result in KVM running L1 with a stale MMU
+context.
+
+Alternatively, the reset could be scoped strictly to paging being enabled
+or L2 being active, but SMM is also encoded in the page role.  Even though
+it _should_ be impossible for the vCPU to be INIT'd while SMM is active,
+there's zero value in not handling SMM.  At that point, the only scenario
+where KVM _doesn't_ need to reset the MMU context is on an INIT with the
+vCPU running in Real Mode or Unpaged Protect Mode, and while INIT in those
+modes is somewhat common, it's far from a hot path and re-initializing the
+MMU is not expensive, especially when the role isn't changing (KVM elides
+most of the re-configuration in that case).
+
+Note, like the Fixes commit, this bug only affects nested SVM as INIT is an
+unconditional intercept on VMX, i.e. it's impossible to emulate INIT while
+L2 is active.
+
+Temporarily keep the guest TLB flush when CR0.PG is being cleared even
+though it is fully redundant with the flush that is emitted on all INIT
+events (KVM itself only does RESET when a vCPU is being created, i.e. when
+CR0.PG must be '0').</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99313 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99313</link>
+    <guid isPermaLink="false">42a7fbc37d79d4ca23ce563ba156bc06</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+HID: logitech-hidpp: fix race condition when accessing stale stack pointer
+
+The driver uses hidpp-&gt;send_receive_buf to point to a stack-allocated
+buffer in the synchronous command path (__do_hidpp_send_message_sync).
+However, this pointer is not cleared when the function returns.
+
+If an event is processed (e.g. by a different thread) while the
+send_mutex is held by a new command, but before that command has
+updated send_receive_buf, the handler (hidpp_raw_hidpp_event) will
+observe that the mutex is locked and dereference the stale pointer.
+
+This results in an out-of-bounds access on a different thread's kernel
+stack (or a NULL pointer dereference on the very first command).
+
+Fix this by:
+1. Clearing hidpp-&gt;send_receive_buf to NULL before releasing the mutex
+   in the synchronous command path.
+2. Moving the assignment of the local 'question' and 'answer' pointers
+   inside the mutex_is_locked() block in the handler, and adding
+   a NULL check before dereferencing.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99314 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99314</link>
+    <guid isPermaLink="false">8e48d62d5bf9ead6ab3313d2c066f448</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ALSA: us122l: Add missing NULL check in usb_stream_hwdep_mmap()
+
+usb_stream_hwdep_mmap() reads us122l-&gt;sk.s and dereferences it without
+checking for NULL.  The stream object is released by usb_stream_free(),
+which is reached through us122l_stop() both when the device is
+disconnected and when us122l_start() fails, and it leaves us122l-&gt;sk.s
+set to NULL.  The hwdep file stays usable after that, so a later mmap()
+
+	KASAN: null-ptr-deref in range [0x0000000000000010-0x0000000000000017]
+	RIP: 0010:usb_stream_hwdep_mmap+0x107/0x890 sound/usb/usx2y/us122l.c:182
+
+crashes while reading s-&gt;read_size, which sits at offset 0x10.
+
+That NULL is an expected state for this field: usb_stream_hwdep_vm_fault(),
+usb_stream_hwdep_poll(), usb_stream_hwdep_ioctl(), usb_stream_stop() and
+usb_stream_free() all test it before use.  Only the mmap callback misses
+the check, so let it return -ENODEV, matching what the other hwdep mapping
+in usx2yhwdeppcm.c does when its shared buffer has not been allocated.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99315 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99315</link>
+    <guid isPermaLink="false">b3493896f742696e4336677cb9a6b1f8</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ALSA: us122l: Fix NULL dereference at hwdep open and release
+
+usb_stream_hwdep_open() and usb_stream_hwdep_release() pass the result of
+usb_ifnum_to_if() straight to usb_autopm_get_interface() and
+usb_autopm_put_interface(), without checking it for NULL.
+
+usb_ifnum_to_if() returns NULL once the device is gone, since
+usb_disable_device() clears udev-&gt;actconfig on disconnect.  The hwdep file
+can outlive the disconnect: the card is released with
+snd_card_free_when_closed(), so a process that keeps the character device
+open reaches the driver's release callback after the USB configuration has
+been dropped, and interface_to_usbdev() then dereferences the NULL
+interface at offsetof(struct device, parent).  The open callback has the
+same problem when it races with the disconnect.
+
+Check both lookups and fail the open with -ENODEV; in release, skip the
+runtime PM put when the interface is already gone and still run the rest
+of the per-file cleanup.  Move the us122l-&gt;first bookkeeping after the
+checks so that a failed open no longer leaves a stale file pointer behind.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99316 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99316</link>
+    <guid isPermaLink="false">523368b65f58aa1a55dd9c241f673c51</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ALSA: usx2y: Initialize idle URBs before submitting streams
+
+usb_stream_start() submits the first two capture and playback URBs and
+only afterwards assigns sk-&gt;idle_inurb, sk-&gt;idle_outurb,
+sk-&gt;completed_inurb and sk-&gt;completed_outurb to the remaining two URBs
+of each direction.
+
+A transfer can complete as soon as usb_submit_urb() has been called, so
+the completion handler i_capture_start() or i_playback_start() may run
+before those pointers are set.  While the stream is still being
+synchronized (state below usb_stream_sync1), stream_start() then calls
+playback_prep_freqn(sk, sk-&gt;idle_outurb) with sk-&gt;idle_outurb still
+NULL, and the packet descriptors are written through that NULL pointer:
+
+  Oops: general protection fault, probably for non-canonical address
+  0xdffffc0000000018: 0000 [#1] SMP KASAN
+  KASAN: null-ptr-deref in range [0x00000000000000c0-0x00000000000000c7]
+  RIP: 0010:playback_prep_freqn+0x11c/0x4a0 sound/usb/usx2y/usb_stream.c:33
+  Call Trace:
+   &lt;IRQ&gt;
+   stream_start+0x5dc/0x8d0 sound/usb/usx2y/usb_stream.c:596
+   i_capture_start+0x3da/0x710 sound/usb/usx2y/usb_stream.c:654
+   __usb_hcd_giveback_urb+0x238/0x550 drivers/usb/core/hcd.c:1657
+   usb_giveback_urb_bh+0x20b/0x530 drivers/usb/core/hcd.c:1691
+   tasklet_hi_action+0xa/0x20 kernel/softirq.c:994
+   handle_softirqs+0x16f/0x440 kernel/softirq.c:645
+   &lt;/IRQ&gt;
+
+The four URBs referenced by these pointers are allocated long before and
+do not depend on any transfer state, so assign them before the submit
+loop.  Keeping the assignment inside the retry path also restores a
+well-defined URB rotation when the start frame mismatch handling kills
+and resubmits the streams.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99317 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99317</link>
+    <guid isPermaLink="false">e3759e35b1c40d74f8161d2c956afc48</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ALSA: hwdep: Serialize DSP load requests
+
+The check of the loaded DSP indices and the call of the driver's
+dsp_load callback in snd_hwdep_dsp_load() are not serialized.  A hwdep
+file descriptor can be shared among threads, or inherited across fork,
+so two SNDRV_HWDEP_IOCTL_DSP_LOAD requests for the same index can both
+observe the index as unloaded and enter the driver's callback
+concurrently, even though the device itself is opened exclusively.
+
+This breaks the assumption behind hw-&gt;dsp_loaded that a firmware index
+is loaded only once.  For example, snd-usb-usx2y hits
+WARN_ON(usx2y-&gt;as04.buffer) in usx2y_async_seq04_init() and may
+allocate the US-428 sequence URBs twice.
+
+Serialize the check, the callback invocation and the bookkeeping with a
+per-hwdep mutex, so that the second request returns -EBUSY.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99318 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99318</link>
+    <guid isPermaLink="false">5ed4ea2d65f729d71134e699487f5416</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ALSA: bcd2000: Fix use-after-free of MIDI URBs on file close
+
+bcd2000_disconnect() calls snd_card_disconnect(), which only prevents
+new opens, and then frees the MIDI URBs.  A rawmidi file that was
+already open can still be closed afterwards, and its close callback,
+bcd2000_midi_output_close(), calls usb_kill_urb() on midi_out_urb.
+
+The URB pointers are cleared on disconnect and their accesses are
+serialized with midi_lock, but bcd2000_midi_output_close() reads
+midi_out_urb without that lock.  The check can therefore pass just
+before the pointer is cleared, and usb_kill_urb() then runs on the URB
+that has already been freed:
+
+  BUG: KASAN: slab-use-after-free in usb_kill_urb+0x74/0x80
+  Read of size 8 at addr ffff8880078e7d40
+   usb_kill_urb
+   bcd2000_midi_output_close
+   close_substream
+   rawmidi_release_priv
+   snd_rawmidi_release
+
+  Allocated by: usb_alloc_urb &lt;- bcd2000_init_midi &lt;- bcd2000_probe
+  Freed by:     usb_free_urb &lt;- bcd2000_midi_free
+                &lt;- bcd2000_disconnect
+
+Take the lock in bcd2000_midi_output_close() and reference the URB with
+usb_get_urb() before releasing it.  The URB then stays valid until
+usb_put_urb() after usb_kill_urb() has returned, even if a disconnect
+frees it in the meantime.  usb_kill_urb() itself cannot run under
+midi_lock, as the completion handler takes the same lock.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-99319 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99319</link>
+    <guid isPermaLink="false">8d949374e369a409d8ad0b316e3b60ce</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+
+ALSA: usx2y: Refuse a retried DSP load after a failure
+
+snd_usx2y_hwdep_dsp_load() sets up the asynchronous sequence URBs and
+the interrupt URB when the FPGA firmware image with index 1 is loaded,
+and then creates the ALSA devices.  If usx2y_in04_init() or
+usx2y_create_alsa_devices() fails, the URBs that were already set up
+are left in place.
+
+The core keeps the index unloaded when the callback fails, so user
+space may issue the same request again.  The second attempt then enters
+usx2y_async_seq04_init() or usx2y_in04_init() with the URBs still
+allocated and trips WARN_ON(usx2y-&gt;as04.buffer) or
+WARN_ON(usx2y-&gt;in04_urb).
+
+The URBs cannot be released at this point: the card may already have
+registered PCM devices that user space can still open, and the
+disconnect handler accesses the URBs without holding the DSP lock.
+Mark the chip as hung instead, so that a retried request is refused
+with -ENODEV and the assertions keep their meaning.  The URBs are
+released by snd_usx2y_card_private_free() when the card is freed.
+
+A failing usx2y_async_seq04_init() still releases its own URBs, so that
+path remains retryable.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
