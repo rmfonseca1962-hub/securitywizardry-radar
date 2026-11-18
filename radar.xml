@@ -5,191 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 13:00:24 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-130719 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130719</link>
-    <guid isPermaLink="false">fd337f05197d2efc83cf665913b62b6e</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.9 | NocoDB before 2026.08.0 contains an information disclosure vulnerability that allows unauthenticated shared-base link holders to read the base's stored plaintext password through the general base metadata endpoint. Attackers with a share link can query the base read or list responses in bases.controller.ts, which skip password stripping in sanitizeBase.ts, to obtain reusable plaintext passwords.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130720 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130720</link>
-    <guid isPermaLink="false">966a635cb46cac5781b609d62d13cd07</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.9 | NocoDB before 2026.08.0 contains an insecure direct object reference vulnerability that allows unauthenticated attackers to access records hidden by a shared view's row filter by supplying arbitrary primary keys. Attackers with the share link can request attachment downloads and many-to-many or has-many link listings for excluded records to obtain their attachment files and linked record identities.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130721 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130721</link>
-    <guid isPermaLink="false">b9eef421f064cb07469bc5103902cf43</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.2 | NocoDB from 2026.06.2 before 2026.08.0 contains an authorization bypass vulnerability that allows authenticated base Editors to write to data-read-only sources by abusing the internal batch endpoint. Attackers can name a writable decoy table on the batch envelope and target a read-only source table in dataUpdate, dataInsert or dataDelete sub-operations to modify or destroy records.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130722 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130722</link>
-    <guid isPermaLink="false">e8c716612286d9fd0e847139c72dedd3</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.9 | NocoDB before 2026.08.0 contains an authorization bypass in shared-view relation endpoints because parent-record lookups apply only the primary key, not the view's row filter. Anonymous share-link holders can enumerate auto-increment primary keys against the has-many, many-to-many, one-to-many and link-to-another-record routes to read linked records of filtered-out rows.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130723 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130723</link>
-    <guid isPermaLink="false">9a68fb2f9855a03ffe64e8e6f47fb62d</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | NocoDB before 2026.08.0 contains an information disclosure vulnerability that allows unauthenticated attackers to access attachments of filtered-out records through the shared view attachment-download endpoint. Attackers holding a public share link can enumerate sequential primary keys to obtain signed download paths for files on records the view's row filter excludes.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130724 - NVD - CVSS Score v4.0: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130724</link>
-    <guid isPermaLink="false">5050a2bc74cf3466a8be97a9bf7a647e</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.4 | NocoDB before 2026.08.0 contains a server-side request forgery vulnerability that allows authenticated base Editors to make backend HTTP requests by supplying arbitrary URLs to the integration remote fetch operation. Attackers can control the method, headers, and body to reach internal APIs, loopback services, and cloud metadata endpoints, reading responses and echoed decrypted integration secrets.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130725 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130725</link>
-    <guid isPermaLink="false">652695f0d52fa78f673da15df5bb9fa9</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.0 | NocoDB before 2026.10.0 contains an insecure direct object reference vulnerability that allows authenticated users to obtain signed download URLs for other bases' attachments by storing foreign attachment paths in their own rows via prepareNocoData. Attackers with write access to an attachment column can have _convertAttachmentType or the attachment download endpoint sign the foreign path, reading cross-base files despite secure attachment mode.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130726 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130726</link>
-    <guid isPermaLink="false">e1fe99166feb5cc66b7b331c6d22eeb2</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.0 | NocoDB before 2026.07.0 contains an SQL injection vulnerability in its MySQL and SQLite clients that inserts the column precision value into generated data-definition statements without numeric validation. Authenticated users with the Creator or Owner base role can supply a crafted precision value when creating or updating a column to close the type declaration and execute arbitrary SQL against the base's data source.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130727 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130727</link>
-    <guid isPermaLink="false">eea54314a96912b0df2a9236e5a17f98</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | NocoDB before 2026.08.0 contains an authorization bypass vulnerability in public shared-view endpoints that fetch records by primary key without applying the view's row filter. Anonymous share link holders can enumerate sequential primary keys on link, has-many, and attachment download endpoints to read excluded records' linked data and download their attachments.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130728 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130728</link>
-    <guid isPermaLink="false">755cea6110edfe3960bd37e90ff46a3b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.5 | NocoDB before 2026.08.0 contains a stored cross-site scripting vulnerability that allows any authenticated user to register OAuth clients with javascript: redirect URIs. Attackers can send a consent link to a signed-in victim so either consent button runs script in the NocoDB origin, stealing the session token for account takeover.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130729 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130729</link>
-    <guid isPermaLink="false">72893363a1033e9c6656947d19406e6b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | NocoDB before 2026.08.0 contains an authorization bypass in its public shared-view relation endpoints, which verify that a parent record exists but not that it passes the view's row filters. Unauthenticated attackers holding a public share link can supply guessable auto-incrementing ids of filtered-out records to has-many, many-to-many, one-many, or link endpoints to read their child records.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130730 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130730</link>
-    <guid isPermaLink="false">5b00e2eb94aad7ad9abdfae9fabcb1a9</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.3 | NocoDB before 2026.10.1 contains an authentication bypass vulnerability that allows OAuth token holders to act as full sessions because OAuth access tokens are signed with the instance JWT secret. Attackers can present a narrowly scoped OAuth token to the session strategy, short-lived-token exchange, or NocoSocket handshake to gain the granting user's full privileges.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130731 - NVD - CVSS Score v4.0: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130731</link>
-    <guid isPermaLink="false">16525fd0b835433fb926538144a204fb</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.6 | NocoDB before 2026.05.3 contains an account takeover vulnerability that allows invited users to complete other invitees' signups because batch invitations share one token across all recipients. Attackers holding a valid batch invite can submit another invitee's email with the shared non-expiring token to set its password and take over that account, including higher-role ones.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130732 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130732</link>
-    <guid isPermaLink="false">0fa303e5726d0d760841c766e7d14d93</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | Traefik from 2.11.58 before 2.11.61 contains a resource leak vulnerability that allows unauthenticated attackers to exhaust resources by sending Authorization headers with NTLM or Negotiate schemes. Attackers can open many short-lived connections that each allocate a dedicated backend transport never released, exhausting memory, file descriptors and backend connections.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130733 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130733</link>
-    <guid isPermaLink="false">47479e7933f49ef13cbf72dc02aebeda</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.3 | Grav from 2.0.0 before 2.2.18 contains an authorization bypass vulnerability that allows publishers to overwrite pages their per-page permissions deny by abusing FolderStorage key delimiter collisions and PageStorage folder reconstruction. Attackers can rename a folder like locked*** or save from a page with an unusual prefix width through a front-end Flex pages form, replacing protected content and permissions to access the protected subtree.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130734 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130734</link>
-    <guid isPermaLink="false">f32799267b44b1c1f5346fbd8b7afa37</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.1 | Grav from 2.0.0 before 2.2.18 contains a stored cross-site scripting vulnerability that allows users with media upload rights to bypass the upload sanitizer. Attackers can upload SVG files with inner extensions like .svg.defaults, payloads that crash the fail-open sanitizer, or unblocked .xml/.xhtm files to run script when administrators open the raw file URL.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130735 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130735</link>
-    <guid isPermaLink="false">b34aa0c8468164c41edad668b47b3734</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.3 | Grav from 2.0.0 before 2.2.18 contains a Twig injection vulnerability that allows media-only accounts and anonymous uploaders to execute Twig by placing delimiters in image titles, alt text, class, id, or file names. Attackers can combine injected Twig with the autoescape tag to serve script to every page visitor, including super admins, or expose unpublished page content.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130736 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130736</link>
-    <guid isPermaLink="false">d04d67e5ff19c627d9c5d4884d7fed0d</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | Grav from 2.0.0 before 2.2.18 contains a remote code execution vulnerability that allows publishers to bypass the media action allowlist using scoped method names in Markdown image URLs. Attackers can chain actions like self::addMetaFile into static calls such as Process::fromShellCommandline to read files and run shell commands as the web server user.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130737 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130737</link>
-    <guid isPermaLink="false">620301886f5eed3b1f21d5115d8c6e5a</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | Grav from 2.0.0 before 2.2.18 contains a privilege escalation vulnerability that allows user managers to grant super-admin rights by nesting access maps under a YAML merge key. Attackers with admin.users.create or api.users.write can submit '&lt;&lt;' keys, for example via PATCH /api/v1/users/&lt;self&gt;, that bypass super-grant filtering and gain full site control.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130738 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130738</link>
-    <guid isPermaLink="false">4ab7792e45c7af9a2b4cd47ff8a22328</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | Grav from 2.0.0 before 2.2.18 contains a privilege escalation vulnerability that allows user managers with admin.users.update to take over super admin accounts by disabling the super-granting group. Attackers can set the group's enabled field to false via the Flex user-groups form, then reset the victim's password through the user-accounts form to gain super admin access.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130739 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130739</link>
-    <guid isPermaLink="false">ff25f090e9bd7b64cf36091cb508bebe</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | Grav from 2.0.0 before 2.2.18 contains a privilege escalation vulnerability that allows user managers and Flex editors to overwrite, create, or delete accounts by supplying client-controlled storage keys. Attackers can abuse the create form username, cross-type form flash replay, or __META storage key rename to gain super-admin accounts or delete account files.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130740 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130740</link>
-    <guid isPermaLink="false">3c1afaeb676cf409ead9afa4f03e77a6</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | Grav from 2.0.0 before 2.2.18 contains an information disclosure vulnerability that allows publishers and read-only user managers to read password hashes, 2FA secrets and reset tokens through unfiltered account serialization. Attackers can embed a Flex form for the user-accounts directory in a page or query the Flex API with admin.users.read to obtain super admin credentials and take over the account.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130741 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130741</link>
-    <guid isPermaLink="false">974afc173c97ddaeb58bfa210945b7cd</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | Grav from 2.0.0 before 2.2.18 contains a Twig sandbox bypass vulnerability that allows publishers to read any server file by abusing allowlisted array_key_value() and page accessor setters such as filePath(). Attackers can repoint page objects or overwrite the assets collections to render private keys and the API signing secret, then forge a super-admin API token.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 18 Nov 2026 14:01:52 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-130742 - NVD - CVSS Score v4.0: 8.7</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130742</link>
@@ -356,6 +172,228 @@ verification pipelines with UI:N, impact scales up to CVSS 8.6 High.</descriptio
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96571</link>
     <guid isPermaLink="false">4056d103274d2075cbeb086cf71b61bc</guid>
     <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The FancyBox for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Anchor 'href' Attribute in all versions up to, and including, 3.4.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires the attacker to wrap the payload anchor around a smilie shortcode (e.g., :mrgreen:), which WordPress renders as an &amp;lt;img&amp;gt; element, satisfying the plugin's a:has(img) enrollment selector and disguising the malicious link as an ordinary comment emoticon.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107517 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107517</link>
+    <guid isPermaLink="false">dc03f2530a40da3d0b7dcc9206363455</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 5.4 | Dell PowerStore contains a stored cross-site scripting (XSS) vulnerability. A low-privileged authenticated attacker could exploit this vulnerability, potentially leading to execution of malicious script in a higher-privileged user's session.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107518 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107518</link>
+    <guid isPermaLink="false">d8f28c50ca55e5c9f1bd90fb6aaa5b5c</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.7 | Dell PowerStore contains a Server-Side Request Forgery (SSRF) vulnerability. An authenticated user with limited privileges could potentially exploit this vulnerability to make the appliance connect to attacker-chosen internal systems.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107519 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107519</link>
+    <guid isPermaLink="false">ce02db18e5bcf844f2474a88384acd71</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.1 | Dell PowerStore contains an integer underflow vulnerability. An attacker could exploit this vulnerability, potentially leading to denial of service of a cryptographic service.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109857 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109857</link>
+    <guid isPermaLink="false">5522cdd9cac40d2756bd13621a09c077</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.2 | CAST Imaging is vulnerable to authentication bypass in the TenantFilter class. The TenantFilter processes the X-ISSUER-LOCATION HTTP header and dynamically registers an OpenID Connect issuer based on its value. An unauthenticated remote attacker can register a malicious identity provider, create users matching existing administrative usernames, and obtain valid JWTs which will be accepted by the application. This results in complete authentication bypass and privilege escalation to administrative access.
+
+
+
+
+The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109858 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109858</link>
+    <guid isPermaLink="false">8e8d3cd994e4cc86f75464819a7e824b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.3 | CAST Imaging has multiple path traversal vulnerabilities in various endpoints. The application does not properly validate the path parameters, allowing an authenticated attacker to use &quot;../&quot; sequences to escape the intended directory and read arbitrary files.
+
+
+Critically, by reading &quot;/proc/self/environ&quot;, the attacker can obtain environment variables containing sensitive credentials such as Keycloak and PostgreSQL passwords, leading to full server compromise and administrative access.
+
+
+The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109859 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109859</link>
+    <guid isPermaLink="false">844cca0630d8f209420cbf850fe108e1</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.9 | CAST Imaging has a missing authentication vulnerability in the &quot;/api/auth/keycloak/users/{username}&quot; endpoint. An unauthenticated remote attacker can modify the email address of an arbitrary Keycloak user and access sensitive account information, including the API authentication token hash. This can lead to account takeover, user impersonation and user enumeration.
+
+
+The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109860 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109860</link>
+    <guid isPermaLink="false">2b66ea82ee56c26840e679118bffc36a</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.3 | CAST Imaging is vulnerable to Path Traversal vulnerability in &quot;/api/server-folders&quot; and &quot;/api/server-folders/download&quot; endpoints. These file-management endpoints accept user-supplied filesystem paths and allow selected system commands to be executed at the specified location, but they do not enforce sufficient authorization boundaries or restrict access to a predefined set of resources. An authenticated attacker can enumerate server directories via the &quot;ls&quot; command and retrieve arbitrary files outside of the intended application workspace, such as &quot;/etc/passwd&quot;, exposing sensitive data.
+
+
+The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109861 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109861</link>
+    <guid isPermaLink="false">1dee93278ee489bb17eeaf907d2ea4ed</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | CAST Imaging contains a hardcoded authentication token in the &quot;KeyCloakController&quot; class of auth-service.jar. An attacker who gains access to the source code, application package, logs, or configuration files can reuse this token to call auth-service endpoints without authentication. Using the token with the &quot;/api/auth/keycloak/users&quot; endpoint, the attacker can enumerate users across Keycloak realms and retrieve user attributes containing API token hashes, enabling reconnaissance and further exploitation.
+
+
+The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109862 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109862</link>
+    <guid isPermaLink="false">c2962f8f4255701a7f8f41a778798196</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | CAST Imaging does not properly check whether a user is authorized to modify another user's notification settings in the &quot;/api/admin/user/update-subscriber&quot; endpoint. An authenticated, low-privileged attacker can enable or disable email notifications on another user's behalf, which can suppress important communications such as security alerts and disrupt business processes.
+
+
+The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109863 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109863</link>
+    <guid isPermaLink="false">49c578b01c0a49bcf9ede2fe70267349</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | CAST Imaging allows authenticated, low-privileged users to access parts of the administrator panel. When a user navigates to any URL path the application doesn't recognize, a wildcard route automatically redirects them to the administrative view at &quot;/admin/applications&quot;. This allows an attacker to perform certain administrator-restricted actions, including triggering app-to-app link generation, configuring regexes, and changing searchable object properties, resulting in unauthorized modification of application configuration.
+
+
+The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109864 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109864</link>
+    <guid isPermaLink="false">35504bd3717b3e2ad8749483e88f4f67</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 2.3 | CAST Imaging has an access control flaw in the &quot;/api/jobs/&lt;uuid&gt;/logs/download&quot; endpoint. An authenticated low-privilege user can download log archives for any job whose UUID they know, even if they are not authorized to access it.
+
+
+The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-113699 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113699</link>
+    <guid isPermaLink="false">324aa1ee513bf161f91e09f8ec8b74fb</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | Improper neutralization of special elements used in an OS command ('OS command injection') vulnerability in Aidata Bilişim Kurumsal Tic. Ve San. A.Ş. Aidata WR854GVR allows OS Command Injection.
+
+This issue affects Aidata WR854GVR: before V4.0.18_261111.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125033 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125033</link>
+    <guid isPermaLink="false">ca6c469a21ce666d2fa314a9be8aff4f</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Smash Balloon Social Post Feed – Simple Social Feeds for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'attachments.data[].description' parameter in all versions up to, and including, 4.15.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This makes it possible for unauthenticated outside Facebook users — any party able to contribute an attachment description to a post ingested by the configured feed (visitor posts, shared posts, or attached content) — to plant payloads that execute against every anonymous visitor of any WordPress page carrying the shortcode, requiring no WordPress account whatsoever.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127142 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127142</link>
+    <guid isPermaLink="false">aa05ee2d9bc09ba00e615e43c4ecaa61</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | LMS (Lan Management System) is vulnerable to Remote Code Execution via unrestricted upload of dangerous file types in the service ticket feature of the client panel. The application does not verify the type or name of files attached to service tickets. An authenticated attacker can upload an .htaccess file to bypass the access restrictions on the storage directory, together with a PHP script. Visiting the uploaded PHP file's URL leads to arbitrary code execution with the privileges of the web server.
+
+
+This issue was fixed in commit 89dd3f7.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127143 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127143</link>
+    <guid isPermaLink="false">bf930dbfb4a4268b4559c10e6043be4b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.4 | LMS (Lan Management System) is vulnerable to privilege escalation in the lmsd daemon. The daemon loads the libraries listed in the LMS database without checking that they come from a trusted location. An attacker with access to the web server process or with write access to the LMS database can register a malicious library and trigger a configuration reload, causing lmsd to load and execute it. Because the example systemd unit does not set a separate user, lmsd runs as root, allowing the attacker to execute arbitrary code with root privileges.
+This issue was fixed in commit 89dd3f7. The lmsd component was removed. For existing installations that use lmsd, the recommended solution is to disable and remove this component.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129961 - NVD - CVSS Score v4.0: 9.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129961</link>
+    <guid isPermaLink="false">5060c2f144fecafbe22e9960e9642443</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.5 | LMS (Lan Management System) is vulnerable to Remote Code Execution in its e-mail-based Helpdesk ticket intake. The mail parser does not reject Apache .htaccess configuration files or PHP-executable files when saving ticket attachments. A remote unauthenticated attacker can e-mail a Helpdesk ticket with such an attachment; in the default configuration, anyone can request the uploaded file's URL which executes attacker-supplied code with the privileges of the web server process. No operator interaction or LMS client session is required.
+
+
+The issue was fixed in commit d5059b1.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130333 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130333</link>
+    <guid isPermaLink="false">75a1c967ee4fad9886c647c3e8b1296d</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The SNORDIAN's H5PxAPIkatchu plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'xapi' parameter in all versions up to, and including, 0.4.24 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The nonce required to reach the unauthenticated insert endpoint is publicly exposed in the listener.js script URL on every page displaying H5P content, making the injection trivially exploitable by any anonymous visitor.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132121 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132121</link>
+    <guid isPermaLink="false">f4b51777113e14c6a6b8cfcc06391226</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | Supergateway 2.4.0 through 4.2.2 contains a cross-site WebSocket hijacking vulnerability in stdio-to-WebSocket mode that allows malicious web pages to connect by bypassing missing Origin header validation. Attackers can open the /message WebSocket from a victim's browser, even against localhost-bound gateways, to initialize an MCP session and invoke wrapped stdio MCP server tools with victim privileges.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132122 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132122</link>
+    <guid isPermaLink="false">365b648dfb11749e95ba6191171ede9a</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.7 | agentic-radar 0.7.0 before 0.14.2 contains an untrusted configuration loading vulnerability that allows malicious repositories to inject environment variables by having load_dotenv() in agentic_radar/cli.py load the scanned repository's .env file. Attackers can set OPENAI_BASE_URL to an attacker-controlled host so that scan openai-agents or --harden-prompts send requests carrying the user's OpenAI API key to the attacker.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132123 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132123</link>
+    <guid isPermaLink="false">07542e1f5fb1992bc81bf060836801fc</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 4.8 | modified eCommerce Shopsoftware through 3.3.0 contains a stored cross-site scripting vulnerability that allows authenticated administrators to inject scripts via the cross_sell_group_name parameter in admin/cross_sell_groups.php. Attackers with per-page access to cross-selling groups can store a script payload that executes in other administrators' browsers, including full administrators, when they view the group listing.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132124 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132124</link>
+    <guid isPermaLink="false">2d57a02d047362cb2012d41e218a795b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 4.8 | modified eCommerce Shopsoftware through 3.3.0 contains a stored cross-site scripting vulnerability that allows authenticated administrators to inject scripts via the orders_status_name parameter in admin/orders_status.php. Attackers with per-page order status access can store payloads that execute in other administrators' browsers when the unencoded status name is displayed.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132125 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132125</link>
+    <guid isPermaLink="false">d7f0ba135277e7ac81144ced2886bc2a</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 2.1 | Weblate 5.0 through 2026.11.2 contains a privilege escalation vulnerability where deleting a component list leaves stale Group.projects rows, widening team scope to whole projects. A user with componentlist.edit who deletes a list grants 'From component list' team members their full role, including project.edit, across possibly private projects.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132126 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132126</link>
+    <guid isPermaLink="false">d58d94567941af5253bfaecbc5cda781</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | Weblate 2026.6 through 2026.11.2 contains an information disclosure vulnerability that allows authenticated users to enumerate all workspaces through an unfiltered ProjectSerializer.workspace field. Low-privilege users can request the browsable /api/projects/ page to render the project creation form, revealing every workspace UUID and name they cannot access.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
