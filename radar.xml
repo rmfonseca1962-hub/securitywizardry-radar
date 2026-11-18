@@ -5,395 +5,324 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 14:01:52 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 15:01:45 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-130742 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130742</link>
-    <guid isPermaLink="false">a46f84c8b7646a2a52026d76a5da8bb1</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | Grav 2.0.0 before 2.2.18 resolves Flex sort and filter field names by first calling them as public methods, so a field named delete invokes FlexObject::delete() without any permission check. Authenticated users with only list access can send GET /api/v1/flex-objects/user-accounts?sort=delete requests to delete every account, then use the reopened API first-run setup to create a super admin.</description>
+    <title>CVE-2026-115815 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115815</link>
+    <guid isPermaLink="false">e2f9eb5c421ee3d3e04256fb94c5d770</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.5 | The rus to lat advanced plugin for WordPress is vulnerable to blind SQL Injection via the 'name' parameter in all versions up to, and including, 1.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130743 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130743</link>
-    <guid isPermaLink="false">1a3da4008669dae271bf96226154b703</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | Grav from 2.0.0 before 2.2.18 contains an insecure blueprint trust vulnerability that allows publisher accounts to read secrets and execute PHP by planting or selecting attacker-controlled blueprint files. Attackers can abuse the import@ directive, uploaded YAML media named as the page template, or form.flash_folder to leak password hashes and keys or invoke static PHP methods for code execution.</description>
+    <title>CVE-2026-115826 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115826</link>
+    <guid isPermaLink="false">0bc3dff5c2eec75ef6e453529cd4848e</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.4 | The Multi Step for Contact Form 7 plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 2.9.1 via the '_cf7mls_db_form_data_id' parameter due to missing validation on a user controlled key. This makes it possible for unauthenticated attackers to permanently delete arbitrary stored Contact Form 7 submissions from the database. Exploitation requires the companion CF7 Database plugin to be active and the per-form &quot;Save every step, not just the final submission&quot; option to be enabled.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130744 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130744</link>
-    <guid isPermaLink="false">73cf18870129b1146e2962ec970741c7</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | Grav from 2.0.0 before 2.2.18 contains a remote code execution vulnerability that allows page editors to escape the Twig sandbox by sending requests with a Host: pages header. Attackers can write configuration YAML through page folders and media .meta.yaml sidecars to register an unsandboxed Twig namespace and run shell commands as the web server user.</description>
+    <title>CVE-2026-116519 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116519</link>
+    <guid isPermaLink="false">c6f12ea5c1d82c53e3bf0aa03ba45ddd</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Geo Mashup plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'author (comment form) / display_name (profile form)' parameter in all versions up to, and including, 1.13.23 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The comment-author path requires the crafted comment to be approved before the payload is served to visitors; the subscriber-level path requires the plugin's user-location mapping feature to be enabled.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130745 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130745</link>
-    <guid isPermaLink="false">abece1e6db7bfc3c3f1d857832095c53</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.2 | Grav from 2.0.0 before 2.2.18 contains an access control bypass vulnerability that allows anonymous visitors to read protected pages because admin and site scopes share a page cache key. Routine editor activity through the API plugin rebuilds the page index without frontmatter.yaml access rules, exposing members-only page content until the cache is rebuilt.</description>
+    <title>CVE-2026-116594 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116594</link>
+    <guid isPermaLink="false">c237795d7834df36e19b228c19b3deec</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Jeg Kit for Elementor – Powerful Addons for Elementor, Widgets &amp; Templates for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'description' parameter in all versions up to, and including, 3.3.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful execution requires a published page containing both a Post Author widget in user_bio mode (rendering the attacker's biography) and any legitimate jkit_client_logo widget, so that client-logo.js is enqueued and the loadCarousel handler fires against the forged widget markup from the bio field.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130746 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130746</link>
-    <guid isPermaLink="false">7b5071f49a7b4efb11cad108c7f651bd</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.7 | Grav before 1.7.53.7 and 2.x before 2.2.18 serves page media files, and rendered pages when lazy sessions are enabled, with the visitor's session cookie and a shared-cacheable Cache-Control header. When a shared cache such as Apache mod_cache stores Set-Cookie responses, an attacker can lure a user signed in through the front-end login to open a media URL with a unique query string, then request that URL to receive the cached session cookie and take over the session.</description>
+    <title>CVE-2026-116758 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116758</link>
+    <guid isPermaLink="false">ff83466f7f61bb32500c37cfe0baf8ba</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Advanced Country Blocker plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'REQUEST_URI' parameter in all versions up to, and including, 2.3.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected script is stored via the advcb_live_activity transient on the init hook and executed when an administrator views the Live Monitor page, as the stored URI is unsafely concatenated into a double-quoted HTML title attribute and inserted into the DOM via jQuery .html().</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130747 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130747</link>
-    <guid isPermaLink="false">8d617cae248002eb475b3471cff9db02</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.2 | Grav before 1.7.53.7 and 2.x before 2.2.18 contains an authentication bypass vulnerability that allows anonymous visitors to create super-admin accounts because UserCollection::count() uses an unescaped glob() pattern. On installs whose path contains brackets or a backslash, the account count returns zero, so attackers can send requests to POST /api/v1/auth/setup or the classic admin registration form to create or overwrite administrator accounts.</description>
+    <title>CVE-2026-116764 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116764</link>
+    <guid isPermaLink="false">c303aff30420ddcf7e84eade64bd4339</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.1 | The The GDPR Framework By Data443 plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.5.2. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete all postmeta rows for every Easy Digital Downloads payment order on the site, destroying order metadata belonging to all customers. Exploitation requires that Easy Digital Downloads 2.x is active and the GDPR Framework's EDD compatibility option is enabled with a delete or delete_and_notify action configured.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130748 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130748</link>
-    <guid isPermaLink="false">49d4d945518936cd7a1b74ffffce2357</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | Grav from 2.0.0 before 2.2.18 contains a password reset poisoning vulnerability that allows anonymous attackers to redirect reset links by forging the CloudFront-Forwarded-Proto header. Attackers can send a forgot-password request with a crafted scheme value so the emailed reset link points to their host, capturing the token to take over accounts including super admins.</description>
+    <title>CVE-2026-118068 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118068</link>
+    <guid isPermaLink="false">a5b4300619c0bb839cea0cc32d0e185d</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.4 | The JobBoardWP – Job Board Listings and Submissions plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'job_description' parameter in all versions up to, and including, 1.3.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with custom-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The plugin's default public submission workflow auto-provisions a jb_employer account for any visitor, meaning the effective entry point is unauthenticated — the custom role requirement imposes no real barrier on a stock install.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130749 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130749</link>
-    <guid isPermaLink="false">e1480b5634daf93fd43f83938c5e6d33</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | Grav from 2.0.0 before 2.2.18 contains a resource exhaustion vulnerability that allows unauthenticated attackers to fill the disk by varying the HTTP Host header. Attackers can send requests with distinct Host values to create per-host compiled configuration, blueprint, language and page index caches, causing session, upload and logging failures.</description>
+    <title>CVE-2026-118521 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118521</link>
+    <guid isPermaLink="false">9242c932662d08d4d66f1ffd7b07c6ab</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.5 | The Toolbox for Asgaros Forum plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the replace_temp_pics function in all versions up to, and including, 1.2.4. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete arbitrary files on the server, which can easily lead to remote code execution when the right file is deleted (such as wp-config.php). This vulnerability is only reachable when the site administrator has enabled the Inline Image Upload feature (disabled by default).</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132079 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132079</link>
-    <guid isPermaLink="false">d4c964c983f54921ce4bd77134ec3a2a</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | Insufficient Session Expiration vulnerability in the Apache Iggy Go SDK. The TCP client method CreatePersonalAccessToken wrote the 32-bit expiry into the upper half of the 64-bit expiry field that the server reads. The server read a nonzero expiry as 2^32 times the requested value. A token created through the Go TCP client therefore stayed valid about four billion times longer than the caller asked for.
-
-This issue affects Apache Iggy Go SDK: from 0.5.0 before 0.10.0.
-
-Users are recommended to upgrade to version 0.10.0, which fixes the issue. Tokens that an earlier version created keep their long expiry on the server. Delete those tokens and create new ones.</description>
+    <title>CVE-2026-119631 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119631</link>
+    <guid isPermaLink="false">986c30e20caf406853cbad27d0f188de</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 5.9 | The Kirki - Freeform Page Builder, Website Builder &amp; Customizer plugin for WordPress is vulnerable to Unauthorized Data Access in versions up to, and including, 6.4.1 via the `kirki_post_apis` AJAX action's `get-dynamic-content-batch` and `get-collection-batch` endpoints. This is due to the plugin opening these resolvers behind a site-wide, resource-unbound preview token (`EditorPreview::has_valid_token()`) that is NOT bound to the specific page the administrator intended to share, combined with the absence of any `list_users` or `can_user_read_post()` capability check inside `HelperFunctions::get_user_dynamic_content()` and `Collection::get_collection_batch()` — the equivalent checks ARE present on the plugin's own REST route (`FrontendRESTController::get_item_permissions_check()`). This makes it possible for unauthenticated attackers holding any valid read-only share link to extract from the entire user table every user's `user_email`, `first_name`, `last_name`, `nickname`, `registered_date`, arbitrary string-valued `user_meta` (including custom keys such as `billing_phone`), and the e-mail address of every approved commenter — information that WordPress itself withholds from anonymous readers (served only in the `edit` context behind `list_users`).</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-82951 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82951</link>
-    <guid isPermaLink="false">122c9e6f14c115a3353ec193385cd668</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.1 | Latvijas Valsts radio un televīzijas centrs (LVRTC)
-eParakstītājs 3.0 version 1.10.0-resolute allows an unauthenticated remote
-attacker to cause HTTP GET requests from a user's workstation by convincing the
-user to open a crafted signed eDOC file. Automatic certificate validation
-retrieves a signer-controlled Authority Information Access (AIA) caIssuers URL
-and follows redirects without restricting the destination, enabling blind SSRF
-to loopback and private-network services. Additionally, unrestricted loading of
-local file URIs (such as file:///dev/zero) causes unbounded memory buffering
-resulting in Denial of Service (OutOfMemoryError). In automated server
-verification pipelines with UI:N, impact scales up to CVSS 8.6 High.</description>
+    <title>CVE-2026-120564 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120564</link>
+    <guid isPermaLink="false">a1f4744742e13533e1c1240f17404184</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.5 | The Search Everything plugin for WordPress is vulnerable to Sensitive Information Exposure in versions up to, and including, 8.1.9 via the search_everything AJAX action. The handler registered at `wp_ajax_search_everything` performs no capability check, no ownership check, and no nonce verification before running a WP_Query over `$_GET['s']` and returning the raw WP_Post objects — including the `post_password` field — as JSON. This makes it possible for authenticated attackers, with Subscriber-level access and above, to extract cleartext passwords for every password-protected post on the site and, when the plugin's draft/attachment/metadata search options are enabled by an administrator, to read draft and pending post contents they otherwise have no capability to view.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-82952 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82952</link>
-    <guid isPermaLink="false">4d41903ce84a8830007098c2e93bc02f</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | Latvijas Valsts radio un televīzijas centrs (LVRTC)
-eParakstītājs 3.0 version 1.10.0-resolute for Linux allows an unauthenticated
-remote attacker to execute arbitrary commands with the privileges of the
-current user by convincing the user to open and validate a signed PDF with a
-crafted filename and select Open with Adobe Reader. The application embeds the
-filename in a sh -c command without neutralizing shell command substitution.</description>
+    <title>CVE-2026-122042 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122042</link>
+    <guid isPermaLink="false">f1eb6c4389e6963dd8b734c8590f6871</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | WarehousePG (WHPG) 6.27.1 through 6.27.7 and 7.2.1 through 7.6.1 are affected by an out-of-bounds write vulnerability (CWE-787) in gpfdist, the file server used to load and unload external tables. When gpfdist attaches a request to a session, it sizes two internal arrays from the client-supplied X-GP-SEGMENT-COUNT header and writes to them at the index given by the X-GP-SEGMENT-ID header, without checking that the index is non-negative and smaller than the count (CWE-129). gpfdist does not authenticate callers unless gpfdists is used with client certificate verification, so an attacker who can reach the gpfdist port can crash it with a single HTTP request, failing every external table load or unload that uses that gpfdist instance. gpfdist is normally reachable only from the cluster's internal network.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-84786 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84786</link>
-    <guid isPermaLink="false">448420ac91155ae50500a2555e8b60e4</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | A DANE-enabled TLS client may crash by dereferencing a NULL pointer when processing an unusual combination of certificate and TLSA records.</description>
+    <title>CVE-2026-123123 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123123</link>
+    <guid isPermaLink="false">a3479b2b6432488c6b22b5475f45dbcc</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.5 | An attacker that is able to send a crafted network packet to the affected component may trigger an integer overflow during module size validation. This may cause insufficient bounds checking and result in out-of-bounds memory reads, potentially leading to a denial of service condition due to process termination.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-87789 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87789</link>
-    <guid isPermaLink="false">2fd06e5de388c254d96ceb7f0c408b9c</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | Latvijas Valsts radio un televīzijas centrs (LVRTC)
-eParakstītājs 3.0 version 1.10.0 for macOS allows an unauthenticated remote
-attacker to execute arbitrary commands with the privileges of the current user
-by convincing the user to open a PDF with a crafted filename and select Send.
-The application embeds the attachment path in AppleScript source without
-neutralizing AppleScript syntax, allowing injected do shell script expressions
-to execute.</description>
+    <title>CVE-2026-123419 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123419</link>
+    <guid isPermaLink="false">ad03950bd6743daa05f7a53a5cc9b546</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.1 | The immonex Kickstart plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 1.19.0 via the 'inx-r-cidata (JSON blob containing 'template' and 'template_folders')' parameter parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. The filename-level sanitization that strips dot-slash sequences applies only to the template filename component, not to the attacker-supplied template_folders directory paths, rendering it ineffective against directory traversal via that parameter.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-87790 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87790</link>
-    <guid isPermaLink="false">599d89b7edb6075460aa636721583902</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | Latvijas Valsts radio un televīzijas centrs (LVRTC)
-eParakstītājs 3.0 version 1.10.0-resolute allows an unauthenticated remote
-attacker to cause HTTP GET requests from a user's workstation by convincing the
-user to open a crafted signed eDOC file. Automatic certificate validation
-retrieves a signer-controlled Authority Information Access (AIA) caIssuers URL
-and follows redirects without restricting the destination, enabling blind SSRF
-to loopback and private-network services. Additionally, unrestricted loading of
-local file URIs (such as file:///dev/zero) causes unbounded memory buffering
-resulting in Denial of Service (OutOfMemoryError). In automated server
-verification pipelines with UI:N, impact scales up to CVSS 8.6 High.</description>
+    <title>CVE-2026-125053 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125053</link>
+    <guid isPermaLink="false">d580cd4ff528cfbbb22aa586a6298aaa</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The WEB-Translation – eTranslation Multilingual plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 2.0.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit requires that at least one secondary language is configured in the plugin and that comments are open on the target post; because the stored payload contains no literal HTML brackets at save-time, WordPress core KSES filtering does not remove it, and the malicious script is only materialized when a visitor loads the post under a secondary-language URL slug.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-92236 - NVD - CVSS Score v3.1: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92236</link>
-    <guid isPermaLink="false">ba5996188cbe4c27ab5026a6cf7b606f</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.1 | The Asset CleanUp: Page Speed Booster plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via 'wpacu_unload_css' and 'wpacu_unload_js' Query Parameters in all versions up to, and including, 1.4.0.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. Successful exploitation requires that the victim has sufficient privileges to see the plugin's admin-bar entry, typically an administrator.</description>
+    <title>CVE-2026-125999 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125999</link>
+    <guid isPermaLink="false">970c8c12b53eb5ed80d0dc1389888d01</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Widget Manager Light plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'posts' parameter in all versions up to, and including, 1.18 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-95690 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95690</link>
-    <guid isPermaLink="false">c140c69798c40f71010474c8818f8ca5</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | Receiving crafted out-of-sequence DTLS handshake fragments may cause OpenSSL to allocate a full message-length reassembly buffer for each buffered message, so a small amount of wire data consumes a large amount of memory.</description>
+    <title>CVE-2026-126131 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126131</link>
+    <guid isPermaLink="false">c9ab59d7e1a0525328223ef825dbdb4b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The WP Instant Feeds plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'data[images][][url]' parameter in all versions up to, and including, 1.3.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The cache-write AJAX endpoint is accessible to unauthenticated users because the only access control is a nonce check against a nonce minted for uid 0 and freely emitted on any front-end page rendering a feed via wp_localize_script, making it harvestable by any unauthenticated visitor.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-96571 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96571</link>
-    <guid isPermaLink="false">4056d103274d2075cbeb086cf71b61bc</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The FancyBox for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Anchor 'href' Attribute in all versions up to, and including, 3.4.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires the attacker to wrap the payload anchor around a smilie shortcode (e.g., :mrgreen:), which WordPress renders as an &amp;lt;img&amp;gt; element, satisfying the plugin's a:has(img) enrollment selector and disguising the malicious link as an ordinary comment emoticon.</description>
+    <title>CVE-2026-126763 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126763</link>
+    <guid isPermaLink="false">e187fa031e568ffaa205fa7ff6bed718</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | In Eclipse Mosquitto versions 1.6 to 2.0.22 and 2.1.0 to 2.1.2, an MQTT v5.0 client connecting with a will-delay-interval that subsequently disconnects with a shorter interval causes all delayed wills to be suppressed.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107517 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107517</link>
-    <guid isPermaLink="false">dc03f2530a40da3d0b7dcc9206363455</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 5.4 | Dell PowerStore contains a stored cross-site scripting (XSS) vulnerability. A low-privileged authenticated attacker could exploit this vulnerability, potentially leading to execution of malicious script in a higher-privileged user's session.</description>
+    <title>CVE-2026-129323 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129323</link>
+    <guid isPermaLink="false">80ca4352b38228a04413aa36dc64c100</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Masteriyo LMS – LMS Course Builder, Quizzes &amp; Certificates plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'content' parameter in all versions up to, and including, 3.5.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. On a default install, any unauthenticated visitor can self-register as a Masteriyo Student through the plugin's public /account/signup/ form without administrator approval, granting them the publish_course_reviews capability required to submit reviews and exploit this vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107518 - NVD - CVSS Score v3.1: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107518</link>
-    <guid isPermaLink="false">d8f28c50ca55e5c9f1bd90fb6aaa5b5c</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.7 | Dell PowerStore contains a Server-Side Request Forgery (SSRF) vulnerability. An authenticated user with limited privileges could potentially exploit this vulnerability to make the appliance connect to attacker-chosen internal systems.</description>
+    <title>CVE-2026-130014 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130014</link>
+    <guid isPermaLink="false">c5b97543598a82fb6e2c0e109c919b2a</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.5 | The Team VCard generator plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 1.1.0 via the 'photo' parameter parameter. This makes it possible for unauthenticated attackers to read the contents of arbitrary files on the server, which can contain sensitive information.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-107519 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107519</link>
-    <guid isPermaLink="false">ce02db18e5bcf844f2474a88384acd71</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.1 | Dell PowerStore contains an integer underflow vulnerability. An attacker could exploit this vulnerability, potentially leading to denial of service of a cryptographic service.</description>
+    <title>CVE-2026-130876 - NVD - CVSS Score v3.1: 2.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130876</link>
+    <guid isPermaLink="false">000c05a52b44a32c718b67c12bfb8c18</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 2.7 | Tanium addressed an uncontrolled recursion vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-109857 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109857</link>
-    <guid isPermaLink="false">5522cdd9cac40d2756bd13621a09c077</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.2 | CAST Imaging is vulnerable to authentication bypass in the TenantFilter class. The TenantFilter processes the X-ISSUER-LOCATION HTTP header and dynamically registers an OpenID Connect issuer based on its value. An unauthenticated remote attacker can register a malicious identity provider, create users matching existing administrative usernames, and obtain valid JWTs which will be accepted by the application. This results in complete authentication bypass and privilege escalation to administrative access.
-
-
-
-
-The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <title>CVE-2026-130885 - NVD - CVSS Score v3.1: 2.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130885</link>
+    <guid isPermaLink="false">2348f1fa2d1a61919bfe4a0e47c7f081</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 2.7 | Tanium addressed an uncontrolled recursion vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-109858 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109858</link>
-    <guid isPermaLink="false">8e8d3cd994e4cc86f75464819a7e824b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.3 | CAST Imaging has multiple path traversal vulnerabilities in various endpoints. The application does not properly validate the path parameters, allowing an authenticated attacker to use &quot;../&quot; sequences to escape the intended directory and read arbitrary files.
-
-
-Critically, by reading &quot;/proc/self/environ&quot;, the attacker can obtain environment variables containing sensitive credentials such as Keycloak and PostgreSQL passwords, leading to full server compromise and administrative access.
-
-
-The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <title>CVE-2026-130893 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130893</link>
+    <guid isPermaLink="false">b7fe63f12f49bbee42224f98308cead0</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.8 | Tanium addressed an unauthorized code execution vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-109859 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109859</link>
-    <guid isPermaLink="false">844cca0630d8f209420cbf850fe108e1</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.9 | CAST Imaging has a missing authentication vulnerability in the &quot;/api/auth/keycloak/users/{username}&quot; endpoint. An unauthenticated remote attacker can modify the email address of an arbitrary Keycloak user and access sensitive account information, including the API authentication token hash. This can lead to account takeover, user impersonation and user enumeration.
-
-
-The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <title>CVE-2026-130899 - NVD - CVSS Score v3.1: 2.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130899</link>
+    <guid isPermaLink="false">9f9532f36833b916bb696b213dd0d892</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 2.5 | Tanium addressed a time-of-check time-of-use race condition vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-109860 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109860</link>
-    <guid isPermaLink="false">2b66ea82ee56c26840e679118bffc36a</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.3 | CAST Imaging is vulnerable to Path Traversal vulnerability in &quot;/api/server-folders&quot; and &quot;/api/server-folders/download&quot; endpoints. These file-management endpoints accept user-supplied filesystem paths and allow selected system commands to be executed at the specified location, but they do not enforce sufficient authorization boundaries or restrict access to a predefined set of resources. An authenticated attacker can enumerate server directories via the &quot;ls&quot; command and retrieve arbitrary files outside of the intended application workspace, such as &quot;/etc/passwd&quot;, exposing sensitive data.
-
-
-The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <title>CVE-2026-131575 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131575</link>
+    <guid isPermaLink="false">465aa46b52a8a21cc9fcf67c0f2a7a28</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.5 | Tanium addressed an insertion of sensitive information into a log file vulnerability in TanOS.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-109861 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109861</link>
-    <guid isPermaLink="false">1dee93278ee489bb17eeaf907d2ea4ed</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | CAST Imaging contains a hardcoded authentication token in the &quot;KeyCloakController&quot; class of auth-service.jar. An attacker who gains access to the source code, application package, logs, or configuration files can reuse this token to call auth-service endpoints without authentication. Using the token with the &quot;/api/auth/keycloak/users&quot; endpoint, the attacker can enumerate users across Keycloak realms and retrieve user attributes containing API token hashes, enabling reconnaissance and further exploitation.
-
-
-The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <title>CVE-2026-131584 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131584</link>
+    <guid isPermaLink="false">4019e14784537d681b974842a937f8a8</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 5.9 | Tanium addressed an information disclosure vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-109862 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109862</link>
-    <guid isPermaLink="false">c2962f8f4255701a7f8f41a778798196</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | CAST Imaging does not properly check whether a user is authorized to modify another user's notification settings in the &quot;/api/admin/user/update-subscriber&quot; endpoint. An authenticated, low-privileged attacker can enable or disable email notifications on another user's behalf, which can suppress important communications such as security alerts and disrupt business processes.
-
-
-The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <title>CVE-2026-131652 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131652</link>
+    <guid isPermaLink="false">0345490372b48a2e071eb905e25d648a</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.5 | Tanium addressed an information disclosure vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-109863 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109863</link>
-    <guid isPermaLink="false">49c578b01c0a49bcf9ede2fe70267349</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | CAST Imaging allows authenticated, low-privileged users to access parts of the administrator panel. When a user navigates to any URL path the application doesn't recognize, a wildcard route automatically redirects them to the administrative view at &quot;/admin/applications&quot;. This allows an attacker to perform certain administrator-restricted actions, including triggering app-to-app link generation, configuring regexes, and changing searchable object properties, resulting in unauthorized modification of application configuration.
-
-
-The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <title>CVE-2026-131657 - NVD - CVSS Score v3.1: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131657</link>
+    <guid isPermaLink="false">7959b269f2ae67d771143f55cf95a007</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.0 | Tanium addressed an incorrect privilege assignment vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-109864 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109864</link>
-    <guid isPermaLink="false">35504bd3717b3e2ad8749483e88f4f67</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 2.3 | CAST Imaging has an access control flaw in the &quot;/api/jobs/&lt;uuid&gt;/logs/download&quot; endpoint. An authenticated low-privilege user can download log archives for any job whose UUID they know, even if they are not authorized to access it.
-
-
-The vulnerability has only been confirmed in version 3.6.2 but may also affect other versions. The vendor did not provide the affected version range, but assured that the vulnerability is fixed &quot;in newer versions&quot;.</description>
+    <title>CVE-2026-131658 - NVD - CVSS Score v3.1: 2.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131658</link>
+    <guid isPermaLink="false">7a40065a0c3717df52473f75f2725247</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 2.5 | Tanium addressed an uncontrolled recursion vulnerability in Integrity Monitor.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-113699 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113699</link>
-    <guid isPermaLink="false">324aa1ee513bf161f91e09f8ec8b74fb</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | Improper neutralization of special elements used in an OS command ('OS command injection') vulnerability in Aidata Bilişim Kurumsal Tic. Ve San. A.Ş. Aidata WR854GVR allows OS Command Injection.
-
-This issue affects Aidata WR854GVR: before V4.0.18_261111.</description>
+    <title>CVE-2026-131685 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131685</link>
+    <guid isPermaLink="false">730c0731f16cbe55ae42a2bca05a69b7</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.4 | Tanium addressed an improper signature validation vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125033 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125033</link>
-    <guid isPermaLink="false">ca6c469a21ce666d2fa314a9be8aff4f</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Smash Balloon Social Post Feed – Simple Social Feeds for WordPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'attachments.data[].description' parameter in all versions up to, and including, 4.15.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This makes it possible for unauthenticated outside Facebook users — any party able to contribute an attachment description to a post ingested by the configured feed (visitor posts, shared posts, or attached content) — to plant payloads that execute against every anonymous visitor of any WordPress page carrying the shortcode, requiring no WordPress account whatsoever.</description>
+    <title>CVE-2026-131694 - NVD - CVSS Score v3.1: 6.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131694</link>
+    <guid isPermaLink="false">972005beb13b344bde25348b7c480cb0</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.6 | Tanium addressed an improper check for certificate revocation vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-127142 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127142</link>
-    <guid isPermaLink="false">aa05ee2d9bc09ba00e615e43c4ecaa61</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | LMS (Lan Management System) is vulnerable to Remote Code Execution via unrestricted upload of dangerous file types in the service ticket feature of the client panel. The application does not verify the type or name of files attached to service tickets. An authenticated attacker can upload an .htaccess file to bypass the access restrictions on the storage directory, together with a PHP script. Visiting the uploaded PHP file's URL leads to arbitrary code execution with the privileges of the web server.
-
-
-This issue was fixed in commit 89dd3f7.</description>
+    <title>CVE-2026-131697 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131697</link>
+    <guid isPermaLink="false">0f768b91fcbd5a6b274fcc34eca7ff91</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.4 | Tanium addressed an improper access controls vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-127143 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127143</link>
-    <guid isPermaLink="false">bf930dbfb4a4268b4559c10e6043be4b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.4 | LMS (Lan Management System) is vulnerable to privilege escalation in the lmsd daemon. The daemon loads the libraries listed in the LMS database without checking that they come from a trusted location. An attacker with access to the web server process or with write access to the LMS database can register a malicious library and trigger a configuration reload, causing lmsd to load and execute it. Because the example systemd unit does not set a separate user, lmsd runs as root, allowing the attacker to execute arbitrary code with root privileges.
-This issue was fixed in commit 89dd3f7. The lmsd component was removed. For existing installations that use lmsd, the recommended solution is to disable and remove this component.</description>
+    <title>CVE-2026-131798 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131798</link>
+    <guid isPermaLink="false">60037de0761c41dea03a4ff563c5058f</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 4.3 | Tanium addressed a server-side request forgery vulnerability.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129961 - NVD - CVSS Score v4.0: 9.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129961</link>
-    <guid isPermaLink="false">5060c2f144fecafbe22e9960e9642443</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.5 | LMS (Lan Management System) is vulnerable to Remote Code Execution in its e-mail-based Helpdesk ticket intake. The mail parser does not reject Apache .htaccess configuration files or PHP-executable files when saving ticket attachments. A remote unauthenticated attacker can e-mail a Helpdesk ticket with such an attachment; in the default configuration, anyone can request the uploaded file's URL which executes attacker-supplied code with the privileges of the web server process. No operator interaction or LMS client session is required.
-
-
-The issue was fixed in commit d5059b1.</description>
+    <title>CVE-2026-132138 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132138</link>
+    <guid isPermaLink="false">d5777eaf1d198de99a9fdb9944e38685</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 5.3 | A flaw was found in cyrus-sasl. When processing authentication requests using the Salted Challenge Response Authentication Mechanism (SCRAM), a remote attacker can trigger a null pointer dereference by submitting unexpected channel-binding data. This causes the server process to crash before validating authentication proofs, leading to a Denial of Service (DoS).</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130333 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130333</link>
-    <guid isPermaLink="false">75a1c967ee4fad9886c647c3e8b1296d</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The SNORDIAN's H5PxAPIkatchu plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'xapi' parameter in all versions up to, and including, 0.4.24 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The nonce required to reach the unauthenticated insert endpoint is publicly exposed in the listener.js script URL on every page displaying H5P content, making the injection trivially exploitable by any anonymous visitor.</description>
+    <title>CVE-2026-92535 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92535</link>
+    <guid isPermaLink="false">cb504614c2dd56421bd04467b7da6569</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 5.3 | The Make Connector plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 1.6.6 via the include_custom_fields. This makes it possible for unauthenticated attackers to extract arbitrary admin-selected user, post, comment, and term metadata exposed via core REST endpoints — including active session tokens with source IP, user-agent, login and expiry timestamps, capability sets, and any other admin-selected private meta keys including protected underscore-prefixed entries. This is exploitable because the plugin's meta picker queries all meta keys from the database without filtering, offering protected underscore-prefixed keys such as session_tokens and wp_capabilities for administrator selection; if any such keys are selected, their values become readable without any credentials.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132121 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132121</link>
-    <guid isPermaLink="false">f4b51777113e14c6a6b8cfcc06391226</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | Supergateway 2.4.0 through 4.2.2 contains a cross-site WebSocket hijacking vulnerability in stdio-to-WebSocket mode that allows malicious web pages to connect by bypassing missing Origin header validation. Attackers can open the /message WebSocket from a victim's browser, even against localhost-bound gateways, to initialize an MCP session and invoke wrapped stdio MCP server tools with victim privileges.</description>
+    <title>CVE-2026-95787 - NVD - CVSS Score v3.1: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95787</link>
+    <guid isPermaLink="false">7fa6055132d8ac8b02edd443341f5f4b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 10.0 | Vulnerabilities in the PAPI protocol of AOS-10 could allow an unauthenticated remote attacker to circumvent existing authentication controls. Successful exploitation could allow an attacker to gain administrative access, modify system configurations, and access or manipulate sensitive data.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132122 - NVD - CVSS Score v4.0: 5.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132122</link>
-    <guid isPermaLink="false">365b648dfb11749e95ba6191171ede9a</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.7 | agentic-radar 0.7.0 before 0.14.2 contains an untrusted configuration loading vulnerability that allows malicious repositories to inject environment variables by having load_dotenv() in agentic_radar/cli.py load the scanned repository's .env file. Attackers can set OPENAI_BASE_URL to an attacker-controlled host so that scan openai-agents or --harden-prompts send requests carrying the user's OpenAI API key to the attacker.</description>
+    <title>CVE-2026-95788 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95788</link>
+    <guid isPermaLink="false">b651f64ca61c6ca4f82872eb66c76489</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.1 | An unauthenticated buffer overflow vulnerability exists in the underlying operating system of AOS-10 or AOS-8 and could allow an unauthenticated adjacent attacker to conduct a denial of service attack. Successful exploitation could allow an attacker to disrupt the availability of the affected system, with a limited impact to the integrity of the affected component.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132123 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132123</link>
-    <guid isPermaLink="false">07542e1f5fb1992bc81bf060836801fc</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 4.8 | modified eCommerce Shopsoftware through 3.3.0 contains a stored cross-site scripting vulnerability that allows authenticated administrators to inject scripts via the cross_sell_group_name parameter in admin/cross_sell_groups.php. Attackers with per-page access to cross-selling groups can store a script payload that executes in other administrators' browsers, including full administrators, when they view the group listing.</description>
+    <title>CVE-2026-95789 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95789</link>
+    <guid isPermaLink="false">f2803c55150d66a5c2015453979d0b5b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | Command injection vulnerability in the affected interface of AOS-10 or AOS-8 could allow an authenticated remote attacker to perform command injection only on certain impacted devices. Successful exploitation could allow an attacker to execute unauthorized arbitrary commands with the privileges of the affected mechanism on the underlying operating system.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132124 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132124</link>
-    <guid isPermaLink="false">2d57a02d047362cb2012d41e218a795b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 4.8 | modified eCommerce Shopsoftware through 3.3.0 contains a stored cross-site scripting vulnerability that allows authenticated administrators to inject scripts via the orders_status_name parameter in admin/orders_status.php. Attackers with per-page order status access can store payloads that execute in other administrators' browsers when the unencoded status name is displayed.</description>
+    <title>CVE-2026-95790 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95790</link>
+    <guid isPermaLink="false">e9719b098de25d6e3a1f29ffac848696</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.5 | A vulnerability in the web-based management interface of network device management systems of AOS-8 Mobility Controllers could allow an authenticated remote attacker to bypass authorization controls. Successful exploitation could allow a low-privilege attacker to read sensitive configuration data potentially leading to unauthorized network access and further compromise of network security.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132125 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132125</link>
-    <guid isPermaLink="false">d7f0ba135277e7ac81144ced2886bc2a</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 2.1 | Weblate 5.0 through 2026.11.2 contains a privilege escalation vulnerability where deleting a component list leaves stale Group.projects rows, widening team scope to whole projects. A user with componentlist.edit who deletes a list grants 'From component list' team members their full role, including project.edit, across possibly private projects.</description>
+    <title>CVE-2026-96665 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96665</link>
+    <guid isPermaLink="false">006bbfde408fdcb9195dab6d04c7e3d7</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The SendPress Newsletters plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'sp_firstname' parameter in all versions up to, and including, 1.26.1.20 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The public subscriber-management route uses an unsigned, forgeable base64-encoded JSON token, allowing an unauthenticated attacker to impersonate any subscriber and obtain a valid nonce — bypassing the POST handler's only access control check.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132126 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132126</link>
-    <guid isPermaLink="false">d58d94567941af5253bfaecbc5cda781</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | Weblate 2026.6 through 2026.11.2 contains an information disclosure vulnerability that allows authenticated users to enumerate all workspaces through an unfiltered ProjectSerializer.workspace field. Low-privilege users can request the browsable /api/projects/ page to render the project creation form, revealing every workspace UUID and name they cannot access.</description>
+    <title>CVE-2026-96841 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96841</link>
+    <guid isPermaLink="false">136efdd127b1fdcdae7543897974ac4e</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.4 | The ITRO Popup Plugin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'custom_html' parameter in all versions up to, and including, 5.2.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is only exploitable by low-privileged roles such as Subscriber when an administrator has explicitly granted that role access to the plugin settings page via the plugin's role selection option.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
