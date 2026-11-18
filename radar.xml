@@ -5,55 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 08:00:24 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-131800 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131800</link>
-    <guid isPermaLink="false">bf684391285a14458ebe68ddd4a79979</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.3 | A stored cross-site scripting vulnerability was identified in GitHub Enterprise Server that allowed an organization member with permission to manage custom-property definitions and edit property values to add an attacker-controlled SSH authentication key to the personal account of another member through HTML stored in a single-select custom-property option. Exploitation required another definition manager in the same organization to attempt to remove the poisoned option while it was in use and save the definition with a valid sudo session. Repository access through the added key depended on the permissions of the victim and independent authorization controls. This vulnerability affected supported GitHub Enterprise Server prior to 3.23 and was fixed in versions 3.19.16, 3.20.12, 3.21.10, and 3.22.5. This vulnerability was reported via the GitHub Bug Bounty program.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131871 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131871</link>
-    <guid isPermaLink="false">7f2ea76953d0182fa7fa1615bb949447</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.5 | WLA DX 9.7 through 10.7 contains a stack-based buffer overflow vulnerability in parse_data_blocks() in wlalink/analyze.c that copies section namespaces without length checks. Attackers can supply a crafted object or library file with a namespace longer than 255 bytes or unterminated to overflow the 256-byte stack buffer when linked.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131872 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131872</link>
-    <guid isPermaLink="false">7e0468a97b95b655954de9e87f1a0b75</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.8 | SOIL2 before 1.4.2 contains a NULL pointer dereference vulnerability in its DDS, PVR and PKM image loaders that write results through unchecked caller-supplied output pointers. Attackers can supply a valid DDS, PVR or PKM file to applications passing NULL output pointers to SOIL_load_image or stbi_info, causing a crash.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131873 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131873</link>
-    <guid isPermaLink="false">67454bc41279efdedd0ee2013dc76d41</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.9 | Gargoyle 2023.1 through 2026.1.1 contains a stack-based buffer overflow vulnerability in the bundled Plus interpreter's ReadAction() function in terps/plus/loaddatabase.c, which never bounds-checks the index into the 1024-entry conditions array. Attackers can supply a crafted or truncated .plus game file with unterminated action conditions to write file-controlled values past the array and crash the player.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131874 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131874</link>
-    <guid isPermaLink="false">b660e543b5c122c0a0019cbe93d2082e</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.8 | Gargoyle 2023.1 through 2026.1.1 contains an infinite loop vulnerability in the bundled Plus interpreter's ReadString() function in terps/plus/loaddatabase.c that fails to handle end of file. Attackers can supply an empty, truncated, or crafted .plus game file that hangs Gargoyle at full CPU until the user kills it.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131875 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131875</link>
-    <guid isPermaLink="false">c03b0e74ee30dc402ab6b03ba9dba160</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | fqterm before 0.9.11 contains a heap out-of-bounds write vulnerability in FQTermDecode that allows malicious servers to corrupt memory by sending CSI sequences with unbounded parameter indexes. Attackers controlling a telnet or SSH server, or intercepting cleartext telnet, can send over 30 semicolon-separated CSI parameters to write chosen 32-bit values past the decoder object on the heap.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 18 Nov 2026 09:00:50 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-131876 - NVD - CVSS Score v4.0: 7.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131876</link>
@@ -323,6 +275,54 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-2841</link>
     <guid isPermaLink="false">4c6c70b87443d00b6f99d8716d8a9c06</guid>
     <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 4.3 | The Advanced Custom Fields (ACF) plugin for WordPress is vulnerable to incorrect authorization in all versions up to, and including, 6.7.0. This is due to the 'ACF_Ajax_Query::get_args' method returning the user-supplied ''query' array directly without any key whitelisting or validation. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject arbitrary query parameters to bypass field-configured role restrictions and exfiltrate sensitive user data including administrator email addresses, login names, and private user metadata via blind oracle techniques.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2025-15716 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-15716</link>
+    <guid isPermaLink="false">701edd824ac36fc64c1b49349dc8b88e</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.1 | An incorrect implementation of authentication algorithm vulnerability in the SSO API in Synology DiskStation Manager (DSM) before 7.2.2-72806-5 and 7.3.1-86003-1 (7.2.1-69057 is not affected) allows remote attackers to read or write arbitrary files and conduct denial-of-service attacks with prior knowledge of the distinguished name (DN).</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2025-2235 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-2235</link>
+    <guid isPermaLink="false">d7c9a9cc385a79b0f4c546b774413622</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.8 | Improper Verification of Cryptographic Signature vulnerability in OpenText™ Connected MX allows Privilege Escalation. The vulnerability could allow a local, low-privileged user of a macOS endpoint to gain root privileges through the Connected MX Agent update process. This issue affects Connected MX macOS Agent: before 25.2.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125820 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125820</link>
+    <guid isPermaLink="false">4ed45bacf9e02af87a776e7dd7f23c9d</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.8 | Deserialization of Untrusted Data vulnerability in Rymera Web Co Product Feed PRO for WooCommerce woo-product-feed-pro allows Object Injection.This issue affects Product Feed PRO for WooCommerce: from n/a through 13.5.8.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125829 - NVD - CVSS Score v3.1: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125829</link>
+    <guid isPermaLink="false">c95dfcb058354e8d3806387a80e4220c</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.7 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Rymera Web Co Product Feed PRO for WooCommerce woo-product-feed-pro allows Path Traversal.This issue affects Product Feed PRO for WooCommerce: from n/a through 13.5.8.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131959 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131959</link>
+    <guid isPermaLink="false">515fc08c6e3538a87a5a6e4bd8caf06a</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.8 | GNU Emacs 31.1 contains a code injection vulnerability in its handling of directory-local variables. A crafted .dir-locals.el can supply a (REGEXP FUNCTION t) entry in auto-mode-alist; when a matching file is opened, Emacs calls FUNCTION before set-auto-mode--dir-local-valid-p validates it, executing arbitrary Emacs Lisp with the privileges of the Emacs process. (Emacs 30.2 is unaffected.)</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-1212 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-1212</link>
+    <guid isPermaLink="false">667bb38ea4debb39957c7dcb639444e9</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 5.4 | The BuddyPress plugin for WordPress is vulnerable to Insecure Direct Object Reference in all versions up to, and including, 14.4.0. This is due to the `get_item_permissions_check` function in the Messages REST API endpoint trusting a client-supplied `user_id` parameter instead of using the authenticated user's ID. This makes it possible for authenticated attackers with Subscriber-level access and above to read, update, or delete other users' private message threads by specifying the victim's user ID in the request.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
