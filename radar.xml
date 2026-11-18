@@ -5,135 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 20:02:55 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-130767 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130767</link>
-    <guid isPermaLink="false">90bc09fd8d8928ec02d9a4ab03024229</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | Obot from 0.9.0 before 0.27.0 contains a command injection vulnerability that allows authenticated users to execute shell commands by embedding an EOF line in file-type MCP server configuration values. Attackers can terminate the heredoc in the generated init container script to run commands, modify the MCP server files volume, and reach services on Obot's Docker network.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130768 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130768</link>
-    <guid isPermaLink="false">86944878d746d578407bd32048dfc75a</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.1 | Obot from 0.14.0 before 0.27.0 contains a server-side request forgery vulnerability that allows Power Users to bypass outbound protections by supplying unspecified addresses, IPv6 transition addresses, or registry icon URLs. Attackers can add remote MCP servers pointing to 0.0.0.0, ::, or NAT64/6to4/Teredo addresses embedding blocked IPv4 addresses to probe internal services for reachability.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130769 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130769</link>
-    <guid isPermaLink="false">85738728a8ba4cf25fdcd4eedddddca2</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | Incus before 7.6.0 contains a denial of service vulnerability that allows clients permitted to create instances to crash the daemon by importing a backup with a null snapshot entry in index.yaml. Attackers can trigger an unrecovered nil pointer dereference during configuration rewrite, terminating the daemon and all containers and virtual machines on the node.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130770 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130770</link>
-    <guid isPermaLink="false">acafb69bdf23af1b985ac02d30013286</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.2 | Incus before 7.6.0 creates the NBD servers used for virtual machine migration and disk export on abstract unix sockets, which have no permission checks and whose names are visible in /proc/net/unix. A local unprivileged user can connect while an operation runs to read or modify the VM disk, gaining code execution in the guest on a migration's receiving side.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130771 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130771</link>
-    <guid isPermaLink="false">152c1baca921ea139e9d8448035ea47f</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.5 | Incus before 7.6.0 fails to reject special files, hard links, or symlinks in backup or image metadata, allowing restricted project users to read or overwrite host files. Attackers can import crafted backups containing device nodes, a hard-linked backup.yaml, or symlinks to corrupt host storage, overwrite host files, or leak other projects' data.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130772 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130772</link>
-    <guid isPermaLink="false">4a6a66dedd67707567a8c230ebba59ec</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | Incus before 7.6.0 contains an improper authorization vulnerability that allows restricted TLS clients to read other projects' bucket S3 keys and profile configuration through recursive and all-projects responses. Attackers can query bucket listings with recursion=2 or profiles with all-projects=true to obtain S3 secret keys and sensitive environment, cloud-init and user values across projects.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130773 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130773</link>
-    <guid isPermaLink="false">3767338278545d22b83d32746cdeb2e5</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.4 | Incus before 7.6.0 contains an authorization bypass that allows restricted project users to create resources in the unrestricted default project by targeting projects lacking features.* flags. Attackers can create bridge networks with raw.dnsmasq dhcp-script injection to run scripts as root, or custom volumes with block.create_options mkfs arguments to read host files.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130774 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130774</link>
-    <guid isPermaLink="false">6e810cbecb761b0bf5420f07ef2c5ac5</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.3 | Incus before 7.6.0 contains a privilege escalation vulnerability: rebuilding a never-started unprivileged container makes it boot without a user namespace. Root processes inside the container run as host uid 0, keeping capabilities like sys_module, with no device cgroup restriction, letting them load kernel modules and compromise the host.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130775 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130775</link>
-    <guid isPermaLink="false">33f892756dd63a66a02eaaa34ae4be8c</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.2 | Incus before 7.6.0 contains an authorization bypass vulnerability in the /dev/incus guest-API image export handler that fails to pin the project parameter to the guest's own project. Container root users with the guest-API image entitlement can supply another project in the project query parameter to export public or cached images, including non-public images pulled from authenticated remotes.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130776 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130776</link>
-    <guid isPermaLink="false">2d9fc68f62e98e33cc620dd242091f88</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | Incus before 7.6.0 contains an information disclosure vulnerability that allows clients with project event-view access to read migration websocket secrets broadcast in operation metadata. Attackers can connect to in-flight migration control and fs websockets before the legitimate peer, hijacking the transfer to obtain instance configuration and filesystem data.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130777 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130777</link>
-    <guid isPermaLink="false">910931b1db825fca12b342181dde7a58</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | Incus before 7.6.0 contains an information disclosure vulnerability that allows project-restricted authenticated clients to receive other projects' OVN ACL logs because these events are broadcast with an empty project. Attackers can subscribe to network-acl events on one accessible project to observe internal IPs, ports, protocols, and allow/drop decisions across all projects.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130778 - NVD - CVSS Score v4.0: 10.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130778</link>
-    <guid isPermaLink="false">b79fde91543790cacbbc78df60f2493a</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 10.0 | Incus before 7.6.0 contains an authentication bypass vulnerability that allows remote attackers to authenticate as any trusted certificate by appending its public certificate to their presented TLS client chain. Attackers can append the server's or a cluster member's certificate to gain cluster-level access, bypass authorization, modify trust store entries, and influence scriptlet-based authorization decisions.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130779 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130779</link>
-    <guid isPermaLink="false">dff389de625b976dca5d98b2748c6535</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.5 | Incus before 7.6.0 contains a path traversal vulnerability that allows users permitted to import custom volumes to store unvalidated snapshot names from the backup index configuration section. Attackers can craft a backup with traversal sequences in snapshot names so later deletion removes arbitrary host directories as root, while renaming or mounting operates on arbitrary paths.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130780 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130780</link>
-    <guid isPermaLink="false">1384750c46877d036398f0e96ff2ef41</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.4 | Incus before 7.6.0 contains a path traversal vulnerability that allows malicious migration peers to write outside intended directories by supplying unvalidated dependent volume and snapshot names in the migration offer header. Attackers controlling a migration source can create root-owned volumes with attacker content at arbitrary host paths, compromising hosts using dir storage pools, bypassing restricted.storage-pools.access, or crashing the daemon.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130781 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130781</link>
-    <guid isPermaLink="false">fe7e8ef6d2a7a980f88c869ffea5ac9b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | Incus before 7.6.0 contains a resource exhaustion vulnerability in the storage bucket S3 listener, which buffers entire signed request bodies in memory before verifying the signature or credential role. Attackers knowing only a valid access key, or holding a read-only credential, can send many concurrent large requests to exhaust daemon memory.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130782 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130782</link>
-    <guid isPermaLink="false">2b8630d896c2df9766a6a6ea6df2f0c4</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.3 | Incus before 7.6.0 contains an improper authorization vulnerability that allows restricted and view-only clients to read default project resources by requesting the default project directly. Attackers knowing resource names can read profiles, images, network zone peer keys and stored credentials, and export custom volume or bucket backups to obtain full contents or S3 admin keys.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 18 Nov 2026 21:01:31 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-130783 - NVD - CVSS Score v4.0: 9.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130783</link>
@@ -323,6 +195,134 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75521</link>
     <guid isPermaLink="false">684f952af27c865da70139d1fad87e38</guid>
     <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 10.0 | Miren Runtime provides the runtime component for the Miren application platform. Prior to 0.11.1, the QUIC/HTTP3 RPC server on the default port 8443 uses tls.RequestClientCert and does not verify that presented certificates chain to the configured cluster certificate authority. The RPC authenticators derive a caller identity from PeerCertificates[0].Subject.CommonName without requiring a non-empty VerifiedChains value, and certificate identities bypass all RBAC checks. A network attacker who can reach the listener can present a self-signed certificate with an issuer distinguished name matching the public cluster CA subject and gain cluster superuser access, allowing disclosure, modification, or disruption of applications, sandboxes, disks, credentials, and other managed resources. This issue is fixed in version 0.11.1.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127095 - NVD - CVSS Score v3.1: 3.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127095</link>
+    <guid isPermaLink="false">309b47b0fed833b391a3e8d697cd9aed</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 3.3 | A flaw was found in ansible-builder. The regular expression used to strip comments from a collection's requirements.txt during introspection is susceptible to super-quadratic backtracking. A requirements file containing a line with a long run of internal whitespace and no comment character causes the comment-stripping routine to consume CPU time proportional to the square of the line length. An attacker who can get a victim to build an execution environment that includes an attacker-supplied collection can cause the ansible-builder build or introspect process to hang, resulting in a denial of service. This issue has no confidentiality or integrity impact.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127096 - NVD - CVSS Score v3.1: 3.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127096</link>
+    <guid isPermaLink="false">133da886739589135b8cfb9b7cb3ca19</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 3.3 | A flaw was found in the Ansible language server shipped with the vscode-ansible extension. The regular expression used to extract documentation fragments from Ansible module files is susceptible to quadratic-time scanning. A module file containing a crafted documentation string causes the language server to consume excessive CPU while indexing it, freezing the language service in the developer's editor. An attacker who can get a developer to open or index a workspace containing an attacker-supplied collection can cause a denial of service of the editor language features. This issue has no confidentiality or integrity impact.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128667 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128667</link>
+    <guid isPermaLink="false">04f66cea70ebaef486bb88d578c5f8d5</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | A Cross-Site Request Forgery (CSRF) vulnerability in the admin panel of PHPGurukul News Portal Project V4.1 allows remote attackers to hijack the authentication of administrators and perform unauthorized state-changing actions, such as adding, editing, or deleting posts and sub-admins, or changing passwords, via crafted HTTP requests. This occurs because the application fails to implement anti-CSRF tokens for admin actions and permits destructive operations via HTTP GET requests.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128668 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128668</link>
+    <guid isPermaLink="false">bc8bfa42613e1bf4767a9f7996c9091c</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | An Unrestricted File Upload vulnerability in the admin panel of PHPGurukul News Portal Project V4.1 allows authenticated attackers to upload files with arbitrary content by bypassing weak filename extension validation in add-post.php and change-image.php. Although files are renamed with an image extension upon storage, the lack of MIME type and content validation enables content spoofing, storage of malicious markup, and creates a vector for Remote Code Execution (RCE) with server misconfigurations or secondary Local File Inclusion.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128669 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128669</link>
+    <guid isPermaLink="false">cd022652a599b68535d9bb232ae644d7</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.1 | A Session Fixation vulnerability exists in the admin login endpoint (/admin/index.php) of PHPGurukul News Portal Project V4.1. The application fails to regenerate the session identifier (PHPSESSID) upon successful authentication. A remote attacker can exploit this by setting a known session ID in the victim's browser prior to login. Once the victim authenticates, the attacker can reuse the fixed session ID to hijack the victim's authenticated session.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129829 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129829</link>
+    <guid isPermaLink="false">f0b30b5326071422c6c16b4399f7e74b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 5.5 | The rsyslog's`imuxsock` special parser can end up writing into the received message raw buffer when trying to replace the message timestamp with the system's timestamp. A local attacker with the ability to write to the `imuxsock` socket can leverage that by crafting a malformed PRI value with a short timestamp to lead the rsyslog to perform the out-of-bounds write.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132136 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132136</link>
+    <guid isPermaLink="false">de6c2fa9d54a2173275d5ee7c98d7abe</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.5 | A weakness has been identified in Directus up to 12.6.1. Affected by this issue is the function getSecret of the file api/src/services/shares.ts of the component Share Login Service. This manipulation causes incorrect authorization. It is possible to initiate the attack remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-62245 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62245</link>
+    <guid isPermaLink="false">e1ffea0cf54703683bfd19a1f4bcab0d</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.5 | X-Road is open-source data exchange layer software. Prior to 7.8.2, 7.7.3, and 7.6.4, HashChainVerifier in the common-message module resolves attacker-controlled batch-signature hash chains before verifying the message signature and signing certificate, without cycle detection, recursion-depth or total-step limits, or per-step memoization. A registered ecosystem member can send a small crafted hashchain MIME part with repeated or cyclic StepRef values so that verifyHashChain() performs exponential work or unbounded recursion before authentication. Repeated requests can exhaust Security Server proxy threads and deny data-exchange service, and a self-reference can raise an uncaught error. This issue is fixed in versions 7.8.2, 7.7.3, and 7.6.4.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-62340 - NVD - CVSS Score v3.1: 8.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62340</link>
+    <guid isPermaLink="false">8b2cf58ae9b1b9935b5611038dcd5131</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.0 | X-Road is open-source data exchange layer software. Prior to .8.2, 7.7.3, and 7.6.5, the Security Server writes each downloaded federated global-configuration part under the X-Road instance identifier declared by the part itself without checking that the identifier matches the source ecosystem that signed and delivered it. A malicious or compromised federated ecosystem can provide a validly signed SHARED-PARAMETERS part naming a victim ecosystem, causing the part to be written as the victim's authoritative shared-params.xml. The poisoned configuration can persist across refreshes, add attacker-controlled trust material, and enable impersonation of victim members and Security Servers across every ecosystem federated with the malicious source. This issue is fixed in versions 7.8.2, 7.7.3, and 7.6.5.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63129 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63129</link>
+    <guid isPermaLink="false">0428cf3ffac9ecaac3d5cbb90166adef</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.8 | mssql-mcp-core is the shared library that powers MSSQL MCP servers. Prior to core and server 0.6.0 and reader and writer 0.5.0, multiple database tools interpolate caller-controlled identifiers and predicates into T-SQL batches passed to Request.query() while parameterizing only data values. update_data, delete_data, insert_data, execute_transaction, create_table, create_index, and drop_table accept unsafe tableName, column, index, schema, or free-form whereClause input, while reader-tier list_databases interpolates stateFilter without runtime allowlist enforcement. Row-count and preview queries execute before confirmUpdate or confirmDelete, allowing malicious arguments to bypass confirmation and maxRows controls and execute stacked DDL or DML, read or destroy data, and potentially run operating-system commands when the SQL login is privileged and xp_cmdshell is enabled. This issue is fixed in core and server version 0.6.0 and reader and writer version 0.5.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63483 - NVD - CVSS Score v3.1: 6.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63483</link>
+    <guid isPermaLink="false">9c03ad09f646ccbb05f118ce5a5bc4dc</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.6 | X-Road is open-source data exchange layer software. Prior to 7.8.2 and 7.7.3, the Configuration Proxy uses attacker-controlled Content-location metadata from a validly signed federated global configuration part when constructing an output path without verifying that the resulting path remains inside the intended configuration output directory. A malicious or compromised federated ecosystem can provide an absolute path or directory traversal sequence during the normal refresh cycle, causing the Configuration Proxy to create a new file with attacker-controlled content under the permissions of the non-privileged xroad process. The vulnerability can poison downstream global configuration or create files in other writable locations, but it does not overwrite existing files. This issue is fixed in versions 7.8.2 and 7.7.3.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-68903 - NVD - CVSS Score v3.1: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-68903</link>
+    <guid isPermaLink="false">67ebd655453123613af15066cab51794</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.7 | LLMKube is a Kubernetes operator for self-hosted large language model inference across heterogeneous hardware. Prior to 0.9.0, the ModelReconciler accepts arbitrary absolute paths and file:// URIs in Model.spec.source without restricting them to approved roots. A namespace user who can create or update Model and InferenceService resources can cause copyLocalModel to open an attacker-selected file in the controller pod or cause a HostPathVolumeSource to mount an attacker-selected node file when modelCache.enabled is enabled, which is the default. The selected file is copied into model storage and can expose controller service-account credentials or other node secrets outside the attacker's namespace. This issue is fixed in version 0.9.0.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-71425 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71425</link>
+    <guid isPermaLink="false">11aa393ff32c4ad5189bfcd2d1f9ac26</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.5 | Outstatic is a static site CMS for Markdown and MDX content stored in GitHub repositories. Prior to 2.2.1, the authenticated GitHub REST proxy accepts an unvalidated endpoint value, constructs an upstream URL by string concatenation, and attaches the current dashboard user's GitHub OAuth token without ensuring the destination remains the exact GitHub API origin. An authenticated dashboard user can cause the server to send that user's token to a non-GitHub host, potentially exposing private repositories and other resources allowed by the token's scopes. The issue does not let an unauthenticated attacker access private data and does not directly expose another user's token without an additional same-origin execution or request-forging primitive. This issue is fixed in version 2.2.1.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-73504 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73504</link>
+    <guid isPermaLink="false">6fe07bce84cef983e7daca242e3b55ed</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 5.5 | cassandra-jdbc-wrapper provides a JDBC-compliant API over the Java driver for Apache Cassandra. Prior to 4.16.4 and 5.0.2, DriverUtil.toStringWithoutSensitiveValues() and DriverUtil.redactSensitiveValuesInJdbcUrl() redact the password property but not the equally sensitive token property used for DataStax Astra and other token-based authentication. When DEBUG logging is enabled, SessionHolder passes connection properties and JDBC URLs containing token through these helpers, causing the live token to be written in plaintext when connections are acquired or released. An attacker who can read those logs can use the token to access Cassandra data and operations authorized to that credential. This issue is fixed in versions 4.16.4 and 5.0.2.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-76090 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76090</link>
+    <guid isPermaLink="false">e3c6ae952707323b009ef4d7dfdebee4</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.4 | Tapir is a Scala library for describing HTTP APIs and exposing, consuming, and documenting them using open standards. Prior to 1.13.27, tapir-openapi-codegen-core generates Scala source from untrusted OpenAPI documents by interpolating object property names, query, header, and path parameter names, and operation tags without context-appropriate validation or escaping. Crafted names or values can break out of generated identifier or string-literal contexts and inject arbitrary Scala that executes when generated code is compiled or endpoints are assembled. This is a code-generation and build-time issue and does not make a running tapir server directly exploitable. This issue is fixed in version 1.13.27.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-76807 - NVD - CVSS Score v3.1: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76807</link>
+    <guid isPermaLink="false">712cd7e0a47e166185f7eadf8c824422</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 9.3 | Todoist MCP Server provides tools that allow AI agents to access and modify a Todoist account. Prior to 10.3.3, the optional todoist-mcp-http server accepts browser-origin requests to POST /mcp without validating the Host and Origin headers or authenticating the browser caller. A malicious website can use DNS rebinding to reach the loopback listener and invoke MCP tools through StreamableHTTPServerTransport, which uses the server-held Todoist API key. This exposes Todoist account data and permits operations such as task creation, updates, completion, and deletion. The stdio transport is not browser-reachable and is not affected by this attack path. This issue is fixed in version 10.3.3.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
