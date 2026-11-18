@@ -5,147 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Nov 2026 03:00:22 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-129892 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129892</link>
-    <guid isPermaLink="false">f2762a72a308a8740957274da406af45</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS: não informado | IO::Socket::SSL::PublicSuffix versions through 2.099 for Perl allow code injection via a fetched list line that closes the built-in data heredoc when update_self_from_url rewrites the module's source.
-
-The rewrite copies the module's source down to the built-in list's heredoc and appends each fetched line below it. Nothing checks that a line looks like a domain. A line that is not a comment loses only what follows a `//` and its trailing whitespace, so a line reading END_BUILTIN_DATA is appended as it stands and ends the data block in the rewritten file. Every fetched line after it is Perl.
-
-Arbitrary Perl runs in every process that loads IO::Socket::SSL, which loads this module unconditionally, until the file is reinstalled. The attacker must control the fetched list, through the cleartext default URL or a caller-supplied one, and the updater must run with write access to the installed module.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130600 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130600</link>
-    <guid isPermaLink="false">7fa9640cc4f43ef3ead286ca520b7ff6</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 4.3 | Insertion of Sensitive Information Into Sent Data vulnerability in BdThemes Element Pack Elementor Addons bdthemes-element-pack-lite allows Retrieve Embedded Sensitive Data.This issue affects Element Pack Elementor Addons: from n/a through 10.0.9.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131842 - NVD - CVSS Score v4.0: 5.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131842</link>
-    <guid isPermaLink="false">548ed1904346fbd0e22a75b62597cfe5</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.7 | Poppler pdfdetach 24.03.0 through 26.11.0 contains a path traversal vulnerability in utils/pdfdetach.cc that allows attackers to write files outside the output directory by bypassing a string-prefix containment check. Attackers can craft PDFs with embedded file names containing '..' sequences or absolute paths, so -saveall or -savefile extraction creates or overwrites files with the invoking user's privileges.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131843 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131843</link>
-    <guid isPermaLink="false">b8b85816456f1c97106e07ea5c0fc97d</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | Poppler pdftohtml through 26.11.0 contains a cross-site scripting vulnerability in HtmlLink::getLinkStart() in utils/HtmlLinks.cc that writes PDF link annotation URIs into href attributes without escaping in HTML output modes. Attackers can craft a PDF whose /URI entry contains a double quote followed by HTML markup or event handlers to execute script in browsers viewing the generated HTML.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131844 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131844</link>
-    <guid isPermaLink="false">2fa40599d270fa9d10b16dc0419ae180</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | Poppler through 26.11.0 contains an uncontrolled memory allocation vulnerability in the libcurl-based remote file loader that trusts unvalidated HEAD Content-Length values in CurlCachedFileLoader::init(). Malicious HTTP servers can return an enormous Content-Length so CachedFile resizes its chunk cache accordingly, aborting pdfinfo or PDFDocFactory-based applications with std::bad_alloc for denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131845 - NVD - CVSS Score v4.0: 4.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131845</link>
-    <guid isPermaLink="false">77f1eb3cc26e40168120d2627e6fa13c</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 4.1 | Poppler 21.01.0 through 26.11.0 contains a time-of-check time-of-use race condition in FormWidgetSignature::signDocument() that allows local attackers to obtain valid signatures over altered content. Attackers with write access to the output file or directory can overwrite or swap the PDF between writing and hashing, causing the signer's key to sign attacker-controlled content.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131846 - NVD - CVSS Score v4.0: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131846</link>
-    <guid isPermaLink="false">1c3df5cb90bfb2bcf288c7341eb2e1c5</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.8 | Poppler 0.76.1 through 26.11.0 contains a heap-based buffer overflow in SplashOutputDev::iccTransform() that allows attackers to write out of bounds when rendering in splashModeDeviceN8. Attackers can supply a PDF with an ICCBased image whose alternate is DeviceN, causing getDeviceNLine() to overflow the per-row buffer, crashing the renderer and corrupting heap memory.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131847 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131847</link>
-    <guid isPermaLink="false">95f03912aa1bd8157fabe1b5cf6061c1</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 4.8 | Poppler through 26.11.0 contains a use-after-free vulnerability in NSSCryptoSignBackend.cc that allows attackers to trigger reads of freed CMS arena memory during repeated signature verification. Attackers can supply a signed PDF embedding the signer certificate to crash applications or pdfsig runs validating multiple signatures, or cause incorrect certificate validation results.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131848 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131848</link>
-    <guid isPermaLink="false">2fef692bf3b02228e2b5951bb20a964b</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.3 | Snap7 through 1.4.3 contains an out-of-bounds write vulnerability in TSnap7MicroClient::opReadMultiVars() that allows malicious PLCs to overflow client buffers via unchecked DataLength fields. Attackers controlling or impersonating a PLC can return crafted ReadVar responses to Cli_ReadMultiVars() callers, writing up to 65535 bytes per item to corrupt memory and crash clients.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131849 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131849</link>
-    <guid isPermaLink="false">bb30e29d44d55f299894e816c7ccabc0</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.3 | Snap7 through 1.4.3 contains a heap-based buffer overflow in TSnap7MicroClient::opReadSZL() that allows malicious PLCs to overwrite client memory by sending oversized multi-slice SZL responses. A rogue or impersonated PLC can keep flagging more data with attacker-controlled DLen slices, overflowing the 65536-byte opData buffer via Cli_ReadSZL() and Cli_ReadSZLList(), crashing the client and corrupting heap memory.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131850 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131850</link>
-    <guid isPermaLink="false">c4aaeb4e4a0f8fb274573a67477d1174</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | ILIAS 11.0 before 11.6 contains an sql injection vulnerability in RegistrationCodeRepository::getCodesData() that concatenates unvalidated sort fields into an ORDER BY clause. Authenticated users with read access to the Authentication and Registration administration node can supply SQL expressions as the sort parameter to extract database contents via boolean-based inference.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131851 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131851</link>
-    <guid isPermaLink="false">bf8db5bb411c320875f786b7e80d0ef5</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | ILIAS before 9.25, 10.13, and 11.6 contains an SQL injection vulnerability in ilPRGAssignmentFilter::toConditions() that allows authenticated users to inject SQL through the StudyProgramme members list Name and Status filters. Attackers holding only the OrgUnit permission to view members can break out of LIKE literals and execute stacked statements, such as overwriting the root password hash to gain administrative control.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131852 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131852</link>
-    <guid isPermaLink="false">f77f8de2b12f507d5fc408f9bd0c83d6</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 9.3 | OwnTracks Recorder before 1.0.5 contains a format string vulnerability in json_response() and related output functions that allows unauthenticated attackers to execute code by storing a malicious tid value. Attackers can publish locations via POST /pub or MQTT with printf specifiers in tid, then read them back through GET /api/0/last to leak addresses and write memory.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131853 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131853</link>
-    <guid isPermaLink="false">d8c9d491de3b5a447e76d152ec18e808</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.0 | Ettercap through 0.8.5.1 contains a heap out-of-bounds read vulnerability in dissector_ssh() in src/dissectors/ec_ssh.c that copies a peer-supplied data_len without checking remaining packet bytes. A malicious SSHv1 client or server in an intercepted session can send a short packet with a large data_len to disclose up to 64 bytes of adjacent heap memory through captured credentials in the interface and log.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131854 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131854</link>
-    <guid isPermaLink="false">2e171619d9c74c6fb483edc8aeb80a18</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | Ettercap through 0.8.5.1 contains a heap out-of-bounds read vulnerability in dissector_mysql() in src/dissectors/ec_mysql.c that copies seed and password bytes without bounds checks. A malicious MySQL server or client can send truncated greeting or login packets to leak adjacent heap memory through hex-encoded output in the interface and log.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131855 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131855</link>
-    <guid isPermaLink="false">7419c7411af59cf4a0debc43fde1fb1c</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | Ettercap through 0.8.5.1 contains a heap out-of-bounds read vulnerability in dissector_vnc() in src/dissectors/ec_vnc.c that checks total packet length instead of remaining bytes. A malicious VNC server can send the authentication type and challenge in one short packet to leak up to 3 bytes of adjacent heap memory via the logged challenge.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131856 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131856</link>
-    <guid isPermaLink="false">2a7d91cae327bb65cf5c3036372b787e</guid>
-    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.9 | Pika before 1.5.0 contains an uncontrolled resource allocation vulnerability that allows malicious brokers to exhaust client memory by declaring oversized frame payloads. Attackers can send frame headers declaring up to 4 GiB payloads, unchecked against frame_max, or very large message bodies to terminate consuming applications.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 18 Nov 2026 05:01:57 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-131857 - NVD - CVSS Score v4.0: 8.7</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131857</link>
@@ -351,6 +211,142 @@ Security Update for ASUS Router Firmware ' section on the ASUS Security Advisor
     <guid isPermaLink="false">8a85c4789c5a3e1cfbfd1da92d2bc8d9</guid>
     <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.5 | Use of externally-controlled format string in certain ASUS Router firmware allows a nearby administrator to read or write memory, potentially resulting in a denial-of-service, via crafted format specifiers sent to the logging/summary function.
 Refer to the ' Security Update for ASUS Router Firmware ' section on the ASUS Security Advisory for more information.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107949 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107949</link>
+    <guid isPermaLink="false">37b6847a5c9b88d3fa61ef4ea1d8b1c0</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 6.5 | A SQL injection vulnerability affects an administrative API in HCL Commerce versions 8, 9.0.1 and 9.1.0 - 9.1.21.  A remote attacker with an administrative role could use a crafted URL to infer unauthorized data from the database.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107950 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107950</link>
+    <guid isPermaLink="false">f8428496240449cb80628a6e9bacab30</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.2 | An XML External Entity (XXE) vulnerability affects a Storefront REST API in HCL Commerce versions 8, 9.0.1 and 9.1.x.  A remote attacker, using a specially crafted XML, could potentially view internal files or consume memory resources.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-117634 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117634</link>
+    <guid isPermaLink="false">6538f2bb8df0fbc9c7a695bb9affe344</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.9 | Pleasanter contains an incorrect authorization vulnerability in Publishing feature. If this vulnerability is exploited, a remote unauthenticated attacker who can access a site published using the product may obtain, by sending a specially crafted request, information on records of unpublished sites (e.g., titles), as well as the names of users, groups, and organizations registered in the same tenant. Note that the vulnerability only affects configurations where both of the following conditions are met: a site is published using the Publishing feature, and the published site contains link items (items linked to other sites, users, groups, or organizations).</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120472 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120472</link>
+    <guid isPermaLink="false">ea9c4e56e54211e7bde21bcfaf403ba0</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 5.9 | A flaw was found in OpenShift Hive. The ClusterClaim controller assigns hive-claim-owner RBAC based on a user-controlled ClusterClaim.spec.namespace and only verifies ClusterPoolRef.ClaimName. A tenant can point a same-named claim at another tenant's ClusterDeployment and obtain get access to that cluster's admin kubeconfig and admin password secrets.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121811 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121811</link>
+    <guid isPermaLink="false">920d3a5428aa3e1da1995f317d803054</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | Pleasanter contains an issue with improper limitation of a pathname to a restricted directory ('Path Traversal') in the API. If this vulnerability is exploited, an arbitrary file on the server where the product is running may be obtained by a remote authenticated attacker.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125276 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125276</link>
+    <guid isPermaLink="false">006ae2c85e66b07296e8d25ff8e63fa4</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | Pleasanter contains an issue with insertion of sensitive information into sent data in the API. If the affected product receives a specially crafted API request sent by a remote authenticated attacker, the authentication credentials of other users, including administrators, such as API keys, may be obtained. As a result, the attacker may perform arbitrary operations on the affected product with the privileges associated with the obtained credentials.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125411 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125411</link>
+    <guid isPermaLink="false">43dacf0ce1312cb317d55f324bece598</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 5.3 | Pleasanter contains an incorrect authorization vulnerability in the access control of Items. If this vulnerability is exploited, a remote authenticated attacker who can view records in the affected product may obtain the values of Items for which read access is restricted by Column access control. Note that the vulnerability affects configurations where read access conditions are set in Column access control settings.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131800 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131800</link>
+    <guid isPermaLink="false">bf684391285a14458ebe68ddd4a79979</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.3 | A stored cross-site scripting vulnerability was identified in GitHub Enterprise Server that allowed an organization member with permission to manage custom-property definitions and edit property values to add an attacker-controlled SSH authentication key to the personal account of another member through HTML stored in a single-select custom-property option. Exploitation required another definition manager in the same organization to attempt to remove the poisoned option while it was in use and save the definition with a valid sudo session. Repository access through the added key depended on the permissions of the victim and independent authorization controls. This vulnerability affected supported GitHub Enterprise Server prior to 3.23 and was fixed in versions 3.19.16, 3.20.12, 3.21.10, and 3.22.5. This vulnerability was reported via the GitHub Bug Bounty program.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131871 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131871</link>
+    <guid isPermaLink="false">7f2ea76953d0182fa7fa1615bb949447</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.5 | WLA DX 9.7 through 10.7 contains a stack-based buffer overflow vulnerability in parse_data_blocks() in wlalink/analyze.c that copies section namespaces without length checks. Attackers can supply a crafted object or library file with a namespace longer than 255 bytes or unterminated to overflow the 256-byte stack buffer when linked.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131872 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131872</link>
+    <guid isPermaLink="false">7e0468a97b95b655954de9e87f1a0b75</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.8 | SOIL2 before 1.4.2 contains a NULL pointer dereference vulnerability in its DDS, PVR and PKM image loaders that write results through unchecked caller-supplied output pointers. Attackers can supply a valid DDS, PVR or PKM file to applications passing NULL output pointers to SOIL_load_image or stbi_info, causing a crash.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131873 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131873</link>
+    <guid isPermaLink="false">67454bc41279efdedd0ee2013dc76d41</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.9 | Gargoyle 2023.1 through 2026.1.1 contains a stack-based buffer overflow vulnerability in the bundled Plus interpreter's ReadAction() function in terps/plus/loaddatabase.c, which never bounds-checks the index into the 1024-entry conditions array. Attackers can supply a crafted or truncated .plus game file with unterminated action conditions to write file-controlled values past the array and crash the player.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131874 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131874</link>
+    <guid isPermaLink="false">b660e543b5c122c0a0019cbe93d2082e</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 6.8 | Gargoyle 2023.1 through 2026.1.1 contains an infinite loop vulnerability in the bundled Plus interpreter's ReadString() function in terps/plus/loaddatabase.c that fails to handle end of file. Attackers can supply an empty, truncated, or crafted .plus game file that hangs Gargoyle at full CPU until the user kills it.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131875 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131875</link>
+    <guid isPermaLink="false">c03b0e74ee30dc402ab6b03ba9dba160</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.7 | fqterm before 0.9.11 contains a heap out-of-bounds write vulnerability in FQTermDecode that allows malicious servers to corrupt memory by sending CSI sequences with unbounded parameter indexes. Attackers controlling a telnet or SSH server, or intercepting cleartext telnet, can send over 30 semicolon-separated CSI parameters to write chosen 32-bit values past the decoder object on the heap.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131876 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131876</link>
+    <guid isPermaLink="false">1e03470a4a4cd2a3882d6cb41b2d9269</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 7.1 | fqterm 0.9.9 before 0.9.11 contains an out-of-bounds memory access vulnerability in its SSH client that trusts unchecked server-supplied length fields for allocations, copies and read positions. Malicious servers or man-in-the-middle attackers can send crafted lengths in getString(), KEXINIT name-lists, key parsing or packet framing before host key verification to crash the client.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101113 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101113</link>
+    <guid isPermaLink="false">60803758459ad12e373a6f95d463d95d</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v4.0: 8.6 | Multiple ELECOM wireless LAN routers contain an OS command injection vulnerability that may cause an arbitrary OS command to be executed by an attacker who can access the administrative interface of the affected product.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130121 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130121</link>
+    <guid isPermaLink="false">0ce7af6167b043d53de01e69c4a19e6b</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 7.2 | The AI Puffer - MCP Server for Claude &amp; ChatGPT, with AI Chatbot plugin for WordPress is vulnerable to Stored Cross-Site Scripting via AI-generated comment replies in all versions up to, and including, 2.5.28 due to insufficient sanitization of the AI model's output in the insert_comment_reply_logic() function, which saves replies with wp_insert_comment() and bypasses the kses filtering WordPress normally applies to comment content. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page, by submitting a comment that leads the AI model to reproduce an HTML payload in its automated reply. This is only exploitable when an administrator has configured a Comment Auto-Reply automation task with 'Action on reply' set to 'Approve' (the default is 'Hold for moderation'), and the attacker's comment has been approved.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130644 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130644</link>
+    <guid isPermaLink="false">1b1036c7f41813bd0642478d0eb94aef</guid>
+    <description>Wednesday 18 November 2026 | NVD | CVSS Score v3.1: 8.1 | A path traversal flaw was found in ansible-core. When installing a collection with ansible-galaxy collection install, the install destination directory is derived from the namespace and name fields declared inside the collection artifact's own metadata, which are not validated as well-formed collection identifiers or checked for path containment. A malicious collection artifact -- delivered as a local file, a remote URL, a source directory, a git repository, or as a dependency -- can use a crafted name value to redirect the install destination outside the configured collections path, causing ansible-galaxy to delete an existing directory writable by the invoking user and then write attacker-controlled files to that location.</description>
     <category>NVD</category>
     <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
   </item>
