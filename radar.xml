@@ -5,39 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 07:02:56 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-132773 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132773</link>
-    <guid isPermaLink="false">2f1d0164018cdb03b126a641b090264c</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 7.1 | Attendize through 2.8.0 contains an authorization bypass vulnerability in EventOrdersController::postCancelOrder() that allows authenticated organisers to cancel attendees belonging to other accounts' events. Attackers can cancel one of their own orders while supplying foreign attendee IDs, which Attendee::findFromSelection() loads unfiltered, invalidating tickets for any event on the installation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132774 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132774</link>
-    <guid isPermaLink="false">00a8038d0f2071ff8db619c11625eeb9</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.3 | Attendize through 2.8.0 contains a cross-account authorization bypass vulnerability in EventAttendeesController::postMessageAttendees() that allows authenticated organisers to message other accounts' attendees by supplying a foreign event_id. Attackers, including self-registered organisers, can post to the attendees message endpoint for another event to send arbitrary emails to all attendees, enabling phishing and impersonation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132775 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132775</link>
-    <guid isPermaLink="false">71f28e44cc498f63ef23aa1f5a871a74</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC before 26.07.0 contains a use-after-free vulnerability in xmt_node_end() that allows attackers to corrupt memory by attaching nodes from unrelated proto sub-graphs to field-replace commands. Attackers can supply a crafted XMT scene buffering such a command in a Conditional node, causing gf_node_try_destroy() to access the freed node, crashing MP4Box and corrupting the heap.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132776 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132776</link>
-    <guid isPermaLink="false">508e369c1f6c105ec6c9d32ed2b6528a</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box before 26.07.0 contains a use-after-free vulnerability in the XMT loader that allows attackers to crash the process by supplying crafted XMT files. Attackers can assign a second node to an SFNode command field so xmt_node_end() frees a forward-referenced child still cached in peeked_nodes, triggering a crash during DEF lookup in xmt_find_node().</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 19 Nov 2026 08:00:51 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-132777 - NVD - CVSS Score v4.0: 6.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132777</link>
@@ -331,6 +299,46 @@ This issue affects idna: from 0.5.0 before 8.0.0.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129446</link>
     <guid isPermaLink="false">a8e31763ae8af87058b080f2cb021a63</guid>
     <description>Thursday 19 November 2026 | NVD | CVSS: não informado | The WPO365 | SEAMLESS WORDPRESS + MICROSOFT INTEGRATION (WPO365 | LOGIN) WordPress plugin before 45.4 does not ensure the signature validated on a SAML response covers the element the user identity is read from, allowing unauthenticated attackers to forge a response via signature wrapping and log in as any user, including administrators, when they can supply a single artifact signed by the configured identity provider.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110461 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110461</link>
+    <guid isPermaLink="false">382d16dc601910595dc7357ca0b16ece</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 9.3 | The Comelit 1456B Multi-User Gateway, in firmware versions up to and including 2.10.0, is configured with static default passwords for multiple privileged roles. None of these passwords are required to be changed during initial configuration, and they remain at their default values unless the administrator changes them manually. An attacker with network access to the device can authenticate using these default credentials and gain administrative control.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110462 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110462</link>
+    <guid isPermaLink="false">f86d944857d005ecc5305c0e829bff40</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.6 | The Comelit 1456B Multi-User Gateway, in firmware versions up to and including 2.10.0, allows a user authenticated to the web interface with the Installer role to export a system configuration backup. The resulting backup file contains the configured passwords for all privileged roles</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132825 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132825</link>
+    <guid isPermaLink="false">48f9f5079f415d4c4147e96b3485e77e</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.4 | Ruby before 3.3.14, 3.4.13, and 4.0.10 has a heap-based buffer overflow during case conversion. One byte can be written outside a buffer for, for example, ISO-8859-1 or Windows-1252.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-19609 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19609</link>
+    <guid isPermaLink="false">8d409c0bb35ef861e44660c106b7e1bb</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.6 | Cross-site scripting in the embedded co-browsing feature in Unblu inc. Unblu Spark 7.0 through 7.57.9 and 8.0 before 8.40.2, on on-premises and cloud deployments, allows an unauthenticated remote attacker in the visitor role to execute arbitrary JavaScript in the browser of an agent taking part in the attacker's co-browsing session, via manipulated synchronized page attributes of the co-browsed page.
+
+
+
+The JavaScript runs in the context and under the identity of the agent's session in the Agent Desk or the Single Conversation Desk.
+
+
+
+Exploitation requires an agent to join an embedded co-browsing session with the attacker. Mobile co-apping isn't affected.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
