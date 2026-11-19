@@ -5,1681 +5,324 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 16:02:08 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 17:00:17 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-99526 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99526</link>
-    <guid isPermaLink="false">8ba5ef1a601ec98cc99607d2a2175f93</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-smb: client: fix use-after-free infoleak via the readdir resume name
-
-CIFSFindNext() copies the resume name that cifs_save_resume_key()
-recorded from the last entry of the previous response into its request;
-psrch_inf-&gt;presume_name points into the response buffer that entry came
-from, and nothing ever clears it. find_cifs_entry() records a new
-name only from a response with a usable last entry, and cifs_readdir()
-only from an entry it walks to, so a response that carries no entries
-and leaves last_entry NULL, because CIFSFindFirst() or CIFSFindNext()
-rejected LastNameOffset, refreshes neither and presume_name keeps
-pointing into the previous response. That buffer has already been
-released: by CIFSFindNext() before it installs the new response, or by
-find_cifs_entry() when it rewinds the search, which does not drop the
-name either and can then fail in initiate_cifs_search() before a new
-response replaces it. The next CIFSFindNext() then copies up to
-PATH_MAX - 1 bytes of the resume name out of the released buffer into
-its request and sends them to the server: a use-after-free read
-that leaks kernel memory to a malicious or compromised server, which
-can provoke it with a single FindNext response that carries no entries
-and a LastNameOffset above CIFSMaxBufSize, which is all the existing
-check rejects.
-
-With KASAN enabled, a server that answers a listing that way gives:
-
- CIFS: VFS: ignoring corrupt resume name
- ==================================================================
- BUG: KASAN: slab-use-after-free in CIFSFindNext+0x8ca/0x14c0
- Read of size 4080 at addr ffff88807c823f98 by task ls/83
-
- CPU: 0 UID: 0 PID: 83 Comm: ls Tainted: G    B               7.3.0-rc4-00457-gf14572c203d5 #69 PREEMPT(lazy)
- Tainted: [B]=BAD_PAGE
- Call Trace:
-  &lt;TASK&gt;
-  kasan_report+0xdf/0x1a0
-  kasan_check_range+0x10f/0x1e0
-  __asan_memcpy+0x23/0x60
-  CIFSFindNext+0x8ca/0x14c0
-  cifs_readdir+0xf51/0x29c0
-  iterate_dir+0x1c0/0x570
-  __x64_sys_getdents64+0x133/0x270
-  do_syscall_64+0x109/0x5d0
-  entry_SYSCALL_64_after_hwframe+0x77/0x7f
-  &lt;/TASK&gt;
-
- Allocated by task 83 on cpu 1 at 13.497119s:
-  cifs_buf_get+0x36/0x90
-  smb_init+0x4f/0x110
-  CIFSFindNext+0xf7/0x14c0
-  cifs_readdir+0xf51/0x29c0
-
- Freed by task 83 on cpu 0 at 13.584018s:
-  cifs_buf_release+0x41/0x80
-  CIFSFindNext+0xfce/0x14c0
-  cifs_readdir+0xf51/0x29c0
-
- The buggy address is located 16280 bytes inside of
-  freed 16588-byte region [ffff88807c820000, ffff88807c8240cc)
- ==================================================================
-
-The same memcpy() first reads past the end of that object while it is
-still live, a slab-out-of-bounds read that the following patches
-bound; that is the taint the report above carries.
-
-SMB1 is not negotiated by default; reaching this code requires an
-explicit vers=1.0 mount.
-
-Clear presume_name and resume_name_len whenever a new response is
-installed and when the rewind path releases the search buffer, so that
-the name never outlives the buffer it points into, and reset
-resume_key with them, since it was taken from the same entry and would
-otherwise be sent with an empty name. A response without a usable
-last entry then continues the search with an empty resume name rather
-than a stale one; CIFSFindNext() skips the copy of a zero-length name
-so that it never runs on the NULL pointer.
-
-The next patch in the series leaves last_entry NULL for a response
-that carries no entries, and bounds LastNameOffset against the
-received response rather than against CIFSMaxBufSize. Responses that
-are given a last entry today then take the path fixed here, so that
-patch must not be applied without this one.</description>
+    <title>CVE-2026-133236 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133236</link>
+    <guid isPermaLink="false">1e7c275bbb3210575f548e69fae7dab1</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.1 | Modoboa before 2.13.0 contains a CRLF injection vulnerability that allows Resellers or users with domain add or change permission to inject rspamd DKIM selector map entries by supplying an unvalidated dkim_key_selector through the relay domain API. Attackers can embed a carriage return in the selector to override another tenant's domain selector, causing rspamd to sign its outgoing mail with a nonexistent selector and fail DKIM verification.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99527 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99527</link>
-    <guid isPermaLink="false">088ff30fbd81bfb32c4618ad8047b35e</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-spmi: Fix potential use-after-free by grabbing of_node reference
-
-As noticed by Sashiko during a review run of an unrelated patch,
-in of_spmi_register_devices(), for_each_available_child_of_node()
-is used to loop through children, and to also assign a node to a
-newly created SPMI child device.
-
-Problem is that the refcount is dropped at every iteration so, in
-the specific case of DT overlays, a use-after-free may occur when
-an overlay is dynamically unloaded!
-
-To resolve this, increase the of_node refcount when assigning (in
-function of_spmi_register_devices) and release the reference in
-spmi_device_remove().</description>
+    <title>CVE-2026-133237 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133237</link>
+    <guid isPermaLink="false">a06b2ef4c88f39a3cef5a403f9d80e77</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | Manyfold 0.124.0 before 0.154.2 contains a server-side request forgery vulnerability that allows unauthenticated remote attackers to make the instance fetch internal URLs by supplying malicious ActivityPub actor icon.url and image.url fields. Attackers can deliver Create or Update activities to the inbox, causing the Shrine remote_url plugin to request internal or cloud metadata hosts and store responses as creator avatar or banner attachments.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99528 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99528</link>
-    <guid isPermaLink="false">05627b1499fc5365f704e97b8aaeebf8</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-SUNRPC: fix netns use-after-free in write_gssp()
-
-While fuzzing with a customized syzkaller, I hit a refcount warning in
-xprt_alloc(), reached from a write to /proc/net/rpc/use-gss-proxy:
-
-  refcount_t: addition on 0; use-after-free.
-  WARNING: lib/refcount.c:25 at refcount_warn_saturate+0xf8/0x120
-  CPU: 0 PID: 10404 Comm: syz.0.17 Not tainted 7.3.0-rc1-00096-gcfebfd3db73d
-  Call Trace:
-   &lt;TASK&gt;
-   xprt_alloc+0x83f/0x9d0
-   xs_setup_xprt+0xaf/0x3c0
-   xs_setup_local+0x47/0x7f0
-   xprt_create_transport+0x16c/0x730
-   rpc_create+0x38e/0x7f0
-   gssp_rpc_create+0xe2/0x180
-   set_gssp_clnt+0xba/0x1b0
-   write_gssp+0x200/0x310
-   proc_reg_write+0x240/0x330
-   vfs_write+0x2aa/0x1050
-   ksys_write+0x12a/0x250
-   do_syscall_64+0x117/0x750
-   entry_SYSCALL_64_after_hwframe+0x77/0x7f
-   &lt;/TASK&gt;
-
-create_use_gss_proxy_proc_entry() stores the struct net pointer as the
-proc entry's private data without taking a reference on it, and an open
-file descriptor does not pin the namespace either, as procfs only pins
-the proc_dir_entry. write_gssp() reads that pointer back with
-pde_data() and hands it to set_gssp_clnt(), which reaches xprt_init():
-
-	xprt-&gt;xprt_net = get_net_track(net, &amp;xprt-&gt;ns_tracker, GFP_KERNEL);
-
-get_net_track() -&gt; get_net() -&gt; refcount_inc() is unconditional, so
-rpc_create() assumes its caller holds a reference on args.net.
-write_gssp() does not.
-
-Dropping the last ns.count reference does not make the file go away.
-__put_net() only queues cleanup_net() on a workqueue, and the
-remove_proc_entry() that fences off further writes runs from the
-rpcsec_gss pernet .exit method, that is, from inside cleanup_net(). A
-write landing between those two points increments a refcount that is
-already zero. cleanup_net() does not re-read ns.count, so the namespace
-is freed anyway and the rpc_xprt -- along with the AF_LOCAL socket
-opened for it -- is left pointing at freed memory. The resurrected
-count is visible to the rest of that teardown too: with
-CONFIG_IPV6_MROUTE the same cleanup_net() worker then trips
-!mr_can_free_table() in ip6mr_free_table(), which tests check_net() on
-the namespace it is freeing.
-
-It reduces to opening /proc/net/rpc/use-gss-proxy inside a new network
-namespace, calling setns() back to the original one to drop the last
-reference, and then writing &quot;1&quot; to the still-open descriptor.
-
-Take the reference in write_gssp() itself and refuse the write when the
-namespace is already gone. This is what procfs does for every other
-/proc/net file: get_proc_net() is maybe_get_net(PDE_NET(PDE(inode)))
-and seq_open_net() returns -ENXIO when it fails. PDE_NET() cannot be
-reused here because the parent directory /proc/net/rpc carries no
-namespace pointer. Adding a .pre_exit to rpcsec_gss_net_ops so the
-entry is removed earlier would only narrow the window, since pre_exit
-also runs from cleanup_net().
-
-Live namespaces are unaffected: a write still returns the error from
-set_gssp_clnt(), a write of &quot;2&quot; still returns -EINVAL, and reads are
-untouched.</description>
+    <title>CVE-2026-133238 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133238</link>
+    <guid isPermaLink="false">41a1c58a244225e56e68764dd3249b24</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 2.3 | SABnzbd through 5.1.3 contains a path traversal vulnerability in the Sorter that allows attackers to write files outside the Complete folder via crafted propername, episodename or job name (%dn) values. Attackers can supply a malicious NZB with '...' sequences that collapse to '..' after single-pass replacement, moving downloaded files into arbitrary directories writable by SABnzbd.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99529 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99529</link>
-    <guid isPermaLink="false">d8a3a994491356181f404741fb1d677c</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-wifi: b43: fix use-after-free in b43_bcma_remove()
-
-b43_one_core_detach() frees the struct b43_wldev it is given the bus
-device of. b43_bcma_remove() then reads wldev-&gt;dev again to free the bus
-device, which is a read of freed memory.
-
-b43_ssb_remove() does not have the problem: it takes a copy of wldev-&gt;dev
-at the start. Do the same here.</description>
+    <title>CVE-2026-133239 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133239</link>
+    <guid isPermaLink="false">1ec908b86f9ac32d7ec71c23809d4d29</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | OpnForm before 2.8.2 contains an improper authorization vulnerability that allows unauthenticated attackers to move other forms' shared assets by supplying their URLs in file upload fields. Attackers can submit a public form with another form's cover or logo URL, causing Storage::move() to relocate it into submissions and break that asset.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99530 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99530</link>
-    <guid isPermaLink="false">134ce4c0d3739d1257fc2de0114beb4f</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-cgroup: serialize migrations of newly forked processes
-
-With favordynmods enabled, a cgroup.procs migration takes the target
-threadgroup's cgroup_threadgroup_rwsem for writing. A process fork holds
-the forking threadgroup's semaphore for reading. These are different
-semaphores when fork creates a new process.
-
-copy_process() publishes the child's PID before cgroup_post_fork() links
-the child to its css_set. A writer can find the child in that interval,
-take its uncontended semaphore, and migrate it while child-&gt;cgroups still
-points to init_css_set and child-&gt;cg_list is empty. Migration links the
-node into init_css_set.mg_tasks. cgroup_post_fork() then adds the same
-node to the intended css_set as though it were unlinked, corrupting both
-task lists and their css_set ownership.
-
-This regresses the fork/migration race fixed by commit b12b533fa523
-(&quot;cgroups: add lock for child-&gt;cgroups in cgroup_post_fork()&quot;) and
-restored again in 2012 after the lock had been removed. The old task_lock
-protection was later superseded by global css_set and cgroup threadgroup
-locking. The change identified by the Fixes tag narrowed only the migration
-side back to a per-threadgroup lock, recreating the different-process
-exclusion failure.
-
-Take the new threadgroup's semaphore for reading before the child becomes
-visible and hold it through cgroup_post_fork(). Use a nested lock subclass
-because fork already holds the parent's semaphore. CLONE_THREAD children
-share the parent's signal_struct and remain covered by the existing lock.
-Migrations of unrelated, fully initialized threadgroups remain concurrent.
-
-An AI coding assistant was used to identify and reproduce the regression
-and to develop and test this fix.</description>
+    <title>CVE-2026-133240 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133240</link>
+    <guid isPermaLink="false">fb9fda65d4a2d93ed3aeea1ee0b5a18f</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 2.3 | OpnForm before 2.8.2 contains a server-side request forgery vulnerability in PublicWebhookUrl::isPublicIp that fails to reject CGNAT, NAT64 and 6to4 address ranges. Authenticated users can configure webhook, form import or PDF image URLs resolving to these ranges to make the server send HTTPS requests to internal hosts.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99531 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99531</link>
-    <guid isPermaLink="false">f4e267f819de20e99e3bacf3b1b56dcb</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: verify transform SessionId matches the decrypted header
-
-When an encrypted request comes in, the decryption key is picked by
-the SessionId in the transform header, but the request is then
-authorized under whatever session the decrypted inner header names.
-Nothing ever compares the two, so on a connection with more than
-one session a client can get a request decrypted with one session's
-key and run it as another session. Encrypted requests are exempt
-from signing too, so a valid AEAD tag is the only proof of session
-identity, and it is checked against the wrong session.
-
-MS-SMB2 says the server must check that the transform SessionId
-matches the one in the decrypted SMB2 header and treat a mismatch
-as a protocol error. Add that check in __handle_ksmbd_work() after
-decryption, before dispatching: the message has to be at least one
-fixed SMB2 header, the first operation must not set
-SMB2_FLAGS_RELATED_OPERATIONS and its SessionId must match the
-transform SessionId, and every following non-related operation in
-a compound chain must carry the same SessionId. NextCommand
-offsets must be 8-byte aligned and stay inside the message; the
-bounds check is done by subtraction so it cannot wrap.
-
-When the decrypted payload is a compression transform, the
-existing decompression step runs first and the decompressed SMB2
-message is checked instead, since a compression transform header
-carries no SessionId.</description>
+    <title>CVE-2026-133241 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133241</link>
+    <guid isPermaLink="false">d08f90443239b3c7aaa100507327ac07</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 2.3 | diaspora* before 0.10.0 contains a cross-site scripting vulnerability that allows unauthenticated attackers to inject iframe attributes via the maxheight parameter of the GET /oembed endpoint. Attackers can supply a single quote in maxheight to inject an onload handler into the returned html, executing script in third-party oEmbed consumers that embed it unsanitized.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99532 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99532</link>
-    <guid isPermaLink="false">39f9af2463e1eb0d4d609befe7fb5d8a</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: validate security descriptor offsets before pointer arithmetic
-
-parse_sec_desc() constructs SID and DACL pointers by adding untrusted
-32-bit offsets to the security descriptor before checking their bounds.
-The existing checks reject offsets into the descriptor header, but do
-not reject offsets beyond the descriptor's length.
-
-On a 32-bit kernel, a large offset can wrap the pointer before the
-descriptor. The end-only checks in parse_sid() and parse_dacl() can then
-accept it, allowing an authenticated SMB2 SET_INFO request to access
-memory outside the security descriptor and fault the kernel.
-
-Check each nonzero offset against acl_len before constructing its
-pointer. Initialize the optional owner and group SID pointers to NULL
-so an omitted SID remains absent when parsing the DACL.</description>
+    <title>CVE-2026-133242 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133242</link>
+    <guid isPermaLink="false">256f468275b74bb768db808e4655b276</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.1 | diaspora* before 0.10.0 contains a stored cross-site scripting vulnerability that allows authenticated users to inject script by crafting og:video:secure_url values. Attackers can post links to pages whose allowlisted-prefix video URL contains a quote and onload handler, executing script in readers' sessions when they click the video preview.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99533 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99533</link>
-    <guid isPermaLink="false">eccd2d3f90266ff09bca0554197f7052</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: validate AppInstanceId takeover target
-
-AppInstanceId lookup currently selects the first open with the matching
-identifier. CREATE for an unrelated share or path can therefore
-force-close another session's open before authorization of the new
-target. Matching only the base path also conflates alternate data streams
-with the unnamed stream.
-
-MS-SMB2 requires the old open to match the share and path, belong to a
-different ClientGuid, and be closed only when the requester has
-GENERIC_READ access. Search all opens with the ID and match share,
-resolved path, stream, and the current connection's client GUID. Retain a
-share configuration reference in ksmbd_file and reuse its name instead of
-allocating a name for every open. This keeps matching safe during tree
-connection teardown and preserves name-based matching across configuration
-updates.
-
-Refresh the share reference on durable reconnect and restore the old
-reference if reopening fails. Serialize connection and share comparisons
-with durable disconnect/reconnect, and recheck the target before closing
-it. Keep the original ClientGuid for durable replay and lease checks.
-
-Check AppInstanceVersion before querying access, even when GENERIC_READ
-is absent, and before disconnected delete-on-close cleanup. Rejected
-CREATE must leave other durable opens untouched. Calculate maximal access
-on the matched open's referenced path so a rename cannot substitute another
-file's authorization. Require read access with the effective VFS
-credentials as well as the NT DACL before takeover. Access denial only
-skips takeover and leaves CREATE to its normal access checks. Restore
-filesystem credentials before returning a takeover error.
-
-Handle takeover before checking FILE_CREATE collisions, and re-resolve
-the path after closing the old open. This lets delete-on-close remove the
-old file before a new one is created. Include SYNCHRONIZE in the baseline
-maximal-access mask so read-only files report GENERIC_READ correctly.</description>
+    <title>CVE-2026-133243 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133243</link>
+    <guid isPermaLink="false">cb36ef65dec3159a458255b0a8b842cb</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.8 | node-soap before 1.14.1 contains a prototype pollution vulnerability in WSDL.xmlToObject that allows unauthenticated attackers to pollute Object.prototype via an XML element with id=&quot;__proto__&quot;. Attackers can send a single crafted SOAP request to a soap.listen() server, or return a malicious response to a client, causing all subsequent SOAP parsing to fail until process restart.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99534 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99534</link>
-    <guid isPermaLink="false">a78239100c0586017339b94b71bb3d5f</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: prevent stale data from being written by SMB2 WRITE requests
-
-Initialize the compatibility byte in request buffers without zeroing
-the entire allocation. Keep the one-byte compatibility exception for
-SMB2 messages so valid zero-length WRITE requests remain compatible,
-and validate the data range in the WRITE handlers against the current
-compound request before accessing it.
-
-This prevents stale request-buffer data from being written to files or
-sent to IPC pipes.</description>
+    <title>CVE-2026-133244 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133244</link>
+    <guid isPermaLink="false">b6a1d5769f175b33bc1e64ce2d68bef9</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.3 | parse5-html-rewriting-stream 7.0.0 before 8.1.1 contains a cross-site scripting vulnerability in RewritingStream#emitText, which skips escaping based on a stale lastStartTagName. Attackers can place entity-encoded markup after a closed script or style element to bypass RewritingStream-based filters and execute script in users' browsers.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99535 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99535</link>
-    <guid isPermaLink="false">112bb768247a85b0a843dcc09b29b17b</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: prevent share root removal through empty paths
-
-A FileLinkInformation request can supply &quot;/&quot; as the new link name.
-smb2_get_name() strips the trailing slash and passes an empty string to
-ksmbd_vfs_kern_path_start_removing().
-
-ksmbd_vfs_path_lookup() resolves an empty pathname as the configured share
-path, without LOOKUP_BENEATH. With ReplaceIfExists set, smb2_create_link()
-can therefore remove the share root from its parent before link creation
-fails. An authenticated client with a writable share and DELETE access to
-a file can trigger this if the share root is empty and the mapped user
-has write and search permission on its parent directory.
-
-Return -EINVAL for empty pathnames when for_remove is set, before
-resolving the share path or acquiring removal resources. Ordinary lookups
-continue to accept empty pathnames for opening the share root.</description>
+    <title>CVE-2026-133245 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133245</link>
+    <guid isPermaLink="false">0d6e370ebb10abd106423bd87de8a5f5</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.7 | parse5 7.0.0 before 8.1.1 contains an uncaught exception vulnerability in Preprocessor#_processSurrogate that allows remote attackers to crash applications by supplying two consecutive low surrogates. Attackers can submit input such as U+DC00 U+DC00, which decodes to out-of-range code point 0x110000 and throws a RangeError from parse, parseFragment, or streaming parsers, crashing Node.js processes.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99536 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99536</link>
-    <guid isPermaLink="false">07de9dfd66a4ac37060e0e526bf4db35</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: prevent session binding in compound requests
-
-A failed multichannel binding can retain its target session on the work
-item so that the error response can be signed. Subsequent compound
-commands can then use that session together with a tree connection left
-over from an earlier command.
-
-Limit binding SESSION_SETUP requests to standalone messages during
-message validation, before smb2_sess_setup() can replace work-&gt;sess.
-Check both NextCommand and the current request offset to cover binding
-in the first, middle and last positions of a compound. The existing
-validation error path returns STATUS_INVALID_PARAMETER and stops
-processing the remaining commands.
-
-This intentionally limits support for compounded binding. It is not a
-protocol requirement that binding be standalone. Standalone binding and
-non-binding compounds retain their existing behavior, without changing
-session, tree or response encryption handling.</description>
+    <title>CVE-2026-133246 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133246</link>
+    <guid isPermaLink="false">bd3284d950ffb8fbe71c4a63bbb76e95</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.6 | modified eCommerce Shopsoftware through 3.3.0 contains a local file inclusion vulnerability that allows administrators to include arbitrary server files by storing ../ sequences in the content manager file name. Unauthenticated requests to shop_content.php then pass the stored path to include(), executing embedded PHP in uploaded content files or images as the web server user.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99537 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99537</link>
-    <guid isPermaLink="false">01ec25921380a967eeae919ce47753bf</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: preserve unreadable named streams on open
-
-A write-only client can open an existing named stream with FILE_OPEN_IF
-without permission to read the underlying file. The case-insensitive
-lookup finds the xattr name, but querying its value length then fails
-with -EACCES. smb2_set_stream_name_xattr() treats every negative result
-as a missing stream and replaces the existing xattr with an empty value.
-
-A failed xattr list is not proof that the stream is absent either:
-for example, -ENOMEM can lead to the same empty replacement. Preserve
-listing errors and create a stream only for -ENOENT or -ENODATA. The
-latter can occur if the xattr is removed between listing its name and
-querying its value. Return other lookup errors without changing the
-stream.
-
-A write-only FILE_OPEN now reports access denied instead of name not
-found. FILE_OVERWRITE_IF and FILE_SUPERSEDE on an unreadable stream
-also fail instead of appearing to replace it. Stream writes and EOF
-changes already need to read the old value, so such handles cannot
-update the stream after opening either.</description>
+    <title>CVE-2026-133247 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133247</link>
+    <guid isPermaLink="false">7a5d95dd4575d32c9efe57f7d340ef0f</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.3 | modified eCommerce Shopsoftware through 3.3.0 contains a reflected cross-site scripting vulnerability in admin/support.php that allows unauthenticated attackers to inject script via the module parameter. Attackers can trick a logged-in administrator into opening a crafted link to run script in the admin panel, reading CSRF tokens and changing shop settings.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99538 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99538</link>
-    <guid isPermaLink="false">3b4b532fab6296cb91b88f1af6831ac1</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: ignore network devices of other namespaces
-
-With no interface list configured, ksmbd binds every interface that
-comes up. ksmbd_netdev_event() does not look at the device's namespace,
-and create_socket() opens the listener in the namespace of the task
-raising NETDEV_UP. A container with its own address on a bridge brings
-up its interface and finds port 445 in its namespace already taken by
-ksmbd, so an SMB server running inside the container fails with
-&quot;Address already in use&quot;.
-
-Interfaces are also matched by name only, so a container's eth0 going
-down would stop the listener on the host's eth0.
-
-Only handle netdev events for devices in init_net.</description>
+    <title>CVE-2026-133248 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133248</link>
+    <guid isPermaLink="false">50ef163c51f41a88ddc3529158e42d4c</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 4.8 | modified eCommerce Shopsoftware through 3.3.0 contains a stored cross-site scripting vulnerability that allows administrators with product editing permission to inject script via the products_name field. The unescaped name is rendered in the h1 heading of product detail and reviews pages, executing script in the browsers of shoppers and logged-in customers.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99539 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99539</link>
-    <guid isPermaLink="false">7bca8b4b6c1fff0c5660e63a72d0114d</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: fix session reference leak on compounded SESSION_SETUP
-
-A compound request can place SESSION_SETUP after another command. That
-earlier command leaves a reference to its session in work-&gt;sess.
-smb2_sess_setup() then overwrites work-&gt;sess with the session it looks up
-or creates, and the dispatcher later puts work-&gt;sess only once. The
-inherited reference is never dropped. That leaks the session, together
-with its setup connection and socket, and every repeat of the compound
-leaks another.
-
-  unreferenced object (size 512):
-    __kmalloc_cache_noprof+0x32c/0x3a0
-    ksmbd_smb2_session_create+0xf6/0x9c0 [ksmbd]
-    smb2_sess_setup+0xda4/0x6280 [ksmbd]
-    handle_ksmbd_work+0x88c/0x1cb0 [ksmbd]
-
-Save the inherited session on entry. After the request has been
-processed, release it once, but only when smb2_sess_setup() has replaced
-work-&gt;sess with its own session or cleared it. Do this after
-ksmbd_conn_unlock() so the put does not run under srv_mutex. An error path
-may instead leave the inherited session in work-&gt;sess. Keep it there, so
-the dispatcher still puts it and the error response is still signed or
-encrypted with it as before.</description>
+    <title>CVE-2026-133251 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133251</link>
+    <guid isPermaLink="false">af931d87d75d4f8ec8f990024e8c0356</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | In JetBrains Datalore before 2026.4.1 improper authorization allowed notebook viewers to read attached environment variable values</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99540 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99540</link>
-    <guid isPermaLink="false">44c1f430074db71f4a8248d1c3056a42</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: fix parent dentry lifetime in directory enumeration
-
-ksmbd_populate_dot_dotdot_entries() builds the &quot;..&quot; entry from
-the open directory's d_parent and passes that pointer to
-ksmbd_vfs_fill_dentry_attrs() without taking a reference. That pointer
-is only valid while the directory stays under this parent. If a
-concurrent rename moves the directory elsewhere, the old parent loses
-its last reference; a following rmdir then turns it into a negative
-dentry with d_inode cleared, and after the RCU grace period the dentry
-itself is freed. The worker still holds the raw pointer and
-dereferences d_inode through vfs_getattr() and vfs_getxattr().
-
-A remote SMB client, authenticated or guest, triggers this by listing
-a directory while that directory is moved under a new parent and the
-old parent is deleted. It can be done by the client itself with write
-access or by other concurrent writers, triggering null-ptr-deref and
-slab-use-after-free on a KASAN build.
-
-  KASAN: null-ptr-deref in range
-      [0x0000000000000000-0x0000000000000007]
-  Workqueue: ksmbd-io handle_ksmbd_work
-  RIP: 0010:xattr_permission+0x9d/0x160
-  Call Trace:
-   vfs_getxattr+0x9c/0x1b0
-   ksmbd_vfs_getxattr+0x82/0x100
-   ksmbd_vfs_get_dos_attrib_xattr+0x7f/0x130
-   ksmbd_vfs_fill_dentry_attrs+0x435/0x650
-   ksmbd_populate_dot_dotdot_entries+0x25e/0x630
-   smb2_query_dir+0xcf9/0x1a20
-   handle_ksmbd_work+0x5f1/0x1c80
-   process_one_work+0x90b/0x19d0
-
-Fix by using the dentry reference counting APIs: take the parent with
-dget_parent(), take a matching dget() on &quot;.&quot;, and dput() the dentry
-once ksmbd_vfs_fill_dentry_attrs() has returned or the pattern does
-not match.</description>
+    <title>CVE-2026-133252 - NVD - CVSS Score v3.1: 3.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133252</link>
+    <guid isPermaLink="false">3dbb224081767fba108b74e9b1f1e5f8</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 3.1 | In JetBrains Datalore before 2026.4.1 open redirect after OpenID login was possible via the origin parameter</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99541 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99541</link>
-    <guid isPermaLink="false">a5915770a39818705cfbbf83de99070f</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: fix OOB read and cross-share confusion in ksmbd_validate_name_reconnect()
-
-ksmbd_validate_name_reconnect() indexes
-ab_pathname[share-&gt;path_sz + 1] without checking that the path is
-longer than share-&gt;path_sz + 1 (d_path() fills the buffer from the
-end). A durable fp is not bound to its original share, so a client
-can preserve a file from a short-path share and reconnect it on a
-long-path share, making strcmp() read past the PATH_MAX buffer -
-with a long enough share path this oopses the kernel, and on a
-mapped page it also gives a byte-equality oracle on adjacent heap
-(the reconnect succeeds exactly when the out-of-bounds string
-equals the requested name). A same-share variant with the durable
-fp at the share root reads 1 byte past the buffer
-(strlen(ab_pathname) == share-&gt;path_sz).
-
-Check before comparing: the path must be longer than share-&gt;path_sz,
-it must start with share-&gt;path, and the next character must be '/'.
-The share root itself is accepted only for an empty name.</description>
+    <title>CVE-2026-133253 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133253</link>
+    <guid isPermaLink="false">6cc091ff27785bf17517a6adc5bfd108</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.4 | In JetBrains IntelliJ IDEA before 2026.3 untrusted projects could read files of other open projects via the built-in web server</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99542 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99542</link>
-    <guid isPermaLink="false">c637e58882a0824272e21c590083b05f</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: deny access for an empty DACL instead of granting the request
-
-smb_check_perm_dacl() returns the access mask it computes to the SMB2
-CREATE handler, which uses it as the granted access for the open. For a
-security descriptor whose DACL is present but contains no ACEs, the
-function is supposed to deny access: an empty (non-NULL) DACL grants no
-access to anyone except the object owner's implicit READ_CONTROL and
-WRITE_DAC (MS-DTYP 2.4.5).
-
-The empty-DACL branch only denies when both
-
-  - the DACL has no trailing bytes (pdacl_size == sizeof(struct smb_acl)),
-    and
-  - the request contains bits beyond READ_CONTROL / WRITE_DAC.
-
-In every other case it takes the shared &quot;goto err_out&quot; with rc still 0,
-which returns success without modifying *pdaccess, so the caller grants
-the full requested access. Three problems follow:
-
-  - The READ_CONTROL / WRITE_DAC carve-out models the owner's implicit
-    rights, but the check runs before is_owner is computed, so those
-    rights are handed to *every* caller, not just the owner. For
-    READ_CONTROL the SMB2 CREATE path does not fall back to
-    inode_permission(), so any user can read the security descriptor of
-    an object whose empty DACL is meant to deny them.
-
-  - A request of exactly READ_CONTROL and/or WRITE_DAC is granted to any
-    caller. WRITE_DAC lets the handle rewrite the DACL.
-
-  - A DACL that declares zero ACEs but carries trailing bytes
-    (pdacl_size &gt; sizeof(struct smb_acl)) skips the deny entirely and is
-    granted whatever was requested.
-
-On shares where the NT ACL is the authoritative access control -- e.g.
-&quot;force user&quot; shares, where every client maps to one POSIX identity so
-POSIX cannot distinguish users -- this is an access-control bypass.
-
-Compute is_owner before the empty-DACL branch and deny access from an
-empty DACL unless the caller is the owner requesting no more than
-READ_CONTROL / WRITE_DAC.</description>
+    <title>CVE-2026-133254 - NVD - CVSS Score v3.1: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133254</link>
+    <guid isPermaLink="false">d7ad5db383b9f9a56991e5950e69da22</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.3 | In JetBrains IntelliJ IDEA before 2026.3, 2026.2.4 code execution was possible in untrusted projects via the Code Provenance plugin</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99543 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99543</link>
-    <guid isPermaLink="false">3590366f35275e0cc69b3522f40c8e77</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-backlight: qcom-wled: Fix NULL pointer dereference in wled_remove()
-
-wled_probe() doesn't set the driver data for the platform device.
-As a result, platform_get_drvdata() in wled_remove() will return NULL,
-and the first dereference of it crashes on unbind.
-
-Set the platform device driver data in wled_probe().</description>
+    <title>CVE-2026-133255 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133255</link>
+    <guid isPermaLink="false">f5722362506aa3089633d17409f1c37d</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.3 | In JetBrains Ktor before 3.6.1 a DoS attack was possible via the CIO engine</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99544 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99544</link>
-    <guid isPermaLink="false">ca7d183e2fa38d3b05c87e11cf1e1a30</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-Drivers: hv: vmbus: Bounds check the shared ring buffer indices
-
-In a CoCo VM the host is untrusted. Since the VMBus ring buffer read and
-write indices live in shared memory, the guest has to treat both as
-potentially malicious.
-
-hv_ringbuffer_write() copies into the ring at write_index with no bounds
-checking, so the host can make the guest write packet data at any offset
-up to 4 GiB past the start of the ring buffer. read_index matters too:
-the available space derived from both indices is the only bound on how
-much is copied, and an out-of-range index can make it far larger than
-the ring.
-
-The fix is to validate both indices before use and to use the validated
-snapshot instead of re-accessing. For invalid indices,
-hv_ringbuffer_write() logs and returns -EIO.
-
-One re-read of write_index is left unchecked in this patch:
-hv_get_ring_bufferindices() fetches it again for the prev_indices
-trailer. The value is only returned to the host and is not used as an
-offset or length for indexing. Since this is not a security issue, it is
-addressed later in the series.
-
-Open-coding the bytes available arithmetic keeps the fix free of
-prerequisites; a later patch refactors it into a helper function.</description>
+    <title>CVE-2026-133256 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133256</link>
+    <guid isPermaLink="false">43a84fd22c291d3570acd049e53e0031</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.8 | In JetBrains YouTrack before 2026.2.19840 improper authorization allowed project administrators to obtain GitLab tokens of other projects</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99545 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99545</link>
-    <guid isPermaLink="false">b87e5c77a78e377b13d23ff98a134196</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-driver core: take parent lock on deferred probe
-
-USB interfaces should be probed with the parent USB device lock held,
-but this is not honoured when probe is deferred.
-
-Add a new bus_probe_device_deferred() helper to handle deferred probe
-where the parent device lock is not held.</description>
+    <title>CVE-2026-133257 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133257</link>
+    <guid isPermaLink="false">ffa3df21b504c47cdcfd8af4c8ca175f</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.4 | In JetBrains YouTrack before 2026.2.19840 improper authorization allowed read-only users to modify and delete articles</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99546 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99546</link>
-    <guid isPermaLink="false">b88dc803e4840f7ad91eaa16fb159092</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-net/sched: cls_flower: avoid stale mask references after delete
-
-Flower releases a mask reference when a filter is removed from the
-classifier. The filter object can remain alive while dump, walk, or
-hardware reoffload paths hold a reference to it. Those paths can then
-dereference f-&gt;mask after the mask has already been released.
-
-Keep the mask reference until the filter reference count reaches zero.
-Release the mask synchronously from the final __fl_put() while the caller
-still holds the tcf_proto reference, and leave the existing RCU work to
-free the mask. This keeps the mask available to every reader that still
-holds the filter.
-
-The filter is still removed from the classifier indexes immediately.
-Therefore, a deleted filter can temporarily retain an otherwise empty
-mask; fl_delete() uses the handle IDR, rather than the mask list, to
-determine whether the classifier has become empty.
-
-Failed mask assignment can leave fnew-&gt;mask as an error or borrowed
-pointer without an owned mask reference. Clear it before the common
-failure path so the final put cannot release an unowned reference.
-
-This fix does not add fields, snapshots, or per-filter memory.</description>
+    <title>CVE-2026-133258 - NVD - CVSS Score v3.1: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133258</link>
+    <guid isPermaLink="false">2e6daa4ed83a43331f3dbfbbc0fa9f11</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.8 | In JetBrains YouTrack before 2026.2.19840 app widgets could perform API requests on behalf of viewing users without their consent</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99547 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99547</link>
-    <guid isPermaLink="false">c5fa4c325efce0324859e269b7343aa3</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-thunderbolt: Do not RPM complete unrelated subtrees on unplug
-
-When a Thunderbolt device is unplugged, that switch and every switch
-subsequent to it on the bus device list is `complete()`d, not just its
-child devices. In the case of multiple domains, it may cause, eg, an
-attempt to `complete()` the uninitialized domain 1 root switch RPM
-completion on unplug of a switch from domain 0 (though ordering is not
-guaranteed numerically sorted).
-
-I initially noticed this issue on a Dell XPS9720 when the system would
-seem to sporadically not wake after unplugging a Thunderbolt dock. I
-tried multiple kernel versions including v7.2.7 and v7.3-rc4 to see if
-that resolved the issue, but the issue persisted. Eventually I found
-that I could consistently generate a kernel Oops reporting a page fault
-at 0xffff_ffff_ffff_fff8 on unplug from one side of the laptop and went
-bug hunting. I became suspicious of the `bus_for_each_dev()` walk that I
-ultimately ended up changing. To confirm this issue, I did an eBPF trace
-of `bus_for_each_dev()`, `complete_rpm()`, and `complete()` while
-unplugging in a variety of situations and found that an unplug from
-domain 0 tries to `complete_rpm()` domain 1's switch, whose RPM
-completion is not initialized and thus is holding a null wait-list
-pointer, triggering the page fault.
-
-Here are the key sections of that eBPF trace. Note that HEAD denotes the
-completion's own wait-list HEAD:
-
-```
-RESCAN_ENTER domain=0
-
-COMPLETE rescan_domain=0 target=0-1 target_domain=0
-         route=0x1 parent=0-0 unplugged=1
-COMPLETION done=0 head=HEAD next=HEAD prev=HEAD
-
-BUS_WALK domain=0 start=0-1 callback=complete_rpm
-CALLBACK_ENTER rescan_domain=0 dev=1-0 parent=domain1 is_switch=1
-
-COMPLETE rescan_domain=0 target=1-0 target_domain=1
-         route=0x0 parent=domain1 unplugged=0
-COMPLETION done=0 head=HEAD next=0 prev=0
-
-        complete+5
-        complete_rpm+43
-        bus_for_each_dev+133
-        icm_free_unplugged_children+250
-        icm_rescan_work+42
-```
-
-This patch gates the `complete()` on an additional condition - that the
-Thunderbolt domain matches the domain of the device that was unplugged.
-
-I only have a single system with multiple Thunderbolt domains - the Dell
-XPS9720. I am consistently able to reproduce the Oops on that system.
-Since running with this patch, I have not seen the Oops reoccur. I have
-also tested it on a Thinkpad X1-Gen12, and that system boots and runs
-well with it, but it only has a single Thunderbolt domain, so it does
-not exercise the multi-domain failure case.</description>
+    <title>CVE-2026-133259 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133259</link>
+    <guid isPermaLink="false">905ffa4c024b08c8c3c74c52ff5ad06f</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.3 | In JetBrains YouTrack before 2026.2.19840 improper authorization allowed read-only users to change issue fields via agile boards</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99548 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99548</link>
-    <guid isPermaLink="false">7f79a14ee381c83caf5a3ace7e05eb05</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-smb: client: fix early procfs exposure race
-
-Currently, init_cifs() calls cifs_proc_init() near the beginning of
-the function, before INIT_LIST_HEAD, leading to a momentarily
-uninitialized, but exposed, procfs. If a userspace process reads this
-empty procfs, iterating over a zeroed list_head leads to a NULL
-pointer dereference and a kernel oops/panic.
-
-For example, if a delay is added between cifs_proc_init() and
-INIT_LIST_HEAD, and a userspace process is polling
-/proc/fs/cifs/DebugData, the following oops occurs:
-
-BUG: kernel NULL pointer dereference, address: 0000000000000608
-Oops: Oops: 0000 [#1] SMP PTI
-CPU: 0 UID: 0 PID: 3477 Comm: cat Not tainted
-7.3.0-02212-g4df4d2a577db-dirty #6 PREEMPT(lazy)
-RIP: 0010:cifs_debug_data_proc_show+0x103/0xd80 [cifs]
-Call Trace:
-&lt;TASK&gt;
- ? seq_read_iter+0x86/0x400
- ? seq_read_iter+0x86/0x400
- seq_read_iter+0x183/0x400
- proc_reg_read_iter+0x62/0x90
- copy_splice_read+0x215/0x310
- splice_file_to_pipe+0xec/0x1c0
- do_splice+0x4b8/0x780
- __se_sys_splice+0x18f/0x250
- do_syscall_64+0x109/0x330
- entry_SYSCALL_64_after_hwframe+0x77/0x7f
-&lt;/TASK&gt;
-
-Fix this by moving cifs_proc_init() down in init_cifs(), ensuring it runs
-only after all internal lists, locks, counters, and workqueues are fully
-ready, but before registering the filesystem. Update the error cleanup
-ladder and exit_cifs() to maintain proper LIFO order.</description>
+    <title>CVE-2026-133260 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133260</link>
+    <guid isPermaLink="false">6524eaa922d4435f74ed1ab588a32dfc</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | In JetBrains YouTrack before 2026.2.19840 privilege escalation from project administrator to system administrator was possible via group merging</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99549 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99549</link>
-    <guid isPermaLink="false">ae0d883183593542ac99d150f5ad428b</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-smb: client: do not pass a NULL buf to is_oplock_break()
-
-receive_encrypted_read() sets *num_mids = 1 and never writes the
-caller's bufs[]. Offload returns -1 with *num_mids = 0, so the
-demultiplex thread skips the frame. The inline decrypt path
-returns 0 even when smb2_find_mid() fails.
-
-cifs_demultiplex_thread() then treats mids[i] == NULL as an
-oplock break and calls is_oplock_break(bufs[i], server) with
-bufs[i] still NULL. smb2_is_valid_oplock_break() reads
-hdr.Command at offset 12 and oopses.
-
-A large encrypted READ whose MessageId does not match is enough
-to panic cifsd.
-
-    Oops: general protection fault, probably for non-canonical address
-    0xdffffc0000000001: 0000 [#1] SMP KASAN PTI
-    KASAN: null-ptr-deref in range
-    [0x0000000000000008-0x000000000000000f]
-    CPU: 0 PID: 100 Comm: cifsd
-    RIP: smb2_is_valid_oplock_break+0xc8/0x2270 [cifs]
-    cifs_demultiplex_thread
-    Kernel panic - not syncing: Fatal exception
-
-Return -1 when inline decrypt finds no mid, and skip
-is_oplock_break() plus the unknown-frame dump when bufs[i]
-is NULL. receive_encrypted_standard() already assigns
-bufs[*num_mids].</description>
+    <title>CVE-2026-133261 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133261</link>
+    <guid isPermaLink="false">df1bdc15eb425857db8fefb369ac1bde</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.4 | In JetBrains YouTrack before 2026.2.19840 an HTML injection in email notifications was possible via issue descriptions</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99550 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99550</link>
-    <guid isPermaLink="false">2e087f372f27352edf31dbff4991f61a</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ocfs2: pin owning modules for open debugfs files
-
-The OCFS2 debugfs file operation tables do not set owner. The
-full debugfs proxy obtains real_fops with fops_get() at open and
-keeps it until final release. Without an owner, this does not acquire
-a reference to the module containing the table and its callbacks.
-Removing the debugfs entries does not drain retained open files.
-
-An open connected_nodes file can therefore outlive ocfs2_nodemanager
-and make full_proxy_release() read real_fops-&gt;release from freed
-module memory. Heming also reproduced the issue with fs_state and
-asked for the other OCFS2 debugfs operation tables to be checked.
-
-Set owner to THIS_MODULE in all eleven explicit debugfs operation
-tables: five in ocfs2_nodemanager, four in ocfs2_dlm, and two in
-ocfs2. The existing debugfs get/put pair then holds the appropriate
-module until final release. Leave the open, read and release callbacks
-unchanged. The blockcheck table already sets owner through
-DEFINE_DEBUGFS_ATTRIBUTE(), so it needs no change.
-
-The original controlled test used an unloadable OCFS2 module and
-case-local probe filters without changing the candidate open, unload
-or release logic. Closing a retained connected_nodes file after
-normal unload produced:
-
-  BUG: unable to handle page fault for address: fffffbfff804cfef
-  Oops: Oops: 0000 [#1] SMP KASAN NOPTI
-  RIP: 0010:full_proxy_release+0xbf/0x190
-  Call Trace:
-   &lt;TASK&gt;
-   __fput+0x39a/0xa60
-   fput_close_sync+0xff/0x200
-   __x64_sys_close+0x8c/0xf0
-   do_syscall_64+0x114/0x620
-   entry_SYSCALL_64_after_hwframe+0x77/0x7f
-   &lt;/TASK&gt;
-  Modules linked in: [last unloaded: ocfs2_nodemanager]</description>
+    <title>CVE-2026-133262 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133262</link>
+    <guid isPermaLink="false">d69f363fe351abd12b6f3f7629e7c92c</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.4 | In JetBrains YouTrack before 2026.2.19766 improper authorization allowed read-only users to change the visibility of restricted issues via agile boards</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99551 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99551</link>
-    <guid isPermaLink="false">ca273942ce4c564f3ea2ed26a3af0c75</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ocfs2: drain quorum work before removing the cluster
-
-The configured cluster must remain available until an in-flight quorum
-decision has finished using its fencing method.  o2quo_make_decision()
-drops qs_lock before calling o2quo_fence_self(), which marks heartbeat
-regions for unclean stop and then reads
-o2nm_single_cluster-&gt;cl_fence_method.  Cluster removal clears the
-singleton without waiting for this independent system-workqueue item.
-
-When a failed-quorum decision overlaps removal of the heartbeat regions,
-nodes and cluster through configfs, the worker can be preempted after
-marking the regions and resume after the singleton has been cleared:
-
-  Quorum worker                     Configfs removal
-  select fence; drop qs_lock
-  o2hb_stop_all_regions()
-                                    remove regions; join heartbeat threads
-                                    remove nodes; stop o2net
-                                    clear singleton; release cluster
-  read cl_fence_method
-
-The resumed read dereferences NULL instead of applying the configured
-fencing method. The heartbeat thread's dependency protects the local
-node only until the thread exits, and draining o2net does not wait for
-qs_work.
-
-Add o2quo_flush_work() to drain pending or running quorum decisions
-before clearing the singleton in o2nm_cluster_group_drop_item(). By
-this point the heartbeat regions and nodes have been removed, so their
-work publishers are stopped. The worker can finish while the cluster
-and its configured fencing method remain available. It does not acquire
-the configfs mutex held by the removal path.
-
-Keep o2quo_exit() as the counterpart of o2quo_init() for module teardown
-and initialization failure, and have it call the same drain helper.
-Cluster removal uses only the explicitly named drain operation.
-
-KASAN report as below:
-
-    Oops: general protection fault, probably for non-canonical address 0xdffffc000000011b: 0000 [#1] SMP KASAN NOPTI
-    KASAN: null-ptr-deref in range [0x00000000000008d8-0x00000000000008df]
-    CPU: 0 UID: 0 PID: 72 Comm: kworker/0:2 Not tainted 7.3.0-rc4-next-20260921-pmb-ocfs2-functional-v1+ #1 PREEMPT(lazy)
-    Hardware name: QEMU Ubuntu 24.04 PC v2 (i440FX + PIIX, arch_caps fix, 1996), BIOS 1.16.3-debian-1.16.3-2 04/01/2014
-    Workqueue: events o2quo_make_decision
-    RIP: 0010:o2quo_fence_self+0x65/0x200
-
-Register dump omitted.
-
-    Call Trace:
-     &lt;TASK&gt;
-     o2quo_make_decision+0x345/0x3a0
-     ? __pfx_o2quo_make_decision+0x10/0x10
-     ? process_one_work+0x834/0x1b40
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? lock_release+0xc8/0x290
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     process_one_work+0x9a8/0x1b40
-     ? __pfx_process_one_work+0x10/0x10
-     ? lock_acquire+0x190/0x300
-     ? lock_is_held_type+0x8f/0x100
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     worker_thread+0x65c/0xe40
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? __kthread_parkme+0x177/0x220
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? __pfx_worker_thread+0x10/0x10
-     kthread+0x351/0x460
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? __pfx_kthread+0x10/0x10
-     ret_from_fork+0x659/0x940
-     ? __pfx_ret_from_fork+0x10/0x10
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? __switch_to+0x74f/0xf70
-     ? __pfx_kthread+0x10/0x10
-     ret_from_fork_asm+0x1a/0x30
-     &lt;/TASK&gt;
-    Modules linked in:
-    ---[ end trace 0000000000000000 ]---</description>
+    <title>CVE-2026-133263 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133263</link>
+    <guid isPermaLink="false">9b6f058c5dc5b7c1794a7ed6c57f744f</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 3.7 | In JetBrains YouTrack before 2026.2.19840 missing authorization allowed guests to add issues to sprints</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99552 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99552</link>
-    <guid isPermaLink="false">8918ba910b6edf7a2152cd4fee12144e</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ocfs2/dlm: drain join handlers before releasing module text
-
-The code for a registered DLM handler must remain resident until its
-last invocation finishes. dlm_unregister_net_handlers() only removes
-dlm_join_handlers from the o2net registry. o2net_handler_get() takes a
-kref on the wrapper, but that reference does not pin ocfs2_dlm text.
-o2net_process_message() calls nh_func after dropping o2net_handler_lock.
-
-With CONFIG_OCFS2_FS_O2CB=m, ocfs2_dlm can be loaded independently of
-ocfs2_stack_o2cb while nodemanager continues handling messages from a
-configured, heartbeating peer. If no dependent module or module reference
-prevents normal unload, the following ordering is possible:
-
-  Receive worker                       Module unload
-  --------------                       -------------
-  o2net_handler_get()
-    take wrapper kref
-    drop handler lock
-  &lt;preempted&gt;
-                                       dlm_exit()
-                                         unregister handlers
-                                       release DLM module text
-  call saved nh_func
-    in released module text
-
-Use o2net_unregister_and_flush_handler_list() in the shared DLM
-unregister helper. It first prevents new lookups, then waits for the
-ordered o2net workqueue to drain, including a concurrent destruction of
-that queue. The acquired invocation therefore finishes before dlm_exit()
-returns and the loader releases the callback code. The same helper
-covers partial registration and dlm_init() error unwind before module
-memory is released.
-
-Skip the drain when the private join-handler list is empty. Early
-dlm_init() failures can reach this helper before any handler has been
-published. Partial-registration failure also reaches it a second time
-after the first call has already unregistered and drained the list.
-Neither case needs to take o2net_wq_mutex or drain unrelated work.
-The list is changed only by serialized module init/exit paths; a
-nonempty list still uses the full unregister-and-flush helper.
-
-Oops report as below:
-
-    Oops: int3: 0000 [#1] SMP KASAN NOPTI
-    CPU: 2 UID: 0 PID: 54 Comm: kworker/u16:3 Not tainted 7.3.0-rc4-next-20260921-pmb-ocfs2-functional-v1+ #1 PREEMPT(lazy)
-
-Hardware identification omitted.
-
-    Workqueue: o2net o2net_rx_until_empty [ocfs2_nodemanager]
-    RIP: 0010:0xffffffffc0423871
-    [Instruction byte dump omitted.]
-
-Register dump omitted.
-
-    Call Trace:
-     &lt;TASK&gt;
-     ? o2net_rx_until_empty+0x19b1/0x3300 [ocfs2_nodemanager]
-     ? __pfx_o2net_rx_until_empty+0x10/0x10 [ocfs2_nodemanager]
-     ? lock_acquire+0x190/0x300
-     ? process_one_work+0x935/0x1b40
-     ? process_one_work+0x834/0x1b40
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? lock_release+0xc8/0x290
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? process_one_work+0x9a8/0x1b40
-     ? __pfx_process_one_work+0x10/0x10
-     ? lock_acquire+0x190/0x300
-     ? lock_is_held_type+0x8f/0x100
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? worker_thread+0x65c/0xe40
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? __kthread_parkme+0x177/0x220
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? __pfx_worker_thread+0x10/0x10
-     ? kthread+0x351/0x460
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? __pfx_kthread+0x10/0x10
-     ? ret_from_fork+0x659/0x940
-     ? __pfx_ret_from_fork+0x10/0x10
-     ? srso_alias_return_thunk+0x5/0xfbef5
-     ? __switch_to+0x74f/0xf70
-     ? __pfx_kthread+0x10/0x10
-     ? ret_from_fork_asm+0x1a/0x30
-     &lt;/TASK&gt;
-    Modules linked in: ocfs2_nodemanager [last unloaded: ocfs2_dlm]
-    ---[ end trace 0000000000000000 ]---</description>
+    <title>CVE-2026-133264 - NVD - CVSS Score v3.1: 3.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133264</link>
+    <guid isPermaLink="false">4d6f59a7a26480fbf99d5397b77fdbc3</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 3.1 | In JetBrains YouTrack before 2026.2.19840 private issue summaries and descriptions could be read via agile board queries for archived projects</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99553 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99553</link>
-    <guid isPermaLink="false">2d85711ead76fc11ae9377d88e2cf37f</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-nfsd: fix race between client_info_show() and free_client()
-
-client_info_show() renders /proc/fs/nfsd/clients/&lt;id&gt;/info and walks
-clp-&gt;cl_sessions under clp-&gt;cl_lock to print each session's slot
-counts.  free_client() tears down the same list without taking
-cl_lock, and is the only unlocked mutator of cl_sessions.  A reader
-can observe a client mid-teardown because get_nfsdfs_clp() pins the
-nfs4_client but not its sessions: free_client() frees every session
-before calling nfsd_client_rmdir(), so an in-flight seq_file reader
-can follow a list_del()'d node whose -&gt;next now holds LIST_POISON1
-and take a general protection fault:
-
-  Oops: general protection fault, probably for non-canonical address
-        0xdead00000000014c
-  CPU: 1 UID: 0 PID: 132488 Comm: cat
-  RIP: 0010:client_info_show+0x2bf/0x3d0
-  RAX: dead000000000100
-  Call Trace:
-   seq_read_iter+0x12a/0x4b0
-   seq_read+0xf1/0x130
-   vfs_read+0xbf/0x350
-   ksys_read+0x6f/0xf0
-   do_syscall_64+0x8b/0xcb0
-   entry_SYSCALL_64_after_hwframe+0x76/0x7e
-  Kernel panic - not syncing: Fatal exception
-
-Detach cl_sessions onto a local reaplist under cl_lock, then free the
-sessions after dropping the lock.  Removing entries from cl_sessions
-under cl_lock matches unhash_session(), and the detach-then-reap shape
-matches how __destroy_client() reaps cl_delegations.  The sessions
-cannot be freed while cl_lock is held, since free_session() calls
-nfsd4_del_conns(), which re-acquires it.</description>
+    <title>CVE-2026-133265 - NVD - CVSS Score v3.1: 3.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133265</link>
+    <guid isPermaLink="false">b8973b9b3adc7079a351d7f4c3f21311</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 3.1 | In JetBrains YouTrack before 2026.2.19840 the attachment upload size limit could be bypassed via the REST API</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99554 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99554</link>
-    <guid isPermaLink="false">f3398c2cfa86aaa6df7e8b0723de096c</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-net: usb: pegasus: do not advance rx_skb-&gt;data on dropped frames
-
-For the 0x8513 chip, read_bulk_callback() skips the 2-byte receive
-header by advancing pegasus-&gt;rx_skb-&gt;data in place. This is done before
-the pkt_len &gt; PEGASUS_MTU check, and when that check drops the frame
-the good path resubmits the same skb with the advanced rx_skb-&gt;data as
-the transfer buffer, still PEGASUS_MTU bytes long.
-
-Every frame with an oversized length field therefore moves the receive
-buffer two more bytes towards the end of the skb data area. A device
-that keeps sending such frames makes the host controller write received
-data over skb_shared_info and past the end of the allocation, and the
-corrupted skb_shared_info is used when the skb is eventually freed.
-With an emulated device sending frames filled with 0x5a on a KASAN
-kernel:
-
-  BUG: KASAN: slab-out-of-bounds in dummy_timer+0xade/0x3f00 [dummy_hcd]
-  Write of size 1536 at addr ffff888105821202 by task swapper/1/0
-  ...
-  Oops: general protection fault, probably for non-canonical address 0xeb4b474b4b4b4b4c: 0000 [#1] PREEMPT SMP KASAN NOPTI
-  KASAN: maybe wild-memory-access in range [0x5a5a5a5a5a5a5a60-0x5a5a5a5a5a5a5a67]
-  RIP: 0010:skb_release_data+0x36f/0x800
-
-Only skip the header with skb_reserve() once the frame is going to be
-passed up, so the receive buffer always starts at the beginning of the
-skb data area. Unlike the old pointer adjustment, skb_reserve() also
-moves skb-&gt;tail, so the two header bytes now count against the buffer
-size: lower the length limit for the 0x8513 accordingly, otherwise a
-pkt_len of PEGASUS_MTU - 1 or PEGASUS_MTU would trip skb_over_panic().
-
-Found by code review with LLM assistance and reproduced with an
-emulated USB device (raw-gadget + dummy_hcd).</description>
+    <title>CVE-2026-133266 - NVD - CVSS Score v3.1: 3.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133266</link>
+    <guid isPermaLink="false">822fcf9ae68759e195f4d94c74599af5</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 3.1 | In JetBrains YouTrack before 2026.2.19766 helpdesk email attachments were sent to CC recipients without a visibility check</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99555 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99555</link>
-    <guid isPermaLink="false">5487c9174d996462243eb27214ea2fb7</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-media: usbtv: fix null-pointer dereference on disconnect
-
-A null-pointer dereference can occur in usb_make_path() when called from
-usbtv_querycap() (and other ioctl handlers) during device disconnection.
-
-Oops: general protection fault, probably for non-canonical address
-0xdffffc000000000a: 0000 [#1] SMP KASAN NOPTI
-KASAN: null-ptr-deref in range [0x0000000000000050-0x0000000000000057]
-RIP: 0010:usb_make_path include/linux/usb.h:985 [inline]
-RIP: 0010:usbtv_querycap+0x9c/0x100
-drivers/media/usb/usbtv/usbtv-video.c:612
-...
-Call Trace:
- &lt;TASK&gt;
- v4l_querycap+0x236/0x470 drivers/media/v4l2-core/v4l2-ioctl.c:1106
- __video_do_ioctl+0x8af/0xc70 drivers/media/v4l2-core/v4l2-ioctl.c:3133
- video_usercopy+0x860/0x1430 drivers/media/v4l2-core/v4l2-ioctl.c:3475
- v4l2_ioctl+0x18d/0x1e0 drivers/media/v4l2-core/v4l2-dev.c:366
- vfs_ioctl fs/ioctl.c:51 [inline]
- __do_sys_ioctl fs/ioctl.c:597 [inline]
- __se_sys_ioctl+0xfc/0x170 fs/ioctl.c:583
- do_syscall_x64 arch/x86/entry/syscall_64.c:63 [inline]
- do_syscall_64+0x174/0x580 arch/x86/entry/syscall_64.c:94
-
-This happens due to a race condition between the USB device disconnect
-routine (usbtv_disconnect()) and V4L2 ioctls. When the device is
-disconnected, usbtv_disconnect() sets usbtv-&gt;udev = NULL without holding
-the usbtv-&gt;v4l2_lock mutex. Concurrently, an ioctl handler like
-usbtv_querycap() can be executing under the v4l2_lock and attempt to use
-usbtv-&gt;udev, leading to a crash.
-
-To fix this, move the usbtv-&gt;udev = NULL assignment into usbtv_video_free()
-and protect it with mutex_lock(&amp;usbtv-&gt;v4l2_lock). This ensures that no
-non-queue ioctl handler can run concurrently with the pointer being
-nullified. If an ioctl is already running, the mutex will block the
-disconnect path until the ioctl finishes. If an ioctl is blocked waiting
-for the lock, it will acquire it after the disconnect routine releases it,
-but will then check video_is_registered() (which was cleared by
-vb2_video_unregister_device()) and safely return -ENODEV.
-
-Acquiring v4l2_lock after vb2_video_unregister_device() avoids
-reintroducing a historical deadlock issue, and usbtv_audio_free() remains
-safe as it is called before usbtv_video_free().</description>
+    <title>CVE-2026-133267 - NVD - CVSS Score v3.1: 3.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133267</link>
+    <guid isPermaLink="false">19b7d93bc460b66a22141404de1e1343</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 3.5 | In JetBrains YouTrack before 2026.2.19840 project members could detach inline comment threads of other users on articles</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99556 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99556</link>
-    <guid isPermaLink="false">a8a88f344f0377debd105d36682ca31a</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: serialize directory emptiness checks with readdir
-
-SMB2 QUERY_DIRECTORY holds fp-&gt;readdir_lock while it calls iterate_dir()
-on fp-&gt;filp. An SMB2 SET_INFO request with FILE_DISPOSITION_INFORMATION
-can resolve the same FileId and call ksmbd_vfs_empty_dir() on the same
-filp without that lock.
-
-iterate_dir()'s inode read lock permits concurrent readers and does not
-serialize per-file iterator state. ext4 stores its dx readdir cursor and
-fname RB tree in file-&gt;private_data. Concurrent reset or refill can
-therefore free a fname node while the other worker still traverses it or
-retains its RB-tree link, resulting in use-after-free accesses.
-
-An authenticated SMB client with list and delete rights on a directory in
-a writable KSMBD share backed by ext4 can trigger this when the directory
-takes the dx readdir path. The client overlaps an SMB2 QUERY_DIRECTORY
-request with an SMB2 SET_INFO request carrying FILE_DISPOSITION_INFORMATION
-on one live FileId.
-
-In one x86_64 SMP KASAN multi-shot guest using ksmbd-for-next at
-171df27077fb, the unmodified kernel reported a cross-worker use-after-free
-before a panic. The first report's access and free stacks show the two
-request paths directly (trimmed):
-
-  BUG: KASAN: slab-use-after-free in ext4_htree_store_dirent+0x488/0x550
-  Read of size 8 by task kworker/2:0/29
-  Workqueue: ksmbd-io handle_ksmbd_work
-  Call Trace:
-   ext4_htree_store_dirent+0x488/0x550
-   htree_dirblock_to_tree+0x535/0x990
-   ext4_htree_fill_tree+0x319/0xba0
-   ext4_readdir+0x175a/0x2f40
-   iterate_dir+0x1b6/0x630
-   smb2_query_dir+0x1003/0x1cc0
-
-  Freed by task 279:
-   free_rb_tree_fname+0x67/0xc0
-   ext4_readdir+0x13a9/0x2f40
-   iterate_dir+0x1b6/0x630
-   ksmbd_vfs_empty_dir+0xa2/0x100
-   smb2_set_info+0x2ffa/0x45d0
-
-Take fp-&gt;readdir_lock across the entire emptiness check. This places both
-iterators over that handle's filp in the same lock domain while
-preserving the disposition status handling. The exact code change
-completed a warning-free x86_64 KASAN bzImage build. Tracing three request
-pairs showed that the two iterate_dir() calls no longer overlapped and the
-expected statuses were preserved. A further 1,600 reproducer iterations
-completed with expected statuses and no KASAN report, Oops, or panic.
-
-The reproducer and complete guest configuration are available privately
-to maintainers on request.</description>
+    <title>CVE-2026-133268 - NVD - CVSS Score v3.1: 2.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133268</link>
+    <guid isPermaLink="false">f12268f2027ab7011dc381486b62ae93</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 2.7 | In JetBrains YouTrack before 2026.2.19728 missing authorization allowed creating sub-articles without the Create Article permission</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99557 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99557</link>
-    <guid isPermaLink="false">b6fe2aca0b06d504d72aca33b5eaa370</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ceph: fail readdir when the MDS reply carries no dirfrag
-
-A ceph mount oopses in ceph_readdir() when the MDS answers a READDIR
-request with a reply whose extra blob is empty.  parse_reply_info()
-skips reply blobs whose length is zero, so parse_reply_info_readdir()
-never runs, r_reply_info.dir_dir stays NULL, and the reply still
-parses as successful.  ceph_mdsc_do_request() returns 0 and
-ceph_readdir() then reads rinfo-&gt;dir_dir-&gt;frag with no NULL check:
-
-	/* extra */
-	ceph_decode_32_safe(&amp;p, end, len, bad);
-	if (len &gt; 0) {
-		...
-		err = parse_reply_info_extra(&amp;p, p + len, req, features, s);
-		...
-	}
-
-The oops on v7.3.0-rc4-00537-ga3ff15db6820, one getdents64(2) on the
-mount root after an ms_mode=legacy mount, trimmed:
-
-BUG: KASAN: null-ptr-deref in range [0x0000000000000000-0x0000000000000007]
-Oops: general protection fault, probably for non-canonical address 0xdffffc0000000000: 0000 [#1] SMP KASAN NOPTI
-CPU: 1 UID: 0 PID: 266 Comm: ls Tainted: G                 N  7.3.0-rc4-00537-ga3ff15db6820 #1 PREEMPT(lazy)
-RIP: 0010:ceph_readdir+0xbff/0x3ea0
-Call Trace:
- &lt;TASK&gt;
- ? __pfx_ceph_readdir+0x10/0x10
- wrap_directory_iterator+0xa2/0xe0
- iterate_dir+0x1da/0x5d0
- __x64_sys_getdents64+0x13b/0x2a0
- do_syscall_64+0xdd/0x4a0
- entry_SYSCALL_64_after_hwframe+0x77/0x7f
- &lt;/TASK&gt;
-
-The unconditional frag read came in with 81c6aea5275ea (&quot;ceph: handle
-frag mismatch between readdir request and reply&quot;), so the bug is old.
-
-Treat a reply with no dirfrag as a protocol violation: warn once,
-drop the request and return -EIO, the same way ceph_readdir() already
-handles the two malformed-reply cases later in the function.
-
-Tested on v7.3.0-rc4-00537-ga3ff15db6820 (KASAN).  Unpatched, the
-getdents64(2) above takes the machine down (oops=panic) on the first
-READDIR reply.  With the patch it warns once and getdents64(2)
-returns -EIO, no oops, no hang.  A conformant reply for an empty
-directory — dirfrag present, zero entries, FRAG_END|FRAG_COMPLETE —
-still lists &quot;.&quot; and &quot;..&quot; and returns EOF on both kernels, so normal
-readdir behavior is unchanged.  The oops is still present in
-v7.3-rc5 (72d3fcf802c45).</description>
+    <title>CVE-2026-133274 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133274</link>
+    <guid isPermaLink="false">b62c2d1bd1000e1cb36f43c9681da44d</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 7.1 | THC-Hydra through 9.7 contains a stack buffer overflow vulnerability in analyze_server_response() of hydra-http-form.c that allows malicious HTTP servers to corrupt memory via crafted Set-Cookie headers. Attackers can send a Set-Cookie header with an extra leading space followed by a repeated cookie name, causing a negative strncpy length that overflows tmpcookie and crashes Hydra.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99558 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99558</link>
-    <guid isPermaLink="false">c902251544837b8f39a75529e09e12e9</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-blk-crypto: fix NULL deref and UAF in __blk_crypto_evict_key()
-
-Sashiko reported a possible NULL pointer dereference, triggered by the
-following flow:
-
-  dm-inlinecrypt ctor            # first use of the fallback
-   ├─ blk_crypto_init_key()      # succeeds, ctx-&gt;key.size != 0
-   ├─ blk_crypto_start_using_key()
-   │   ├─ hw-wrapped key: -EOPNOTSUPP
-   │   │    # profile never allocated (NULL)
-   │   └─ raw key: fallback_start_using_mode()
-   │      └─ blk_crypto_fallback_init() fails
-   │         └─ kfree(profile)   # not NULLed
-   ├─ goto bad
-   └─ inlinecrypt_dtr()          # evicts whenever key.size is set
-      └─ blk_crypto_evict_key()
-         └─ blk_crypto_config_supported_natively() = false
-            └─ blk_crypto_fallback_evict_key()
-               └─ __blk_crypto_evict_key(blk_crypto_fallback_profile)
-                  └─ profile-&gt;num_slots # BOOM!!!
-
-This issue can be reproduced using the following commands:
-
-  dd if=/dev/zero of=/tmp/backing bs=1M count=64
-  LOOP=$(losetup -f --show /tmp/backing)
-  SZ=$(blockdev --getsz $LOOP)
-  KEY=$(head -c 64 /dev/urandom | od -An -tx1 | tr -d ' \n')
-  dmsetup create ic --table &quot;0 $SZ inlinecrypt aes-xts-plain64 \
-    $KEY 0 $LOOP 0 1 keytype:hw-wrapped&quot;
-
-And the following oops is triggered:
-
-  ==================================================================
-  blk-crypto: loop0: no support for wrapped keys
-  Oops: general protection fault, probably for non-canonical address
-        0xdffffc000000000b: 0000 [#1] SMP KASAN PTI
-  KASAN: null-ptr-deref in range [0x0000000000000058-0x000000000000005f]
-  CPU: 5 UID: 0 PID: 901 Comm: dmsetup 7.3.0-rc3 #1 PREEMPT(lazy)
-  RIP: 0010:__blk_crypto_evict_key+0x2e/0x3b0
-  Call Trace:
-   blk_crypto_evict_key+0x24c/0x320
-   inlinecrypt_dtr+0xf6/0x160
-   inlinecrypt_ctr+0x2d3/0xbd0
-   dm_table_add_target+0x661/0xf40
-   table_load+0x1c4/0x490
-   ctl_ioctl+0x32f/0x5f0
-   dm_ctl_ioctl+0xe/0x20
-  ==================================================================
-
-dm-inlinecrypt is the only caller that can evict a key that was never
-started, as fscrypt frees such a key without evicting it.
-
-Fix this by returning early from blk_crypto_fallback_evict_key() when
-tfms_inited[] is not set for the key's mode.  tfms_inited[] is only set
-after blk_crypto_fallback_init() has successfully initialized the
-profile, so the crash above is no longer reachable.
-
-The bug has been latent since commit c984ff1423ae (&quot;blk-crypto:
-dynamically allocate fallback profile&quot;) was merged in v6.5, and only
-became actually triggerable when commit e7f57d2c47e2 (&quot;dm-inlinecrypt:
-add target for inline block device encryption&quot;) was merged in v7.2.</description>
+    <title>CVE-2026-133275 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133275</link>
+    <guid isPermaLink="false">476664a8af2e29a870f1fc6ca01ae551</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.3 | A vulnerability in the Audio, Web, and Video Conferencing (AWV) component of Mitel MiCollab through 10.3 (10.3.0.18) could allow an unauthenticated attacker to conduct an arbitrary file upload attack due to insufficient file type validation. A successful exploit could allow an attacker to upload arbitrary files to the target system. This is MTLVULN-1861.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99559 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99559</link>
-    <guid isPermaLink="false">4e01468bc4db84187549d21530d285be</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ARM: 9524/1: mm: align hugetlb mappings to the huge page size
-
-mmap(MAP_HUGETLB) on 32-bit Arm can return an address which is not
-aligned to the huge page size. In a QEMU virt guest, unmapping the VMA
-then hits the alignment check in __unmap_hugepage_range():
-
-  kernel BUG at mm/hugetlb.c:5213!
-  Internal error: Oops - BUG: 0 [#1] SMP ARM
-  PC is at __unmap_hugepage_range+0x540/0x584
-  LR is at __zap_vma_range+0x13a0/0x1410
-
-Commit 7bd3f1e1a9ae (&quot;mm: make hugetlb mappings go through
-mm_get_unmapped_area_vmflags&quot;) made hugetlb mappings use the
-architecture's arch_get_unmapped_area(). The generic implementations
-handle hugetlb alignment, but the Arm implementations only account for
-the optional SHMLBA cache-colouring constraint. A 4 KiB-page kernel can
-therefore align the mapping to 4 KiB or 16 KiB instead of the required
-2 MiB.
-
-Set the alignment mask from the file's hstate for hugetlb mappings in
-both Arm implementations. Huge-page alignment also satisfies the
-SHMLBA constraint.</description>
+    <title>CVE-2026-62255 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62255</link>
+    <guid isPermaLink="false">713ace305aea48829d8357a9be9da82c</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 7.1 | HTSlib is a library for reading and writing bioinformatics file formats. Prior to 1.21.2, 1.22.3, 1.23.2, and 1.24, cram_index_load does not verify that the number of reference sequences in a CRAM .crai index does not exceed the CRAM header reference count. A malformed index can drive unbounded index-array allocation, and when the number of references in the index is within two of INT_MAX, the growth calculation can wrap, read beyond a heap buffer, and use the resulting value as a pointer for an unchecked memory write. Any region query can trigger the flaw, causing denial of service or memory corruption. This issue is fixed in versions 1.21.2, 1.22.3, 1.23.2, and 1.24.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99560 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99560</link>
-    <guid isPermaLink="false">54d38c097c031015709fb7dbded03406</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-wifi: mt76: mt7925: fix reset panic caused by the WM2 rx irq mask
-
-mt7925_irq_map sets wm2_complete_mask, but mt7925_dma_layout has no
-tx done ring, so the MT_RXQ_MCU_WA queue and its NAPI are never set up.
-On a chip reset, mt7925e_mac_reset() calls napi_disable() on that NAPI
-and crashes:
-
-  BUG: kernel NULL pointer dereference, address: 0000000000000a40
-  Workqueue: mt76 mt7925_mac_reset_work [mt7925_common]
-  RIP: 0010:mutex_lock+0x1c/0x50
-  Call Trace:
-   napi_disable+0x1d/0x50
-   mt7925e_mac_reset+0x327/0x420 [mt7925e]
-   mt7925_mac_reset_work+0x9a/0x1a0 [mt7925_common]
-
-Remove the WM2 mask from mt7925_irq_map and from
-MT7925_INT_RX_DONE_ALL.</description>
+    <title>CVE-2026-62256 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62256</link>
+    <guid isPermaLink="false">8c6fc781b3b5a510791365bedd35bfa5</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 7.1 | HTSlib is a library for reading and writing bioinformatics file formats. Prior to 1.21.2, 1.22.3, 1.23.2, and 1.24, fai_retrieve does not verify that the line width recorded in a FASTA .fai index is greater than or equal to the number of bases per line. When the line width is exactly one less than the base count, retrieval allocates an undersized heap buffer and writes one byte beyond its end; larger discrepancies instead cause an allocation failure that is handled. This issue can corrupt heap memory and crash the process. This issue is fixed in versions 1.21.2, 1.22.3, 1.23.2, and 1.24.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99561 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99561</link>
-    <guid isPermaLink="false">8b3632097435a6ce025a45d0f5feac10</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-fork: don't create io threads once PF_POSTCOREDUMP is set
-
-zap_process() skips every thread that already has PF_POSTCOREDUMP set.
-Such a thread is past synchronize_group_exit(), so a coredump can't
-catch it anymore. It isn't counted in core_state-&gt;threads_remaining and
-it isn't sent SIGKILL.
-
-do_exit() sets PF_POSTCOREDUMP in synchronize_group_exit() and calls
-io_uring_files_cancel() right after that. The cancellation runs task
-work and a create_worker_cb() that io-wq queued before the exit creates
-a new io-wq worker from there. If another thread started a coredump in
-the meantime that worker joins a thread-group which is already being
-dumped. zap_process() never saw it so it was never counted. But when it
-exits it sees signal-&gt;core_state in synchronize_group_exit() and
-decrements threads_remaining like any other thread.
-
-So the count reaches zero one thread early and the dumper leaves
-coredump_wait_inactive() while a thread it counted is still running.
-
-The task has no fatal signal pending because zap_process() deliberately
-didn't send it one, and it never went through get_signal() so it doesn't
-have PF_SIGNALED either.
-
-Refuse to create an io thread when the creator has PF_POSTCOREDUMP.
-That costs nothing. io_uring_files_cancel() raises IO_WQ_BIT_EXIT
-before it runs any task work, so a worker created from there only ever
-gets to exit again, and io_should_retry_thread() doesn't retry -EINTR.
-
-Clearing PF_POSTCOREDUMP for the new thread in copy_process() was the
-other option. It makes the worker a thread like any other, but it only
-helps while the dump hasn't started. A worker born after zap_process()
-has run is invisible to it whatever its flags say and still decrements
-threads_remaining on the way out. Refusing to create it covers both, and
-then no task is ever born with the flag, so there is nothing to clear.
-
-Moving io_uring_files_cancel() ahead of synchronize_group_exit() closes
-the same window. It runs the cancellation, and whatever that can block
-on, before the thread announces itself to the dumper. A thread that
-blocks there never reaches coredump_task_exit() at all, so the dumper
-ends up waiting for a thread that never parks. Refusing the creation
-leaves the cancellation where it is. But it's very ugly to run io_uring
-work even before we did all the generic exit work.</description>
+    <title>CVE-2026-62257 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62257</link>
+    <guid isPermaLink="false">4c2cba19c3bc3ab76064f2b5dc13ac8e</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.8 | HTSlib is a library for reading and writing bioinformatics file formats. Prior to 1.21.2, 1.22.3, 1.23.2, and 1.24, the experimental CRAM v4 XPACK and XRLE decoders cache expanded block pointers at indexes beyond the 512-element slice-&gt;block_by_id array. An array index partially controlled by data in the input file first causes an out-of-bounds read to determine whether a block is cached; a null value then causes allocation of a block and an out-of-bounds pointer write to the same element. The invalid read may crash the process, while the write may corrupt heap state and could permit arbitrary code execution. This issue is fixed in versions 1.21.2, 1.22.3, 1.23.2, and 1.24.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99562 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99562</link>
-    <guid isPermaLink="false">85d1934958277d87d66b1bfe8d1a69ee</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: reject FSCTL_SET_ZERO_DATA on a directory handle
-
-An authenticated client with a writable tree connection can open a
-directory with FILE_WRITE_DATA and send FSCTL_SET_ZERO_DATA on that
-handle. The handler only checks fp-&gt;daccess &amp; FILE_WRITE_DATA_LE, but on
-a directory FILE_WRITE_DATA is the legitimate add-file right, so the
-check passes. ksmbd_vfs_zero_data() then calls kernel_write() on the
-directory file, which has no FMODE_WRITE, and __kernel_write_iter()
-hits WARN_ON_ONCE(!(file-&gt;f_mode &amp; FMODE_WRITE)), panicking a
-panic_on_warn kernel.
-
-Before commit 25e414db7033 (&quot;ksmbd: report holes in allocated range
-queries&quot;) the dense-file path used vfs_fallocate(), which rejects
-directories with -EISDIR. The kernel_write() loop that replaced it has
-no such check. Reject a directory handle in ksmbd_vfs_zero_data() before
-writing, as ksmbd_vfs_write() already does for SMB2_WRITE.
-
-  WARNING: fs/read_write.c:608 at __kernel_write_iter+0x74b/0x8c0
-  Workqueue: ksmbd-io handle_ksmbd_work
-  Call Trace:
-   kernel_write+0x1ef/0x4d0
-   ksmbd_vfs_zero_data+0x413/0x590
-   smb2_ioctl+0x21fa/0x66a0
-   handle_ksmbd_work+0x61b/0x1ff0</description>
+    <title>CVE-2026-62258 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62258</link>
+    <guid isPermaLink="false">78279d2e45d9c2faf1f1193298517eb4</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.8 | HTSlib is a library for reading and writing bioinformatics file formats. Prior to 1.21.2, 1.22.3, 1.23.2, and 1.24, the CRAM decoder validates the 254-character query-name limit only after decoding the name into a 1024-byte stack array. An attacker-controlled CRAM record can provide an overlong query name and overflow the local stack buffer before the later validation runs; all CRAM format versions are affected. Opening such a file can crash the process, corrupt stack data, and may permit arbitrary code execution. This issue is fixed in versions 1.21.2, 1.22.3, 1.23.2, and 1.24.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99563 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99563</link>
-    <guid isPermaLink="false">9099b722d4c33fb26f621ba2528b6fc0</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-smb: smbdirect: release failed pending sockets of a listener
-
-A child of a listener only left the listen.pending or listen.ready
-list via smbdirect_socket_accept() or when the listener was
-destroyed. So every connection that failed before it was accepted
-(negotiate timeout, peer disconnect, invalid negotiate request, ...)
-stayed on the list and counted against the backlog until the listener
-was destroyed. After about backlog (10 for ksmbd) such connections
-smbdirect_listen_connect_request() rejected every new connection with
--EBUSY, so an unauthenticated peer was able to permanently stop
-ksmbd from accepting SMB-Direct connections.
-
-Now a failed child moves itself to a new listen.orphaned list at the
-end of smbdirect_socket_cleanup_work(), after the disconnect was
-started, and queues listen.purge_orphaned_work, which releases it
-with smbdirect_socket_release(), without holding the listener's
-rdma_lock_handler() lock, in the same way smbdirect_socket_destroy()
-does for the remaining children. Orphaned sockets still count against
-the backlog until they are released.
-
-sc-&gt;accept.listener is now only changed under listener-&gt;listen.lock
-and whoever clears it is responsible for releasing the socket:
-smbdirect_socket_accept(), purge_orphaned_work or the destroy of the
-listener.
-
-In order to make that work:
-
-- a struct smbdirect_socket that is a listener is now freed via
-  kfree_rcu(), so that a child can dereference sc-&gt;accept.listener
-  under rcu_read_lock(), even if the listener is released concurrently.
-
-- smbdirect_listen_connect_request() adds nsc to the listen.pending
-  list and sets nsc-&gt;accept.listener before it calls
-  smbdirect_accept_connect_request(), and always returns 0 so the
-  rdma_cm core keeps the connection id and nsc owns it. On a non-zero
-  return it schedules nsc's teardown with
-  smbdirect_socket_schedule_cleanup(), which orphans it off the
-  listener so that purge_orphaned_work releases it; nsc destroys its
-  own connection id with rdma_destroy_id() in that teardown. The
-  teardown has to be deferred because the rdma_cm core holds nsc's
-  id_priv-&gt;handler_mutex across the handler, so nsc-&gt;rdma.cm_id must
-  not be destroyed synchronously from here. That same handler_mutex
-  (and the listener's) also guarantees nsc can't go away under us,
-  so setting the listener before the call is safe and lets a failure
-  orphan nsc.
-
-- smbdirect_accept_negotiate_recv_work() no longer moves a socket to
-  the ready list if it already failed or no longer belongs to the
-  listener. Every accepting socket has a listener, so if
-  sc-&gt;accept.listener is already cleared, it no longer sends a
-  negotiate response, as the socket is about to be released.
-
-- smbdirect_socket_destroy() of the listener disables
-  purge_orphaned_work and also releases the orphaned sockets.</description>
+    <title>CVE-2026-62259 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62259</link>
+    <guid isPermaLink="false">923399ce6827e42388eea12cc4d49e82</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | HTSlib is a library for reading and writing bioinformatics file formats. Prior to 1.21.2, 1.22.3, 1.23.2, and 1.24, the experimental CRAM v4 functions cram_xpack_decode_char and cram_xrle_decode_char do not validate that attacker-controlled decode sizes remain within their expanded input arrays. Crafted CRAM data can therefore make either decoder read beyond the supplied input buffer, potentially disclosing process-state information or crashing the process through invalid memory access. This issue is fixed in versions 1.21.2, 1.22.3, 1.23.2, and 1.24.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99564 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99564</link>
-    <guid isPermaLink="false">e08406b55ea2539839c2f2b73fe8b8bc</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-smb: smbdirect: don't wait for RDMA_CM_EVENT_DISCONNECTED in smbdirect_socket_destroy_sync()
-
-smbdirect_socket_destroy_sync() waited for RDMA_CM_EVENT_DISCONNECTED
-after smbdirect_socket_cleanup_work() called rdma_disconnect(). That
-can take very long, e.g. if the peer just disappeared, until the
-rdma cm gives up, or forever if the event already happened, but the
-status was overwritten afterwards.
-
-This is not needed: smbdirect_socket_destroy() drains the qp under
-rdma_lock_handler(), destroys it and calls rdma_destroy_id(), which
-only waits for a currently running event handler and makes sure no
-further events are delivered. The rest of the disconnect protocol
-(DREQ/DREP and timewait for IB, abrupt close for iWarp) is handled
-by the rdma core asynchronously. drivers/nvme/host/rdma.c also just
-calls rdma_disconnect() and ib_drain_qp() before rdma_destroy_id().
-
-So smbdirect_socket_destroy() now also accepts
-SMBDIRECT_SOCKET_DISCONNECTING and changes the status to
-SMBDIRECT_SOCKET_DISCONNECTED itself under rdma_lock_handler().
-
-We could still get RDMA_CM_EVENT_DISCONNECTED in the small
-windows between rdma_unlock_handler() and rdma_destroy_id(),
-but in that case smbdirect_connection_rdma_event_handler()
-is basically a no-op.</description>
+    <title>CVE-2026-62260 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62260</link>
+    <guid isPermaLink="false">e66d0df8eba1fc57d99060cc47b06777</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | HTSlib is a library for reading and writing bioinformatics file formats. Prior to 1.21.2, 1.22.3, 1.23.2, and 1.24, the CRAM BETA decoder functions cram_beta_decode_long, cram_beta_decode_int, and cram_beta_decode_char, and the experimental CRAM v4 XPACK functions cram_xpack_decode_long and cram_xpack_decode_int, have bounds-checking flaws caused by integer overflow after a multiplication. The resulting incorrect bounds check can allow decoding to read beyond the supplied input buffer, potentially leaking process-state information or crashing the process. This issue is fixed in versions 1.21.2, 1.22.3, 1.23.2, and 1.24.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-99565 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99565</link>
-    <guid isPermaLink="false">dcb7d6781ef4bd070733ca73b26ae14f</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-ksmbd: wait for negotiation before receiving another PDU
-
-The receive thread queues a request and can read the next PDU before
-the negotiation worker finishes. While need_neg is set, the next PDU
-can cause ksmbd_init_smb_server() to replace conn-&gt;ops. A pipelined
-SMB2 request can therefore make the worker handle an earlier, shorter
-SMB1 request with SMB2 operations and read beyond its buffer.
-
-An SMB1 multi-protocol negotiate may be followed by an SMB2 NEGOTIATE
-that changes conn-&gt;ops again. Wait for work queued while the connection
-is new or needs negotiation to complete before reading another PDU.
-This keeps the operations stable for both stages of negotiation without
-changing when need_neg is cleared.</description>
+    <title>CVE-2026-63390 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63390</link>
+    <guid isPermaLink="false">c27c71bdf3913e28c39c0152c5b63162</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.8 | HTSlib is a library for reading and writing bioinformatics file formats. Prior to 1.21.2, 1.22.3, 1.23.2, and 1.24, the BCF reader can experience an integer overflow in a record-length check that verifies whether a record contains enough bytes for the expected number and size of stored items. A crafted BCF record can bypass this check, causing reads beyond the stored data and, in some cases, writes beyond the heap buffer when the reader sets the least significant bit of accessed bytes. Opening such a file can crash the process, corrupt data or heap structures, and may permit arbitrary code execution. This issue is fixed in versions 1.21.2, 1.22.3, 1.23.2, and 1.24.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
