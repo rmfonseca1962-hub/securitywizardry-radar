@@ -5,47 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 06:02:41 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-132768 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132768</link>
-    <guid isPermaLink="false">ac4bf3925d446acc4f280629f2b6ab3e</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box before 26.07.0 contains a use-after-free vulnerability in xmt_find_node() in loader_xmt.c that leaves freed forward-referenced nodes cached in parser-&gt;peeked_nodes. Attackers can supply a crafted XMT file with a node targeted by an SFCommandBuffer command, triggering a later DEF lookup on the freed node and crashing MP4Box.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132769 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132769</link>
-    <guid isPermaLink="false">77c241d9c36464691a314320bf56e2e5</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC before 26.07.0 contains a type confusion vulnerability in xmt_parse_script_field() that allows attackers to trigger a heap out-of-bounds read via duplicate Script field names with conflicting types. Attackers can craft an XMT file that, when imported with MP4Box, causes gf_sg_vrml_mf_reset() to treat a single-value field as multi-value, crashing the application.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132770 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132770</link>
-    <guid isPermaLink="false">6540a89c68f93f93f29d101253a7e639</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box before 26.07.0 contains a NULL pointer dereference vulnerability in xmt_parse_proto() in loader_xmt.c that allows attackers to crash the process via a redefined ProtoDeclare name. Attackers can supply a crafted XMT file with a duplicate ProtoDeclare name, causing gf_sg_proto_new() to return NULL and crashing MP4Box during import.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132771 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132771</link>
-    <guid isPermaLink="false">438b1bfdefdcf878b32b46ec55e9f01e</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains a use-after-free vulnerability in ReplaceDEFNode that allows attackers to crash MP4Box by triggering access to a partly freed child list. Attackers can supply a crafted XMT scene file whose InputSensor command buffer cascades prototype sub-graph deletion during gf_sg_vrml_parent_destroy, causing denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132772 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132772</link>
-    <guid isPermaLink="false">0c822c25084bf12e04377578f2ed64a7</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box before 26.07.0 contains a use-after-free vulnerability in the XMT parser that leaves parser-&gt;command_buffer pointing into a freed InputSensor node. Attackers can supply a crafted XMT scene file triggering a parse error so xmt_node_start() writes NULL into freed memory, corrupting the heap and crashing MP4Box.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 19 Nov 2026 07:02:56 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-132773 - NVD - CVSS Score v4.0: 7.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132773</link>
@@ -327,6 +287,50 @@ Successful exploitation may compromise the cryptographic protections applied to 
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84998</link>
     <guid isPermaLink="false">018518f181af2384d78efc6364db26c4</guid>
     <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.2 | The NextScripts: Social Networks Auto-Poster plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'comment_author' and 'comment_agent' Comment Fields in all versions up to, and including, 4.4.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected payload executes in an administrator's browser session when the administrator views the WordPress comment moderation queue, including pending and unapproved comments, meaning no prior approval of the comment is required for exploitation.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-108687 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-108687</link>
+    <guid isPermaLink="false">dc0b11ae6e4381d223f6c28c390db90d</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | The SAML SSO Login  WordPress plugin through 1.5.2 does not verify that the SAML assertion whose signature it validates is the same assertion it reads the user identity from, allowing unauthenticated attackers who hold a validly signed assertion for any identity to authenticate as any existing user, including an administrator, through XML signature wrapping.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109555 - NVD - CVSS Score v3.1: 8.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109555</link>
+    <guid isPermaLink="false">98bfd7445ec200bed3289987832e258a</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.0 | The WP STAGING and WP STAGING Pro plugins for WordPress are vulnerable to PHP Object Injection in all versions up to, and including, 4.17.0 and 6.17.0, respectively, via deserialization of untrusted input during database restore and staging reset. This is due to the database importer treating attacker-controlled text beginning with {WPSTG_BINARY} as trusted internal binary data and decoding its hexadecimal suffix into serialized bytes. This makes it possible for authenticated attackers, with Subscriber-level access and above, to plant a malicious serialized object in their own profile. When an Administrator later performs an ordinary database-including restore or staging reset containing that value, and the restored profile metadata is loaded, either during the restore or in a later request, a built-in POP chain can be used to execute arbitrary code on the server. Additional built-in gadget chains allow arbitrary local file read in both WP STAGING and WP STAGING Pro and arbitrary file deletion in WP STAGING Pro. The attacker does not require Administrator credentials or a copy of a backup, but exploitation does require the later privileged restore or reset.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-117678 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117678</link>
+    <guid isPermaLink="false">5ad09d9cd2e2b6ba3e5c0ee80dcc5c54</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | Inefficient Algorithmic Complexity vulnerability in benoitc idna allows an attacker who controls a hostname passed to the library to exhaust CPU via an over-long xn-- label. idna:ulabel/1 in src/idna.erl hands every ASCII label that starts with xn-- to punycode:decode/1 without applying check_label_length/1, the 63-octet DNS label limit. punycode:decode/1 in src/punycode.erl builds its output with list appends in insert/4, so its cost grows super-linearly with the label length. A label of a few kilobytes keeps a scheduler busy for seconds to minutes before the label is rejected as invalid punycode.
+
+Every decode entry point reaches this path: decode/1, decode/2, to_unicode/1 and from_ascii/1. The encode path reaches it as well, because alabel/1 calls ulabel/1 on an ASCII xn-- label before its own length check, so encode/1, encode/2 and to_ascii/1 are affected for such input.
+
+This issue affects idna: from 0.5.0 before 8.0.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121852 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121852</link>
+    <guid isPermaLink="false">896e90cb9f21170c2f087ea47d3ff415</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | The AppPresser  WordPress plugin before 5.0.0 does not properly escape the contents of its debug log when displaying it in the admin dashboard, and decodes escape sequences after sanitising input, allowing unauthenticated users to perform Stored XSS attacks against administrators when debug logging is enabled.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129446 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129446</link>
+    <guid isPermaLink="false">a8e31763ae8af87058b080f2cb021a63</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | The WPO365 | SEAMLESS WORDPRESS + MICROSOFT INTEGRATION (WPO365 | LOGIN) WordPress plugin before 45.4 does not ensure the signature validated on a SAML response covers the element the user identity is read from, allowing unauthenticated attackers to forge a response via signature wrapping and log in as any user, including administrators, when they can supply a single artifact signed by the configured identity provider.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
