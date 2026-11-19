@@ -5,39 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 04:02:04 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-132751 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132751</link>
-    <guid isPermaLink="false">246e80da4269e7c0eba6d012a85e737c</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.5 | yt through 4.4.4 contains a code injection vulnerability that allows attackers to execute Python code by supplying a crafted con_args attribute in a ytdata HDF5 file. SavedDataset._parse_parameter_file() passes con_args to eval() unrestricted, so loading a malicious .h5 file with yt.load() runs attacker code as the user.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132752 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132752</link>
-    <guid isPermaLink="false">360be5a026e5dd484364853ac90e571f</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.1 | ScreenTinker before 3.2.4 contains a stored cross-site scripting vulnerability in the GET /api/kiosk/:id/render endpoint that allows users with kiosk page edit rights to store javascript: URLs in page buttons. Attackers can trigger script execution in the dashboard origin when an administrator activates the button, hijacking the victim's session and taking full control of the instance.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132753 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132753</link>
-    <guid isPermaLink="false">4da6ad42f6bf359e3c3be41bbff1638b</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | MP4v2 through 2.1.0 contains a NULL pointer dereference vulnerability in MP4RtpHintTrack::GetPayload() in src/rtphint.cpp that passes an unchecked rtpmap value to strchr(). Attackers can supply a crafted MP4 file whose RTP hint track has a corrupted hinf atom to crash mp4info or applications calling MP4GetHintTrackRtpPayload().</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132754 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132754</link>
-    <guid isPermaLink="false">b0bad3991bcdccfb5b786b9cd81f8b3b</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | MediaInfoLib before 26.10 contains an out-of-bounds read vulnerability in File_Mpeg4::meta_iloc that allows attackers to trigger a global buffer over-read via oversized iloc field sizes. Attackers can supply a crafted MP4 file with invalid offset_size or length_size values to overrun the BitStream_Fast mask table and crash applications analysing the file.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 19 Nov 2026 05:00:33 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-132755 - NVD - CVSS Score v4.0: 6.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132755</link>
@@ -327,6 +295,38 @@ Successful exploitation may compromise the cryptographic protections applied to 
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-2307</link>
     <guid isPermaLink="false">b63a71efba20d67e7f9be6426a2f4881</guid>
     <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | The Elementor Website Builder – More Than Just a Page Builder plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 4.0.5 via `/wp-json/elementor/v1/user` REST endpoint. This makes it possible for authenticated attackers, with Contributor-level access and above, to extract sensitive data including emails, password hashes and usernames for all WordPress users.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132611 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132611</link>
+    <guid isPermaLink="false">a9af4ce90e170911d8423b6db65af62c</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security vulnerability has been detected in SourceCodester Simple Form Builder Web App 1.0. This impacts the function save_response of the file /classes/Forms.php. The manipulation of the argument q[&lt;index&gt;] leads to unrestricted upload. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132621 - NVD - CVSS Score v4.0: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132621</link>
+    <guid isPermaLink="false">e010935c9ee9f90477ede855983f5bdc</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 7.0 | A vulnerability has been found in GearUP Hyperev up to 20261020. This affects an unknown function. Such manipulation leads to on-chip debug and test interface with improper access control. The attack can be executed directly on the physical device. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132622 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132622</link>
+    <guid isPermaLink="false">f7ec7eb88bc6506abf09ac7e41b7c6ad</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 9.4 | A vulnerability was found in GearUP Hyperev up to 20261020. This impacts the function get_wlan_sitesurvey of the file ld/utils.lua of the component WLAN Site Survey. Performing a manipulation of the argument line results in os command injection. The attack is possible to be carried out remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132798 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132798</link>
+    <guid isPermaLink="false">f3d08346bb505325be9de532ec87d3d3</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.2 | Improper Limitation of a Pathname to a Restricted Directory in the Como log viewer in Temenos Application Framework Java (TAFJ) R18.SP76.0 allows remote authenticated attackers to read arbitrary files via path traversal</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
