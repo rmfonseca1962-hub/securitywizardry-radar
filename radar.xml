@@ -5,360 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 21:01:15 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-131281 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131281</link>
-    <guid isPermaLink="false">fdea16d307bf0ef4214b3400740b0dd7</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.3 | In Splunk SOAR versions below 8.8.0, a user with asset edit permission could change the approval requirements and effective automation user for an asset without Splunk SOAR recording field-level audit details for those changes. This could weaken investigation and accountability for changes to security-sensitive asset settings.
-The vulnerability is possible because Splunk SOAR does not include the asset approval voting fields and effective automation user field in its field-level audit coverage.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131282 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131282</link>
-    <guid isPermaLink="false">a00be634363077c0dfb3598d79beab09</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.1 | In Splunk SOAR versions below 8.8.0, a user who holds the &quot;Observer&quot; Splunk SOAR role could access a password-reset credential in a diagnostic log bundle and reset the password for an active local account.
-The vulnerability is possible because Splunk SOAR does not redact password-reset email bodies before it logs communications between product processes.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131283 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131283</link>
-    <guid isPermaLink="false">63a53258a2ce0e0b883afb7ab45b00c6</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.3 | In Splunk SOAR versions below 8.8.0, an authenticated user with playbook edit permission could cause later playbook conversions to include spurious branch conditions. This can prevent downstream blocks from running in affected converted playbooks.
-The vulnerability is possible because the playbook converter retains branch conditions from previous conversions.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131284 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131284</link>
-    <guid isPermaLink="false">f5453e797d8b94cdbe723051cf00858f</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.3 | In Splunk SOAR versions below 8.8.0, an authenticated user with permission to view and edit containers could import a container archive that makes artifacts appear to be part of a case or have notes when no corresponding case associations or notes exist. This could cause Representational State Transfer (REST) API clients and filters to use incorrect artifact state.
-The vulnerability is possible because container archive import accepts artifact workflow state from the archive instead of deriving that state from associated cases and notes.
-For more information see Splunk SOAR REST API reference (https://help.splunk.com/en/splunk-soar/soar-on-premises/rest-api-reference) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131285 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131285</link>
-    <guid isPermaLink="false">fecd390865783b49956912b0a87dcf98</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | In Splunk SOAR versions below 8.8.0, an authenticated user who can edit and run playbooks could cause automation batches for other events to stop running.
-The vulnerability occurs because Splunk SOAR does not bind playbook API requests to the server-provided execution context.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131286 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131286</link>
-    <guid isPermaLink="false">18cccce29e8a5543275c3dfb8f819ff4</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.1 | In Splunk SOAR versions below 8.8.0, an authenticated user with permission to author and run playbooks could view action data outside the authorized scope for that user and change the status and message of another playbook run.
-The vulnerability is possible because the playbook API does not verify that the requested playbook run is within the authorized scope of the authenticated user.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131287 - NVD - CVSS Score v3.1: 9.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131287</link>
-    <guid isPermaLink="false">97f77bb2c63209da74aa93527ca7bbc3</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.6 | In Splunk SOAR versions below 8.8.0, a user that holds a role with the Playbooks view, edit, execute, and delete permissions could cause existing cross-repository playbook references to run attacker-controlled playbook code.
-The vulnerability is possible because Splunk SOAR can bind existing cross-repository playbook references to a different source control repository when a deleted repository name is reused.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131288 - NVD - CVSS Score v3.1: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131288</link>
-    <guid isPermaLink="false">19c8ada54d2d8ebc629b915ab599f6d4</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.3 | In Splunk SOAR versions below 8.8.0, a user with access to the configured load balancer account could replace a load balancer helper that Splunk SOAR later runs with root privileges during cluster lifecycle operations. If a Splunk SOAR administrator performs a cluster lifecycle operation, Splunk SOAR could execute arbitrary code with root privileges on the load balancer.
-The vulnerability is possible because Splunk SOAR does not verify the integrity or ownership of the load balancer helper before running it with root privileges.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131289 - NVD - CVSS Score v3.1: 3.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131289</link>
-    <guid isPermaLink="false">4cbceedb50fbf1c9bf0c29474efd6053</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 3.1 | In Splunk SOAR versions below 8.8.0, a user who holds a role that can edit and run playbooks in Splunk SOAR could cause Splunk SOAR to run non-read-only actions from a Safe Mode playbook, resulting in unauthorized state changes.
-The vulnerability is possible because Splunk SOAR does not verify that the playbook run context in an action request matches the context that the server provided.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131290 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131290</link>
-    <guid isPermaLink="false">59a986b79a92ba93f44f70504020608a</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.3 | In Splunk SOAR versions below 8.8.0, an authenticated user with permission to edit and run playbooks could view child playbook status and loop-state metadata for playbook runs outside the authorized scope for that user.
-The vulnerability is possible because the playbook status API does not bind the requested run to the current execution context before it returns metadata.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131291 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131291</link>
-    <guid isPermaLink="false">ff6c448a01ca5e4a30c393f75ac9b626</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | In Splunk SOAR versions below 8.8.0, a Splunk SOAR user who can edit and run playbooks for a permitted container label could associate action and callback state with a running playbook outside that container label. This could affect playbook automation for containers that the user cannot view.
-The vulnerability is possible because the Playbook Automation API accepts a supplied playbook run identifier without verifying that it is bound to the server-provided playbook execution context.
-The vulnerability requires a running playbook on a container label that the user cannot view.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131292 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131292</link>
-    <guid isPermaLink="false">ffb2e942cd66cf5c01f105483a5e5578</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | In Splunk SOAR versions below 8.8.0, a user who can edit and run a playbook on a permitted label could cause Splunk SOAR to return custom-function status and callback state from another playbook run.
-The issue results from insufficient binding between a custom-function-status request and the playbook run that initiates it.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131293 - NVD - CVSS Score v3.1: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131293</link>
-    <guid isPermaLink="false">89d8840a4f0ea2a870c00754382f99df</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.3 | In Splunk SOAR versions below 8.8.0, an authenticated user with permission to edit and run playbooks could read or overwrite persisted data for playbook runs outside the authorized label, or ownership scope for that user. The affected data can include playbook inputs, prompt and block results, outputs, and secrets that playbooks save in run data. Overwriting the data could corrupt results that paused, scheduled, or parent playbook runs later use.
-The vulnerability is possible because the playbook automation APIs do not bind data operations to the active playbook run.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131294 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131294</link>
-    <guid isPermaLink="false">2b8febb03bd37f71d35bb386e65f2f46</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | In Splunk SOAR versions below 8.8.0, an authenticated user who can edit and run playbooks on a container label could associate a custom-function callback with another playbook run. The callback could modify the state of a container outside the authorized scope for that user.
-The vulnerability is possible because Splunk SOAR does not bind playbook API requests to the trusted playbook run and container context.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131295 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131295</link>
-    <guid isPermaLink="false">1d46a05f3efda627fd8d5c8b3de8517c</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.8 | In Splunk SOAR versions below 8.8.0, an authenticated user with permission to create and run playbooks could start child playbooks on containers outside the authorized label, or repository scope for that user. This could expose container data and affect automation outside that scope.
-The vulnerability is possible because Splunk SOAR does not bind the identity used to authorize the child playbook run to the parent playbook execution context.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131296 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131296</link>
-    <guid isPermaLink="false">518997089e462490b26cc2c582ef5d03</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.4 | In Splunk SOAR versions below 8.8.0, a user with permission to author and run playbooks could add messages to a different playbook run log and cause that run to fail, including runs outside the labels that the user could access.
-The vulnerability is possible because Splunk SOAR does not verify that playbook API requests use the trusted runtime context for the current playbook run.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131297 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131297</link>
-    <guid isPermaLink="false">ffcb7c476252be1c53b7dc50ff267f61</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.1 | In Splunk SOAR versions below 8.8.0, an operator of a configured identity provider could authenticate as an existing user associated with another configured identity provider. If that account has the &quot;Administrator&quot; Splunk SOAR role, the operator could control the Splunk SOAR deployment.
-Splunk SOAR does not bind external user accounts to the identity provider that provisions them and authenticates accounts by username without verifying provider ownership.
-The vulnerability requires more than one configured external identity provider with distinct trust domains and a target username that an operator of a configured identity provider can authenticate through a different provider.
-For more information see Configure single sign-on authentication (https://help.splunk.com/en/splunk-soar/soar-on-premises/administer-soar-on-premises/8.7.0/manage-your-splunk-soar-on-premises-users-and-accounts/configure-single-sign-on-authentication-for-splunk-soar-on-premises) and Manage roles and permissions (https://help.splunk.com/en/splunk-soar/soar-on-premises/administer-soar-on-premises/8.8.0/manage-your-splunk-soar-on-premises-users-and-accounts/manage-roles-and-permissions-in-splunk-soar-on-premises) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131298 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131298</link>
-    <guid isPermaLink="false">b4d634f89a469608a3569e0e5afcc964</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.3 | In Splunk SOAR versions below 8.8.0, an authenticated user with edit permission on a workbook could configure a service-level agreement at only the workbook phase or task level. Splunk SOAR then flags the task as overdue immediately and does not display the configured deadline in the work queue. The incorrect deadline status could obscure genuine deadline breaches.
-The vulnerability is possible because Splunk SOAR treats an absent phase-level or task-level service-level agreement as immediately due when it compares the configured due times.
-For more information see Define tasks using workbooks (https://help.splunk.com/en/splunk-soar/soar-on-premises/administer-soar-on-premises/7.0.0/configure-product-settings-for-your-splunk-soar-on-premises-instance/define-tasks-using-workbooks) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131299 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131299</link>
-    <guid isPermaLink="false">47b1bdd6e40024014e952b3c29d603bd</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.5 | In Splunk App for Stream versions below 8.1.7, an unauthenticated user who can reach the Splunk App for Stream Representational State Transfer (REST) API on the management port (8089) could upload an Extensible Markup Language (XML) vocabulary file, which lets the vocabulary upload endpoint read local files accessible to the Splunk process or send outbound requests.
-The vulnerability is possible because the vocabulary upload endpoint parses uploaded XML without an application-level policy that blocks external entity resolution.
-For more information see About Splunk Stream (https://help.splunk.com/en/splunk-enterprise/collect-stream-data/install-and-configure-splunk-stream/8.1/introduction/about-splunk-stream) and restmap.conf (https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/9.4/configuration-file-reference/9.4.3-configuration-file-reference/restmap.conf) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131300 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131300</link>
-    <guid isPermaLink="false">2676395d6ae25f4d28a68cc45d48c958</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | In Splunk App for Stream versions below 8.1.7, a user who can read splunkd_access.log or the _internal Splunk index could recover the Stream forwarder authentication key and use it to impersonate a trusted Stream forwarder.
-The vulnerability is possible because Splunk App for Stream sends the authentication key in an internal request URL, and Splunk records that URL in splunkd_access.log.
-For more information see About Splunk Stream (https://help.splunk.com/en/splunk-enterprise/collect-stream-data/install-and-configure-splunk-stream/8.1/introduction/about-splunk-stream) and restmap.conf (https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/9.4/configuration-file-reference/9.4.3-configuration-file-reference/restmap.conf) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131301 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131301</link>
-    <guid isPermaLink="false">ba8e0d8f1299439bfb94752622c4567b</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.3 | In Splunk App for Stream versions below 8.1.7, an unauthenticated user could cause Splunk App for Stream to reset its in-memory indexer cache.
-The vulnerability exists because the Splunk Web handler accepts the cache-reset request without requiring a login.
-For more information see Splunk Stream installation package overview (https://help.splunk.com/en/data-management/collect-stream-data/install-and-configure-splunk-stream/8.0/introduction/splunk-stream-installation-package-overview) and Launch Splunk Web (https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/10.6/administer-splunk-enterprise-with-splunk-web/launch-splunk-web) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131302 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131302</link>
-    <guid isPermaLink="false">c9758beb7910b01cd43d86597158fbb1</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.3 | In Splunk AI Assistant versions below 2.0.0, a user who does not hold the &quot;admin&quot; or &quot;power&quot; Splunk roles could turn on the AI chat training-data consent setting through the Representational State Transfer (REST) API.
-The missing authorization is possible because the affected configuration endpoint does not enforce authorization checks.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131303 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131303</link>
-    <guid isPermaLink="false">74ca3ee422001a19ee7263020783d59d</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.1 | In Splunk AI Assistant versions below 2.0.0, a user who does not hold the &quot;admin&quot; or &quot;power&quot; Splunk roles could obtain limited information about indexes and data sources outside their authorized scope through the assistant.
-The vulnerability is possible because Splunk AI Assistant does not fully apply authorization controls to all information that it retrieves.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131304 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131304</link>
-    <guid isPermaLink="false">6c6cc07a1ee7f548fa10e386f2864a3b</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.1 | In Splunk AI Assistant versions below 2.0.0 a user who does not hold the &quot;admin&quot; or &quot;power&quot; Splunk roles could access data associated with another tenant and cause actions to be attributed to that tenant through the Representational State Transfer (REST) API.
-The vulnerability is possible because Splunk AI Assistant accepted a client-controlled tenant identifier when selecting the authorization context for a request.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131305 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131305</link>
-    <guid isPermaLink="false">8271273f9206e702d1ae9e27747b3f28</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.1 | In Splunk AI Assistant versions below 2.0.0, a user who does not hold the &quot;admin&quot; or &quot;power&quot; Splunk roles could submit client-controlled feature settings through the Representational State Transfer (REST) API. This could modify limited response metadata outside the expected server-side configuration.
-The vulnerability is possible because the REST API processes client-supplied feature settings without enforcing the expected server-side configuration boundary.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-18883 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18883</link>
-    <guid isPermaLink="false">8715be829060638d6fb537c1a8d64947</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 7.1 | ServiceNow has addressed an indirect prompt injection security issue that was identified in the Email Response AI Agent of Now Assist for CSM. We are not currently aware of malicious exploitation against ServiceNow instances.
-
-This remediation was deployed centrally to the Email Response AI Agent (Now Assist for CSM) and does not require a platform version upgrade or hot fix; no version-specific backports apply.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76532 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76532</link>
-    <guid isPermaLink="false">ca8ed53293c4c82e29f5ca0cdef482f3</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.3 | In Splunk Enterprise versions below 10.6.1, 10.4.5, 10.2.9, 10.0.12, and 9.4.17, a user who does not hold the &quot;admin&quot; or &quot;power&quot; Splunk roles could view credentials configured for email notifications in a saved search shared with that user.
-The vulnerability is possible when email notifications use authentication credentials because the Saved Searches Representational State Transfer (REST) API returns those credentials in clear text.
-For more information see Search endpoint descriptions (https://help.splunk.com/en/splunk-enterprise/leverage-rest-apis/rest-api-reference/10.6/search-endpoints/search-endpoint-descriptions), Manage knowledge object permissions (https://help.splunk.com/en/splunk-enterprise/manage-knowledge-objects/knowledge-management-manual/10.6/get-started-with-knowledge-objects/manage-knowledge-object-permissions), and Email notification action (https://help.splunk.com/en/splunk-enterprise/alert-and-respond/alerting-manual/10.6/configure-alert-actions/email-notification-action) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76533 - NVD - CVSS Score v3.1: 4.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76533</link>
-    <guid isPermaLink="false">867e394a157a4c5b9e49d368d26aa31c</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.2 | In Splunk Enterprise versions below 10.4.5, 10.2.9, 10.0.12, and 9.4.17 on Ubuntu and AlmaLinux, an unauthenticated user who obtains a valid Splunk Web session cookie before the affected user logs out could continue using the cookie after logout to access data and perform actions available to that user.
-The vulnerability is possible because the logout flow does not invalidate the associated session token on affected deployments.
-The attacker must obtain the valid session cookie before the affected user logs out of Splunk Web. The issue was reproduced in Splunk Enterprise installations on Ubuntu and AlmaLinux.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76534 - NVD - CVSS Score v3.1: 4.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76534</link>
-    <guid isPermaLink="false">6d95e0827b416698115a89b02919e627</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.7 | In Splunk Enterprise for Windows versions below 10.4.4, 10.2.8, 10.0.11, and 9.4.16, a user that holds a role with the edit_user capability could create multiple user accounts that share the same user directory. This could expose user-specific configuration between those accounts, let one account modify configuration used by another account, or disrupt features that depend on separate user directories.
-The vulnerability is caused by improper validation of usernames before Splunk Enterprise performs Windows filesystem operations. Windows removes trailing periods from directory names, so distinct usernames can resolve to the same user directory.
-For more information see Define roles on the Splunk platform with capabilities (https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/10.6/manage-splunk-platform-users-and-roles/define-roles-on-the-splunk-platform-with-capabilities) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76535 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76535</link>
-    <guid isPermaLink="false">0edf48781960a9df6a3168460e7fc0ad</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.1 | In Splunk Enterprise versions below 10.6.1, 10.4.5, 10.2.9, 10.0.12, and 9.4.17, an unauthenticated user could run arbitrary Search Processing Language (SPL) searches through RapidDiag task collection as an authenticated user. With this access, the user could read or modify data and configuration available to that authenticated user.
-The vulnerability is possible because Splunk Enterprise accepts an empty shared secret when it authenticates RapidDiag task-collection requests.
-For more information see Using RapidDiag (https://help.splunk.com/en/splunk-enterprise/administer/troubleshoot/9.3/contact-splunk-support/using-rapiddiag) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76536 - NVD - CVSS Score v3.1: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76536</link>
-    <guid isPermaLink="false">e81d4f9be5ac52f04600e68c3f578d25</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.4 | In Splunk Enterprise versions below 10.4.5, 10.2.9, 10.0.12, and 9.4.17, an unauthenticated user could use an empty clustering shared secret to read and modify clustering configuration through the cluster configuration Representational State Transfer (REST) API endpoint on a standalone instance. This could expose clustering configuration, persist attacker-controlled clustering settings, and disrupt clustering operations.
-The vulnerability is possible because Splunk Enterprise accepts the empty clustering shared secret as a shared-authentication candidate on a standalone instance when clustering is turned off.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76537 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76537</link>
-    <guid isPermaLink="false">06f19073decb84d2f82f4528658cebef</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.3 | In Splunk Enterprise versions below 10.6.0, 10.4.5, 10.2.9, 10.0.12, and 9.4.17, a user who does not hold a role with either the list_indexer_cluster capability or the edit_indexer_cluster capability could download the cluster manager configuration bundle through the Representational State Transfer (REST) API and access configuration and app files that the cluster manager stages for indexer distribution.
-The vulnerability is possible because the REST API does not require the list_indexer_cluster or edit_indexer_cluster capability before it sends the configuration bundle.
-For more information see Define roles on the Splunk platform with capabilities (https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/10.4/manage-splunk-platform-users-and-roles/define-roles-on-the-splunk-platform-with-capabilities) in the Splunk documentation.
-For more information see Cluster endpoint descriptions (https://help.splunk.com/en/splunk-enterprise/leverage-rest-apis/rest-api-reference/10.6/cluster-endpoints/cluster-endpoint-descriptions) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76538 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76538</link>
-    <guid isPermaLink="false">e2fde61d74c0bd3d11722065583a5f31</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.8 | In Splunk Enterprise versions below 10.4.5, 10.2.9, 10.0.12, and 9.4.16, a user who does not hold the &quot;admin&quot; or &quot;power&quot; Splunk roles could cause Splunk Enterprise to run arbitrary Search Processing Language (SPL) searches with elevated privileges through data model acceleration.
-The vulnerability is possible because Splunk Enterprise does not correctly neutralize caller-supplied data model acceleration values before it places them into generated summarization searches.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76539 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76539</link>
-    <guid isPermaLink="false">70ecc0bad80288c6d4d2e3372dd86daa</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | In Splunk Enterprise versions below 10.4.4, 10.2.9, 10.0.12, and 9.4.16, a user who does not hold the &quot;admin&quot; or &quot;power&quot; Splunk roles could use the search jobs Representational State Transfer (REST) API to access indexed events that the srchFilter setting for the role should hide. The same user could also run internal Search Processing Language (SPL) commands and bypass SPL safeguards for risky commands within indexes that the role can search.
-The vulnerability is possible because Splunk Enterprise does not correctly escape required field values before it includes them in an internally generated search.
-For more information, see Search endpoint descriptions (https://help.splunk.com/en/splunk-enterprise/rest-api-reference/9.4/search-endpoints/search-endpoint-descriptions), authorize.conf (https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/10.4/configuration-file-reference/10.4.5-configuration-file-reference/authorize.conf), and SPL safeguards for risky commands (https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/10.6/best-practices-for-splunk-platform-security/spl-safeguards-for-risky-commands).</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76540 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76540</link>
-    <guid isPermaLink="false">861ad8b161ec205753a09a9331de1cd6</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.8 | In Splunk Enterprise versions below 9.4.17, 10.0.12, 10.2.9, and 10.4.5, a user who does not hold the &quot;admin&quot; or &quot;power&quot; Splunk roles can configure a metric alert through the Representational State Transfer (REST) API that runs a search with elevated privileges. The vulnerability lets the user access or modify data and disrupt the Splunk Enterprise instance.
-The vulnerability occurs because Splunk Enterprise does not enforce the required role-based authorization when it processes metric alert configuration through the REST API. Splunk Enterprise schedules the resulting search with elevated authorization and runs attacker-controlled search processing with that authorization.
-For more information see About configuring role-based user access (https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/10.6/manage-splunk-platform-users-and-roles/about-configuring-role-based-user-access) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76541 - NVD - CVSS Score v3.1: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76541</link>
-    <guid isPermaLink="false">158851123d88c3b4161cef302ed0c823</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.8 | In Splunk Enterprise versions below 10.6.0, 10.4.5, 10.2.9, 10.0.12, and 9.4.17, a user who holds the &quot;power&quot; Splunk role could store attacker-controlled Search Processing Language (SPL) in a shared data model calculation. When a user who can run a search against the shared data model runs one, the injected SPL can run using the permissions of the user who ran the search. This could expose sensitive credentials to the user who created the shared data model.
-The vulnerability is possible because Splunk Enterprise does not safely neutralize data model calculation fields before it includes them in generated searches.
-For more information see About data models (https://help.splunk.com/en/splunk-enterprise/manage-knowledge-objects/knowledge-management-manual/10.4/build-a-data-model/about-data-models) in the Splunk documentation.
-For more information see Define roles on the Splunk platform with capabilities (https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/10.4/manage-splunk-platform-users-and-roles/define-roles-on-the-splunk-platform-with-capabilities) in the Splunk documentation.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-76542 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76542</link>
-    <guid isPermaLink="false">130dba678a4203e430b16e65ef3baf67</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.9 | In Splunk Enterprise versions below 10.4.5, 10.2.9, 10.0.12, and 9.4.17, an unauthenticated user could trick a user who has an active Splunk Web session into selecting the Top values by time field report on the Search page. The selection could run arbitrary Search Processing Language (SPL) searches and potentially expose stored credentials and indexed data.
-The vulnerability is possible because Splunk Web does not correctly neutralize user-controlled data when it generates an SPL search for a field report.
-The vulnerability requires the attacker to phish the user by tricking them into opening a link that the attacker creates. The unauthenticated user should not be able to exploit the vulnerability at will.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 19 Nov 2026 22:01:18 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-76543 - NVD - CVSS Score v3.1: 5.4</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76543</link>
@@ -385,6 +32,306 @@ The vulnerability is possible because Splunk Enterprise does not fully validate 
     <guid isPermaLink="false">240fc6a2c0c71175b19e1b13230bdcd0</guid>
     <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | In Splunk Enterprise versions below 10.6.1, 10.4.5, 10.2.9, 10.0.12, and 9.4.17, an unauthenticated user could determine whether a username exists through the Representational State Transfer (REST) API or Splunk Web and lock out existing user accounts through repeated login attempts.
 The vulnerability is possible because Splunk Enterprise returns different login failure responses for locked existing user accounts and nonexistent usernames.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-102884 - NVD - CVSS Score v3.1: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102884</link>
+    <guid isPermaLink="false">18151084a6ef69c03492155eb46d7d4a</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.3 | Connaisseur is an admission controller that integrates container image signature verification into a Kubernetes cluster. Prior to 3.11.1, the Cosign validator counts valid signature layers rather than distinct trust roots for trustRoot: &quot;*&quot; policies using an explicit threshold or an implicit require-all policy. An attacker who controls one configured trust root's signing key and can attach multiple signatures to an image can satisfy a threshold intended to require multiple independent roots, causing admission without the intended signer quorum. Policies using a single trust root or the required option are not affected. This issue is fixed in 3.11.1.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-102945 - NVD - CVSS Score v3.1: 4.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102945</link>
+    <guid isPermaLink="false">8589d768b5c98958d2a3f51c6ef27463</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.9 | Aether Project AMF supports termination of NAS signalling, NAS ciphering &amp; integrity protection, registration management, connection management, mobility management, access authentication and authorization, security context management. Prior to 3.1.6, a malformed NGAP PathSwitchRequest can contain a UESecurityCapabilities information element whose extensible APER bit-string representation has no bytes even though decoding reports no error. In ngap/handler.go, HandlePathSwitchRequest checks only whether the element is present before six index-zero reads of its encryption and integrity algorithm fields, causing an unrecovered panic in the NGAP receive goroutine and terminating the AMF. The described attacker is a rogue or compromised gNB on the N2 interface and additionally needs a registered UE's AMF-UE-NGAP-ID; a bare over-the-air UE cannot trigger the issue. This issue is fixed in version 3.1.6.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-103033 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103033</link>
+    <guid isPermaLink="false">196719785f5e4ddca7a9b1449c243246</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.3 | ALTCHA is a Go library for creating and verifying ALTCHA challenges. Prior to 2.1.0, parseServerSignature can leave ServerSignatureVerificationData.Extra uninitialized when url.ParseQuery returns partial values and an error for a malformed percent escape in VerificationData. A later write of an unknown parsed key to the nil map panics before VerifyServerSignature or VerifyServerSignatureSafe completes signature verification, so an unauthenticated client can abort a request. Standard net/http recovers the request goroutine, while application goroutines or frameworks without recovery can crash the process. This issue is fixed in version 2.1.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104773 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104773</link>
+    <guid isPermaLink="false">69a60d76aabb93b2227c06440b83498c</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.8 | CKAN is an open-source data management system for data hubs and data portals. Prior to 2.10.11 and 2.11.6, the web user registration flow authenticates a newly registered account without first regenerating the session identifier when server-side session storage is configured. An attacker who can set a session cookie in a victim's browser or obtain the victim's current valid session identifier can reuse that identifier after the victim registers, gaining access to the new account. CKAN uses cookie-based sessions by default, and web registration is disabled by default through ckan.auth.create_user_via_web. This issue is fixed in CKAN 2.10.11, 2.11.6, and 2.12.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129931 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129931</link>
+    <guid isPermaLink="false">6392c310716f1f090faf45f33df03c24</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.7 | A component of the MongoDB Java Driver that processes connection configuration places credential values taken from that configuration into generated text and error output without replacing them with a placeholder, unlike other parts of the driver. A party able to read output produced by an application that embeds the driver may obtain database or proxy credentials in clear text.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129932 - NVD - CVSS Score v4.0: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129932</link>
+    <guid isPermaLink="false">b65511d145ed117e804f63fe3a4891ac</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 9.1 | The MongoDB Java driver applies its DNS seedlist domain restriction to a record value that is later re-interpreted differently when the connection target is parsed, so the name that is checked and the name that is used can differ. An unauthenticated party who can set or forge the DNS service record for the seed domain in a connection string can cause the driver to direct its session to an unrelated host and to complete certificate verification against that host instead. This may result in unintended disclosure of application data and of configured database credentials, and in unintended content being returned to the application as query results.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129933 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129933</link>
+    <guid isPermaLink="false">4113f47d4df27cfcbefbf5442453b045</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.3 | The MongoDB Java Driver does not neutralize NUL characters in the user name and password values it places into the message it builds for SASL PLAIN authentication. A party who can choose the login values that an application passes to the driver can alter where the fields of that message begin and end. This may result in a receiving system reading a login name and secret that differ from the values the application supplied. Authenticating as a different account still requires that account's password. Only deployments that use SASL PLAIN authentication are affected.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130151 - NVD - CVSS Score v3.1: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130151</link>
+    <guid isPermaLink="false">b8549c7fec4626556fd0659309c321d8</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.5 | Okta Privileged Access (OPA) Gateway includes a version of the FreeRDP library affected by memory management issues in its smartcard redirection handling. When an RDP session is established meeting specific session criteria, command execution within the context of the local Gateway service account may be allowed.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130153 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130153</link>
+    <guid isPermaLink="false">aff2a816de28939ed2a4696754874751</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.7 | The Okta Client SDK for Python (okta-client-python) includes client authentication values (client_secret or JWT assertions) as query parameters in the front-channel authorization URL when executing the authorization code flow without Pushed Authorization Requests (PAR). When PAR is disabled, unsupported by the authorization server, or fails, the SDK falls back to standard authorization URL construction, transmitting these parameters via user-agent requests.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130163 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130163</link>
+    <guid isPermaLink="false">dbdee2baf7eb748ca64c50957fbe8deb</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.9 | Collabora Online is a collaborative online office suite based on LibreOffice technology. Prior to 24.04.19.3, 25.04.13.3, and 26.04.3.3, the RouteToken query parameter is reflected into the unauthenticated admin-console page without HTML encoding. The admin-console page is served without authentication. A victim must load a crafted URL, and token exposure requires the victim to be an administrator already signed in to the console; the reflected value can run script in the Collabora Online origin and expose the console authentication token. This issue is fixed in versions 24.04.19.3, 25.04.13.3, and 26.04.3.3.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130179 - NVD - CVSS Score v3.1: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130179</link>
+    <guid isPermaLink="false">5c5d7d02dc35133c24f88cb61e9fd884</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.5 | The Okta .NET SDK Abstractions library systematically writes per-request authentication credentials to a shared HTTP client instance, rather than being isolated to individual outbound request objects. When using scoped child clients, a subsequent scoped request can overwrite the shared client configuration. Because the original parent client credential has not been restored, subsequent outbound requests may be transmitted using the newly written credential, which can result in subsequent actions being executed under the context of an incorrect security principal in the Okta Management API and improper attribution in audit logs.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130233 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130233</link>
+    <guid isPermaLink="false">f5f3a91bbd85e8a08b523e212f60483a</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.8 | The Okta .NET SDK Abstractions library improperly synchronizes authentication credentials set on a shared HTTP client during request execution. When concurrent requests are dispatched for different principals, one principal's credential may be transmitted on an outbound request intended for another principal, which can result in credential exposure and lead to unauthorized actions performed as the affected principal at the Okta Management API.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130234 - NVD - CVSS Score v3.1: 8.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130234</link>
+    <guid isPermaLink="false">749aeab1b0ccb90ca2fe848f3b20e434</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.0 | The Okta Swift Management SDK does not percent-encode forward slash (/) characters during path parameter interpolation. If an application supplies input containing relative path sequences (e.g., ../) to an SDK method, standard URL normalization may direct the outbound request to an alternative Okta Management API endpoint.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130235 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130235</link>
+    <guid isPermaLink="false">efd66095a1408582338bdede8650085b</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.7 | In the Okta .NET SDK Abstractions library, outbound HTTP requests are not restricted to the configured Okta organization domain when processing certain URL formats. If a URL parameter is modified to specify an external host, the library may transmit the configured SSWS API token to that unintended destination.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130236 - NVD - CVSS Score v3.1: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130236</link>
+    <guid isPermaLink="false">8085637bdb6dde2e66431d4824921186</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.5 | In the Auth0 Authorization Extension, request authentication handling can process claims from query parameters independently of header validation. Under specific preconditions, this may allow an authenticated tenant user to issue requests to the extension's administrative endpoints. Also, input handling during rule generation may permit modification of the tenant login rule published by the extension.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132607 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132607</link>
+    <guid isPermaLink="false">397363477bb82714b5c7d55d1d7ff176</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.0 | Insufficient verification of data authenticity in the decryption component of Amazon S3 Encryption Client for PHP in AWS SDK for PHP before 3.383.1 might allow an authenticated remote user to forge ciphertext that decrypts to arbitrary plaintext via manipulation of the GCM authentication tag length metadata.
+
+
+
+To remediate this issue, users should upgrade to AWS SDK for PHP version 3.383.1 or later.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133201 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133201</link>
+    <guid isPermaLink="false">6b25baf1fdb05227bf4132a361ed8950</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.7 | A vulnerability was determined in smartalock wireguard-lwip up to cfba91666590e86bd67842c71cedf9a423be823a. Impacted is the function mul of the file src/crypto/refc/x25519.c of the component X25519 Ladder. Executing a manipulation can lead to out-of-bounds write. The attack can be executed remotely. This product implements a rolling release for ongoing delivery, which means version information for affected or updated releases is unavailable. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14879 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14879</link>
+    <guid isPermaLink="false">b0a4c8fd0a1a47ec2f03eeb97264a0d3</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | IBM watsonx.data 2.4.0 through 2.4.0 patch 8 does not invalidate session after a logout which could allow an authenticated user to impersonate another user on the system.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14880 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14880</link>
+    <guid isPermaLink="false">7c3326b2a06e306b90687ed7cc5a6c92</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.3 | IBM watsonx.data 2.4.0 through 2.4.0 patch 8 could allow unauthorized network access due to insufficient network segmentation controls.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14885 - NVD - CVSS Score v3.1: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14885</link>
+    <guid isPermaLink="false">56477d0d4a51fe13f8678f293162ffed</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.8 | IBM watsonx.data 2.4.0 through 2.4.0 patch 8 could allow a remote attacker to obtain sensitive information due to improper access control.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-16319 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-16319</link>
+    <guid isPermaLink="false">971baa68b0102c93c3f20d8f0c999c1f</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.3 | IBM API Connect 10.0.8.0 through 10.0.8.13 could allow a remote authenticated attacker to delete API keys belonging to other users due to improper authorization checks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-53526 - NVD - CVSS Score v3.1: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-53526</link>
+    <guid isPermaLink="false">767ed07395ad5ed3f6336167ca80d251</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.7 | Reposilite is lightweight and easy-to-use repository management software dedicated to Maven-based artifacts in the JVM ecosystem. From 3.5.16 until 3.6.0, as stated by the advisory, the Maven directory-index page interpolates the request URI without HTML escaping in its title, heading, base URL, and parent-directory link. The advisory says the content-embedded ctx.uri() is percent-encoded, preventing tag injection, but that a single quote passes through and breaks the quoted Parent-Directory link; it also says Location.of strips single quotes, so the reachability of the described quote-based trigger remains unresolved. The listing shares the Admin UI origin and does not set the sandbox Content-Security-Policy used for artifact and Javadoc responses, so the reported script execution could access a user's local-storage token. A manager token could enable full instance compromise. The advisory reports version 3.6.0 as fixed.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-62955 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62955</link>
+    <guid isPermaLink="false">5bb2c208f192a3cd4a7a421a406d2949</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.2 | baserCMS is a website development framework. From 5.2.3 until 5.3.0, BcThemeFileService::getFullpath() in plugins/bc-theme-file/src/Service/BcThemeFileService.php skips its path containment check when realpath() fails for a nonexistent theme subdirectory selected by the type parameter. An authenticated administrator can supply a traversal path through the theme-file API to access locations outside the theme directory. The bypass of the CVE-2026-30940 fix can permit file writes, overwrites or deletion within the PHP process permissions and, where executable PHP can be written, remote code execution. This issue is fixed in 5.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-63012 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63012</link>
+    <guid isPermaLink="false">f9331fb8603cb5271591b03e5f08e19c</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | baserCMS is a website development framework. Prior to 5.3.0, getAuthenticationService permits an Api/Admin session authentication fallback based on the Referer header, although operator accounts have an Admin auth prefix and cannot obtain an Api/Admin JWT. An authenticated operator can therefore access /baser/api/admin/ endpoints whose permission.php entries have auth =&gt; true, including /baser/api/admin/baser-core/site_configs/view.json, even when the corresponding administrative functionality is restricted. This can disclose administrator-restricted configuration information. This issue is fixed in 5.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-75801 - NVD - CVSS Score v3.1: 6.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75801</link>
+    <guid isPermaLink="false">9bc5d82fe1100f96ab8dbcdd18eb0fdf</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.2 | IBM watsonx.data 2.4.0 through 2.4.0 patch 8 could allow a local attacker to obtain sensitive credentials due to the use of a hard-coded cryptographic key.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-82339 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82339</link>
+    <guid isPermaLink="false">47ed52ebc5e18df0063a15a424b7dfd9</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.1 | IBM Guardium Data Protection 12.2 is vulnerable to missing authentication in the SharePoint S-TAP RelayService, allowing an unauthenticated network attacker to inject forged audit events and access the active monitoring policy.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-82342 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82342</link>
+    <guid isPermaLink="false">19b0abfc30e7326cd9e7ffbd199c5984</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.1 | IBM Guardium Data Protection 12.2 is vulnerable to a stack-based buffer overflow when processing a specially crafted PROXY protocol v1 header. A remote attacker can exploit this vulnerability to cause a denial of service or potentially execute arbitrary code.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-83631 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-83631</link>
+    <guid isPermaLink="false">d4955ce96755333276f534419667ccd6</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.8 | On Intel-based macOS systems, the Okta Device Access (ODA) component of Okta Verify for macOS configures a LaunchDaemon service whose program path resolves via a symbolic link in /usr/local/bin. In environments where non-standard directory permissions grant local non-root users write access to this path, the symbolic link target can be modified, causing the LaunchDaemon to execute the replacement binary upon service restart.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84065 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84065</link>
+    <guid isPermaLink="false">d86fa21130f8760958eb5e399f1168b3</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | IBM Guardium Data Protection 12.2 could allow a remote attacker to obtain sensitive information or cause a denial of service due to an out-of-bounds heap read.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84087 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84087</link>
+    <guid isPermaLink="false">34edcba4e618ff3412a4676921dce9d3</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.8 | IBM Guardium Data Protection 12.2 is vulnerable to local privilege escalation via the SUID-root podman_wrapper binary on the Collector appliance. A local attacker with low-privileged access to the Collector can exploit insufficient argument validation in the SUID binary to execute arbitrary commands as root, resulting in full compromise of the Collector appliance.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84211 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84211</link>
+    <guid isPermaLink="false">bf49bf4537736b62c36f744bb608c716</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.9 | IBM Guardium Data Protection 12.2 could allow a remote attacker to inject forged audit records due to improper output neutralization for logs.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84236 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84236</link>
+    <guid isPermaLink="false">e7068bbce80a74e3dcb43e9cbeb3fa9e</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.8 | IBM Guardium Data Protection 12.2 is vulnerable to insecure deserialization in the SharePoint Tap MulticastTransceiver component. An unauthenticated remote attacker could exploit this vulnerability to execute arbitrary code on the affected system.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84273 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84273</link>
+    <guid isPermaLink="false">69d1ad16651c2852e2bc5a662bc93c4b</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.1 | IBM Guardium Data Protection 12.2 is vulnerable to path traversal in the datasource functionality. An authenticated attacker could exploit this vulnerability to delete arbitrary files on the appliance.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-85018 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85018</link>
+    <guid isPermaLink="false">1c12c6cc5ee9e227b3597d988353ec6c</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.1 | IBM Guardium Data Protection 12.2 is vulnerable to improper TLS certificate validation in the GDP Terraform provider, allowing a network attacker with a man-in-the-middle position to intercept sensitive credentials transmitted to the Guardium appliance.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-87977 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87977</link>
+    <guid isPermaLink="false">8be1cf5aebf69e87e60cdc5f28c09b18</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.8 | IBM Guardium Data Protection 12.2 is vulnerable to SQL injection in the edge-controller component. An unauthenticated remote attacker could exploit this vulnerability to access or modify sensitive database information.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-92906 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92906</link>
+    <guid isPermaLink="false">7abbadbc712a6a1cd51ba66fa7bb0767</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.5 | IBM watsonx.data 2.4.0 through 2.4.0 patch 8 could allow a remote authenticated attacker to cause a denial of service due to client-side enforcement of business rules.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-92907 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92907</link>
+    <guid isPermaLink="false">c1cc4fd8ec281b429265fdf07a1656e3</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.3 | IBM watsonx.data 2.4.0 through 2.4.0 patch 8 could allow a remote authenticated attacker to conduct a server-side request forgery due to a server-side request forgery (SSRF) vulnerability.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
