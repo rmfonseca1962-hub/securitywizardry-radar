@@ -5,111 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 05:00:33 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-132755 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132755</link>
-    <guid isPermaLink="false">d717adfd04720144ab95e6a722d9b3b1</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | MediaInfoLib before 26.10 contains a heap-based buffer over-read vulnerability in tfsxml_leave() caused by an off-by-one error when handling generic &lt;! markup in truncated XML. Attackers can supply a crafted media file with malformed ADM XML parsed by File_Adm.cpp to crash MediaInfo or applications using MediaInfoLib.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132756 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132756</link>
-    <guid isPermaLink="false">7c1deb5faebd1fd1ee1312ed6e419e56</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.5 | Geany through 2.1.0 contains an OS command injection vulnerability that allows attackers to run shell commands by embedding metacharacters in filenames substituted into build and execute commands. Attackers can craft a file named with backticks or $(...) that executes via /bin/sh when a user runs Compile, Build or Execute, gaining code execution as the user.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132757 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132757</link>
-    <guid isPermaLink="false">de728f785baf86859c8a0af2720208ff</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains a NULL pointer dereference vulnerability in DoWriteMeta() in src/isomedia/isom_store.c that allows attackers to crash MP4Box via crafted files. Attackers can supply an ISOBMFF file with a meta box containing an iloc entry but no dref box, crashing MP4Box during rewrite operations like -unhint.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132758 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132758</link>
-    <guid isPermaLink="false">891823a16c307313b0cfa18a9e3cb686</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box before 26.07.0 contains a NULL pointer dereference vulnerability in xmt_node_end() that allows attackers to crash the application through an unmatched closing ProtoDeclare element. Attackers can supply a crafted XMT-A scene file with a mismatched closing ProtoDeclare or ExternProtoDeclare element, causing a dereference of a NULL parsing_proto pointer and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132759 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132759</link>
-    <guid isPermaLink="false">13b9c1bdac76feb7ead7af86b33d78fc</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box before 26.07.0 contains a use-after-free vulnerability because gf_node_free() frees nodes without detaching routes that still reference them via FromNode. Attackers can supply a crafted XMT scene with nested PROTO graphs so gf_sg_route_del() accesses freed memory, crashing MP4Box and potentially corrupting the heap.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132760 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132760</link>
-    <guid isPermaLink="false">a3cf6d59ea0d084d60ec74566ac0b12e</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains a NULL pointer dereference vulnerability in gf_isom_get_meta() in src/isomedia/meta.c that reads file-&gt;moov-&gt;trackList without checking the moov box exists. Attackers can supply a crafted ISOBMFF file with malformed AV1 configuration data that leaves moov unset, crashing MP4Box -infon and causing denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132761 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132761</link>
-    <guid isPermaLink="false">74aee522c6910ba049d464bac565dc5b</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains a use-after-free vulnerability in gf_node_try_destroy that allows attackers to crash MP4Box by supplying crafted XMT scene files. Commands created inside a PROTO scope keep a raw pointer to a freed prototype sub-scene graph, which is read during teardown, causing denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132762 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132762</link>
-    <guid isPermaLink="false">77ac16682b6907fd01976e43c75b4cfb</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box before 26.07.0 contains a divide by zero vulnerability in DumpTrackInfo() in applications/mp4box/filedump.c that fails to check the media timescale for zero. Attackers can supply a crafted MP4 file with a zero media timescale to make MP4Box -infon raise SIGFPE and crash, causing denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132763 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132763</link>
-    <guid isPermaLink="false">d19eaab8bc89b5e17eae98e794ae3257</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC before 26.07.0 contains an integer underflow vulnerability in gf_xml_sax_peek_node() that allows attackers to write a zero byte outside the heap line buffer via crafted XML attribute values. Attackers can supply a crafted XMT file with a ROUTE or command referencing an undefined node, imported with MP4Box, to crash the process and corrupt memory.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132764 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132764</link>
-    <guid isPermaLink="false">069a8b48e572153fa7a8b0d25ae0bece</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC before 26.07.0 contains a use-after-free vulnerability in the XMT loader that leaves ROUTE commands of a discarded node queued after being freed by gf_sg_command_del(). Attackers can supply a crafted XMT scene file imported with MP4Box so xmt_resolve_routes() writes to freed memory, corrupting the heap and crashing the process.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132765 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132765</link>
-    <guid isPermaLink="false">04d23f3aa66bdb3f924ab5b837eaecb3</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability in gf_node_try_destroy because Conditional node commands keep raw pointers to target nodes freed by gf_sg_reset(). Attackers can supply a crafted XMT scene processed with -info or -add to trigger heap use-after-free, crashing the process and corrupting heap memory.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132766 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132766</link>
-    <guid isPermaLink="false">fc34a2d5f6d33abb22c4e4fbc08e3f6d</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC before 26.07.0 contains a use-after-free vulnerability in MP4Box because gf_sg_reset frees DEF'd proto sub-graph nodes without removing them from the GF_Proto node_code list. Attackers can supply a crafted XMT scene with nested PROTOs so gf_sg_proto_del unregisters freed nodes during teardown, crashing MP4Box and corrupting the heap.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132767 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132767</link>
-    <guid isPermaLink="false">fb40625eb5a5f3e780a8d53c6967478c</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains a NULL pointer dereference vulnerability in xmt_parse_command() in loader_xmt.c that allows attackers to crash MP4Box via unchecked field lookups. Attackers can supply a crafted XMT scene whose atIndexField names a non-existent node field, causing a NULL read during import and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 19 Nov 2026 06:02:41 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-132768 - NVD - CVSS Score v4.0: 6.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132768</link>
@@ -327,6 +223,110 @@ Successful exploitation may compromise the cryptographic protections applied to 
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132798</link>
     <guid isPermaLink="false">f3d08346bb505325be9de532ec87d3d3</guid>
     <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.2 | Improper Limitation of a Pathname to a Restricted Directory in the Como log viewer in Temenos Application Framework Java (TAFJ) R18.SP76.0 allows remote authenticated attackers to read arbitrary files via path traversal</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104357 - NVD - CVSS Score v3.1: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104357</link>
+    <guid isPermaLink="false">5577960adec446cf87a91b044faff3b2</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.8 | A flaw was found in libtirpc. The SunRPC UDP/datagram server transport reuses a single receive buffer across requests and resets the XDR decode position without rebinding the decode length to the size of the datagram actually received. As a result, when a short UDP RPC request is received after a longer one, the XDR decoder can read stale bytes left in the reused buffer and interpret them as part of the current request, including credential, verifier, or procedure-argument fields. The highest threat from this vulnerability is to data confidentiality and integrity for services that use a UDP-based SunRPC server.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130888 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130888</link>
+    <guid isPermaLink="false">ee9fa4a2c6d21c15554a7aa743bed9c6</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.1 | A flaw was found in nbdkit. The qcow2dec filter's zstd_compressed_cluster() function incorrectly sets the ZSTD input buffer size to the uncompressed cluster size instead of the compressed buffer size. A crafted QCOW2 image with ZSTD-compressed clusters can trigger a heap over-read, leading to a denial of service and potentially exposing heap memory.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132625 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132625</link>
+    <guid isPermaLink="false">cbb9add6a915b1d3b0d4741fb3788e57</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was determined in SourceCodester Student Project Allocation and Management System 1.0. Affected is an unknown function of the file /login.php of the component Login Handler. Executing a manipulation of the argument username/password can lead to sql injection. The attack may be performed from remote. The exploit has been publicly disclosed and may be utilized.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132626 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132626</link>
+    <guid isPermaLink="false">1bc977da49fc9df3cc5c367e5b57f9b3</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was identified in SourceCodester Modern Ticket Reservation System 1.0. Affected by this vulnerability is an unknown functionality of the file /booking/validate.php. The manipulation of the argument ticket leads to sql injection. It is possible to initiate the attack remotely. The exploit is publicly available and might be used.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132627 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132627</link>
+    <guid isPermaLink="false">05462c4bc2b6a2a492302e9fa95ebb32</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security flaw has been discovered in SourceCodester E-Commerce Shopping Cart Web Application 1.0. Affected by this issue is some unknown functionality of the file action.php. The manipulation of the argument keyword results in sql injection. It is possible to launch the attack remotely. The exploit has been released to the public and may be used for attacks.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132802 - NVD - CVSS Score v3.1: 9.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132802</link>
+    <guid isPermaLink="false">693bf86f3711ccd6a2b9de3f21de7d58</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.9 | A malicious actor with access to the network and low privileges could exploit an Improper Link Resolution Before File Access vulnerability found in UniFi Access Application to execute arbitrary code with root privileges on the host device.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132803 - NVD - CVSS Score v3.1: 9.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132803</link>
+    <guid isPermaLink="false">bc4105f2e4a823318ee7698012533636</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.9 | A malicious actor with access to the network and low privileges could exploit a series of authenticated SQL Injection vulnerabilities found in UniFi Access Application to escalate privileges on the host device.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132804 - NVD - CVSS Score v3.1: 9.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132804</link>
+    <guid isPermaLink="false">d001d6e91ce21c81bd79c89792fe247b</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.9 | A malicious actor with access to the network and low privileges could exploit a Server-Side Request Forgery (SSRF) vulnerability found in UniFi Access Application to escalate privileges within UniFi OS.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132805 - NVD - CVSS Score v3.1: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132805</link>
+    <guid isPermaLink="false">d2cafd913a1f1530fa6988dcb8ad3593</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.3 | A malicious actor with access to the network could exploit a Server-Side Request Forgery (SSRF) vulnerability found in UniFi Access Application to obtain information and make unauthorized changes on the host device.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132806 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132806</link>
+    <guid isPermaLink="false">2f492f3686efe65cdea6726596d8c117</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.8 | A malicious actor with access to the network and low privileges could exploit an authenticated SQL Injection vulnerability found in UniFi Access Application to obtain sensitive information and make unauthorized changes within the UniFi Access Application.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132807 - NVD - CVSS Score v3.1: 9.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132807</link>
+    <guid isPermaLink="false">c9c8cb9106c5552d5e39aa17ac1a9581</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.0 | A malicious actor with access to the network and under certain conditions could exploit an Improper Certificate Validation vulnerability found in UniFi Access Application to obtain sensitive information from and make unauthorized changes to an adopted UniFi Access device.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132808 - NVD - CVSS Score v3.1: 9.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132808</link>
+    <guid isPermaLink="false">f1e3ce6cfda03a5f3bd9d7dfd2e538f8</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.9 | A malicious actor with access to the network and low privileges could exploit an Incorrect Authorization vulnerability found in UniFi Access Application to execute arbitrary commands on certain adopted UniFi Access devices.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-84998 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84998</link>
+    <guid isPermaLink="false">018518f181af2384d78efc6364db26c4</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.2 | The NextScripts: Social Networks Auto-Poster plugin for WordPress is vulnerable to Stored Cross-Site Scripting via 'comment_author' and 'comment_agent' Comment Fields in all versions up to, and including, 4.4.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected payload executes in an administrator's browser session when the administrator views the WordPress comment moderation queue, including pending and unapproved comments, meaning no prior approval of the comment is required for exploitation.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
