@@ -5,67 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Thu, 19 Nov 2026 08:00:51 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-132777 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132777</link>
-    <guid isPermaLink="false">75c6dbe966af86146c383397781650e9</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box before 26.07.0 contains a use-after-free vulnerability in Conditional_execute() because SetupConditional() stores a BIFS decoder pointer that gf_sm_load_run_isom() later frees without clearing. Attackers can supply a crafted MP4 file with a BIFS Conditional node processed with -nstatx to crash MP4Box and potentially corrupt the heap.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132778 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132778</link>
-    <guid isPermaLink="false">9b9b0c9418bd3325a8d38b9e73bc850e</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC before 26.07.0 contains an uncontrolled recursion vulnerability in gf_sg_proto_field_is_sftime_offset() in src/scenegraph/vrml_proto.c that allows attackers to crash MP4Box via crafted files. Attackers can supply an MP4 file whose BIFS scene contains cyclic PROTO IS relations, causing unbounded recursion that exhausts the stack and causes denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91138 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91138</link>
-    <guid isPermaLink="false">398271649d5129a162c8209c0e97426a</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.9 | The Deco BE65 v3 firmware contains a shared hard-coded password hash for the root account in /etc/shadow. Where the corresponding credential is accepted by a production authentication path, an attacker with existing unprivileged shell access may recover or otherwise obtain the plaintext password and use it to escalate privileges. 
-
-Successful exploitation may grant root-level access to the affected device.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-91139 - NVD - CVSS Score v4.0: 6.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-91139</link>
-    <guid isPermaLink="false">27dee9cf803bb1463d2494e1a108f680</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 6.1 | Deco BE65 firmware contains a cryptographic weakness in the local web-management authentication flow due to the use of insufficient RSA key sizes. The /login?form=auth endpoint returns a 512-bit RSA public key and sequence value. 
-
-Successful exploitation may compromise the cryptographic protections applied to local web-management authentication traffic.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132286 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132286</link>
-    <guid isPermaLink="false">b4c52df0f8d1e35dab89355061f668d1</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security vulnerability has been detected in yangzongzhuan RuoYi up to 4.8.3. The impacted element is an unknown function of the file ruoyi-admin/src/main/java/com/ruoyi/web/controller/system/SysLoginController.java of the component User Registration Endpoint. The manipulation of the argument deptId/status/userId/createBy leads to improper input validation. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The identifier of the patch is d7ad977c9ca64e9b081c893ec56fe08f51f66698. It is recommended to apply a patch to fix this issue.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132560 - NVD - CVSS Score v4.0: 1.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132560</link>
-    <guid isPermaLink="false">fa67a7abf77bda5f03897b902c3f8878</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 1.9 | A flaw has been found in MemTensor memmy-agent up to 1.1.1. This impacts an unknown function of the file /api/v1/memory/logs of the component Memory HTTP Service. This manipulation causes information disclosure. The attack is restricted to local execution. The exploit has been published and may be used. Patch name: 421ce6cb33861255d34c3887d39aced009b3ce9b. It is suggested to install a patch to address this issue.</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131914 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131914</link>
-    <guid isPermaLink="false">1803a380da0366ee5f19fe3066b9242e</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 9.3 | Deserialization of untrusted data in double-submit cookie vs. form field validation in Idunno.AntiCsrf versions through 0.9.1 Beta on ASP.NET allows remote unauthenticated attackers to execute code via object injection</description>
-    <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Thu, 19 Nov 2026 09:01:47 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-132601 - NVD - CVSS Score v4.0: 2.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132601</link>
@@ -339,6 +279,64 @@ The JavaScript runs in the context and under the identity of the agent's session
 
 
 Exploitation requires an agent to join an embedded co-browsing session with the attacker. Mobile co-apping isn't affected.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112163 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112163</link>
+    <guid isPermaLink="false">0f75f486c5450de86dc5cc5e68806bea</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 4.7 | Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in Kayaport Ödeme Kuruluşu A.Ş. BulutTahsilat – Virtual POS Infrastructure allows Cross-Site Scripting (XSS).
+
+This issue affects BulutTahsilat – Virtual POS Infrastructure: through 2026-11-05.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128999 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128999</link>
+    <guid isPermaLink="false">77468c5389b2f990082e3eef9d92ab42</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Saphali Saphali Woocommerce Lite saphali-woocommerce-lite allows Stored XSS.This issue affects Saphali Woocommerce Lite: from n/a through 2.0.2.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129001 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129001</link>
+    <guid isPermaLink="false">60c201f4b51e6e99920bd702bbfe8678</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Gabe Livan Asset CleanUp: Page Speed Booster wp-asset-clean-up allows Reflected XSS.This issue affects Asset CleanUp: Page Speed Booster: from n/a through 1.4.0.6.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129013 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129013</link>
+    <guid isPermaLink="false">cb810b404c10730b752fa8d4f442ae6b</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.5 | Missing Authorization vulnerability in Deepen Bajracharya Video Conferencing with Zoom video-conferencing-with-zoom-api allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Video Conferencing with Zoom: from n/a through 4.6.12.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129014 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129014</link>
+    <guid isPermaLink="false">b717f2ecdb1d37801c8fc7857b54b1e7</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing Authorization vulnerability in DynamiApps Frontend Admin by DynamiApps acf-frontend-form-element allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Frontend Admin by DynamiApps: from n/a through 3.30.2.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129030 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129030</link>
+    <guid isPermaLink="false">6c0767d65134032667d62c1b9c6d7ea8</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.5 | Exposure of Sensitive System Information to an Unauthorized Control Sphere vulnerability in Mamunur Rashid ShopBuilder – Elementor WooCommerce Builder Addons shopbuilder allows Retrieve Embedded Sensitive Data.This issue affects ShopBuilder – Elementor WooCommerce Builder Addons: from n/a through 3.4.3.</description>
+    <category>NVD</category>
+    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129048 - NVD - CVSS Score v3.1: 9.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129048</link>
+    <guid isPermaLink="false">1677cbf24fea4958f3a254ef33954baf</guid>
+    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 9.9 | Improper Control of Generation of Code ('Code Injection') vulnerability in Jacob N. Breetvelt WP Photo Album Plus wp-photo-album-plus allows Remote Code Inclusion.This issue affects WP Photo Album Plus: from n/a through 9.3.06.003.</description>
     <category>NVD</category>
     <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
   </item>
