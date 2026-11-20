@@ -5,548 +5,349 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 09:02:22 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 10:01:54 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-131582 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131582</link>
-    <guid isPermaLink="false">a92cad662a942a34abc69ae8c911b6ab</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.2 | The PagBank / PagSeguro e Vindi para WooCommerce plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'customer.name' parameter in all versions up to, and including, 5.1.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The payload can be planted via the legitimate hosted-checkout (Checkout PB) flow simply by entering it as a customer name on PagBank's payment page, requiring no hash brute-forcing whatsoever; the woocommerce_api_rm_ps_notif webhook path is additionally exploitable because its only gate is a 5-character (20-bit) truncated wp_hash() that is trivially brute-forceable.</description>
+    <title>CVE-2026-130462 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130462</link>
+    <guid isPermaLink="false">ac91996f993ae216bd6c581e36523ac1</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.5 | Multiple protocol dissector and file parser hangs in 4.6.0 to 4.6.9 and 4.4.0 to 4.4.19 allows denial of service</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131587 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131587</link>
-    <guid isPermaLink="false">a22bcf9e2dcbd826e5d3d0e46acdd6ab</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | The Recipe Card Blocks Lite plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 4.0.2 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with contributor-level access and above, to overwrite the post_content of arbitrary posts on the site, including Administrator-owned published posts, bypassing the edit_others_posts and edit_published_posts capability checks. This vulnerability is only exploitable when the wpzoom_rcb_settings_synchronize_recipe_post setting is enabled, and requires the target post to contain at least one Recipe Card block whose twin can be matched to the attacker's draft recipe post.</description>
+    <title>CVE-2026-130463 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130463</link>
+    <guid isPermaLink="false">d0313f8dd030bb81cadd9f76544fedd6</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.5 | Android Logcat file parser crash in 4.6.0 to 4.6.9 and 4.4.0 to 4.4.19 allows denial of service</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131645 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131645</link>
-    <guid isPermaLink="false">a8c08eb6c0afd3834388c2a196698c71</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Kognetiks Chatbot plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 2.5.9 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The TeX payload survives WordPress core comment kses intact because it contains no HTML tags, and MathJax is active on fresh installs by default due to the 'chatbot_chatgpt_enable_mathjax' option defaulting to 'Yes' with no page or shortcode presence guard on enqueue.</description>
+    <title>CVE-2026-130465 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130465</link>
+    <guid isPermaLink="false">213294f729fcb8300a535964805d24fc</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.7 | Ascend file parser large loop in 4.6.0 to 4.6.9 and 4.4.0 to 4.4.19 allows denial of service</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131686 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131686</link>
-    <guid isPermaLink="false">8f08008a4ce8f4626cfb69e47d446d21</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | The WPZOOM Forms – Drag &amp; Drop Contact Form Builder for WordPress plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 2.0.12 This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with contributor-level access and above, to view the Name, Email address, and message excerpt stored in the _wpzf_fields meta of every form submission site-wide, regardless of submission ownership. Because public form submissions are stored with post_author=0, WordPress's built-in author-scoping guard in WP_Posts_List_Table is bypassed for Contributors who own zero submissions, causing the list query to return all submissions site-wide rather than only the authenticated user's own records.</description>
+    <title>CVE-2026-130466 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130466</link>
+    <guid isPermaLink="false">85ff99a2da6da9b3fb4e201dd06a3669</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.5 | ERF file parser crash in 4.6.0 to 4.6.9 and 4.4.0 to 4.4.19 allows denial of service</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131699 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131699</link>
-    <guid isPermaLink="false">730a37687d4b3987fa99083819ad8721</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Bootstrapped Ventures WP Recipe Maker wp-recipe-maker allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP Recipe Maker: from n/a through 10.9.2.</description>
+    <title>CVE-2026-130467 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130467</link>
+    <guid isPermaLink="false">a421089ac6b7229e2adf5cb24ef3e323</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.7 | PEAK CAN TRC file parser crash when built with older versions of GLib in 4.6.0 to 4.6.9 allows denial of service</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131703 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131703</link>
-    <guid isPermaLink="false">eee94f9b4c0c91d015d5d7261234b8a4</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Podlove org Podlove Podcast Publisher podlove-podcasting-plugin-for-wordpress allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Podlove Podcast Publisher: from n/a through 4.5.8.</description>
+    <title>CVE-2026-130468 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130468</link>
+    <guid isPermaLink="false">dac317d1cfa97b494ee4c488ab9296d0</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.5 | NBAP protocol dissector crash in 4.6.0 to 4.6.9 and 4.4.0 to 4.4.19 allows denial of service</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131704 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131704</link>
-    <guid isPermaLink="false">6a6eea0f86733b829ac676820d34f7a0</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in WPMU DEV Hustle wordpress-popup allows Code Injection.This issue affects Hustle: from n/a through 7.8.14.5.</description>
+    <title>CVE-2026-130469 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130469</link>
+    <guid isPermaLink="false">0901549934ae1ad7a1ce8b648e6c540e</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.5 | RTSE protocol dissector crash in 4.6.0 to 4.6.9 and 4.4.0 to 4.4.19 allows denial of service</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131719 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131719</link>
-    <guid isPermaLink="false">4772ee4d3b96db702a107b48dfeffd6e</guid>
+    <title>CVE-2026-130625 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130625</link>
+    <guid isPermaLink="false">9b7a9702171845da9c8fa74e73a9374d</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Insertion of Sensitive Information Into Sent Data vulnerability in Metaphor Creations, LLC Ditty ditty-news-ticker allows Retrieve Embedded Sensitive Data.This issue affects Ditty: from n/a through 3.1.73.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131709 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131709</link>
+    <guid isPermaLink="false">24f44e8c46b1384374345a40ecc95f53</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing Authorization vulnerability in Wpmet ShopEngine shopengine allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects ShopEngine: from n/a through 4.9.9.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131710 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131710</link>
+    <guid isPermaLink="false">7ae798438c6f6639794e776aee99a922</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in ThemeGrill Masteriyo - LMS learning-management-system allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Masteriyo - LMS: from n/a through 3.5.1.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131711 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131711</link>
+    <guid isPermaLink="false">5061c08a7a3044c82be7699077563c97</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in ThemeGrill Masteriyo - LMS learning-management-system allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Masteriyo - LMS: from n/a through 3.5.1.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131712 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131712</link>
+    <guid isPermaLink="false">008d25cd5b714f55fa46d1abc3e9a032</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Wpmet ShopEngine shopengine allows Code Injection.This issue affects ShopEngine: from n/a through 4.9.9.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131713 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131713</link>
+    <guid isPermaLink="false">3fd199c636c5a39b3d5a7bf11367f4ba</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Wpmet ShopEngine shopengine allows Stored XSS.This issue affects ShopEngine: from n/a through 4.9.9.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131715 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131715</link>
+    <guid isPermaLink="false">8e1aa4c06c98ba915c7237453a2cbd4d</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Kaliforms Kali Forms kali-forms allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Kali Forms: from n/a through 2.4.32.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131716 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131716</link>
+    <guid isPermaLink="false">8a4f25fdde59eba63ce41ad46563084a</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Cross-Site Request Forgery (CSRF) vulnerability in Awesomemotive Charitable charitable allows Cross Site Request Forgery.This issue affects Charitable: from n/a through 1.8.15.1.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131717 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131717</link>
+    <guid isPermaLink="false">36fcbb60210925b8932656364cc53140</guid>
     <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Liquid Web / StellarWP Event Tickets event-tickets allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Event Tickets: from n/a through 5.31.1.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131740 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131740</link>
-    <guid isPermaLink="false">e2b746ed1cf7854ece7fcaca5d528e17</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WProyal Royal Elementor Addons royal-elementor-addons allows Stored XSS.This issue affects Royal Elementor Addons: from n/a through 1.7.1069.</description>
+    <title>CVE-2026-131723 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131723</link>
+    <guid isPermaLink="false">d43f309882d556be0229deec26c7178b</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Liquid Web / StellarWP Event Tickets event-tickets allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Event Tickets: from n/a through 5.31.1.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131763 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131763</link>
-    <guid isPermaLink="false">b02393be2a3e358421bc242b4349ba07</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.4 | Missing Authorization vulnerability in NSquared Simply Schedule Appointments simply-schedule-appointments allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Simply Schedule Appointments: from n/a through 1.6.13.6.</description>
+    <title>CVE-2026-131725 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131725</link>
+    <guid isPermaLink="false">69c7fa38c6355dfd8a750a31131d1758</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.4 | Missing Authorization vulnerability in ExpressTech Quiz And Survey Master quiz-master-next allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Quiz And Survey Master: from n/a through 11.3.1.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131795 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131795</link>
-    <guid isPermaLink="false">b23ef4c6a35f9592c0aa88982863642e</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.1 | Improper Control of Filename for Include/Require Statement in PHP Program ('PHP Remote File Inclusion') vulnerability in thembay Aora aora allows PHP Local File Inclusion.This issue affects Aora: from n/a through 1.3.5.</description>
+    <title>CVE-2026-131727 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131727</link>
+    <guid isPermaLink="false">ebb87a7000138345312ea32225d15f25</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Blubrry Podcasting PowerPress Podcasting powerpress allows Stored XSS.This issue affects PowerPress Podcasting: from n/a through 11.18.4.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131796 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131796</link>
-    <guid isPermaLink="false">e0c1d9ca02e3f8c654347e15251ba8e1</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing Authorization vulnerability in WP Desk ShopMagic for Google Sheets shopmagic-for-google-sheets allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects ShopMagic for Google Sheets: from n/a through 2.1.10.</description>
+    <title>CVE-2026-131729 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131729</link>
+    <guid isPermaLink="false">f4cd18f66ff5795b75208a9333b329e3</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Liquid Web / StellarWP Event Tickets event-tickets allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Event Tickets: from n/a through 5.31.1.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-131797 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131797</link>
-    <guid isPermaLink="false">2fe9ddf85af397af125b6d29ac3c8629</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Imran Tauqeer CubeWP Forms cubewp-forms allows DOM-Based XSS.This issue affects CubeWP Forms: from n/a through 1.1.12.</description>
+    <title>CVE-2026-131733 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131733</link>
+    <guid isPermaLink="false">223dcc7005f9f0c52542652fc76d371f</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Brainstorm Force SureCart surecart allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects SureCart: from n/a through 4.13.0.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132600 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132600</link>
-    <guid isPermaLink="false">b24b715dad8f2761fe4b6cdf7895b7de</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Mail Mint – Email Marketing, Automation &amp; WooCommerce Emails with AI Assistance plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'form_id' parameter in all versions up to, and including, 1.31.9 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. A crafted form_id value such as `1&quot; onmouseover=&quot;alert(1)` still resolves to a valid form ID via FormModel::get()'s %d prepared statement placeholder, allowing the payload to bypass empty/draft early-return guards and reach both the HTML id and hidden input value attribute sinks.</description>
+    <title>CVE-2026-131734 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131734</link>
+    <guid isPermaLink="false">20166af2aa25c841d598babb0c861b50</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Crocoblock JetEngine jet-engine allows Stored XSS.This issue affects JetEngine: from n/a through 3.9.1.1.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133419 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133419</link>
-    <guid isPermaLink="false">30b73a9f72b7afedb658d49dea7ec65e</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.4 | The UiChemy – Convert Figma, Prompts and AI Builds to Elementor, Gutenberg and Bricks plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'sections[0][settings][raw_css]' parameter in all versions up to, and including, 5.5.3 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The sanitizer bypass relies on HTML entity-encoding the CSS breakout payload at save time, which passes the byte-based filter unchanged and is later reconstituted into executable markup by the render-time html_entity_decode call.</description>
+    <title>CVE-2026-131753 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131753</link>
+    <guid isPermaLink="false">914d8e1187a99c413aba94dce526c12d</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WPFunnels Team Mail Mint mail-mint allows Stored XSS.This issue affects Mail Mint: from n/a through 1.31.9.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133421 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133421</link>
-    <guid isPermaLink="false">e1a0b210bcd6b1a53e01123d98c512cd</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.9 | Validating an untrusted ISO 8601 duration string into a timedelta field with Pydantic V1 takes quadratic time: an input of a few dozen kilobytes takes seconds to validate.
-
-The iso8601_duration_re regular expression used to parse ISO 8601 durations (in pydantic/datetime_parse.py) contains an unescaped &quot;.&quot;, which also matches digits. On a string of digits, the repeated groups overlap and the regex engine backtracks in quadratic time.
-
-The issue was fixed in commit 62791e66a9f8f118e465ed760c9e2ede9ae3055e. Users relying on the pydantic.v1 namespace in Pydantic V2 should upgrade to 2.14.2 or later.
-
-Impact: denial of service through validation of untrusted input. Affected are applications validating untrusted strings into timedelta fields.</description>
+    <title>CVE-2026-131757 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131757</link>
+    <guid isPermaLink="false">97569ba23dac1f9bd3efbed58e7f03a2</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Insertion of Sensitive Information Into Sent Data vulnerability in WProyal Royal Elementor Addons royal-elementor-addons allows Retrieve Embedded Sensitive Data.This issue affects Royal Elementor Addons: from n/a through 1.7.1069.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133422 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133422</link>
-    <guid isPermaLink="false">240df91f6eed3946f090a0cba1891154</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.9 | Validating an untrusted list into a field constrained with unique_items=True with Pydantic V1 takes quadratic time: an input of a few hundred kilobytes takes seconds to validate.
-
-The ConstrainedList.unique_items_validator validator (in pydantic/types.py) checks each item against all the following ones. For a list with no duplicates (the common, valid case), this results in a quadratic number of comparisons.
-
-The issue was fixed in commit 6ec75e57f277a820ec583e601167f25fe8dc7c87. Users relying on the pydantic.v1 namespace in Pydantic V2 should upgrade to 2.14.2 or later.
-
-Impact: denial of service through validation of untrusted input. Affected are applications validating untrusted lists into fields constrained with unique_items=True (using conlist() or Field()).
-
-The fix only applies to lists of builtin scalar types (int, float, str, bytes, bool and None), for which duplicates can be detected in linear time. Lists of other types (e.g. models or dictionaries) are still checked in quadratic time, as their items aren't guaranteed to be hashable: bound their size using the max_items constraint.
-
-Pydantic V2 models are not affected.</description>
+    <title>CVE-2026-131761 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131761</link>
+    <guid isPermaLink="false">8c0d9f348b32ddedf9c93feb5c625151</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Magepeople inc. Booking and Rental Manager booking-and-rental-manager-for-woocommerce allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Booking and Rental Manager: from n/a through 2.8.5.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133424 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133424</link>
-    <guid isPermaLink="false">b561ccfa23fc040a81ff7487f11f98ca</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.3 | When extra data is allowed, providing both the alias and the name of an aliased TypedDict or dataclass field makes the unvalidated value (provided under the name) overwrite the validated one (provided under the alias), resulting in validated data not matching the declared type.
-
-Extra items are stored in the same dictionary as the fields (the returned dictionary for TypedDict, the instance __dict__ for dataclasses). As only the alias is marked as used, the field name is treated as an extra item, and its unvalidated value overrides the validated one. The TypedDict validator (pydantic-core/src/validators/typed_dict.rs) and the dataclass validator (pydantic-core/src/validators/dataclass.rs) share this logic.
-
-The issue was fixed in commit 34491f5328f168f14e3769cd5f0f83c0af0f4778.
-
-Impact: validation bypass, as data returned by validation doesn't match the declared type. Affected are applications validating untrusted data into TypedDict or dataclass types with aliased fields and extra data allowed (with extra='allow', or with the extra_items argument for TypedDict), using Pydantic V2 (up to and including 2.14.1).
-
-Pydantic models (BaseModel) are not affected, as extra data is stored separately from fields.</description>
+    <title>CVE-2026-131764 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131764</link>
+    <guid isPermaLink="false">060059826688f80ff2644625bab90f2b</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.4 | Missing Authorization vulnerability in Brainstorm Force SureCart surecart allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects SureCart: from n/a through 4.13.0.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133426 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133426</link>
-    <guid isPermaLink="false">b7e4fab3f87659194ea3e0075b3d4aad</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.3 | Validating an untrusted string in exponent notation into a Fraction field computes the full power of ten without any bound: an input of a few bytes takes seconds to validate.
-
-String inputs are passed to the Fraction constructor. For strings in exponent notation (e.g. '1e8000000'), CPython computes the corresponding power of ten as an integer (in Lib/fractions.py).
-
-The issue was fixed in commit 69ed168e9ad465eef4c8d81efb152a93b604daf5. For strings in exponent notation, the exponent is now parsed before calling the Fraction constructor, and exponents larger than 4300 (in absolute value) are rejected.
-
-Impact: denial of service through validation of untrusted input. Affected are applications validating untrusted strings into Fraction fields (in both JSON and Python mode, including in strict mode), using Pydantic from 2.10.0 up to (but excluding) 2.14.0.
-
-From 2.14.0, exponents larger than 4300 (in absolute value) are rejected, matching the maximum number of digits accepted for integers.</description>
+    <title>CVE-2026-131768 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131768</link>
+    <guid isPermaLink="false">f60c844f85f876a45ae04c8d05e307e8</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Liquid Web / StellarWP The Events Calendar the-events-calendar allows Code Injection.This issue affects The Events Calendar: from n/a through 6.18.4.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133428 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133428</link>
-    <guid isPermaLink="false">6c9cd933cc1948e6bb6c05b81add89c0</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.3 | Validating an untrusted URL with a long scheme and many hosts into a multi-host URL field (e.g. PostgresDsn) takes quadratic time and memory: an input of about a hundred kilobytes takes around a gigabyte of memory to validate.
+    <title>CVE-2026-131769 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131769</link>
+    <guid isPermaLink="false">23c0f311ecd68fb27849fcb255fe6d40</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Liquid Web / StellarWP The Events Calendar the-events-calendar allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects The Events Calendar: from n/a through 6.18.4.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131770 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131770</link>
+    <guid isPermaLink="false">6d10bb0b02b0105ca0c02ba719903a9b</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in Liquid Web / StellarWP The Events Calendar the-events-calendar allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects The Events Calendar: from n/a through 6.18.4.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133500 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133500</link>
+    <guid isPermaLink="false">4f1a550effc0c2fa79edb614ec3b98bf</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.5 | A vulnerability was identified in Gladys Assistant up to 4.71.0. This affects an unknown function of the file gateway.downloadBackup.js of the component Backup Restore Endpoint. The manipulation of the argument file_url leads to os command injection. The attack can be initiated remotely. The exploit is publicly available and might be used. Upgrading to version 4.72.0 mitigates this issue. Upgrading the affected component is recommended.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133501 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133501</link>
+    <guid isPermaLink="false">1ca2ad55642d391bf47c2bcad04321d7</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.5 | A security flaw has been discovered in Gladys Assistant up to 4.71.0. This impacts an unknown function of the file server/lib/gateway/gateway.downloadBackup.js of the component Backup Restore Handler. The manipulation results in path traversal. The attack can be launched remotely. The exploit has been released to the public and may be used for attacks. Upgrading to version 4.72.0 will fix this issue. It is recommended to upgrade the affected component.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133502 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133502</link>
+    <guid isPermaLink="false">19668994e07503b278d29c1bde984f2b</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.5 | A weakness has been identified in blinkospace blinko up to 1.8.8. Affected is an unknown function of the file /api/auth/verify-2fa of the component 2FA Endpoint. This manipulation of the argument userId causes improper authentication. The attack may be initiated remotely. The exploit has been made available to the public and could be used for attacks. Upgrading to version 1.8.9 is able to address this issue. Patch name: 80e1c4ffaffe66a97df2b5d85fad864ff3691dc8. Upgrading the affected component is advised.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133503 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133503</link>
+    <guid isPermaLink="false">8c439e24fa724f4e34d29e853716d5ba</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.1 | A security vulnerability has been detected in ModelCloud GPTQModel up to 7.6.0. Affected by this vulnerability is the function gptqmodel.adapter.remote.resolve_path of the file gptqmodel/adapter/remote.py of the component Adapter Resolution Pipeline. Such manipulation of the argument adapter.path leads to improper input validation. The attack may be launched remotely. The exploit has been disclosed publicly and may be used. Upgrading to version 7.7.0 addresses this issue. The name of the patch is ed99ac8d59940bf27bb24ce2e80002ae9e44469f. It is advisable to upgrade the affected component.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133531 - NVD - CVSS Score v3.1: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133531</link>
+    <guid isPermaLink="false">1b8db02a4c7766345fceef5bfb1049dd</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.9 | A flaw was found in cluster-network-operator. The OVN IPsec certificate signer does not verify that the requested certificate Subject and DNS names belong to the requesting node. An attacker with an accepted OVN node credential and permission to submit certificate signing requests could obtain a signed certificate identifying another node. In certificate authenticated OVN IPsec deployments, this could enable peer impersonation when the attacker can also satisfy the configured peer address check, potentially compromising protected traffic.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133620 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133620</link>
+    <guid isPermaLink="false">228cd5d640d8abb91fec6e00eaa7a810</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.3 | Flowintel's template repository subsystem did not adequately constrain file access to the configured repository base directory. Two related weaknesses existed:
 
-The parse_multihost_url() function (in pydantic-core/src/validators/url.rs) parses each host separately, prepending the whole URL prefix (including the scheme) to every one of them. As the scheme can be arbitrarily long, and is parsed and stored once per host, both time and memory grow quadratically with the input size. Allowed schemes (e.g. postgres for PostgresDsn) are only checked after parsing, so they don't prevent the issue.
+- Repository registration and editing accepted arbitrary local paths without verifying they resolved inside the configured REPOSITORY_BASE_PATH, allowing an authenticated user to point a repository at any readable directory on the host.
+- Manifest and template file lookups used normalized (non-canonical) path joins and a startswith-based guard that could be bypassed by symbolic links, permitting reads of files outside the intended repository.
 
-The issue was fixed in commit b4028f9d87e34750e53be0ba011d70f3c0fcc94e.
+An authenticated user with the ability to add or edit a template repository could therefore cause the application to read and return the contents of arbitrary files readable by the service account, including configuration files, credentials, or other sensitive data.
 
-Impact: denial of service through validation of untrusted input. Affected are applications validating untrusted strings into multi-host URL fields (PostgresDsn, MongoDsn, NatsDsn, or custom types built on MultiHostUrl).</description>
+Affected: Flowintel versions prior to 4.1.0.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133429 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133429</link>
-    <guid isPermaLink="false">d223f909523d1a8832f2dcab610baaea</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.3 | When validating JSON data into a model allowing extra data, the keys of extra data aren't validated against the key type annotated on __pydantic_extra__, resulting in extra data not matching the declared type. This is the case if you define __pydantic_extra__ as e.g. dict[Annotated[str, Field(pattern=r'^x_')], int].
+    <title>CVE-2026-133622 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133622</link>
+    <guid isPermaLink="false">07ad47f59df63f3a49d479f72fdb5dcd</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 3.7 | A flaw was found in certmonger. This vulnerability allows a malicious certificate authority or an attacker positioned on an unencrypted network to cause a Denial of Service (DoS) by sending oversized or deliberately slow responses. Certmonger fails to enforce size limits or transfer timeouts when downloading and buffering Simple Certificate Enrollment Protocol (SCEP) replies over HTTP. Consequently, an attacker can exhaust host memory, drive CPU usage to capacity, or cause certificate requests to hang indefinitely.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133624 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133624</link>
+    <guid isPermaLink="false">27e57bc8efbb8238bba745bd6a4118d6</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.5 | SCTP protocol dissector heap disclosure in 4.6.0 to 4.6.9 and 4.4.0 to 4.4.19 might enable denial of service or code execution</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133625 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133625</link>
+    <guid isPermaLink="false">859c18b9b4e6a46d14c6411f2f7d605f</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.5 | iLBC audio codec crash in 4.6.0 to 4.6.9 and 4.4.0 to 4.4.19 allows denial of service</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133626 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133626</link>
+    <guid isPermaLink="false">a275746f540f515a0fccd2b748ab75a8</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 7.1 | FlowIntel contains a resource exhaustion vulnerability in its file-to-note conversion feature. When a user converts an attached CSV or JSON file into a case note, the application renders the data as a Markdown table by padding every row to the maximum column count. A crafted file with a small number of filled cells but a very large number of columns (or keys) causes the application to allocate a quadratic number of padded table cells, potentially exhausting a worker process in memory or CPU.
 
-The validate_json_by_iteration() method (in pydantic-core/src/validators/model_fields.rs), used to validate JSON data into models, only validates the values of extra data, and stores the keys as is.
-
-The issue was fixed in commit 4c65dbda9970a488e2ff21c8693fc6f6d70a3358.
-
-Impact: validation bypass, as extra data returned by validation doesn't match the declared type. Affected are applications validating untrusted JSON data into models allowing extra data (with extra='allow'), with a key type annotated on __pydantic_extra__ (e.g. dict[Annotated[str, Field(pattern=...)], int]), using Pydantic from 2.13.0 up to (but excluding) 2.14.2.
-
-Python mode validation isn't affected.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133496 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133496</link>
-    <guid isPermaLink="false">30a87d67f0ebd47b5c70d7e5680d8123</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.1 | A security vulnerability has been detected in Matthias-Wandel jhead up to 3.3. This affects the function RemovePngSectionByType/RemovePngSection of the file src/pngfile.c of the component PNG Section Handler. The manipulation leads to double free. Remote exploitation of the attack is possible. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133497 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133497</link>
-    <guid isPermaLink="false">1e81321b8b104d059e32cf2b1413c55b</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was detected in itsourcecode Banking Management System 1.0. This vulnerability affects unknown code of the file navbar.php. The manipulation of the argument page results in cross site scripting. The attack can be executed remotely. The exploit is now public and may be used.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133498 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133498</link>
-    <guid isPermaLink="false">d08dc3e8688f9dd554c7f78cc7e3d0c5</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.3 | A flaw has been found in mozilla-ai llamafile up to .0.10.5. This issue affects the function llamafile_open_zip of the file llamafile/llamafile.c of the component Container Parser. This manipulation of the argument size causes out-of-bounds read. The attack is possible to be carried out remotely. Upgrading to version 0.10.6 is capable of addressing this issue. Patch name: 5ac1c4dbb76737fee71a54922df95342c667ba6f. It is advisable to upgrade the affected component.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133499 - NVD - CVSS Score v4.0: 2.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133499</link>
-    <guid isPermaLink="false">5429331f54daf8a657bbc73c08d46fc8</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.0 | A vulnerability was found in Vahe1994 AQLM up to e79a896ed6656fe4ed06193d42d004e7d0bbdbb2. The affected element is an unknown function of the file inference_kernels/triton_kernel.py of the component Triton Kernel. Performing a manipulation of the argument codes results in out-of-bounds read. It is possible to initiate the attack remotely. The exploit has been made public and could be used. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133505 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133505</link>
-    <guid isPermaLink="false">6071eaf13f179786edd41106fc77baa7</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.9 | When message history is serialized and loaded again, a tool result that contains a JSON object in the serialized shape of one of Pydantic AI's file types is rebuilt as that file. A third party who controls data a tool returns, such as a record that an MCP server or a function tool returns from an external system, can use this to make the application download a URL on its local network, or make the model provider read an s3:// object or uploaded file with the application's credentials. Applications are affected when tool results can contain third-party data, message history containing those results is serialized and loaded again (stored history, history a UI adapter holds on the server, or Temporal, DBOS or Prefect durable execution), and the model is one Pydantic AI downloads files for, one that honors force_download, or one whose provider resolves non-HTTP file URLs or uploaded files. History that a client submits through the Vercel AI or AG-UI adapter in the default mode is not affected. The issue is fixed in pydantic-ai and pydantic-ai-slim 1.107.10 and 2.66.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133561 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133561</link>
-    <guid isPermaLink="false">ccfd2dd19cc4abd9bd361bf43efee249</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Mattermost versions 11.2.x &lt;= 11.2.4 fail to validate that the redirect target on the web app landing page that prompts users to open links in the desktop app stays on the Mattermost origin which allows an unauthenticated attacker to redirect a user to an arbitrary external site via a crafted link. Mattermost Advisory ID: MMSA-2026-00893</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133611 - NVD - CVSS Score v4.0: 4.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133611</link>
-    <guid isPermaLink="false">bed4e1e3b6fac171c43b92d00e44c2f5</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 4.6 | vulnerability-lookup prior to version 7.1.0 contains two security issues in its web interface. First, the /user/toggle_2fa endpoint accepted HTTP GET requests and disabled the authenticated user's two-factor authentication without requiring password confirmation. Because the state-changing operation was reachable via GET, an attacker with a basic account could embed an image element (or any other GET-triggering markup) in a comment pointing to that endpoint. When a victim with 2FA enabled viewed the comment, their browser silently issued the GET request, disabling the victim's second factor of authentication. No CSRF token was enforced on the GET path, and no password was required to confirm the action. Second, the comment detail page (/comment/&lt;uuid&gt;) rendered unpublished comments to any visitor who possessed the URL, bypassing the moderation workflow that was intended to keep such content hidden until approved. The API correctly restricted access, but the web view did not enforce the same authorization check. The combined effect allows an attacker to degrade a victim's account security (removal of 2FA) through a single page view and to read content that was not yet approved for public release.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133613 - NVD - CVSS Score v4.0: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133613</link>
-    <guid isPermaLink="false">9e7b6d1d9d80f8ba0ad534558781a7a7</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.4 | Flowintel's community data launcher script passes the admin API key as a command-line argument to a child Python helper process. On Unix-like systems, process arguments are readable by all local users via standard tools such as ps or by reading /proc/&lt;pid&gt;/cmdline, allowing any local user to observe the key while the helper process is running.
-
-An attacker with local access to the host can capture the admin API key during the brief window in which the helper process is active. Possession of the key grants full administrative access to the Flowintel REST API, enabling unauthorized creation, modification, or deletion of threat intelligence data, users, roles, and organisations.
+The same issue affects nested JSON values rendered inside table cells, where pretty-printed indentation further inflates the output size.
 
 Preconditions:
-- The victim must invoke the community data import or deletion command (launch.sh -tdc or -dtdc) with the API key supplied as a positional argument.
-- The attacker must have a local user account on the same host and be able to observe process listings during the helper execution window.
+- An authenticated user with access to a case in FlowIntel
+- Ability to attach and convert a CSV or JSON file to a note
 
 Impact:
-- Disclosure of the Flowintel admin API key to any local user.
-- Subsequent full administrative control over the Flowintel instance via its REST API.
+- Denial of service: exhaustion of a worker process, potentially disrupting service for other users
+- No confidentiality or integrity impact
 
-Affected: &lt;4.1.0</description>
+Affected versions: FlowIntel prior to 4.1.0</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133615 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133615</link>
-    <guid isPermaLink="false">b60149b85b1cd923a9e2083d4de4fa4e</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.1 | A vulnerability has been identified in webauthn-kotlin versions 1.1.0 through 1.1.3, where an exported device-credential authentication activity launches attacker-supplied intents without validation, potentially allowing a malicious application on the same Android device to access application-protected data, depending on the host application’s content-provider configuration.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-89095 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-89095</link>
-    <guid isPermaLink="false">26754be63f5e8e79537060a10ddb3a20</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.1 | The Shortcodes and extra features for Phlox theme plugin for WordPress is vulnerable to Local File Inclusion in all versions up to, and including, 2.17.22 via the 'extra_template_path' parameter parameter. This makes it possible for unauthenticated attackers to include and execute arbitrary .php files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where .php file types can be uploaded and included. The slug-based allowlist introduced as the fix for CVE-2023-37888 constrains only the template_part_file filename suffix and does not validate the extra_template_path directory component, meaning path traversal sequences are fully functional against this parameter.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99796 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99796</link>
-    <guid isPermaLink="false">2a968fb080971eb3f0e6a1c2b181303e</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
+    <title>CVE-2026-133627 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133627</link>
+    <guid isPermaLink="false">4358c01a926b4ea241169228923a5a8d</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.3 | flowintel contains a log injection vulnerability in its case history (audit log) subsystem. The case history is stored as a line-delimited file where each line represents a single event attributed to a specific user. User-controlled fields, including user names, event messages, and case titles used during case merging, were written to the history file without sanitizing embedded line separator characters (such as carriage return, line feed, vertical tab, form feed, and Unicode line/paragraph separators).
 
-io_uring/poll: cancel all matching requests in one pass
+An authenticated user with the ability to create or modify case history entries could embed line separators in these fields. Upon writing, the injected separators would split a single intended entry into multiple lines, each of which the history format interprets as a distinct event. This allows an attacker to forge additional history entries attributed to arbitrary users, corrupting the audit trail and undermining the integrity of case records.
 
-With IORING_ASYNC_CANCEL_ALL, __io_async_cancel() calls io_try_cancel()
-until nothing is found, and io_poll_cancel() cancels one request per
-call, starting each lookup at the beginning of the hash. A cancelled
-request stays hashed until its task work runs, so every lookup walks
-past the ones already cancelled. Cancelling K of N pending polls visits
-about K*N/2 requests in one io_uring_enter(), with uring_lock held.
+The vulnerability affects the case history append and merge operations. No authentication bypass or privilege escalation is required beyond normal case-management access.
 
-A single CANCEL_FD|ALL on 80000 polls on one eventfd takes 17.06s,
-0.02s with this change. With voluntary preemption the soft lockup
-watchdog fires:
-
-  watchdog: BUG: soft lockup - CPU#1 stuck for 26s! [repro:100]
-  RIP: 0010:io_cancel_req_match+0x19/0xa0
-   io_poll_cancel+0x73/0x170
-   io_try_cancel+0x7b/0xf0
-   __io_async_cancel+0x41/0x110
-
-Walk the hash once and cancel every match, as io_cancel_remove() does
-for futex and waitid. Cancel by user_data only needs its own bucket.
-__io_async_cancel() still loops until nothing is found, so a request
-that io-wq parks in the poll hash meanwhile is still cancelled.
-
-A cancel that matches one request now walks the whole hash twice instead
-of stopping at the match.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99797 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99797</link>
-    <guid isPermaLink="false">f19f387bc855e0ee25067b1ec0e9134c</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring/cancel: drop sqd-&gt;lock while SQPOLL waits
-
-An exiting SQPOLL thread calls io_uring_cancel_generic() with sqd-&gt;lock
-held, and keeps it across cond_resched() and the sleep until nothing is
-in flight anymore. A zero-copy send notification can't be canceled and
-stays pending as long as the peer doesn't read, so the lock is held for
-as long as a user cares to. io_ring_exit_work() needs it to park the
-thread, and so do IORING_REGISTER_IOWQ_AFF and IOWQ_MAX_WORKERS. With
-64 such rings sharing the thread, every iou_exit slot sleeps on the lock
-and no ring gets freed for anyone.
-
-Drop the lock around cond_resched() and the sleep, like the main loop of
-the thread does. Each walk of ctx_list is still under one hold, and
-nothing is kept across the unlock. The thread drops its io-wq, frees its
-tctx and clears sqd-&gt;thread under one hold after the loop, so whoever
-holds the lock and finds sqd-&gt;thread set can still use them.
-
-[axboe: adapted to the schedule_timeout() based loop]</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99798 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99798</link>
-    <guid isPermaLink="false">95f4a1a8ef6c861de639523b495d5d34</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring: defer foreign io-wq enqueues to task_work
-
-An IOPOLL ring without DEFER_TASKRUN can be reaped by a task other than
-the one that submitted the I/O. If a polled request is marked
-REQ_F_REISSUE, io_free_batch_list() calls io_queue_iowq() with the
-original tctx. Ordinary task exit can tear down tctx-&gt;io_wq after
-draining only the tracked requests. The live request pins the task, but
-not its io-wq, so the foreign task can race io_wq_put_and_exit() and
-enqueue through a freed or NULL queue.
-
-Forward foreign userspace enqueues to the owning task before accessing
-tctx-&gt;io_wq. Use a dedicated task_work callback so reissues still go
-straight to io-wq, and fail them if task_work is running in cancellation
-mode. Preserve the existing PF_KTHREAD cancellation path. This also
-covers the other callers of io_queue_iowq() without changing the
-worker-owned enqueue path.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99799 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99799</link>
-    <guid isPermaLink="false">770593573032225ebe54979f4a377f52</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring/sqpoll: don't wait for the thread to exit
-
-io_sq_thread_stop() wakes the SQPOLL thread and waits for it to exit.
-The thread belongs to the thread group that created the ring, so a
-SIGSTOP or the cgroup freezer holds it in get_signal(), and the wake up
-doesn't change that. io_ring_exit_work() then sleeps in that wait until
-someone continues or kills the process. iou_exit has 64 slots, so 64
-closed SQPOLL rings of a stopped process keep every other ring from
-being freed, for everyone.
-
-Don't wait. Set the stop bit, wake the thread, and let it exit when it
-gets to run again. The sqd can now outlive its last ring, so give it a
-second refcount with one reference for the rings and one for the thread,
-and free it with the last one. The thread can't reach a freed ring,
-rings leave ctx_list before dropping their reference, and the io-wq hash
-is refcounted.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99800 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99800</link>
-    <guid isPermaLink="false">e04aff1cef82aac074c42717fdd23728</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring: free the task context after a grace period
-
-A task other than the owner can free a request, io_ring_exit_work()
-running the local task_work of a DEFER_TASKRUN ring for example, or
-io_do_iopoll() reaping completions. io_put_task() then takes the else
-branch:
-
-    percpu_counter_sub(&amp;tctx-&gt;inflight, 1);
-    if (unlikely(atomic_read(&amp;tctx-&gt;in_cancel)))
-            wake_up(&amp;tctx-&gt;wait);
-    put_task_struct(tctx-&gt;task);
-
-The first line is what lets the owner leave io_uring_cancel_generic(),
-and on exec it frees the tctx right after. Nothing holds that off for
-the remaining three lines, the task reference only covers a tctx freed
-along with the task_struct. It used to work out because
-io_uring_del_tctx_node() took the uring_lock that the freeing side holds
-across io_put_task(), until that moved to tctx_lock.
-
-Free the tctx with kfree_rcu(), and enter an RCU read section in
-io_put_task() before the count is dropped.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99801 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99801</link>
-    <guid isPermaLink="false">764ec1113110b2d28ebc4a48e20001de</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring/bpf-ops: clear bpf_ctx while submitting SQEs
-
-bpf_io_uring_submit_sqes() calls io_submit_sqes() from inside the loop
-program, with current-&gt;bpf_ctx set, and requests issued inline run with
-it set too. The socket code uses has_current_bpf_ctx() to recognize
-calls from bpf_setsockopt() and friends, where the caller holds the
-socket lock and has already been vetted, and skips both.
-
-So a SOCKET_URING_OP_SETSOCKOPT from the SQ passes sockopt_capable()
-without the capability, and runs without lock_sock(). A task with no
-capability can set SO_MARK, IP_TRANSPARENT or TCP_REPAIR, and two
-threads changing IP_OPTIONS on one socket, one through the ring, double
-free in no time. SOCK_DESTROY via IORING_OP_SENDMSG ends up in
-tcp_abort() without the lock the same way.
-
-Clear the run context around io_submit_sqes(). The SQEs come from
-userspace and must be issued like those of any other ring. They still
-run inside the program's RCU tasks trace read section, so a request
-that sleeps there holds up that grace period, but other request types
-do that already.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99802 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99802</link>
-    <guid isPermaLink="false">cc3ebca866c5b3f022ee9527e1afb83c</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring/register: enforce per-task restrictions in io_uring_register_blind()
-
-When io_uring_register(2) is invoked with fd == -1, it dispatches
-directly to io_uring_register_blind() without checking
-current-&gt;io_uring_restrict.
-
-As a result, a task with per-task register restrictions installed via
-IORING_REGISTER_RESTRICTIONS can still invoke blind registration opcodes
-such as IORING_REGISTER_SEND_MSG_RING even when those opcodes are not in
-the task's allowed register_op bitmap.
-
-Check current-&gt;io_uring_restrict-&gt;register_op in
-io_uring_register_blind() before dispatching blind registration opcodes.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99803 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99803</link>
-    <guid isPermaLink="false">f62f303036701d6e14f71ce5d686f422</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring/net: mask socket type with SOCK_TYPE_MASK in io_socket_bpf_populate()
-
-When an IORING_OP_SOCKET request is prepared in io_socket_prep(),
-sock-&gt;type retains creation flags such as SOCK_CLOEXEC and SOCK_NONBLOCK
-until __sys_socket_file() masks them off with SOCK_TYPE_MASK during
-execution.
-
-However, io_socket_bpf_populate() copies sock-&gt;type into
-bctx-&gt;socket.type without masking off ~SOCK_TYPE_MASK. As a result, a
-cBPF filter inspecting bctx-&gt;socket.type against socket types such as
-SOCK_DGRAM or SOCK_STREAM can be bypassed by ORing SOCK_CLOEXEC or
-SOCK_NONBLOCK into the socket type.
-
-Mask sock-&gt;type with SOCK_TYPE_MASK when populating bctx-&gt;socket.type.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99804 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99804</link>
-    <guid isPermaLink="false">fc36f94f2348628dcb3e656b61382f9c</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-io_uring/io-wq: save worker type before dropping its reference
-
-io_wq_cancel_tw_create() inspects cb-&gt;func after calling
-io_worker_cancel_cb(). For an existing worker, that call can drop the
-last worker reference and wake io_worker_exit(). If the canceling task
-is preempted, the worker can be unlinked and freed by kfree_rcu() before
-the callback function is inspected. KASAN reports a slab-use-after-free
-read in this path.
-
-Save whether the callback belongs to an unpublished continuation worker
-while its reference is still held, then use the saved result for the
-conditional free. This preserves the existing accounting and frees only
-the worker allocated for the canceled continuation.</description>
+Affected versions: flowintel prior to 4.1.0.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
