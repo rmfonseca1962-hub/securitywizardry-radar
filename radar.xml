@@ -5,213 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 07:02:46 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-99756 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99756</link>
-    <guid isPermaLink="false">b8b223c5b9c9df926f44e9fed7cb2fde</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-btrfs: prevent deleting the wrong subvolume by ID
-
-When deleting a subvolume by ID, btrfs_ioctl_snap_destroy() first
-resolves the requested ID to a name, then looks up that name again
-under the parent directory lock.
-
-A concurrent rename can change which subvolume is associated with
-the name between these operations. Since the deletion path does not
-verify the ID of the resolved subvolume, it can delete a different
-subvolume while leaving the requested one intact.
-
-This was reproduced by repeatedly exchanging the names of two
-subvolumes using renameat2(RENAME_EXCHANGE) while deleting one of
-them by ID. The wrong subvolume was deleted in 9 out of 14 independent
-tests.
-
-Fix this by checking that the resolved subvolume ID matches the
-requested ID while holding the parent directory lock. Return -EAGAIN
-on a mismatch so that userspace can retry the operation instead of
-being told that the requested subvolume does not exist.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99757 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99757</link>
-    <guid isPermaLink="false">8e8039e9048a5c7562bb9a1f015cd46a</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-btrfs: sysfs: restore NOFS context on early return in btrfs_sysfs_add_block_group_type()
-
-btrfs_sysfs_add_block_group_type() sets up a NOFS context with
-memalloc_nofs_save() because kobject_add() performs GFP_KERNEL
-allocations deep in its call chain, and the function may be called
-while holding a transaction handle or a lock required for a
-transaction commit, where reclaim could deadlock.
-
-Every other return path of this function calls memalloc_nofs_restore()
-except the early return taken when another thread has already created
-the kobject for the same raid index (this can happen when restriping).
-Taking that path leaves PF_MEMALLOC_NOFS set on the calling task, so
-all subsequent memory allocations performed by that task remain
-restricted to the NOFS scope, which may lead to unexpected allocation
-failures or deadlocks later on.
-
-Restore the NOFS context before returning from that path.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99758 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99758</link>
-    <guid isPermaLink="false">6f434c4e73627a0f3b5370d074861881</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-sctp: account for chunk padding in sctp_init_cause()
-
-sctp_init_cause() accepts a chunk when skb_tailroom() can hold the
-cause header and the payload. sctp_addto_chunk() then writes 0-3
-bytes of padding before that header so the chunk stays 4-byte
-aligned. The check does not include the padding, and the following
-skb_put() calls skb_over_panic() from softirq.
-
-Count the padding sctp_addto_chunk() is about to write. The cause
-length on the wire stays the header plus the payload.
-
-Found by LLM inspection, triggered and tested the fix.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99759 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99759</link>
-    <guid isPermaLink="false">657dfb67707d583e2ad39761c97a70b4</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-batman-adv: tt: don't drop local events queued during TVLV update
-
-batadv_tt_tvlv_container_update() read the number of local changes without
-holding changes_list_lock. batadv_tt_local_event() is not serialized by
-the commit_lock and can queue new events before the changes_list is
-flushed:
-
-  CPU0                          CPU1
-  batadv_tt_tvlv_container_update()
-    num = ...local_changes;
-                                batadv_tt_local_event()
-                                  list_add_tail(...);
-                                  ...local_changes++;
-    spin_lock_bh(&amp;...changes_list_lock);
-    /* only num events copied but all freed */
-
-The additional events were freed without ever being sent. Other nodes will
-only notice this via a CRC mismatch and must request the full table.
-
-The number of changes and the changes_list must therefore be taken
-atomically. Events queued afterwards then stay in the tt.changes_list for
-the next TT round.
-
-The changes can no longer be kept for the next round when the TVLV buffer
-allocation fails. But they would be sent with a skipped TTVN anyway, so the
-other nodes have to request the full table in this case either way. The
-last changeset is only dropped in this case when the TTVN was incremented.
-Without new changes, it still describes the current TTVN.
-
-Previously, the unconsumed changes caused a retry of the TVLV container
-update in the next commit round. Since the changes are now consumed, the
-next round would only take the path without changes and wait for
-BATADV_TT_OGM_APPEND_MAX rounds before updating the container again. Until
-then, the outdated container with the previous TTVN would still be
-announced. The ogm_append_cnt is therefore reset on failure to retry the
-update in the next OGM interval.
-
-This doesn't make the CRC consistent with the announced changeset. The
-local table modifications are still not serialized with the commit and
-batadv_tt_local_transition_new() can still make a client part of the CRC
-for which the event is only part of the next TT round. Such an
-inconsistency is detected by the CRC check of the other nodes and solved
-via a full table request.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99760 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99760</link>
-    <guid isPermaLink="false">0ce0ccb4a5fccd9cc4a7c8ce34be8d5b</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-batman-adv: tt: ignore ROAM flag of received ADD changes
-
-A received TT change (OGM diff or full table response) with the ROAM flag
-but without DEL is handled by batadv_tt_global_add() like a ROAMING_ADV:
-
-* a newly created global entry gets BATADV_TT_CLIENT_ROAM and is
-  therefore excluded from the global CRC. The sender has it in its local
-  CRC and the receiver has to request the full table again
-* batadv_tt_global_purge_local() removes the local entry of the
-  receiver. The receiver's own client is considered as roamed to the sender
-  and frames for it are rerouted
-
-The ROAM flag only has a meaning together with DEL. Drop it on reception to
-keep it from populating the global table with a temporary ROAMING entry
-which is not part of the CRC - and therefore causing a CRC mismatch.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99761 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99761</link>
-    <guid isPermaLink="false">395c85d301134d3a0ac6fa222ca2997b</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-batman-adv: stop originator purge worker before freeing TT
-
-batadv_mesh_free() releases the translation tables via batadv_tt_free()
-before batadv_originator_free() stops orig_work. The purge worker can
-therefore still run while the TT is torn down. When an originator times
-out, batadv_purge_orig_ref() calls batadv_tt_global_del_orig(), which
-loads tt.global_hash and walks all buckets while taking their locks:
-
-  CPU0                          CPU1
-  batadv_tt_free()              batadv_purge_orig()
-                                  batadv_tt_global_del_orig()
-                                    hash = ...tt.global_hash;
-    batadv_tt_global_table_free()
-      batadv_hash_destroy(hash);
-                                    spin_lock_bh(&amp;hash-&gt;list_locks[i]);
-
-Disable orig_work at the beginning of batadv_mesh_free(), directly after
-the mesh was marked as deactivating. The second
-disable_delayed_work_sync() in batadv_originator_free() is harmless because
-it is free'd anyway.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-99762 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99762</link>
-    <guid isPermaLink="false">9e6a765918c2818057d4c9b05a5add22</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS: não informado | In the Linux kernel, the following vulnerability has been resolved:
-
-batman-adv: mcast: validate tracker padding before forwarding
-
-A multicast tracker with an even number of destinations needs two
-padding bytes after its destination list. batadv_mcast_forw_packet()
-currently only checks that the count field and the addresses fit in
-the tracker TVLV.
-
-If an unpadded even tracker is compacted to an odd number of
-destinations, batadv_mcast_forw_shrink_update_headers() includes those
-missing padding bytes in the amount to remove. The subsequent memmove
-can then write two bytes past the old packet tail. With no tailroom,
-this corrupts skb_shared_info.
-
-Include the required padding in the existing tracker length check.
-This rejects the malformed tracker before either received or locally
-generated packets can reach the compactor.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Fri, 20 Nov 2026 08:01:35 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-99763 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-99763</link>
@@ -1270,6 +1064,62 @@ Same class of bug, same fix shape as commit 6c9d2e87df40
 in cxlctl_get_supported_features() but missed this one.
 
 [ dj: Fixed up title typo per Jonathan. ]</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129971 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129971</link>
+    <guid isPermaLink="false">a85e597943e81e7d8b364814c0f711be</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.7 | A buffer overflow vulnerability exists in the SNMP service of the Ethernet Remote I/Os products. An unauthenticated remote attacker could exploit improper handling of specially crafted SNMP requests, potentially leading to a denial-of-service condition on the affected device.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129972 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129972</link>
+    <guid isPermaLink="false">3aa302b99349ead7d7ca9757f0cb41d0</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.7 | A buffer overflow vulnerability exists in the web management service of the Ethernet Remote I/Os products. An unauthenticated remote attacker could exploit insufficient bounds checking of specially crafted HTTP requests, potentially causing the web management service to crash and resulting in a denial-of-service condition.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133491 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133491</link>
+    <guid isPermaLink="false">8d6eda167f0b6793681fbda1da8bd3a0</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.3 | A flaw has been found in Konstanty libmodplug up to 0.8.9.1. The affected element is the function abc_add_drum of the file src/load_abc.cpp of the component ABC File Handler. Executing a manipulation can lead to out-of-bounds read. The attack may be performed from remote. Upgrading to version 0.8.9.2 is sufficient to fix this issue. This patch is called 540f0b8ec3d7979e17a8d6a55e31b8a7b734d463. It is recommended to upgrade the affected component.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133492 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133492</link>
+    <guid isPermaLink="false">15c46945f50086f58d22992781e8c91f</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability has been found in TRENDnet TEW-657BRM 1.00.1. The impacted element is an unknown function of the file /usr/www/images/.svn/entries of the component mini_httpd. The manipulation leads to information disclosure. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The vendor explains: &quot;I am not able to confirm if such vulnerability exists as the product has been EOL for more than 15 years. We will send out an announcement letting customers know.&quot; This vulnerability only affects products that are no longer supported by the maintainer.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133493 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133493</link>
+    <guid isPermaLink="false">c0609bb572f9e10b1023edaf0bb4d468</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 9.3 | A vulnerability was identified in D-Link DIR-600L 2.17b02. Affected is the function genacgi_main of the file gena.cgi of the component GENA Handler. Such manipulation leads to os command injection. The attack can be launched remotely. The exploit is publicly available and might be used.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133495 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133495</link>
+    <guid isPermaLink="false">3aa041a1839e55ca540f0b1bc0f38a53</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.5 | A weakness has been identified in D-Link DIR-600L 2.17b02. Affected by this issue is some unknown functionality of the file hedwig.cgi of the component fatlady Handler. Executing a manipulation can lead to path traversal. The attack may be launched remotely.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133577 - NVD - CVSS Score v3.1: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133577</link>
+    <guid isPermaLink="false">3199ede462d8a7fb4ef0c274b4572a1e</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.7 | A flaw was found in the Kuadrant WebAssembly (WASM) shim shipped in Red Hat Connectivity Link 1.5. When a TokenRateLimitPolicy is attached to an HTTPRoute that also has an AuthPolicy - or when a RateLimitPolicy with defaults or overrides is attached to the Gateway or listener of such routes - the shim's action pipeline fails to dispatch the authentication guard at request time, and the request is forwarded upstream. Unauthenticated requests return 200 OK instead of 401, and neither authentication nor rate limiting is enforced. Both policies continue to report Enforced, leaving no status-level indication of the failure.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
