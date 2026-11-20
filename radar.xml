@@ -5,108 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 14:00:31 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-131165 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131165</link>
-    <guid isPermaLink="false">5db2df07855ade829b9171ef5673fbec</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.1 | The fix for CVE-2026-127174 published in 2026.9.2 is incomplete: When expanding an export from &quot;some events&quot; to &quot;all events&quot;, it is checked that the acting user is part of a team with permission to all events, but this check is not correctly bound to the organizer and could also be passed through permissions on a different organizer.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131166 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131166</link>
-    <guid isPermaLink="false">b972f681e3c6459e16695a91876b99e6</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.0 | When configuring a device to use the security profile &quot;pretixSCAN (kiosk mode, no order sync, no search)&quot;, the API search endpoint introduced in pretix 4.12 was not blocked correctly. This theoretically allows these devices to perform searches for orders even if that was not intended. If the device is in kiosk mode, the search button will still be hidden from users.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131167 - NVD - CVSS Score v4.0: 8.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131167</link>
-    <guid isPermaLink="false">5cab5a1d129eb908ce3f7f7416637291</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.9 | pretix offloads certain processes to background tasks that are run by a different server to avoid HTTP workers being clogged with processes that take longer than a usual web request. The browser periodically polls the server to see if the task is already finished using a UUID-shaped task ID. Once the task is completed, pretix resumes to the next step of the operation based on the result of the task. The system does however not check if the result stems from the correct type of task. Therefore, an attacker can supply the UUID of a task of a different type and pretix will continue with the result from the wrong task. In most cases, this will just result in an error because the return types do not match up, but in some cases this can be abused to extract objects the attacker usually should not see. Specifically, a vector was discovered that allowed to abuse this for unauthorized access to other people's ticket purchases. The attacker can, however, not control which purchases they get access to.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131168 - NVD - CVSS Score v4.0: 6.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131168</link>
-    <guid isPermaLink="false">22b4732a2f0b77e71aa4fcef0b575367</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.6 | A legacy code path allowed users to craft requests to a ticket shop that bypass some validation steps for the selected products. In consequence, this could lead to an attacker purchasing products that are in fact sold out.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131169 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131169</link>
-    <guid isPermaLink="false">8c5c2cb132a1f6b61ec6572510a80be9</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.1 | When a scheduled export is copied, the permissions of the original export's owner are used when running the export. This allows users to create exports with data they usually shouldn't be able to see, but only within events they already have permissions to.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131170 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131170</link>
-    <guid isPermaLink="false">e8a676d7e6153349629a3650eb175a7c</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.3 | Our payment integration with Stripe did not properly validate payment status responses. An attacker could use a successful payment status response from one payment and supply it to the system for a different payment, gaining access to multiple valid tickets with only one payment. However, the attack requires knowledge of a valid charge ID from the same event which we believe is usually not exposed to users.
-
-
-
-
-To simplify attack surface, the fix removes support for incoming webhooks regarding payments created through Stripe's old &quot;source&quot; API. pretix stopped creating payments using this API in 2024.1 for most payment methods and in 2024.9 for all payment methods.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131732 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131732</link>
-    <guid isPermaLink="false">bed93e9a7752b271f80e7b23a6022b51</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in Magepeople inc. Taxi Booking Manager for WooCommerce ecab-taxi-booking-manager allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Taxi Booking Manager for WooCommerce: from n/a through 2.2.10.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131781 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131781</link>
-    <guid isPermaLink="false">58eef73084a550d196768386b0d4e74c</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Brainstorm Force Spectra ultimate-addons-for-gutenberg allows Stored XSS.This issue affects Spectra: from n/a through 2.20.6.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131783 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131783</link>
-    <guid isPermaLink="false">7c8a2f540964bad35943d335332323c9</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in myCred myCred mycred allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects myCred: from n/a through 4.0.3.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131784 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131784</link>
-    <guid isPermaLink="false">e810b8c0d96a58a51a990a292a12329d</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in weDevs Dokan dokan-lite allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Dokan: from n/a through 5.3.4.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131785 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131785</link>
-    <guid isPermaLink="false">6e22b8492080b4f1c140de4f29d32984</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in PublishPress PublishPress Permissions press-permit-core allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects PublishPress Permissions: from n/a through 5.0.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131787 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131787</link>
-    <guid isPermaLink="false">22d5fe73b9c7c0cc50c179d599272fd9</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Liquid Web / StellarWP Gutenberg Blocks by Kadence Blocks kadence-blocks allows Stored XSS.This issue affects Gutenberg Blocks by Kadence Blocks: from n/a through 3.9.1.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Fri, 20 Nov 2026 15:01:08 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-131789 - NVD - CVSS Score v3.1: 5.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131789</link>
@@ -328,6 +227,106 @@ To simplify attack surface, the fix removes support for incoming webhooks regard
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133710</link>
     <guid isPermaLink="false">96b6a1d671d4184b0697696b601c2150</guid>
     <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.5 | llama.cpp b11003 before b12556 contains an integer overflow in the hrm_text loader load_arch_hparams() that allows attackers to bypass the block count check using crafted GGUF metadata. Attackers can supply a GGUF model whose layer factors wrap modulo 2^32, causing load_arch_tensors() to write tensor pointers past model.layers, corrupting heap memory and potentially enabling code execution.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-106024 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-106024</link>
+    <guid isPermaLink="false">61c7a8eb00056a2a81002bf1578a5a21</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.9 | Mongoose Embedded Web Server / Networking Library before 7.24 contains a WebSocket fragmentation validation vulnerability that allows remote attackers to spoof message metadata by sending a single CONTINUATION frame with FIN=1 as the first data frame instead of a required TEXT/BINARY start frame, violating RFC 6455 sequencing rules. Attackers can craft this malformed frame to make mg_ws_cb() in src/ws.c misinterpret the first byte of payload as saved FIN/opcode flags, causing the application to receive a dispatched MG_EV_WS_MSG event with attacker-controlled flags and data truncated by one byte without closing the connection.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128996 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128996</link>
+    <guid isPermaLink="false">ff9b6b1b53b266d545c05495538d7bb2</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Tomdever wpForo Forum wpforo allows Stored XSS.This issue affects wpForo Forum: from n/a through 3.2.4.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129017 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129017</link>
+    <guid isPermaLink="false">9cbcd8600a4376d4ffd263d0575b1f70</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Gemini Labs Site Reviews site-reviews allows Stored XSS.This issue affects Site Reviews: from n/a through 8.3.7.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129039 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129039</link>
+    <guid isPermaLink="false">764ee53de4978e5ec20c88e09eb8113d</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 9.8 | Deserialization of Untrusted Data vulnerability in Tribulant Software Newsletters newsletters-lite allows Object Injection.This issue affects Newsletters: from n/a through 4.18.2.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129043 - NVD - CVSS Score v3.1: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129043</link>
+    <guid isPermaLink="false">2a0c86944b4ea47dbecf80c226981860</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 9.3 | Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Tribulant Software Newsletters newsletters-lite allows SQL Injection.This issue affects Newsletters: from n/a through 4.18.2.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129074 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129074</link>
+    <guid isPermaLink="false">f91ef142115f6b46862074cdefb849eb</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Missing Authorization vulnerability in miniOrange miniOrange's Google Authenticator miniorange-2-factor-authentication allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects miniOrange's Google Authenticator: from n/a through 6.6.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130618 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130618</link>
+    <guid isPermaLink="false">93253305ea33b9ca7f7de406078d91f9</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Brainstorm Force SureCart surecart allows Stored XSS.This issue affects SureCart: from n/a through 4.13.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133609 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133609</link>
+    <guid isPermaLink="false">f1a0f4ab94794087492f940c5d01c253</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.9 | A vulnerability was found in erupts erupt up to 2.0.2. This impacts the function EruptUserController.createCode of the file erupt-upms/src/main/java/xyz/erupt/upms/controller/EruptUserController.java of the component UPMS CAPTCHA Endpoint. Performing a manipulation of the argument height results in uncontrolled memory allocation. The attack may be initiated remotely. Upgrading to version 2.0.3 will fix this issue. The patch is named fc59a6eece991ff5aced363243d0b2d14f73ed95. It is recommended to upgrade the affected component.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133610 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133610</link>
+    <guid isPermaLink="false">d7c59a07e7ca141c63c5c901c7afd70d</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.3 | A vulnerability was found in antirez gguf-tools up to fdfafbed766db0a1e9019b07994cd88f133d1aab. The impacted element is the function gguf_get_tensor of the file gguflib.c of the component GGUF Parser. The manipulation of the argument offset/alignment results in out-of-bounds read. The attack can be launched remotely. The pull request to fix this issue awaits acceptance.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14914 - NVD - CVSS Score v3.1: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14914</link>
+    <guid isPermaLink="false">0697e3e4b41f31d2ed5f0c6d1fa635dc</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 10.0 | Unrestricted upload of file with dangerous type vulnerability in Tegsoft Yönetim ve Bilişim Hizmetleri Tic. Ltd. Şti. Tegsoft Contact Center allows Upload a Web Shell to a Web Server.
+
+This issue affects Tegsoft Contact Center: before latest-202611161510.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14915 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14915</link>
+    <guid isPermaLink="false">b57cad6fbd63c7d0c00f2a4fbccfb529</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Exposure of sensitive system information to an unauthorized control sphere vulnerability in Tegsoft Yönetim ve Bilişim Hizmetleri Tic. Ltd. Şti. Tegsoft İletişim Merkezi allows Query System for Information.
+
+This issue affects Tegsoft İletişim Merkezi: before latest-202611161510.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80188 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80188</link>
+    <guid isPermaLink="false">47e3b87a65b1723426d70e842e93968a</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 9.8 | The BuddyBoss Addons plugin for WordPress is vulnerable to Authentication Bypass leading to Account Takeover in versions up to, and including, 1.2.1. This is due to the Social Login REST endpoint trusting unverified Apple and Facebook identity-token claims and linking an attacker-controlled provider identifier to an existing WordPress user selected by the token’s email claim. This makes it possible for unauthenticated attackers who know a user’s email address to associate their provider identity with that account, including administrator accounts, and subsequently authenticate as the victim. Successful exploitation requires the BuddyBoss Platform plugin to be installed and active, with the Social Login module and selected provider enabled and configured. On sites with the separate BuddyBoss App JWT component, the vulnerable REST request can return an application token immediately.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
