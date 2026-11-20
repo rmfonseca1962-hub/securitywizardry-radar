@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 03:02:16 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 04:01:11 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-22062 - NVD - CVSS Score v4.0: 2.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-22062</link>
@@ -245,60 +245,60 @@ A server-side mitigation has been deployed that also protects existing iOS clien
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-61798 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61798</link>
-    <guid isPermaLink="false">5767dedcb69671de10b08178388fae19</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.1 | netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. Prior to 0.0.23.Final, BoringSSLAsymmetricCipherKeyPair.toString in codec-ohttp-hpke-classes-boringssl/src/main/java/io/netty/incubator/codec/hpke/boringssl/BoringSSLAsymmetricCipherKeyPair.java includes its private parameter, BoringSSLAsymmetricKeyParameter.toString in codec-ohttp-hpke-classes-boringssl/src/main/java/io/netty/incubator/codec/hpke/boringssl/BoringSSLAsymmetricKeyParameter.java renders the complete private-key byte array when isPrivate is true, and BoringSSL.EVP_HPKE_KEY_init_or_throw in codec-ohttp-hpke-classes-boringssl/src/main/java/io/netty/incubator/codec/hpke/boringssl/BoringSSL.java includes rejected privateKeyBytes in an exception message. Applications that log affected key-pair objects or initialization exceptions can persist complete HPKE private key material in logs or telemetry. Anyone who can read those records can recover the key and may compromise OHTTP message confidentiality or authenticity expectations while the key remains usable. This issue is fixed in version 0.0.23.Final.</description>
+    <title>CVE-2026-133477 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133477</link>
+    <guid isPermaLink="false">3472ab7b24f88707fe790033c3536fbd</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.3 | A weakness has been identified in sofastack sofa-bolt up to 1.6.12. This impacts the function initSSLContext of the file src/main/java/com/alipay/remoting/connection/AbstractConnectionFactory.java of the component TLS Stack. Executing a manipulation can lead to certificate with host mismatch. The attack may be performed from remote. This attack is characterized by high complexity. The exploitability is said to be difficult. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-61799 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61799</link>
-    <guid isPermaLink="false">a3c36cb7e02d01a30437db518b008888</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.3 | netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. Prior to 0.0.23.Final, BinaryHttpParser in codec-bhttp/src/main/java/io/netty/incubator/codec/bhttp/BinaryHttpParser.java accumulates attacker-controlled Binary HTTP variable-length integers into the int offset sumBytes. BinaryHttpParser.readRequestHead, BinaryHttpParser.readFieldLine, and BinaryHttpParser.getIndeterminateLength can narrow long lengths into that offset, causing integer wraparound before buffer indices are calculated. A remote peer that supplies a valid large encoded length to BinaryHttpParser or BinaryHttpDecoder can trigger an unchecked bounds exception from a small malformed message, fail or close the channel, and repeatedly cause denial of service. Java and Netty bounds checks prevent memory corruption, and no information disclosure was observed. This issue is fixed in version 0.0.23.Final.</description>
+    <title>CVE-2026-133478 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133478</link>
+    <guid isPermaLink="false">ff641f043e6adad794db7fda5ec694ea</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security vulnerability has been detected in rajesh2211 Doctor-Appointment-System up to ee974dcf4c50da85e6ea026e27f4370e9468b3cc. Affected is an unknown function of the file AppointmentSystem/AppointmentSystem/Connectivity.php of the component Login. The manipulation of the argument User leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-61827 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61827</link>
-    <guid isPermaLink="false">675caf87e2aa0fccdf7dd65955ce2e32</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 8.7 | netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. Prior to 0.0.23.Final, BinaryHttpParser does not enforce limits on encoded variable-length fields controlled by a remote peer. A remote peer can cause the decoder to buffer data indefinitely until memory is exhausted, causing denial of service. This issue is fixed in version 0.0.23.Final.</description>
+    <title>CVE-2026-133479 - NVD - CVSS Score v4.0: 2.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133479</link>
+    <guid isPermaLink="false">a11b5879573b51ec0b349f7351e89fb6</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.0 | A vulnerability was detected in WebKul QloApps up to 1.8.0. Affected by this vulnerability is the function postProcessDownload/installTheme of the file controllers/admin/AdminModulesController.php of the component Archive Import. The manipulation results in path traversal. It is possible to launch the attack remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-63124 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63124</link>
-    <guid isPermaLink="false">ac149d69afbb49266fcf5cc38200fc7b</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.5 | netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. Prior to 0.0.23.Final, BinaryHttpParser.readFieldLine in codec-bhttp/src/main/java/io/netty/incubator/codec/bhttp/BinaryHttpParser.java treats a complete field line that ends exactly at a known field-section boundary as incomplete and returns without consuming bytes. BinaryHttpParser.readFieldSection then leaves fieldSectionLength unchanged and repeats the loop because its forward-progress checks are Java assertions, which are normally disabled in production. A remote peer that sends a known-length Binary HTTP header or trailer section ending at that boundary can make the parser spin indefinitely and pin the Netty event-loop or worker thread responsible for the channel. This issue is fixed in version 0.0.23.Final.</description>
+    <title>CVE-2026-133534 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133534</link>
+    <guid isPermaLink="false">1659ee06f38e50301b3d70f8ff11b1e0</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.7 | PowerLink developed by Neotroni Lighting has a SQL Injection vulnerability, allowing unauthenticated remote attackers to inject arbitrary SQL commands to read database contents.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-63202 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-63202</link>
-    <guid isPermaLink="false">035be91efd266a4b06fa9c329fda4e92</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.5 | netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. Prior to 0.0.23.Final, BinaryHttpParser.readFieldSection in codec-bhttp/src/main/java/io/netty/incubator/codec/bhttp/BinaryHttpParser.java loops while fieldSectionLength is nonzero and relies on disabled-by-default assertions to require BinaryHttpParser.readFieldLine to return a value and consume bytes. A corrupt field line can consume more bytes than its understated declared section length and drive the counter negative, or a truncated field line can return without consuming data and leave the parser in the same state. An unauthenticated OHTTP peer can encrypt such Binary HTTP content under the gateway public configuration, reach OHttpRequestResponseContext.ContentDecoder.decodeChunk, and permanently pin a Netty event-loop thread at full CPU before application business logic. Multiple requests can exhaust the event-loop group and deny service until restart. This issue is fixed in version 0.0.23.Final.</description>
+    <title>CVE-2026-133535 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133535</link>
+    <guid isPermaLink="false">773bbe83a4881a71c87e40416f28aade</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | A flaw was found in Hawtio. An authenticated remote attacker can cause a Denial of Service (DoS) by sending a specially crafted request URI to monitored endpoints. The FlightRecordingDownloadFacade servlet filter uses an inefficient regular expression pattern that causes catastrophic backtracking when processing certain long requests. This issue leads to excessive CPU utilization, causing handling threads to hang and degrading service availability.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-69133 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-69133</link>
-    <guid isPermaLink="false">51f0c3778856bbbe73e3068b9f7cdc0d</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 5.3 | netty-incubator-codec-ohttp implements Oblivious HTTP (OHTTP) gateway and client functionality using Netty. From 0.0.20.Final until 0.0.27.Final, OHttpClientCodec in codec-ohttp/src/main/java/io/netty/incubator/codec/ohttp/OHttpClientCodec.java and OHttpServerCodec in codec-ohttp/src/main/java/io/netty/incubator/codec/ohttp/OHttpServerCodec.java retain the consumed outer cumulationBuffer after a valid OHTTP exchange completes, even though OHttpRequestResponseContext.destroy in codec-ohttp/src/main/java/io/netty/incubator/codec/ohttp/OHttpRequestResponseContext.java releases the inner Binary HTTP cumulation and the channel remains active. A peer can complete a large request or response and leave the keep-alive connection idle, causing the client and server handlers to retain the current high-water pooled or direct buffer capacity until later inbound content replaces it or the handler is removed. Many long-lived idle connections can pin substantial memory and create availability pressure. The issue does not cause unbounded growth for repeated exchanges on a single channel. This issue is fixed in version 0.0.27.Final.</description>
+    <title>CVE-2026-24205 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-24205</link>
+    <guid isPermaLink="false">5ba7260cf6c46fc1677c6d5c10793597</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.4 | NVIDIA TensorRT-LLM for any platform contains a vulnerability where a user may cause a race condition by running concurrent requests. A successful exploit of this vulnerability may lead to data tampering.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77312 - NVD - CVSS Score v3.1: 10.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77312</link>
-    <guid isPermaLink="false">8ca2cd870da66a6f0070e79b6714dc02</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 10.0 | Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, the earlier CVE-2026-67429 remediation applied validate_path_with_env_config() to only a hand-picked set of file-writing modules, leaving data.csv.write in src/core/modules/atomic/data/csv_write.py, data.json_to_csv in src/core/modules/atomic/data/json_to_csv.py, file.copy in src/core/modules/atomic/file/copy.py, and file.move in src/core/modules/atomic/file/move.py outside the FLYTO_SANDBOX_DIR confinement boundary. The advisory also identifies unguarded modules across the broader data.*, file.*, and report-writer families. data.csv.write relies on a .. substring denylist that does not reject absolute paths, while the other named modules accept caller-controlled output or destination paths without the canonical guard. A caller able to execute modules or recipes can therefore write attacker-controlled content outside the configured sandbox, potentially overwriting application code, recipes, startup files, scheduled-task files, or authorization files and gaining code execution on the host. This issue is fixed in version 2.26.8.</description>
+    <title>CVE-2026-65094 - NVD - CVSS Score v3.1: 9.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65094</link>
+    <guid isPermaLink="false">5ccbe78e566cf8e5c55b281ea029ccd3</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 9.0 | NVIDIA VIRTIO-Net for Bluefield contains a vulnerability in Virtio-Net where a VM user may cause a Write-What-Where condition by crafted message. A successful exploit of this vulnerability may lead to Code Execution in Virtio-Net scope.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-77313 - NVD - CVSS Score v3.1: 7.1</title>
