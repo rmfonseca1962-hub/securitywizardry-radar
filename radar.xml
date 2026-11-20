@@ -5,199 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 12:01:25 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-130464 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130464</link>
-    <guid isPermaLink="false">cd1c8c6a98d8ec130df48109df29d65d</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.5 | MsgPack and NNTP protocol dissector crashes in 4.6.0 to 4.6.9 and 4.4.0 to 4.4.19 allows denial of service</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133630 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133630</link>
-    <guid isPermaLink="false">fefb64ddce5be1e0e6686393e3ce9fa7</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.9 | The flowintel Docker build workflow used the GitHub Actions checkout action with default credential persistence, causing the job authentication token to be written into the repository's Git configuration file. This file became part of the Docker build context and could be retained in exported build cache layers, even though Git metadata was stripped from the final runtime image.
-
-An attacker with access to the CI/CD build cache or build environment could extract the persisted token and use it to gain unauthorized access to the private source repository.
-
-Impact:
-- Exposure of a valid authentication token to the private repository
-- Potential unauthorized read access to source code and repository metadata
-
-Affected versions: flowintel &lt; 4.1.0</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133631 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133631</link>
-    <guid isPermaLink="false">f89fe383a9e7cc2fb823ec62d6e0b89e</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 7.1 | FlowIntel contains multiple security flaws in its note variable resolution, chatbot API tooling, and AI report generation.
-
-- Note variable references (e.g. cross-case or cross-task lookups) were resolved using the viewing user's privileges rather than the destination case's audience. An authenticated user with access to a shared or imported note could embed references to private cases, causing sensitive case data to be pulled into AI report requests, exports, and MISP sends without the referenced case's audience having granted read access.
-
-- The chatbot API tool permitted the language model to invoke any FlowIntel API endpoint, including administrative routes and state-changing GET operations, without an allow-list or path validation. An attacker who can influence the model's instructions (e.g. via untrusted case content) could induce data modification or access restricted endpoints.
-
-- AI report generation passed the Ollama bearer token and full case content as command-line arguments to a child process, exposing them in the system process table to any local user.
-
-Affected versions: FlowIntel prior to 4.1.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-86586 - NVD - CVSS Score v3.1: 4.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86586</link>
-    <guid isPermaLink="false">9856a7dfd81add18fe9db235ae49d198</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.2 | Certain EZVIZ devices are affected by a replay attack vulnerability (CWE-294). An attacker may intercept communication traffic and replay specific control commands, causing the device to execute unauthorized operations.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-86587 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86587</link>
-    <guid isPermaLink="false">cee1e80c75252f897629a87693657043</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Certain EZVIZ devices are affected by an improper certificate validation issue (CWE-295). An attacker may intercept communication traffic to conduct a man-in-the-middle attack.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-96771 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96771</link>
-    <guid isPermaLink="false">883b867ba6d4a593c8e4364ba63bc6f6</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Hydrogen Calendar Embeds plugin for WordPress is vulnerable to Stored DOM-Based Cross-Site Scripting via ICS Feed Event Fields (SUMMARY/DESCRIPTION/LOCATION) in all versions up to, and including, 3.0.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the attacker to have write access to an ICS feed that has been configured as a calendar source on the target WordPress site.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124768 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124768</link>
-    <guid isPermaLink="false">29c6efc5c824ece0661f7ac26bf61079</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.7 | Authorization bypass via a user-controlled key in XOneManager 3.8.3.0. The 'ConvertBDToProject' operation selects the database based on 'databasename' without verifying the user’s permissions on it. An authenticated user can link a project to a database outside their scope and identify existing databases based on API responses.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124769 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124769</link>
-    <guid isPermaLink="false">4943e76700c5fe706650d1712219bb37</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.3 | Authorization omission in the 'users' POST operation at '/xmanagercore/api/services/' in XOneManager 3.8.3.0. The API checks project membership but fails to validate the role required to manage users. An authenticated user can view the list of users in the project, including their internal IDs, first names, and last names.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124770 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124770</link>
-    <guid isPermaLink="false">2ad5706da9639bacf2458b4d09056020</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 9.4 | Authorization bypass in the ‘tablesData’ operation of the POST request to ‘/xmanagercore/api/services/’ in XOneManager 3.8.3.0. An authenticated project member can execute SQL queries using ‘filter’ without the server verifying their execution permissions. The queries use the service account’s permissions. During testing, databases outside the project were queried, including the authentication database.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124771 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124771</link>
-    <guid isPermaLink="false">085b2776e6d94340b3a4a9e451a29657</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.3 | Authorization omission in the 'admusers' operation of the POST request to '/xmanagercore/api/services/' in XOneManager 3.8.3.0. The API fails to verify the required role for querying the directory. An authenticated member of the project can obtain the list of platform accounts—including administrative accounts—along with details such as email addresses, roles, and associated companies.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124772 - NVD - CVSS Score v4.0: 9.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124772</link>
-    <guid isPermaLink="false">30b09ad27ff6940587863309964d6707</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 9.4 | Authorization bypass in the publication of XOneManager 3.8.3.0 updates. During testing, the server accepted initial requests from an authenticated project member with read-only access without verifying publication permissions. If the workflow is completed, updates with modified content could be distributed to managed devices.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127057 - NVD - CVSS Score v4.0: 9.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127057</link>
-    <guid isPermaLink="false">71bbb6702552a98a6dac918912686da5</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 9.9 | The
-Danfoss legacy AK-SC 355 and AK-SM 800 Series are vulnerable to unauthorized
-access when default credentials or known passwords are used for authentication.
-These products were manufactured with default credentials documented in the
-product manual. All versions are affected.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129086 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129086</link>
-    <guid isPermaLink="false">706cc60f900a0541564d8555e6e39863</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in weDevs Happy Addons for Elementor happy-elementor-addons allows Stored XSS.This issue affects Happy Addons for Elementor: from n/a through 3.51.3.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129713 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129713</link>
-    <guid isPermaLink="false">e10fc87bdd9ceb16dfa4b87c4449470e</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 9.3 | A stack-based buffer overflow in an unauthenticated CGI handler of the
-Danfoss AK-SM 8xxA Series controller allows remote attackers to send specially
-crafted HTTP/S POST requests, leading to memory corruption, webserver restart
-and hypothetically potential arbitrary code execution with webserver privileges.
-Authentication is not required to exploit this vulnerability.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130624 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130624</link>
-    <guid isPermaLink="false">6f9cf46167253df57fcefc2e5829def7</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WPKoi WordPress Themes WPKoi Templates for Elementor wpkoi-templates-for-elementor allows Stored XSS.This issue affects WPKoi Templates for Elementor: from n/a through 3.7.5.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131728 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131728</link>
-    <guid isPermaLink="false">072e43d84687ba4e05da742f559f572a</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Insertion of Sensitive Information Into Sent Data vulnerability in Nickboss WordPress File Upload wp-file-upload allows Retrieve Embedded Sensitive Data.This issue affects WordPress File Upload: from n/a through 5.2.4.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131730 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131730</link>
-    <guid isPermaLink="false">eb73e7ffed741fd0bde8da73a5f6254a</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in PublishPress PublishPress Revisions revisionary allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects PublishPress Revisions: from n/a through 4.3.3.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131737 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131737</link>
-    <guid isPermaLink="false">24a62d1516c8a47f78c96e58aacd84c0</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Magepeople inc. Car Rental Manager car-rental-manager allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Car Rental Manager: from n/a through 1.5.7.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131738 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131738</link>
-    <guid isPermaLink="false">ab9c9e971056bfe7b29528caaf039780</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in BdThemes Element Pack Elementor Addons bdthemes-element-pack-lite allows Stored XSS.This issue affects Element Pack Elementor Addons: from n/a through 10.0.10.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131739 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131739</link>
-    <guid isPermaLink="false">d1f4eb19e8fde044ae755ea97d7d41c9</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in WP Chill Passster content-protector allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Passster: from n/a through 4.3.23.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131743 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131743</link>
-    <guid isPermaLink="false">4fec8961d9d2d4f48636e2935131ec79</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in LeapWorx Premium Addons for Elementor premium-addons-for-elementor allows Stored XSS.This issue affects Premium Addons for Elementor: from n/a through 4.11.119.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Fri, 20 Nov 2026 13:01:15 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-131744 - NVD - CVSS Score v3.1: 4.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131744</link>
@@ -485,6 +293,179 @@ This issue affects Apache Texera (incubating): from 1.1.0-incubating before 1.3.
 
 
 Users are recommended to upgrade to version 1.3.0-incubating, which fixes the issue.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125094 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125094</link>
+    <guid isPermaLink="false">2f7f6a7b19ee26901a091f2fe49440f7</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Optimole – Optimize Images | Convert WebP &amp; AVIF | CDN &amp; Lazy Load | Image Optimization plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 4.2.19 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires the AMP plugin to be active in Transitional or Standard template mode, and comments must be open on the target post, which is the WordPress default.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127201 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127201</link>
+    <guid isPermaLink="false">427a539a098251ff79169e3ef5c2a021</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | The Simple Membership WP user Import plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.9.2 This is due to missing or incorrect nonce validation on the add function. This makes it possible for unauthenticated attackers to import arbitrary WordPress users into Simple Membership and modify their WordPress role via the plugin's membership-level-to-role mapping via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. Successful exploitation additionally requires an action by an administrator — the attacker cannot trigger the vulnerability on their own.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129082 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129082</link>
+    <guid isPermaLink="false">eb1abdc7511e67b7b10b36151e980ec8</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in Omnisend Newsletters, Email Marketing, SMS and Popups by Omnisend omnisend allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Newsletters, Email Marketing, SMS and Popups by Omnisend: from n/a through 1.9.1.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131163 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131163</link>
+    <guid isPermaLink="false">057725f2007854ff32621c43d96b93a8</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.6 | A stored XSS in pretix-adyen has been discovered where an attacker could configure his own ticket shop in a way that API calls are not made to Adyen, but an attacker-controlled server. Results of these API calls would then be embedded in a part of the shop without proper escaping, leading to full XSS including potential session takeover.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131164 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131164</link>
+    <guid isPermaLink="false">295af130b8e507950ae2ba13c91cc523</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.3 | When a ticket holder opens the ticket page of a ticket that is an add-on (possible since 2026.9) the HTML content of the page contains the secret link to the parent product, creating a potential data leak. Under different specific conditions, when a ticket contains user-uploaded files in response to a question, the page can even contain the secret link to the entire order.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131165 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131165</link>
+    <guid isPermaLink="false">5db2df07855ade829b9171ef5673fbec</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.1 | The fix for CVE-2026-127174 published in 2026.9.2 is incomplete: When expanding an export from &quot;some events&quot; to &quot;all events&quot;, it is checked that the acting user is part of a team with permission to all events, but this check is not correctly bound to the organizer and could also be passed through permissions on a different organizer.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131166 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131166</link>
+    <guid isPermaLink="false">b972f681e3c6459e16695a91876b99e6</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.0 | When configuring a device to use the security profile &quot;pretixSCAN (kiosk mode, no order sync, no search)&quot;, the API search endpoint introduced in pretix 4.12 was not blocked correctly. This theoretically allows these devices to perform searches for orders even if that was not intended. If the device is in kiosk mode, the search button will still be hidden from users.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131167 - NVD - CVSS Score v4.0: 8.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131167</link>
+    <guid isPermaLink="false">5cab5a1d129eb908ce3f7f7416637291</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.9 | pretix offloads certain processes to background tasks that are run by a different server to avoid HTTP workers being clogged with processes that take longer than a usual web request. The browser periodically polls the server to see if the task is already finished using a UUID-shaped task ID. Once the task is completed, pretix resumes to the next step of the operation based on the result of the task. The system does however not check if the result stems from the correct type of task. Therefore, an attacker can supply the UUID of a task of a different type and pretix will continue with the result from the wrong task. In most cases, this will just result in an error because the return types do not match up, but in some cases this can be abused to extract objects the attacker usually should not see. Specifically, a vector was discovered that allowed to abuse this for unauthorized access to other people's ticket purchases. The attacker can, however, not control which purchases they get access to.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131168 - NVD - CVSS Score v4.0: 6.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131168</link>
+    <guid isPermaLink="false">22b4732a2f0b77e71aa4fcef0b575367</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.6 | A legacy code path allowed users to craft requests to a ticket shop that bypass some validation steps for the selected products. In consequence, this could lead to an attacker purchasing products that are in fact sold out.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131169 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131169</link>
+    <guid isPermaLink="false">8c5c2cb132a1f6b61ec6572510a80be9</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.1 | When a scheduled export is copied, the permissions of the original export's owner are used when running the export. This allows users to create exports with data they usually shouldn't be able to see, but only within events they already have permissions to.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131170 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131170</link>
+    <guid isPermaLink="false">e8a676d7e6153349629a3650eb175a7c</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.3 | Our payment integration with Stripe did not properly validate payment status responses. An attacker could use a successful payment status response from one payment and supply it to the system for a different payment, gaining access to multiple valid tickets with only one payment. However, the attack requires knowledge of a valid charge ID from the same event which we believe is usually not exposed to users.
+
+
+
+
+To simplify attack surface, the fix removes support for incoming webhooks regarding payments created through Stripe's old &quot;source&quot; API. pretix stopped creating payments using this API in 2024.1 for most payment methods and in 2024.9 for all payment methods.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131732 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131732</link>
+    <guid isPermaLink="false">bed93e9a7752b271f80e7b23a6022b51</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in Magepeople inc. Taxi Booking Manager for WooCommerce ecab-taxi-booking-manager allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Taxi Booking Manager for WooCommerce: from n/a through 2.2.10.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131781 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131781</link>
+    <guid isPermaLink="false">58eef73084a550d196768386b0d4e74c</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Brainstorm Force Spectra ultimate-addons-for-gutenberg allows Stored XSS.This issue affects Spectra: from n/a through 2.20.6.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131783 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131783</link>
+    <guid isPermaLink="false">7c8a2f540964bad35943d335332323c9</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in myCred myCred mycred allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects myCred: from n/a through 4.0.3.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131784 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131784</link>
+    <guid isPermaLink="false">e810b8c0d96a58a51a990a292a12329d</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in weDevs Dokan dokan-lite allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Dokan: from n/a through 5.3.4.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131785 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131785</link>
+    <guid isPermaLink="false">6e22b8492080b4f1c140de4f29d32984</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in PublishPress PublishPress Permissions press-permit-core allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects PublishPress Permissions: from n/a through 5.0.1.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131787 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131787</link>
+    <guid isPermaLink="false">22d5fe73b9c7c0cc50c179d599272fd9</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Liquid Web / StellarWP Gutenberg Blocks by Kadence Blocks kadence-blocks allows Stored XSS.This issue affects Gutenberg Blocks by Kadence Blocks: from n/a through 3.9.1.1.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131789 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131789</link>
+    <guid isPermaLink="false">4678f64a32de3c3566d7d5577502ecff</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in myCred myCred mycred allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects myCred: from n/a through 4.0.3.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131804 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131804</link>
+    <guid isPermaLink="false">848522a9dd4d7fd5baaa2007b2d3b8f5</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Seraphinite Accelerator plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'HTTP_USER_AGENT' parameter in all versions up to, and including, 2.31 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires that an administrator has previously enabled the 'Enable logging' and 'HTTP trace' diagnostic options in the plugin's Advanced → Debug settings, both of which are disabled by default.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133578 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133578</link>
+    <guid isPermaLink="false">6e99a2ba3814a75453dcd3c24f0be260</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was detected in itsourcecode Banking Management System 1.0. This impacts an unknown function of the file manage_donation.php of the component Donor Management. The manipulation of the argument ID results in sql injection. The attack may be performed from remote. The exploit is now public and may be used.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133601 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133601</link>
+    <guid isPermaLink="false">c675961cedf12122ef3e53ac48ba0e22</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.9 | A vulnerability was found in hiparker opsli-boot up to 2.2.1. This affects the function getInputStream of the file opsli-plugins/opsli-plugins-waf/src/main/java/org/opsli/plugins/waf/servlet/WafHttpServletRequestWrapper.java of the component WAF Plugin. The manipulation results in denial of service. The attack can be executed remotely.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
