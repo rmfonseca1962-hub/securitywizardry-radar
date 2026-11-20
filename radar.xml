@@ -5,23 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 05:02:58 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-22062 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-22062</link>
-    <guid isPermaLink="false">f4c9ef41f5f14dbd74de61c244bc3200</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.3 | StorageGRID (formerly StorageGRID Webscale) versions 12.1.0 and higher are susceptible to an information exposure vulnerability which allows a remote unauthenticated attacker to acquire low-sensitivity credentials via a Man-in-the-middle attack when certain non-default features are enabled.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2025-71473 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-71473</link>
-    <guid isPermaLink="false">fff2d2814b8540bd29c56c7f5c62bfb5</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.9 | lwext4 through 1.0.0 contains a heap buffer overflow in ext4_fs_init_inode_bitmap() in src/ext4_fs.c because it does not validate s_inodes_per_group against the inode bitmap size. Attackers can supply a crafted ext4 image with an oversized s_inodes_per_group so memset writes past the heap buffer, corrupting memory and crashing the mounting application.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Fri, 20 Nov 2026 06:00:34 +0000</lastBuildDate>
   <item>
     <title>CVE-2025-71474 - NVD - CVSS Score v4.0: 6.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2025-71474</link>
@@ -357,12 +341,28 @@ A server-side mitigation has been deployed that also protects existing iOS clien
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133435 - NVD - CVSS Score v3.1: 3.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133435</link>
-    <guid isPermaLink="false">76bc2bcab8b2e665ffadc6e92ac5ca81</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 3.7 | A flaw was found in Keycloak. When configured with a database that uses case-insensitive collation, Keycloak resolves realm URLs regardless of letter casing. A remote attacker can exploit this behavior by sending requests with alternate letter casing to bypass upstream reverse proxy access controls that rely on case-sensitive path matching. This issue can expose restricted authentication endpoints intended only for internal access, though Keycloak's internal authentication mechanisms remain intact.</description>
+    <title>CVE-2026-133484 - NVD - CVSS Score v4.0: 1.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133484</link>
+    <guid isPermaLink="false">1dd071598195eb483c6b38fdbec16f56</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 1.9 | A vulnerability was found in ByteDance Lark Desktop 8.0.0.14. This vulnerability affects the function FUN_18001b770/FUN_18001ba40 in the library backend.dll. Performing a manipulation of the argument day results in signed to unsigned conversion error. The attack needs to be approached locally. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133486 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133486</link>
+    <guid isPermaLink="false">23241e74662c02fc7088538478de2d65</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was identified in hasan-py Hayroo up to fd0fbe763153f72bfaa04ed1e1e4a1bb6f7c61df. Affected by this issue is the function Product.deleteImages of the file server/controller/products.js of the component Image Deletion Handler. The manipulation leads to path traversal. The attack may be initiated remotely. The exploit is publicly available and might be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The identifier of the patch is 9714947bb43ec8559287aa3962b70a7be8c8d6b1. It is recommended to apply a patch to fix this issue.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133487 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133487</link>
+    <guid isPermaLink="false">df30e64407f63ab37887b6d8ec3a58e0</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.1 | A security flaw has been discovered in nodejs undici up to 7.24.0. This affects the function Object.assign of the file balanced-pool.js of the component BalancedPool. The manipulation results in improperly controlled modification of object prototype attributes. The attack may be launched remotely. The exploit has been released to the public and may be used for attacks. Upgrading to version 7.24.1 is able to mitigate this issue. The patch is identified as 0d7ec33ff37563d3e7c98d11d7bca736f330d156. You should upgrade the affected component.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   </channel>
 </rss>
