@@ -5,346 +5,333 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 19:02:22 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 20:01:17 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-77331 - NVD - CVSS Score v4.0: 2.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77331</link>
-    <guid isPermaLink="false">afc7bfabc9a4ea95602371c459d6a403</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.0 | memtomem-stm is a short-term memory proxy gateway with proactive memory surfacing for AI agents. From 0.1.2 until 0.1.34, concurrent surfacing RPC failures can start more than one reconnect for the same dirty session because concurrent LTM recovery is not uniquely owned by a session generation. Cancellation during a post-reconnect retry can also leave the replacement transport reusable after an interrupted protocol exchange, causing session-state integrity loss or local service degradation. The duplicate-reconnect subcase was introduced in 0.1.24, while the cancellation-recovery subcase affects the broader listed range. This issue is fixed in version 0.1.34.</description>
+    <title>CVE-2026-129033 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129033</link>
+    <guid isPermaLink="false">334deab7d97ffa069908f4e7b71f69d4</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Ays Pro Quiz Maker quiz-maker allows Reflected XSS.This issue affects Quiz Maker: from n/a through 6.7.1.99.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77332 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77332</link>
-    <guid isPermaLink="false">f3cc003d8be8e4470d0498d17447054e</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.3 | memtomem-stm is a short-term memory proxy gateway with proactive memory surfacing for AI agents. From 0.1.0 until 0.1.34, untrusted long-term and working-memory fields can introduce Markdown or HTML-compatible structure into the surfaced-memory envelope because those fields are not serialized as inert data. A crafted memory can create misleading structural boundaries or visually conceal surfaced content, affecting how a consuming agent interprets the memory context. Ordinary natural-language persuasion remains a residual model-level risk and is outside the structural serialization flaw. This issue is fixed in version 0.1.34.</description>
+    <title>CVE-2026-129037 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129037</link>
+    <guid isPermaLink="false">f57a2d7a1a30db522de1a228a63200ff</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Ahmad WP Job Portal wp-job-portal allows Reflected XSS.This issue affects WP Job Portal: from n/a through 2.8.1.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-79751 - NVD - CVSS Score v3.1: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-79751</link>
-    <guid isPermaLink="false">48fd04c21a72d42c61c36a69c30af8f4</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.6 | SportEase is a web application for managing school sports events, class rosters, and competition teams. Prior to 1.3, an authenticated account with is_profile_complete=false can submit an attacker-selected class_id for any class in the currently active event to PUT /api/user/profile during first profile completion. AuthHandler.UpdateProfile accepts the class without validating the user's legitimate membership and automatically derives and assigns the corresponding {class_name}_rep role while isFirstCompletion is true. The attacker can become representative of one selected class, view roster information including email addresses, and add or remove competition-team assignments. Downstream handlers correctly reject access to other classes, so the impact is bounded to the selected class, but the representative privilege cannot be revoked through the exposed API and requires direct database intervention or another out-of-band remediation method. This issue is fixed in version 1.3.</description>
+    <title>CVE-2026-129042 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129042</link>
+    <guid isPermaLink="false">47a1947d34b8db3d62b0a03ea124a389</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Tribulant Software Newsletters newsletters-lite allows Stored XSS.This issue affects Newsletters: from n/a through 4.18.2.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-82675 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82675</link>
-    <guid isPermaLink="false">2eedf9191cae54f941cec313aab13d00</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.1 | The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to donor account account takeover in all versions up to, and including, 4.17.0. This is due to the plugin not properly validating a donor's identity prior to updating the password of a linked WordPress account. The donation receipt processes an attacker-controlled first name through the V3 template engine and then reprocesses the result through the legacy `{meta_donor_*}` engine, which can disclose the donor's email-access bearer token. The donor-dashboard password endpoint accepts that token by itself and calls `wp_set_password()` for the WordPress user linked to the donor. This makes it possible for unauthenticated attackers to reset the password of any WordPress account linked to a GiveWP donor record and gain access to that account. If the linked account is an administrator, the attacker can achieve full site compromise and remote code execution through standard administrator functionality. A published GiveWP form with a usable gateway, enabled donor email access (enabled by default), knowledge of the donor email address, and an account already linked to the targeted donor record are required. NOTE: This vulnerability can be chained with CVE-2026-82676 to satisfy the administrator donor pre-requisite for a targeted administrator user attack.</description>
+    <title>CVE-2026-129054 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129054</link>
+    <guid isPermaLink="false">f028dd39c0fae6d281f506efab949f1e</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.5 | Insertion of Sensitive Information Into Sent Data vulnerability in Datasolution AcyMailing SMTP Newsletter acymailing allows Retrieve Embedded Sensitive Data.This issue affects AcyMailing SMTP Newsletter: from n/a through 11.1.0.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-82676 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82676</link>
-    <guid isPermaLink="false">43067d18d7aa1f9e1a3c987f58169de4</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 4.16.7.2. This is due to missing nonce validation on the `give_render_donor_view()` function. This makes it possible for unauthenticated attackers to reassign an arbitrary GiveWP donor record to an arbitrary WordPress user via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. The resulting association changes donor-account ownership and can satisfy the linked-donor precondition for a separately tracked account-takeover vulnerability (CVE-2026-82675).</description>
+    <title>CVE-2026-129055 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129055</link>
+    <guid isPermaLink="false">44c967040eb0080a57040cf483b8df11</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Codepeople Appointment Hour Booking appointment-hour-booking allows Stored XSS.This issue affects Appointment Hour Booking: from n/a through 1.6.06.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-95824 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95824</link>
-    <guid isPermaLink="false">2a79e21ff94495dc764cf63943c3b4fe</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | The IPv6 Neighbor Discovery code in subsys/net/ip/ipv6_nbr.c flushes a neighbour's queued packets at the end of handle_ra_input(). The Source Link-Layer Address Option (SLLAO) is optional in a Router Advertisement; when it is absent, handle_ra_input() still obtains (or creates) a neighbour cache entry for the RA source via net_ipv6_nbr_add() with a NULL link-layer address, so the entry stays in NET_IPV6_NBR_STATE_INCOMPLETE with nbr-&gt;idx == NET_NBR_LLADDR_UNKNOWN. The pending-packet drain loop was entered unconditionally for that unresolved entry.
+    <title>CVE-2026-129063 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129063</link>
+    <guid isPermaLink="false">150a81d89a6f969a108561ab0fe6b284</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Brainstorm Force Spectra ultimate-addons-for-gutenberg allows Stored XSS.This issue affects Spectra: from n/a through 2.20.5.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129995 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129995</link>
+    <guid isPermaLink="false">5be7d23d32e2734bd3d19dc11235ba4a</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.8 | mcp-ssh-manager is an MCP server for managing servers over SSH with human approval, an encrypted vault, and a live audit trail. Prior to 3.8.5, ssh_backup_create, ssh_backup_restore, ssh_backup_schedule, and ssh_backup_list build remote shell commands from caller-controlled values in src/backup-manager.js and inline backup handlers in src/index.js without neutralizing shell metacharacters. Crafted database, connection, backup directory, path, exclusion, schedule, or comment arguments can therefore execute arbitrary OS commands on managed remote servers as the configured SSH user. ssh_backup_schedule can persist execution through cron. ssh_backup_list does not pass through the server policy check and remains available in readonly and restricted modes, allowing command execution despite those restrictions. Tool arguments can be supplied by a malicious or compromised MCP client or steered through indirect prompt injection; fully trusted benign arguments do not trigger the issue. The earlier database-helper remediation for CVE-2026-77383 applied shell quoting to src/database-manager.js but did not cover these parallel backup builders. This issue is fixed in version 3.8.5.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130601 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130601</link>
+    <guid isPermaLink="false">f8e4c262cda1429077152a80cd856a4c</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in BdThemes Element Pack Elementor Addons bdthemes-element-pack-lite allows Stored XSS.This issue affects Element Pack Elementor Addons: from n/a through 10.0.9.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130602 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130602</link>
+    <guid isPermaLink="false">4ffffbfa7faacca0b13442fe0013099b</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in BdThemes Prime Slider – Addons For Elementor bdthemes-prime-slider-lite allows Stored XSS.This issue affects Prime Slider – Addons For Elementor: from n/a through 5.1.2.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130901 - NVD - CVSS Score v4.0: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130901</link>
+    <guid isPermaLink="false">eca96202993b02e9d350f770e8a52f20</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.8 | Improper limitation of a pathname to a restricted directory in the file access checks in Amazon awslabs.document-loader-mcp-server 1.0.10 through 1.0.20 might allow a context-dependent actor, via crafted document content processed by an MCP client, to read files outside the intended base directory and, in 1.0.12 through 1.0.20, to write PNG slide images outside it. This occurs when DOCUMENT_BASE_DIR is not set or is empty and the CI, GITHUB_ACTIONS or PYTEST_CURRENT_TEST environment variable is present. Versions before 1.0.10 do not restrict file access to a base directory.
 
-Each net_send_data() in the drain loop runs synchronously into net_ipv6_prepare_for_send(), which finds the neighbour still unresolved and hands the packet to net_ipv6_send_ns(), which puts it straight back onto the same pending_queue. The loop therefore never sees an empty queue. With a single queued packet it transmits a fresh Neighbor Solicitation on every iteration; with two or more queued packets it rotates the queue with no allocation and no transmission at all. The loop runs in the network RX thread with the global IPv6 neighbour mutex held.
 
-An unauthenticated attacker on the same link can trigger this deterministically: advertise itself as a router, induce the victim to queue off-link traffic toward that router (for example by sending echo requests with an off-link source address) while leaving the solicitation unanswered, then send a second Router Advertisement without an SLLAO option. Spoofing an SLLAO-less RA from the legitimate router's link-local address has the same effect whenever traffic is queued for it. Router Advertisements are processed with no authentication whenever CONFIG_NET_IPV6_ND is enabled, which is the default for IPv6-capable builds.
 
-The result is a permanent denial of service: the RX thread spins forever holding the neighbour lock, so all IPv6 transmission and every other user of the neighbour cache blocks, and the Neighbor Advertisement that would resolve the entry can no longer be processed. The ipv6_ns_reply_timer work item that would normally drop the pending packets also blocks on the same mutex. In the single-packet variant the loop additionally floods the link with Neighbor Solicitations. The fix restricts the flush to resolved entries (nbr-&gt;idx != NET_NBR_LLADDR_UNKNOWN), leaving the packets queued for the NS reply timeout. There is no memory-safety impact.</description>
+To remediate this issue, users should upgrade to version 1.0.21 or later. Users who cannot upgrade immediately can set DOCUMENT_BASE_DIR to the directory that holds their documents. Do not set it to /, which removes the restriction.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-103933 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-103933</link>
-    <guid isPermaLink="false">330d349f04e5bbbf66e27e6d0c0693c2</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 7.7 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 2.1.0 until 4.5.2, get_eacontent in libatalk/vfs/ea_ad.c subtracts MAX_REPLY_EXTRA_BYTES from a client-controlled FPGetExtAttr MaxReplySize without rejecting values from 1 through 5, and a signed-to-unsigned comparison can then select an untrusted AppleDouble ea_size. An authenticated client on a volume configured with ea = ad can use a pre-existing malformed AppleDouble sidecar to make read copy attacker-controlled bytes beyond dsi-&gt;data + 6 into the surrounding struct DSI, including protocol callback pointers. The malformed sidecar must already exist or be created through a separate local, co-export, management, restore, or vulnerability-assisted write path, and practical code execution depends on the target architecture, structure layout, and address uncertainty; runtime command execution was demonstrated on one x86-64 build. Volumes using ea = sys, ea = none, or ea = auto when it resolves to native system xattrs do not reach this path. This issue is fixed in version 4.5.2.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104184 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104184</link>
-    <guid isPermaLink="false">3e9ed2a17049a1e31238016cca991dd8</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | LinkAce is a self-hosted archive to collect website links. Prior to 2.6.0, LinkController::update() in app/Http/Controllers/API/LinkController.php passes $request-&gt;all() to the repository update method even though user_id is fillable and is not an allowed field in the validated update request. An authenticated API user who is authorized to update a link can therefore assign an arbitrary or nonexistent user_id, transferring the link into another user's bookmark collection or orphaning it from any real account. The web update controller is unaffected because it passes only validated fields. This issue is fixed in version 2.6.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104185 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104185</link>
-    <guid isPermaLink="false">ff74121c09c466e7c4a796f03d89f73a</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | LinkAce is a self-hosted archive to collect website links. Prior to 2.6.0, the HTML bookmark import action in app/Actions/ImportHtmlBookmarks.php uses the global Link::whereUrl() lookup instead of restricting duplicate detection to the importing user. An authenticated user can submit a chosen URL and distinguish the skipped response count from the queued count to learn whether any account has saved that URL, including as a PRIVATE bookmark. The oracle reveals URL existence but does not directly return the bookmark contents or owner. This issue is fixed in version 2.6.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-104186 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104186</link>
-    <guid isPermaLink="false">6ceafe5ce1b21d16d9d349ee1581d672</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | LinkAce is a self-hosted archive to collect website links. Prior to 2.6.0, the authenticated GET /lists/{list}/feed and GET /tags/{tag}/feed handlers in app/Http/Controllers/App/FeedController.php use integer route model binding without an object-level authorization or visibility check. Unlike the web list controller, which invokes LinkListPolicy::view(), the feed controller lets a normal authenticated user enumerate another user's private list or tag and receive its name and feed metadata, along with public or internal bookmark entries associated with that taxonomy. The existing per-link visibility filter still excludes PRIVATE link records, so the disclosure is limited to the private taxonomy and its non-private member links. This issue is fixed in version 2.6.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-110779 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110779</link>
-    <guid isPermaLink="false">86623788215203841827597987d3f169</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 3.1.0 until 4.5.2, sl_createCNIDArray in etc/afpd/spotlight.c assumes every element of kMDQueryItemArray points to an eight-byte uint64_t and copies sizeof(uint64_t) bytes from the indexed p-&gt;dd_talloc_array element without validating the element's talloc type or allocation size. An authenticated AFP client with access to a Spotlight-enabled volume can use FPSpotlightRPC to supply a mixed-type sl_array_t containing a shorter boolean, nil, or string element, and an unauthenticated client can reach the same path when the optional guest UAM and a guest-accessible volume are enabled. The resulting eight-byte read extends beyond the shorter element's heap allocation and supplies an internal CNID filter; no confidentiality channel, write primitive, or code execution was demonstrated, while a production crash would require additional heap placement conditions. The container-type validation added for CVE-2023-42464 does not validate each element inside an accepted sl_array_t and therefore does not resolve this issue. This issue is fixed in version 4.5.2.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-110780 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110780</link>
-    <guid isPermaLink="false">2d38e99f8715abf9e7477994f5d98ee2</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 3.1.0 until 4.5.2, the Spotlight RPC consumer handlers sl_rpc_fetchAttributeNamesForOIDArray, sl_rpc_storeAttributesForOIDArray, and sl_rpc_fetchAttributesForOIDArray in etc/afpd/spotlight.c dereference the first element of a decoded sl_cnids_t without checking whether the inner CNID array is empty. An authenticated AFP client, or a guest when guest AFP access is enabled, can send a crafted SPOTLIGHT_CMD_RPC whose outer CNIDS length is greater than 16 while its inner count is zero, causing sl_unpack_cnids to create an empty DALLOC_CTX and the consumer to dereference dd_talloc_array[0]. The affected afpd child crashes, normally limiting denial of service to the attacker's session, and no memory write or code execution was demonstrated. This issue is fixed in version 4.5.2.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127106 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127106</link>
-    <guid isPermaLink="false">23f6e21059049af604b745ce96b44917</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | A flaw was found in the quarkus-rest-jsonb component of Quarkus. An unauthenticated remote attacker can cause a Denial of Service (DoS) by sending HTTP requests containing deeply nested JSON payloads to vulnerable endpoints. The application fails during JSON parsing and records an excessively large error trace for each small request. This disproportionate log amplification can exhaust system disk space or overwhelm log processing pipelines, degrading service availability.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133212 - NVD - CVSS Score v3.1: 9.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133212</link>
-    <guid isPermaLink="false">d4a5a93a251d37d28e0103f1ce07bddb</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 9.0 | @fastify/reply-from is a Fastify plugin that forwards an incoming HTTP request to an upstream server. In versions before 12.9.1, when the plugin forwards a request whose body is not written to the upstream connection, such as a GET, HEAD, or TRACE request that carried a body, or a request with a falsy JSON body, it still forwards the client's Content-Length header while sending no body. The upstream server then treats the bytes of the following request as the unfinished body, which an attacker can use to desynchronize the connection and smuggle a request. The issue is fixed in @fastify/reply-from 12.9.1, and users should upgrade to 12.9.1 or later.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133475 - NVD - CVSS Score v3.1: 5.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133475</link>
-    <guid isPermaLink="false">84103db136f24a0f0696e2e7182fe3be</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.7 | A heap-based buffer overflow was found in Corosync's Totem SRP membership commit token handling. The sanity check for memb_commit_token messages validates only minimum length and address-entry counts, not an upper bound against the fixed commit_token_storage buffer. A network-adjacent attacker who can deliver a crafted oversized commit token to a node in the GATHER membership state may overflow the heap-allocated totemsrp instance, leading to memory corruption and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133730 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133730</link>
-    <guid isPermaLink="false">46c7362f742c8d6915459e82d496666a</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.9 | A flaw was found in dnsmasq, where a memory handling issue exists in its Dynamic Host Configuration Protocol for IPv6 (DHCPv6) relay processing. A remote attacker can exploit this vulnerability by sending a sequence of network packets to a system configured as a DHCPv6 relay. This causes the service to write data to previously freed memory and crash, resulting in a Denial of Service (DoS).</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-45354 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45354</link>
-    <guid isPermaLink="false">35e57106e975d167ef578d79aa6d32c8</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.5 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. Prior to 4.4.3, libatalk/dsi/dsi_stream.c interprets the dsi_code and dsi_doff union field as a data offset for all DSI command types instead of limiting that interpretation to DSIWrite. An unauthenticated client can send a non-WRITE DSIFUNC_CMD packet with a nonzero dsi_code smaller than dsi_len, causing dsi_stream_receive to consume only the dsi_code number of payload bytes and leave attacker-controlled bytes in the readahead buffer. The residual bytes become the next DSI header, allowing protocol desynchronization that can close sessions, corrupt protocol state, or trigger an infinite-read denial of service. This issue is fixed in version 4.4.3.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-45355 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45355</link>
-    <guid isPermaLink="false">c5ab83944d927d9432165876a3384ef6</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. Prior to 4.4.3, the afpd Spotlight RPC string unmarshalling path in etc/afpd/spotlight_marshalling.c uses sl_unpack_cpx to calculate slen from qlen and the attacker-controlled used_in_last_block value without preventing a negative result. An authenticated AFP client can send a complex string or UTF-16 string element that makes slen negative, and the implicit conversion to size_t causes dalloc_strndup or convert_string_allocate to read beyond the heap buffer. The out-of-bounds read can expose heap data through the RPC response or crash the worker process. This issue is fixed in version 4.4.3.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-45356 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-45356</link>
-    <guid isPermaLink="false">3b6f063ea9b6b54bead585d70250385c</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. Prior to 4.4.3, the afpd Spotlight RPC unmarshalling loop in etc/afpd/spotlight_marshalling.c subtracts an attacker-controlled subcount from the unsigned count variable in sl_unpack_loop without verifying that subcount is not larger. An authenticated AFP client can place an excessive element count in the sl_unpack_ints, sl_unpack_uuid, sl_unpack_floats, or sl_unpack_date handler, or in a null element, so the subtraction wraps near UINT_MAX and the loop continues reading heap memory at increasing offsets up to toc_offset, which is capped at 65000. The out-of-bounds values can be stored in dalloc structures and returned in the Spotlight RPC response, disclosing heap contents. This issue is fixed in version 4.4.3.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-49387 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49387</link>
-    <guid isPermaLink="false">d15cd2326a3ea79803b4d154e6078011</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 3.1.0 until 4.5.0, the afpd FPSpotlightRPC unmarshalling handlers in etc/afpd/spotlight_marshalling.c trust the element count encoded in the upper 32 bits of an RPC tag without comparing it with the remaining input length. An authenticated client with access to a Spotlight-enabled volume can make sl_unpack_ints, sl_unpack_date, sl_unpack_uuid, or sl_unpack_floats iterate beyond dsi-&gt;commands and read heap memory. The read values remain in internal dalloc storage and no information-disclosure channel was demonstrated, but the worker serving the attacker's session can be crashed. This issue is fixed in version 4.5.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-49388 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49388</link>
-    <guid isPermaLink="false">da890539a90747920e2f34c33882d7b2</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.1 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 3.1.0 until 4.5.0, sl_unpack_loop in etc/afpd/spotlight_marshalling.c uses an attacker-controlled Spotlight table-of-contents index during FPSpotlightRPC without checking it against the number of entries or the remaining dsi-&gt;commands buffer. An authenticated AFP client with access to a Spotlight-enabled volume can choose a large toc_index whose multiplication and addition produce an out-of-range address, causing an attacker-influenced heap read and reliably crashing the worker serving that session. The earlier CVE-2026-44066 remediation bounded recursion depth and toc_offset but did not bound toc_index. This issue is fixed in version 4.5.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-49389 - NVD - CVSS Score v3.1: 3.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49389</link>
-    <guid isPermaLink="false">be1ecdc2773df053f329f1ddf19dba2c</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 3.1 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 2.0.0 until 4.5.0, afp_catsearch in etc/afpd/catsearch.c computes the spec2 pointer for FPCatSearch and FPCatSearchExt from the unvalidated 16-bit spec_len request field without checking it against the remaining input length. An authenticated AFP client can cause the CatSearch handler to read stale bytes beyond the supplied request data. The bytes are used only as internal comparison criteria and are not returned to the client, and testing under standard server quantum settings did not demonstrate a crash or information disclosure. This issue is fixed in version 4.5.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-49390 - NVD - CVSS Score v3.1: 3.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49390</link>
-    <guid isPermaLink="false">3da000d714f2cd56a3d06cc998711a72</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 3.1 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 3.0.0 until 4.5.0, getoption_int in libatalk/util/netatalk_conf.c accepts an out-of-range server quantum value from afp.conf without applying the documented fallback to the default. An administrator can unintentionally configure a very large allocation whose failure causes AFP_PANIC at startup or a very small command buffer that disrupts DSI framing, leaving afpd unavailable until the configuration is corrected and the daemon is restarted. The option is read locally at startup and cannot be changed through the AFP protocol. This issue is fixed in version 4.5.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-55216 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55216</link>
-    <guid isPermaLink="false">fdca68e1ed37b582fb26be5df6625e0b</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.1 | Logto is the modern, open-source auth infrastructure for SaaS and AI apps. Prior to 1.46.0, social account linking can use an unverified email returned by the standard OAuth 2.0 or Azure AD connector to select an existing local account. When findSocialRelatedUser matches a victim's email and a request to POST /api/experience/identification enables linkSocialIdentity, an attacker who controls that unverified provider email can link an attacker-controlled social identity to the victim account and sign in as the victim. The issue applies when the provider does not verify email ownership or allows the value to be set freely; Google, GitHub, and default OIDC connector behavior is not affected because those paths expose only verified email. Version 1.46.0 adds an opt-in email synchronization control to the standard OAuth 2.0 connector, while the Azure AD connector has offered an equivalent opt-in control since version 1.43.0. These controls preserve existing behavior by default, so administrators must enable them on affected connectors. A configurable mitigation is available in version 1.46.0.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-58406 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-58406</link>
-    <guid isPermaLink="false">43ffa30c93992b08158a8cad3214765b</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | Avahi is a system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite. In 0.9-rc4 and earlier on NetBSD architectures such as x86_64 where char is signed and the ctype guard-page change is present, avahi_domain_hash can pass a negative value to tolower when a resource-record name contains a byte at or above 128. The invalid ctype input reliably raises SIGSEGV, allowing a remote peer on the local network to crash the Avahi daemon. This issue is fixed with 0.9-rc5.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-59968 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59968</link>
-    <guid isPermaLink="false">37188345aa944202a0c24bf7414f2b66</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.3 | LinkAce is a self-hosted archive to collect website links. Prior to 2.5.9, the authenticated GET /api/v2/lists/{list}/links endpoint in app/Http/Controllers/API/ListLinksController.php authorizes access only to the parent list and then returns its links without applying visibleForUser(). Because another user's INTERNAL or PUBLIC list may legitimately contain PRIVATE links, a normal authenticated user who may view the list can also receive those private link records, including their URLs, titles, descriptions, icons, and timestamps. Equivalent web, tag, notes, and feed handlers apply the per-link visibility scope, so this API handler is the affected exception. This issue is fixed in version 2.5.9.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-59987 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59987</link>
-    <guid isPermaLink="false">d4352a400b3fea50d6402dad7e5ad614</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.5 | Avahi is a system which facilitates service discovery on a local network via the mDNS/DNS-SD protocol suite. In 0.9-rc4 and earlier, org.freedesktop.Avahi.Server.RecordBrowserNew accepts a domain-name value that avahi_is_valid_domain_name considers valid even though avahi_normalize_name_strdup cannot normalize it. The resulting null key reaches the key assertion in dbus_prepare_record_browser_object. A local low-privileged D-Bus client can trigger the mismatch and terminate the Avahi daemon, causing denial of service. The issue is fixed in 0.9-rc5.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62318 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62318</link>
-    <guid isPermaLink="false">be91a8e5dd9ceda5e17bb5d36dc348c0</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 9.3 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 2.0.0 until 4.5.1, the DHX2 and DHX2-PAM authentication state machine in etc/uams/uams_dhx2_pam.c permits logincont1 to be invoked again with the same FPLoginCont retID after it has released the global gcry_mpi_t Ra object. When DHX2 or DHX2PAM is enabled in the UAM list, a remote attacker without valid AFP credentials can repeat the first continuation step, causing gcry_mpi_powm to dereference the freed Ra value and gcry_mpi_release to free it again in a privileged afpd worker. The demonstrated result is a repeatable pre-authentication worker crash, and the use-after-free and double-free provide a plausible allocator exploitation primitive although code execution was not demonstrated. This issue is fixed in version 4.5.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62319 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62319</link>
-    <guid isPermaLink="false">93b7ee583769d65d5b6c15bc4d34ae5f</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 7.2 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 1.5.0 until 4.5.1, dsi_stream_receive in libatalk/dsi/dsi_stream.c independently clamps dsi_doff and dsi_len for DSIWrite requests without enforcing that the data offset is no greater than the declared frame length. An authenticated AFP client can send dsi_doff greater than dsi_len, causing the receiver to consume bytes from a queued subsequent frame before libatalk/dsi/dsi_write.c detects the inconsistency. The irreversible stream desynchronization lets the attacker control the next parsed DSI header and payload and corrupts protocol framing for the connection. This issue is fixed in version 4.5.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62320 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62320</link>
-    <guid isPermaLink="false">73b2d333e652b3fcb9658a6409ce97e7</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.8 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 1.5.0 until 4.5.1, dsi_tcp_open in libatalk/dsi/dsi_tcp.c silently limits the bytes read from an unauthenticated DSI frame received on TCP/548 to server_quantum when the attacker-controlled dsi_len is larger, without rejecting the frame or draining the declared remainder. The same silent dsi_len truncation pattern exists in libatalk/dsi/dsi_stream.c. The leftover bytes remain queued on the TCP connection and the next dsi_stream_receive call interprets them as a new DSI header and payload, allowing a remote unauthenticated attacker to smuggle one or more additional attacker-controlled DSI frames into the same connection. This issue is fixed in version 4.5.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-62321 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62321</link>
-    <guid isPermaLink="false">ecb5d81c5b4a9e0d7f9c24fafc9651da</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.7 | Netatalk is a Free and Open Source file server suite for Unix-like operating systems. From 3.1.0 until 4.5.1, the afpd Spotlight RPC fetchQueryResultsForContext: reply path in etc/afpd/spotlight_marshalling.c calls the top-level sl_pack function from sl_pack_filemeta on a shifted sub-buffer without passing the remaining capacity of the outer DSI reply buffer. An authenticated AFP client can request an amplified nested file-metadata tree so the nested packer applies MAX_SLQ_DAT relative to the shifted pointer and writes beyond struct DSI::data. The out-of-bounds write corrupts heap memory beyond the DSI reply buffer. This issue is fixed in version 4.5.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77309 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77309</link>
-    <guid isPermaLink="false">1c0eee377084b458c8bf13c694cda476</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.8 | AIT GUI provides a framework for building custom websites for real-time telemetry monitoring, commanding, and other mission operations. From 1.0.0 until 2.5.1, POST /tlm/query in ait/gui/__init__.py writes attacker-controlled field data to fields_in.txt, and its no-PCAP error path can abort before deleting that file. The unauthenticated POST /script/run route accepts a scriptPath that resolves outside ScriptRoot, reads the selected file, and executes it as Python. A network-reachable attacker can obtain the ordinary session cookie without credentials, combine the two routes, and execute arbitrary Python code with the AIT-GUI server process privileges. This issue is fixed in version 2.5.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77349 - NVD - CVSS Score v3.1: 5.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77349</link>
-    <guid isPermaLink="false">fe46dc5851b08a2fcf74b88d1c72b9c1</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.0 | pmo-platform is a modular PMO and release-management platform for Claude Code. From 3.48 until 3.69.1, release/skills/pmo-skill-refiner/eval-viewer/generate_review.py reads untrusted model or skill output from workspace/run*/outputs/ and embeds it with json.dumps into viewer.html inside an inline script without escaping HTML metacharacters. A crafted output can close the script element and execute JavaScript when an operator generates and opens the viewer. The maintainer also confirmed that DOM-based injection through renderGrades and renderBenchmark innerHTML survives transport-only escaping, so affected render sinks must neutralize the content. Executed script can read embedded prompts and outputs, alter the viewer DOM, or modify saved feedback. This issue is fixed in version 3.69.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77350 - NVD - CVSS Score v3.1: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77350</link>
-    <guid isPermaLink="false">a6d35265503f71194d1c949af6a744a2</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.3 | pmo-platform is a modular PMO and release-management platform for Claude Code. Prior to 3.69.1, core/hooks/block-credential-reads.sh, core/hooks/block-egress.sh, core/hooks/block-fs-boundary.sh, and core/hooks/block-mcp-writes.sh pin PATH to /usr/bin:/bin, hard-code jq as /usr/bin/jq, and return success when jq is unavailable there. On systems where jq exists only in a Homebrew path, including affected pre-Sequoia or Homebrew-only macOS installations, the hooks can skip credential-read, network-egress, filesystem-boundary, and MCP-write controls. Native deny rules independently protect some credential paths but do not backstop the egress or MCP controls. An attacker who can influence a prompt, repository, or evaluation flow can use the skipped checks to expose secrets or perform unauthorized tool actions. This issue is fixed in version 3.69.1.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77389 - NVD - CVSS Score v4.0: 2.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77389</link>
-    <guid isPermaLink="false">98648b8972afe8b7afe858e9b9832d3c</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.0 | pmo-platform is a modular PMO and release-management platform for Claude Code. Prior to 3.73, core/hooks/block-fragile-refs.sh and core/hooks/block-gh-path-leak.sh source co-shipped awk primitives from core/hooks/lib/ and degrade when a required primitive is absent. In a partial or corrupted deployment, block-gh-path-leak.sh skips its entire path-leak check, while block-fragile-refs.sh skips only the positional-issue-reference detector and continues running its other detectors. Both hooks operate in a warning posture, so the impact is a skipped warning rather than bypass of an enforcing control, with no established exfiltration or code-execution primitive. This issue is fixed in version 3.73.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-77390 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77390</link>
-    <guid isPermaLink="false">dcfbb8d2ce180bcfc681d084149477c8</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.9 | pmo-platform is a modular PMO and release-management platform for Claude Code. Prior to 3.73, release/skills/pmo-skill-refiner/eval-viewer/generate_review.py and viewer.html contain three security weaknesses in the local evaluation viewer. During workspace scanning and generation, _find_runs_recursive and build_run follow symlinks and embed_file reads their targets without confining resolved paths to the workspace, although the server do_GET path is not a traversal surface. embed_file also reads output files without a size cap or redaction, allowing secrets or personally identifiable information to be embedded in a no-auth locally served page or shareable static file. Separately, do_POST /api/feedback writes caller-supplied JSON without authentication, an Origin check, or a cross-site request forgery token, allowing a malicious page or DNS-rebound localhost target to modify feedback while the server runs. This issue is fixed in version 3.73.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-84693 - NVD - CVSS Score v3.1: 8.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-84693</link>
-    <guid isPermaLink="false">9566e83674877ed60bf464043cfb4b52</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.1 | The WPvivid — Backup, Migration &amp; Staging plugin for WordPress is vulnerable to Arbitrary File Deletion in version up to, and including, 0.9.134. This is due to a timing side channel in the bundled RSA decryption path, insufficient validation of migration receiver backup records, and missing path validation in the cleanup_local_backup() function. This makes it possible for unauthenticated attackers to recover an active migration receiver's RSA modulus, inject a backup record containing path traversal, and cause a later scheduled cleanup to delete an attacker-selected file writable by the web server. Exploitation requires an unexpired receiver key generated by an administrator and a subsequent manual or scheduled backup lifecycle.</description>
-    <category>NVD</category>
-    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-95825 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95825</link>
-    <guid isPermaLink="false">f5f20c36d9e3ee4a9f704c13c2cc65a3</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | net_if_ipv4_addr_rm() and net_if_ipv6_addr_rm() in subsys/net/ip/net_if.c unconditionally called net_if_addr_unref() on the target address. When an earlier removal could not complete because another subsystem still held a reference (the TCP stack takes one on the local address of every connection, in tcp_conn_new() and on connect()), the address is left in place with is_added cleared and is_used still set. A second removal of such an address decremented the reference count again, consuming a reference owned by that other holder. When it was the last one, the address slot was released, its NET_EVENT_IPV*_ADDR_DEL event fired, and the slot became reusable while the holder still believed it owned a reference.
+    <title>CVE-2026-133949 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133949</link>
+    <guid isPermaLink="false">cb3b5a3cacfa408cfe2b4026505b3290</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 9.3 | pip prior to v26.2.2 the certifi bundled with pip contains the compromised eMudhra certificates. 
 
-Every address lookup helper matches on is_used and not on is_added, so a half-removed address stays visible to the rest of the stack and repeat removals are readily reachable from remote input. Under IPv6 SLAAC, an on-link node that sends a Router Advertisement with a short valid lifetime causes the address to expire into the deferred state; a refreshing Router Advertisement is handled by net_if_ipv6_addr_update_lifetime(), which re-arms the lifetime timer without restoring the reference, so the next expiry performs the second, reference-stealing removal. With CONFIG_NET_IPV4_ACD and DHCPv4, repeated spoofed ARP conflicts for the device's lease drive dhcpv4_acd_event_handler() into calling net_if_ipv4_addr_rm() more than once on the same address. Where CONFIG_USERSPACE is enabled, the net_if_ipv4_addr_rm_by_index() and net_if_ipv6_addr_rm_by_index() system calls let an unprivileged user-mode thread trigger the same kernel-side release deterministically.
 
-The impact is loss of a configured IP address while connections are still using it, and a corrupted reference count that propagates: the slot can be handed to a newly added address, and when the stale holder later tears down, net_if_addr_unref() resolves the address by value and drops the new incarnation's only reference, removing a live address a second time. The affected objects are static array slots and the counter is never decremented below zero, so there is no memory corruption or information disclosure; the consequence is denial of service against the device's network connectivity, repeatable at the attacker's pace.
 
-The fix resolves the address before touching the reference count and returns false without calling net_if_addr_unref() when the address is already marked as removed, so the public removal API can no longer consume a reference it does not own.</description>
+
+Upgrading to a secure version of pip should be done either by first upgrading Python to a version that rejects the compromised intermediates ( https://www.cve.org/CVERecord?id=CVE-2026-115557 ) or use hash pinning with a known-secure version of pip.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-95826 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95826</link>
-    <guid isPermaLink="false">f2986e7490ae5e8a86d90e8560ea1f8c</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.5 | The SMSC911x/LAN9220 Ethernet driver stages every outgoing frame in a fixed-size static buffer before pushing it to the controller FIFO. eth_tx() in drivers/ethernet/eth_smsc911x.c took the frame length from net_pkt_get_len(pkt) and passed it directly to net_pkt_read(pkt, tx_buf, total_len), with no comparison against the size of tx_buf (NET_ETH_MAX_FRAME_SIZE). net_pkt_read() takes no destination size and only fails when the packet is shorter than the requested length, so any packet longer than the staging buffer was copied past its end.
-
-Nothing between the IP layer and the driver bounds the frame to what the link can carry: ethernet_send() in subsys/net/l2/ethernet/ethernet.c performs no length check, and the IPv6 output path only compares the packet against the interface MTU when CONFIG_NET_IPV6_FRAGMENT is enabled (it is disabled by default). The size the stack will build is therefore governed by the interface MTU, and that MTU is remotely settable: handle_ra_input() in subsys/net/ip/ipv6_nbr.c honours the MTU option of any Router Advertisement with a value up to 0xffff, gated only by the standard hop-limit-255 and link-local-source checks. An unauthenticated attacker on the same link can raise the MTU and then have the device emit a single frame of several kilobytes, for example as a TCP segment from any service that returns more than ~1.5 KB or as an oversized UDP datagram.
-
-The result is an out-of-bounds write into .bss immediately after tx_buf, with the overrun length and much of its content derived from the transmitted frame. Consequences range from corruption of adjacent kernel data and a crash to potential control-flow influence where the clobbered globals hold pointers; the practical overrun size is bounded by the network buffer pool rather than by the advertised MTU. The fix rejects frames larger than NET_ETH_MAX_FRAME_SIZE with -EMSGSIZE before any TX_DATA_PORT write, so the controller FIFO is also not left holding a command word without its payload.</description>
+    <title>CVE-2026-133968 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133968</link>
+    <guid isPermaLink="false">173e7298ba68d2c55785b4f21783731c</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 9.8 | monailabel (aka MONAI Label) through 0.8.5 allows directory traversal, with resultant remote code execution, via the image parameter to the PUT /datastore/image endpoint, as exploited in the wild starting in September 2026.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-95827 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95827</link>
-    <guid isPermaLink="false">9cbf50700fe6f4ed3ed2de27c240f6cd</guid>
-    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.5 | The IPv6 neighbour discovery code in subsys/net/ip/ipv6_nbr.c keeps packets that are waiting for address resolution on a per-neighbour pending queue. A queued packet holds two references: the one handed over by the sender and a second one taken by net_ipv6_send_ns() when the packet is put on the queue. The Router Advertisement handler handle_ra_input() popped each packet off the queue and passed it to net_send_data(), relying on a trailing nbr_clear_ns_pending() call to release the queue reference — but that call then found the queue already empty and released nothing, so one reference was leaked for every pending packet flushed on an RA.
-
-Router Advertisements are unauthenticated link-local ICMPv6 messages, so any node on the same link can trigger the flush. An attacker can make the leak deterministic by advertising itself as a router without a source link-layer address option, so the victim's neighbour entry stays INCOMPLETE, then inducing the victim to transmit through that next hop (the packet is queued and a neighbour solicitation is sent), leaving the solicitation unanswered and sending a further RA to drain the queue. Each round leaks one struct net_pkt together with its net_buf chain.
-
-Leaked packets are never returned to the fixed-size pools, so the loss is permanent for the lifetime of the boot. With CONFIG_NET_PKT_TX_COUNT defaulting to 4 (14 with CONFIG_NET_PKT_LARGE_DEFAULTS), a small number of repetitions exhausts the transmit packet slab and the node stops being able to send any traffic. The impact is availability only: the reference count is always too high, never too low, so no use-after-free or memory corruption arises.
-
-The fix moves the flush into a helper, nbr_send_pending(), which releases the queue reference for every packet it takes off the queue before handing the remaining reference to net_send_data(), and releases that one too if the send is refused.</description>
+    <title>CVE-2026-48118 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48118</link>
+    <guid isPermaLink="false">3eb3d46b44986c08de97839ec29bb544</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.2 | NukeViet CMS is a multi Content Management System. Prior to 4.5.09, the Comment module accepts attacker-controlled base64 content in the status_comment parameter through modules/comment/funcs/main.php; modules/comment/comment.php decodes it with nv_base64_decode() and assigns it to STATUS_COMMENT without output escaping. The required checkss token was derived from the site-wide NV_CACHE_PREFIX rather than NV_CHECK_SESSION, so a token disclosed in public comment markup could be reused across sessions in a crafted URL. An unauthenticated attacker can therefore cause decoded HTML or JavaScript to render in a victim's browser and perform phishing or same-origin actions. This issue is fixed in version 4.5.09.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-49259 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49259</link>
+    <guid isPermaLink="false">edf9c0764d38ac59f04a03d2564a2488</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.7 | NukeViet CMS is a multi Content Management System. From the 4.x release line until 4.5.09, a low-privileged authenticated user can store script-breaking content in the first_name and last_name profile fields used to form a comment display name. Both reply links in themes/default/modules/comment/comment.tpl interpolate {COMMENT.post_name} into the inline onclick call to nv_commment_feedback(). HTML numeric references produced by Request::_get_title() are decoded by the browser before JavaScript parsing, so clicking Reply can terminate the string and execute attacker-controlled JavaScript in the visitor's origin, including an administrator's session. This issue is fixed in version 4.5.09.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-54064 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54064</link>
+    <guid isPermaLink="false">2e30ff56e554d84f7b788f37ba1464e4</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.7 | NukeViet CMS is a multi Content Management System. Prior to 4.5.09, a user with news-posting permission can bypass NukeViet\Core\Request::filterAttr() by prefixing an event-handler attribute with an ASCII form-feed character, which PHP trimming preserves but browsers treat as whitespace. NukeViet\Core\Request::unhtmlentities() omitted a decimal HTML entity tab embedded in a javascript: URI. These parser differences allow persistent event handlers or script URLs to survive filtering in vendor/vinades/nukeviet/Core/Request.php and execute for visitors, including administrators. This issue is fixed in version 4.5.09.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-54065 - NVD - CVSS Score v3.1: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-54065</link>
+    <guid isPermaLink="false">9c301fdd946c64c496bb9411874725c7</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.7 | NukeViet CMS is a multi Content Management System. Prior to 4.5.09, an authenticated administrator can submit a crafted attach value to modules/comment/admin/edit.php. The handler removed a fixed-length upload prefix without validating containment, allowing padding followed by a traversal path to be stored in the database. When the comment is deleted, modules/comment/admin/del.php joins the stored path to NV_UPLOADS_REAL_DIR and passes it to nv_deletefile(), whose realpath() check restricts deletion only to NV_ROOTDIR rather than the upload directory, permitting deletion of application files such as config.php and causing an outage. This issue is fixed in version 4.5.09.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-55372 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-55372</link>
+    <guid isPermaLink="false">ace56d59be5dacb3631294d669da5677</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.2 | NukeViet CMS is a multi Content Management System. Prior to 4.5.09, an unauthenticated attacker can submit the __serverInfoUpdate=1 field while controlling X-Forwarded-Host and X-Forwarded-Proto. NukeViet\Core\Server::standardizeHost() did not validate the forwarded host against my_domains, and a trailing slash could preserve an attacker-selected port that server_info_update() used to construct a cURL request in includes/ini.php before authentication. The blind, HEAD-only request uses a fixed path, but it permits internal host and port discovery and can poison cached server_headers. This issue is fixed in version 4.5.09.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-61832 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61832</link>
+    <guid isPermaLink="false">d0983bfa5425e4c3431480b3a9e542d5</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.5 | NukeViet CMS is a multi Content Management System. Prior to 4.6.00, a network attacker who can alter outbound traffic to the extension store can exploit the HTTP client's disabled sslverify setting to substitute a serialized response. Extension-store handlers pass the response to unserialize() without an allowed_classes restriction, allowing an in-tree GuzzleHttp\Cookie\FileCookieJar gadget to write attacker-controlled content to a chosen path. When a GODADMIN opens or uses the store list, detail, install, or update functions, the substituted response can write a PHP file under the web root and execute code as the web-server user. This issue is fixed in version 4.6.00.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77323 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77323</link>
+    <guid isPermaLink="false">efc906b7f75c63c77a7159ff10dbdbcd</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.3 | MapServer is a system for developing web-based GIS applications. Prior to 8.6.5, an unauthenticated reflected cross-site scripting vulnerability in OGC API Features collection-items HTML output allows crafted offset or limit query parameter values from raw CGI request handling in src/mapogcapi.cpp to reach template.params.offset or template.params.limit. share/ogcapi/templates/html-bootstrap/collection-items.html inserts those values without quoting or escaping into a script element. A victim who follows a crafted request can have the script element terminated by attacker-controlled markup, causing arbitrary JavaScript to execute under the MapServer origin and enabling access to browser-session data, actions as the victim, and content manipulation. This issue is fixed in 8.6.5.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77324 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77324</link>
+    <guid isPermaLink="false">af2898c175f611300f401bf6ae95e23b</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.5 | MapServer is a system for developing web-based GIS applications. From 4.4.0 until 8.6.5, an unauthenticated remote attacker can send a WCS GetCoverage XML POST request whose BoundingBox element omits the crs attribute, causing xmlGetProp() in src/mapwcs.cpp to return null. msWCSParseRequest() then calls string functions on the null value before normal WCS exception handling, crashing the CGI or FastCGI worker. The analogous KVP or GET path is not affected because it obtains a count-validated, non-null token. A single request can terminate one worker, and repeated requests can exhaust a fixed worker pool and deny service. This issue is fixed in version 8.6.5.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77325 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77325</link>
+    <guid isPermaLink="false">563ecc94d2c24ec0599f8b6e8b97c3aa</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.1 | MapServer is a system for developing web-based GIS applications. From 6.0 until 8.6.5, MapServer's WMS OpenLayers output, selected by FORMAT=application/openlayers or template=openlayers, substitutes a request-derived online-resource value into a single-quoted JavaScript string in src/maptemplate.c. The prior remediation for GHSA-xqj6-vjqr-33vv used msEscapeJSonLikeString() to protect the JavaScript string but did not neutralize angle brackets, so attacker-controlled X-Forwarded-Host or X-Forwarded-Proto values can still terminate the script element at the HTML parser layer. Deployments that expose attacker-controlled PATH_INFO or map= values reaching the same string are also affected. An unauthenticated attacker can cause arbitrary JavaScript to execute in a victim's browser under the MapServer origin when the victim loads the crafted output. This issue is fixed in version 8.6.5.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77326 - NVD - CVSS Score v3.1: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77326</link>
+    <guid isPermaLink="false">167c6e5d9d92d280254428528bea0a23</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.6 | MapServer is a system for developing web-based GIS applications. From 8.2.0 until 8.6.5, an unauthenticated attacker can send a WMS GetLegendGraphic request with a nonempty BBOX and repeated LAYER parameters to trigger a heap buffer overflow in msWMSDispatch() in src/mapwms.cpp. The handler appends synthesized entries to cgiRequestObj.ParamNames and cgiRequestObj.ParamValues at NumParams without retaining the arrays' capacity or reallocating them, while incrementing NumParams inside the loop. Once the parser's hidden capacity is exhausted, the writes pass the heap allocation boundary. A single request can corrupt heap memory and crash the process; code execution may be possible but was not demonstrated. This issue is fixed in version 8.6.5.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77327 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77327</link>
+    <guid isPermaLink="false">caa0aa8f1956b8d98e4e196537868b2f</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.9 | MapServer is a system for developing web-based GIS applications. Prior to 8.6.5, MapServer's MySQL JOIN implementation in src/mapjoin.c copies the source layer attribute selected by JOIN ... FROM into joininfo-&gt;target and inserts it into the query built by msMySQLJoinNext() without parameterization or SQL escaping. When MySQL JOIN support is enabled, an attacker who can control that source feature attribute, including through imported shapefile or DBF data or another untrusted spatial source, can inject SQL operators or expressions that change the intended JOIN predicate. This can bypass the intended key comparison and expose unrelated records from the MySQL or MariaDB JOIN table through output templates, query responses, or downstream application logic. This issue is fixed in version 8.6.5.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77328 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77328</link>
+    <guid isPermaLink="false">c630d08c6edb13d7474a83079b2b57ea</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.9 | MapServer is a system for developing web-based GIS applications. Prior to 8.6.5, MapServer's PostgreSQL JOIN implementation in src/mappostgresql.c copies the source layer attribute selected by JOIN FROM into joininfo-&gt;from_value and embeds it without parameterization or escaping into a dynamically generated PostgreSQL query executed by PQexec(). When PostgreSQL JOIN support is enabled, an attacker who can control that source feature attribute can inject quote characters and SQL operators that alter the intended WHERE predicate. This second-order injection can cause unintended rows and JOIN attributes to be returned, potentially exposing information from unrelated PostgreSQL records. This issue is fixed in version 8.6.5.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77346 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77346</link>
+    <guid isPermaLink="false">d1076012d37aa2b131bfcedc630707cd</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 6.3 | Pozeiden is a MermaidJS renderer written in Zig. Prior to 0.3.0, Pozeiden emits attacker-controlled Mermaid values into SVG attributes or markup without sufficient XML escaping or URL scheme validation, and first-party consumers such as zigmark and policypress embed the generated SVG raw into HTML. The click href syntax can introduce a dangerous URL scheme or break out of an attribute; style, classDef, ::: class assignment, and linkStyle color values can inject fill or stroke markup; color and font-weight values can escape text attributes; %%{init}%% themeVariables can inject global renderer attributes; and quadrant y-axis labels can introduce raw markup. These paths involve src/svg/writer.zig, src/renderers/flowchart.zig, src/renderers/quadrant.zig, and src/root.zig. An attacker who can influence rendered Mermaid source can therefore store script-bearing SVG that executes when another user views the published HTML. This issue is fixed in version 0.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77347 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77347</link>
+    <guid isPermaLink="false">15381c785b427a9b639767d220d2f0a0</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.8 | Pozeiden is a MermaidJS renderer written in Zig. Prior to 0.3.0, src/renderers/c4.zig, src/renderers/class.zig, src/renderers/er.zig, and src/renderers/requirement.zig use fixed row-layout arrays while deriving subsequent loop bounds from an untrusted diagram's actual item count, and src/renderers/state.zig indexes a fixed depth array using user-controlled nesting depth. A valid diagram with at least 193 grid items can make the row count exceed the 64-row storage, while a deeply nested state diagram can exceed the col_count depth storage through the public pozeiden.render() path. Safe CLI and ReleaseSafe builds abort the rendering process, enabling reliable denial of service in applications that render untrusted diagrams. ReleaseSmall WASM builds with safety checks disabled instead perform out-of-bounds stack reads or writes, creating a memory-safety violation. This issue is fixed in version 0.3.0.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77355 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77355</link>
+    <guid isPermaLink="false">1f35025d1a4ac82fa0ff63fbd3ce66d9</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.8 | isomorphic-git is a pure JavaScript implementation of Git for Node.js and browsers. Prior to 1.38.7, tree-entry validation in src/models/GitTree.js does not reject the Windows NTFS reserved pathname alias .git::$INDEX_ALLOCATION. When clone() or checkout materializes an attacker-controlled tree containing this alias on Windows using an NTFS filesystem, the alias resolves to the active .git directory and permits writes to trusted repository metadata instead of a normal worktree directory. A malicious repository or object stream can therefore poison repository configuration, hooks, refs, attributes, or other gitdir state. Strict hosting that rejects hasDotgit objects can block the crafted tree, and non-NTFS systems do not interpret the pathname as the active gitdir. isomorphic-git performs the gitdir write but does not itself execute the written hook or configuration; a later native Git or compatible-tool action, such as processing a poisoned core.fsmonitor value, can execute configured commands as the victim developer or CI identity. This issue is fixed in version 1.38.7.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-77383 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77383</link>
+    <guid isPermaLink="false">67e2fca88c861fb0443ade5764c91a0b</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.7 | mcp-ssh-manager is an MCP server for managing servers over SSH with human approval, an encrypted vault, and a live audit trail. Prior to 3.6.7, ssh_db_list, ssh_db_dump, ssh_db_import, and ssh_db_restore in src/database-manager.js interpolate caller-controlled database, table, collection, file path, user, host, port, and password values into shell-evaluated command strings without neutralization. Shell metacharacters in these arguments therefore execute arbitrary commands on the configured SSH target as the account used by the MCP server. ssh_db_list is classified as read-only and remains available in readonly and restricted server security modes, so this path bypasses the command-execution boundary those modes are intended to enforce. The dump and import builders are blocked in readonly mode but remain vulnerable in the default unrestricted mode. The earlier version 3.6.5 hardening covered only ssh_db_query query text; it did not protect the list, dump, import, or restore builders, or the connection flags used by query builders. This issue is fixed in version 3.6.7.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-86017 - NVD - CVSS Score v3.1: 8.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86017</link>
+    <guid isPermaLink="false">14895b28303cf60bd2d7689f9c7aa591</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.0 | isomorphic-git is a pure JavaScript implementation of Git for Node.js and browsers. Prior to 1.38.8, git cherry-pick applies tree changes through applyTreeChanges in src/utils/walkerToTreeEntryMap.js without checking whether a leading path component is a symbolic link. If a victim worktree contains a tracked symlink to a location outside the worktree and a cherry-picked tree places a file beneath that path, the write follows the symlink and materializes attacker-controlled blob content at the external destination. This allows arbitrary file writes and can cause data tampering, code injection into interpreted files, privilege escalation, denial of service, or follow-on code execution depending on the selected target path. This issue is fixed in version 1.38.8.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94561 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94561</link>
+    <guid isPermaLink="false">ebde6a44f4172d8121a99851d7681867</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.2 | NukeViet CMS is a multi Content Management System. In 4.6.00, an unauthenticated attacker can place the configured domain in X-Forwarded-Host while choosing a different destination in the ordinary Host header. The earlier fix validates only the forwarded value in includes/mainfile.php, while set_ini_file() in includes/ini.php constructs an outbound cURL request from the separately retained NV_SERVER_NAME before the ordinary host is rejected. Redirect following can carry the blind request to an attacker-selected private host, port, and path and invoke internal HTTP endpoints. This issue is fixed in version 4.6.01.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94562 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94562</link>
+    <guid isPermaLink="false">150b33681c028758d0ddfbd6985d6de8</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.2 | NukeViet CMS is a multi Content Management System. Prior to 4.6.01, a super-administrator satisfying the NV_IS_SPADMIN gate can use modules/users/admin/fields.php to store an arbitrary existing PHP function in the func_callback setting for a custom profile field because the callback name is checked only with function_exists() and no allowlist restricts which function may be selected. modules/users/fields.check.php later invokes that function through call_user_func() when the field is validated through registration, profile editing, or administrator editing. Selecting a command-execution function crosses the super-administrator to operating-system boundary and executes commands as the web-server account, while ordinary users can trigger the stored callback after it is configured. Because the remediation validates callbacks only when they are written, upgrading does not remove a malicious callback already stored in the database, which must be cleaned manually. This issue is fixed in version 4.6.01.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94563 - NVD - CVSS Score v3.1: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94563</link>
+    <guid isPermaLink="false">0167d1296cc81929c4b537d5b7ebbdf9</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.0 | NukeViet CMS is a multi Content Management System. From 4.5.00 until 4.6.01, an authenticated settings-module administrator can upload a PKCS#12 S/MIME certificate whose X.509 Subject CN contains path separators and traversal components. The smimeadd handler in admin/settings/smtp.php applies only an at-sign replacement before using the CN in .key, .crt, and .pem paths beneath data/certs. Traversal can select attacker-chosen paths outside data/certs, but writes remain constrained to already-existing writable directories and the permitted extensions. Within that constraint, attacker-controlled PEM data can overwrite certificate assets, including a DKIM private key; when the curl.cainfo PHP directive is empty, the attacker can also replace cacert.pem and undermine outbound TLS verification. This issue is fixed in version 4.6.01.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94564 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94564</link>
+    <guid isPermaLink="false">8544f2170af91decc5b144c8613fdac1</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.2 | NukeViet CMS is a multi Content Management System. Prior to 4.6.01, an unauthenticated visitor can submit Contact module content containing numeric HTML entities with more than eight leading zeros in a URL-bearing attribute. NukeViet\Core\Request::unhtmlentities() does not decode that form before filterAttr() checks for a javascript: scheme, but browsers decode it when rendering the stored content. With an allowed tag such as the default iframe, the reconstructed script URL executes in the administration origin when staff view the message, permitting session-riding actions while remaining unable to read the HttpOnly session cookie directly. This issue is fixed in version 4.6.01.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94565 - NVD - CVSS Score v3.1: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94565</link>
+    <guid isPermaLink="false">331825a26e5e311af5d7aa21d9af6f2f</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 9.3 | NukeViet CMS is a multi Content Management System. From the 3.x release line until 4.6.01, an unauthenticated visitor can submit a Contact module message containing an event-handler attribute prefixed by a slash. NukeViet\Core\Request::filterTags() tokenizes attributes using only ASCII spaces, so it sees /onerror and misses the ^on denylist, while the browser treats the slash as a separator and activates onerror. The message is stored and rendered without output encoding in the administration panel, which lacks a Content Security Policy, allowing same-origin JavaScript execution when an administrator opens the message. This issue is fixed in version 4.6.01.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94566 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94566</link>
+    <guid isPermaLink="false">638fba85b6eedd05c47aa0e385a6fe9f</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 5.3 | NukeViet CMS is a multi Content Management System. In 4.6.00, an unauthenticated attacker can rotate X-Forwarded-For because vendor/vinades/nukeviet/Core/Ips.php accepts forwarded client-IP headers without first confirming that REMOTE_ADDR is a trusted proxy. The resulting NV_CLIENT_IP keys the administrator login blocker in includes/core/admin_login.php; changing only the header value bypasses that lockout and permits effectively unlimited password guesses. The same spoofable address is also consumed by the user login blocker in modules/users/funcs/login.php, IP restrictions, bans, flood controls, and security logs, but those additional code-level effects were not dynamically demonstrated. This issue is fixed in version 4.6.01.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94567 - NVD - CVSS Score v3.1: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94567</link>
+    <guid isPermaLink="false">0973818224229758468f5220faab7973</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 9.3 | NukeViet CMS is a multi Content Management System. Prior to 4.5.12 and 4.6.02, an attacker with access to an SVG upload flow can hide a script element in an internal DTD entity. NukeViet\Files\Upload::check_svg_tmpfile() loads the document without entity expansion, leaving a DOMEntityReference, and sanitize_svg_dom() inspects only element nodes, while browsers expand the entity when the stored file is served as image/svg+xml. The SVG path also returned before verify_image() and preserved the original bytes, so the hidden script reached disk unchanged. Guest comment attachments make the upload unauthenticated only when a module's comment feature is open to the All or Guest group and allowattachcomm is enabled; module administrators can also use the file manager, allowing same-origin script execution in an administrator's session. This issue is fixed in versions 4.5.12 and 4.6.02.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94597 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94597</link>
+    <guid isPermaLink="false">19dc6f4a2e2c5f2ea31f1cb45663f516</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.5 | NukeViet CMS is a multi Content Management System. Prior to 4.5.12 and 4.6.02, an attacker who can reach an image-upload flow can upload a valid image with appended PHP short-tag code and a double-extension filename. NukeViet\Files\Upload::save_file() relied on verify_image(), which missed the &lt;? short-open tag, while filename handling preserved embedded dots, validation inspected only the final extension, and an .htaccess rule blocked PHP extensions only at the end of the URI. On Apache mod_php systems configured with short_open_tag and a PHP extension handler, the stored polyglot can execute as PHP and run operating-system commands as the web-server user; PHP-FPM, nginx, and end-anchored handler configurations are not exposed to the execution step. This issue is fixed in versions 4.5.12 and 4.6.02.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94598 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94598</link>
+    <guid isPermaLink="false">da2aac8568d626d7031c6dcd4b61c37f</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 8.2 | NukeViet CMS is a multi Content Management System. From 4.5.08 until 4.5.12 and 4.6.02, an attacker can place NukeViet's internal {@[, ]@}, [@{, and }@] sanitizer markers in an iframe srcdoc value by encoding square brackets as HTML entities. Recursive NukeViet\Core\Request::filterTags() processing decodes the characters, accepts the forged marker, and later converts it to real markup without normal tag or attribute filtering. Because an unsandboxed srcdoc iframe shares the parent origin and iframe is enabled by default through NV_ALLOWED_HTML_TAGS, stored Contact messages, comments with the editor enabled, or submitted articles can execute JavaScript with the viewer's session. This issue is fixed in versions 4.5.12 and 4.6.02.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94599 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94599</link>
+    <guid isPermaLink="false">0ec6de64353dd21731fefae56c4bd9b0</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.1 | NukeViet CMS is a multi Content Management System. From 4.5.00 until 4.5.13 and 4.6.02, an unauthenticated attacker can place a multiply encoded value in the news module search q parameter. $nv_Request-&gt;get_title() decodes and sanitizes the input once, but modules/news/funcs/search.php subsequently applies urldecode() after sanitization. The resulting raw keyword reaches the {KEY} search-input attribute through search_theme() and the no-results element through search_result_theme() in the default and mobile themes, permitting attribute or tag injection and same-origin JavaScript execution when a victim opens the crafted search URL. This issue is fixed in versions 4.5.13 and 4.6.02.</description>
+    <category>NVD</category>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-96805 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96805</link>
+    <guid isPermaLink="false">c8deb09bf0cd8e87a204df41652fa912</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.5 | The affected products have an unauthenticated command injection, which may allow an in-range BLE device to gain access to write to the control interface and influence braking with no authentication or pairing.</description>
     <category>NVD</category>
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
