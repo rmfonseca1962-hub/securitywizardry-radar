@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Fri, 20 Nov 2026 04:01:11 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 05:02:58 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-22062 - NVD - CVSS Score v4.0: 2.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-22062</link>
@@ -301,73 +301,60 @@ A server-side mitigation has been deployed that also protects existing iOS clien
     <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77313 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77313</link>
-    <guid isPermaLink="false">d612ce7ec39b1573e3be26d363319e80</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.1 | Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, validate_url_ssrf in src/core/utils.py resolves and checks a hostname but returns the hostname URL rather than the validated address, and session.get in http.get performs an independent DNS lookup when connecting. A low-privileged caller with control of the hostname's DNS can make the first lookup return a public address and the connection-time lookup return an internal address, bypassing the SSRF guard for all modules that call it and exposing readable internal or metadata-service responses. Successful exploitation requires attacker-controlled DNS and a successful timing-dependent answer change between the two lookups. This issue is fixed in version 2.26.8.</description>
+    <title>CVE-2026-113347 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113347</link>
+    <guid isPermaLink="false">de6d057a76f1a5c616cace9262d5c64c</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 8.6 | Multiple products produced by Ruijie Networks Co., Ltd. contain an OS command injection vulnerability that may lead to arbitrary OS commands being executed by an attacker with the administrative privilege.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77314 - NVD - CVSS Score v3.1: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77314</link>
-    <guid isPermaLink="false">e190f1c83e31a7825f1aecd93d5917b2</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 6.3 | Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, the MCP run_recipe tool in src/core/mcp_handler.py accepts a caller-controlled recipe_name that load_recipe() in src/cli/recipe.py appends to the src/recipes path without resolved-path containment. Parent-directory segments can therefore make Flyto load and execute a YAML workflow outside the bundled recipe directory, bypassing the boundary represented by list_recipes(). This does not necessarily provide unrestricted code execution because available workflow modules remain subject to Flyto's module policy, but it permits unintended execution of allowed browser, network, file, and data-processing modules. This issue is fixed in version 2.26.8.</description>
+    <title>CVE-2026-133480 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133480</link>
+    <guid isPermaLink="false">1225f38708581b9d5d38af0611e35f11</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 2.1 | A flaw has been found in hrshadhin CloudSchool up to 3.0.1. Affected by this issue is the function PublicController.checkSanity4Student of the file app/Http/Controllers/Backend/PublicController.php of the component Student Data Access Check. This manipulation of the argument student_id causes authorization bypass. The attack can be initiated remotely. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77315 - NVD - CVSS Score v3.1: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77315</link>
-    <guid isPermaLink="false">d7e71adbc00bc07abb795b6b1784265c</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.5 | Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, http.paginate in src/core/modules/atomic/http/paginate.py validates only the initial base_url, and _paginate_link_header then follows a server-supplied Link: rel=&quot;next&quot; URL without calling the SSRF guard again. A low-privileged caller can make an allowed first page point the next request at an internal or metadata service, causing a readable second-order SSRF whose response body is aggregated into all_items and returned. This issue is fixed in version 2.26.8.</description>
+    <title>CVE-2026-133482 - NVD - CVSS Score v4.0: 1.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133482</link>
+    <guid isPermaLink="false">c083c5e0305135c38be7c6a5f1ce6dcb</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 1.9 | A vulnerability has been found in hrshadhin CloudSchool up to 3.0.1. This affects the function EventController@store of the file app/Http/Controllers/Backend/EventController.php of the component Admin Content Management. Such manipulation of the argument data leads to cross site scripting. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77316 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77316</link>
-    <guid isPermaLink="false">b96e5b333302c3b824afa0791e4d93a0</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 7.1 | Flyto2 Core is an execution kernel for automation and AI-agent workflows. Prior to 2.26.8, validate_url_ssrf() in src/core/utils.py validates one DNS answer and then returns the hostname, while guarded_aiohttp_request(), enforce_outbound_url(), and validate_url_with_env_config() allow the outbound connection to perform an independent second lookup. A caller with control of the hostname's DNS can make validation see a public address and make the connection see an internal address, bypassing the guard across its outbound consumers and exposing readable internal or metadata-service responses. The attack requires low or zero DNS TTL behavior and a successful timing-dependent answer change; static multiple-address answers are checked and do not provide the same bypass. This issue is fixed in version 2.26.8.</description>
+    <title>CVE-2026-133536 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133536</link>
+    <guid isPermaLink="false">e80f101de9416dc80ad9a3a2c3492b3f</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 4.3 | A flaw was found in Keycloak. The OpenID Connect (OIDC) logout endpoint continues to honor post-logout redirect rules for disabled clients rather than rejecting the requests. If a disabled client retains permissive redirect configurations, a remote attacker can exploit this issue by supplying an arbitrary redirection target in a logout request, leading to an open redirect that can be used in phishing attacks.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-95517 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95517</link>
-    <guid isPermaLink="false">79a88778fc33913c598341a0a60e51a2</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS: não informado | Reliance on obfuscation or encryption of Security-Relevant inputs without integrity checking, Improper validation of integrity check value, Cleartext transmission of sensitive information vulnerability in the EncryptInterceptor of Apache Tomcat.
-
-
-
-This issue affects Apache Tomcat: from 11.0.0-M1 through 11.0.27, from 10.1.0-M1 through 10.1.61, from 9.0.13 through 9.0.123.
-
-
-
-The following versions were EOL at the time the CVE was created but are known to be affected: from 8.5.38 through 8.5.100, from 7.0.100 through 7.0.109. Other unsupported versions may also be affected.
-
-
-
-Users are recommended to upgrade to version 11.0.29, 10.1.62 or 9.0.124 and switch to TLS-PSK to encrypt cluster communication, which fixes the issue.
-Note: Tomcat 11.0.28 was not released</description>
+    <title>CVE-2026-133537 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133537</link>
+    <guid isPermaLink="false">3d0d89e7d27b987d10ae9a48fbbf8c49</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 6.8 | A flaw was found in Keycloak. When evaluating access permissions, Keycloak Authorization Services improperly matches resource paths containing wildcard file extensions by evaluating only the file extension suffix and ignoring configured path prefixes. An authenticated remote attacker could exploit this vulnerability by requesting a restricted resource that shares a file extension with a more permissive resource, leading to an authorization bypass and unintended access to protected data.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-122676 - NVD - CVSS Score v3.1: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122676</link>
-    <guid isPermaLink="false">28bb45032d0f0d9652f4eb6ec1eb6da4</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v3.1: 8.5 | Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in PublishPress PublishPress Authors publishpress-authors allows Blind SQL Injection.This issue affects PublishPress Authors: from n/a through 4.18.0.</description>
+    <title>CVE-2026-133553 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133553</link>
+    <guid isPermaLink="false">90047aed61f6b3030919245704836aec</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v3.1: 7.8 | A flaw was found in crun. When copying files onto a tmpfs mounted with tmpcopyup, crun opens the destination a second time by name. A container that shares a writable volume with the container being created can change that path between the two lookups, so crun copies image files onto host files, including files under /proc/sys.</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133327 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133327</link>
-    <guid isPermaLink="false">e5c61f66615e315bd26716deed0df9fe</guid>
-    <description>Thursday 19 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was identified in Dolibarr ERP CRM up to 23.0.4. This affects the function dol_convert_file in the library htdocs/core/lib/files.lib.php of the component Document Upload. Such manipulation leads to code injection. The attack can be launched remotely. The exploit is publicly available and might be used. Upgrading to version 24.0.0 is able to mitigate this issue. The name of the patch is 9b6368b2a9eae3eec690b2ce22c4f291f0051540. Upgrading the affected component is advised.</description>
+    <title>CVE-2026-15223 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-15223</link>
+    <guid isPermaLink="false">7e5b72d0d3b79c2c91d537cecce912a2</guid>
+    <description>Friday 20 November 2026 | NVD | CVSS Score v4.0: 5.1 | An improper export control defect in ChatEventDispatchActivity (com.vivo.agent.business.chatmode.activity.ChatEventDispatchActivity) of Vivo Assistant allows a local malicious application to execute voice commands without user interaction via a crafted Intent, which may lead to unauthorized phone calls, SMS sending, access to private data such as location and calendar entries, and modification of system settings</description>
     <category>NVD</category>
-    <pubDate>Thu, 19 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-133435 - NVD - CVSS Score v3.1: 3.7</title>
