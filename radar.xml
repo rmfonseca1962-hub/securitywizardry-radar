@@ -5,31 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Nov 2026 19:01:35 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-134413 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134413</link>
-    <guid isPermaLink="false">0853b85424ede3d4e304765426115f4b</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 5.3 | Frappe ERPNext 11.0.0-beta before 15.121.4 contains a missing authorization vulnerability that allows authenticated users to read POS Profile cashier lists by calling a POS endpoint lacking record permission checks. Attackers, including portal users or users with no roles, can send crafted requests naming out-of-scope POS Profiles to retrieve their cashier data.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134414 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134414</link>
-    <guid isPermaLink="false">3da37c176e17050b46d83b9bc187ddef</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 5.3 | Frappe ERPNext 5.0.0 before 15.122.0 contains a missing authorization vulnerability in an Accounts module endpoint that allows authenticated users to read Taxes and Charges Template rows without permission checks. Attackers, including portal users or users with no assigned roles, can send crafted requests naming out-of-scope records to read account heads and tax rates.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134415 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134415</link>
-    <guid isPermaLink="false">4734d60f549d3f9f42368ce2beb2137b</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 5.3 | Frappe ERPNext 11.0.0-beta before 15.121.4 and 16.x before 16.36.0 contains a missing authorization vulnerability in a Selling module endpoint that returns customer loyalty point balances without checking the caller's permission on the requested records. Authenticated attackers, including portal users or users with no assigned roles, can send crafted requests naming records outside their permitted scope to read other customers' loyalty point balances.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 21 Nov 2026 20:02:17 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-134416 - NVD - CVSS Score v4.0: 5.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134416</link>
@@ -323,6 +299,30 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133993</link>
     <guid isPermaLink="false">6e98b17b5b2e0942cc94d93ce4fb4776</guid>
     <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 9.3 | A security flaw has been discovered in D-Link DIR-600L 2.17b02. This affects the function FUN_0040efb0 of the file gena.cgi of the component GENA Subscription Handler. Performing a manipulation of the argument service results in stack-based buffer overflow. The attack is possible to be carried out remotely. The exploit has been released to the public and may be used for attacks.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125294 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125294</link>
+    <guid isPermaLink="false">58255aa06e5cffad9a289908f49039d6</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 9.8 | The Nexter Blocks Pro plugin for WordPress is vulnerable to Privilege Escalation in all versions up to, and including, 5.0.10 via the `tpgb_ajax_register_user()` function. This is due to a byte-level denylist on the `tpgb_acf_key[]` and `tpgb_acf[]` parameters that fails to block Unicode look-alike characters — such as U+1E87 and U+00E7 in a key like `ẇp_çapabilities` — whose UTF-8 byte sequences do not match any ASCII-based pattern check, while the database's default accent-insensitive collation (`utf8mb4_unicode_ci` / `utf8mb4_0900_ai_ci`) treats the decorated key as equivalent to the canonical `wp_capabilities` row, causing `update_user_meta()` to overwrite the newly registered user's role with `administrator`. This makes it possible for unauthenticated attackers to register a new account bearing the full Administrator role, gaining complete control over the WordPress site including the ability to install plugins, modify files, and execute arbitrary code. The nonce required by the handler is publicly emitted on any page containing the tp-login-register block, making the full exploit chain — nonce retrieval, a single crafted registration POST, and the plugin's own `autologin` flow — trivially reachable on any default install where user registration is enabled. Successful exploitation causes the attacker's own account to receive the complete Administrator role.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134006 - NVD - CVSS Score v4.0: 1.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134006</link>
+    <guid isPermaLink="false">dec764ed423968c96ead515aa6bd9bc1</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 1.9 | A weakness has been identified in Moonshot AI Kimi Code up to 2.7.2. This vulnerability affects the function guardToolExecution of the file packages/agent-core-v2/src/features/plan/planService.ts of the component Plan Mode Permission Guard. Executing a manipulation can lead to improper authorization. The attack requires local access. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134007 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134007</link>
+    <guid isPermaLink="false">3ea428faea035aa7bad0a1b2f71753ef</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 2.1 | A security vulnerability has been detected in itsourcecode Banking Management System 1.0. This issue affects some unknown processing of the file manage_handover.php. The manipulation of the argument ID leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed publicly and may be used.</description>
     <category>NVD</category>
     <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
   </item>
