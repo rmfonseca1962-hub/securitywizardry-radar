@@ -5,59 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Nov 2026 15:02:07 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-129344 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129344</link>
-    <guid isPermaLink="false">9dba044ec71f6224d4dce29a17cbdbd7</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 8.2 | Uncaught Exception vulnerability in phoenixframework phoenix allows an unauthenticated attacker to cause a denial of service via a client-selected legacy serializer on binary channel broadcasts.
-
-When an application broadcasts {:binary, data} payloads on a channel topic, any client that connects without a vsn parameter, or with vsn=1.0.0, and joins that topic makes those broadcasts fail. Phoenix.Channel.Server.send/4 encodes each broadcast with every subscriber's own serializer inside the PubSub dispatch loop, calling fastlane!/1 with no rescue, and the negotiated Phoenix.Socket.V1.JSONSerializer raises Protocol.UndefinedError on a binary payload. Every binary broadcast on the topic then crashes the broadcasting process and skips every subscriber dispatched after the attacker. For broadcasts arriving from other nodes the loop runs in the PubSub adapter worker, whose repeated crashes restart the PubSub supervisor and empty the node's subscription registry while sockets stay connected.
-
-This issue affects phoenix: from 1.5.7 before 1.5.16, from 1.6.0-rc.0 before 1.6.18, from 1.7.0-rc.0 before 1.7.25, and from 1.8.0-rc.0 before 1.8.17.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107654 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107654</link>
-    <guid isPermaLink="false">4d8fe78d0e17a7dfc610ca084817448b</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.5 | The One to one user Chat by WPGuppy plugin for WordPress is vulnerable to generic SQL Injection via the 'userId' parameter in all versions up to, and including, 1.1.6 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The plugin's permission callback is trivially bypassed because it validates a JWT that the plugin itself signs using an attacker-supplied value from the guppy_guest_account cookie, and the guest code path (userType=0) skips the get_userdata() check that would confirm the userId corresponds to a real WordPress user.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107747 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107747</link>
-    <guid isPermaLink="false">56976ca4a03380aebf88548acd4f7975</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 6.4 | The WP Custom Admin Interface plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'first_name' parameter in all versions up to, and including, 7.43 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107771 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107771</link>
-    <guid isPermaLink="false">41d73a2249d63582bb903141001ae9f6</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 5.4 | The Speed Booster Pack ⚡ PageSpeed Optimization Suite plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'author' parameter in all versions up to, and including, 4.5.9.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires that the plugin's Lazy load media option is enabled and that the attacker's comment is approved by a site administrator or via auto-approval.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-109196 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109196</link>
-    <guid isPermaLink="false">a5bec8eae435f463820576c9d21002ad</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 6.4 | The FV Player 8 plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'data.videos[].fv_wp_flowplayer_field_splash' parameter in all versions up to, and including, 8.1.9 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The wp_ajax_fv_player_db_save handler's ownership and capability check is conditional on the presence of the data.update field; omitting it bypasses authorization entirely, allowing a Subscriber-level attacker to overwrite any existing video record using an enumerable video ID — and the valid nonce required by the endpoint is issued to every logged-in visitor of any page hosting the publicly accessible [fvplayer_editor] shortcode.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116518 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116518</link>
-    <guid isPermaLink="false">2b34ca7c6a9ff6caa3247e01bd838a95</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The ElasticPress plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'orderby' parameter in all versions up to, and including, 5.3.5 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The injected payload is stored in the ep_query_log transient for up to 24 hours after a single unauthenticated frontend GET request, and only fires when an administrator subsequently opens the Status Report page and expands the Failed Queries panel.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 21 Nov 2026 16:00:31 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-119157 - NVD - CVSS Score v3.1: 6.4</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119157</link>
@@ -327,6 +275,54 @@ This issue affects phoenix: from 1.5.7 before 1.5.16, from 1.6.0-rc.0 before 1.6
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129814</link>
     <guid isPermaLink="false">f5a7f428c9ded2ee0085ab5e5bc250f1</guid>
     <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 3.1 | The SDO Information Get Object Description and Get Entry Description responses copy the object or entry name into the mailbox data area and then write a null terminator byte. The copy loops ran up to the last available byte in the buffer, leaving no room for the terminator. When an object or entry name exactly fills the available space the terminator is written one byte past the end of the mailbox data buffer.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2025-61963 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-61963</link>
+    <guid isPermaLink="false">bba9d4ecf438a695c2023e05b62cf90e</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 8.4 | Improper input validation within the AmdPlatformRasSmm driver could allow an attacker with privileged access to overwrite SMRAM, potentially resulting in arbitrary code execution.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-0462 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-0462</link>
+    <guid isPermaLink="false">c320db833e23f7262208050c62a0864f</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 5.9 | Insufficient Granularity of Access Control in AMD Secure Encrypted Virtualization (SEV) firmware could allow a malicious hypervisor to potentially redirect accesses to MMIO memory resulting in loss of guest memory integrity.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133983 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133983</link>
+    <guid isPermaLink="false">ffd207b242fbdeb403da440bb0c66867</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 6.9 | A vulnerability was detected in eigent-ai eigent up to 1.0.2. Affected by this vulnerability is an unknown functionality of the file backend/app/controller/chat_controller.py of the component Local Agent Control API. Performing a manipulation results in missing authentication. The attack may be initiated remotely. Upgrading to version 1.0.3 addresses this issue. The patch is named 59f43afcb1b0ba7b2de8c65d585124f196c4aa17. It is recommended to upgrade the affected component.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-28235 - NVD - CVSS Score v4.0: 6.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-28235</link>
+    <guid isPermaLink="false">e0e002206327e150123b79960b8ad903</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 6.7 | Improper address validation in the AMD RAID Configuration Driver could allow an attacker with administrative access to read arbitrary kernel memory, potentially resulting in loss of confidentiality.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-40671 - NVD - CVSS Score v4.0: 4.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-40671</link>
+    <guid isPermaLink="false">3b61ddbb28a1f48c6f29f3cb29cf5c0f</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 4.6 | Incomplete cleanup during VMRUN error handling could allow access to a Secure Encrypted Virtualization-Secure Nested Paging (SEV-SNP) guest register state, potentially resulting in information disclosure and impacts to confidentiality.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-74127 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-74127</link>
+    <guid isPermaLink="false">9c2cfbe9948f2fac441715f5cb48918c</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 9.4 | Improper verification of a cryptographic signature in the PSP Boot ROM of AMD Zeppelin (Zen1/Zen+) processors could allow an attacker with local access to the SPI flash to bypass secure boot authentication, potentially resulting in arbitrary unsigned code execution at full Platform Security Processor privilege, loss of confidentiality, loss of integrity of the host boot chain, and persistent loss of availability.</description>
     <category>NVD</category>
     <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
   </item>
