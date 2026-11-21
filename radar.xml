@@ -5,31 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Nov 2026 11:03:09 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-104904 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104904</link>
-    <guid isPermaLink="false">be4b9434d5870191dadd1cb2ce0d9c47</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 6.5 | The Shortcodes Ultimate plugin for WordPress is vulnerable to Local File Inclusion in versions up to, and including, 7.9.1 This is due to su_get_current_url() interpolating the raw Host request header into the authority portion of a URL that is then passed to esc_url() — which by design preserves '[' and ']' inside the authority so IPv6 literal hosts remain valid — and the [su_qrcode] shortcode substituting that value into its data attribute (the documented %CURRENT_URL% token) before feeding it to do_shortcode(). This makes it possible for unauthenticated attackers to include arbitrary PHP files that reside within the active theme's root directory (bounded because '/' inside an attribute value terminates parse_url()'s host and is then percent-encoded and stripped), and — when the shipped-default 'Unsafe features' option remains on — to read arbitrary post meta of any post, on any front-end page that renders [su_qrcode data=&quot;%CURRENT_URL%&quot;].</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107713 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107713</link>
-    <guid isPermaLink="false">3cd78848dcf5d6030f68f1e626b0cf7c</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Flutterwave Payments plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'form_id' parameter in all versions up to, and including, 1.0.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The storing endpoint is accessible without authentication because the required nonce is publicly exposed on any front-end page rendering the plugin's [flw-pay-form], [flw-pay-button], or [flw-donation-form] shortcodes, allowing any unauthenticated visitor to scrape and reuse it.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116619 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116619</link>
-    <guid isPermaLink="false">ca4d838b96625b84e1c46daab98eef97</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The MetForm – Contact Form, Survey, Quiz, Conditional Forms, Form Templates &amp; Custom Form Builder for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'mf-te (the form-builder-chosen name of the Text Editor field)' parameter in all versions up to, and including, 4.3.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires a published form containing a Text Editor block; the form's public markup exposes the submission nonce as data-form-nonce, allowing any unauthenticated visitor to satisfy the only submission barrier and store the malicious payload.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 21 Nov 2026 12:00:33 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-118059 - NVD - CVSS Score v3.1: 5.4</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118059</link>
@@ -323,6 +299,40 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-87092</link>
     <guid isPermaLink="false">a4549fc4dd80a6e9ac251389253f2626</guid>
     <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 6.5 | The Unlimited Elements For Elementor plugin for WordPress is vulnerable to Directory Traversal in all versions up to, and including, 2.0.26 via the getFileContentByUrl function. This makes it possible for authenticated attackers, with contributor-level access and above, to read the contents of arbitrary files on the server, which can contain sensitive information. The nonce protecting the get_addon_output_data AJAX endpoint is emitted on the Elementor editor page, which is accessible to Contributors, making the endpoint reachable by any authenticated user at that privilege level or above.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2022-4998 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2022-4998</link>
+    <guid isPermaLink="false">743dc1bb4b22aab254967f0f669c73f7</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was identified in kanishka-linux reminiscence 0.3 on Windows. This issue affects the function convert_html_pdf_with_chromium of the file pages/dbaccess.py of the component Chromium HTML-to-PDF Conversion Pipeline. Such manipulation of the argument url_name leads to os command injection. The attack can be launched remotely. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-128361 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128361</link>
+    <guid isPermaLink="false">f6d336c976957456d7a8965daef584e8</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 8.2 | Improper Input Validation vulnerability in phoenixframework phoenix (Phoenix.Presence) allows an attacker who can join a channel to cause a denial of service via a non-string presence key.
+
+track/3,4 accepts any term as the presence key, such as a JSON object taken from a join payload. The key is converted with to_string/1 only later, in Phoenix.Presence.group/1, which raises Protocol.UndefinedError on a map. group/1 runs whenever presences are listed and when each presence diff is broadcast, together with the application's fetch/2, which can likewise raise on an unexpected key. Once such a key is tracked, every process that lists presences on the topic crashes, typically each channel that joins it, and presence diffs for the topic are lost.
+
+From 1.7.0 the diff runs in a Task.Supervisor.async task linked to the tracker shard, and Phoenix.Presence.handle_info/2 has no clause for its failure. The shard then terminates, taking down every channel and LiveView process tracked on it and erasing presence state for all its topics. Repeated joins exhaust the restart intensity and take down the application supervisor.
+
+This issue affects phoenix: from 1.2.0 before 1.5.16, from 1.6.0-rc.0 before 1.6.18, from 1.7.0-rc.0 before 1.7.25, and from 1.8.0-rc.0 before 1.8.17.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129344 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129344</link>
+    <guid isPermaLink="false">9dba044ec71f6224d4dce29a17cbdbd7</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v4.0: 8.2 | Uncaught Exception vulnerability in phoenixframework phoenix allows an unauthenticated attacker to cause a denial of service via a client-selected legacy serializer on binary channel broadcasts.
+
+When an application broadcasts {:binary, data} payloads on a channel topic, any client that connects without a vsn parameter, or with vsn=1.0.0, and joins that topic makes those broadcasts fail. Phoenix.Channel.Server.send/4 encodes each broadcast with every subscriber's own serializer inside the PubSub dispatch loop, calling fastlane!/1 with no rescue, and the negotiated Phoenix.Socket.V1.JSONSerializer raises Protocol.UndefinedError on a binary payload. Every binary broadcast on the topic then crashes the broadcasting process and skips every subscriber dispatched after the attacker. For broadcasts arriving from other nodes the loop runs in the PubSub adapter worker, whose repeated crashes restart the PubSub supervisor and empty the node's subscription registry while sockets stay connected.
+
+This issue affects phoenix: from 1.5.7 before 1.5.16, from 1.6.0-rc.0 before 1.6.18, from 1.7.0-rc.0 before 1.7.25, and from 1.8.0-rc.0 before 1.8.17.</description>
     <category>NVD</category>
     <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
   </item>
