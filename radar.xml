@@ -5,161 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sat, 21 Nov 2026 08:00:58 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-121154 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121154</link>
-    <guid isPermaLink="false">596eb76f2776d8ee3a2b57b3d33ea514</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The UpdraftPlus: WP Backup &amp; Migration Plugin WordPress plugin before 2.26.16.26, UpdraftPlus: WP Backup &amp; Migration Plugin WordPress plugin before 1.26.16 do not keep serialized string lengths consistent when their database search and replace processes certain serialized values, allowing users with a role as low as Subscriber to plant data that becomes an attacker-chosen PHP object after an administrator runs a URL-lengthening search and replace or a migration restore.
-
-When the replacement changes the length of the text, the declared string lengths inside the stored value no longer match and the corrupted value is written back, so when WordPress later reads it the trailing bytes are parsed as further serialized structure, including an object of a class the attacker named. No gadget chain is known in the UpdraftPlus: WP Backup &amp; Migration Plugin WordPress plugin before 2.26.16.26, UpdraftPlus: WP Backup &amp; Migration Plugin WordPress plugin before 1.26.16 themselves; further impact depends on classes available from other installed code.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121155 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121155</link>
-    <guid isPermaLink="false">1175113c2b6cb819d715ddc47a4dc9e1</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The UpdraftPlus: WP Backup &amp; Migration Plugin WordPress plugin before 2.26.16.26, UpdraftPlus: WP Backup &amp; Migration Plugin WordPress plugin before 1.26.16 do not preserve the escaping of JSON-formatted database values when they rewrite the database during a restore to a new address or server, which could allow unauthenticated attackers to plant harmless-looking escaped markup, for example in a comment author name, that becomes Stored Cross-Site Scripting once an administrator performs such a restore.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123663 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123663</link>
-    <guid isPermaLink="false">ec7816d842047b96c7734edaa85aa1c2</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The ProfilePress  WordPress plugin before 4.18.1 takes the role for an account registered through a combined login and registration form from the separate registration form that shares its numeric ID, allowing unauthenticated users to register with the elevated role, such as Editor, assigned by an unpublished registration form.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-125932 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125932</link>
-    <guid isPermaLink="false">00d60eb7708969b370be24ac39065065</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Coupon Creator plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'metavalue (with metakeyinput=cctor_expiration)' parameter in all versions up to, and including, 3.6.5 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit is possible because the cctor_coupon post type advertises 'custom-fields' support, enabling WordPress core's Custom Fields metabox for Contributors, and the unregistered cctor_expiration meta key causes sanitize_meta() to be a no-op, allowing raw HTML to be stored verbatim in the database via a single AJAX request.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-126039 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126039</link>
-    <guid isPermaLink="false">73b88c01c712020ac1e75db5588f0fb8</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The Hide My WP Ghost  WordPress plugin before 7.0.19 does not limit one of its HTML output rewriting patterns to the markup it targets, allowing unauthenticated attackers to inject HTML attributes through a comment author name that execute as Stored XSS for any visitor, including logged-in administrators, on pages that list recent comments.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127002 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127002</link>
-    <guid isPermaLink="false">f273242c403c03e83273bbd943f0c688</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The RSVP and Event Management WordPress plugin before 2.7.19 does not escape a submitted value before outputting it back in its RSVP form when the form is re-displayed after a failed submission, leading to a Reflected Cross-Site Scripting which could be used against high-privilege users such as admins.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130891 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130891</link>
-    <guid isPermaLink="false">dd79be699680e794680549b987fb7ac8</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The Newsletter  WordPress plugin before 9.4.0 does not check that a visitor is really the subscriber before showing them newsletters marked as private, and accepts a weaker subscriber identifier that anyone can obtain by submitting a known subscriber's email address to the public subscription form, allowing unauthenticated attackers who know a subscriber's email address to read every private newsletter sent to that subscriber.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130892 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130892</link>
-    <guid isPermaLink="false">429b442aaefa836d52c0f71f96f89320</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The Newsletter  WordPress plugin before 9.4.0 does not properly validate the destination of the redirect performed when a subscriber changes their list membership from a newsletter link, checking only that it begins with the site's URL, allowing unauthenticated attackers to redirect users to external sites whose address starts with the site's URL.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130894 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130894</link>
-    <guid isPermaLink="false">16467d55f22da9bdb542d4decf3da591</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The Newsletter  WordPress plugin before 9.4.0 does not protect its unsubscription actions against Cross-Site Request Forgery for subscribers it identifies from its own tracking cookie, allowing attackers to unsubscribe a subscriber from the site's newsletter by making them visit a malicious page.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131971 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131971</link>
-    <guid isPermaLink="false">c9ff66c1b1e229fefb44b781adee07a8</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The Payment forms, Buy now buttons, and Invoicing System | GetPaid WordPress plugin before 2.8.63 does not check that the visitor is allowed to view an invoice before rendering it through its single-invoice shortcode, and its payment-form embed page lets unauthenticated users render that shortcode for any invoice ID, disclosing customers' names, billing addresses, phone numbers, line items and payment status.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131975 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131975</link>
-    <guid isPermaLink="false">b0cd46523002e3ef201d3db3b06a94a0</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The Shortcodes Ultimate  WordPress plugin before 7.9.1 does not prevent format specifiers in a shortcode attribute from being interpreted when building navigation menu markup, which could allow users with a role as low as Contributor to perform Stored Cross-Site Scripting attacks.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131976 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131976</link>
-    <guid isPermaLink="false">d1e866d9c6844b79cdacae037c0b6309</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The Shortcodes Ultimate  WordPress plugin before 7.9.1 does not prevent placeholders in a shortcode attribute from being expanded with unescaped nested shortcode output, allowing users with a role as low as contributor to perform Stored Cross-Site Scripting attacks.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131977 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131977</link>
-    <guid isPermaLink="false">53e59fd77626e6b8c62cd1dd4529ef3d</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The Shortcodes Ultimate  WordPress plugin before 7.9.1 does not escape the error message returned when a remote feed cannot be retrieved before outputting it, which could allow users with the contributor role and above to perform Stored Cross-Site Scripting attacks against administrators by pointing the feed at a server they control.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131978 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131978</link>
-    <guid isPermaLink="false">f08dc05385daca8f58d457d2c3fda5aa</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The Shortcodes Ultimate  WordPress plugin before 7.9.1 does not restrict which PHP functions a shortcode's filter attribute can call, allowing users with a role as low as Contributor to remove WordPress' term-slug sanitization and perform SQL injection attacks through another shortcode's taxonomy term attribute.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131979 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131979</link>
-    <guid isPermaLink="false">16c0c40c924ea35c0914e684fd6888b9</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The Shortcodes Ultimate  WordPress plugin before 7.9.1 does not restrict the content type of its lightbox shortcode, allowing users with the contributor role and above to make the lightbox fetch HTML from an attacker-controlled server and insert it into the page unsanitised, leading to Stored Cross-Site Scripting when a user opens the lightbox.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131983 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131983</link>
-    <guid isPermaLink="false">9048b896a1c121859400983e0b329362</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The FluentCommunity  WordPress plugin before 2.13.0 does not apply the per-link visibility rules of space sidebar links when listing spaces in its space discovery feature, allowing unauthenticated visitors to retrieve the titles and URLs of links restricted to logged-in users or specific memberships, as well as disabled links, for every public and private space.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131984 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131984</link>
-    <guid isPermaLink="false">6ab45bb733623b84bdf8d1a1da86d970</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The FluentCommunity  WordPress plugin before 2.7.0 does not verify that the user is allowed to manage the space it actually modifies or deletes, allowing a user who administers any one space to modify or permanently delete any other space on the site, together with its posts, comments, reactions and memberships.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131985 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131985</link>
-    <guid isPermaLink="false">0024348774b26913eaa3ba25215c10d9</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The FluentCommunity  WordPress plugin before 2.13.0 does not verify that a referenced media item belongs to the user, or is not already attached elsewhere, before re-linking it to their own content, and its media identifiers are predictable from public post data, allowing users with a role as low as Subscriber to take over and delete media uploaded by other users, including administrators.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132042 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132042</link>
-    <guid isPermaLink="false">20dd7db4ae55b1c327220abbbb07390f</guid>
-    <description>Saturday 21 November 2026 | NVD | CVSS: não informado | The Keywords to Links Converter WordPress plugin before 2.2.5 does not sanitise and escape a parameter before using it in a SQL statement via an AJAX action available to any authenticated user, allowing users with a role as low as Subscriber to perform SQL injection attacks and read arbitrary data from the database.</description>
-    <category>NVD</category>
-    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sat, 21 Nov 2026 09:01:39 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-132044 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132044</link>
@@ -325,6 +171,158 @@ When the replacement changes the length of the text, the declared string lengths
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131577</link>
     <guid isPermaLink="false">691c259e2b3fbc4a9d320e4b98b6acf5</guid>
     <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 4.3 | The WSMS (formerly WP SMS): SMS Notifications, OTP Login and WooCommerce SMS plugin for WordPress is vulnerable to authorization bypass in all versions up to, and including, 7.2.14. This is due to the plugin not properly verifying that a user is authorized to perform an action. This makes it possible for authenticated attackers, with author-level access and above, to send arbitrary SMS messages to attacker-chosen phone numbers from the site's trusted sender ID, incurring per-message gateway charges to the site owner and enabling SMS spam or phishing campaigns.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-104904 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-104904</link>
+    <guid isPermaLink="false">be4b9434d5870191dadd1cb2ce0d9c47</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 6.5 | The Shortcodes Ultimate plugin for WordPress is vulnerable to Local File Inclusion in versions up to, and including, 7.9.1 This is due to su_get_current_url() interpolating the raw Host request header into the authority portion of a URL that is then passed to esc_url() — which by design preserves '[' and ']' inside the authority so IPv6 literal hosts remain valid — and the [su_qrcode] shortcode substituting that value into its data attribute (the documented %CURRENT_URL% token) before feeding it to do_shortcode(). This makes it possible for unauthenticated attackers to include arbitrary PHP files that reside within the active theme's root directory (bounded because '/' inside an attribute value terminates parse_url()'s host and is then percent-encoded and stripped), and — when the shipped-default 'Unsafe features' option remains on — to read arbitrary post meta of any post, on any front-end page that renders [su_qrcode data=&quot;%CURRENT_URL%&quot;].</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107713 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107713</link>
+    <guid isPermaLink="false">3cd78848dcf5d6030f68f1e626b0cf7c</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Flutterwave Payments plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'form_id' parameter in all versions up to, and including, 1.0.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The storing endpoint is accessible without authentication because the required nonce is publicly exposed on any front-end page rendering the plugin's [flw-pay-form], [flw-pay-button], or [flw-donation-form] shortcodes, allowing any unauthenticated visitor to scrape and reuse it.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-116619 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116619</link>
+    <guid isPermaLink="false">ca4d838b96625b84e1c46daab98eef97</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The MetForm – Contact Form, Survey, Quiz, Conditional Forms, Form Templates &amp; Custom Form Builder for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'mf-te (the form-builder-chosen name of the Text Editor field)' parameter in all versions up to, and including, 4.3.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires a published form containing a Text Editor block; the form's public markup exposes the submission nonce as data-form-nonce, allowing any unauthenticated visitor to satisfy the only submission barrier and store the malicious payload.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118059 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118059</link>
+    <guid isPermaLink="false">2eb2d3d6459acc0751cdb9fcc9058e2c</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 5.4 | The MailerLite – Signup forms (official) plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'form_id' parameter in all versions up to, and including, 1.7.27 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires an administrator to approve a comment containing the malicious shortcode, after which any page rendering the Latest Comments block with excerpts enabled will trigger the injected script for all visitors.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119632 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119632</link>
+    <guid isPermaLink="false">5231ab2d5776be53ad6d19423095d6be</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Forminator Forms – Contact Form, Payment Form &amp; Custom Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'textarea-N (rich-text draft value, saved as Save-and-Continue draft meta)' parameter in all versions up to, and including, 1.58.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the targeted form to have a Rich-Text Textarea field with Save-and-Continue enabled and public submission permissions — once a crafted draft is saved, the payload executes whenever any user, including an administrator, resumes the draft or opens the Draft ID link from the Forminator Submissions screen.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120485 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120485</link>
+    <guid isPermaLink="false">9f97457ca2f1018dc28923b62f9b2d05</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Admin Columns plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'url' parameter in all versions up to, and including, 7.1.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires that an administrator has added the Author URL column to the Comments screen layout and that the site accepts unauthenticated comments, both of which are default WordPress and plugin configurations.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120486 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120486</link>
+    <guid isPermaLink="false">305db4b753d9af6da47513bd4049962e</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 5.4 | The ShortPixel Image Optimizer – Optimize Images, Convert WebP &amp; AVIF plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 6.6.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires the administrator to have enabled the 'Deliver WebP/AVIF images using the ShortPixel CDN' (useCDN) option, after which any unauthenticated visitor can submit a comment containing a crafted url() payload inside an allowed HTML construct such as &lt;acronym title=&quot;...&quot;&gt;, which WordPress comment kses preserves on save; the dangerous attribute-boundary breakout occurs only at render time inside the ob_start output-buffer rewriter, where kses does not apply.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120529 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120529</link>
+    <guid isPermaLink="false">fdf255c20b642f5d5785527d962ce73a</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Admin Columns plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'HTTP_USER_AGENT' parameter in all versions up to, and including, 7.1.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The kses sanitization pass in classes/Sanitize/Kses.php uses wp_kses_allowed_html('post') augmented with iframe[src] and the data: protocol; because wp_kses_attr_check accepts any data-* attribute on any allowed tag without inspecting its value, a payload embedded inside a data-ac-tip attribute survives intact and is subsequently assigned to innerHTML by assets/js/table.js, bypassing the apparent mitigation entirely.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120676 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120676</link>
+    <guid isPermaLink="false">91e7e83202ee5a358d0aed55e281854b</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Forminator Forms – Contact Form, Payment Form &amp; Custom Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'upload-1 (the File Upload field's element_id)' parameter in all versions up to, and including, 1.58.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This vulnerability is an incomplete fix for CVE-2024-1794; exploitation requires that the Forminator form's File Upload field is left at plugin defaults (no 'custom-files' restriction configured) and that the server maps no Content-Type to the .rtx extension — the default behavior of the Debian/Ubuntu Apache package used by the official WordPress Docker image and many shared hosts.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120679 - NVD - CVSS Score v3.1: 5.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120679</link>
+    <guid isPermaLink="false">d72845ef9e5b7615c2c2dc28b625116e</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 5.4 | The Redux Framework plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the '&lt;opt_name&gt;[&lt;color-field-id&gt;]' parameter in all versions up to, and including, 4.5.17 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The wp_kses_post() sanitization applied via Redux_Helpers::sanitize_array() is bypassed — not broken — because an &amp;lt;a class=&quot;thickbox&quot; title=&quot;&amp;amp;lt;img onerror=...&amp;amp;gt;&quot;&amp;gt; payload uses only kses-allowed tags and attributes, with the entity-encoded onerror handler surviving storage as inert text that the browser decodes when WordPress core's thickbox.js reads the title attribute and writes it into the modal as HTML. Successful exploitation additionally requires an action by an administrator — the attacker cannot trigger the vulnerability on their own.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120738 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120738</link>
+    <guid isPermaLink="false">9e30ca6e28b6507b2f9b8144a332195d</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Organize Media Folder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'EXIF.DateTimeOriginal' parameter in all versions up to, and including, 2.00 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This bypass of wp_filter_post_kses means the injected payload survives regardless of the uploader's unfiltered_html capability; Subscriber-level access becomes sufficient when a front-end attachment-upload integration such as bbPress with forumAttachments is active, and exploitation requires no special configuration because the %created_timestamp% placeholder is included in the caption template by default. Exploitation by attackers with subscriber-level access and above requires that bbPress and gd-bbpress-attachments (forumAttachments) are installed and configured so that Subscribers/Participants can post attachments through a frontend forum form. On a default installation, where that is not configured, the vulnerability requires attackers with author-level access and above.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125039 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125039</link>
+    <guid isPermaLink="false">ea10e98778568a881c5614518cffab51</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The EZ SQL Reports Shortcode Widget and DB Backup plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'User-Agent header (stored to comment_agent)' parameter in all versions up to, and including, 5.26.45 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires that an administrator has saved a report whose SQL query selects attacker-controlled data such as comment_agent, and that the attacker can identify the saved report's slug — a condition trivially met when the administrator publishes the report on a public page via the [SQLREPORT] shortcode.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126011 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126011</link>
+    <guid isPermaLink="false">ad36cf9a16971a807bb2dea082a864b4</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Photo Gallery, Sliders, Proofing and Themes – NextGEN Gallery plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 4.5.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This requires the site administrator to have configured the Thickbox lightbox effect with the &quot;Try to apply to all images&quot; context (thumbEffectContext=all_images), and exploitation additionally depends on an administrator approving the attacker's initial comment so that subsequent comments from that author are auto-approved.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130150 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130150</link>
+    <guid isPermaLink="false">6d06714288ac30a6ad5a611305d1bab9</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 4.7 | The Product Import Export for WooCommerce – CSV Product Importer &amp; Exporter plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'author (initial store via wp-comments-post.php) / CSV cell on import' parameter in all versions up to, and including, 2.6.9 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit requires an administrator to approve the attacker's review, then export and re-import it using the plugin's default column mapping, with the import taking the INSERT branch — which occurs automatically on any site whose database table prefix is not the literal 'wp_', when the CSV has no comment_ID mapping, or when the original review has been trashed. Successful exploitation additionally requires an action by an administrator — the attacker cannot trigger the vulnerability on their own.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131822 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131822</link>
+    <guid isPermaLink="false">17a35667339d9b98bb2adc733af5b5ed</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Contact Form to Any API plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'your-message (any CF7 form field)' parameter in all versions up to, and including, 3.0.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The malicious payload is stored via a single unauthenticated POST to Contact Form 7's public REST feedback endpoint, which uses permission_callback __return_true and requires no authentication or prior interaction to submit.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132620 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132620</link>
+    <guid isPermaLink="false">ddedc75fb486e89761aa99ce692128d2</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The WPBot – AI ChatBot for WordPress &amp; Growth Suite: SEO, AI Writer, Email Marketing, Social Media plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'text' parameter in all versions up to, and including, 9.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The exploit is triggered when an administrator opens the Chat Sessions screen, at which point the plugin's bundled Bootstrap 3.3.7 affix data-API passes the attacker-controlled data-target attribute value to jQuery as HTML, executing the injected script in the administrator's session.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133361 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133361</link>
+    <guid isPermaLink="false">616e808c91483522b3e451620dc3ed6d</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The BlockStrap Page Builder – Bootstrap Blocks plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'comment' parameter in all versions up to, and including, 0.1.65 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Successful exploitation requires that the attacker has previously had at least one comment approved for a given name and email address, allowing subsequent comments from that author to bypass moderation under WordPress's default policy; exploitation is also limited to sites using a block theme, which is the WordPress default.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133369 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133369</link>
+    <guid isPermaLink="false">c284ae1cf7af3a768e5dbf62293dac0e</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 6.4 | The CodePeople Post Map for Google Maps plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'cpm_map[api_key]' parameter in all versions up to, and including, 1.3.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The settings form nonce is itself rendered on the Subscriber-accessible page (reachable via a trailing-slash bypass of the slug guard), making nonce verification no real barrier to the unauthorized save.</description>
+    <category>NVD</category>
+    <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-96991 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96991</link>
+    <guid isPermaLink="false">8d9731926305cc0efdb487dee6491b8d</guid>
+    <description>Saturday 21 November 2026 | NVD | CVSS Score v3.1: 7.2 | The SchemaEngine AI – AI Schema Markup, Reviews &amp; Rich Snippets for SEO plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Comment Content via WebPage JSON-LD Description in all versions up to, and including, 3.1.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires that the target page renders a core/latest-comments block with the displayExcerpt option enabled, causing comment content to be incorporated into the WebPage JSON-LD description output in wp_head.</description>
     <category>NVD</category>
     <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
   </item>
