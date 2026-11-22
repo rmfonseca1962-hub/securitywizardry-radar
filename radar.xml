@@ -5,31 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Nov 2026 04:02:02 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-134666 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134666</link>
-    <guid isPermaLink="false">99dbe229d5c02ed851bc987c4d758eb5</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability in the XMT-A scene loader because xmt_node_end() frees unattached nodes but leaves them on the parser node stack. Attackers can persuade users to process a crafted XMT file whose text content makes xmt_text_content() pass the freed node to gf_node_get_tag(), reading freed heap memory and crashing MP4Box.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134667 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134667</link>
-    <guid isPermaLink="false">83fde744f5d283b78937401167637646</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a stack-based buffer overflow vulnerability in xmt_resolve_od_links() that allows attackers to corrupt stack memory via over-long object descriptor URL fragments. Attackers can craft an XMT scene file whose URL fragment overflows the fixed 5000-byte szURL buffer via sprintf, crashing MP4Box when a user loads it.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134668 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134668</link>
-    <guid isPermaLink="false">4f0a7c50e6f381db20053703b9f9bae5</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability in the XMT scene loader that allows attackers to corrupt heap memory when xmt_node_end() discards an out-of-scope node without resetting command-buffer state. Attackers can supply a crafted XMT file that leaves parser-&gt;command_buffer and parser-&gt;command dangling, causing later parsing to access freed memory and crash MP4Box.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 22 Nov 2026 06:01:23 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-134669 - NVD - CVSS Score v4.0: 6.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134669</link>
@@ -323,6 +299,30 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134572</link>
     <guid isPermaLink="false">e4ef814f7f68d7f73248be2f70047cc3</guid>
     <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was identified in itsourcecode Insurance Management System 1.0. Affected by this issue is some unknown functionality of the file /deleteAgent.php. The manipulation of the argument agent_id leads to sql injection. Remote exploitation of the attack is possible. The exploit is publicly available and might be used.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134616 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134616</link>
+    <guid isPermaLink="false">dc8be925221a55b5260c3b67cb9efd5f</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 2.1 | A security vulnerability has been detected in itsourcecode Insurance Management System 1.0. The affected element is an unknown function of the file /deleteClient.php. Such manipulation of the argument client_id leads to sql injection. The attack may be performed from remote. The exploit has been disclosed publicly and may be used.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134623 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134623</link>
+    <guid isPermaLink="false">d81a71c638272b20e5f6eccf32c5bd24</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 5.5 | A flaw has been found in Microweber up to 2.0.20. This impacts the function UserManager::make_logged of the file src/MicroweberPackages/App/Http/Controllers/ApiController.php of the component Generic API Dispatcher. This manipulation causes improper access controls. Remote exploitation of the attack is possible. The exploit has been published and may be used. Upgrading to version 2.0.21 will fix this issue. Patch name: e639d26e61b989b100f8b6f6bb78c0cecca79b99. You should upgrade the affected component.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134651 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134651</link>
+    <guid isPermaLink="false">5580f70746ea02a5cebccbfe742f1a81</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 6.8 | A flaw was found in Quay. This vulnerability allows an authenticated remote attacker holding a restricted, short-lived JSON Web Token (JWT) to achieve privilege escalation. Because Quay improperly accepts scoped registry bearer tokens as valid robot account passwords, an attacker can authenticate directly as the robot account and obtain broader permissions. Consequently, unauthorized access persists and enables the attacker to generate fresh tokens even after the robot account's password has been reset.</description>
     <category>NVD</category>
     <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
   </item>
