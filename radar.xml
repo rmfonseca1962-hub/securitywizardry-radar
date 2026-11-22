@@ -5,95 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Nov 2026 06:01:23 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-134669 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134669</link>
-    <guid isPermaLink="false">b195ff515e7d6088abb397dee944aec6</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a heap-based buffer over-read vulnerability in gf_xml_sax_peek_node() in src/utils/xml_parser.c that lets attackers read past the heap line buffer. Attackers can craft an XMT file whose ROUTE or command references a later-defined node, crashing MP4Box when a user imports it.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134670 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134670</link>
-    <guid isPermaLink="false">358cb2f0d589968b877b14da19c00625</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability in xmt_node_end() in src/scene_manager/loader_xmt.c that writes to freed heap memory when replacing single-node field commands. Attackers can persuade users to process a crafted XMT file where a Conditional node owning the command is unregistered, corrupting heap memory and crashing MP4Box.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134671 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134671</link>
-    <guid isPermaLink="false">d08080fe70e1882252c812a8a6f99e2d</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability in the XMT-A scene loader that allows attackers to corrupt heap memory via crafted XMT files. Attackers can persuade a user to process an XMT file whose discarded out-of-scope nodes cause gf_node_unregister() to dereference a freed child, crashing the process.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134672 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134672</link>
-    <guid isPermaLink="false">5f274c5e3bdcf19e5abb9a0b26e1b239</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains an uncontrolled recursion vulnerability in xmt_discard_subtree() in src/scene_manager/loader_xmt.c that allows attackers to exhaust the call stack. Attackers can persuade a user to process a crafted XMT file with deeply nested discarded SFNode and MFNode fields to crash MP4Box.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134673 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134673</link>
-    <guid isPermaLink="false">7699d3e7dae4bd0a7953c0de7f5608c6</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability in xmt_resolve_od_links() in loader_xmt.c that allows attackers to read freed heap memory via stale strstr() pointers. Attackers can persuade users to process a crafted XMT file whose MFURL field contains an entry without a URL string, causing sprintf() to read freed memory and crash the process.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134674 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134674</link>
-    <guid isPermaLink="false">ad2c958ea425eefcb27616f646021ab4</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 5.3 | Freedit before 0.9.9 contains an authorization bypass vulnerability in the post_lock, post_hide, post_pin and comment_hide handlers that allows inn moderators to act on content from other inns. Attackers can supply their own inn id with a foreign post or comment id to lock or hide content instance-wide, or pin private posts to expose titles.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134675 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134675</link>
-    <guid isPermaLink="false">7d7785dc56df1237b2f5ebdec2a9fb82</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 7.1 | Servas before 1.2.0 contains a missing authorization vulnerability that allows authenticated users to modify and delete other users' data by supplying target resource ids. Attackers can abuse TagController update and destroy, LinkController destroy, and GroupController destroy actions to rename or delete tags and delete links and groups.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134676 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134676</link>
-    <guid isPermaLink="false">97bd268c3bf4fc8849b1dca57d7adfc3</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a heap use-after-free vulnerability in gf_odm_disconnect() in src/compositor/object_manager.c caused by a deferred scene_ns_remove_object task holding a raw object manager pointer. Attackers can supply a crafted XMT scene whose commands delete a Background2D node, freeing the object manager early to crash the process and corrupt heap memory.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134677 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134677</link>
-    <guid isPermaLink="false">5bc52c9a0fdeb72812daed871cdcb0f4</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability in the XMT scene loader that allows attackers to access freed heap memory via stale object descriptor links. Attackers can supply a crafted XMT scene where xmt_node_end() frees a subtree containing InputSensor MFURL fields, causing xmt_resolve_od_links() to read freed memory and crash MP4Box.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134678 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134678</link>
-    <guid isPermaLink="false">61510ae2295d02fa62c038a3f7c7a1b0</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 7.1 | Freedit before 0.9.9 contains an authorization bypass vulnerability in the edit_post_post handler for POST /post/edit/:pid that skips ownership and status checks when a Private inn is submitted. Members of a Private inn can overwrite any post by sequential id, including moderator-locked posts, re-attributing it to themselves and destroying original content.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134679 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134679</link>
-    <guid isPermaLink="false">21d69f96b855ff8e922d2e6f1c46243c</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 8.7 | WeddingShare through 1.8.2 contains a missing authorization vulnerability in the anonymous MediaViewerController.GalleryItem action that allows unauthenticated attackers to retrieve item upload paths without the gallery secret key. Attackers can enumerate sequential integer item ids to learn paths and uploader names, then download photos and videos from key-protected galleries served as static files.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 22 Nov 2026 07:01:58 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-134680 - NVD - CVSS Score v4.0: 6.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134680</link>
@@ -323,6 +235,94 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134651</link>
     <guid isPermaLink="false">5580f70746ea02a5cebccbfe742f1a81</guid>
     <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 6.8 | A flaw was found in Quay. This vulnerability allows an authenticated remote attacker holding a restricted, short-lived JSON Web Token (JWT) to achieve privilege escalation. Because Quay improperly accepts scoped registry bearer tokens as valid robot account passwords, an attacker can authenticate directly as the robot account and obtain broader permissions. Consequently, unauthorized access persists and enables the attacker to generate fresh tokens even after the robot account's password has been reset.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-105394 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105394</link>
+    <guid isPermaLink="false">91fb8907bc095d457d5e158652672f6d</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Asset CleanUp: Page Speed Booster WordPress plugin before 1.4.0.7 does not restrict which origins it reflects into its cross-origin resource sharing response headers and pairs the reflected origin with credentialed access, allowing a page on a related origin to read a logged-in user's authenticated content across origins.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107592 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107592</link>
+    <guid isPermaLink="false">5db68f5a3a092f2121ad6e7631d652a6</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Mooberry Book Manager WordPress plugin through 4.16.2 does not perform any capability or nonce check in one of its AJAX actions, allowing any authenticated user with a minimal role such as Subscriber to change the publisher assigned to any book, including books created by other users, and to create new book records. The missing nonce check also makes the action exploitable via CSRF against any logged-in user.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-107593 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107593</link>
+    <guid isPermaLink="false">6e00145c298ff4b5f15f13e9619ee6fc</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Mooberry Book Manager WordPress plugin through 4.16.2 does not perform a capability check on one of its AJAX actions and protects it only with a nonce that it outputs to every authenticated user on all admin pages, allowing any logged-in user, including Subscribers, to trigger a site-wide rewrite of stored book purchase links and change a related Mooberry Book Manager WordPress plugin through 4.16.2 option.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120413 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120413</link>
+    <guid isPermaLink="false">bb313ff2021c768dbdf1faf145bc8a16</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Yoast SEO  WordPress plugin before 28.9 does not check that content is publicly viewable before returning its SEO metadata through a public REST endpoint, allowing unauthenticated users who know or can guess the URL of a private post, page or custom post type item to read its title, author, publication date and an excerpt of its content.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123068 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123068</link>
+    <guid isPermaLink="false">94d96b70ae3daa0e7e6a3c3752236a0d</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Front User Submit  WordPress plugin before 5.1.0 does not validate the content of files uploaded through one of its unauthenticated endpoints and later serves them back with a Content-Type derived from the file's bytes and an inline disposition, allowing unauthenticated attackers to store an HTML or SVG payload and obtain a same-origin URL that executes arbitrary JavaScript in the browser of any user who opens it, including an administrator.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123136 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123136</link>
+    <guid isPermaLink="false">7f77f7f1c55eaa9222b23d65f2659982</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Event Tickets Manager for WooCommerce WordPress plugin before 1.6.2 does not check that the ticket type and price chosen through one of its unauthenticated AJAX actions belong to the event ticket later added to the cart, and stores them site-wide, allowing unauthenticated visitors to buy an event ticket at the lower ticket-type price configured on a different event.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-127024 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127024</link>
+    <guid isPermaLink="false">484b9dd82f9c08752e131e660cddf77b</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The WordForm  WordPress plugin before 4.1.6 does not properly validate uploaded files, allowing unauthenticated users to upload arbitrary files, including PHP, which leads to remote code execution.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132814 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132814</link>
+    <guid isPermaLink="false">425b1dc0215ba3c9ef4e3392825621c6</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The WPO365 | SEAMLESS WORDPRESS + MICROSOFT INTEGRATION (WPO365 | LOGIN) WordPress plugin before 45.0 does not verify that a Microsoft ID token was issued for the site's own application and tenant when multi-tenant sign-in is enabled with an empty list of allowed tenants, allowing unauthenticated attackers to log in as an existing user, including an administrator, with a token Microsoft issued to an application they control.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133362 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133362</link>
+    <guid isPermaLink="false">215d6cb2b1600f1ae9dcde505976a448</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The ThinkRank SEO  WordPress plugin before 2.21.4 does not ensure that the settings section a request acts on is the section it was authorized for, allowing users granted access to only one ThinkRank SEO  WordPress plugin before 2.21.4 section by an administrator to read and update settings of other, more privileged sections, such as integration API keys and robots.txt content.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-14233 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14233</link>
+    <guid isPermaLink="false">02e6ce4673892730fedb74dc45a0565c</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The LifterLMS  WordPress plugin before 10.0.5 does not perform a capability or nonce check in one of its quiz-question query AJAX handlers, allowing any authenticated user with subscriber-level access to enumerate the titles of all published quiz questions, including those for courses they are not enrolled in.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-94259 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94259</link>
+    <guid isPermaLink="false">4b04c2ba394adbbc2692b084f0f88a7b</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The SMS Alert  WordPress plugin before 4.0.4 does not sanitise and escape a parameter before using it in a SQL statement, leading to SQL injection exploitable by administrators.</description>
     <category>NVD</category>
     <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
   </item>
