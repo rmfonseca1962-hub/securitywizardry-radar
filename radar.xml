@@ -5,63 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Nov 2026 09:02:37 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-134680 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134680</link>
-    <guid isPermaLink="false">cd38580ee9b217285e0a144289f45c54</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains a NULL pointer dereference vulnerability in TraverseForm() in src/compositor/mpeg4_form.c due to an off-by-one groupsIndex bounds check. Attackers can supply a crafted XMT scene with a Form node having constraints but an empty groupsIndex field to crash MP4Box, causing denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134681 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134681</link>
-    <guid isPermaLink="false">7ba933218c527356ecd8ed55b447b295</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains an uncontrolled recursion vulnerability in gf_sg_proto_instantiate() in src/scenegraph/vrml_proto.c that lacks cycle detection or depth limits. Attackers can craft an XMT scene whose PROTO body instantiates itself directly or indirectly, exhausting the stack and crashing MP4Box when imported.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134682 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134682</link>
-    <guid isPermaLink="false">0036b03db2d8e081ef0394080ff277e7</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability in scene graph teardown that allows attackers to trigger access to freed memory via crafted scene files. A node shared across multiple PROTO node_code lists is freed by gf_sg_reset(), and gf_sg_proto_del() then calls gf_node_unregister() on the dangling pointer, crashing MP4Box.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134683 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134683</link>
-    <guid isPermaLink="false">4d6c203e07ab83d4cd603b7fe94a6da0</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains an uncontrolled recursion vulnerability in xmt_remove_od_links_recursive() in loader_xmt.c that lacks any depth limit when walking node children. Attackers can supply a crafted XMT file with deeply nested or cyclic node and SFCommandBuffer references to exhaust the stack and crash MP4Box on import.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134684 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134684</link>
-    <guid isPermaLink="false">721ffaebd7b87446d8cfb312d00e95bc</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a heap use-after-free vulnerability in the XMT loader that leaves freed node URL fields in the pending object descriptor link list after SFNode replacement. Attackers can supply a crafted XMT scene that reassigns a single-node field, causing xmt_resolve_od_links() to read freed memory, crashing the process and potentially corrupting the heap.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134685 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134685</link>
-    <guid isPermaLink="false">80cabb75a66aacf299b41b474115ff72</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a heap use-after-free vulnerability in load_xmt_done() in src/scene_manager/loader_xmt.c that reads freed nodes during XMT parser teardown. Attackers can craft an XMT scene with a scene replace command that destroys PROTO sub-graphs, crashing MP4Box and potentially corrupting heap memory when opened.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134686 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134686</link>
-    <guid isPermaLink="false">d39cb25073c00f89e30649e75627cb96</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains a type confusion vulnerability in gf_sg_command_apply() in src/scenegraph/commands.c that misinterprets single node values as child lists for MFNode field replace commands. Attackers can supply a crafted XMT scene that causes an invalid node pointer to be dereferenced by gf_node_register(), crashing MP4Box for denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 22 Nov 2026 11:00:24 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-134687 - NVD - CVSS Score v4.0: 6.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134687</link>
@@ -323,6 +267,62 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94259</link>
     <guid isPermaLink="false">4b04c2ba394adbbc2692b084f0f88a7b</guid>
     <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The SMS Alert  WordPress plugin before 4.0.4 does not sanitise and escape a parameter before using it in a SQL statement, leading to SQL injection exploitable by administrators.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129016 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129016</link>
+    <guid isPermaLink="false">08eb3d3a453af62b70384b079760a522</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Andrea Tarantini Menubar menubar allows Reflected XSS.This issue affects Menubar: from n/a through 5.9.4.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131700 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131700</link>
+    <guid isPermaLink="false">12f5e365cf4c6e03945bcf655e38ad88</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Dylan Kuhn  Geo Mashup geo-mashup allows Reflected XSS.This issue affects  Geo Mashup: from n/a through 1.13.23.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131705 - NVD - CVSS Score v3.1: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131705</link>
+    <guid isPermaLink="false">013ab65401a9739c89351435058fa973</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 8.5 | Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Metagauss ProfileGrid profilegrid-user-profiles-groups-and-communities allows SQL Injection.This issue affects ProfileGrid: from n/a through 6.0.0.6.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131706 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131706</link>
+    <guid isPermaLink="false">3bf9084c92d5917840be24e6e4274cbc</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.5 | Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Metagauss ProfileGrid profilegrid-user-profiles-groups-and-communities allows Blind SQL Injection.This issue affects ProfileGrid: from n/a through 6.0.0.6.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131707 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131707</link>
+    <guid isPermaLink="false">be3caf6516c1ac9bd94f55e2427dd950</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 8.8 | Deserialization of Untrusted Data vulnerability in Metagauss ProfileGrid profilegrid-user-profiles-groups-and-communities allows Object Injection.This issue affects ProfileGrid: from n/a through 6.0.0.6.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131708 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131708</link>
+    <guid isPermaLink="false">9cebb565a3f7afc5a8fb8b96409214fb</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Metagauss ProfileGrid profilegrid-user-profiles-groups-and-communities allows Reflected XSS.This issue affects ProfileGrid: from n/a through 6.0.0.6.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131720 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131720</link>
+    <guid isPermaLink="false">eea2da6c1713f6352a776c9738f1df7e</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.5 | Insertion of Sensitive Information Into Sent Data vulnerability in Liquid Web / StellarWP BookIt bookit allows Retrieve Embedded Sensitive Data.This issue affects BookIt: from n/a through 2.6.0.8.</description>
     <category>NVD</category>
     <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
   </item>
