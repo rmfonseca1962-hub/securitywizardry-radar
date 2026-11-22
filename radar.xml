@@ -5,103 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Nov 2026 11:00:24 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-134687 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134687</link>
-    <guid isPermaLink="false">1dfae457ac0ae04d6a67bd0b90ec1293</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains a NULL pointer dereference vulnerability in gf_sg_command_apply() in src/scenegraph/commands.c when handling MFNode field replace commands. Attackers can supply a crafted XMT scene with an MFNode field replace command lacking a node value to crash MP4Box, causing denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134688 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134688</link>
-    <guid isPermaLink="false">47d39cb8fe3a92cfd68e60e739e9451d</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability in the BT/XMT context loader that frees an interaction-type decoder-specific descriptor even when UIConfig re-encoding fails. Attackers can supply a crafted XMT scene with a BIFSConfig descriptor, causing gf_odf_delete_descriptor() to reuse and free it again, crashing MP4Box and corrupting heap memory.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134689 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134689</link>
-    <guid isPermaLink="false">f0364d216b7fcbad9450fdbc0d8acd6f</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains a NULL pointer dereference vulnerability in JSScript_LoadVRML() in src/scenegraph/vrml_js.c that reads unchecked script_text pointers of Script node url entries. Attackers can supply a crafted XMT scene loading a Script node whose url entry lacks script text, crashing MP4Box and causing denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134690 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134690</link>
-    <guid isPermaLink="false">b6131e39fca1e31ce4978f6c24cdfec1</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains a NULL pointer dereference vulnerability that allows attackers to crash the application by supplying a crafted XMT scene. Attackers can modify InputSensor, Layout or EnvironmentTest nodes during parsing, triggering compositor handlers that read uninitialized private stacks and cause denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134691 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134691</link>
-    <guid isPermaLink="false">ef9a0e7f41e8f440350fefa1e47023bf</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a heap use-after-free vulnerability in gf_event_target_get_node() because destroyed node event targets remain in media object lists. Attackers can supply a crafted XMT scene with nodes such as InputSensor to trigger freed memory reads during gf_scene_disconnect(), crashing the process or corrupting heap memory.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134692 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134692</link>
-    <guid isPermaLink="false">600244f4fa979d86c49697471e1d0886</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability because xmt_find_node() in loader_xmt.c resolves DEF names without verifying the node belongs to the current scene graph. Attackers can craft an XMT scene reusing a PROTO node across graphs, causing gf_node_unregister() to read freed memory during teardown, crashing MP4Box and corrupting heap memory.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134693 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134693</link>
-    <guid isPermaLink="false">523a83fc8121027acd2408f97d7867f2</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains a NULL pointer dereference vulnerability in gf_sg_proto_create_node() in src/scenegraph/vrml_proto.c when cloning PROTO instances. Attackers can craft an XMT scene declaring more PROTO interface fields than the cloned instance supplies, crashing MP4Box when a user opens the file.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134694 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134694</link>
-    <guid isPermaLink="false">f701ae38a5de882d4e229dc0a5b3c620</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 8.5 | Gammapy through 2.1 contains a code injection vulnerability in WcsGeom.from_header() that passes the WCSSHAPE FITS header card to eval(). Attackers can supply a crafted .fits file with a Python expression in WCSSHAPE, executing code as the user who loads it via Map.read().</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134695 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134695</link>
-    <guid isPermaLink="false">37fc53818f52278079b69782f2a395f7</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains an out-of-bounds read vulnerability in avi_parse_input_file() in src/media_tools/avilib.c that increments track counters before checking AVI_MAX_TRACKS. Attackers can supply a crafted AVI file declaring a ninth audio stream, causing AVI_audio_format and AVI_close() to access track[8] and crash the process.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134696 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134696</link>
-    <guid isPermaLink="false">18bab077ed8ff30e12d36bc4d889ea5a</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability in gf_sg_proto_del that allows attackers to free PROTOs still owned by another scene command via the GF_SG_PROTO_DELETE handler. Attackers can craft an XMT scene that declares a PROTO in one command and deletes it by ID in another, crashing MP4Box and corrupting heap memory when opened.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134697 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134697</link>
-    <guid isPermaLink="false">72e0b23964bc48a5fbd72f4e87e04b96</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains a NULL pointer dereference vulnerability in gf_sg_command_apply() that allows attackers to crash the application via indexed field-replace commands lacking a payload. Attackers can craft an XMT scene whose GF_SG_XREPLACE command on an MFNode field carries no value, causing a crash and denial of service when opened.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134698 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134698</link>
-    <guid isPermaLink="false">8125ecdbad53aa56e3071194f33351f3</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains a type confusion vulnerability in ctxload_process() in src/filters/load_bt_xmt.c that casts object descriptor update entries without checking the descriptor tag. Attackers can supply a crafted XMT/BT scene placing a different descriptor type in a GF_ODUpdate command, causing gf_list_get() to dereference an invalid pointer and crash MP4Box.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 22 Nov 2026 12:02:47 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-134699 - NVD - CVSS Score v4.0: 6.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134699</link>
@@ -323,6 +227,102 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131720</link>
     <guid isPermaLink="false">eea2da6c1713f6352a776c9738f1df7e</guid>
     <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.5 | Insertion of Sensitive Information Into Sent Data vulnerability in Liquid Web / StellarWP BookIt bookit allows Retrieve Embedded Sensitive Data.This issue affects BookIt: from n/a through 2.6.0.8.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-109889 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109889</link>
+    <guid isPermaLink="false">012373636913ab0ef9921a8080a119c2</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 6.8 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in Elementor Image Optimizer by Elementor image-optimization allows Path Traversal.This issue affects Image Optimizer by Elementor: from n/a through 1.7.7.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131701 - NVD - CVSS Score v3.1: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131701</link>
+    <guid isPermaLink="false">1de8e5f88edb4f1d0c02637ead9958aa</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 8.5 | Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in JoomUnited WP Media folder wp-media-folder allows Blind SQL Injection.This issue affects WP Media folder: from n/a through 6.2.8.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131702 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131702</link>
+    <guid isPermaLink="false">521a322859471c4c908cdc687290c13e</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in NextScripts NextScripts social-networks-auto-poster-facebook-twitter-g allows Stored XSS.This issue affects NextScripts: from n/a through 4.4.8.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131714 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131714</link>
+    <guid isPermaLink="false">87fc39bde487e6278ee8effd753b7cd2</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Kaliforms Kali Forms kali-forms allows Reflected XSS.This issue affects Kali Forms: from n/a through 2.4.32.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131718 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131718</link>
+    <guid isPermaLink="false">84e65563d6a77f583c5e6b39adc2c9ed</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Liquid Web / StellarWP Event Tickets event-tickets allows Reflected XSS.This issue affects Event Tickets: from n/a through 5.31.1.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131721 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131721</link>
+    <guid isPermaLink="false">e269aa412f66ab94c0ff5a45f07ac8a4</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing Authorization vulnerability in WPMU DEV Forminator forminator allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Forminator: from n/a through 1.58.4.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131722 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131722</link>
+    <guid isPermaLink="false">c9979882dda6983f250718b2d5b4ac63</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in BuddyPress BuddyPress buddypress allows Stored XSS.This issue affects BuddyPress: from n/a through 14.5.4.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131724 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131724</link>
+    <guid isPermaLink="false">e6dcb318537fa37df3cbf9dcf4a15f0d</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Liquid Web / StellarWP Event Tickets event-tickets allows Stored XSS.This issue affects Event Tickets: from n/a through 5.31.1.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131742 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131742</link>
+    <guid isPermaLink="false">3a200b988355317fea0c381ddda7bf79</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in PluginUs.Net Active Products Tables for WooCommerce profit-products-tables-for-woocommerce allows Reflected XSS.This issue affects Active Products Tables for WooCommerce: from n/a through 2.1.8.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131748 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131748</link>
+    <guid isPermaLink="false">ab8bac96cabc21ceb896c8e86a95532a</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Boone Gorges BuddyPress Docs buddypress-docs allows Stored XSS.This issue affects BuddyPress Docs: from n/a through 2.2.7.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131773 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131773</link>
+    <guid isPermaLink="false">cf596c7dd9d3bd142e6d3994907cdcf1</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing Authorization vulnerability in Wetail AB WooCommerce Fortnox Integration woocommerce-fortnox-integration allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WooCommerce Fortnox Integration: from n/a through 4.8.1.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131774 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131774</link>
+    <guid isPermaLink="false">aaca79b5c1ec74cccfb7d14a354fab79</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Wetail AB WooCommerce Fortnox Integration woocommerce-fortnox-integration allows Stored XSS.This issue affects WooCommerce Fortnox Integration: from n/a through 4.8.1.</description>
     <category>NVD</category>
     <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
   </item>
