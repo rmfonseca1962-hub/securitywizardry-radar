@@ -5,135 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Nov 2026 15:01:36 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-134700 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134700</link>
-    <guid isPermaLink="false">66ad6b853f2a0a069d0d4367d484ee36</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a use-after-free vulnerability in the XMT loader that allows scene commands to reference PROTO sub-graph nodes freed by a scene replace command. Attackers can supply a crafted XMT file that causes gf_node_get_field() and gf_node_unregister() to access freed memory, crashing MP4Box and potentially corrupting heap memory.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134701 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134701</link>
-    <guid isPermaLink="false">76815a20eada5e621a35a72b06406f62</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | GPAC MP4Box through 26.07.0 contains a heap use-after-free vulnerability in xmt_node_end() that leaves freed child node MFURL fields in the OD link list. Attackers can supply a crafted XMT file with an extra top-level SceneReplace node, causing xmt_resolve_od_links() to read freed memory, crashing MP4Box and corrupting the heap.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134702 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134702</link>
-    <guid isPermaLink="false">8d3638536ee475344dd4f6c4c4b56b7e</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | GPAC MP4Box through 26.07.0 contains a type confusion vulnerability in curve2d_check_changes() that casts a Curve2D point field node to M_Coordinate2D without type checking. Attackers can supply a crafted XMT/BIFS scene placing another node type such as LinearGradient in that field, causing an invalid pointer read that crashes the process.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134703 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134703</link>
-    <guid isPermaLink="false">be4e3add085bd75f00e52abb47e8ebf3</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.3 | libexpat through 2.10.0 contains an improper Unicode handling vulnerability in DEFINE_UTF16_TO_UTF16 conversion functions in xmltok.c that can split valid surrogate pairs when output space is limited. In XML_UNICODE builds parsing non-native byte order UTF-16 input, attackers can supply crafted documents that deliver lone high surrogates to character data and default handlers.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134704 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134704</link>
-    <guid isPermaLink="false">46da6f4afd25dcc14428a05f6726cdc8</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 8.5 | OpenShot Video Editor (openshot-qt) through 4.1.1 contains an unsafe deserialization vulnerability in ProjectDataStore.load() and read_legacy_project_file() that passes non-JSON project files to pickle.load() without restriction. Attackers can trick users into opening a crafted .osp project file containing a pickle __reduce__ gadget to execute code with the user's privileges.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134572 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134572</link>
-    <guid isPermaLink="false">e4ef814f7f68d7f73248be2f70047cc3</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was identified in itsourcecode Insurance Management System 1.0. Affected by this issue is some unknown functionality of the file /deleteAgent.php. The manipulation of the argument agent_id leads to sql injection. Remote exploitation of the attack is possible. The exploit is publicly available and might be used.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134616 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134616</link>
-    <guid isPermaLink="false">dc8be925221a55b5260c3b67cb9efd5f</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 2.1 | A security vulnerability has been detected in itsourcecode Insurance Management System 1.0. The affected element is an unknown function of the file /deleteClient.php. Such manipulation of the argument client_id leads to sql injection. The attack may be performed from remote. The exploit has been disclosed publicly and may be used.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134623 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134623</link>
-    <guid isPermaLink="false">d81a71c638272b20e5f6eccf32c5bd24</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 5.5 | A flaw has been found in Microweber up to 2.0.20. This impacts the function UserManager::make_logged of the file src/MicroweberPackages/App/Http/Controllers/ApiController.php of the component Generic API Dispatcher. This manipulation causes improper access controls. Remote exploitation of the attack is possible. The exploit has been published and may be used. Upgrading to version 2.0.21 will fix this issue. Patch name: e639d26e61b989b100f8b6f6bb78c0cecca79b99. You should upgrade the affected component.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134651 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134651</link>
-    <guid isPermaLink="false">5580f70746ea02a5cebccbfe742f1a81</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 6.8 | A flaw was found in Quay. This vulnerability allows an authenticated remote attacker holding a restricted, short-lived JSON Web Token (JWT) to achieve privilege escalation. Because Quay improperly accepts scoped registry bearer tokens as valid robot account passwords, an attacker can authenticate directly as the robot account and obtain broader permissions. Consequently, unauthorized access persists and enables the attacker to generate fresh tokens even after the robot account's password has been reset.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-105394 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105394</link>
-    <guid isPermaLink="false">91fb8907bc095d457d5e158652672f6d</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Asset CleanUp: Page Speed Booster WordPress plugin before 1.4.0.7 does not restrict which origins it reflects into its cross-origin resource sharing response headers and pairs the reflected origin with credentialed access, allowing a page on a related origin to read a logged-in user's authenticated content across origins.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107592 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107592</link>
-    <guid isPermaLink="false">5db68f5a3a092f2121ad6e7631d652a6</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Mooberry Book Manager WordPress plugin through 4.16.2 does not perform any capability or nonce check in one of its AJAX actions, allowing any authenticated user with a minimal role such as Subscriber to change the publisher assigned to any book, including books created by other users, and to create new book records. The missing nonce check also makes the action exploitable via CSRF against any logged-in user.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-107593 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-107593</link>
-    <guid isPermaLink="false">6e00145c298ff4b5f15f13e9619ee6fc</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Mooberry Book Manager WordPress plugin through 4.16.2 does not perform a capability check on one of its AJAX actions and protects it only with a nonce that it outputs to every authenticated user on all admin pages, allowing any logged-in user, including Subscribers, to trigger a site-wide rewrite of stored book purchase links and change a related Mooberry Book Manager WordPress plugin through 4.16.2 option.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120413 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120413</link>
-    <guid isPermaLink="false">bb313ff2021c768dbdf1faf145bc8a16</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Yoast SEO  WordPress plugin before 28.9 does not check that content is publicly viewable before returning its SEO metadata through a public REST endpoint, allowing unauthenticated users who know or can guess the URL of a private post, page or custom post type item to read its title, author, publication date and an excerpt of its content.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123068 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123068</link>
-    <guid isPermaLink="false">94d96b70ae3daa0e7e6a3c3752236a0d</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Front User Submit  WordPress plugin before 5.1.0 does not validate the content of files uploaded through one of its unauthenticated endpoints and later serves them back with a Content-Type derived from the file's bytes and an inline disposition, allowing unauthenticated attackers to store an HTML or SVG payload and obtain a same-origin URL that executes arbitrary JavaScript in the browser of any user who opens it, including an administrator.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-123136 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123136</link>
-    <guid isPermaLink="false">7f77f7f1c55eaa9222b23d65f2659982</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The Event Tickets Manager for WooCommerce WordPress plugin before 1.6.2 does not check that the ticket type and price chosen through one of its unauthenticated AJAX actions belong to the event ticket later added to the cart, and stores them site-wide, allowing unauthenticated visitors to buy an event ticket at the lower ticket-type price configured on a different event.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-127024 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-127024</link>
-    <guid isPermaLink="false">484b9dd82f9c08752e131e660cddf77b</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS: não informado | The WordForm  WordPress plugin before 4.1.6 does not properly validate uploaded files, allowing unauthenticated users to upload arbitrary files, including PHP, which leads to remote code execution.</description>
-    <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Sun, 22 Nov 2026 16:01:14 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-132814 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132814</link>
@@ -323,6 +195,134 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131780</link>
     <guid isPermaLink="false">b7299e598198ab1f872623822bb2d60c</guid>
     <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Themify Themify Builder themify-builder allows Reflected XSS.This issue affects Themify Builder: from n/a through 7.8.5.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129083 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129083</link>
+    <guid isPermaLink="false">f088fc5f1f92811eeff4ab87ddb773f0</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WPKoi WordPress Themes WPKoi Templates for Elementor wpkoi-templates-for-elementor allows Stored XSS.This issue affects WPKoi Templates for Elementor: from n/a through 3.7.5.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129085 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129085</link>
+    <guid isPermaLink="false">32ae7127c13151656ab2f7761b6a5a10</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.5 | Missing Authorization vulnerability in Aguila Technologies WP Customer Area customer-area allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects WP Customer Area: from n/a through 8.4.5.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131754 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131754</link>
+    <guid isPermaLink="false">bd1086538f44e19cd7303ed74e9f1b3d</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 9.8 | Deserialization of Untrusted Data vulnerability in Pierre Lannoy APCu Manager apcu-manager allows Object Injection.This issue affects APCu Manager: from n/a through 4.6.1.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131775 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131775</link>
+    <guid isPermaLink="false">07c556cba7f585c02807488527ed688d</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 7.1 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in nK Ghost Kit ghostkit allows Stored XSS.This issue affects Ghost Kit: from n/a through 3.8.1.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-131782 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131782</link>
+    <guid isPermaLink="false">5111d8465df9be958d8968703dc3af0c</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v3.1: 9.8 | Deserialization of Untrusted Data vulnerability in mra13 / Team Tips and Tricks HQ Simple Shopping Cart wordpress-simple-paypal-shopping-cart allows Object Injection.This issue affects Simple Shopping Cart: from n/a through 5.3.3.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134748 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134748</link>
+    <guid isPermaLink="false">845c0ba732323f788192bae15182ba55</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | Members WordPress plugin by MemberPress 3.2.28 before 3.3.2 contains an authentication bypass vulnerability that allows unauthenticated visitors to evade Private Site mode via login page exemption. Attackers can request the front-end login path with a pagename query variable to make WordPress render hidden published pages or the full blog index.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134749 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134749</link>
+    <guid isPermaLink="false">e8f4e29cb12f306c8fb3af37126cec93</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 7.1 | MemberPress Members before 3.3.1, with the Block Permissions add-on enabled, contains a denial of service vulnerability that allows authenticated Author-level users to crash pages by saving a non-string blockPermissionsMessage block attribute. Attackers can store a JSON array in the attribute so wpautop() in get_block_replacement_content() throws a PHP 8 TypeError, causing fatal errors on post, home, search, and REST pages for unauthorized viewers.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134750 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134750</link>
+    <guid isPermaLink="false">04f55c2bcf2b426405d783d828ec4833</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | Members WordPress plugin before 3.3.1 contains a missing authorization vulnerability that allows unauthenticated visitors to read comments on role-restricted posts via the Latest Comments block. Attackers can view pages hosting the block, where get_the_ID() checks the host page and get_comment_excerpt() bypasses filtering, exposing restricted comments, post titles, and links.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134751 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134751</link>
+    <guid isPermaLink="false">e8120b64127a47674b07d65afbddac26</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | Members WordPress plugin before 3.3.1 contains a missing authorization vulnerability that allows unauthenticated visitors to read role-restricted posts by viewing Latest Posts blocks in full-content mode. The block renders raw post_content without firing the_content filter, bypassing members_content_permissions_protect() and exposing complete bodies of restricted posts.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134752 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134752</link>
+    <guid isPermaLink="false">6dc1b50952835c88740ed918002c8356</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 5.3 | WPGSI: Spreadsheet Integration before 3.8.5 contains a cross-site request forgery vulnerability that allows unauthenticated attackers to delete posts by abusing the delete action in wpgsi_show_view() without nonce verification. Attackers can trick a logged-in administrator into following a crafted wpgsi-show link with action=delete and an id parameter to delete arbitrary posts or pages.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134753 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134753</link>
+    <guid isPermaLink="false">939791ab720a731fa2fdfa31a1fb8fd5</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 8.3 | dsniff through 2.5a2 contains an integer underflow in decode_sniffer() in decode_sniffer.c that allows unauthenticated remote attackers to write past the global obuf buffer. Attackers can send a UDP datagram to port 2001 on a monitored segment with a 4096-byte string, disabling base64_pton bounds checks to corrupt memory and crash dsniff.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134754 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134754</link>
+    <guid isPermaLink="false">6cae98df5bd0be6cbe81d38227c6efa4</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 7.1 | anacrolix/torrent before 1.62.0 contains an uncontrolled recursion vulnerability in Decoder.readOneValue in bencode/decode.go that allows attackers to crash the process by supplying deeply nested bencode data. Attackers can deliver crafted .torrent files or magnet link metadata with millions of nested lists to cause a fatal stack overflow, or deeply nested v2 file trees to exhaust CPU.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134755 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134755</link>
+    <guid isPermaLink="false">25cd1909969e44670a2f52d14c8ca506</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.0 | better-chatbot before 2.0.0 contains a missing authorization vulnerability that lets built-in tools run without user confirmation in Manual tool mode, because src/app/api/chat/route.ts keeps their execute handlers. Attackers can plant prompt-injected documents or web pages that make the HTTP request tool send conversation data to attacker-controlled URLs.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134756 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134756</link>
+    <guid isPermaLink="false">834a0328da2be41b427321597819a754</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 5.3 | Portainer Community Edition and Business Edition 2.39.0 before 2.45.1 contain a server-side request forgery vulnerability because user-supplied URLs are only syntax-checked by validate.IsURL without resolved address validation. Authenticated users can abuse Git cloning, Helm retrieval, registry ping, or the GitLab proxy to reach loopback, internal, and cloud metadata addresses, probing ports and reading responses.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134757 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134757</link>
+    <guid isPermaLink="false">f9b1d960385ff8595a3b3fb14109ff38</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.3 | Anacrolix torrent before 1.63.0 contains an improper certificate validation vulnerability in NewClient within tracker/http/client.go, which unconditionally sets InsecureSkipVerify to true for HTTPS trackers. Attackers able to intercept tracker traffic can impersonate trackers with any certificate, observe info_hash and peer_id values, and return forged peer lists.</description>
+    <category>NVD</category>
+    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134758 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134758</link>
+    <guid isPermaLink="false">9c7e7d842d377364a7343ebcf5eb206c</guid>
+    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 2.3 | Wfuzz through 3.1.1 contains a stored cross-site scripting vulnerability that allows malicious target servers to inject script by returning crafted links written unescaped into HTML reports. When the links script and html printer are used, attacker-supplied href values close the unquoted anchor tag and execute JavaScript when the operator opens the report.</description>
     <category>NVD</category>
     <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
   </item>
