@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 08:00:51 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 09:02:19 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-134731 - NVD - CVSS Score v4.0: 2.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134731</link>
@@ -207,52 +207,69 @@
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134837 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134837</link>
-    <guid isPermaLink="false">97edc64ece4ec38d8a989c2fb6417484</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 5.1 | Frappe before 15.126.0 and 16.x before 16.55.0 contains a prototype pollution vulnerability that allows Dashboard Manager users to pollute Object.prototype by storing __proto__ keys in Dashboard Chart custom_options. When any user, including administrators, views a dashboard rendering the chart, Object.assign merges attacker properties into Object.prototype, altering Frappe desk client behavior for that session.</description>
+    <title>CVE-2026-115232 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115232</link>
+    <guid isPermaLink="false">cf6d077fe6a6ec8f964a5bb6c11d5a14</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 2.1 | In iceoryx2 versions from 0.6.0 to 0.10.0, The C API getters that copy a service's hash into a caller-provided buffer (e.g. iox2_port_factory_pub_sub_service_hash and its other messaging protocol counterparts) write one byte past the end of the caller's buffer when `buffer_len` is less or equal to 40. The out-of-bounds byte is the string's NUL terminator, written at `buffer[buffer_len]`.
+
+
+
+Resolution:
+
+
+
+Resolution
+
+
+
+The bugfix is released with iceoryx2 version 0.10.1 and on main branch (commit 7ca14dd).
+
+
+
+Please note that the language bindings for C/C++ and Python (including the iceoryx2-ffi-c crate) are not published to crates.io since they are a local development dependency.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134838 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134838</link>
-    <guid isPermaLink="false">5aff6b02fa75df4baff31e4e260719fc</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 9.1 | Weblate before 2026.11 contains an account takeover vulnerability in the reset_password view that allows unauthenticated attackers to reset victim passwords by abusing case-insensitive Unicode e-mail matching. Attackers controlling a lookalike mailbox using a dotless i or other case-folding variant receive the victim's reset link, since it is sent to the typed address, and set a new password.</description>
+    <title>CVE-2026-118887 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118887</link>
+    <guid isPermaLink="false">5f12d17de495a446e0043260e25d6057</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.8 | ZTE Z80 Ultra is affected by an unauthorized access vulnerability. Successful exploitation of this vulnerability could result in an impact on integrity.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134839 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134839</link>
-    <guid isPermaLink="false">a3de97364103536c4e16e1ae7d0a7bb4</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 5.3 | Linkwarden before 2.17.0 contains an incorrect authorization vulnerability in the archive upload handler that allows collection members with only add permission to modify other users' links. Attackers can send POST requests to /api/v1/archives/&lt;linkId&gt; to replace another user's stored screenshot, PDF, readable, or HTML archive with attacker-supplied content.</description>
+    <title>CVE-2026-120382 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120382</link>
+    <guid isPermaLink="false">622ea7ccb61261801adfff3f892b4fa1</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 9.8 | An improper neutralization of argument delimiters in a command vulnerability in the OAuth API in Synology DiskStation Manager (DSM) before 7.1.1-42962-10, 7.2.1-69057-14, 7.2.2-72806-11, 7.3.2-86009-6, and 7.4.1-90080-2 allows remote attackers to read or write arbitrary files and conduct denial-of-service attacks.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134840 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134840</link>
-    <guid isPermaLink="false">601e100a9513297f39a7f4881a4f4394</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 5.3 | HumHub before 1.19.4 contains a missing authorization vulnerability in GroupController actionNewMemberSearch and actionAdminUserSearch, which skip the checkGroupAccess check. A manager of any single group can query admin-user-search and new-member-search with another group's id parameter to enumerate members, including administrators.</description>
+    <title>CVE-2026-121456 - NVD - CVSS Score v4.0: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121456</link>
+    <guid isPermaLink="false">b35855e2f1d420f5f1f0e43682c6e9b4</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.8 | A privilege escalation vulnerability in the Axivion Suite ApiToken permission restriction for OIDC and SAML users of the Axivion Dashboard. 
+When a user creates an ApiToken with a restricted token type (for example, IDE plugin or Continuous Integration), some of that user’s permissions should be removed from the token. For users who sign in to the Dashboard through OIDC, or through the SAML preview feature, this restriction has no effect. Exploitability is low: an attacker needs an ApiToken that has been leaked, or one that was shared on the assumption that its permissions were restricted.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134859 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134859</link>
-    <guid isPermaLink="false">6c1d02fe96e7fc6cabc2b4c1b02d8ad7</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | Assimp through 6.0.6 contains an out-of-bounds read vulnerability in PLYImporter::LoadFace and createFromeTriStrip that fails to validate face vertex indices against the vertex count. Attackers can supply a crafted PLY file processed with normal generation but without aiProcess_ValidateDataStructure to crash the application or leak adjacent heap memory into generated normals.</description>
+    <title>CVE-2026-134881 - NVD - CVSS Score v4.0: 2.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134881</link>
+    <guid isPermaLink="false">47784b9f88a3d0b4152fe1d706d3d951</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 2.0 | A security flaw has been discovered in HuLaSpark HuLa up to 3.0.9. This vulnerability affects the function showMsg of the file luohuo-cloud/luohuo-im/luohuo-im-biz/src/main/java/com/luohuo/flex/im/core/chat/service/strategy/msg/RecallMsgHandler.java of the component Recall Message Notification. The manipulation of the argument nickName results in cross site scripting. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134860 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134860</link>
-    <guid isPermaLink="false">5b83e053cc1886b12e742436422f4e8e</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | Assimp through 6.0.6 contains an out-of-bounds read vulnerability in ReadFloat in ColladaLoader.cpp because accessor stride and offset bounds are checked only by ai_assert. Attackers can supply a crafted Collada file whose animation accessor describes more values than its float_array holds to read past the array or dereference null, crashing the importing application.</description>
+    <title>CVE-2026-134935 - NVD - CVSS Score v3.1: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134935</link>
+    <guid isPermaLink="false">2245ba1113b36e4e0bba12558181566e</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.0 | The dell-xps-touchpad-haptics package before 1.0.0-4 for Omarchy allows local users to change ownership of a root-owned file by making their own .config/omarchy/dell-haptic.conf file a symlink to that target file.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-134861 - NVD - CVSS Score v4.0: 6.9</title>
