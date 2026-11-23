@@ -5,71 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 20:00:49 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-135428 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135428</link>
-    <guid isPermaLink="false">67734092ac24ebea10767e47467cbf32</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | Automura for Gravity Forms – Webhooks &amp; REST API for Automation before 1.0.1 contains a reflected cross-site scripting vulnerability in Rest_Admin::serve_file() on the global rest_pre_serve_request filter. Unauthenticated attackers can craft REST links setting automura_gf_file to script HTML and automura_gf_file_type to text/html, executing JavaScript with a victim administrator's session.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135429 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135429</link>
-    <guid isPermaLink="false">a0e38858974e2140256e2358a373047b</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.8 | Tabbycat 2.9.0 through 2.12.1 contains an incorrect authorization vulnerability in TournamentViewSet that allows unauthenticated attackers to gain write access because PerTournamentPermissionRequired returns True for views lacking a tournament attribute. Attackers can send POST, PUT, PATCH or DELETE requests to /api/v1/tournaments to create, modify or delete tournaments, cascading deletion to teams and speakers.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135430 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135430</link>
-    <guid isPermaLink="false">be07d10777935af1dfbc7e589ed8b6c5</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | KindleEar 3.0.0 through 3.5.3 contains an insecure direct object reference vulnerability in application/view/subscribe.py that allows authenticated users to access other users' records by id without ownership checks. Attackers can enumerate sequential recipe ids to read recipe source containing credentials, delete recipes and custom RSS feeds, and overwrite saved site logins.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135431 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135431</link>
-    <guid isPermaLink="false">56ff3d378a9d166a90a7a23eced9e6cf</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | MyBibliotheca 3.0.0 before 3.0.4 contains an insecure direct object reference vulnerability that allows authenticated users to modify or delete other users' books via /api/v1/books/&lt;book_id&gt;. Attackers can obtain book UUIDs from recently added books across all owners, then send PUT or DELETE requests to rename, alter, or permanently delete them.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135432 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135432</link>
-    <guid isPermaLink="false">9c97c5795b82b647b8f9cc6b05272aba</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.1 | sdcb Chats 1.10.0 before 1.17.1 contains an incorrect authorization vulnerability in GetAssignedUserDetails that allows assigned non-admin users to read other users' per-user MCP headers. Attackers can request the assigned-user-details endpoint to obtain bearer tokens in CustomHeaders and impersonate other users against the downstream MCP server.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135433 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135433</link>
-    <guid isPermaLink="false">0b8c00cbb266e9e8e02b0effc78ede8d</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.5 | FLTK through 1.4.5 contains a heap buffer overflow vulnerability in Fl_BMP_Image::load_bmp_() that allows attackers to corrupt heap memory by supplying crafted BMP or ICO files. Attackers can specify very large image dimensions so the 32-bit row and alpha mask pointer offsets wrap, writing file-derived pixel bytes out of bounds to crash applications or possibly execute code.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135434 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135434</link>
-    <guid isPermaLink="false">0fedc9563fa7d19b4a9c753112acc258</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | django-appointment before 3.14.2 contains a missing authorization vulnerability that allows authenticated staff members to modify other staff members' appointments by supplying arbitrary appointment IDs. Attackers can send POST requests to /ajax/update_appt_date_time/ with sequential appointment_id values to reschedule appointments, rewriting date, start and end times and reminders.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135435 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135435</link>
-    <guid isPermaLink="false">8956ec2bd2abfedc430717bbc0367a9f</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | Daptin before 0.13.61 contains an incorrect authorization vulnerability that allows authenticated users to overwrite restricted contacts by sending CardDAV PUT requests to existing contacts. Attackers holding address book Update permission can bypass per-contact row permissions in PutAddressObject to modify protected contacts and confirm their existence.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Mon, 23 Nov 2026 21:01:38 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-135436 - NVD - CVSS Score v4.0: 8.7</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135436</link>
@@ -363,6 +299,78 @@ An attacker on the local link can drive the ARP cache into the all-pending state
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-49965</link>
     <guid isPermaLink="false">d34d265b672b869ce1064661448a3005</guid>
     <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.1 | DreameHome cloud API before 2026-11-19 contained an insecure direct object reference vulnerability in the POST /smart-app/meari-cloud/bindDevice endpoint that allows authenticated attackers to reassign another user's camera to their own Dreame account. The endpoint accepted binding requests from accounts that did not own the camera, so an attacker with the camera identifiers could supply their own user identity, become the camera's masterUid, and remove the camera from the owner's device list, denying the owner access through DreameHome.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-12422 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-12422</link>
+    <guid isPermaLink="false">7607081ac28bcd912db4b087dbeca069</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS: não informado | Rejected reason: This issue was not considered a security vulnerability.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134056 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134056</link>
+    <guid isPermaLink="false">80f114cbdecc122f573be38433407064</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.3 | An out-of-bounds write issue exists in padded block cipher decryption in AWS-LC. It affects applications that decrypt CBC or ECB ciphertext with PKCS7 padding over multiple calls into the minimum documented output buffer. A remote user who supplies crafted ciphertext might crash the application or corrupt adjacent memory. Affected are all versions of AWS-LC before 5.7.0, AWS-LC-FIPS 4.x before 4.2.0, AWS-LC-FIPS 3.x before 3.6.0, and AWS-LC-FIPS 2.x before 2.0.18.
+
+
+
+To remediate this issue, users should upgrade to AWS-LC 5.7.0, AWS-LC-FIPS 4.2.0, or AWS-LC-FIPS 3.6.0.
+
+
+
+AWS-LC-FIPS 2.0.18 is also fixed; AWS-LC-FIPS 2.x reaches end of support in April 2027.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135120 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135120</link>
+    <guid isPermaLink="false">6ea5d9032f2c4c4056c892847582ee7a</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security flaw has been discovered in RainyGao DocSys up to 2.02.91. Affected by this vulnerability is the function downloadDocRS of the file src/com/DocSystem/controller/DocController.java. Performing a manipulation of the argument path results in path traversal. It is possible to initiate the attack remotely. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135126 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135126</link>
+    <guid isPermaLink="false">9759d5e3e24bbe3897009f106c0058fe</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 2.1 | A weakness has been identified in FredrikNoren ungit 1.5.30. Affected by this issue is the function credentialsOption of the file source/git-api.js of the component Remote Git API. Executing a manipulation of the argument Remote can lead to os command injection. It is possible to launch the attack remotely. The exploit has been made available to the public and could be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135127 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135127</link>
+    <guid isPermaLink="false">737185a7a7a9de283d59d1bce5330e7c</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 2.1 | A security vulnerability has been detected in FredrikNoren ungit 1.5.30. This affects the function writeUserConfig of the file source/server.js of the component API Server. The manipulation of the argument launchCommand leads to missing authentication. The attack can be initiated remotely. The exploit has been disclosed publicly and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135470 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135470</link>
+    <guid isPermaLink="false">bb7683fb9acb6441cbd92c044bdb3901</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | WPC Product Options for WooCommerce before 4.0.9 contains a price manipulation vulnerability that allows unauthenticated attackers to purchase products at an arbitrary price by submitting crafted wpcpo-* option data with a negative price in an add-to-cart request. Attackers can exploit the add_cart_item_data() function in includes/class-cart.php, which stores client-supplied price values without validation and carries them into the order total via before_calculate_totals(), to checkout products at zero or arbitrary cost.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135471 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135471</link>
+    <guid isPermaLink="false">1989d921e1e2f935c1941da60de8c220</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.1 | Dynamic Product Gallery for WooCommerce before 3.6.2 contains a stored cross-site scripting vulnerability that allows authenticated attackers with Contributor-level access or above to inject arbitrary JavaScript via the product_id attribute of the [wc_product_dgallery] and [wc_product_dynamic_gallery] shortcodes. The parse_shortcode_product_dynamic_gallery() function passes product_id only through esc_attr(), and get_gallery_main() prints it unescaped into the a3-wc-dynamic-gallery-init-inline-script inline script as part of a JavaScript variable name, so a value such as 342;alert(document.domain)// breaks out of the declaration. The injected script executes in the browser of any user who views the post, including editors or administrators who preview or approve it.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-95793 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95793</link>
+    <guid isPermaLink="false">7f6da5c0b261a2eb1906ce4e6fbeb68a</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.8 | An arbitrary remote code execution vulnerability exists in HPE Morpheus Manager.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
