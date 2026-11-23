@@ -5,60 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 14:02:05 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-118888 - NVD - CVSS Score v3.1: 3.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118888</link>
-    <guid isPermaLink="false">d12cac603116ca046b59ba6499c9771d</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 3.3 | ZTE Z80 Ultra product has an improper access control vulnerability. Successful exploitation of this vulnerability may affect confidentiality.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121613 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121613</link>
-    <guid isPermaLink="false">9b020eff48ce22434780c2e31ccbdb6d</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 9.3 | Missing authentication and authorization on an exposed interface allows an unauthenticated remote attacker to send arbitrary commands to the affected component, which can force a device reboot or let the attacker upload malicious firmware.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-128979 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-128979</link>
-    <guid isPermaLink="false">525af9dfdd48d55c586f3c7ed5b4a4dd</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.0 | Improper certificate validation vulnerability in Estonian Information System Authority (RIA) libdigidocpp, Estonian Information System Authority (RIA) DigiDoc4, Estonian Information System Authority (RIA) DigiDoc on Android, and Estonian Information System Authority (RIA) DigiDoc on iOS.
-
-
-The vulnerability occurs because libdigidocpp does not properly validate
- the Extended Key Usage (EKU) extension of certificates used to sign 
-OCSP responses. Specifically, it fails to verify that the certificate 
-contains the id-kp-OCSPSigning EKU, which identifies certificates 
-authorised to sign OCSP responses. 
-
-
-
-
-
-This issue affects libdigidocpp: from 3.10.0 before 4.5.2; DigiDoc4: from 4.0.0 before 4.11.2; DigiDoc: from 3.0.0 before 3.2.0; DigiDoc: from 3.0.1 before 3.2.0.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134883 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134883</link>
-    <guid isPermaLink="false">3063f84452f4aefb88549360822f710e</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.1 | A security vulnerability has been detected in osCommerce 4.14.63493. Impacted is the function actionOrdersbatch of the file lib/backend/controllers/OrdersController.php of the component Orders Batch Processing. Such manipulation of the argument orders leads to sql injection. The attack may be performed from remote. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134884 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134884</link>
-    <guid isPermaLink="false">c1bea2ae0d01b56315b4016909012bdc</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.1 | A vulnerability was detected in osCommerce 4.14.63493. The affected element is an unknown function of the component Backend Administration List Controller. Performing a manipulation of the argument order[0][dir] results in sql injection. It is possible to initiate the attack remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Mon, 23 Nov 2026 15:00:49 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-134885 - NVD - CVSS Score v4.0: 6.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134885</link>
@@ -471,6 +418,50 @@ This issue affects Apache Solr from 9.0.0 through the releases preceding the fix
 You are affected if you run an affected version and allow the /admin/ping endpoint to be reached with only the health permission. This includes the default sample security configuration installed by the bin/solr CLI, where that endpoint is unauthenticated.
 
 Users who cannot upgrade immediately should restrict access to the /admin/ping endpoint in their authorization configuration — for example by requiring a trusted role for that path — and ensure Solr is not reachable from untrusted clients or networks, as recommended for all Solr deployments.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119068 - NVD - CVSS Score v3.1: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119068</link>
+    <guid isPermaLink="false">9ba464bb023060110bd2c99d229e8bfa</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.4 | An rsync server can send diagnostic data to the client which is mirrored to stdout and collected by Routinator line by line. If an excessive amount of data is sent without a line break, Routinator will eventually run out of memory and crash.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-119069 - NVD - CVSS Score v3.1: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119069</link>
+    <guid isPermaLink="false">5b50fd690089ef5cbcea8a479c32641a</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.4 | When rejecting a publication point midway during processing amd falling back to the stored version of the publication point, Routinator will keep the data it had processed for the publication point so far rather than dropping it.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132856 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132856</link>
+    <guid isPermaLink="false">ccd27b53b2d6f5dd16214fa32de93ea2</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.8 | A vulnerability was discovered in the ZoneAlarm client for Windows that allows a low-privileged local user to run code with SYSTEM privileges. An attacker must first be able to run code on the target system as a local user.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134927 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134927</link>
+    <guid isPermaLink="false">1cd56f97ecc59ed701695d63c989da1d</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 4.8 | A weakness has been identified in phpBB up to 3.3.19. Affected by this vulnerability is the function phpbb_get_user_rank of the file includes/acp/acp_ranks.php of the component Ranks Handler. This manipulation of the argument rank_image causes cross site scripting. Remote exploitation of the attack is possible. The vendor confirms: &quot;We have reviewed the report and intend to address the issue as part of our ongoing security hardening efforts. Given that exploitation requires authenticated administrative access, we consider this a low-priority issue. We will aim to include a fix in our next release and will notify you once it is available.&quot;</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-93585 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93585</link>
+    <guid isPermaLink="false">1a63bac83853f9294a8f8abf90703734</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.8 | An improper authorization vulnerability in the EV Reach Client Agent allows authenticated users with low privileges to execute arbitrary commands on a remote Windows endpoint with LocalSystem privileges. The affected agent service does not sufficiently enforce authorization restrictions for certain privileged remote management operations. Under specific conditions, the agent fails to apply the intended user impersonation mechanism and executes user-supplied commands within the security context of the agent service, which runs as NT AUTHORITY\SYSTEM.
+
+As a result, an authenticated attacker may bypass the intended privilege restrictions and execute arbitrary commands with the highest user-mode privileges on an affected Windows system. Successful exploitation may lead to complete compromise of the affected endpoint, including unauthorized access to sensitive information, modification of system configurations, installation of malicious software, or disruption of system availability. 
+
+The vulnerability does not require administrative credentials or user interaction after successful authentication.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
