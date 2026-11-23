@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 09:02:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 10:02:28 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-134731 - NVD - CVSS Score v4.0: 2.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134731</link>
@@ -272,60 +272,62 @@ When a user creates an ApiToken with a restricted token type (for example, IDE p
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134861 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134861</link>
-    <guid isPermaLink="false">b51aa07fc09bce0d06782ca899dbe121</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | Assimp through 6.0.6 contains an out-of-bounds write vulnerability in glTFAsset.inl that allows attackers to corrupt memory via oversized glTF 1.0 accessor elements. Attackers can supply a crafted glTF 1.0 file with VEC4 position or VEC3 index accessors to overflow heap or stack buffers during import, crashing applications.</description>
+    <title>CVE-2026-115873 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115873</link>
+    <guid isPermaLink="false">834ba2f84a393c96c631fb6362c8643b</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | A remote attacker must authenticate with Read Only (GroupRead) access to at least one Worker Group and reach the Leader API. A crafted expression can exploit the nested compiler to bypass expression restrictions and execute code with the Leader service account's permissions.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134862 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134862</link>
-    <guid isPermaLink="false">19317640f0a3580ba2b4946a007f8a8a</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | Assimp through 6.0.6 contains an out-of-bounds read vulnerability in glTFImporter::ImportMeshes that uses NORMAL and TEXCOORD accessors without comparing their counts to the POSITION vertex count. Attackers can supply a crafted glTF 1.0 file with shorter normal or texture coordinate arrays to trigger heap out-of-bounds reads and writes that crash the importing application.</description>
+    <title>CVE-2026-115899 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115899</link>
+    <guid isPermaLink="false">a5fc18e488333343249ecde38889e180</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 9.3 | An attacker must control pagination data returned by an upstream API or service queried by an existing REST Collector. The Collector must use affected response-based pagination and process the crafted data during a job run. Successful exploitation executes code with the Worker service account's permissions.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134863 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134863</link>
-    <guid isPermaLink="false">34eb8efa82fa31101f86008539d6da70</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | Assimp through 6.0.6 contains an invalid pointer dereference vulnerability in glTFImporter::ImportEmbeddedTextures that derives the texture format hint without checking the strchr result. Attackers can supply a crafted glTF 1.0 file with an embedded image mime type lacking a slash to crash the importing application.</description>
+    <title>CVE-2026-115900 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115900</link>
+    <guid isPermaLink="false">70a4ac12ac50dea3f7d1c770859bd899</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | An attacker must possess a valid Worker distribution credential, reach the Leader distribution listener, and send crafted authenticated Worker heartbeats. Where mTLS client authentication is enforced, an accepted client certificate and its private key are also required. Successful exploitation bypasses Leader REST authentication and permits administrative API access.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134864 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134864</link>
-    <guid isPermaLink="false">92983d4767c39861c345dfd8d1f73f56</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | Assimp through 6.0.6 contains a use of uninitialized resource vulnerability in glTFImporter::ImportMeshes that builds TRIANGLE_STRIP and TRIANGLE_FAN faces from unfilled faces. Attackers can supply a crafted glTF 1.0 file whose strip or fan primitives trigger out-of-bounds reads or null pointer dereferences, crashing the importing application.</description>
+    <title>CVE-2026-115901 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115901</link>
+    <guid isPermaLink="false">d27c4da3431948f80e89f30960ae03f2</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.5 | Exploitation requires an identity admitted to a configured trusted IdP application, control of claims selected as the OIDC user identifier, acceptance by configured SSO filters, and a victim with an active Cribl session following a crafted authentication link. Script executes in the Cribl origin, disclosing the victim's session token and permitting access with the victim's privileges; administrator access requires an administrator victim.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134865 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134865</link>
-    <guid isPermaLink="false">83e6d7edf68a1db622a6486853f8e02d</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | Assimp through 6.0.6 contains an out-of-bounds read vulnerability in ColladaParser::CopyVertex that allows attackers to read heap memory by supplying primitives lacking a VERTEX input. Attackers can provide a crafted Collada file whose SIZE_MAX per-vertex offset bypasses the release-removed ai_assert check, crashing the importing application.</description>
+    <title>CVE-2026-115903 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115903</link>
+    <guid isPermaLink="false">fad745cbfaef3509c932814b6794b1bf</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.1 | An authenticated attacker must reach the Edge file APIs through the Leader or directly on an Edge node. On affected managed Edge deployments with RBAC, Read Only access permits these calls. Disclosure is limited to files readable by the Edge process under its operating-system permissions and capabilities.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134866 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134866</link>
-    <guid isPermaLink="false">8fa684f60c105a28173e4165c8a9b16a</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | Assimp 6.0.0 through 6.0.6 contains an infinite loop vulnerability in SkipLine that allows attackers to hang parsing by supplying files with '#' comment lines. Attackers can provide crafted OFF, LWS, or MD3 shader files so ReadFile never returns, consuming a CPU core and denying service.</description>
+    <title>CVE-2026-134882 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134882</link>
+    <guid isPermaLink="false">ba313068f621a3d1083cd1e2a0d3326b</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 10.0 | A weakness has been identified in TOTOLINK A7100RU 7.4cu.2313_B20191024. This issue affects the function exportOvpn of the file /cgi-bin/cstecgi.cgi of the component CGI Handler. This manipulation of the argument Username causes os command injection. The attack is possible to be carried out remotely.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134867 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134867</link>
-    <guid isPermaLink="false">b354545dbb153d55a0aee5c6d171c86e</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.8 | Assimp through 6.0.6 contains an uncontrolled memory allocation vulnerability in FBXConverter::GetRotationKeyframeList that allows attackers to exhaust memory via unbounded rotation angle differences. Attackers can supply a crafted FBX file of about 111 KB whose keyframe interpolation loop never advances, consuming gigabytes of memory until the importing process is killed.</description>
+    <title>CVE-2026-93584 - NVD - CVSS Score v3.1: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93584</link>
+    <guid isPermaLink="false">e6884c4364033eddef1a0ee0d63df12d</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.6 | An SQL injection vulnerability in OTRS versions 2024.3.1 through 2026.8.1 allows unauthenticated remote attackers to inject arbitrary SQL expressions through the Survey endpoint.
+
+The vulnerability exists in the Kernel::System::Survey::Request::RequestGet() method, which directly incorporates an attacker-controlled survey key into a SQL query without using parameterized statements. Successful exploitation allows attackers to retrieve ticket information and perform boolean-based or time-based blind SQL injection to extract potentially sensitive data accessible to the OTRS database account. Exploitation does not require authentication, a valid survey key, or an existing survey request. The external frontend must be accessible.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-134868 - NVD - CVSS Score v4.0: 6.8</title>
