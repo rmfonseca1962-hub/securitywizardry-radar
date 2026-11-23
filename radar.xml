@@ -5,463 +5,610 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 15:00:49 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 17:01:43 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-134885 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134885</link>
-    <guid isPermaLink="false">fecd6fb45cb67e42ed7a1960e965e067</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | A flaw has been found in osCommerce up to 4.14.63493. The impacted element is the function actionSuccess of the file lib/frontend/controllers/MultisafeController.php of the component MultiSafepay Payment Success Callback. Executing a manipulation of the argument customer_id can lead to improper authentication. It is possible to launch the attack remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-134492 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134492</link>
+    <guid isPermaLink="false">c8020c8940e9bd63a8ab96c3446dc7de</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 2.3 | In mcp-server-fetch from 2026.10.10 and before 2026.11.11, the check that blocks requests to non-public addresses treats IPv6 site-local addresses (fec0::/10) as public. A fetch to such an address passes the server-side request forgery guard. Practical impact is limited because many hosts have no route to this range.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-80466 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80466</link>
-    <guid isPermaLink="false">b8812d33d2cd2826bba28551a5909dc1</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | A vulnerability in the Web-Based Management (WBM) routing configuration allows a low-privileged remote attacker to inject shell commands into routing parameters. Due to insufficient input validation, these values are stored in a configuration file and later processed by a privileged root helper script.</description>
+    <title>CVE-2026-135078 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135078</link>
+    <guid isPermaLink="false">3f5978ae9b84ae3049dcd444a455d82e</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.1 | A vulnerability has been found in KeudellCoding User Location Map up to 1.2.5. Affected by this vulnerability is an unknown functionality of the file resources/humhub.usermap.js of the component MapView Widget. The manipulation of the argument displayname leads to cross site scripting. The attack is possible to be carried out remotely. Upgrading to version 1.3.0 addresses this issue. The identifier of the patch is c49a5fcdb289808378836c19d4da199913798a50. The affected component should be upgraded.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-88850 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-88850</link>
-    <guid isPermaLink="false">7ec83d5d5f04de9b6641e1304dc62331</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.2 | The Web-Based Management (WBM) authorization model does not properly enforce permissions for all PROFIBUS configuration operations. A low-privileged remote attacker can abuse an exposed configuration function to modify root-owned PROFIBUS parameters, including device addressing and SSA settings. This allows unauthorized changes to fieldbus-related configuration and violates the intended privilege boundaries within the management interface.</description>
+    <title>CVE-2026-135206 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135206</link>
+    <guid isPermaLink="false">31068f9f77980a077f6cd5e61c5a8878</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.1 | ToDesktop Builder before 0.36.1 contains a path traversal vulnerability in the todesktop-fs custom protocol handler that allows attackers to escape the bundled files directory using ../ sequences. Attackers who can run script in an application's renderer can issue XMLHttpRequest calls with traversal paths to read arbitrary files accessible to the user.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-94252 - NVD - CVSS Score v4.0: 4.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-94252</link>
-    <guid isPermaLink="false">2c0b0fe02ae32d157de98b52e63f4f35</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 4.9 | An unauthenticated stored and reflected cross-site scripting (XSS) vulnerability in the embedded web interface of Frontier Smart Technologies Venice X FS2340 running IR4.9 allows a network attacker with access to the interface to inject attacker-controlled JavaScript that may execute in the browser of a user accessing affected content.
-
-
-
-Successful exploitation may allow the attacker to access information available within the browser's security context or perform actions through the affected web interface with the privileges of the affected user.
-
-
-
-During authorized security testing, certain crafted JavaScript and code-injection payloads were also observed to cause the embedded web interface to crash and become temporarily unavailable on some tested software versions. This behavior represents a denial-of-service condition affecting the embedded web management interface; no device-level denial of service was established.</description>
+    <title>CVE-2026-135207 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135207</link>
+    <guid isPermaLink="false">be1b083b5e6d737091ff108741583669</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | Healthchecks before 4.4 contains a verification bypass vulnerability that allows project users to mark arbitrary email addresses as verified because Channel.make_token() omits the email address. Attackers can verify an address they control, change the integration to a victim address, then reuse the original link to send unsolicited alert emails.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-118889 - NVD - CVSS Score v3.1: 4.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118889</link>
-    <guid isPermaLink="false">4c833bd48ac7c3f0fc016bded3e4646b</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.2 | Z80 Ultra product has an improper access control vulnerability in the UI module. Successful exploitation of this vulnerability may affect confidentiality.</description>
+    <title>CVE-2026-135208 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135208</link>
+    <guid isPermaLink="false">fdb9481d9babe3e44dcaa4ebbe622035</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 9.3 | Kerberos Agent before 3.14.4 contains an authentication bypass vulnerability that allows unauthenticated attackers to forge administrator tokens because JWTMiddleWare() falls back to the hard-coded key TOBECHANGED. Attackers can sign HS256 tokens with arbitrary username and role claims to access /api and /config routes, exposing RTSP, ONVIF, Hub and encryption keys, rewriting configuration, and stopping the camera.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123886 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123886</link>
-    <guid isPermaLink="false">13854092aa739aa9c9686893718d9465</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.8 | Spring Data Elasticsearch replaces positional placeholders in string-based @Query methods with the method arguments before it evaluates SpEL expressions in the resulting query string.
-
-
-
-As a result, an argument that contains a SpEL expression is evaluated as part of the query, even if the declared query does not use SpEL.
-
-
-
- An application is affected if it passes untrusted input as an argument to a repository query method that declares a @Query with positional placeholders.
-
-
-
-In that case, a remote attacker can execute arbitrary code in the application, and repeated requests can exhaust memory through the unbounded expression cache.</description>
+    <title>CVE-2026-135209 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135209</link>
+    <guid isPermaLink="false">027b8814ffd75340b9d6c17fa518f6ce</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.1 | ServerOS Panel before 1.10.1 contains a decompression bomb vulnerability in DeploySourcePacker::extract() that allows authenticated users with manage-machines permission to bypass the 4 GB unpacked-size limit by under-declaring zip entry sizes. Attackers can upload a crafted archive via POST /machines/{machine}/sources whose entries inflate far beyond declared sizes, filling the host disk and denying service to all workspaces.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124559 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124559</link>
-    <guid isPermaLink="false">04b200a3419a7805a17368e7f20fdb28</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | A flaw was found in QEMU's NBD server. A remote attacker can crash a multi-export NBD server process by exploiting stale metadata export state during an extended BLOCK_STATUS request, resulting in an assertion failure and denial of service.</description>
+    <title>CVE-2026-135210 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135210</link>
+    <guid isPermaLink="false">9c9daeb970693647358152cc28f24289</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | Plane before 1.5.0 contains a missing authorization vulnerability in WorkspaceDraftIssueViewSet that allows authenticated workspace members to create drafts in unauthorized projects by supplying an arbitrary project_id. Attackers can convert drafts into work items in private or removed-from projects with chosen title, state, assignees, cycle_id and module_ids, triggering notifications and disclosing project membership.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125683 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125683</link>
-    <guid isPermaLink="false">33864a6c1eb49ebe5a0289efa7a23958</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | A flaw was found in QEMU's NBD server. A remote attacker can crash qemu-nbd, qemu-storage-daemon, or qemu-system by sending NBD_OPT_SET_META_CONTEXT or NBD_OPT_LIST_META_CONTEXT with a declared option length exceeding the actual payload, triggering an assertion failure and denial of service.</description>
+    <title>CVE-2026-135211 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135211</link>
+    <guid isPermaLink="false">008bdb1a3fab30b635d1a083e085e63e</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 9.2 | BISHENG before 3.0.0 contains a missing authentication vulnerability in the /api/v2/workflow/invoke and /api/v2/workflow/stop routes that allows unauthenticated attackers to run workflows as the administrator. Attackers knowing a workflow UUID can supply an override replacing a Code node's code parameter with Python passed to exec(), achieving remote code execution, or stop other users' workflow sessions.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126657 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126657</link>
-    <guid isPermaLink="false">9f5d240ac97c66021cc2e2acd9dd1108</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | A flaw was found in QEMU's NBD block driver. A malicious NBD server can send an incomplete structured read reply marked as done, causing QEMU to return uninitialized host heap memory to the guest VM, resulting in host memory disclosure.</description>
+    <title>CVE-2026-135212 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135212</link>
+    <guid isPermaLink="false">aca075dafae22945599a945ca9db8c67</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.0 | AiSOC before 23.6.1 contains a missing authorization vulnerability in the agents service that allows authenticated users to read other tenants' investigation runs by supplying their run_id. Attackers can query GET /api/v1/investigations/{run_id}, report variants, the WebSocket stream, or agent-runs routes to obtain audit logs, forensic output, and incident reports.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133646 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133646</link>
-    <guid isPermaLink="false">3f92be3577be612901c39747c18e3fac</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | Synchronet BBS, in versions 3.20b to 3.21e, contains an out-of-bounds write vulnerability in the answer() function when processing the terminal attribute of the SSH service. The call to cryptGetAttributeString() does not limit the copy to the size of the destination buffer, of which 41 bytes are used. An unauthenticated remote client can send a TERM value of up to 64 bytes and overwrite adjacent fields of the session object. If the SSH service is enabled, this tampering can cause connection threads to be blocked for an extended period, even after the client has disconnected. By exhausting the available sockets, the attacker can prevent new connections and cause a denial of service requiring the software to be restarted.</description>
+    <title>CVE-2026-135213 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135213</link>
+    <guid isPermaLink="false">01d14a86331d0fe991202f5ef28a7077</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | Worklenz before 3.4.3 contains an insecure direct object reference vulnerability in GET /api/v1/activity-logs/:id that allows authenticated users to read other teams' task activity logs because it lacks the verifyTaskAccess middleware. Attackers who know another team's task UUID can retrieve reporter and assignee names and avatars plus the full timeline of status, priority, label and estimation changes.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134886 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134886</link>
-    <guid isPermaLink="false">21785f81d3d8215533fa6e8e1d9fedba</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | A vulnerability has been found in osCommerce up to 4.14.63493. This affects the function actionCached of the file lib/frontend/controllers/ImageController.php of the component Cached Image Handler. The manipulation of the argument image leads to path traversal. The attack can be initiated remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-135231 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135231</link>
+    <guid isPermaLink="false">a2c403ba80d3b3f9ec51999579fc7b1b</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP contains an authorization bypass in the galaxy cluster detachment functionality. Users holding the sync role permission were incorrectly exempted from the tagger and organisation ownership checks when detaching galaxy clusters from events or attributes.
+
+This allowed a sync user belonging to one organisation to remove galaxy cluster associations (threat intelligence tags) from events and attributes owned by a different organisation. The sync permission was intended for replication workflows, which never invoke the cluster detachment code path, but was erroneously used as a blanket authorization bypass.
+
+Impact:
+- Cross-organisation data integrity: a sync user can strip threat intelligence cluster associations from other organisations' events and attributes.
+- Disruption of shared threat intelligence: removal of cluster tags can alter the analytical context of events visible to other users.
+
+Preconditions:
+- An authenticated user with the sync role permission (perm_sync) and tagger permission (perm_tagger).
+- The target event or attribute must belong to a different organisation than the attacker.
+
+Affected versions: MISP prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134887 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134887</link>
-    <guid isPermaLink="false">47a95b467b69979bf6d5d816db8ac2d1</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | A vulnerability was found in osCommerce 4.14.63493. This impacts the function get_address_book_data of the file lib/common/helpers/Customer.php of the component Account Address List Widget. The manipulation of the argument customers_id results in sql injection. The attack can be launched remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-135232 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135232</link>
+    <guid isPermaLink="false">efe998c31edf85f1efd89259f9d165e0</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP Collections retained a sharing group reference (sharing_group_id) even when the collection's distribution level was below 4 (i.e., not restricted to a sharing group). As a result, the sharing group name and UUID were displayed in the collection index and view endpoints to any user who could see the collection, regardless of whether that user was a member of the sharing group. Additionally, when collections were pushed to remote MISP servers, the sharing group data was included in the push payload even for collections not distributed to a sharing group, potentially leaking the group identity to remote systems.
+
+Preconditions:
+- An authenticated user with sufficient access to view the affected collection (e.g., a collection with distribution 0-3 that is publicly or broadly visible).
+- The collection must have a stale sharing_group_id stored from a prior save.
+
+Impact:
+- Unauthorized disclosure of the sharing group name and UUID to users outside the group.
+- Potential leakage of sharing group structure to remote MISP servers via the push mechanism.
+- An attacker could enumerate sharing group names to identify targeting opportunities.
+
+Affected versions: MISP prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134888 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134888</link>
-    <guid isPermaLink="false">5c66b1481d36021b48605a2046b3bccb</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | A vulnerability was determined in osCommerce 4.14.63493. Affected is the function CheckoutController::actionRestart of the file lib/frontend/controllers/CheckoutController.php of the component Checkout Order Restart. This manipulation of the argument order_id causes sql injection. The attack may be initiated remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-135233 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135233</link>
+    <guid isPermaLink="false">8fbc9781ef06e5b713b0d5b94bf741f4</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP's interactive CLI shell, when used to edit or disable a user account, did not update the user record's modification timestamp. The application's session validation mechanism relies on this timestamp to detect that a user's record has changed and to reload the user's state in all active sessions.
+
+As a result, a user who was disabled or had their role or permissions modified through the CLI would retain their existing authenticated session and continue to operate with their previous privileges until the session naturally expired. The administrative intent to revoke or reduce access was not enforced on already-active sessions.
+
+Preconditions:
+- An administrator performs a user edit or disable action via the MISP interactive CLI shell rather than the web interface.
+- The target user has one or more active web sessions at the time of the change.
+
+Impact:
+- A disabled user retains full access to the MISP instance for the duration of their existing session.
+- A user whose role or permissions were reduced via the CLI continues to operate with their prior, higher privileges in open sessions.
+
+Affected versions: MISP prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134889 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134889</link>
-    <guid isPermaLink="false">2ad9d69179f59fcbe8200efd5ad6bf56</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | A vulnerability was identified in osCommerce 4.14.63493. Affected by this vulnerability is the function updateAddress of the file lib/common/components/Customer.php of the component Address Book Handler. Such manipulation of the argument address_book_id leads to authorization bypass. The attack may be launched remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-135234 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135234</link>
+    <guid isPermaLink="false">55fc9257d8c62610d001bc351732eaaf</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 4.8 | MISP contains a cross-site scripting (XSS) vulnerability in the feed and server event preview pages. When a remote MISP instance (configured as a feed source or connected server) supplies object or reference UUIDs and IDs containing special characters, these values are rendered in the preview HTML without proper escaping.
+
+The vulnerable behavior occurs in two contexts:
+
+- HTML element identifiers and text content: Remote UUIDs and IDs are inserted into DOM element IDs and visible text without HTML encoding, allowing injection of arbitrary HTML markup.
+- Inline JavaScript event handlers: Remote UUIDs and IDs are embedded into onClick handler strings using only HTML escaping, which does not protect against JavaScript string-literal breakout. A crafted value containing a single quote can terminate the string and inject arbitrary JavaScript.
+
+An attacker who controls a remote MISP instance (feed or server peer) can craft UUID or ID fields with a malicious payload. When an authenticated user on the victim instance views the corresponding event preview, the injected script executes in the user's browser within the MISP application origin, potentially allowing session hijacking, data exfiltration, or unauthorized actions on behalf of the user.
+
+Affected: MISP versions prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135055 - NVD - CVSS Score v3.1: 8.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135055</link>
-    <guid isPermaLink="false">92a0b3628b6e46c28d5266543d9e433e</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.0 | A flaw was found in the GLib DMA-BUF path of WebKitGTK. The UIProcess trusted fds.size() as the DMA-BUF plane count when handling AcceleratedBackingStore::DidCreateDMABufBuffer and copied offsets and strides without verifying that those vectors had the same length. A compromised WebProcess can send mismatched vector lengths, causing an out-of-bounds read in the privileged UIProcess. This can disclose UIProcess memory and crash the UIProcess, and may be used as part of a Web Content sandbox-escape chain.</description>
+    <title>CVE-2026-135235 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135235</link>
+    <guid isPermaLink="false">78514ee510a73e3440885daf6a92f59f</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 4.8 | MISP contains a stored cross-site script (XSS) vulnerability in the event review page used for merge, import, and enrichment workflows.
+
+Object references displayed on this page include the UUID, name, and meta-category of the referenced object. These values originate from imported data (another event, a module result, or an import file) and were rendered into the HTML output without any encoding or sanitization.
+
+An attacker who can supply or influence imported MISP-format data can embed arbitrary HTML or JavaScript in the referenced object's UUID, name, or meta-category fields. When a user views the review page, the malicious script executes in the user's browser context.
+
+Preconditions:
+- The attacker must be able to introduce data into a MISP instance (e.g., via import, module enrichment, or event merge).
+- A victim user must open the affected review page in a browser.
+
+Security impact:
+- Execution of arbitrary JavaScript in the context of the MISP web application.
+- Potential theft of session tokens, manipulation of user actions, or exfiltration of sensitive threat-intelligence data visible on the page.
+
+Affected versions: MISP prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135094 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135094</link>
-    <guid isPermaLink="false">e695ee4bbc5ff0bc863d6131512aeeb8</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing authorization vulnerability in the &quot;GetByProject&quot; endpoint (/Project/{id}) of the VulnController in Cervantes version v1.3-beta could allow an authenticated attacker with VulnsRead permission to retrieve the vulnerabilities of any project, even without being a member of it, by supplying an arbitrary project ID.</description>
+    <title>CVE-2026-135236 - NVD - CVSS Score v4.0: 6.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135236</link>
+    <guid isPermaLink="false">4e4406f6d3ec048015f7cfbe9dc7f930</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.2 | MISP contains a stored cross-site scripting (XSS) vulnerability in its map attachment rendering. When a GPX or GeoJSON file is uploaded as an attachment to a MISP event, the waypoint names (GPX) and property names and values (GeoJSON) are inserted into Leaflet map popups without HTML escaping. Because Leaflet renders popup content as raw HTML, any markup or script embedded in those fields is executed in the browser of every user who views the map and interacts with the affected marker or icon.
+
+Preconditions:
+- An authenticated user with permission to upload attachments to a MISP event crafts a GPX or GeoJSON file containing malicious HTML/JavaScript in waypoint names or GeoJSON property keys/values.
+- A victim user views the event map and clicks the affected marker or GeoJSON icon, triggering the popup.
+
+Impact:
+- Execution of arbitrary JavaScript in the context of the MISP web application, potentially leading to session hijacking, data exfiltration, or unauthorized actions performed on behalf of the victim.
+
+Affected versions: MISP prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-59340 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59340</link>
-    <guid isPermaLink="false">daf80b8f1c70613b2ed5a98d4649a879</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | PagePdfDocumentReader and ParagraphPdfDocumentReader are vulnerable to a denial of service when processing untrusted PDF input.
+    <title>CVE-2026-135237 - NVD - CVSS Score v4.0: 6.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135237</link>
+    <guid isPermaLink="false">21fb7e15cb0501747c35a207b39a31be</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.2 | MISP contains a DOM-based Cross-Site Scripting (XSS) vulnerability in the event report element rendering pipeline. The client-side sanitization function used to prepare values for doT templates only escaped ampersand, less-than, and greater-than characters. However, the templates place these values inside double-quoted HTML attributes. Because double-quote and single-quote characters were not escaped, a user with the ability to author or modify report element values could inject a quote character to break out of the attribute context and inject arbitrary HTML or JavaScript that executes in the viewing user's browser.
 
+Preconditions:
+- The attacker must be an authenticated user with permission to create or edit event report elements (e.g., a report author).
+- A victim must open or view the crafted report in a browser.
 
+Security impact:
+- Execution of arbitrary JavaScript in the context of the victim's MISP session.
+- Potential theft of session tokens, sensitive data, or unauthorized actions performed on behalf of the victim.
 
- The underlying text extraction logic reconstructs layout from a PDF's glyph positions and limits how much memory can be allocated for any single computed gap, but does not limit the cumulative allocation across an entire page.
-
-
-
-A specially crafted PDF can exploit this to force excessive memory allocation during processing, resulting in OutOfMemoryError.
-
-
-
-Depending on JVM configuration, this can cause request failures with degraded service under repeated exploitation, or immediate JVM termination when ExitOnOutOfMemoryError options are used.
-
-
-
-Any application that processes PDFs from untrusted sources (document upload, email attachment processing, RAG ingestion, web crawling) using either affected reader is impacted.</description>
+Affected versions: MISP prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-59442 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-59442</link>
-    <guid isPermaLink="false">91be9dfdbf406540fe26623e5d1a3719</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.5 | TypesenseFilterExpressionConverter does not correctly translate grouped (parenthesized) filter expressions into the Typesense filter syntax.
+    <title>CVE-2026-135238 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135238</link>
+    <guid isPermaLink="false">d4e2a0f415a852cde753c1e353fbd0f4</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 4.8 | MISP contains a cross-site scripting (XSS) vulnerability in the Overmind server preview's analyst data badge component. When rendering the analyst data link for a remote attribute, the remote server's UUID value was inserted into an inline JavaScript event handler using only HTML entity encoding, which is insufficient to prevent breakout from the JavaScript string context within the HTML attribute.
 
+An attacker who can control or influence the UUID value of a remote attribute (for example, through a malicious or compromised upstream MISP server sharing data via Overmind) could inject arbitrary JavaScript that executes in the context of the victim's MISP session when the analyst data badge is clicked.
 
+Preconditions:
+- The victim must be authenticated to a MISP instance with Overmind enabled.
+- The victim must view a remote event preview containing the crafted UUID.
+- The victim must interact with (click) the analyst data badge element.
 
-As a result, the filter sent to Typesense can have a different meaning than the one the application defined, and some conditions may not be applied as intended.
+Security impact:
+- Execution of arbitrary JavaScript in the victim's browser session.
+- Potential theft of session credentials, manipulation of page content, or initiation of unauthorized actions on behalf of the authenticated user.
 
-
-
- An application is affected if it uses the Typesense vector store with filter expressions that contain groups and relies on them to restrict results, for example to enforce tenant isolation or access control.
-
-
-
-In that case, a remote user may be able to retrieve documents they should not have access to, and the same filter used for a delete operation may remove documents outside the intended scope.</description>
+Affected versions: MISP prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-101282 - NVD - CVSS Score v3.1: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101282</link>
-    <guid isPermaLink="false">f8f622db29a9d173c6e35c67b91da820</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 5.8 | Mattermost versions 11.7.x &lt;= 11.7.13, 11.10.x &lt;= 11.10.3, 11.11.x &lt;= 11.11.3 fail to mark the plugin configuration setting as secret in the plugin manifest, which allows anyone with access to a generated Support Packet to obtain third-party provider API keys and cloud service account credentials via the sanitized_config.json file.. Mattermost Advisory ID: MMSA-2026-00604</description>
+    <title>CVE-2026-135239 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135239</link>
+    <guid isPermaLink="false">3f8a8c4b9c13d4dd0182d1c5924476ad</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.3 | MISP contains an authorization flaw in the data capture and import paths for events, galaxies, galaxy clusters, analyst data, and sightings. A user who is neither a sync user nor a site admin could create or import records attributed to an organisation other than their own, or cause the creation of a new organisation from a payload-supplied identifier.
+
+The root cause is an inconsistent authorization check: the code validated one representation of the creator organisation (for example a numeric ID or a UUID field) while storing a different representation taken directly from the user-supplied payload. In the event import path, a MISP export naming another organisation or a fabricated one was accepted and stored under that organisation. In the galaxy, cluster, analyst data, and sighting capture paths, the nested organisation object from the payload was used to create or reference an organisation without verifying the caller's membership.
+
+Impact:
+- Data (events, galaxies, clusters, analyst notes, sightings) can be created under an organisation the attacker does not belong to, polluting that organisation's data and potentially exposing it to that organisation's members.
+- New organisations can be created from attacker-supplied identifiers, introducing phantom entities into the MISP instance.
+- The integrity of the threat-intelligence data store is compromised because attribution is no longer trustworthy.
+
+Affected: MISP versions prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134890 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134890</link>
-    <guid isPermaLink="false">fac2fe79eea899b040f60731b556a4c0</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | A security flaw has been discovered in osCommerce 4.14.63493. Affected by this issue is the function save_products of the file lib/common/classes/extended/OrderAbstract.php of the component Order Placement. Performing a manipulation of the argument ID results in sql injection. Remote exploitation of the attack is possible. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-135240 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135240</link>
+    <guid isPermaLink="false">641d2532de091b24abd3c729837a5917</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP contains an authorization bypass in its tag attachment functionality. The endpoints responsible for editing event tags, editing attribute tags, and adding tags to event reports accepted arbitrary tag IDs without verifying whether the authenticated user was permitted to attach the referenced tag.
+
+The events/addTag endpoint already resolved tag IDs through a restricted lookup that enforced per-user and per-organisation tag visibility rules. However, the three tag-editor endpoints (editEventTags, editAttributeTags, and eventReports/addTag) passed the supplied tag IDs directly to the attachment logic without any such check.
+
+Preconditions:
+- An authenticated user with tagger and add permissions on the target event/attribute/report.
+- Knowledge or discovery of a tag ID that is restricted (local_only) to another organisation.
+
+Impact:
+- A user can attach a tag that is restricted to a different organisation, effectively bypassing the tag visibility and scoping model.
+- A local_only tag can be attached as a global tag, violating the intended distribution restriction and potentially exposing the existence or semantics of another organisation's restricted tag to a broader audience.
+- Data integrity of the MISP instance is compromised as the tag association model no longer reflects the intended access-control boundaries.
+
+Affected versions: MISP prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134891 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134891</link>
-    <guid isPermaLink="false">7dc606bab5e3c40738ee055cb57c3900</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | A weakness has been identified in osCommerce 4.14.63493. This affects the function actionGiftCard of the file lib/frontend/controllers/CatalogController.php of the component Virtual Gift Card Basket. Executing a manipulation of the argument products_id can lead to authorization bypass. The attack can be executed remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-135241 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135241</link>
+    <guid isPermaLink="false">a8834b97c81c39c52bf9f98dee682cb1</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP contains an authorization bypass vulnerability in the handling of Galaxy and Galaxy Cluster publish/unpublish operations. The application failed to enforce consistent permission checks when users attempted to unpublish a Galaxy or Galaxy Cluster. Specifically, the unpublish action only required the 'perm_galaxy_editor' permission, whereas the publish action required both 'perm_galaxy_editor' and 'perm_publish'.
+
+This inconsistency allowed a user from a different organization who possessed the 'perm_galaxy_editor' permission but lacked the 'perm_publish' permission to unpublish a Galaxy or Galaxy Cluster created by another organization. This action could disrupt the availability of shared threat intelligence data for other users and organizations relying on that cluster.
+
+The vulnerability affects MISP versions prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134892 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134892</link>
-    <guid isPermaLink="false">917d34ce79ff9226a9b6723c8745df45</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security vulnerability has been detected in SourceCodester Cosmetics and Beauty Product Online Store 1.0. This vulnerability affects unknown code of the file admin/orders/view_order.php of the component Admin Order Management. The manipulation of the argument ID leads to sql injection. The attack is possible to be carried out remotely. The exploit has been disclosed publicly and may be used.</description>
+    <title>CVE-2026-135242 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135242</link>
+    <guid isPermaLink="false">7e1af3f99ac4819a907926c144759edc</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.3 | MISP contains an authorization flaw in the Sharing Group Blueprint execution path. When a blueprint is executed, it rewrites the organisation roster of the associated sharing group. The check verifying that the blueprint's owning organisation still holds the right to extend (modify) that group was performed only once, at the time the blueprint was created. It was not re-evaluated at execution time.
+
+As a result, an organisation that subsequently lost its extend permission or was entirely removed from the sharing group could still execute its existing blueprint and overwrite the group's organisation roster, adding or removing member organisations at will.
+
+Preconditions:
+- An authenticated user belonging to an organisation that previously had extend rights on a sharing group
+- A blueprint already exists in that group owned by the attacker's organisation
+- The attacker's extend rights have been revoked or the organisation has been removed from the group after the blueprint was created
+
+Security impact:
+- Unauthorised modification of a sharing group's organisation roster
+- Potential unauthorised addition of organisations to a sharing group, exposing shared indicators and events
+- Bypass of the intended access-control model for sharing group membership
+
+Affected versions: MISP prior to 2.5.52</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134924 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134924</link>
-    <guid isPermaLink="false">33b159f46af30b9422cc149c2c1fa20a</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | A vulnerability was identified in chillzhuang SpringBlade up to 5.0.2. This impacts the function AvueIframe of the file src/components/iframe/main.vue of the component Iframe Route Renderer. The manipulation of the argument url leads to cross site scripting. The attack may be initiated remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-135243 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135243</link>
+    <guid isPermaLink="false">5398e2255a130874b8838f24f225ccb9</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP contains an authorization bypass vulnerability in the handling of sightings during server synchronization and bulk operations. The vulnerability allows a remote attacker with access to a synchronized MISP instance to pull sightings for events that are not shared with their organization or community. The sighting pull mechanism previously executed with elevated privileges and accepted event identifiers without verifying that the local event was authorized for sharing with the remote server. Additionally, the bulk save functionality for sightings did not strictly enforce that the attributes referenced in the request belonged to the specific event specified in the URL, allowing an attacker to associate sightings with unauthorized events by referencing attributes from other events. This can lead to unauthorized disclosure of threat intelligence data and integrity issues where sightings are incorrectly attributed to events the attacker should not access. 
+The issue was reported by ENISA and fixed in version 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-13408 - NVD - CVSS Score v3.1: 3.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-13408</link>
-    <guid isPermaLink="false">e06be150056058b51a10657bd697851a</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 3.1 | Mattermost versions 11.7.x &lt;= 11.7.13 fail to verify that the requesting user has read permission for a post's channel which allows an authenticated user to read attachment-bearing posts from private channels and direct messages they cannot otherwise access via a crafted {{post_id}} in a POST request to {{/plugins/com.mattermost.mscalendar/action/respond}}. Mattermost Advisory ID: MMSA-2026-00708</description>
+    <title>CVE-2026-135244 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135244</link>
+    <guid isPermaLink="false">5963f2e159d83ea58d391ac5360792ba</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | MISP trusted client-supplied forwarded IP headers (such as X-Forwarded-For) without verifying that the request originated from a known proxy or that the value was a valid IP address. The configured header value was accepted as the authoritative client IP for all security-relevant functions.
+
+An unauthenticated remote attacker could forge the forwarded header to:
+- Bypass IP-based restrictions on API authentication keys
+- Evade brute-force / rate-limiting protection
+- Inject arbitrary values into application and ECS logs, corrupting audit trails
+
+The vulnerability required the MISP.log_client_ip_header setting to be configured to a forwarded header (e.g. HTTP_X_FORWARDED_FOR), which is a common deployment when MISP sits behind a reverse proxy.
+
+Affected: MISP versions prior to 2.5.52</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-19531 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19531</link>
-    <guid isPermaLink="false">227e8e92d9ad734e57d226943c228f7d</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | Mattermost versions 11.7.x &lt;= 11.7.13, 11.10.x &lt;= 11.10.3, 11.11.x &lt;= 11.11.3 fail to verify that the requesting user has file download permission under an ABAC policy before reading file content, which allows an authenticated channel member to obtain the contents of files they are denied access to via interactions with an Agent bot.. Mattermost Advisory ID: MMSA-2026-00759</description>
+    <title>CVE-2026-135245 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135245</link>
+    <guid isPermaLink="false">5a869a75d2b5ae62410ac5033c804013</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP's LDAP authentication components (LdapAuth plugin and Apache LDAP authentication) unconditionally re-enabled user accounts that had been disabled by an administrator. During the user provisioning or update step of an LDAP login, the disabled flag was reset to enabled regardless of the account's current state.
+
+This allowed any user with valid LDAP credentials to bypass an administrative disable action simply by authenticating, effectively nullifying the ability to revoke access through account deactivation.
+
+- Affects the LdapAuth plugin and the ApacheSecureAuth component
+- The insecure behavior was the default; no special configuration was required to trigger it
+- An administrator's decision to disable a user (e.g., after a security incident or employee departure) could be reversed by the user's next successful LDAP login
+
+Affected versions: MISP prior to 2.5.52</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-116001 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116001</link>
-    <guid isPermaLink="false">9dbfe15a02dc7c312aac9007a57ca9ae</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS: não informado | NULL pointer dereference vulnerability in Apache Perl.
+    <title>CVE-2026-135247 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135247</link>
+    <guid isPermaLink="false">7247a36d5f32d14300ce0c3e921959a8</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.3 | MISP's LinOTPAuth plugin, used for one-time-password authentication against a LinOTP server, did not enforce TLS server certificate verification when the LinOTPAuth.verifyssl configuration option was not explicitly set. In a default or minimally configured deployment, the authentication request to the LinOTP server was sent without peer or peer-name certificate validation, effectively allowing self-signed or spoofed certificates.
 
+An attacker with a network position between the MISP instance and the LinOTP server could perform a man-in-the-middle attack to intercept or tamper with the authentication exchange, potentially capturing one-time passwords or user credentials.
 
+Preconditions:
+- The LinOTPAuth plugin is enabled and configured to communicate with a LinOTP server
+- The LinOTPAuth.verifyssl setting is absent or null (not explicitly set to true or false)
+- The attacker can position themselves on the network path between MISP and the LinOTP server
 
-This issue affects Apache Perl: from 1.99_04 through 2.0.13.
+Security impact:
+- Confidentiality of OTP tokens and authentication credentials in transit
+- Potential for credential interception or replay
 
-
-
-Users are recommended to upgrade to version 2.0.14, which fixes the issue.</description>
+Affected versions: MISP prior to 2.5.52</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-116005 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116005</link>
-    <guid isPermaLink="false">3f875ca25e8e01468923cfe8159c8dd1</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS: não informado | Fixed-size stack buffer overflow vulnerability in Apache Perl.
+    <title>CVE-2026-135248 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135248</link>
+    <guid isPermaLink="false">0aa5c73883334a6977e6e453170f3712</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.1 | MISP contains a vulnerability in its password reset (forgot password) functionality where the base URL used to construct the reset link sent by email could be derived from the HTTP request's Host header rather than from an explicitly configured value.
 
+An unauthenticated attacker can send a crafted request with a malicious Host header. If the application's base URL was not explicitly configured (MISP.baseurl or MISP.external_baseurl), the bootstrap would derive it from the request, and the resulting password reset email would contain a link pointing to the attacker-controlled domain. When the victim clicks the link, they are directed to the attacker's site, enabling credential phishing or token theft.
 
+Preconditions:
+- The password reset feature (allow_password_forgotten) is enabled
+- MISP.baseurl and MISP.external_baseurl are not explicitly set to trusted values
+- The victim initiates or is targeted for a password reset
 
-This issue affects Apache Perl: from 1.99_01 through 2.0.13.
+Impact:
+- Phishing: victim is redirected to an attacker-controlled URL instead of the legitimate MISP instance
+- Potential credential compromise if the victim enters credentials on the attacker's site
+- No direct compromise of the MISP server itself
 
-
-
-Users are recommended to upgrade to version 2.0.14, which fixes the issue.</description>
+Affected: MISP versions prior to 2.5.52</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-116032 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116032</link>
-    <guid isPermaLink="false">29dd9ff1c71c4d9e504732d3b4081960</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS: não informado | Stack buffer overflow vulnerability in Apache Perl.
+    <title>CVE-2026-135249 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135249</link>
+    <guid isPermaLink="false">6536fb80aa1153d05c17dba33376320d</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | MISP accepted compressed HTTP request bodies (gzip, brotli, zstd) and decompressed them before authentication was performed, with no limit on the size of the resulting decompressed data. An unauthenticated attacker could send a small compressed payload that expands to a very large decompressed body, exhausting server memory and causing a denial of service. Brotli and zstd, with their high compression ratios, made the attack particularly effective.
 
+The vulnerability required no authentication and no special conditions beyond the ability to send an HTTP request with a Content-Encoding header. The impact is a complete loss of availability for the affected MISP instance.
 
-
-This issue affects Apache Perl: from 1.99_01 through 2.0.13.
-
-
-
-Users are recommended to upgrade to version 2.0.14, which fixes the issue.</description>
+Affected: MISP versions prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-116043 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116043</link>
-    <guid isPermaLink="false">e7b0c32378050a8d40c71cc8cf568e0c</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS: não informado | NULL pointer dereference, Out-of-bounds read vulnerability in Apache Perl.
+    <title>CVE-2026-135250 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135250</link>
+    <guid isPermaLink="false">7c1e1e9f6e43c7dae138a81493ce0ed5</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.1 | MISP contains a denial-of-service vulnerability in its image processing pipeline. When generating attachment thumbnails or rendering event graph preview images, the application decodes user-supplied image data using the GD library without first validating the declared pixel dimensions in the image header.
 
+Because GD allocates its pixel buffers outside the scope of PHP's memory_limit directive, a crafted image with an extremely large declared resolution (for example, 20000 x 20000 pixels) can trigger a multi-gigabyte memory allocation during the decode step, exhausting available system memory and causing the PHP worker process or the host to become unresponsive.
 
+Preconditions:
+- An authenticated MISP user with permission to upload attachments or to create/view event graphs.
+- The ability to supply a crafted image file (e.g., a PNG with a valid header declaring oversized dimensions).
 
-This issue affects Apache Perl: from 1.99_01 through 2.0.13.
+Impact:
+- Denial of service: memory exhaustion leading to process crash or host unavailability.
+- No confidentiality or integrity impact is indicated by the evidence.
 
-
-
-Also fixes an out-of-bounds read in per-request $/ save/restore for which CVE-2026-116021 (now rejected) had previously been assigned.
-
-
-
-Users are recommended to upgrade to version 2.0.14, which fixes the issue.</description>
+Affected versions: MISP prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-116772 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116772</link>
-    <guid isPermaLink="false">72f7de0d8c277bdf0e2c66bdaa083f60</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS: não informado | OOB read vulnerability in Apache Perl.
+    <title>CVE-2026-135252 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135252</link>
+    <guid isPermaLink="false">64299fcba53b4e11c5c7aef24c6bd53d</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.1 | MISP contains a Server-Side Request Forgery (SSRF) vulnerability in its feed and sync HTTP request handling. When the application uses libcurl as the HTTP transport, the CURLOPT_FOLLOWLOCATION option was enabled by default, causing the library to automatically follow HTTP redirects without the application's own per-hop validation logic being invoked.
 
+- Feed requests: MISP implements its own redirect validation for feed sources, but libcurl was following redirects before that validation could execute, allowing a malicious or compromised feed source to redirect the request to arbitrary internal URLs.
+- Sync requests: Sync peers are server-configured, and the application does not perform per-hop redirect validation for sync traffic. libcurl's automatic redirect following allowed a malicious sync peer to redirect the request to internal network resources.
 
+An attacker who is a configured sync peer, controls a feed source URL, or can influence DNS resolution for a configured endpoint can exploit this to cause the MISP server to issue requests to arbitrary internal services, potentially reading sensitive data or interacting with internal APIs that are not otherwise exposed.
 
-This issue affects Apache Perl: from 1.99_07 through 2.0.13.
-
-
-
-Users are recommended to upgrade to version 2.0.14, which fixes the issue.</description>
+Affected: MISP versions prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-116799 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116799</link>
-    <guid isPermaLink="false">83a3b159ee2566233084aa2fce9895e4</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS: não informado | OOB read vulnerability in Apache Perl.
+    <title>CVE-2026-135253 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135253</link>
+    <guid isPermaLink="false">23e73cbda75bc0215bf24f0bb62803e5</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP's NIDS rule export functionality for Snort and Suricata formats does not properly escape user-controlled data before embedding it into generated rule text. Attribute values, tag names, and URL paths are inserted directly into rule options (msg, metadata, content matches) without neutralizing characters that are syntactically significant in the NIDS rule grammar, such as double quotes, semicolons, backslashes, commas, and control characters.
 
+An authenticated user with the ability to create or modify attributes in a MISP instance can craft attribute values or tag names containing these special characters. When the NIDS rules are exported, the unescaped data breaks out of the intended option or content field, allowing injection of arbitrary rule options, corruption of rule structure, or generation of syntactically invalid rules that may cause the downstream NIDS engine to reject the entire ruleset.
 
+The affected export paths include:
+- Snort and Suricata msg: option (quotes, semicolons, backslashes, control characters)
+- Suricata metadata: option (commas, semicolons, quotes, whitespace, control characters)
+- Suricata http.uri content: match for URL path (quotes, semicolons, pipe characters)
 
-This issue affects Apache Perl: from 1.99_01 through 2.0.13.
+Security impact is limited to the integrity and availability of the exported NIDS rules and the downstream NIDS engine that consumes them. There is no direct compromise of the MISP application itself.
 
-
-
-Note: The over-read data can be returned to the client in the response.
-
-
-
-Users are recommended to upgrade to version 2.0.14, which fixes the issue.</description>
+Affected: MISP versions prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125651 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125651</link>
-    <guid isPermaLink="false">ff923adbcc5441fd0928a28954013679</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS: não informado | Cleartext storage in encrypted parquet file vulnerability in Apache Arrow Rust (`parquet` crate), from version 55.0.0 through to 57.3.2, 58.4.1, 59.3.2 and 60.1.0.
+    <title>CVE-2026-135254 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135254</link>
+    <guid isPermaLink="false">c6a7cc12d319c146fdb7148ab6603ebe</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.1 | MISP is vulnerable to Cross-Site Request Forgery (CSRF) in its correlation management functionality.
 
+The top-correlation cache regeneration and occurrence count regeneration actions were accessible via bodyless GET requests and were triggered from the admin interface using plain hyperlinks rather than POST forms. Because these state-changing operations did not require a POST method and were reachable through simple URL navigation, an attacker who can induce an authenticated administrator to visit a malicious page or click a crafted link can trigger these operations without the administrator's explicit consent.
 
+Impact:
+- Unintended triggering of resource-intensive correlation regeneration processes
+- Potential disruption of correlation data processing and increased server load
+- No direct data disclosure or corruption is evidenced
 
-When writing an encrypted parquet file with a column with bloom filters, the header and bitsets of the bloom filter are written in plaintext in the final parquet.
-
-
-
-Users are recommended to upgrade to versions 57.3.3, 58.4.2, 59.3.3 or 60.2.0 which fix the issue by raising an error when trying to write encrypted parquet files with bloom filters enabled, preventing such files from being written out.
-
-
-
-Existing encrypted parquet files written with bloom filters are still vulnerable, and it is recommended to rewrite those files with bloom filters disabled if possible.</description>
+Affected: MISP versions prior to 2.5.52</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134925 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134925</link>
-    <guid isPermaLink="false">b6abc28f696f05018716a1156b475df2</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.1 | A security flaw has been discovered in yangzongzhuan RuoYi up to 4.8.3. Affected is the function renderUserCards of the file ruoyi-admin/src/main/resources/templates/system/role/view.html of the component Role Management User-View. The manipulation of the argument Username results in cross site scripting. The attack may be launched remotely. The patch is identified as 04db82c3c85593921ab8be48a4b3016866eaa97e. It is best practice to apply a patch to resolve this issue.</description>
+    <title>CVE-2026-135256 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135256</link>
+    <guid isPermaLink="false">baf487e29cd7ca0ce797445ad3b29153</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.1 | MISP contains a Regular Expression Denial of Service (ReDoS) vulnerability in its Warninglist feature. Warninglist entries of type &quot;regex&quot; are evaluated against attribute values without any backtracking limit. An authenticated user with permission to add or import warninglist entries can supply a crafted regular expression pattern that triggers excessive backtracking in the PCRE engine, causing sustained CPU consumption and denial of service.
+
+Additionally, imported warninglists were not validated for syntactic correctness before replacing existing entries, allowing malformed or malicious patterns to be persisted and later evaluated without prior rejection.
+
+Preconditions:
+- An authenticated account with the ability to create, edit, or import warninglist entries (users below site-admin level can add entries).
+- The target MISP instance has at least one warninglist of type &quot;regex&quot; that will be evaluated against incoming attribute values.
+
+Impact:
+- Sustained CPU exhaustion leading to denial of service for all users of the MISP instance.
+- Potential for cascading performance degradation on shared infrastructure.
+
+Affected versions: MISP prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-53672 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-53672</link>
-    <guid isPermaLink="false">a0766d1aee1bd0a967c2fee7d71560de</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | A bug related to the Zookeeper HTTP endpoints in Apache Solr allows an authenticated attacker with zk-read permission to read /security.json, bypassing the security-read authorization check. This may cause unauthorized read of credential hashes and authorization configuration.
+    <title>CVE-2026-135257 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135257</link>
+    <guid isPermaLink="false">d80653e7712e482a71cf7beb8b759f22</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP contains an improper output sanitization vulnerability in the Zeek (Bro) intelligence export functionality.
 
-For this attack to be successful, the following must be true
-  *  The system is secured with Solr's Basic Auth plugin
-  *  The attacker has gained direct network access to the Solr cluster
-  *  The attacker has obtained credentials for a user account with zk-read permission (which is recommended assigned to trusted admins only)
+The export module constructs tab-separated lines for downstream Zeek/Bro intelligence feeds. The sanitization routine was intended to strip tab, newline, and carriage-return characters from user-controlled fields (organisation names and attribute values) before they were embedded into the export line format. However, the sanitization pipeline applied character replacement before HTML entity decoding, meaning that HTML entities such as &amp;#9; (tab), &amp;#10; (newline), and &amp;#13; (carriage return) survived the initial pass and were subsequently decoded into actual separator characters. Additionally, organisation names were inserted into the export format string without any sanitization at all.
 
+An authenticated user with the ability to create or modify events, organisation names, or attribute values could embed HTML-encoded separator characters. When the Zeek/Bro export was generated, these characters would split a single export line into multiple lines or introduce extra tab-delimited fields, corrupting the structured intelligence feed consumed by downstream Zeek/Bro deployments.
 
-Users are recommended to upgrade to 9.11.0, 10.1.0 or a newer release.
-Users who cannot upgrade immediately are recommended to assign the zk-read permission only to users who they entrust reading security.json.</description>
+Security impact:
+- Integrity of exported intelligence data is compromised; downstream Zeek/Bro systems may process malformed or split entries.
+- Corrupted intelligence lines could lead to incorrect blocking, alerting, or logging decisions in the consuming environment.
+
+Affected versions: MISP prior to 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-86312 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-86312</link>
-    <guid isPermaLink="false">7af2408c1069e897461968085cde473b</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.8 | Under some configurations a request to the ping endpoint could carry out more than a simple health check. In deployments that rely on Solr's rule-based authorization, a client granted only the low-privilege health permission could thereby trigger behavior that should require higher privileges; where the shipped security.json template leaves the health permission unauthenticated, no credentials are required at all. 
+    <title>CVE-2026-135258 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135258</link>
+    <guid isPermaLink="false">565f224f4b2664db49b71c99719de377</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.1 | MISP contains multiple related authorization and input-validation flaws in its object editing and attachment handling workflows.
 
+- A user with permission to edit their own object could inject a foreign attribute identifier into the object revision form. The revision data, stored in the server-side session, was merged into the stored object before the save diff was computed. The save then wrote to the foreign attribute row by its identifier without verifying that the row belonged to the caller's event or organisation, allowing an attacker to overwrite or soft-delete an attribute in another organisation's private event.
+- Attachment file paths were constructed directly from event and attribute identifiers supplied by the request. Because no type or format validation was applied, crafted values (for example directory-traversal sequences or file-name extensions) could cause the application to read from or write to file-system locations outside the intended attachment directory.
+- The audit-log behaviour recorded an edit under the event identifier carried in the save payload rather than the event identifier of the stored database row. An attacker who included a different event identifier in the save could cause the audit entry to be attributed to the wrong event, undermining the integrity of the audit trail.
 
-This issue affects Apache Solr from 9.0.0 through the releases preceding the fixed versions. Users are recommended to upgrade to version 9.11.0 or 10.1.0, which resolve the issue.
+Exploitation requires an authenticated web-session user with object-editing permissions (perm_add / perm_modify). API-key-only requests do not carry the PHP session and are not affected by the revision-session vector.
 
-
-
-
-You are affected if you run an affected version and allow the /admin/ping endpoint to be reached with only the health permission. This includes the default sample security configuration installed by the bin/solr CLI, where that endpoint is unauthenticated.
-
-Users who cannot upgrade immediately should restrict access to the /admin/ping endpoint in their authorization configuration — for example by requiring a trusted role for that path — and ensure Solr is not reachable from untrusted clients or networks, as recommended for all Solr deployments.</description>
+Affected versions: MISP &lt; 2.5.52. Fixed in 2.5.52.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-119068 - NVD - CVSS Score v3.1: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119068</link>
-    <guid isPermaLink="false">9ba464bb023060110bd2c99d229e8bfa</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.4 | An rsync server can send diagnostic data to the client which is mirrored to stdout and collected by Routinator line by line. If an excessive amount of data is sent without a line break, Routinator will eventually run out of memory and crash.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119069 - NVD - CVSS Score v3.1: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119069</link>
-    <guid isPermaLink="false">5b50fd690089ef5cbcea8a479c32641a</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.4 | When rejecting a publication point midway during processing amd falling back to the stored version of the publication point, Routinator will keep the data it had processed for the publication point so far rather than dropping it.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132856 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132856</link>
-    <guid isPermaLink="false">ccd27b53b2d6f5dd16214fa32de93ea2</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.8 | A vulnerability was discovered in the ZoneAlarm client for Windows that allows a low-privileged local user to run code with SYSTEM privileges. An attacker must first be able to run code on the target system as a local user.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134927 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134927</link>
-    <guid isPermaLink="false">1cd56f97ecc59ed701695d63c989da1d</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 4.8 | A weakness has been identified in phpBB up to 3.3.19. Affected by this vulnerability is the function phpbb_get_user_rank of the file includes/acp/acp_ranks.php of the component Ranks Handler. This manipulation of the argument rank_image causes cross site scripting. Remote exploitation of the attack is possible. The vendor confirms: &quot;We have reviewed the report and intend to address the issue as part of our ongoing security hardening efforts. Given that exploitation requires authenticated administrative access, we consider this a low-priority issue. We will aim to include a fix in our next release and will notify you once it is available.&quot;</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-93585 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93585</link>
-    <guid isPermaLink="false">1a63bac83853f9294a8f8abf90703734</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.8 | An improper authorization vulnerability in the EV Reach Client Agent allows authenticated users with low privileges to execute arbitrary commands on a remote Windows endpoint with LocalSystem privileges. The affected agent service does not sufficiently enforce authorization restrictions for certain privileged remote management operations. Under specific conditions, the agent fails to apply the intended user impersonation mechanism and executes user-supplied commands within the security context of the agent service, which runs as NT AUTHORITY\SYSTEM.
+    <title>CVE-2026-135259 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135259</link>
+    <guid isPermaLink="false">0089ec81692c397133788b4d35376b99</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | MISP contains a type confusion vulnerability in the authentication key creation endpoint. When a user submits a floating-point value as the target user identifier, the authorization check truncates the value to an integer (matching the attacker's own account), while the persistence layer rounds the same value to a different integer (the next account in the sequence). This discrepancy allows an authenticated user with key-creation permission to generate an API authentication key belonging to another user.
 
-As a result, an authenticated attacker may bypass the intended privilege restrictions and execute arbitrary commands with the highest user-mode privileges on an affected Windows system. Successful exploitation may lead to complete compromise of the affected endpoint, including unauthorized access to sensitive information, modification of system configurations, installation of malicious software, or disruption of system availability. 
+Preconditions:
+- The attacker must be an authenticated user with the permission to create authentication keys.
+- The target user must have a consecutive numeric identifier immediately following the attacker's identifier.
 
-The vulnerability does not require administrative credentials or user interaction after successful authentication.</description>
+Impact:
+- Unauthorized creation of an API key for another user, granting the attacker access to that user's data and operations within the MISP instance.
+- The vulnerability is trivially exploitable by substituting a carefully crafted floating-point value for the integer user identifier in the request.
+
+Affected versions: MISP prior to 2.5.52.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135260 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135260</link>
+    <guid isPermaLink="false">d9ca8207b67529f94c6907df70b52699</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | MISP contains multiple flaws in its login and one-time-password (OTP) brute-force lockout mechanism that collectively weaken authentication protection.
+
+- Lockout counter bypass: the lockout stored and matched usernames using a single-byte case-fold function. An email address containing a non-ASCII capital letter (for example a Latin-1 or Cyrillic uppercase) was never counted toward the lockout threshold, allowing unlimited failed login attempts against that account.
+- Collation-folding authentication bypass: the database collation performs accent and width folding, so a Unicode variant of a valid address (e.g. a different diacritic or a full-width character) resolved to the same account during authentication while the lockout treated it as a distinct, untracked identity. An attacker could therefore authenticate as the target user using a folded alias without triggering the lockout.
+- Username enumeration via NUL byte: submitting a password containing a NUL byte caused the hashing routine to raise an exception, producing an HTTP 500 response for a known account but a different response for an unknown one, disclosing valid usernames.
+
+Preconditions: the target MISP instance is reachable over the network and the login endpoint is exposed. No prior authentication is required.
+
+Security impact: an unauthenticated attacker can perform unlimited password-guessing against accounts whose address contains a non-ASCII capital, can authenticate as a user via a Unicode-folded alias, and can enumerate valid usernames. Successful exploitation leads to account takeover.
+
+Affected: MISP versions prior to 2.5.52.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135261 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135261</link>
+    <guid isPermaLink="false">a0652432c9e004fe87e33da0cdcbf3bb</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | MISP's brute-force lockout mechanism for login and one-time-password (OTP) authentication is susceptible to bypass through Unicode case-folding inconsistencies and input handling flaws.
+
+- Email addresses containing non-ASCII capital letters are not counted toward the lockout threshold, permitting unlimited authentication attempts against a specific account.
+- Database collation folding (accent and width variants) allows an attacker to reach a valid account using a folded alias of the email address without the attempt being recorded in the lockout counter.
+- A password containing a NUL byte produces a distinct server error for known accounts while unknown accounts receive a different response, enabling username enumeration.
+
+An unauthenticated remote attacker can exploit these issues to perform unlimited password brute-force attacks against any account and to enumerate valid user accounts.
+
+Affected: MISP versions prior to 2.5.52</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135262 - NVD - CVSS Score v4.0: 6.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135262</link>
+    <guid isPermaLink="false">0ccad8f676de4e9ccbc6c707deb1fbde</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.2 | MISP contains a DOM-based cross-site scripting (XSS) vulnerability in the Pivot Explorer component. The bundled pivotick visualization library (version 1.2.0) rendered all string values it received as HTML markup rather than as plain text. As a result, user-controllable data fields, including attribute comments, attribute values, and reference relationship types, were interpreted and executed as HTML/JavaScript in the Pivot Explorer tooltip and sidebar panels.
+
+An authenticated user with the ability to create or modify MISP attributes could embed malicious HTML or script payloads in these fields. When another user (or the same user) opened the Pivot Explorer and viewed the affected event data, the injected markup would execute in the victim's browser context, potentially allowing session hijacking, data exfiltration, or unauthorized actions performed on behalf of the victim.
+
+Preconditions:
+- The attacker must have authenticated access to create or modify MISP attributes (comments, values, or reference relationship types).
+- The victim must open the Pivot Explorer and interact with or view the affected event data in the tooltip or sidebar.
+
+Security impact: Successful exploitation allows arbitrary script execution in the victim's browser within the MISP application origin, enabling theft of session credentials, manipulation of displayed data, and execution of privileged API calls on behalf of the victim.
+
+Affected versions: MISP prior to 2.5.52.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-96457 - NVD - CVSS Score v3.1: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-96457</link>
+    <guid isPermaLink="false">ec7b3f1f6b0d13da3d6c5ebe0f88fff2</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.7 | A flaw was found in the administrative interface of Keycloak, an identity and access management solution. The issue occurs when Fine-Grained Admin Permissions are used to restrict a group administrator from managing specific sub-groups. Due to an incomplete fix for a previous vulnerability, a restricted administrator can bypass these restrictions by moving a forbidden sub-group to the top level of the hierarchy. This allows the attacker to gain unauthorized control over the groups members, potentially leading to a full takeover of the security realm.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
