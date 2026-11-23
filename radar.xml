@@ -5,191 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 21:01:38 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-135436 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135436</link>
-    <guid isPermaLink="false">096bf3710662a6e41d840682ac0483c3</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | KindleEar 3.0.0 through 3.5.3 contains a remote code execution vulnerability that allows authenticated non-admin users to run Python code by uploading malicious recipes. Attackers can submit crafted recipe source to the /recipe/upload action, which calibre compile_recipe executes via exec() without sandboxing, gaining root code execution in the Docker container and access to password hashes.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135437 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135437</link>
-    <guid isPermaLink="false">9f6cbe7d8ee186a323996afec99b70e0</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | Firefly Pico through 1.12.1 contains an insecure direct object reference vulnerability that allows authenticated users to overwrite other users' profiles by supplying arbitrary profile IDs. Attackers with an access token can send another user's sequential ID to the ProfileController update method, reassigning the profile and destroying the victim's saved settings.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135438 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135438</link>
-    <guid isPermaLink="false">818d40a142958f56ff35ac7a5fdb41dc</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.1 | Anchr before 3.7.2 contains a stored cross-site scripting vulnerability that allows authenticated users to host HTML files by uploading them through the image upload feature with a spoofed image content type. Attackers can upload an .html file served via GET /api/image/:id from the Anchr origin, running script that steals the victim's localStorage session token for account takeover.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135439 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135439</link>
-    <guid isPermaLink="false">b71ce37654e8a24df5a6c6b8fb651dbc</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.1 | Fusion through 1.3.1 contains a server-side request forgery vulnerability that allows authenticated users to bypass private-address protection by submitting URLs to the POST /api/feeds/validate endpoint. Attackers can supply a public URL that redirects or links to loopback, private, or link-local addresses, making feedfinder request internal services and leak parsed titles in responses.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135440 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135440</link>
-    <guid isPermaLink="false">37d69421712ebe861078302b22b57f01</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | MediaInfoLib before 26.10 contains a heap use-after-free vulnerability in the Vorbis setup header parser that allows attackers to trigger reads of freed memory via crafted files. Attackers can supply a crafted Ogg/Vorbis file that makes File_Vorbis::Setup() return early without BS_End_LE(), leaving a stale bitstream pointer that causes crashes or heap disclosure.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135441 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135441</link>
-    <guid isPermaLink="false">315b1387cf81825af1336bf2aa037dc5</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.8 | MediaInfoLib before 26.10 contains an uninitialized pointer dereference vulnerability because the File_Mpeg4_Descriptors constructor leaves the IsCmaf pointer holding stale heap contents. Attackers can supply a crafted MP4 file with an AAC/USAC decoder specific descriptor so File_Usac::Streams_Finish_Conformance_Profile dereferences an invalid address, crashing the application.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135442 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135442</link>
-    <guid isPermaLink="false">11f6d1c4034008a6710766f92a119201</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 4.8 | MediaInfoLib before 26.10 contains an out-of-bounds read vulnerability in the MPEG-4 Visual parser that allows attackers to read global memory via an uninitialized frame_rate_code index into Mpegv_frame_rate. Attackers can supply a crafted MP4 file that forces stream finalization before parser synchronization, crashing the process or leaking adjacent memory into the reported frame rate.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135443 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135443</link>
-    <guid isPermaLink="false">590514fac50d59edd6cf68a0aa0fcdfd</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | MediaInfoLib before 26.10 contains an out-of-bounds read vulnerability in the VC-1 parser that uses uninitialized AspectRatio, profile and colordiff_format members as unchecked table indices. Attackers can supply a crafted MP4 file that finalizes the VC-1 stream before synchronization, crashing the process and potentially exposing adjacent memory in reported metadata.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135444 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135444</link>
-    <guid isPermaLink="false">e5d2f439fa4c923e25ca26f99d420e5c</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | MediaInfoLib before 26.10 contains an out-of-bounds read vulnerability in File_Mpegv::Streams_Fill() that allows attackers to read adjacent memory via an uninitialized chroma_format index. Attackers can craft media files that reach Streams_Fill() before Synched_Init(), crashing MediaInfo or embedding applications and possibly exposing static memory in parser output.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135445 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135445</link>
-    <guid isPermaLink="false">37ca4429ebd5100e4e5487da81642038</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.8 | MediaInfoLib before 26.10 contains a divide-by-zero vulnerability in TimeCode::FromString() that allows attackers to crash applications by supplying hour-unit timestamps with fewer than three fractional digits. Attackers can craft a TTML file whose begin or end attribute contains such a timestamp, causing MediaInfo or embedding applications to crash with SIGFPE when opened.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135446 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135446</link>
-    <guid isPermaLink="false">a68f850cfdf43f5739c33a23ce72e50d</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | Bold pagos en linea WordPress plugin before 3.5.1 contains an improper signature verification vulnerability in the bold_co webhook that allows unauthenticated attackers to forge payment notifications. Attackers can set metadata.reference to begin with 'test' and sign the body with the empty test_secret_key HMAC, marking any unpaid WooCommerce order as paid.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-100374 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-100374</link>
-    <guid isPermaLink="false">d81a2eb159550db2fde0a415198bac4c</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.8 | The system call verification handlers for smbus_block_read() and smbus_block_pcall() in drivers/smbus/smbus_handlers.c (z_vrfy_smbus_block_read() and z_vrfy_smbus_block_pcall()) validated the device object, the count pointers and (for process call) the send buffer, but never validated the receive buffer (buf / rcv_buf). The call then proceeds into the driver implementation, which runs in supervisor mode and writes the bytes received from the SMBus peripheral through that pointer.
-
-A user-mode thread on a system built with CONFIG_USERSPACE that has been granted access to an SMBus device object can pass an arbitrary address, including kernel data or another thread's memory, as the receive buffer. The driver then writes up to SMBUS_BLOCK_BYTES_MAX (32) bytes of peripheral-supplied data there (the STM32 driver writes as many bytes as the peripheral's length byte announces, up to 255). The address is fully attacker-chosen; the written content comes from the bus and is typically influenceable by the caller through the choice of peripheral and command, or by first writing data to a device that echoes it back.
-
-This breaks the user/kernel isolation boundary: it gives an unprivileged thread a kernel-memory write primitive usable for privilege escalation, or at minimum to corrupt kernel state or crash the system. The fix adds K_SYSCALL_MEMORY_WRITE() checks of the receive buffer for the documented worst case, SMBUS_BLOCK_BYTES_MAX. Systems without CONFIG_USERSPACE are not affected.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102948 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102948</link>
-    <guid isPermaLink="false">77ae781f504e31c4c0080b739a60d0df</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 5.3 | Several Bluetooth LE Audio services in subsys/bluetooth/audio register global connection and authentication callbacks but assume every connection is LE. When CONFIG_BT_CLASSIC is enabled, the host also invokes these callbacks for BR/EDR connections. For such connections bt_conn_get_dst() returns NULL, and bt_conn_get_info() leaves info.le.dst unset (zero or uninitialized stack data). The CSIP Set Member (csip_disconnected(), handle_csip_disconnect(), handle_csip_auth_complete()), PACS (pacs_auth_pairing_complete(), pacs_security_changed()) and HAS (security_changed(), client_alloc(), client_free()) callbacks then compare or copy a Bluetooth address through that NULL or uninitialized pointer.
-
-A remote device within Bluetooth range can trigger this against a dual-mode device that exposes LE Audio server roles and accepts BR/EDR connections. Opening and closing a BR/EDR ACL link, with no pairing, reaches the CSIP Set Member disconnect path. Completing SSP pairing (for example Just Works) or encryption reaches the PACS and HAS paths.
-
-The impact is denial of service. With CONFIG_ASSERT enabled, the device halts on an assertion (bt_keys_find_addr(), context_alloc()). On platforms that trap NULL or wild reads, it crashes. Otherwise, internal PACS/CSIP/HAS client state is corrupted with bogus addresses. The defects are reads only, and the attacker does not control the address that is dereferenced. The fix adds bt_conn_is_type(conn, BT_CONN_TYPE_LE) checks at the top of the affected callbacks.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102949 - NVD - CVSS Score v3.1: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102949</link>
-    <guid isPermaLink="false">839c8fc1c2e8651203ff86bf5c22f7a1</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Intel SEDI I2C controller driver (drivers/i2c/i2c_sedi.c, used on Intel ISH platforms) waits for each asynchronous transfer with k_sem_take() on a per-controller completion semaphore and a 1 s timeout. When the wait times out, i2c_sedi_api_full_io() aborts the transfer via SEDI_I2C_ABORT_TRANSFER, but if the controller's completion interrupt fires between the timeout expiring and the abort masking interrupts, the callback k_sem_give()s the semaphore and the token is never discarded.
-
-The next transfer on that bus then takes the stale token immediately and returns success (the stale context-&gt;err is usually 0) while the controller is still executing it. The HAL interrupt handler (or DMA) keeps copying received bytes into the caller's msgs[i].buf. Since I2C callers typically pass stack buffers, this writes into a stack frame that has already been returned from, and the caller also consumes incomplete data. The desynchronization can persist across later transfers.
-
-Triggering the race requires a transfer to complete just after the 1 s timeout. A device on the I2C bus that controls clock stretching (for example a malicious or tampered peripheral) can steer this timing, and it also supplies the bytes that get written. Exploitation therefore needs physical access to the bus and is timing-dependent. The impact is corruption of kernel or thread stack memory with data the peripheral controls, which can lead to a crash or potentially to code execution. The fix calls k_sem_reset() and clears context-&gt;err after the abort, while the transfer mutex is still held.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102950 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102950</link>
-    <guid isPermaLink="false">654b12c00710409adc8108ac12a8f9a8</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 5.9 | The mount-time recovery scan of the Zephyr Memory Storage (ZMS) key-value store, zms_recover_last_ate() in subsys/kvss/zms/zms.c (subsys/fs/zms/zms.c in older releases), computes the end of the sector's data area incorrectly. Every valid allocation table entry (ATE) reset the data-end bound to the start of the sector, including entries whose value is stored inline (8 bytes or less) and delete entries. When the newest ATE in the active sector is one of these, the scan continues past the ATE area into the payload area and reads stored value bytes as struct zms_ate records.
-
-Any payload slot that passes the ATE check (a CRC8 plus the one-byte sector cycle count) is adopted as the newest entry. zms_init() then sets fs-&gt;ate_wra and fs-&gt;data_wra from it. The pointers are only this weak check away from data an application may have stored on behalf of a remote party: a BLE-writable device name, provisioned credentials, or configuration received over the network. An attacker who can get about 16 bytes of chosen content persisted in a ZMS value can plant a forged ATE. The forged entry takes effect after the next mount, provided the newest entry in that sector is small or a delete. Random data can also match by chance, which is how the issue was found.
-
-A forged or accidentally matched ATE overrides the stored entry for any chosen id. Its inline data or its offset/len pointer controls what later reads of that key return. The misplaced write pointers also make later writes place ATEs and payloads over other entries' existing data, silently corrupting persistent configuration such as settings values stored in ZMS. The effects are limited to the active flash sector and to what ZMS returns to its callers. No RAM out-of-bounds access was identified.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102951 - NVD - CVSS Score v3.1: 6.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102951</link>
-    <guid isPermaLink="false">6ab0daca3608a0f1464d5dfafe7b4ba1</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.6 | The Intel SoC FPGA Agilex5 SoC's static MMU region table in soc/intel/intel_socfpga/agilex5/mmu_regions.c mapped the System Manager peripheral (sysmgr) with MT_P_RW_U_RW. That sets the EL0 access-permission bit in the page-table descriptor, so user mode can read and write the block. The other peripheral windows in the same table, and the same block on the sibling Agilex SoC, are correctly mapped MT_P_RW_U_NA.
-
-On arm64, memory-domain page tables are cloned from the kernel page tables (arch_mem_domain_init()). When CONFIG_USERSPACE is enabled, every user mode thread therefore gets direct load/store access to the System Manager registers, with no partition grant or system call. Any untrusted code running as a user thread can exploit this.
-
-The System Manager controls system-wide state that only the kernel should own: NoC/FPGA-bridge idle requests, SDMMC and EMAC interface configuration, FPGA interface enables and boot scratch registers. A user thread can stall the interconnect or reconfigure peripherals out from under kernel drivers, causing denial of service and integrity loss for the platform, and can read that configuration. This breaks the userspace isolation boundary. Builds without CONFIG_USERSPACE (the default) are not affected. The fix maps the region MT_P_RW_U_NA.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102952 - NVD - CVSS Score v3.1: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102952</link>
-    <guid isPermaLink="false">0be63168eeaae53fce53466784d9d1ed</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.8 | The Zephyr TFTP client in subsys/net/lib/tftp/tftp_client.c does not check where the reply to its request comes from. After sending a read or write request to the configured server, send_request() accepts the first UDP datagram that arrives on the client's socket from any address and port. It then calls zsock_connect() to that sender, so the sender becomes the peer for the rest of the transfer. RFC 1350 requires a client to discard datagrams whose source does not match the transfer ID it expects.
-
-A host that can send a UDP datagram to the client's ephemeral port before the real server replies can take over the transfer. It can reply from its own address and does not need to spoof the server. A host on the same network segment that sees the request can do this easily. An off-path attacker must guess the randomized ephemeral port and win the race, which is easier when the server is slow or unreachable. No authentication or user interaction is needed beyond the device starting a transfer through tftp_get() or tftp_put(), for example from an application or the net tftp shell command.
-
-For tftp_get(), the attacker chooses the entire content handed to the application's data callback. For tftp_put(), the whole upload buffer is sent to the attacker. There is no memory corruption. TFTP itself has no authentication, and after the fix an attacker who can spoof the server's IP address can still interfere with a transfer. The fix checks the server's address on the first reply and the full address and port on every later datagram, and drops mismatches without using up the transfer's retries.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102953 - NVD - CVSS Score v3.1: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102953</link>
-    <guid isPermaLink="false">3815428944268a0a84b97af213c41c4f</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.0 | usbh_req_setup() in subsys/usb/host/usbh_ch9.c returns -ETIMEDOUT as soon as a control request times out, even though the transfer is still in flight. usbh_xfer_dequeue() only requests cancellation, and the host controller driver keeps the transfer and its data buffer until it returns it through the completion callback. Callers such as usbh_req_desc_dev() and usbh_req_desc_cfg() free the buffer (net_buf_unref()) right after usbh_req_setup() returns. Separately, a single global semaphore (ch9_req_sync) with no mutual exclusion lets a late or foreign completion wake the wrong waiter. That waiter then returns early and its caller frees a buffer the controller is still filling.
-
-A malicious USB device attached to a Zephyr USB host port can trigger this during enumeration. It NAKs a GET_DESCRIPTOR request until the 5-second timeout expires, then answers with data around the cancellation, or delays its answer to the next request after leaving a stale semaphore signal. The controller driver (for example the MAX3421E max3421e_hrslt_success() path) then writes device-controlled bytes into the freed net_buf and updates its length.
-
-The result is a use-after-free write into the USB host buffer pool with attacker-chosen contents, which can corrupt buffers that have been reallocated to other transfers, plus a leak of transfer objects. Crashes or memory corruption follow. The fix serializes usbh_req_setup() with a mutex, resets the semaphore before each request, and waits for the driver to return a cancelled transfer before freeing it. Only builds with the experimental CONFIG_USB_HOST_STACK are affected.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-102954 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102954</link>
-    <guid isPermaLink="false">c8c8543bd4dc19a1639be66a8b4f8965</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.8 | The STM32 SMBus driver (drivers/smbus/smbus_stm32.c) implements smbus_block_read() and smbus_block_pcall() by issuing a single i2c_transfer() in which the byte-count byte returned by the peripheral is read directly into the len field of the following i2c_msg. That message then receives data straight into the caller-supplied buffer. Nothing bounds the count, so smbus_stm32_block_read() and smbus_stm32_block_pcall() read up to 255 bytes into a buffer that the SMBus API documents (and the syscall verifiers validate) as holding at most SMBUS_BLOCK_BYTES_MAX (32) bytes.
-
-The count is chosen by the addressed SMBus peripheral. A malicious, counterfeit or faulty device on the bus (for example a removable smart battery, PMBus supply or plug-in module), or anyone able to drive the bus lines, can report a block count above 32 and cause the driver to write up to 223 bytes past the end of the caller's buffer. Callers typically pass a 32-byte stack buffer, as the in-tree smbus block_read shell command does, so the overflow lands on the caller's stack before any caller-side count check can run.
-
-The result is attacker-controlled stack or memory corruption in the context of the calling thread, which can crash the system or potentially be leveraged for code execution. When the call arrives through the smbus_block_read/smbus_block_pcall system calls, the out-of-bounds write happens in supervisor mode beyond the 32-byte region validated for the user thread. The fix receives the block into a driver-local 255-byte buffer and copies it out only when the count is at most SMBUS_BLOCK_BYTES_MAX, returning -ENODATA otherwise.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Mon, 23 Nov 2026 22:00:47 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-102955 - NVD - CVSS Score v3.1: 3.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102955</link>
@@ -371,6 +187,158 @@ AWS-LC-FIPS 2.0.18 is also fixed; AWS-LC-FIPS 2.x reaches end of support in Apri
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95793</link>
     <guid isPermaLink="false">7f6da5c0b261a2eb1906ce4e6fbeb68a</guid>
     <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.8 | An arbitrary remote code execution vulnerability exists in HPE Morpheus Manager.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115291 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115291</link>
+    <guid isPermaLink="false">a144a4e435316f9c885dfeb04d2a16ed</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing authorization in Kibana Security AI Assistant conversation deletion can allow an authenticated user with access to the assistant to delete other users' conversations in the same space. The delete-all operation can issue a query without an ownership filter using the assistant's internal Elasticsearch client. A user can consequently delete conversation history that they do not own or have permission to modify.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129976 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129976</link>
+    <guid isPermaLink="false">fec089b5050b84e9dc2976f4c0cf640b</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | Memory Allocation with Excessive Size Value (CWE-789) in Packetbeat can lead to denial of service via a specially crafted, malformed Cassandra protocol message. An unauthenticated attacker who can send traffic on a network segment that Packetbeat monitors can cause Packetbeat to allocate excessive memory and terminate. Elastic Agent is also affected when the Network Packet Capture integration monitors Cassandra traffic, because it uses the same protocol decoder.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130164 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130164</link>
+    <guid isPermaLink="false">1e9159076ff0466ee6b519dbebbadd21</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.8 | Hermes Agent is an open-source autonomous AI agent built by Nous Research for running tool-using workflows across CLI, desktop, and messaging interfaces. From 0.21.6 to 0.23.1, when Bot Desktop is hosted inside a non-local terminal backend, the agent process reads a backend-writable screen environment file without validating keys or values and merges its entries into the environment of processes started on the agent machine. Specifically, when terminal.backend is set to docker or ssh (or a plugin backend declaring supports_streams) with placement auto or terminal, _published() in tools/bot_desktop/sandbox_host.py accepts arbitrary KEY=VALUE lines from the hermes-bot-desktop env file and propagates them via tools/bot_desktop/runtime.py into the browser harness, computer-use helpers, and local terminal children. Code running inside the terminal backend can therefore set variables such as LD_PRELOAD, DYLD_INSERT_LIBRARIES, or PATH and gain code execution on the agent machine as the gateway user upon a subsequent browser or computer-use spawn, exposing credentials, tokens, and session history under the Hermes home directory. The default local backend, backends that cannot host a screen (Modal, Daytona, and Vercel), and Hermes Cloud in its default configuration are not affected. This issue is fixed in version 0.23.2.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133857 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133857</link>
+    <guid isPermaLink="false">ae78192e697c9c6f85c0d8331a921059</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | Uncontrolled resource allocation in Kibana exception-list filter creation can lead to denial of service. An authenticated user with access to the Security solution can submit a specially crafted request containing a large number of exception-list identifiers. Kibana can create an unbounded number of concurrent operations while resolving those identifiers, exhausting memory and crashing the Kibana process.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133858 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133858</link>
+    <guid isPermaLink="false">a8e88cc6d77e528ffe69800840ce9f69</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | Certain Fleet APIs in Kibana expose stored credentials to authenticated users who do not have the Fleet Settings: Read privilege. For example, a user with the Fleet Agent policies: Read privilege can retrieve credentials through Fleet output and agent binary download source APIs. The disclosed credentials could allow the attacker to authenticate to connected backend systems.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133860 - NVD - CVSS Score v3.1: 4.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133860</link>
+    <guid isPermaLink="false">07764e511a575852659d433ccd06defb</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.9 | An issue in Kibana allows Elasticsearch transforms in directly uploaded integration packages to run with Kibana's internal system identity instead of the installing user's privileges. A user with Integrations: All and Agent policies: All privileges in a single Kibana space could access or modify data they are not authorized to access, including agent policies from other spaces. This could disclose sensitive information or lead to command execution on managed Elastic Agent hosts.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133891 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133891</link>
+    <guid isPermaLink="false">14614bdf96c21f2963577f6ae0c5f69b</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.3 | Incorrect authorization in Elasticsearch columnar indices can bypass field-level security for geo_shape values. An authenticated user with access to an affected index can obtain denied geometry values through the internal source-geometry representation even when field-level security excludes the corresponding field. This discloses field data that the user is not authorized to read.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133917 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133917</link>
+    <guid isPermaLink="false">1104a96e2c82a5616cb42894566a0f2a</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.3 | Elasticsearch ES|QL query responses can disclose dataset storage locations and provider identity details to users who are allowed to query a dataset but cannot read its definition. Storage paths and storage-client error text can appear in read-failure messages or query-profile plan strings. An authenticated dataset reader can obtain this information without permission to view the dataset configuration. This issue does not disclose stored credentials or the dataset contents beyond the caller's query access.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133918 - NVD - CVSS Score v3.1: 4.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133918</link>
+    <guid isPermaLink="false">8a7d79d45d729ff1178cd63105d1cbdb</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.4 | Elasticsearch ES|QL data-source and dataset registration can write storage credentials or pre-signed URL signatures to the audit log in plaintext. In affected versions, request definitions are not appropriately filtered before request-body or URL-query auditing. An attacker with access to these logs can obtain credentials for the customer's external storage. The issue affects deployments with ES|QL federation enabled and audit logging configured to record the affected request information.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133919 - NVD - CVSS Score v3.1: 4.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133919</link>
+    <guid isPermaLink="false">253bae968b55c18f40d49d066be9011d</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.9 | Uncontrolled resource allocation in Elasticsearch mapping updates can lead to denial of service. An authenticated user with index-management privileges can submit specially crafted mapping updates that are expanded into multiple large in-memory representations. The amplification during request parsing and mapping updates can exhaust heap memory and crash an Elasticsearch node.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133925 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133925</link>
+    <guid isPermaLink="false">cf1e2dbee598f9b9b3b723bd7ff3a269</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | Uncontrolled resource consumption in Elasticsearch query parsing can lead to denial of service. An authenticated user with search permissions can submit a specially crafted query containing an excessive number of clauses. Expanding those clauses in memory before enforcing query complexity limits can exhaust heap memory and crash an Elasticsearch node.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133926 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133926</link>
+    <guid isPermaLink="false">a663aea35bb0c118e15f412c0904d14b</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.3 | An issue was discovered in Kibana where a user with the Synthetics All privilege in one space can access Fleet agent policy metadata from other spaces through a product API endpoint. This could lead to the unauthorized disclosure of operational metadata across spaces the user is not authorized to view.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133935 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133935</link>
+    <guid isPermaLink="false">9df8052f1362445b28c93b097b7cf4e9</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.8 | Unconstrained S3 endpoint settings in Elasticsearch ES|QL data sources can cause requests containing storage credentials to be sent to an attacker-controlled host. A user with data-source management privileges can configure a custom endpoint without the intended host restriction. On opted-in commercial Elastic Cloud Hosted deployments, the issue can also disclose workload-identity tokens and expose customer cloud resources outside Elasticsearch. Self-managed deployments are affected by the storage-endpoint path only.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133984 - NVD - CVSS Score v3.1: 4.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133984</link>
+    <guid isPermaLink="false">c8319dfd1beda7ca4e44f159c24f16d5</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.2 | Missing authorization in Kibana Cases alert attachments can allow an authenticated user with permission to add case comments or attachments to modify case-link metadata in documents they are not authorized to access. An attacker can add false case links and prevent legitimate case linkage by exhausting the alert's case-link limit. Writes are limited to the kibana.alert.case_ids field in indices that Kibana's internal account can read and update and whose mappings accept that field. One of the two authorization defects was fixed earlier in 8.19.22, 9.4.8 and 9.5.5; the fixed versions listed in this advisory address both defects.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134059 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134059</link>
+    <guid isPermaLink="false">6d8036b4d133b87ca86c713a375be80e</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | A relative path traversal vulnerability in Kibana Fleet and Elastic Agent allows an authenticated user with both Fleet Integrations: All and Agent policies: All privileges to distribute a malicious integration policy to managed Elastic Agents. A vulnerable Elastic Agent processing that policy for a component that runs in an isolated unit can modify or delete files outside the component's intended runtime directory with the privileges of the Elastic Agent process. This can cause loss of files or persistent denial of service on affected hosts.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135128 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135128</link>
+    <guid isPermaLink="false">0acdcaaa8db94a322a01fb80892565f1</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was detected in FredrikNoren ungit 1.5.30. This vulnerability affects unknown code of the file source/git-api.js of the component /api/clone. The manipulation of the argument url results in argument injection. The attack can be launched remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135472 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135472</link>
+    <guid isPermaLink="false">8325bdc0d2ad7f840aa820ef15823940</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.9 | open62541 1.5.0 through 1.5.10 contains a use-after-free and double free vulnerability in the lookupRefType() function in src/util/ua_util.c that allows attackers to corrupt the heap of the server process by supplying a RelativePath string resolved through UA_RelativePath_parseWithServer(). When the path names a ReferenceType with a string or GUID NodeId, the function returns a shallow copy of the browse result's NodeId and frees its identifier, causing the identifier to be freed a second time when the parsed path is cleared, which attackers can exploit to crash the server process.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135617 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135617</link>
+    <guid isPermaLink="false">a0b22a4b5e46aa206c6d52d67c7aabc2</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | Lookyloo is a web-based URL capture and analysis platform. Prior to the fix, the authorization mechanism for private captures (seed-based access control) was not consistently enforced at the data access layer. The capture_cache method and numerous internal methods (get_info, get_meta, get_statistics, get_modules_responses, get_data, get_video, get_screenshot, get_har, get_cookies, get_storage_state, get_frames, get_console_messages, get_capture, get_ressource, misp_export, lacus_export, ai_export, comparator functions, and others) could be invoked with only a capture UUID without validating the required seed token. This meant that API endpoints and internal code paths that called these methods directly could return private capture data to unauthenticated users or users lacking the correct seed. The before_request hook in the web interface provided a partial check, but the underlying data layer did not enforce it, creating an inconsistent authorization boundary. An attacker who knew or guessed a private capture UUID could potentially access sensitive data including rendered screenshots, HAR files, downloaded files, cookies, storage state, console messages, and MISP exports through various REST API endpoints and web routes. The fix introduces a LookylooPrivateCapture exception raised at the cache layer when a private capture is accessed without a valid seed, refactors the API to pass CaptureCache objects (already validated) rather than raw UUIDs, and ensures all web and API endpoints propagate the session-known seed or admin status to the data access layer. Background processes use an explicit unsafe=True flag to bypass the check, as they operate server-side with full trust.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-82303 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82303</link>
+    <guid isPermaLink="false">4d35794378b7177788348455f1ee5cba</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.5 | A buffer over-read vulnerability in Elasticsearch transport decompression can expose data from other requests. The LZ4 decoder can read beyond the declared compressed block into a shared network buffer. A remote attacker who can reach an affected transport interface can send a specially crafted compressed request and obtain data from outside their own request. Exploitation of the exposed remote-cluster transport interface does not require authentication.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
