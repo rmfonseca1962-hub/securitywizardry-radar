@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 04:03:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 05:01:17 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-134731 - NVD - CVSS Score v4.0: 2.1</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134731</link>
@@ -135,44 +135,44 @@
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134828 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134828</link>
-    <guid isPermaLink="false">3d5adbcfd2350538184f0c0d670bf233</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 5.1 | Penpot 2.18.0 before 2.19.1 contains a stored cross-site scripting vulnerability in the sanitize-svg function that allows authenticated users to bypass filtering through unescaped re-serialization. Attackers with file edit permission can upload SVGs using entity-encoded or CDATA-wrapped markup or attribute quote breakouts to execute JavaScript in the Penpot origin when victims open them.</description>
+    <title>CVE-2026-129830 - NVD - CVSS Score v3.1: 4.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129830</link>
+    <guid isPermaLink="false">40052a3b20455abc5edd0250d35ce83e</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.7 | When the rsyslog's `imuxsock` is parsing the TAG field from a message with a accepted shorter timestamp, the cursor used to read the message fields and the remaining message length to be read are left in a inconsistent state in relation to the content in the raw message, leading the module to read one byte past the end of the buffer holding the message.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134829 - NVD - CVSS Score v4.0: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134829</link>
-    <guid isPermaLink="false">627f378149f76f262d498bde2764de6c</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 7.6 | Umami 3.3.0 before 3.5.0 contains a race condition in two-factor authentication attempt limiting that allows attackers holding a user's password to bypass lockout. Attackers can send many concurrent POST requests to /api/2fa/verify that pass checkRateLimit before recordFailedAttempt runs, brute-forcing TOTP or backup codes beyond the five-attempt limit.</description>
+    <title>CVE-2026-134850 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134850</link>
+    <guid isPermaLink="false">3f22886b0b4561b61d08b09923624924</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | A security vulnerability has been detected in aceberg WatchYourLAN up to 2.1.4. Affected by this issue is the function getPortState of the file backend/internal/api/api-network.go of the component Web API. The manipulation of the argument addr leads to server-side request forgery. The attack is possible to be carried out remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134830 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134830</link>
-    <guid isPermaLink="false">09fae8c692a174684a8e0c355019d998</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 8.7 | Casdoor before 4.27.1 contains an uncontrolled resource consumption vulnerability in decodeSamlMessage that allows unauthenticated attackers to exhaust memory by sending unbounded DEFLATE-compressed SAML messages. Attackers can send a small, highly compressed SAMLRequest or SAMLResponse to the /api/saml/logout/:owner/:application endpoint, which inflates to gigabytes and crashes or stalls the server.</description>
+    <title>CVE-2026-134851 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134851</link>
+    <guid isPermaLink="false">e796d602bb0d1902977850bbe45ac973</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | A vulnerability was detected in leonkhoo123 self-hosting-file-uploader up to 473e38ff8fba494f33a485730c6d95c5d8c536ea. This affects an unknown part of the file routes/generator.js of the component Admin Generator API. The manipulation results in missing authentication. The attack may be performed from remote. This product utilizes a rolling release system for continuous delivery, and as such, version information for affected or updated releases is not disclosed.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134831 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134831</link>
-    <guid isPermaLink="false">41493737eee31f75aa7ad6e24aa551af</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 6.9 | Chatwoot before 4.20.0 contains an information disclosure vulnerability that allows unauthenticated attackers to read unpublished help center articles through the public portal API. Attackers can request archived articles by slug via the ArticlesController show actions or read draft translations exposed through associated_articles in article JSON responses.</description>
+    <title>CVE-2026-134852 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134852</link>
+    <guid isPermaLink="false">3290fccd28022af3450d816e571d62dc</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.5 | A flaw has been found in shaozilee bmp-js up to 0.1.0. This vulnerability affects the function BmpDecoder.parseRGBA of the file lib/decoder.js. This manipulation causes uncontrolled memory allocation. It is possible to initiate the attack remotely. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134832 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134832</link>
-    <guid isPermaLink="false">d0ccad6e6f8f31a88ff3f89842059bc8</guid>
-    <description>Sunday 22 November 2026 | NVD | CVSS Score v4.0: 4.8 | Vim 9.2.0405 before 9.2.1352 contains a security bypass vulnerability in expand_tag_fname() that allows attackers to evade 'tagsecure' URL checks by escaping URLs in tags file entries. Attackers can supply a crafted tags file in a cloned repository so that jumping to a tag makes netrw fetch an attacker-controlled URL leaking environment variable values.</description>
+    <title>CVE-2026-134853 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134853</link>
+    <guid isPermaLink="false">b8691d93569a311c176e3d2f0136d0f3</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability has been found in vthibault tga-js up to 1.1.1. This issue affects the function _decodeRLE of the file src/tga.js of the component TgaLoader. Such manipulation leads to uncontrolled memory allocation. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
     <category>NVD</category>
-    <pubDate>Sun, 22 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-134833 - NVD - CVSS Score v4.0: 6.9</title>
