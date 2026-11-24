@@ -5,39 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 03:02:19 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-133960 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133960</link>
-    <guid isPermaLink="false">9f309c400760db5451ee2324b90d2f5e</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 8.8 | Tanium addressed an unauthorized code execution vulnerability in the Tanium Default Content.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133961 - NVD - CVSS Score v3.1: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133961</link>
-    <guid isPermaLink="false">583129f19741a40a06db62b416921ccb</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.2 | Tanium addressed an unauthorized code execution vulnerability in the Tanium Default Content.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134178 - NVD - CVSS Score v3.1: 4.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134178</link>
-    <guid isPermaLink="false">c42adecea057d76f6232d625ae60cf04</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 4.2 | Tanium addressed a server-side request forgery vulnerability in Partner Integration</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134346 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134346</link>
-    <guid isPermaLink="false">4e585db1599d6230201b339122db1121</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.5 | Tanium addressed an information disclosure vulnerability in Enforce Recovery Key Portal.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 24 Nov 2026 04:01:27 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-134401 - NVD - CVSS Score v3.1: 9.6</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134401</link>
@@ -326,6 +294,42 @@ Refer to the ' Security Update for ASUS Router Firmware ' section on the ASUS S
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93457</link>
     <guid isPermaLink="false">c8b7bcc6d7ae3497905b57c46161db02</guid>
     <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.2 | Out-of-bounds write vulnerability in certain ASUS routers allows an unauthenticated nearby user to corrupt process memory, potentially resulting in a denial-of-service, via crafted LLTD packets.Refer to the ' Security Update for ASUS Router Firmware ' section on the ASUS Security Advisory for more information.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124283 - NVD - CVSS Score v4.0: 8.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124283</link>
+    <guid isPermaLink="false">b629ac9503ed109d8679b102c4f33e92</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.9 | Deserialization of Untrusted Data vulnerability in ash-project ash allows an unauthenticated attacker to execute arbitrary code or inject SQL through a forged keyset pagination cursor.
+
+Ash.Page.Keyset.filter/4 in lib/ash/page/keyset.ex decodes the client-supplied page[:after] or page[:before] cursor from Erlang external term format and rejects decoded expressions with Ash.Expr.expr?/1. That check does not examine the fields of a struct. The cast of each value against the type of its sort field accepts structs for the :ci_string, :map, :struct and :term types. A struct in the cursor value for such a sort field therefore reaches the data layer. With AshPostgres, the read passes such a struct to inspect/1, which runs the Inspect implementation of the struct module that the attacker selected. A chain of struct modules from ecto and db_connection then calls a function that the cursor names, which permits OS command execution. An %Ash.Query.Function.Fragment{} inside an %Ash.CiString{} value is written into the SQL query as raw text.
+
+This issue affects ash: from 3.31.3 before 3.38.0.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135451 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135451</link>
+    <guid isPermaLink="false">c28a8d654ee3f5385074cbc74f15aa8a</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | A flaw has been found in amirhamza05 Student-Management-System up to 449397e35d42e3779f14f0bfc654ab307103f7e3. This issue affects some unknown processing of the file page_action/user/user_profile.php of the component User Profile Handler. This manipulation causes authorization bypass. The attack can be initiated remotely. The exploit has been published and may be used. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135453 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135453</link>
+    <guid isPermaLink="false">04ba0c2ae0ad5dc8b84a0ebbb0e7a201</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability has been found in amirhamza05 Student-Management-System up to 449397e35d42e3779f14f0bfc654ab307103f7e3. Impacted is the function move_uploaded_file of the file student_action.php of the component User Avatar Upload. Such manipulation of the argument File leads to unrestricted upload. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135454 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135454</link>
+    <guid isPermaLink="false">1da9c36aed7398a846e660ae3f7faf1e</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was found in amirhamza05 Student-Management-System up to 449397e35d42e3779f14f0bfc654ab307103f7e3. The affected element is the function sql_action of the file config/connect.php of the component Student Management Module. Performing a manipulation results in sql injection. The attack may be initiated remotely. The exploit has been made public and could be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
