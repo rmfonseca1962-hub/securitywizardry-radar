@@ -5,331 +5,324 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 04:01:27 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 05:02:45 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-134401 - NVD - CVSS Score v3.1: 9.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134401</link>
-    <guid isPermaLink="false">bac00396203a020fe49d1c2d0e90dc0b</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 9.6 | Improper input validation in Variations in Google Chrome prior to 158.0.8127.88 allowed a remote attacker to potentially execute arbitrary code outside the sandbox via a crafted HTML page. (Chromium security severity: Critical)</description>
+    <title>CVE-2026-135708 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135708</link>
+    <guid isPermaLink="false">78f9ce14e0bbbc16c8f6cc84bd1f6541</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg 8.0 before 9.1 contains an improper URL scheme validation vulnerability in the WHIP muxer that allows malicious WHIP servers to create or truncate local files via the Location header. Attackers can return a file: URL that dispose_session() opens read-write with truncation on teardown, destroying arbitrary user-writable files or redirecting requests to other protocols.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134443 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134443</link>
-    <guid isPermaLink="false">5b2d18b6c44c74cdd243033334b979c7</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Tanium addressed an uncontrolled resource consumption vulnerability in Enforce Recovery Key Portal.</description>
+    <title>CVE-2026-135709 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135709</link>
+    <guid isPermaLink="false">7c083e47d31c583c7e923562802348bd</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg before 9.1 contains an out-of-bounds write vulnerability in ogg_buffer_data() in libavformat/oggenc.c because ogg_buffer_page() leaves a full page current after failed allocation. When page allocation fails, a memset with length (size_t)-1 or an overflowing memcpy writes past the segment table, causing heap memory corruption and crashes when writing Ogg output.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134493 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134493</link>
-    <guid isPermaLink="false">9d92aea361ad7eb0be0e2fb01b4340ee</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.5 | Tanium addressed a path traversal vulnerability in Core Content.</description>
+    <title>CVE-2026-135710 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135710</link>
+    <guid isPermaLink="false">9f8960ad7df2aab7acd6f71bc6ef999d</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg before 9.1 contains an uninitialized memory disclosure vulnerability in vmd_read_packet() in libavformat/sierravmd.c that leaves 16 packet bytes unwritten for Indeo3 frames. Attackers can supply a crafted VMD file with Indeo3 video to expose leftover heap contents in demuxed packets, such as stream-copied output files.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134494 - NVD - CVSS Score v3.1: 8.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134494</link>
-    <guid isPermaLink="false">34b94c7040a1fb37e724489ed068ef7a</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 8.0 | Tanium addressed an argument injection vulnerability in Core Content.</description>
+    <title>CVE-2026-135711 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135711</link>
+    <guid isPermaLink="false">b2e4504e554acfc217c6c20b70f3d3fe</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg before 9.1 contains an XML injection vulnerability in ttml_write_header() in libavformat/ttmlenc.c that writes stream language metadata unescaped into the xml:lang attribute. Attackers can supply media files, such as Matroska subtitle tracks with crafted Language values, to inject markup into converted TTML documents and alter downstream parsing or rendering.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134496 - NVD - CVSS Score v3.1: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134496</link>
-    <guid isPermaLink="false">8e931bd6530d49a13786ee48d66620aa</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.3 | Tanium addressed an improper input validation vulnerability in Core Content.</description>
+    <title>CVE-2026-135712 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135712</link>
+    <guid isPermaLink="false">2d976f6b92512e40de984a1aaf2b565c</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | FFmpeg before 9.1 contains an integer overflow vulnerability in the split_planes size check of write_packet() in libavformat/img2enc.c that allows out-of-bounds heap reads. Attackers can supply a crafted input whose rawvideo stream declares very large width and height, remuxed into .y image files, to leak heap memory into output files or crash the application.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134618 - NVD - CVSS Score v3.1: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134618</link>
-    <guid isPermaLink="false">43b851aaa01cd36e3cafa1c9eab4b3ad</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.3 | Tanium addressed a local privilege escalation vulnerability in Emerging Issues Content.</description>
+    <title>CVE-2026-135713 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135713</link>
+    <guid isPermaLink="false">a2291cbcecf624d644d6a7965b9353fc</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg before 9.1 contains a NULL pointer dereference vulnerability in libavformat/mmst.c that allows malicious MMS servers to crash clients by sending malformed ASF headers. Attackers can send an ASF header lacking a packet size or stream properties, causing mms_open() to return success after freeing state and crash on first read.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134619 - NVD - CVSS Score v3.1: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134619</link>
-    <guid isPermaLink="false">1215f31f7941fb6d57d150a182b70781</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.3 | Tanium addressed a local privilege escalation vulnerability in Emerging Issues Content.</description>
+    <title>CVE-2026-135714 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135714</link>
+    <guid isPermaLink="false">7d4b7a6399f5a6440b6f3d1a2c753597</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg before 9.1 contains an information disclosure vulnerability in amf_get_field_value2() in libavformat/rtmppkt.c that NUL-terminates truncated AMF strings at the declared length instead of bytes read. A malicious RTMP server, or connecting client in listen mode, can send truncated onStatus or _error strings to leak uninitialized stack memory through log messages.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134620 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134620</link>
-    <guid isPermaLink="false">bb604bc79d088d254fde522de6be0ac8</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 8.8 | Tanium addressed a command injection vulnerability in Engage.</description>
+    <title>CVE-2026-135715 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135715</link>
+    <guid isPermaLink="false">0651b15861498b644688512d0a8847df</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg before 9.1 contains a NULL pointer dereference vulnerability in the AVIF muxer in libavformat/movenc.c that allows attackers to crash the application through streams with unknown pixel formats. Attackers can supply a crafted input whose video stream is stream-copied to AVIF, causing unchecked av_pix_fmt_desc_get() results to be dereferenced, resulting in denial of service.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134739 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134739</link>
-    <guid isPermaLink="false">3e5825e959af1509659f9e0301b3dfea</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 6.5 | Tanium addressed a denial of service vulnerability in Tanium Server.</description>
+    <title>CVE-2026-135716 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135716</link>
+    <guid isPermaLink="false">797979392f8c0e98bd50b9922cfc3c7a</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | FFmpeg before 9.1 contains an out-of-bounds write vulnerability in build_frame_code() in libavformat/nutenc.c that allows attackers to corrupt the header_len[] array by supplying inputs with many audio streams. Attackers can remux a crafted input with many audio streams to NUT, causing out-of-bounds reads past static header tables and crashing the application.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134740 - NVD - CVSS Score v3.1: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134740</link>
-    <guid isPermaLink="false">80bf66fe61ae9f4ab9d1334aef5271b3</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.9 | Tanium addressed a denial of service vulnerability in Tanium Zone Server.</description>
+    <title>CVE-2026-135717 - NVD - CVSS Score v4.0: 2.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135717</link>
+    <guid isPermaLink="false">7e93ba65f09345843701be0e7e763c9c</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.0 | FFmpeg 8.0 before 9.1 contains a use of uninitialized memory vulnerability in opus_parse_packet() in libavformat/rtpdec_opus.c that reads the Opus TOC byte from stale buffer memory when parsing empty RTP payloads. A malicious RTSP server or RTP sender can deliver an empty Opus payload to cause incorrect packet durations and leak bits of stale memory through pkt-&gt;duration.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134746 - NVD - CVSS Score v3.1: 2.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134746</link>
-    <guid isPermaLink="false">27bd34c002d86bbd6e6b8981bd83a4f4</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 2.4 | Tanium addressed a denial of service vulnerability in Tanium Zone Server.</description>
+    <title>CVE-2026-135718 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135718</link>
+    <guid isPermaLink="false">dcabd3d5aee4f9aef02ef553378e7f93</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg 7.0 before 9.1 contains an out-of-bounds read vulnerability in dvdvideo_audio_stream_add_all() in libavformat/dvdvideodec.c when parsing menu audio streams. Attackers can supply a crafted DVD image whose menu IFO declares more than 8 audio streams, reading past the audio_control array and crashing applications.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135121 - NVD - CVSS Score v3.1: 5.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135121</link>
-    <guid isPermaLink="false">9ff9049edac23aeeb1de0eb2057c208e</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.0 | Tanium addressed an improper input validation vulnerability in Core Content - MSSQL.</description>
+    <title>CVE-2026-135719 - NVD - CVSS Score v4.0: 2.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135719</link>
+    <guid isPermaLink="false">dd88b119164ac5d0893a016ab44d9233</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.0 | FFmpeg before 9.1 contains an uninitialized memory disclosure vulnerability in dxa_read_packet() in libavformat/dxa.c that ignores short avio_read() results for CMAP palette data. Attackers can supply a crafted DXA stream over a stalling network source so uninitialized stack bytes are copied into returned video packets and decoded frames.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132270 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132270</link>
-    <guid isPermaLink="false">cfe386b14aaa1ceb4d66686dabbfcc58</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 4.3 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.7.1 through 0.8.4, AutoPilot prices block calls using model-supplied input but executes them with the server-resolved credential. Supplying a syntactically valid placeholder credential causes the price rule to evaluate to zero, skipping both the balance check and debit while still running paid blocks on the operator's credential. This issue is fixed in version 0.9.0.</description>
+    <title>CVE-2026-135720 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135720</link>
+    <guid isPermaLink="false">f363502afea55816bd5d918313bee3a7</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg 9.0 before 9.1 contains a NULL pointer dereference vulnerability in dash_read_header() in libavformat/dashdec.c when building LCEVC stream groups without checking for a missing codecs string. Attackers can supply a crafted MPD manifest with a representation declaring a dependencyId but no codecs attribute to crash applications using the DASH demuxer.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133448 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133448</link>
-    <guid isPermaLink="false">aaf897a1f1b15963ffdd688c18ab4878</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.1 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.7.1 through 0.8.4, chat and prompt text passed to the Claude Code CLI is pre-processed before reaching the model, bypassing AutoPilot's tool allow-list and PreToolUse hooks. In both AutoPilot's Claude Agent SDK path and the graph orchestrator block's extended_thinking SDK mode, messages starting with / execute CLI commands or bundled skills, while @&lt;path&gt; mentions read files or list directories on the host and attach the results to the model request. Signed-in users, members of linked chat channels, graph authors, or indirect tool output carried into turn history can make the CLI read files accessible to the copilot executor process, whose contents reach the model provider and can be repeated in replies, and run commands that compact or clear the session, switch the model, or modify the CLI's settings.json file. This issue is fixed in version 0.9.0.</description>
+    <title>CVE-2026-135721 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135721</link>
+    <guid isPermaLink="false">51561159d15daf1b8ac0eaae1b4ff38d</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg before 9.1 contains an infinite loop vulnerability in ff_rtp_send_vc2hq() in libavformat/rtpenc_vc2hq.c that accepts a Dirac next parse offset of zero. Attackers can supply crafted Dirac/VC-2 video remuxed to the RTP muxer, causing the parsing pointer to never advance and consume CPU indefinitely.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135419 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135419</link>
-    <guid isPermaLink="false">05b285dab7e5dfc7430bb04e6f8dd470</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was determined in itsourcecode Airline Reservation System 1.0. This affects an unknown part of the file admin/navbar.php. This manipulation of the argument page causes cross site scripting. The attack is possible to be carried out remotely. The exploit has been publicly disclosed and may be utilized.</description>
+    <title>CVE-2026-135722 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135722</link>
+    <guid isPermaLink="false">c0d295c8dcd81e8c01dc3d869f654603</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a heap-based buffer overflow vulnerability in peak_init_writer() and wav_write_packet() in libavformat/wavenc.c that allows attackers to corrupt heap memory by supplying audio with zero channels. Attackers can provide a crafted PCM stream declaring no channels for WAV output with peak envelope enabled, causing out-of-bounds writes past peak_maxpos and peak_maxneg arrays, crashes, and potential code execution.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135684 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135684</link>
-    <guid isPermaLink="false">8a5af9ceb813bf1ce013ed4d29445d55</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.3 | SparkyFitness before 1.12.0 contains a missing ownership check in getNutritionixHeaders that allows authenticated users to use another user's Nutritionix API credentials via the providerId parameter. Attackers who know a victim's provider UUID can call the Nutritionix search, nutrients, item, or exercise endpoints to consume the victim's paid API quota.</description>
+    <title>CVE-2026-135723 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135723</link>
+    <guid isPermaLink="false">745565cb388abf3689577ad82f9574ee</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg before 9.1 contains a double free vulnerability in the fill_marker() function of libavformat/imf_cpl.c that frees a Marker label without clearing the pointer when default scope allocation fails. Attackers can supply a crafted Composition Playlist with a Marker Label lacking a scope attribute, triggering a second free in imf_marker_free() under memory pressure and causing memory corruption or a crash.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135685 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135685</link>
-    <guid isPermaLink="false">e542c92bc8bf4d180edf0db5b363caab</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.3 | SparkyFitness before 1.12.0 contains a weak password change vulnerability that allows attackers with a victim's session to change the account password without supplying the current password. Attackers can send a POST request with only newPassword to /api/identity/update-password to lock out the legitimate owner and retain persistent access.</description>
+    <title>CVE-2026-135724 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135724</link>
+    <guid isPermaLink="false">a143232e29d0c5a7fcf08ed328535272</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.7 | FFmpeg before 9.1 contains a NULL pointer dereference vulnerability in avformat_stream_group_create() in libavformat/options.c that sets the group type before allocating parameters. Attackers can supply crafted HEIF/AVIF files whose tile grid parsing under allocation failure makes ff_free_stream_group() dereference a NULL tile_grid, crashing the application.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135686 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135686</link>
-    <guid isPermaLink="false">b4f23b00296fcc99d6c49dbc51c1a0a3</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.1 | Trilium through 0.107.0 contains an sql injection vulnerability in updateNormalEntity() that allows malicious sync partners to inject SQL by supplying crafted entity names and column keys. Attackers can abuse /api/sync/changed or PUT /api/sync/update data to copy sessions, etapi_tokens and user_data into synced rows and write arbitrary database rows.</description>
+    <title>CVE-2026-135725 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135725</link>
+    <guid isPermaLink="false">ae4afef9b5d8b008982aff9b5f0b8e03</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a stack-based buffer overflow vulnerability in ff_rtmp_packet_write() in libavformat/rtmppkt.c that allows malicious RTMP servers to overflow a 16-byte header buffer. Attackers can send a Set Chunk Size packet on a high channel id with an extended timestamp, which handle_chunk_size() echoes back, corrupting the publishing client's stack.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135687 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135687</link>
-    <guid isPermaLink="false">7565d19d9e73e42a790f0080464aa900</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.3 | Arcane before 3.0.0 fails to enforce the requiresPasswordChange account flag on the server, allowing attackers with initial or temporary credentials to obtain fully privileged access tokens. Attackers can log in via /api/auth/login and call privileged endpoints such as POST /api/users to create users without completing the mandated password change.</description>
+    <title>CVE-2026-135726 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135726</link>
+    <guid isPermaLink="false">be5b26af1e7953cb215cb20f3f63ca8a</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg before 9.1 contains a NULL pointer dereference vulnerability in rdt_parse_packet() in libavformat/rdt.c that allows remote attackers to crash applications by omitting the ASMRuleBook SDP attribute. Attackers can serve an RTSP session selecting RDT transport without ASMRuleBook, then send an RDT data packet to crash ffmpeg or ffprobe.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135688 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135688</link>
-    <guid isPermaLink="false">0cef1a9dce286388394094445a370bf7</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | Idno through 1.6.4 contains an unauthenticated blind server-side request forgery vulnerability in the /webmention/ endpoint that fetches attacker-supplied source URLs without scheme, host, or IP validation. Attackers can set target to a local page and source to loopback, private-network, or cloud metadata addresses, then infer internal service reachability from response status and timing.</description>
+    <title>CVE-2026-135727 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135727</link>
+    <guid isPermaLink="false">1145ebb1d951d2c6482dd81e17a95bdb</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg before 9.1 contains an uninitialized memory disclosure vulnerability in rfc4175_handle_packet() in libavformat/rtpdec_rfc4175.c that leaks heap contents into decoded video frames. Attackers can send RTP streams containing only some scan lines of a frame, leaving av_malloc buffer bytes uninitialized and exposing process heap memory in displayed, stored or re-streamed video.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135689 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135689</link>
-    <guid isPermaLink="false">e40c20230b68fa1f667d1b0e88835fc5</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | Community Store for Concrete CMS before 2.8.0 contains a stored cross-site scripting vulnerability that allows unauthenticated attackers to inject script via the order email in single_pages/dashboard/store/orders.php. Attackers can place guest orders with quoted email local parts containing markup to execute script in a store manager's session when viewing the order.</description>
+    <title>CVE-2026-135728 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135728</link>
+    <guid isPermaLink="false">bb672396e19c7757342f76986f07bbe9</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.7 | FFmpeg before 9.1 contains a signed integer overflow vulnerability in libavformat/dashdec.c that allows attackers to crash applications by supplying a crafted DASH manifest. Attackers can craft an MPD manifest with very long BaseURL and SegmentTemplate strings to overflow max_url_size, causing undersized URL allocations and denial of service.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135690 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135690</link>
-    <guid isPermaLink="false">97ff90e70ec660f7ac6e8fca66f36770</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.3 | CivetWeb through 1.16 built with USE_HTTP2 and enable_http2 contains a heap out-of-bounds read vulnerability in hpack_decode() in src/http2.inl. Unauthenticated remote attackers can send a crafted HEADERS frame ending with a Huffman-coded string over TLS-negotiated HTTP/2 to read one byte past the heap frame buffer.</description>
+    <title>CVE-2026-135729 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135729</link>
+    <guid isPermaLink="false">dd12d15f8a3dc440ae10617b642b0f3c</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg before 9.1 contains an XML injection vulnerability in write_adaptation_set() in libavformat/webmdashenc.c that writes stream language metadata unescaped into the AdaptationSet lang attribute. Attackers can supply crafted WebM files whose track language contains quotes or angle brackets to inject attributes or elements, controlling segment URLs and representations in generated MPD manifests.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135691 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135691</link>
-    <guid isPermaLink="false">93b60f2a2620dbf23386d4e3529c9213</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | Open5GS WebUI through 2.8.0 contains an incorrect authorization vulnerability in webui/server/routes/db.js that allows authenticated user-role accounts to modify the Account model. Attackers can send PATCH /api/db/Account/&lt;username&gt; setting roles to admin, overwrite password hashes, delete accounts, and read hashes to gain full administrative control.</description>
+    <title>CVE-2026-135730 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135730</link>
+    <guid isPermaLink="false">c35ae8788e0e4893382188fc50351e27</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg before 9.1 contains an uninitialized memory vulnerability in vpk_read_header() in libavformat/vpk.c that computes a last block size not divisible by the channel count. Attackers can supply a crafted VPK file with a large channel count so the last audio packet exposes leftover heap memory contents.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135692 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135692</link>
-    <guid isPermaLink="false">1f618ad08397d7af9ec5073dfdcf376a</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | rConfig Core 8.0.0 before 8.2.17 and rConfig Pro before 8.4.0 contain a PHP object injection vulnerability in app/Casts/EncryptStringCast.php that unserializes decrypted attributes without class restrictions. Authenticated attackers can store a serialized gadget chain in encrypted fields like device passwords, triggering command execution as the web server user when read via GET /api/devices.</description>
+    <title>CVE-2026-135731 - NVD - CVSS Score v4.0: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135731</link>
+    <guid isPermaLink="false">adf87055ad97d64b58968a851daddf16</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg before 9.1 contains an integer overflow in send_picture() of libavformat/rtpenc_vc2hq.c that leaves the bit reader without a buffer, causing a NULL pointer dereference. Attackers can supply a Dirac/VC-2 stream with a picture data unit of about 256 MiB or more to crash applications packetizing it to RTP.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135693 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135693</link>
-    <guid isPermaLink="false">7173a1137cf2844bc2407fb605e624e7</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.3 | rConfig Core 8.0.0 before 8.2.17 and rConfig Pro before 8.4.0 contain a stored cross-site scripting vulnerability in the Config Search View Matches dialog, which renders configuration context via v-html without escaping. Attackers can place markup in device banners, interface descriptions, ACL remarks or SNMP locations to execute script in a user's session and read stored configurations containing secrets.</description>
+    <title>CVE-2026-135732 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135732</link>
+    <guid isPermaLink="false">8dc0f51ea2b8ee191b7381633c9e2d86</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | FFmpeg before 9.1 contains an out-of-bounds read vulnerability in mxf_write_d10_audio_packet() in libavformat/mxfenc.c because mxf_init() accepts unsupported D-10 audio codecs. Attackers can supply a crafted input with a non-PCM multichannel audio stream remuxed to D-10 MXF to leak heap memory into the output file or crash the application.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135694 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135694</link>
-    <guid isPermaLink="false">b14a50e2afe8f77ac298150ea38babf8</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.1 | rConfig Core 8.1.0 before 8.2.20 and rConfig Pro before 8.4.0 contain a missing authorization vulnerability in ExportController.php that allows authenticated users to export restricted tables. Attackers can supply excluded table names to export($table), bypassing the EXCLUDED_TABLES deny list, and obtain decrypted passwords, device credentials, and API tokens.</description>
+    <title>CVE-2026-135733 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135733</link>
+    <guid isPermaLink="false">d5e7347a5fbd5e93888d5fd7e6981ad9</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | FFmpeg through 9.1 contains an insecure default configuration in the zmq and azmq filters of libavfilter/f_zmq.c that binds an unauthenticated command socket to all interfaces on TCP port 5555. Remote attackers can send 'TARGET COMMAND [ARG]' messages passed to avfilter_graph_send_command() to change filter runtime parameters and alter processed audio or video.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135695 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135695</link>
-    <guid isPermaLink="false">16ddc6e772dccfbfa5669ce2b54c870e</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | rConfig Core 8.0.0 before 8.2.13 and rConfig Pro before 8.4.0 contain an authorization bypass vulnerability in the users API that allows authenticated users to modify other accounts. Attackers can send a UserController::update request with an administrator's user id and new password, then log in as that administrator to take full control.</description>
+    <title>CVE-2026-135734 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135734</link>
+    <guid isPermaLink="false">399d6eabec01f1c6f1105d9ef398ac8b</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a heap out-of-bounds write vulnerability in the deflicker filter that lets attackers corrupt heap memory via unclamped high bit depth luma samples. Attackers can supply crafted video whose luma values exceed the nominal depth, making calc_avgy16() increment counters past the histogram allocation, causing crashes or possibly code execution.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135696 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135696</link>
-    <guid isPermaLink="false">a49ce8064932a1b4a3b8e8d930a17b6a</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.7 | rConfig Core 8.2.19 before 8.2.22 contains a server-side request forgery vulnerability that allows authenticated users to bypass the DeviceIpIsValid loopback guard by supplying unresolved hostnames. Attackers can create a device with a hostname resolving to loopback and device_port_override 6379, causing configuration downloads to send Redis inline commands for remote code execution.</description>
+    <title>CVE-2026-135735 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135735</link>
+    <guid isPermaLink="false">043eb1ed32e82953781b92da5b42234f</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | FFmpeg before 9.1 contains a heap out-of-bounds read vulnerability in filter_slice_rgba_planar() that allows attackers to read beyond lookup tables using unmasked high bit depth planar samples. Attackers can supply crafted video with samples exceeding the nominal depth, passed unchanged by rawvideo, to crash the application or leak heap contents into output video.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135697 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135697</link>
-    <guid isPermaLink="false">a7ef41f16a60757d57a587c7d02b27c6</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | CleverReach WP before 1.5.28 contains a missing authorization vulnerability in the Article_Search controller that allows unauthenticated attackers to read non-public posts by supplying post IDs. Attackers can enumerate the id parameter in search requests to retrieve raw content of draft, pending, private, and password-protected posts and pages.</description>
+    <title>CVE-2026-135736 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135736</link>
+    <guid isPermaLink="false">d6e2ea8d15b1bcc0aaacb0e3b7774591</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.2 | FFmpeg 4.4 before 9.1 contains a heap out-of-bounds read and write vulnerability in libavfilter/vf_deband.c that allows attackers to corrupt heap memory by sending a runtime coupling command. Attackers can send a 'deband coupling 1' command via sendcmd or an unauthenticated zmq filter, making chroma planes be processed at luma dimensions to crash the process or potentially execute code.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-114203 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-114203</link>
-    <guid isPermaLink="false">8d2e4ad6d57b49b514f6fc2066606d4b</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.3 | An Improper Neutralization of Special Elements used in an OS Command（'OS Command Injection') in the ASUS GPU Tweak III allows a remote user to execute arbitrary OS commands via a crafted request to an HTTP endpoint of the service.
-Refer to the '
-Security Update for ASUS GPU Tweak III  ' section on the ASUS Security Advisory for more information.</description>
+    <title>CVE-2026-135737 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135737</link>
+    <guid isPermaLink="false">ffe330e05244456997e0fcdfbe54b7df</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a heap out-of-bounds write and read vulnerability in the tmidequalizer filter that allows attackers to corrupt memory by supplying high bit depth samples exceeding the nominal maximum. Attackers can craft planar 9, 10, 12 or 14 bit video so compute_histogram16() and apply_contrast_change16() index unclamped samples, crashing applications, corrupting the heap, and leaking heap contents.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-130178 - NVD - CVSS Score v3.1: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130178</link>
-    <guid isPermaLink="false">4c91a300356def7c7e6dc69cb2ce0c87</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.7 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.7.1 through 0.8.4, an incomplete IPv6 blocklist in AutoGPT's outbound SSRF protection allows authenticated users to reach local or private network services. Specifically, _is_ip_blocked and BLOCKED_IP_NETWORKS in autogpt_platform/backend/backend/util/request.py fail to reject the IPv6 unspecified address :: (which connects to ::1 on Linux) as well as 6to4, NAT64, Teredo, and deprecated IPv4-compatible IPv6 encodings. An attacker can pass :: directly to blocks/sql_query_block.py or blocks/email_block.py, or point URL-fetching blocks, web fetch, MCP servers, webhooks, or OAuth at a hostname whose AAAA record resolves to ::. On backends run directly on a host, this exposes unauthenticated internal RPC services and databases listening on ::1, though the default Docker Compose and single-container deployments bind internal services to IPv4 only. This issue is fixed in version 0.9.0.</description>
+    <title>CVE-2026-135738 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135738</link>
+    <guid isPermaLink="false">b562b8efb0f77666c1f56cc76b5a8ca2</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a heap out-of-bounds write vulnerability in libavfilter/vf_signalstats.c that allows attackers to corrupt heap memory by supplying high bit depth samples exceeding the nominal maximum. Attackers can craft planar 9 to 14 bit YUV video whose unclamped samples or saturation values index past histogram ends, crashing applications or possibly executing code.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135450 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135450</link>
-    <guid isPermaLink="false">26fe99b5701622b45e81f9a6467a209e</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was detected in amirhamza05 Student-Management-System up to 449397e35d42e3779f14f0bfc654ab307103f7e3. This vulnerability affects unknown code of the file page_action/nav_bar/sql_editor.php of the component SQL Editor. The manipulation of the argument sql_editor_run results in missing authorization. It is possible to launch the attack remotely. The exploit is now public and may be used. This product takes the approach of rolling releases to provide continious delivery. Therefore, version details for affected and updated releases are not available. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <title>CVE-2026-135739 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135739</link>
+    <guid isPermaLink="false">776c3e3777ee8f14e28c320cc5eab258</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.3 | FFmpeg 7.1 before 9.1 contains an out-of-bounds read vulnerability in libavfilter/vf_scale.c that allows attackers to read past the filter input array by sending width or height commands using ref variables. Attackers can send such commands via sendcmd scripts or unauthenticated zmq or azmq filters, causing config_props() to dereference an invalid pointer and crash the process.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-18530 - NVD - CVSS Score v3.1: 9.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-18530</link>
-    <guid isPermaLink="false">137697129155b718beb61e9bb9633dd5</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 9.9 | OS command injection in the a3cli restricted shell in Lantronix S2220 Series 2 allows an authenticated attacker to bypass shell restrictions and execute arbitrary operating system commands via unsanitized command substitution metacharacters, including backticks and $(), in parameters of permitted commands over SSH. This vulnerability is fixed in firmware version 1.3.37.</description>
+    <title>CVE-2026-135740 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135740</link>
+    <guid isPermaLink="false">ceaa1c89d347c5816b31d7c3156dd833</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a heap out-of-bounds write vulnerability in libavfilter/vf_readeia608.c because build_histogram() does not clamp high bit depth luma samples to the nominal maximum. Attackers can supply crafted 9, 10, 12 or 14 bit gray or YUV video to corrupt heap memory, causing crashes or possibly code execution.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-75776 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75776</link>
-    <guid isPermaLink="false">7ccd1dce850f60729bee9f4e1feb7ac1</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.0 | Concurrent Execution using Shared Resource with Improper Synchronization and Use After Free in certain ASUS router models allows an unauthenticated nearby user to cause the service to write unexpected values or crash the system under specific timing conditions.
-Refer to the ' Security Update for ASUS Router Firmware ' section on the ASUS Security Advisory for more information.</description>
+    <title>CVE-2026-135741 - NVD - CVSS Score v4.0: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135741</link>
+    <guid isPermaLink="false">979f506552d8279c251a2e6c0e5b6c2c</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.8 | FFmpeg before 9.1 contains a heap out-of-bounds read vulnerability in libavfilter/vf_lut2.c because the second input's pixel format is unrestricted when the output depth option is set. Attackers can supply crafted media such as monoblack BMP or PBM images to index beyond lookup tables, crashing applications or leaking heap contents into output video.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-77918 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77918</link>
-    <guid isPermaLink="false">09826a20180d91b5950abbd363a1107c</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.3 | Gogs through 0.14.4 contains an information disclosure vulnerability that allows authenticated users to view private forks by querying fork listings without per-fork read checks. Attackers with read access to a private base repository can call GET /api/v1/repos/{owner}/{repo}/forks or the Forks web handler to obtain other users' private fork owners, names, descriptions and clone URLs.</description>
+    <title>CVE-2026-135742 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135742</link>
+    <guid isPermaLink="false">691bd2a80846cd2d7a47a3726e3dd55f</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | FFmpeg before 9.1 contains a heap buffer overflow vulnerability in recv_msg() of the zmq and azmq filters that allows unauthenticated network attackers to corrupt memory by sending oversized command messages. Attackers can send a 4 GiB message to the default listening port, truncating the int buffer size so memcpy() writes past the heap allocation and crashes FFmpeg.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-93457 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93457</link>
-    <guid isPermaLink="false">c8b7bcc6d7ae3497905b57c46161db02</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.2 | Out-of-bounds write vulnerability in certain ASUS routers allows an unauthenticated nearby user to corrupt process memory, potentially resulting in a denial-of-service, via crafted LLTD packets.Refer to the ' Security Update for ASUS Router Firmware ' section on the ASUS Security Advisory for more information.</description>
+    <title>CVE-2026-135743 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135743</link>
+    <guid isPermaLink="false">2705a4a5f9fc10718af94f428d7606f7</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.2 | FFmpeg 4.3 before 9.1 contains a heap out-of-bounds read and write vulnerability in the dynaudnorm filter because cqueue_resize() miscalculates gain history queue element counts when gausssize changes at runtime. Attackers can send gausssize commands via asendcmd scripts or an unauthenticated azmq filter to corrupt heap memory, crashing the process or potentially executing code.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-124283 - NVD - CVSS Score v4.0: 8.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124283</link>
-    <guid isPermaLink="false">b629ac9503ed109d8679b102c4f33e92</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.9 | Deserialization of Untrusted Data vulnerability in ash-project ash allows an unauthenticated attacker to execute arbitrary code or inject SQL through a forged keyset pagination cursor.
-
-Ash.Page.Keyset.filter/4 in lib/ash/page/keyset.ex decodes the client-supplied page[:after] or page[:before] cursor from Erlang external term format and rejects decoded expressions with Ash.Expr.expr?/1. That check does not examine the fields of a struct. The cast of each value against the type of its sort field accepts structs for the :ci_string, :map, :struct and :term types. A struct in the cursor value for such a sort field therefore reaches the data layer. With AshPostgres, the read passes such a struct to inspect/1, which runs the Inspect implementation of the struct module that the attacker selected. A chain of struct modules from ecto and db_connection then calls a function that the cursor names, which permits OS command execution. An %Ash.Query.Function.Fragment{} inside an %Ash.CiString{} value is written into the SQL query as raw text.
-
-This issue affects ash: from 3.31.3 before 3.38.0.</description>
+    <title>CVE-2026-135744 - NVD - CVSS Score v4.0: 5.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135744</link>
+    <guid isPermaLink="false">4f0e8f2996f7f548beed2de4e8db5f77</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.8 | FFmpeg before 9.1 contains an out-of-bounds read vulnerability in the lut1d filter in libavfilter/vf_lut3d.c that allows attackers to read heap memory by supplying planar high bit depth samples above the nominal depth. Attackers can craft 9, 10, 12 or 14 bit planar RGB video processed with a large 1D LUT to crash applications or disclose heap contents in output pixels.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135451 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135451</link>
-    <guid isPermaLink="false">c28a8d654ee3f5385074cbc74f15aa8a</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | A flaw has been found in amirhamza05 Student-Management-System up to 449397e35d42e3779f14f0bfc654ab307103f7e3. This issue affects some unknown processing of the file page_action/user/user_profile.php of the component User Profile Handler. This manipulation causes authorization bypass. The attack can be initiated remotely. The exploit has been published and may be used. Continious delivery with rolling releases is used by this product. Therefore, no version details of affected nor updated releases are available. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <title>CVE-2026-135745 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135745</link>
+    <guid isPermaLink="false">1657c4f72efc8c6bb03d1d3b1ad8643e</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | FFmpeg before 9.1 contains a heap out-of-bounds read vulnerability in the curves filter in libavfilter/vf_curves.c that allows attackers to read past lookup tables by supplying planar high bit depth samples exceeding the nominal depth. Attackers can craft video files with unmasked gbrp9 to gbrp14 samples passed through the rawvideo decoder to crash applications or leak heap contents into output video.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135453 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135453</link>
-    <guid isPermaLink="false">04ba0c2ae0ad5dc8b84a0ebbb0e7a201</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability has been found in amirhamza05 Student-Management-System up to 449397e35d42e3779f14f0bfc654ab307103f7e3. Impacted is the function move_uploaded_file of the file student_action.php of the component User Avatar Upload. Such manipulation of the argument File leads to unrestricted upload. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. This product does not use versioning. This is why information about affected and unaffected releases are unavailable. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <title>CVE-2026-135746 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135746</link>
+    <guid isPermaLink="false">f50c2de4a2eceebd36d12626511386f8</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 6.8 | An off-by-one error in String::WriteOneByte() in Samsung lwnode can cause a one-byte out-of-bounds write when copying a UTF-16 string</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135454 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135454</link>
-    <guid isPermaLink="false">1da9c36aed7398a846e660ae3f7faf1e</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was found in amirhamza05 Student-Management-System up to 449397e35d42e3779f14f0bfc654ab307103f7e3. The affected element is the function sql_action of the file config/connect.php of the component Student Management Module. Performing a manipulation results in sql injection. The attack may be initiated remotely. The exploit has been made public and could be used. This product uses a rolling release model to deliver continuous updates. As a result, specific version information for affected or updated releases is not available. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <title>CVE-2026-9790 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-9790</link>
+    <guid isPermaLink="false">09c693ab6cfe4fafd247fea12cce1071</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 10.0 | Endpoints accessible without authentication from any WiFi client (e.g., /user/hasSimCard, /user/pooling, /api/device-info).</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
