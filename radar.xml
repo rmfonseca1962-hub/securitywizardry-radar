@@ -5,175 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 16:02:01 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-77673 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77673</link>
-    <guid isPermaLink="false">f21e41e4da4bb39b99027beb78f66164</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | Server-Side Request Forgery in the SSO SAML configuration feature of the TXOne StellarOne web console allows an authenticated administrator to issue server-side requests to arbitrary destinations, including internal services. This issue affects StellarOne: before 5.0.3232.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116225 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116225</link>
-    <guid isPermaLink="false">ee6a164ddd08b0e1f2a34db83c66c1a4</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | Improper Validation of Specified Quantity in Input vulnerability in the BER decoder in Erlang/OTP snmp allows an unauthenticated remote attacker to exhaust CPU via an SNMP message that contains an OBJECT IDENTIFIER with a very long sub-identifier.
-
-snmp_pdus:dec_oid_element/3 does not limit the number of base-128 octets in a sub-identifier, and snmp_pdus:dec_oid_elements/3 does not limit the number of sub-identifiers, so one sub-identifier can span the whole datagram. When the value exceeds the native integer size, each further octet copies a growing bignum, and decoding time grows quadratically with the sub-identifier length. The agent and the manager decode OIDs before they check community strings or SNMPv3 credentials, inside the single network interface process (snmpa_net_if or snmpm_net_if). That process does not read the next datagram until decoding completes.
-
-This issue affects OTP from OTP 17.0 before OTP 27.3.4.20, OTP 28.5.0.9, and OTP 29.1.3, corresponding to snmp from 4.25.1 before 5.18.2.3, 5.20.2.4, and 5.20.7. Whether OTP before OTP 17.0, corresponding to snmp before 4.25.1, is affected is unknown.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116293 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116293</link>
-    <guid isPermaLink="false">677f4295bdac83b3c230b957251dd734</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.0 | Out-of-bounds Write vulnerability in the external term format decoder in Erlang OTP erts allows an attacker who controls the input to binary_to_term/1,2 to abort the Erlang VM via a NEWER_REFERENCE_EXT term with a zero-length ID. decoded_size in erts/emulator/beam/external.c accepts a reference whose 16-bit Len field is zero, but dec_term always reads one ID word. dec_term then runs 4 bytes ahead of the position that decoded_size validated. It decodes the bytes that follow as terms that were never sized, and writes past the reserved process heap.
-
-The abort takes down every process on the node. Supervision, try/catch and the safe option do not prevent it. enif_binary_to_term() and the distribution protocol reach the same decoder, and distribution is assumed to run on trusted networks only. NEW_REFERENCE_EXT also accepts a zero length, but its range check on the first ID word rejects the shifted input. On 32-bit builds, a zero-length reference of either type at the end of the input, followed by trailing bytes, can write one word past the reserved heap.
-
-This issue affects OTP from OTP 17.0 before OTP 27.3.4.20, OTP 28.5.0.9, and OTP 29.1.3, corresponding to erts from 6.0 before 15.2.7.15, 16.4.0.8, and 17.1.2. Whether OTP before OTP 17.0, corresponding to erts before 6.0, is affected is unknown.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116295 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116295</link>
-    <guid isPermaLink="false">3fcdee5b46c003f309f331d7f5dfe351</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | Improper Neutralization of CRLF Sequences in HTTP Headers ('HTTP Request/Response Splitting') vulnerability in Erlang OTP inets (httpc module) allows HTTP Request Splitting.
-
-httpc writes request header names and values to the wire without neutralizing CR, LF or NUL characters. On the default path http_request:mk_key_value_str/2, and with the headers_as_is option httpc_request:http_headers/2, build each header line by plain concatenation of the name, &quot;: &quot;, the value and CRLF. A CR/LF in a name or value ends the header line early. An attacker who controls data that an application puts into a header passed to httpc:request/4,5 can add or override request headers, or append a second request on the same connection.
-
-Applications that pass only constant or validated header names and values are not affected. The request line is not affected, because uri_string rejects URLs that contain raw CR/LF.
-
-This issue affects OTP from OTP 17.0 before OTP 27.3.4.20, OTP 28.5.0.9, and OTP 29.1.3, corresponding to inets from 5.10 before 9.3.2.9, 9.6.2.5, and 9.8.2. Whether OTP before OTP 17.0, corresponding to inets before 5.10, is affected is unknown.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-116382 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-116382</link>
-    <guid isPermaLink="false">4757ef35eeb62be755da49cc74a95d2d</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.2 | Allocation of Resources Without Limits or Throttling vulnerability in Erlang OTP inets (httpd_script_env module) allows an unauthenticated remote attacker to exhaust the atom table of an httpd server that serves ESI scripts.
-
-When mod_esi builds the environment for an ESI callback, httpd_script_env:http_env_element/3 checks that a request header name already exists as an atom, then creates the atom http_&lt;header-name&gt; with list_to_atom/1. Atoms are never garbage collected, and each new atom passes the existence check on a later request. So a header named node creates http_node, a header named http_node creates http_http_node, and so on. A stream of requests to any ESI URL grows the atom table until it reaches its limit (+t), and then the whole Erlang VM aborts, together with every application on the node.
-
-This issue affects OTP from OTP 17.0 before OTP 27.3.4.20, OTP 28.5.0.9, and OTP 29.1.3, corresponding to inets from 5.10 before 9.3.2.9, 9.6.2.5, and 9.8.2. Whether OTP before OTP 17.0, corresponding to inets before 5.10, is affected is unknown.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-117642 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-117642</link>
-    <guid isPermaLink="false">09a5ff47f863d180978e724b0ad7adcb</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | Uncontrolled Recursion vulnerability in the external term format decoder in Erlang OTP erts allows an attacker who controls the input to binary_to_term/1,2 to abort the Erlang VM via a fun term with funs nested in its integer fields. dec_term in erts/emulator/beam/external.c decodes terms iteratively, except for the OldIndex and OldUniq fields of NEW_FUN_EXT and the Arity field of EXPORT_EXT. For these fields it calls itself, and it checks that the result is a small integer only after the call returns. An input that places another fun in such a field, nested to sufficient depth, recurses once per level, exhausts the stack of the scheduler thread and crashes the VM. The input must be large enough to reach that depth.
-
-The abort takes down every process on the node. Supervision, try/catch and the safe option do not prevent it. enif_binary_to_term() and the distribution protocol reach the same decoder, and distribution is assumed to run on trusted networks only.
-
-This issue affects OTP from OTP 17.0 before OTP 27.3.4.20, OTP 28.5.0.9, and OTP 29.1.3, corresponding to erts from 6.0 before 15.2.7.15, 16.4.0.8, and 17.1.2. Whether OTP before OTP 17.0, corresponding to erts before 6.0, is affected is unknown.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-119443 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-119443</link>
-    <guid isPermaLink="false">5026f6ce92ce594f1faf7af0e39bbb80</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | Improper Restriction of XML External Entity Reference vulnerability in xmerl_scan in Erlang OTP xmerl allows an attacker to exhaust the memory of the Erlang VM via an XML document that names an external DTD.
-
-With default options, xmerl_scan:string/1,2 and xmerl_scan:file/1,2 fetch and parse the external DTD named in a &lt;!DOCTYPE root SYSTEM &quot;...&quot;&gt; declaration. fetch_DTD/2 in lib/xmerl/src/xmerl_scan.erl passes every system identifier to the default fetch function, which maps file: and absolute URIs to local paths, and int_file_decl/3 then reads the whole file with file:read_file/1. This happens whether or not validation is enabled, and the allow_entities option, which is false by default since OTP 27, only governs &lt;!ENTITY&gt; declarations and does not stop the fetch. A document naming file:///dev/zero makes the node read without bound until the operating system kills it for lack of memory, and the parse never returns.
-
-This issue affects OTP from OTP 17.0 before OTP 27.3.4.20, OTP 28.5.0.9, and OTP 29.1.3, corresponding to xmerl from 1.3.7 before 2.1.3.4, 2.1.9.1, and 2.2.1. Whether OTP before OTP 17.0, corresponding to xmerl before 1.3.7, is affected is unknown.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120961 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120961</link>
-    <guid isPermaLink="false">b8ec19a878edbd02b46aab1796399898</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | Out-of-bounds Read vulnerability in the external term format decoder in Erlang OTP erts allows an attacker who controls the input to binary_to_term/1,2 to read memory after the input, and to change one byte there, via a FLOAT_EXT term without a terminating zero byte. decoded_size in erts/emulator/beam/external.c checks only that the 31 bytes of the FLOAT_EXT field are present. dec_term then passes the field to sys_chars_to_double, which scans to a NUL byte without a length limit. When the field has no NUL, the scan continues into the bytes after the field, and those bytes change the decoded float. When the radix character is found after the field and strtod does not accept it, sys_chars_to_double overwrites that byte (a , becomes a .). The VM can fault if the scan reaches an unmapped page.
-
-The safe option does not prevent this. enif_binary_to_term() and the distribution protocol reach the same decoder, and distribution is assumed to run on trusted networks only. The write is limited to the one radix byte. No arbitrary write or code execution was shown.
-
-This issue affects OTP from OTP 17.0 before OTP 27.3.4.20, OTP 28.5.0.9, and OTP 29.1.3, corresponding to erts from 6.0 before 15.2.7.15, 16.4.0.8, and 17.1.2. Whether OTP before OTP 17.0, corresponding to erts before 6.0, is affected is unknown.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-124286 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124286</link>
-    <guid isPermaLink="false">81e46e43d1e740feba74df135dc76528</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.1 | Improper Verification of Cryptographic Signature vulnerability in Erlang OTP ssl (ssl_handshake module) allows an on-path attacker to impersonate any server to a TLS 1.2 or DTLS client.
-
-When a server sends no Certificate message and a ServerKeyExchange without a signature, ssl_handshake:decode_server_key/3 reports the signature algorithm as anon, and ssl_handshake:verify_signature/5 returns true for anon without a public key. The client does not require a certificate for a certificate-authenticated key exchange, so the handshake completes for the ecdhe_rsa, ecdhe_ecdsa, dhe_rsa and dhe_dss key exchanges with a cipher suite the client offered. Certificate path validation, verify_fun and the hostname check do not run, and ssl:connect/3 returns {ok, Socket} with {verify, verify_peer} set. The TLS 1.3 client is not affected.
-
-This issue affects OTP from OTP 17.0 before OTP 27.3.4.14, OTP 28.5.0.9, and OTP 29.0.3, corresponding to ssl from 5.3.4 before 11.2.12.10, 11.6.0.8, and 11.7.3.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130411 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130411</link>
-    <guid isPermaLink="false">aad9ae436fbe67dde67a493cedb65e86</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.2 | Deserialization of Untrusted Data vulnerability in woylie flop allows a remote attacker to execute code on the server via a crafted pagination cursor.
-
-Flop.Cursor.decode/2 in lib/flop/cursor.ex decodes the after and before parameters with :erlang.binary_to_term/2 in :safe mode. Its check rejects functions, PIDs, ports and references, but it accepts maps, and therefore structs of any module. Flop passes the decoded values to Ecto as query parameters. A cursor value that nests an Ecto.Query.DynamicExpr struct with a DBConnection.Stream struct as its binding fails the Ecto cast. Ecto then inspects the value for the error message, the Inspect implementation enumerates the stream, and DBConnection calls the module, function and arguments in the :log option of the stream.
-
-This issue affects flop: from 0.8.0 before 0.26.7, from 0.27.0 before 0.27.3, from 0.28.0 before 0.28.1, and from 0.29.0 before 0.29.2.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-131902 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-131902</link>
-    <guid isPermaLink="false">7f70bf9482226ae4237c465405e45552</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.9 | XML Injection vulnerability in ex-aws ex_aws_s3 allows an attacker who controls an object version id passed to ExAws.S3.delete_multiple_objects/3 to add objects to the batch delete.
-
-delete_multiple_objects/3 in lib/ex_aws/s3.ex builds the &lt;Delete&gt; request body by placing each object's version between &lt;VersionId&gt; tags without XML escaping. A version such as v1&lt;/VersionId&gt;&lt;/Object&gt;&lt;Object&gt;&lt;Key&gt;important-file&lt;/Key&gt;&lt;/Object&gt;&lt;Object&gt;&lt;Key&gt;x&lt;/Key&gt;&lt;VersionId&gt;v2 closes the caller's object and opens new ones, so S3 deletes objects the application never listed, including other users' objects in the same bucket.
-
-This issue affects ex_aws_s3: from 2.0.0 before 2.6.0.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133555 - NVD - CVSS Score v4.0: 8.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133555</link>
-    <guid isPermaLink="false">c2b4a3334a2a7353bb0d3ac47ae19065</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.9 | Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') vulnerability in elixir-ecto db_connection allows an attacker to execute arbitrary code via a forged DBConnection.Stream or DBConnection.PrepareStream struct. The Enumerable implementations of both structs in lib/db_connection.ex run with the options stored in the struct. The :log option accepts a {module, function, arguments} tuple, which DBConnection applies. When code enumerates a forged struct, DBConnection calls the chosen function.
-
-This issue is not exploitable in db_connection alone. It is, in theory, a vulnerability of the downstream component. The root cause is a component that decodes untrusted input with :erlang.binary_to_term/2 and does not restrict which terms the result contains. The :safe option does not reject structs, and these structs contain only plain terms. Structs of other libraries can possibly lead to the same result, so a component that decodes untrusted terms stays at risk independently of db_connection. This record exists because the struct was used in attacks on such components.
-
-This issue affects db_connection: from 1.1.0 before 2.10.3.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135908 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135908</link>
-    <guid isPermaLink="false">46c301c3f45fa79f1470af89df932f71</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Rapid7 Metasploit Framework versions prior to 6.5.10 are vulnerable to an uncontrolled resource consumption issue in Rex::Proto::Http::Request#normalize!. A remote, unauthenticated attacker can send an HTTP request with a deeply nested path that triggers repeated rescans of the request target, causing quadratic CPU consumption and temporarily degrading the availability of any affected HTTP listener.
-
-The issue is fixed in Metasploit Framework 6.5.10</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136131 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136131</link>
-    <guid isPermaLink="false">b6c9336d42f82435fc4e3db4ced3c1ca</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.0 | hping3 through commit 3547c76 contains an out-of-bounds write vulnerability in display_ipopt() that allows remote attackers to overflow the static 40-byte old_rr buffer via a crafted IP Record Route option. Attackers acting as the probed host, on-path, or spoofing the target can send replies with option lengths up to 255 to hping3 running with -G/--rroute, corrupting global memory and crashing hping3.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136132 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136132</link>
-    <guid isPermaLink="false">7b8ed99549e06a676107eb59064da725</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.2 | Pangolin before 1.21.0 contains an authentication bypass vulnerability in isPathAllowed() in server/lib/pathMatch.ts that splits paths on literal slashes without percent-decoding or resolving dot segments. Unauthenticated remote attackers can send paths with encoded slashes and dot segments to match public bypass rules while backends serve protected paths.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 24 Nov 2026 17:00:34 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-136133 - NVD - CVSS Score v4.0: 6.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136133</link>
@@ -407,6 +239,134 @@ This issue affects ex_aws_ses: from 2.3.0 before 2.5.0.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75582</link>
     <guid isPermaLink="false">6bd1c148945f48be08f6b096b8849126</guid>
     <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.1 | Frappe LMS before 2.65.0 contains an improper authorization vulnerability that allows Batch Evaluators to modify any evaluation because the LMS Certificate Evaluation doctype lacks a has_permission scoping hook. Attackers can call the whitelisted create_lms_certificate method with any evaluation name to issue certificates for unassigned evaluations or learners outside their batches.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-115747 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115747</link>
+    <guid isPermaLink="false">06e671b3c7f826d037d6fcfdd37b90c0</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.9 | Improper Restriction of Operations within the Bounds of a Memory Buffer vulnerability in the AArch64 JIT in Erlang OTP erts allows an attacker to crash the BEAM virtual machine via input that reaches a chained integer range guard, such as an oversized numeric character reference parsed by xmerl_sax_parser.
+
+In erts/emulator/beam/jit/arm/instr_common.cpp, BeamModuleAssembler::emit_is_ge_lt wraps its generated code in preserve_cache and marks only TMP1 as clobbered. When the compared value is not a small integer, the generated code calls the shared fragment is_ge_lt_shared, which also overwrites ARG1 and other caller-saved registers. The register cache keeps stale entries, so later instructions may use a clobbered register as an Erlang term and the emulator dies with a segmentation fault. A reference such as &amp;#576460752303423488; takes this path in the ?is_char guard of the SAX parser. Only AArch64 builds that run the JIT are affected. The x86-64 JIT and interpreter builds do not contain the faulty code.
+
+This issue affects OTP from OTP 27.0 before OTP 27.3.4.20, OTP 28.5.0.9, and OTP 29.1.3, corresponding to erts from 15.0 before 15.2.7.15, 16.4.0.8, and 17.1.2.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125658 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125658</link>
+    <guid isPermaLink="false">e38132a0c689c0c899d6ed26579c5670</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.7 | Use After Free vulnerability in Erlang/OTP erts allows an attacker who can create a file system entry with a chosen name to hang or abort the Erlang VM on macOS.
+
+On macOS, the VM decodes file names with do_utf8_to_list_normalize in erts/emulator/beam/erl_unicode.c. When a name starts with a combining mark, such as U+0301, cleanup_norm builds the first list cells but does not return its advanced heap pointer. The caller then releases the heap words that hold those cells, and the returned list refers to released process heap memory that the next allocation overwrites. file:list_dir/1, file:list_dir_all/1, file:del_dir_r/1 and filelib:wildcard/1 on a directory that contains such a name do not return, and the VM does not stop on SIGTERM. file:read_link/1 on a symbolic link with such a target aborts the VM with size_object: bad tag. Only loss of availability was demonstrated.
+
+This issue affects OTP from OTP 17.0 before OTP 27.3.4.20, OTP 28.5.0.9, and OTP 29.1.3, corresponding to erts from 6.0 before 15.2.7.15, 16.4.0.8, and 17.1.2.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132157 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132157</link>
+    <guid isPermaLink="false">db857d76e6dca842d8df00dcc19a9c20</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | The OSI Presentation Protocol analyzer in DINA-community's icsnpp-pres 1.0.0 plugin for Zeek uses an incompatible ASN.1 descriptor when decoding resynchronization acknowledgments. An unauthenticated attacker who can send crafted traffic observed by the analyzer can cause a type confusion that crashes the Zeek worker, resulting in a denial of service for traffic monitoring on that worker.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132887 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132887</link>
+    <guid isPermaLink="false">6937bd4031b44320a3ffa3a193f82ecb</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | The DINA-community icsnpp-acse 1.0.0 plugin for Zeek does not release partially decoded ACSE protocol data units when ASN.1 Basic Encoding Rules (BER) decoding fails. An unauthenticated attacker who can send traffic observed by a Zeek worker with the ACSE analyzer enabled can cause memory exhaustion by repeatedly sending malformed ACSE traffic. This can terminate the worker and interrupt network monitoring.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133002 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133002</link>
+    <guid isPermaLink="false">88be11aec5e83e75ef872596de5f80d4</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | The DINA-community icsnpp-mms 1.0.0 plugin for Zeek does not release partially decoded Manufacturing Message Specification (MMS) protocol data units when ASN.1 Basic Encoding Rules (BER) decoding fails. An unauthenticated attacker who can send traffic observed by a Zeek worker with the MMS analyzer enabled can cause memory exhaustion by repeatedly sending malformed MMS traffic. This can terminate the worker and interrupt network monitoring.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135479 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135479</link>
+    <guid isPermaLink="false">5dff35165d5fba7282aad26049e5c0ad</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | Merchant for WooCommerce before 2.3.3 contains a missing authorization vulnerability in the Quick View module that allows unauthenticated attackers to read draft, pending, private, and scheduled WooCommerce products. The modal_content_ajax_callback() handler for the merchant_quick_view_content AJAX action is registered for unauthenticated users, is gated only by the merchant-nonce value exposed to every front-end visitor, and loads any supplied product_id with wc_get_product() without checking the product's post status or the user's read_post capability. Attackers can iterate product IDs to obtain the title, price, description, gallery images, and SKU of unpublished products when the Quick View module is enabled.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135786 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135786</link>
+    <guid isPermaLink="false">004cbd91c3a09ff6c55a47bfc57f15bf</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was identified in zhayujie CowAgent up to 2.2.1. This impacts the function _create_task of the file agent/tools/scheduler/scheduler_tool.py of the component Scheduler. Such manipulation leads to incorrect authorization. The attack may be performed from remote. The exploit is publicly available and might be used. Upgrading to version 2.2.2 will fix this issue. The name of the patch is 566c941c1e09d295ea5d96eda4dd315260eab9b7. Upgrading the affected component is recommended. The vendor was contacted early, responded in a very professional manner and quickly released a fixed version of the affected product.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135787 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135787</link>
+    <guid isPermaLink="false">1fba1c5bc2c98e80409f2f55ca069ec2</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security flaw has been discovered in hrshadhin CloudSchool up to 3.0.1. Affected is the function ReportController::marksheetPublic of the component Captcha Handler. Performing a manipulation of the argument authorized_form results in improper authentication. It is possible to initiate the attack remotely. The exploit has been released to the public and may be used for attacks. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136214 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136214</link>
+    <guid isPermaLink="false">d793da45569c30ee889fb78a71dbb930</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.8 | Astra WordPress theme before 4.14.0 contains an improper input neutralization vulnerability that allows authenticated attackers with contributor-level privileges to inject unescaped CSS by submitting a crafted overlay-opacity value in the ast-page-background-meta or ast-content-background-meta REST fields. Attackers can store a malicious payload that, when rendered, causes an uncaught TypeError leading to a fatal error and HTTP 500 denial of service on PHP 8.0+, or injects arbitrary CSS into the page's style block on PHP 7.x enabling UI redress and content spoofing.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136226 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136226</link>
+    <guid isPermaLink="false">bff98edde43979dc4791ff7e8de01308</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | By adding a From header with lowercase name before the actual From header, an attacker could make Thunderbird display a different sender than the one used to verify an OpenPGP signature. Anyone whose key the victim had accepted could send messages that appeared to be validly signed by any other sender. This vulnerability was fixed in Thunderbird 161.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136227 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136227</link>
+    <guid isPermaLink="false">e759544ec5f35dc96794f9b42db26491</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | By combining several weaknesses, a crafted email could, when opened, inject commands into the authenticated IMAP connection, and load a web page with JavaScript enabled in place of the message. A bare carriage return in a header let the sender set Thunderbird's internal message flags, marking the message as a feed item and allowing its remote content to load. A reference to an embedded part placed inside an attribute value disclosed the message's internal IMAP URL to the sender. The message ID part of IMAP URLs was not validated, so loading a crafted variant of that URL sent arbitrary IMAP commands, which could modify or delete messages and folders. Finally, a frame reloading the message, together with a legacy feed marker in its content, caused the message pane to load a sender-chosen web page with scripting enabled. This vulnerability was fixed in Thunderbird 161.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136228 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136228</link>
+    <guid isPermaLink="false">bac170956141eb65137d1bd998e7ce31</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Thunderbird did not compare the signature creation time with the message date for messages that were both signed and encrypted with OpenPGP/MIME. An attacker who had an old signed message could encrypt it to the victim and resend it with a current date, and have it shown with a valid signature, despite the protection added for CVE-2022-2226. This vulnerability was fixed in Thunderbird 161.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136229 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136229</link>
+    <guid isPermaLink="false">e9e7c050956ee8ff650028f442834a20</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | When a signed OpenPGP/MIME message had no Date header, or one that could not be parsed, Thunderbird did not compare the signature creation time with the message date. For S/MIME messages with more than one Date header, a later Date header could be used for the comparison. An attacker who had an old signed message could resend it and have it shown with a valid signature, despite the protection added for CVE-2022-2226. This vulnerability was fixed in Thunderbird 161.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136230 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136230</link>
+    <guid isPermaLink="false">1e2dc519e314d1413eb88b762dac1eef</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | When a CardDAV address book was accessed through an HTTP proxy that requested authentication, Thunderbird could answer the proxy with the CardDAV server's username and password. This affected both setting up a new address book and syncing existing ones, where a saved password could be sent without any user interaction. A malicious or compromised proxy could use this to obtain the address book credentials, even for address books served over HTTPS. This vulnerability was fixed in Thunderbird 161.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136231 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136231</link>
+    <guid isPermaLink="false">919903ba4a50e6f7753bfa2ed9d3eaae</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | A received message could include an attachment that referred to an arbitrary local file under a misleading name. If the user dragged that attachment into a message being composed and sent it, the contents of the referenced local file were included in the outgoing message. This vulnerability was fixed in Thunderbird 161.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
