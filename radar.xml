@@ -5,197 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 21:01:19 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-136433 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136433</link>
-    <guid isPermaLink="false">9309688ba9b22df1d7a8ada6a26790d8</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | PyTorch Foundation PyTorch torch_save_to_dcp Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch Foundation PyTorch. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the checkpoint format conversion utilities. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current user. Was ZDI-CAN-32834.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136434 - NVD - CVSS Score v3.0: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136434</link>
-    <guid isPermaLink="false">2d1625fa32b42b3abac402f6977da54f</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 9.8 | Super Magic PHPSandbox Command Injection Sandbox Escape Vulnerability. This vulnerability allows remote attackers to bypass the sandbox on affected installations of Super Magic. Authentication is not required to exploit this vulnerability.
-
-The specific flaw exists within the PHPSandbox endpoint. The issue results from the lack of proper validation of a user-supplied string before using it to execute PHP code. An attacker can leverage this vulnerability to escape the sandbox and execute arbitrary code in the context of the service account. Was ZDI-CAN-28102.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136435 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136435</link>
-    <guid isPermaLink="false">b34884f7793ed1039d7e632a4674872a</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | DeepSpeed InferenceEngine Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of DeepSpeed. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of checkpoint data. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-28091.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136436 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136436</link>
-    <guid isPermaLink="false">58cec3ad6d9a33c65bbd31c089c51ea5</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | DeepSpeed torch_checkpoint_engine Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of DeepSpeed. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of checkpoint data. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-29214.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136437 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136437</link>
-    <guid isPermaLink="false">b97b8eefb00dc17b47588927e1a2adef</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | DeepSpeed parse_optim_states Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of DeepSpeed. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of checkpoint data. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-29243.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136438 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136438</link>
-    <guid isPermaLink="false">7aadb89cece93247df33f8f97b4ccd19</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | DeepSpeed build_engine_from_ds_checkpoint Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of DeepSpeed. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of model configuration data. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-29241.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136439 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136439</link>
-    <guid isPermaLink="false">b7b98b936901b70924a997c83e688e6a</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | DeepSpeed _get_zero_stage Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of DeepSpeed. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of checkpoint data. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-29242.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136440 - NVD - CVSS Score v3.0: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136440</link>
-    <guid isPermaLink="false">21b5c429b80cec4e49a83c2940f869e6</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.3 | Python Packaging Authority pip Configuration File Incorrect Permission Assignment Local Privilege Escalation Vulnerability. This vulnerability allows local attackers to escalate privileges on affected installations of Python Packaging Authority pip. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability. User interaction on the part of a target user is also required.
-
-The specific flaw exists within the way configuration files are stored. The issue results from incorrect permissions on files. An attacker can leverage this vulnerability to escalate privileges and execute arbitrary code in the context of a target user. Was ZDI-CAN-25377.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136441 - NVD - CVSS Score v3.0: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136441</link>
-    <guid isPermaLink="false">1def14ead05a8409d22c653702229dff</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 9.8 | Bytebase DBHub MCP Incorrect Authorization Authentication Bypass Vulnerability. This vulnerability allows remote attackers to bypass authentication on affected installations of Bytebase DBHub. Authentication is not required to exploit this vulnerability.
-
-The specific flaw exists within the implementation of the MCP server. The issue results from an incorrect authorization decision when parsing untrusted SQL. An attacker can leverage this vulnerability to bypass authentication on the system. Was ZDI-CAN-27635.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136442 - NVD - CVSS Score v3.0: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136442</link>
-    <guid isPermaLink="false">42171742a5fd43a1d7016efc822c7640</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 6.5 | BusyBox ftpd Directory Traversal Arbitrary File Read and Write Vulnerability. This vulnerability allows remote attackers to create or delete arbitrary files or disclose sensitive information on affected installations of BusyBox. Authentication is not required to exploit this vulnerability.
-
-The specific flaw exists within the ftpd service, which listens on TCP port 21 by default. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to create or delete files or disclose information in the context of the service account. Was ZDI-CAN-27555.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-48401 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48401</link>
-    <guid isPermaLink="false">2b68f6edad74980248e6d6bae5c2b578</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.4 | Adobe Experience Manager is affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim's browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. Scope is changed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-48403 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-48403</link>
-    <guid isPermaLink="false">90a28ece2c99a62471bf5e7bd950a5cd</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.4 | Adobe Experience Manager is affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim's browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. Scope is changed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-4033 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-4033</link>
-    <guid isPermaLink="false">edb5c2165cca3616614f4d4280a6c89e</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | Improper neutralization of input during web page generation ('cross-site scripting') vulnerability in On EBX EBX.
-
-This issue affects EBX: from 6 before 6.1 and from 6 before 6.2.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-71355 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71355</link>
-    <guid isPermaLink="false">08b0f7be3f48590f65e996d71b3a4441</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.4 | Adobe Experience Manager is affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim's browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. Scope is changed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-75630 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75630</link>
-    <guid isPermaLink="false">c42da42555cf2828b65a0a75618637a3</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.4 | Adobe Experience Manager is affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim's browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. Scope is changed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-75641 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75641</link>
-    <guid isPermaLink="false">4ee9468f49d5f977c1a7d9f530e67f67</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.4 | Adobe Experience Manager is affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim's browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. Scope is changed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-75648 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75648</link>
-    <guid isPermaLink="false">c99f34a042b8384a83ead0e10a88cd61</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.4 | Adobe Experience Manager is affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim's browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. Scope is changed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-75653 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75653</link>
-    <guid isPermaLink="false">54a75c2c7419c37df1ecc4a35c2d9a55</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.4 | Adobe Experience Manager is affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim's browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. Scope is changed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-75654 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75654</link>
-    <guid isPermaLink="false">1daf4d68dd131884a742b610c71529c3</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.4 | Adobe Experience Manager is affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim's browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. Scope is changed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-75662 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75662</link>
-    <guid isPermaLink="false">f8801d3b377afb6cb2ffc7fe25794979</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.4 | Adobe Experience Manager is affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim's browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. Scope is changed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-75664 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75664</link>
-    <guid isPermaLink="false">24519e0571ad97d64524dba84572d03a</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.4 | Adobe Experience Manager is affected by a DOM-based Cross-Site Scripting (XSS) vulnerability. An attacker could exploit this issue by manipulating the DOM environment to execute malicious JavaScript within the context of the victim's browser. Exploitation of this issue requires user interaction in that a victim must visit a crafted webpage. Scope is changed.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 24 Nov 2026 22:02:29 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-75673 - NVD - CVSS Score v3.1: 5.4</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-75673</link>
@@ -371,6 +181,188 @@ This issue affects Control Plane: 1.22.0; Control Tower: 1.22.0.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136455</link>
     <guid isPermaLink="false">30e03358e8f128bdb2c7c73d6661097c</guid>
     <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | borg-ui before 2.4.1 contains a privilege escalation vulnerability that allows a repository-scoped operator to escalate to full administrator by exploiting an unrestricted source_directories field in the backup-plan API that lacks path allow-listing. Attackers can configure a backup plan to archive the application's data directory, download the resulting archive to extract the static HS256 .secret_key, and use it to forge a JWT with sub&quot;:&quot;admin&quot; to access admin-only endpoints like GET /api/auth/users, achieving full application takeover without admin credentials, XSS, or CSRF.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121725 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121725</link>
+    <guid isPermaLink="false">76cff3cd511abe2b2ff97b26a4201712</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.5 | A maliciously crafted IFCZIP file, when imported through Autodesk Revit or Autodesk IFC for Revit Add-in, can exploit a path traversal flaw to write attacker-controlled files outside the intended extraction directory. Depending on the destination, a written file may later be loaded or executed, potentially resulting in code execution in the context of the current user. Exploitation requires user interaction to open or import the file.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129969 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129969</link>
+    <guid isPermaLink="false">e9d05385ff23e331c32a5d859698385f</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.5 | A maliciously crafted PDF file, when imported into Autodesk Revit, can trigger a Memory Allocation with Excessive Size Value vulnerability. A malicious actor may leverage this vulnerability to cause excessive memory consumption, potentially resulting in the application terminating unexpectedly.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129970 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129970</link>
+    <guid isPermaLink="false">3a91faa4713e709e54e3589cbba85e61</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.5 | A maliciously crafted PNG file, when imported into Autodesk Revit, can trigger a NULL Pointer Dereference vulnerability. A malicious actor may leverage this vulnerability to cause the application to terminate unexpectedly, resulting in a denial-of-service.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132254 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132254</link>
+    <guid isPermaLink="false">33f9f3b9f09e67b2ea19e088b6c4da82</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 4.3 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.6.67 through 0.11.2, an External API key created while a user was a member of an organization keeps working in that organization after the user is removed. A former member holding such a key with the WRITE_GRAPH and WRITE_LIBRARY scopes, or USE_TOOLS for schedules, can add workflows, library entries, and schedules to the organization, where remaining members can see them. The key gives no read access to the organization's data. This issue is fixed in version 0.11.3.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132264 - NVD - CVSS Score v3.1: 8.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132264</link>
+    <guid isPermaLink="false">2cc99978ed1666b2c8ce3990784673ce</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 8.1 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.6.63 through 0.10.0, an external API key or OAuth token that has only the EXECUTE_BLOCK permission can run AutoPilotBlock through the external API and receive a full, unattended AutoPilot turn. This lets the holder use the account owner's stored third-party credentials, library agents, and workspace files, and run AutoPilot's sandboxed shell, which the same key is refused when it requests those directly. This issue is fixed in version 0.11.0.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133449 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133449</link>
+    <guid isPermaLink="false">23e23d6d9ebe85d754695541ab114dff</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.6.1 through 0.10.0, credentials are sent to a third party when a redirect's Location header hides the new host behind a backslash. A signed-in user who connects an MCP server URL, or runs a shared or marketplace workflow with a host-scoped credential, can have that credential delivered to a third party if the host responds with a redirect whose Location the other party influenced. This issue is fixed in version 0.11.0.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133453 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133453</link>
+    <guid isPermaLink="false">dbe82b743b40d5edd1fd8afdf37cd767</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 9.1 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.7.1 through 0.10.0, a user can add a version under another user's workflow ID and take over its Marketplace listing. An attacker with an account and the target's workflow ID can replace the creator's pending Marketplace submission with their own, so that approval installs the attacker's workflow under the creator's listing. Without reviewer involvement, the attacker can also stop the owner from saving new versions and break runs that name no version. This issue is fixed in version 0.11.0.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135809 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135809</link>
+    <guid isPermaLink="false">c05f13cc5ea98a027b91da359c3d6cee</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | A vulnerability has been found in javahuang SurveyKing up to 0.3.0-beta.3. Affected by this vulnerability is the function resolvePath of the file server/shared/src/main/java/cn/surveyking/server/storage/LocalStorageService.java of the component File Upload. Such manipulation of the argument basePath leads to path traversal. The attack can be launched remotely. The name of the patch is d469ef73d935ff64fd0cf603cf91b76877af02b6. It is advisable to implement a patch to correct this issue.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135810 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135810</link>
+    <guid isPermaLink="false">a42bae847db427768f71ef2cefee6fa9</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was identified in GongShengyue OnlineBooks up to dfc5eacc08d3b0396c266049548618f6fb9587ea. This vulnerability affects the function insert of the file src/cn/ylcto/book/filter/AdminLoginFilter.java of the component BooksServlet. The manipulation leads to missing authorization. Remote exploitation of the attack is possible. The exploit is publicly available and might be used. This product follows a rolling release approach for continuous delivery, so version details for affected or updated releases are not provided. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135811 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135811</link>
+    <guid isPermaLink="false">0f1a038824dd64472384706c237b9c38</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.5 | A security flaw has been discovered in GongShengyue OnlineBooks up to dfc5eacc08d3b0396c266049548618f6fb9587ea. This issue affects the function listSplit of the file src/cn/ylcto/book/servlet/BooksServlet.java of the component BooksServlet. The manipulation results in missing authentication. The attack can be executed remotely. The exploit has been released to the public and may be used for attacks. This product implements a rolling release for ongoing delivery, which means version information for affected or updated releases is unavailable. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135812 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135812</link>
+    <guid isPermaLink="false">dc24eb145ec62577d3abbde44245d19e</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.3 | A weakness has been identified in GongShengyue OnlineBooks up to dfc5eacc08d3b0396c266049548618f6fb9587ea. Impacted is an unknown function. This manipulation causes cross-site request forgery. The attack is possible to be carried out remotely. This product adopts a rolling release strategy to maintain continuous delivery. Therefore, version details for affected or updated releases cannot be specified. The project was informed of the problem early through an issue report but has not responded yet.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136522 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136522</link>
+    <guid isPermaLink="false">6de9053250334084d2385efe10543199</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | CubeWP Forms before 1.1.13 contains an unauthenticated stored cross-site scripting vulnerability that allows attackers to inject malicious JavaScript by submitting unregistered field names through the public REST route cubewp-custom-form/v1/submit/, which bypasses its own nonce check and saves unsanitized values due to a missing default case in the sanitizer, later rendered unescaped on the admin Leads detail page. Attackers can send a single crafted GET request containing a script payload in a custom form field to execute arbitrary JavaScript in an administrator's wp-admin session when the lead is viewed, enabling full site takeover such as creating a new administrator account.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136534 - NVD - CVSS Score v3.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136534</link>
+    <guid isPermaLink="false">48d791b586dfeaac5d12785fbe5a4432</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.3 | Devin Desktop Uncontrolled Search Path Element Local Privilege Escalation Vulnerability. This vulnerability allows local attackers to escalate privileges on affected installations of Devin Desktop. An attacker must first obtain the ability to execute low-privileged code on the target system in order to exploit this vulnerability.
+
+The specific flaw exists within the configuration of the Electron framework. The product loads a script file from an unsecured location. An attacker can leverage this vulnerability to escalate privileges and execute arbitrary code in the context of a target user. Was ZDI-CAN-33385.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136535 - NVD - CVSS Score v3.0: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136535</link>
+    <guid isPermaLink="false">5970a0ecd48a9721d040488b2cd4c837</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.2 | LiteLLM MCP Command Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of LiteLLM. Authentication is required to exploit this vulnerability.
+
+The specific flaw exists within the handling of MCP stdio configurations. The issue results from the lack of proper validation of a user-supplied string before using it to execute a system call. An attacker can leverage this vulnerability to execute code in the context of the service account. Was ZDI-CAN-31815.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136536 - NVD - CVSS Score v3.0: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136536</link>
+    <guid isPermaLink="false">04287ba5236f063358f3c18f906fdcca</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 6.4 | LiteLLM is_request_body_safe  Server-Side Request Forgery Information Disclosure Vulnerability. This vulnerability allows remote attackers to disclose sensitive information on affected installations of LiteLLM. Authentication is required to exploit this vulnerability.
+
+The specific flaw exists within the handling of the api_base parameter in chat completion requests. The issue results from the lack of proper validation of a URI prior to accessing resources. An attacker can leverage this vulnerability to disclose information in the context of the service account. Was ZDI-CAN-29838.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136537 - NVD - CVSS Score v3.0: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136537</link>
+    <guid isPermaLink="false">3e11cfd2a906f5d2a35c20573e0d75c8</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 6.5 | LiteLLM key_management_endpoints Missing Authorization Security Feature Bypass Vulnerability. This vulnerability allows remote attackers to bypass security features on affected installations of LiteLLM. Authentication is required to exploit this vulnerability.
+
+The specific flaw exists within the key_management_endpoints module. The issue results from the lack of authorization prior to allowing access to functionality. An attacker can leverage this vulnerability to escalate privileges to resources normally protected from the user. Was ZDI-CAN-32342.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136538 - NVD - CVSS Score v3.0: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136538</link>
+    <guid isPermaLink="false">333ecd8e690b802b59fe25cfae97d1e1</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 6.5 | LiteLLM Virtual Key Model Alias Incorrect Authorization Privilege Escalation Vulnerability. This vulnerability allows remote attackers to escalate privileges on affected installations of LiteLLM. Authentication is required to exploit this vulnerability.
+
+The specific flaw exists within the handling of virtual key model aliases. The issue results from incorrect authorization. An attacker can leverage this vulnerability to escalate privileges to resources normally protected from the user. Was ZDI-CAN-32649.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136539 - NVD - CVSS Score v3.0: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136539</link>
+    <guid isPermaLink="false">28bc52929ffad126da9679847110fd64</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.2 | LiteLLM Pass-Through Endpoint Code Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of LiteLLM. Authentication is required to exploit this vulnerability.
+
+The specific flaw exists within the handling of pass_through_endpoints. The issue results from the lack of proper validation of code before it is executed via module import. An attacker can leverage this vulnerability to execute code in the context of the service account. Was ZDI-CAN-31433.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136540 - NVD - CVSS Score v3.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136540</link>
+    <guid isPermaLink="false">2fb8c1e17b2801399c4a6eed480d5d15</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 5.3 | LiteLLM Secret Manager oidc Resolver Information Disclosure Vulnerability. This vulnerability allows remote attackers to disclose sensitive information on affected installations of LiteLLM. Authentication is required to exploit this vulnerability.
+
+The specific flaw exists within the secret resolution handler. The issue results from the lack of proper validation of user-supplied input prior to using it to access environment variables. An attacker can leverage this in conjunction with other vulnerabilities to execute arbitrary code in the context of the service account. Was ZDI-CAN-31482.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-61512 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61512</link>
+    <guid isPermaLink="false">fa4c5b816397b0997075b33535d0cfd7</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.3 | VeraCrypt before 1.26.30 on Linux contains a command injection vulnerability in CoreUnix::CheckFilesystem that allows a local attacker with same-UID access and an active elevated CoreService session to execute arbitrary commands by injecting an unsanitized VirtualDevice value into a shell command string. Attackers can reopen the request pipe through /proc/&lt;pid&gt;/fd/&lt;n&gt; and supply a crafted VirtualDevice value such as /dev/null; &lt;command&gt; to achieve arbitrary command execution as root.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-61513 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-61513</link>
+    <guid isPermaLink="false">736b8ed4559f05b9bc482e9efe7072e7</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.3 | VeraCrypt through 1.26.31 on Linux contains an improper path restriction vulnerability in the elevated CoreService, which passes the path and owner UID from a SetFileOwnerRequest directly to chown() in CoreUnix::SetFileOwner without target validation on Linux. An attacker with an active elevated CoreService session and same-UID access who reopens the request pipe through /proc/&lt;pid&gt;/fd/&lt;n&gt; can take ownership of arbitrary system files such as /etc/passwd and /etc/shadow, achieving full root compromise.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
