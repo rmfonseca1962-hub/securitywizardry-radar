@@ -5,151 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 08:02:23 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-135724 - NVD - CVSS Score v4.0: 5.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135724</link>
-    <guid isPermaLink="false">a143232e29d0c5a7fcf08ed328535272</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.7 | FFmpeg before 9.1 contains a NULL pointer dereference vulnerability in avformat_stream_group_create() in libavformat/options.c that sets the group type before allocating parameters. Attackers can supply crafted HEIF/AVIF files whose tile grid parsing under allocation failure makes ff_free_stream_group() dereference a NULL tile_grid, crashing the application.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135725 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135725</link>
-    <guid isPermaLink="false">ae4afef9b5d8b008982aff9b5f0b8e03</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a stack-based buffer overflow vulnerability in ff_rtmp_packet_write() in libavformat/rtmppkt.c that allows malicious RTMP servers to overflow a 16-byte header buffer. Attackers can send a Set Chunk Size packet on a high channel id with an extended timestamp, which handle_chunk_size() echoes back, corrupting the publishing client's stack.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135726 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135726</link>
-    <guid isPermaLink="false">be5b26af1e7953cb215cb20f3f63ca8a</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg before 9.1 contains a NULL pointer dereference vulnerability in rdt_parse_packet() in libavformat/rdt.c that allows remote attackers to crash applications by omitting the ASMRuleBook SDP attribute. Attackers can serve an RTSP session selecting RDT transport without ASMRuleBook, then send an RDT data packet to crash ffmpeg or ffprobe.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135727 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135727</link>
-    <guid isPermaLink="false">1145ebb1d951d2c6482dd81e17a95bdb</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg before 9.1 contains an uninitialized memory disclosure vulnerability in rfc4175_handle_packet() in libavformat/rtpdec_rfc4175.c that leaks heap contents into decoded video frames. Attackers can send RTP streams containing only some scan lines of a frame, leaving av_malloc buffer bytes uninitialized and exposing process heap memory in displayed, stored or re-streamed video.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135728 - NVD - CVSS Score v4.0: 5.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135728</link>
-    <guid isPermaLink="false">bb672396e19c7757342f76986f07bbe9</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.7 | FFmpeg before 9.1 contains a signed integer overflow vulnerability in libavformat/dashdec.c that allows attackers to crash applications by supplying a crafted DASH manifest. Attackers can craft an MPD manifest with very long BaseURL and SegmentTemplate strings to overflow max_url_size, causing undersized URL allocations and denial of service.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135729 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135729</link>
-    <guid isPermaLink="false">dd12d15f8a3dc440ae10617b642b0f3c</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg before 9.1 contains an XML injection vulnerability in write_adaptation_set() in libavformat/webmdashenc.c that writes stream language metadata unescaped into the AdaptationSet lang attribute. Attackers can supply crafted WebM files whose track language contains quotes or angle brackets to inject attributes or elements, controlling segment URLs and representations in generated MPD manifests.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135730 - NVD - CVSS Score v4.0: 4.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135730</link>
-    <guid isPermaLink="false">c35ae8788e0e4893382188fc50351e27</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.8 | FFmpeg before 9.1 contains an uninitialized memory vulnerability in vpk_read_header() in libavformat/vpk.c that computes a last block size not divisible by the channel count. Attackers can supply a crafted VPK file with a large channel count so the last audio packet exposes leftover heap memory contents.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135731 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135731</link>
-    <guid isPermaLink="false">adf87055ad97d64b58968a851daddf16</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg before 9.1 contains an integer overflow in send_picture() of libavformat/rtpenc_vc2hq.c that leaves the bit reader without a buffer, causing a NULL pointer dereference. Attackers can supply a Dirac/VC-2 stream with a picture data unit of about 256 MiB or more to crash applications packetizing it to RTP.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135732 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135732</link>
-    <guid isPermaLink="false">8dc0f51ea2b8ee191b7381633c9e2d86</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | FFmpeg before 9.1 contains an out-of-bounds read vulnerability in mxf_write_d10_audio_packet() in libavformat/mxfenc.c because mxf_init() accepts unsupported D-10 audio codecs. Attackers can supply a crafted input with a non-PCM multichannel audio stream remuxed to D-10 MXF to leak heap memory into the output file or crash the application.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135733 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135733</link>
-    <guid isPermaLink="false">d5e7347a5fbd5e93888d5fd7e6981ad9</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | FFmpeg through 9.1 contains an insecure default configuration in the zmq and azmq filters of libavfilter/f_zmq.c that binds an unauthenticated command socket to all interfaces on TCP port 5555. Remote attackers can send 'TARGET COMMAND [ARG]' messages passed to avfilter_graph_send_command() to change filter runtime parameters and alter processed audio or video.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135734 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135734</link>
-    <guid isPermaLink="false">399d6eabec01f1c6f1105d9ef398ac8b</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a heap out-of-bounds write vulnerability in the deflicker filter that lets attackers corrupt heap memory via unclamped high bit depth luma samples. Attackers can supply crafted video whose luma values exceed the nominal depth, making calc_avgy16() increment counters past the histogram allocation, causing crashes or possibly code execution.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135735 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135735</link>
-    <guid isPermaLink="false">043eb1ed32e82953781b92da5b42234f</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | FFmpeg before 9.1 contains a heap out-of-bounds read vulnerability in filter_slice_rgba_planar() that allows attackers to read beyond lookup tables using unmasked high bit depth planar samples. Attackers can supply crafted video with samples exceeding the nominal depth, passed unchanged by rawvideo, to crash the application or leak heap contents into output video.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135736 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135736</link>
-    <guid isPermaLink="false">d6e2ea8d15b1bcc0aaacb0e3b7774591</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.2 | FFmpeg 4.4 before 9.1 contains a heap out-of-bounds read and write vulnerability in libavfilter/vf_deband.c that allows attackers to corrupt heap memory by sending a runtime coupling command. Attackers can send a 'deband coupling 1' command via sendcmd or an unauthenticated zmq filter, making chroma planes be processed at luma dimensions to crash the process or potentially execute code.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135737 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135737</link>
-    <guid isPermaLink="false">ffe330e05244456997e0fcdfbe54b7df</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a heap out-of-bounds write and read vulnerability in the tmidequalizer filter that allows attackers to corrupt memory by supplying high bit depth samples exceeding the nominal maximum. Attackers can craft planar 9, 10, 12 or 14 bit video so compute_histogram16() and apply_contrast_change16() index unclamped samples, crashing applications, corrupting the heap, and leaking heap contents.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135738 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135738</link>
-    <guid isPermaLink="false">b562b8efb0f77666c1f56cc76b5a8ca2</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a heap out-of-bounds write vulnerability in libavfilter/vf_signalstats.c that allows attackers to corrupt heap memory by supplying high bit depth samples exceeding the nominal maximum. Attackers can craft planar 9 to 14 bit YUV video whose unclamped samples or saturation values index past histogram ends, crashing applications or possibly executing code.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135739 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135739</link>
-    <guid isPermaLink="false">776c3e3777ee8f14e28c320cc5eab258</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.3 | FFmpeg 7.1 before 9.1 contains an out-of-bounds read vulnerability in libavfilter/vf_scale.c that allows attackers to read past the filter input array by sending width or height commands using ref variables. Attackers can send such commands via sendcmd scripts or unauthenticated zmq or azmq filters, causing config_props() to dereference an invalid pointer and crash the process.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135740 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135740</link>
-    <guid isPermaLink="false">ceaa1c89d347c5816b31d7c3156dd833</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a heap out-of-bounds write vulnerability in libavfilter/vf_readeia608.c because build_histogram() does not clamp high bit depth luma samples to the nominal maximum. Attackers can supply crafted 9, 10, 12 or 14 bit gray or YUV video to corrupt heap memory, causing crashes or possibly code execution.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135741 - NVD - CVSS Score v4.0: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135741</link>
-    <guid isPermaLink="false">979f506552d8279c251a2e6c0e5b6c2c</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.8 | FFmpeg before 9.1 contains a heap out-of-bounds read vulnerability in libavfilter/vf_lut2.c because the second input's pixel format is unrestricted when the output depth option is set. Attackers can supply crafted media such as monoblack BMP or PBM images to index beyond lookup tables, crashing applications or leaking heap contents into output video.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 24 Nov 2026 09:01:59 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-135742 - NVD - CVSS Score v4.0: 8.7</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135742</link>
@@ -326,6 +182,159 @@ Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as
     <guid isPermaLink="false">7e9ef0ee26ebe2605cab1cf175a78a94</guid>
     <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | An externally controlled format string vulnerability in the Snapshot CGI components of ADM allows an authenticated administrator to cause repeatable premature termination of affected privileged CGI requests by supplying crafted input.
 Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-105428 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105428</link>
+    <guid isPermaLink="false">ec9a86b512ee4fe4b5c0ac5ad5193650</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.3 | Binding to an unrestricted IP address in the netstack SOCKS5 proxy of the NetBird client (client/iface/netstack) in NetBird versions before 0.74.7 allows an unauthenticated attacker on the same network as the client to relay traffic through the client into its NetBird overlay network. When the client runs in netstack mode (NB_USE_NETSTACK_MODE=true), it starts a SOCKS5 proxy, without authentication, that is meant to bridge applications on the local host into the userspace WireGuard stack. The listener was bound to 0.0.0.0 instead of the loopback address, so any host that can reach the proxy port (1080 by default) can connect and reach peers and internal resources with the network position of the affected client. Netstack mode is not enabled by default. The issue is fixed in version 0.74.7, which binds the proxy to 127.0.0.1 by default.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-105430 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105430</link>
+    <guid isPermaLink="false">a6e7b048da958e7f744cb5a648979c8c</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.3 | Deserialization of untrusted data in the relay server handshake of NetBird versions 0.29.0 through 0.74.7 allows an unauthenticated remote attacker to reach the Go encoding/gob decoder with attacker-supplied bytes before any credential is checked, which can lead to denial of service of the relay server. The deprecated Hello handshake message was still accepted before authentication and its token was decoded with gob.NewDecoder (shared/relay/auth/hmac) before the HMAC signature was verified. The handshake buffer limits the input to 212 bytes and the pre-authentication phase to 10 seconds, so there is no impact on confidentiality or integrity and the impact on availability depends on a separate weakness in the gob decoder of the Go toolchain used to build the relay server, such as CVE-2024-34156. The Auth handshake, used by clients since version 0.29.1, does not use gob. The issue is fixed in version 0.75.0, which removes the Hello handshake and the gob-based token decoding.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-105431 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105431</link>
+    <guid isPermaLink="false">80a9945360eedb9a64ee0ae5b94ffee4</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | A protection mechanism failure in the userspace firewall of the NetBird client (client/firewall/uspfilter) in NetBird versions 0.55.0 through 0.74.6 allows an attacker who controls an enrolled peer to bypass the access control rules of another peer by sending IP-fragmented packets. The packet filter returned an allow verdict for any IPv4 fragment, and for any IPv6 packet carrying a Fragment extension header, before evaluating the ACL rules. This applied to the leading fragment as well as to continuation fragments, so no part of a fragmented datagram was filtered and ports denied by policy could be reached. The userspace filter is the packet filter wherever the client does not program the kernel firewall, which includes the Android and iOS apps. The issue is fixed in version 0.74.7, in the Android app from version 0.6.0 and in the iOS app from version 0.3.3, which evaluate fragments against the same ACL rules as unfragmented packets.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-10084 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10084</link>
+    <guid isPermaLink="false">c6dd2b6473c2c891c479dd6bfeface13</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | An unauthenticated attacker can send an unsigned SAML single logout request to force users to log out of Grafana Enterprise instances configured for SAML single logout (improper signature verification).</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120934 - NVD - CVSS Score v4.0: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120934</link>
+    <guid isPermaLink="false">800bc039003982ce301dde752ddd0964</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.0 | An External Control of File Name or Path (Argument Injection) vulnerability in the settings/notification.cgi component of ADM allows authenticated remote administrators to create or truncate arbitrary files with root privileges via crafted request parameters. An authenticated administrator can truncate arbitrary critical files across the root filesystem, leading to system failure or Denial of Service (DoS).
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120935 - NVD - CVSS Score v4.0: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120935</link>
+    <guid isPermaLink="false">51c09b50043ce5587bf97beebcdcfe0f</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.0 | An argument injection vulnerability exists in the settings/vpn.cgi endpoint in the ADM. When processing a WireGuard profile, the internal command parser removes quotes and performs a quote-agnostic scan on arguments without properly sanitizing redirection operators. An authenticated administrator can supply a crafted parameter to cause the execution helper to open and truncate arbitrary files on the filesystem with root privileges, resulting in an arbitrary file truncation and denial-of-service (DoS) condition.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120936 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120936</link>
+    <guid isPermaLink="false">c61c18d2268e465c94b92a3f418491fd</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | An arbitrary file creation and truncation vulnerability exists in the File Explorer of ADM. An authenticated low-privileged user can upload a file with crafted path components containing quote and redirection characters. When music.cgi processes the entry for audio playback operations, the unescaped path string breaks out of the expected argument context in the internal command parser. This causes the system execution helper to open the attacker-specified path with root privileges using O_TRUNC, allowing remote attackers to truncate or create arbitrary system files.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120940 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120940</link>
+    <guid isPermaLink="false">a1310fec3ad56f4bcacdc54c58c28068</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.3 | A stack-based buffer overflow in the DHCP Server helper of ASUSTOR ADM allows an unauthenticated attacker on the local network to trigger stack memory corruption by sending a crafted DHCP hostname to a device with DHCP Server enabled. This may disrupt DHCP service.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120946 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120946</link>
+    <guid isPermaLink="false">a04d90e1fc51d043e6c24886b6d6611d</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | An OS command injection vulnerability in ADM allows remote authenticated administrators to execute arbitrary commands as root. The set action in settings/ddns.cgi fails to sanitize configuration delimiters in user-supplied parameters before writing them into the DDNS configuration file, allowing an attacker to inject directives that execute arbitrary system commands upon service restart.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120947 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120947</link>
+    <guid isPermaLink="false">51dc35b5d6d5ff15f00b566f8ed8d7b5</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | A potential stack-based buffer overflow exists in ADM Defender Firewall configuration handling. Before the fix, firewall policy processing used string operations without sufficient destination-size checks and did not consistently validate array bounds. Malformed or oversized configuration data may cause an out-of-bounds write and corrupt stack memory.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120948 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120948</link>
+    <guid isPermaLink="false">f1511150428db96b724e01303bf3d358</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | An OS command injection vulnerability in the PPPoE configuration of ADM allows an authenticated administrator to store shell syntax in the PPPoE account value. When the service loads the resulting configuration, the injected commands can execute with root privileges.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121016 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121016</link>
+    <guid isPermaLink="false">b34d0b3e9e860da23b151c18bcad6262</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | The affected products insufficiently restrict runtime-supplied visualization data, allowing local program execution on the engineering workstation, if a user is both logged in to a CODESYS Control runtime and operates a visualization. An unauthenticated remote attacker controlling a malicious runtime and tricking a user to trust it, or performing a man-in-the-middle attack on the communication between the CODESYS Control runtime and the engineering workstation, may cause arbitrary code execution on the engineering workstation.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121017 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121017</link>
+    <guid isPermaLink="false">8367b9310537dc283a634d9a9d7ebb51</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | The affected products insufficiently restrict runtime-supplied visualization data, allowing to invoke local COM/ActiveX functionality on the engineering workstation, if a user is both logged in to a CODESYS Control runtime and operates a visualization. An unauthenticated remote attacker controlling a malicious runtime and tricking a user to trust it, or performing a man-in-the-middle attack on the communication between the CODESYS Control runtime and the engineering workstation, may cause arbitrary code execution on the engineering workstation.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121018 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121018</link>
+    <guid isPermaLink="false">170db0b635bec7f183a6919d9ea75190</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | The affected products insufficiently restrict runtime-supplied visualization commands, allowing local functionality on the engineering workstation to be invoked, if a user is both logged in to a CODESYS Control runtime and operates a visualization. An unauthenticated remote attacker controlling a malicious runtime and tricking a user to trust it, or performing a man-in-the-middle attack on the communication between the CODESYS Control runtime and the engineering workstation, may cause arbitrary code execution on the engineering workstation.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-121019 - NVD - CVSS Score v4.0: 4.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121019</link>
+    <guid isPermaLink="false">9ad414da3538589dac3c629fa05f0000</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.6 | An unauthenticated attacker can trick a local user into generating an offline boot application from a malicious CODESYS project, causing the affected products to write files in arbitrary directories on the engineering workstation. The destination path is derived from attacker-controlled project data, whereas the file name and file contents are generated by the affected products and are not attacker-controlled.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134896 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134896</link>
+    <guid isPermaLink="false">d452576189f1147534be292c0d56fb5d</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.4 | An improper input validation vulnerability in the OpenVPN client configuration import feature of ADM allows authenticated administrative users to execute arbitrary operating system commands via a crafted .ovpn profile.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134897 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134897</link>
+    <guid isPermaLink="false">9d3ad50e620ed2341765c9aec6696eb4</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | An OS command injection vulnerability in ADM allows an authenticated administrator to create an iSCSI LUN with a crafted name and schedule a snapshot. The scheduler embeds the name in a root cron job without correctly neutralizing shell metacharacters, allowing arbitrary command execution as root when the job runs.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135779 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135779</link>
+    <guid isPermaLink="false">d7e7693ad31c4ac3a5399cf9722df747</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.3 | Reliance on an untrusted source of the client address in the WebSocket listener of the NetBird relay server (relay/server/listener/ws) in NetBird versions 0.31.1 through 0.74.7 allows an attacker with an enrolled peer to spoof the source address of their relay connection. The listener used the values of the X-Real-Ip and X-Real-Port request headers as the remote address of the connection unconditionally, without checking that the request came from a trusted upstream proxy. A WebSocket client that sends both headers makes the relay record and use an arbitrary address for its connection, including in the relay connection log, so a client can hide its real address or attribute its connection to another host. Only the relay server is affected; the NetBird client, including the Android and iOS apps, does not run the relay listener. The issue is fixed in version 0.75.0, which honours these headers only for requests whose direct connection address is in a configured set of trusted proxies and ignores them by default.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
