@@ -5,243 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2026 23:02:37 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-133857 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133857</link>
-    <guid isPermaLink="false">ae78192e697c9c6f85c0d8331a921059</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | Uncontrolled resource allocation in Kibana exception-list filter creation can lead to denial of service. An authenticated user with access to the Security solution can submit a specially crafted request containing a large number of exception-list identifiers. Kibana can create an unbounded number of concurrent operations while resolving those identifiers, exhausting memory and crashing the Kibana process.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133858 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133858</link>
-    <guid isPermaLink="false">a8e88cc6d77e528ffe69800840ce9f69</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | Certain Fleet APIs in Kibana expose stored credentials to authenticated users who do not have the Fleet Settings: Read privilege. For example, a user with the Fleet Agent policies: Read privilege can retrieve credentials through Fleet output and agent binary download source APIs. The disclosed credentials could allow the attacker to authenticate to connected backend systems.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133860 - NVD - CVSS Score v3.1: 4.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133860</link>
-    <guid isPermaLink="false">07764e511a575852659d433ccd06defb</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.9 | An issue in Kibana allows Elasticsearch transforms in directly uploaded integration packages to run with Kibana's internal system identity instead of the installing user's privileges. A user with Integrations: All and Agent policies: All privileges in a single Kibana space could access or modify data they are not authorized to access, including agent policies from other spaces. This could disclose sensitive information or lead to command execution on managed Elastic Agent hosts.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133891 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133891</link>
-    <guid isPermaLink="false">14614bdf96c21f2963577f6ae0c5f69b</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.3 | Incorrect authorization in Elasticsearch columnar indices can bypass field-level security for geo_shape values. An authenticated user with access to an affected index can obtain denied geometry values through the internal source-geometry representation even when field-level security excludes the corresponding field. This discloses field data that the user is not authorized to read.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133917 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133917</link>
-    <guid isPermaLink="false">1104a96e2c82a5616cb42894566a0f2a</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.3 | Elasticsearch ES|QL query responses can disclose dataset storage locations and provider identity details to users who are allowed to query a dataset but cannot read its definition. Storage paths and storage-client error text can appear in read-failure messages or query-profile plan strings. An authenticated dataset reader can obtain this information without permission to view the dataset configuration. This issue does not disclose stored credentials or the dataset contents beyond the caller's query access.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133918 - NVD - CVSS Score v3.1: 4.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133918</link>
-    <guid isPermaLink="false">8a7d79d45d729ff1178cd63105d1cbdb</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.4 | Elasticsearch ES|QL data-source and dataset registration can write storage credentials or pre-signed URL signatures to the audit log in plaintext. In affected versions, request definitions are not appropriately filtered before request-body or URL-query auditing. An attacker with access to these logs can obtain credentials for the customer's external storage. The issue affects deployments with ES|QL federation enabled and audit logging configured to record the affected request information.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133919 - NVD - CVSS Score v3.1: 4.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133919</link>
-    <guid isPermaLink="false">253bae968b55c18f40d49d066be9011d</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.9 | Uncontrolled resource allocation in Elasticsearch mapping updates can lead to denial of service. An authenticated user with index-management privileges can submit specially crafted mapping updates that are expanded into multiple large in-memory representations. The amplification during request parsing and mapping updates can exhaust heap memory and crash an Elasticsearch node.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133925 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133925</link>
-    <guid isPermaLink="false">cf1e2dbee598f9b9b3b723bd7ff3a269</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | Uncontrolled resource consumption in Elasticsearch query parsing can lead to denial of service. An authenticated user with search permissions can submit a specially crafted query containing an excessive number of clauses. Expanding those clauses in memory before enforcing query complexity limits can exhaust heap memory and crash an Elasticsearch node.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133926 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133926</link>
-    <guid isPermaLink="false">a663aea35bb0c118e15f412c0904d14b</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.3 | An issue was discovered in Kibana where a user with the Synthetics All privilege in one space can access Fleet agent policy metadata from other spaces through a product API endpoint. This could lead to the unauthorized disclosure of operational metadata across spaces the user is not authorized to view.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133935 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133935</link>
-    <guid isPermaLink="false">9df8052f1362445b28c93b097b7cf4e9</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.8 | Unconstrained S3 endpoint settings in Elasticsearch ES|QL data sources can cause requests containing storage credentials to be sent to an attacker-controlled host. A user with data-source management privileges can configure a custom endpoint without the intended host restriction. On opted-in commercial Elastic Cloud Hosted deployments, the issue can also disclose workload-identity tokens and expose customer cloud resources outside Elasticsearch. Self-managed deployments are affected by the storage-endpoint path only.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133984 - NVD - CVSS Score v3.1: 4.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133984</link>
-    <guid isPermaLink="false">c8319dfd1beda7ca4e44f159c24f16d5</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 4.2 | Missing authorization in Kibana Cases alert attachments can allow an authenticated user with permission to add case comments or attachments to modify case-link metadata in documents they are not authorized to access. An attacker can add false case links and prevent legitimate case linkage by exhausting the alert's case-link limit. Writes are limited to the kibana.alert.case_ids field in indices that Kibana's internal account can read and update and whose mappings accept that field. One of the two authorization defects was fixed earlier in 8.19.22, 9.4.8 and 9.5.5; the fixed versions listed in this advisory address both defects.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134059 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134059</link>
-    <guid isPermaLink="false">6d8036b4d133b87ca86c713a375be80e</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | A relative path traversal vulnerability in Kibana Fleet and Elastic Agent allows an authenticated user with both Fleet Integrations: All and Agent policies: All privileges to distribute a malicious integration policy to managed Elastic Agents. A vulnerable Elastic Agent processing that policy for a component that runs in an isolated unit can modify or delete files outside the component's intended runtime directory with the privileges of the Elastic Agent process. This can cause loss of files or persistent denial of service on affected hosts.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135128 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135128</link>
-    <guid isPermaLink="false">0acdcaaa8db94a322a01fb80892565f1</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was detected in FredrikNoren ungit 1.5.30. This vulnerability affects unknown code of the file source/git-api.js of the component /api/clone. The manipulation of the argument url results in argument injection. The attack can be launched remotely. The exploit is now public and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135472 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135472</link>
-    <guid isPermaLink="false">8325bdc0d2ad7f840aa820ef15823940</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.9 | open62541 1.5.0 through 1.5.10 contains a use-after-free and double free vulnerability in the lookupRefType() function in src/util/ua_util.c that allows attackers to corrupt the heap of the server process by supplying a RelativePath string resolved through UA_RelativePath_parseWithServer(). When the path names a ReferenceType with a string or GUID NodeId, the function returns a shallow copy of the browse result's NodeId and frees its identifier, causing the identifier to be freed a second time when the parsed path is cleared, which attackers can exploit to crash the server process.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135617 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135617</link>
-    <guid isPermaLink="false">a0b22a4b5e46aa206c6d52d67c7aabc2</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 6.9 | Lookyloo is a web-based URL capture and analysis platform. Prior to the fix, the authorization mechanism for private captures (seed-based access control) was not consistently enforced at the data access layer. The capture_cache method and numerous internal methods (get_info, get_meta, get_statistics, get_modules_responses, get_data, get_video, get_screenshot, get_har, get_cookies, get_storage_state, get_frames, get_console_messages, get_capture, get_ressource, misp_export, lacus_export, ai_export, comparator functions, and others) could be invoked with only a capture UUID without validating the required seed token. This meant that API endpoints and internal code paths that called these methods directly could return private capture data to unauthenticated users or users lacking the correct seed. The before_request hook in the web interface provided a partial check, but the underlying data layer did not enforce it, creating an inconsistent authorization boundary. An attacker who knew or guessed a private capture UUID could potentially access sensitive data including rendered screenshots, HAR files, downloaded files, cookies, storage state, console messages, and MISP exports through various REST API endpoints and web routes. The fix introduces a LookylooPrivateCapture exception raised at the cache layer when a private capture is accessed without a valid seed, refactors the API to pass CaptureCache objects (already validated) rather than raw UUIDs, and ensures all web and API endpoints propagate the session-known seed or admin status to the data access layer. Background processes use an explicit unsafe=True flag to bypass the check, as they operate server-side with full trust.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-82303 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82303</link>
-    <guid isPermaLink="false">4d35794378b7177788348455f1ee5cba</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.5 | A buffer over-read vulnerability in Elasticsearch transport decompression can expose data from other requests. The LZ4 decoder can read beyond the declared compressed block into a shared network buffer. A remote attacker who can reach an affected transport interface can send a specially crafted compressed request and obtain data from outside their own request. Exploitation of the exposed remote-cluster transport interface does not require authentication.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-109480 - NVD - CVSS Score v3.1: 9.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109480</link>
-    <guid isPermaLink="false">e8443915348d6e30b9389aef99ebb17b</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 9.6 | Server-side request forgery in Profile Data Roaming Service (PDRS) allows an authorized attacker to elevate privileges over a network.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-109490 - NVD - CVSS Score v3.1: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-109490</link>
-    <guid isPermaLink="false">62f7287a77ae9c35e66b4e4cfdfda26e</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 9.3 | Improper neutralization of input during web page generation ('cross-site scripting') in Authentication Methods Portal Extension allows an unauthorized attacker to elevate privileges over a network.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-113824 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-113824</link>
-    <guid isPermaLink="false">03b1617b6484029f47a7451f89d07a87</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 9.1 | Authorization bypass through user-controlled key in Microsoft Clarity allows an unauthorized attacker to elevate privileges over a network.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-115296 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-115296</link>
-    <guid isPermaLink="false">799a8e17f1feac3904b9557ace84f332</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | Missing authorization in Kibana Security AI Assistant conversation deletion can allow an authenticated assistant user to permanently delete a shared or global conversation owned by another user in the same space. The individual-delete path can treat read access to a shared conversation as permission to delete it without checking ownership. The deleted conversation history is lost to its legitimate owner.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118285 - NVD - CVSS Score v3.1: 9.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118285</link>
-    <guid isPermaLink="false">d06a4eaa38739025692ba1e97d562fce</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 9.6 | Server-side request forgery in Azure Machine Learning allows an authorized attacker to elevate privileges over a network.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-118286 - NVD - CVSS Score v3.1: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118286</link>
-    <guid isPermaLink="false">bd5c31f029d9f5bec4f50ab961daa069</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 9.1 | Improper access control in Azure Site Recovery allows an unauthorized attacker to elevate privileges over a network.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120777 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120777</link>
-    <guid isPermaLink="false">11c838e738258d1510aaa84ae824be92</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.1 | Incorrect authorization in Azure Managed Service Identity allows an authorized attacker to elevate privileges over a network.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120787 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120787</link>
-    <guid isPermaLink="false">c02ab81157b0d1e16d9077d2f883b603</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.5 | Improper certificate validation in Microsoft Office PowerPoint allows an unauthorized attacker to execute code over a network.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-129837 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129837</link>
-    <guid isPermaLink="false">35716297872f0ce94de174fbb09b69ca</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.5 | A flaw was found in rsyslog. A remote, unauthenticated attacker can cause a Denial of Service (DoS) by sending a specially crafted log message with an unusual timestamp. When the service processes this message using weekday formatting templates, an out-of-bounds memory read occurs, causing the application to crash.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130165 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130165</link>
-    <guid isPermaLink="false">263cba926fc909e5e0975b4e11044709</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.2 | React is a JavaScript library for building user interfaces. In versions prior to 19.0.9, 19.1.10, 19.2.9 and 19.3.1, react-server-dom-webpack, react-server-dom-parcel, and react-server-dom-turbopack are vulnerable to denial of service. Specially crafted HTTP requests sent to server function endpoints can cause out-of-memory exceptions or excessive CPU usage. This issue is fixed in versions 19.0.9, 19.1.10, 19.2.9 and 19.3.1.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-132615 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132615</link>
-    <guid isPermaLink="false">138c73be92f9302880500a1f062a4b23</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS: não informado | The ggml-rpc server suffers from an uninitialized heap memory disclosure vulnerability where the alloc_buffer function provides new clients with buffers containing stale data from previously freed allocations. This allows an unauthenticated remote attacker to perform an in-bounds read via get_tensor to recover sensitive information, such as model weights or KV-cache data, belonging to other clients sharing the same server.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133981 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133981</link>
-    <guid isPermaLink="false">6231300d0aed4cfc52c2ef0459caa6d4</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | An issue was discovered in Elasticsearch where specially crafted compressed payloads can cause an infinite loop. A low-privileged authenticated user can submit a malformed payload to a product API endpoint that causes the node to enter a permanent CPU loop, occupying a request-processing thread indefinitely. This can progressively exhaust the node's processing capacity, degrading or denying access to product features, and requiring a restart of the affected node to recover.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-134069 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134069</link>
-    <guid isPermaLink="false">e231223db5e49ae10a9e7ef2c97ab32e</guid>
-    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.2 | Use of a default cryptographic key in the instance registration component in Amazon SSM Agent before 3.3.5226.0 on AWS-provided Windows Server AMIs released before 2026-09-09 might allow local users without administrative privileges to obtain the instance's Default Host Management Configuration role credentials via the registration key shared by all instances launched from the same AMI.
-
-
-
-To remediate this issue, users should replace affected instances with instances launched from AWS Windows Server AMIs released on or after 2026-09-09, which include SSM Agent 3.3.5226.0 or later. Upgrading the agent in place does not replace the shared key, and deleting the agent's Vault breaks instances managed through Default Host Management Configuration.</description>
-    <category>NVD</category>
-    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 24 Nov 2026 00:01:06 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-50691 - NVD - CVSS Score v3.1: 9.9</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-50691</link>
@@ -327,6 +91,238 @@ To remediate this issue, users should replace affected instances with instances 
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-93700</link>
     <guid isPermaLink="false">5fa0f1f0c0ac0bf69ad6c2339d837b2a</guid>
     <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 9.0 | An authenticated WHMCS client could potentially leverage this flaw to read sensitive configuration files on the WHMCS host, including database credentials, and to execute code on the server.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101862 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101862</link>
+    <guid isPermaLink="false">a0980cd0768fb4fbb9f9eca86c89e0ed</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | EUSurvey through 1.6, prior to commit 0669a36, contains a path traversal vulnerability in the survey import function that allows authenticated attackers with the Form Manager role to execute arbitrary code on the server. The POST /noform/management/importSurvey endpoint trusts archive entry names when SurveyExportHelper writes imported files through FileService, so a crafted survey archive can write a JSP file outside the survey storage directory into the application directory, where Tomcat executes it with the privileges of the EUSurvey process</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101863 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101863</link>
+    <guid isPermaLink="false">c4304eff5bb742075837670a8dfceb96</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | EUSurvey 1.5.5 through 1.6, prior to commit d5295d5, contains a missing authorization vulnerability in the POST /forms/bulkchange endpoint that allows any authenticated user to take over or delete other users' surveys. SurveyController accepts arbitrary survey IDs and privilege values, and BulkExecutor applies the requested access-right changes or deletion without checking whether the requester can manage those surveys, allowing an ordinary ROLE_USER account to grant itself full control of another user's survey, read its draft and results, edit the form, manage its invitations, or delete it.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101864 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101864</link>
+    <guid isPermaLink="false">dbf2691f482294c3722d15dcd90d6a99</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 9.2 | EUSurvey through 1.6, prior to commit a4161a9, contains a weak password recovery mechanism that allows attackers who obtain a still-valid password-reset link to take over accounts that use a local EUSurvey password. The /auth/reset/ flow checks only the age of a reset code and does not invalidate it after the password is changed, and issuing a newer link leaves earlier links active, so a used or superseded link remains valid for up to 24 hours from issuance and can be reused to set a new password, sign in as the affected user, and lock that user out.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101866 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101866</link>
+    <guid isPermaLink="false">c63ef342ec41bd0a6e66dadee597b425</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.8 | EUSurvey through 1.6, prior to commit 118facd, contains an authorization bypass vulnerability in the public POST /runner/draft/runner endpoint that allows unauthenticated attackers to overwrite another participant's saved draft and obtain its private invitation token. The draft save handler in RunnerController and AnswerService loads an existing draft by invitation alone without checking that the submitted survey, participation group and invitation belong together, then replaces the draft's answers, reassigns it to the submitted survey, and returns a resume link containing the private invitation token.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101867 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101867</link>
+    <guid isPermaLink="false">e30412454956038acf625c5d592c7d19</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.6 | EUSurvey through 1.6, prior to commit edb5021, contains an incorrect authorization vulnerability in the GET /settings/shareEdit/{shareId} and POST /settings/shares handlers that allows any authenticated user to read or modify another user's contact share. The ownership check in SettingsController denies access only when a condition is both true and false, so it never denies access, allowing an ordinary account without Contact Management privileges to read the names and email addresses in a share and to rename it, change its recipient or access mode, or replace its contacts.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101868 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101868</link>
+    <guid isPermaLink="false">2290e8aea08c76af6582b5fe82e4300c</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | EUSurvey through 1.6, prior to commit 4bf95a3, contains an authorization bypass vulnerability in the GET /preparepublishedcontribution/{id} endpoint that allows unauthenticated attackers to read private responses submitted to published surveys. The contribution PDF handler in ContributionController looks up a response by its sequential database ID and skips the normal response access checks, so attackers can enumerate IDs to retrieve other respondents' answers, including free-text answers that may contain personal data, across surveys.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101869 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101869</link>
+    <guid isPermaLink="false">515033be237b28a5e84d2e54b7c9f8a6</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | EUSurvey 1.4.4.6738 through 1.6, prior to commit de1145c, contains an SQL injection vulnerability in the public results page GET /publication/{shortname} that allows unauthenticated attackers to infer non-public response data. ReportingService builds a SQL column expression from part of a user-supplied filter parameter name and inserts it directly into the query, so a visitor to any survey that publishes its results can inject boolean conditions and use the presence or absence of public result rows to infer private reporting data, including response data and respondent metadata from other surveys.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101870 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101870</link>
+    <guid isPermaLink="false">04ac3354a5114e5167c07a02ba3c11e1</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | EUSurvey through 1.6, prior to commit de1145c, contains an authorization bypass vulnerability in the public POST /editcontribution/{code} endpoint that allows unauthenticated attackers to overwrite another respondent's submitted answers. The handler in ContributionController selects the survey and answer set from body parameters by numeric contribution ID and never checks that the private edit code in the URL matches that contribution, so an attacker who knows a contribution ID can replace its saved answers without the respondent's edit link.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101871 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101871</link>
+    <guid isPermaLink="false">d39126f36961c0bae1b2d6ceea3d7c97</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.7 | EUSurvey 1.5.2 through 1.6, prior to commit ffd5da7, contains a missing authorization vulnerability in the public POST /runner/delphiUpdate endpoint that allows unauthenticated attackers to submit responses to Delphi surveys after the owner has closed them. DelphiController checks only that the survey exists and is a Delphi survey and skips the closure check enforced by the normal survey page, so an attacker who knows the survey and question IDs can create new responses that remain in the survey's results.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101872 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101872</link>
+    <guid isPermaLink="false">794117bad6c7dd6b47e19ebfdfe4275a</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.1 | EUSurvey through 1.6, prior to commit 4bf95a3, contains a blind SQL injection vulnerability in the GET /dashboard/surveys endpoint that allows authenticated attackers with the Form Manager role to infer data from the main application database. SurveyService inserts unrecognized sort values directly into the ORDER BY clause of a native query, so attackers can supply SQL expressions and use response timing to infer any data readable by the application's database account, including data outside the surveys listed on their dashboard.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101873 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101873</link>
+    <guid isPermaLink="false">57b85eb2a450af48394b6f7723155f65</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | EUSurvey 1.5.2 through 1.6, prior to commit bb7432c, contains a stored cross-site scripting vulnerability in Delphi survey explanations that allows survey participants to execute arbitrary JavaScript in other users' browsers. Explanations submitted to POST /runner/delphiUpdate are stored by AnswerExplanationService without sanitization and rendered as HTML in delphiAnswersTable.jsp, so an injected event handler runs in the EUSurvey origin with the session of any participant or survey manager who views the answers table.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101874 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101874</link>
+    <guid isPermaLink="false">bd2a6ed33446c0a05050457584aea014</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | EUSurvey through 1.6, prior to commit 6db6147, contains an insecure direct object reference vulnerability in the GET /exports/checkNew endpoint that allows authenticated attackers to read the names of other users' finished exports and suppress their notifications. ExportsController trusts a user ID supplied by the browser without checking it against the authenticated session, and ExportService marks every export it returns as notified, so the owner never receives the notice that their export is ready.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101876 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101876</link>
+    <guid isPermaLink="false">79cc71d2905185848505219c6053cafd</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | EUSurvey through 1.6, prior to commit 03cc974, contains a blind server-side request forgery vulnerability in PDF export that allows authenticated attackers with the Form Manager role to make the server send HTTP or HTTPS requests to internal services. Question titles saved through POST /{shortname}/management/edit are rendered as raw markup in runnercontentinnerpdf.jsp, and the PDFRenderer resource loader fetches referenced images without checking whether the destination is on an internal network when a response is exported as a PDF.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-101877 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-101877</link>
+    <guid isPermaLink="false">fbbbbf7ff00e5c7897f07f1b277532df</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.3 | EUSurvey through 1.6, prior to commit 4ff1ba0, contains a missing authorization vulnerability in the GET /pdf/survey/{surveyId} endpoint that allows attackers holding a valid invitation for one survey to download a different survey's restricted questionnaire PDF without signing in. PDFController checks that the supplied invitation and participation group are active but not that they belong to the requested survey, exposing questions intended only for invited respondents of any published survey that allows PDF access.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-122090 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122090</link>
+    <guid isPermaLink="false">e54fc7b0f8e979e234d2e22382e0d635</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 8.4 | Pelican 4.12.0 contains an OS command injection vulnerability in pelican-import. An attacker-controlled wp:post_name from a WordPress XML export is used in an output filename that is interpolated into a Pandoc command passed to subprocess.call with shell=True. On POSIX systems, command substitution in the slug is evaluated when a user imports the crafted export.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130166 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130166</link>
+    <guid isPermaLink="false">d09662a6d7cf9fbddce9e36f9165158b</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.7 | n8n is an open source workflow automation platform. Prior to 1.123.90 and 2.14.0, the invitation acceptance endpoint accepts inviter and invitee user IDs without a signed invitation token, allowing any preexisting member to take over a pending new user account. A member with permission to list users can read the ID of a pending account and set its password without authentication, then log in as that user, including as an admin when the invitation has the admin role. Exploitation requires an invitation that has not been accepted yet. This issue is fixed in versions 1.123.90 and 2.14.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130167 - NVD - CVSS Score v4.0: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130167</link>
+    <guid isPermaLink="false">e10118178e96dd1629ff81bfe5c1ae0a</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 7.5 | n8n is an open source workflow automation platform. Prior to 2.47.6, 2.48.3, and 3.2.2, the password reset link and role change operations do not protect the instance owner account from users with a custom instance role. A user whose custom instance role includes user management permissions can obtain a password reset link for the owner and take over the owner account, or change the owner's role, gaining full control of the instance. Exploitation requires the custom roles feature and a custom instance role with user management permissions. This issue is fixed in versions 2.47.6, 2.48.3, and 3.2.2.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-130169 - NVD - CVSS Score v3.1: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130169</link>
+    <guid isPermaLink="false">4acef39f7bdba28408284c70adebfadc</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 10.0 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. In versions 0.6.26 through 0.7.4, AutoGPT Platform ships a publicly known, hardcoded default JWT verification key in backend/.env.default and autogpt_platform/.env.default. Because HS256 is symmetric, anyone who knows the secret can forge valid JWTs for any user or for the admin role, bypassing authentication and authorization without user interaction. This issue is fixed in version 0.8.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-132257 - NVD - CVSS Score v3.1: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132257</link>
+    <guid isPermaLink="false">028a7fd939357904b0637edfedfa77d3</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 8.2 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. From versions 0.6.23 and above, before 0.8.0, AutoGPT Platform ships a hardcoded default Fernet encryption key in backend/.env.default, which encrypts every user's OAuth tokens, API keys, and integration credentials in the User.integrations column. Anyone with read access to the database of a deployment using the default key can decrypt the stored credentials. This issue is fixed in version 0.8.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133455 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133455</link>
+    <guid isPermaLink="false">b66a08a65635f9b96dd4a4919c1e9b28</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.9.0, nested tools invoked by OrchestratorBlock bypass the main execution queue and are charged only after succeeding, but post-run billing still refunds a failed tool's catalogue price as a presumed pre-flight charge. Any authenticated customer can trigger failed nested calls to add uncharged credits to their balance and fund later executions using the operator's credentials. This issue is fixed in version 0.9.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-133930 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133930</link>
+    <guid isPermaLink="false">21b130dccce112342849dedd3a50c10b</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 5.3 | A pooled-buffer lifetime error in Elasticsearch ES|QL Arrow response formatting can disclose data from other users' concurrent requests. An authenticated user with read access to an index who requests Arrow output containing an affected column type can receive data from indices they are not authorized to access. A temporary block can be released to a shared memory pool before deferred response writers finish using it, allowing concurrent requests to reuse the same memory. The attacker cannot select which concurrent data is disclosed.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134020 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134020</link>
+    <guid isPermaLink="false">d37c877f6742eb5a191fcfb29b420f59</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.5 | OpenEMR is a free and open source electronic health records and medical practice management application. Prior to 8.5.0, the staff-facing portal endpoints GET api/onsiteactivityviews and GET api/onsiteactivityview/{id}, mapped to OnsiteActivityView.Query and OnsiteActivityView.Read with p_acl = p_none in portal/patient/_app_config.php, are handled without an authorization check for an authenticated staff session whose bootstrap_pid is empty. portal/patient/_machine_config.php admits that authenticated staff session, and portal/patient/fwk/libs/verysimple/Phreeze/GenericRouter.php applies the route ACL only when bootstrap_pid is nonempty, so the staff request bypasses the p_none check. OnsiteActivityViewController::Query() returns records without patient scoping, and OnsiteActivityViewController::Read() loads a record by identifier without checking ACL or ownership; OnsiteActivityViewReporter::GetCustomQuery() joins portal activity to patient demographics and includes names, dates of birth, addresses, and Social Security numbers. Any authenticated staff account, including one without the patients/demo permission, can therefore read sensitive demographics for patients represented by an existing onsite_portal_activity row; at least one such row must exist for the endpoint to return patient data. This issue is fixed in version 8.5.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134021 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134021</link>
+    <guid isPermaLink="false">8ebcc27c6a855f33d8c160966308c4c7</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.5 | TastyIgniter is an open-source online ordering, table reservation, and restaurant management system. Prior to 4.3.1, the Mollie payment notification handler in src/Payments/Mollie.php, processNotifyUrl(), uses a payment ID supplied with the notification to retrieve a paid transaction but does not verify that the transaction's order reference matches the order identified by the notification URL or that the transaction amount matches the order total. An ordinary customer can use a paid Mollie transaction from one order to cause a different, higher-value order to be marked paid without paying its full price. The endpoint is intentionally unauthenticated so Mollie's servers can reach it, and the request's order hash alone does not bind the fetched payment to that order. This issue is fixed in version 4.3.1.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134022 - NVD - CVSS Score v3.1: 3.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134022</link>
+    <guid isPermaLink="false">c753f8abb5d208bb07b509e1ae44ca02</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 3.7 | TastyIgniter is an open-source online ordering, table reservation, and restaurant management system. Prior to 4.2.0, the User extension’s onRequestResetPassword() handler in src/Http/Controllers/Login.php calls resetPassword() and mailSendResetPasswordRequest() only when an account matches. The resulting database write and reset-email send take longer than the nonexistent-account path despite the endpoint returning the same response, allowing timing measurements against a production deployment using a synchronous queue and real SMTP transport to disclose valid staff or customer email addresses. The advisory’s local log-mailer test showed no measurable timing difference, so the signal depends on mail configuration and is useful for follow-on phishing or credential stuffing rather than direct account access. This issue is fixed in version 4.2.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134023 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134023</link>
+    <guid isPermaLink="false">12d7a98468b5352ffe099f12375758b2</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 7.4 | TastyIgniter is an open-source online ordering, table reservation, and restaurant management system. Prior to 4.2.0, checkResetPasswordCode() in src/Auth/Models/User.php compares a submitted reset code with the stored 42-character token using a normal string comparison, which can return after the first differing byte instead of taking constant time. The password-reset flow exposes this comparison to remote requests, but the endpoint is rate-limited to six requests per minute per IP, and the advisory reports no live exploit or practical token-recovery demonstration. Recovering a high-entropy reset code through the constrained timing signal could permit an unauthorized password reset. This issue is fixed in version 4.2.0.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134024 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134024</link>
+    <guid isPermaLink="false">ac54c2ecfe551cb9b75051e48eaab505</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v3.1: 6.8 | TastyIgniter is an open-source online ordering, table reservation, and restaurant management system. Prior to 4.4.4, addFromUrl() in src/Flame/Database/Attach/Media.php performs an outbound HTTP request to a caller-supplied URL and stores the response without validating the URL scheme or destination, which could enable server-side request forgery if a reachable feature passes attacker-controlled URLs to the method. The maintainer reports that no shipped first-party feature calls this method and that it is currently unreachable through product functionality, so no current attack path or impact was identified. This issue is fixed in version 4.4.4.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135415 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135415</link>
+    <guid isPermaLink="false">d95c9ec471be305628c471080a5064e8</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 2.1 | A flaw has been found in MiniMax up to 0.7.2. Affected is the function authorizedLocalScript of the file bash-checker.ts. Executing a manipulation can lead to improper authorization. The attack may be launched remotely. The exploit has been published and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135416 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135416</link>
+    <guid isPermaLink="false">ba25076b9e6e5a0d1e206e92dca842ed</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability has been found in D-Link DIR-600L 2.17b02. Affected by this vulnerability is the function hedwigcgi_main of the file hedwig.cgi. The manipulation leads to missing authentication. Remote exploitation of the attack is possible. The exploit has been disclosed to the public and may be used.</description>
+    <category>NVD</category>
+    <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135418 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135418</link>
+    <guid isPermaLink="false">78b9b839194729f8273c77ab186bcf3e</guid>
+    <description>Monday 23 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was found in jprocms up to 1.7.7. Affected by this issue is the function DbBackupFileServiceImpl.downloadFile of the file /cms/db-backup/file/download of the component Database Backup Download Endpoint. The manipulation results in path traversal. The attack can be executed remotely. The exploit has been made public and could be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
     <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
   </item>
