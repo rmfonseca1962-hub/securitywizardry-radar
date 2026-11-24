@@ -5,143 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 20:01:00 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-136413 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136413</link>
-    <guid isPermaLink="false">68d1eee0416fcfe4d8796cdf092a823f</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | AppStream 0.14.5 before 1.2.3 contains an infinite loop vulnerability in asc_l10n_parse_data_qt() that allows attackers to hang compose runs by supplying unchecked tag lengths in Qt .qm files. Attackers can place a crafted .qm file with a 0xFFFFFFFB tag length, referenced by a component's qt translation element, to wrap the read offset and hang appstreamcli compose indefinitely.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136414 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136414</link>
-    <guid isPermaLink="false">f30a307c29af04e6e5bcb8ebbf514b1f</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | AppStream 0.14.5 before 1.2.3 contains a division by zero vulnerability in asc_read_translation_status() in compose/asc-utils-l10n.c that allows attackers to crash compose runs via crafted Qt .qm files. Attackers can supply a valid .qm file with no TRANSLATION records, triggering SIGFPE that terminates the entire appstreamcli compose or libappstream-compose process.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136421 - NVD - CVSS Score v3.0: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136421</link>
-    <guid isPermaLink="false">d68c4988bd985142e8acf30e15875f63</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 6.4 | rocket.chat Server-Side Request Forgery Information Disclosure Vulnerability. This vulnerability allows remote attackers to disclose sensitive information on affected installations of rocket.chat. Authentication is required to exploit this vulnerability.
-
-The specific flaw exists within the web service, which listens on TCP port 3000 by default. The issue results from the lack of proper validation of a URI prior to accessing resources. An attacker can leverage this vulnerability to disclose information in the context of the service account. Was ZDI-CAN-29853.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136422 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136422</link>
-    <guid isPermaLink="false">cf56cfc38ea1d3e3c884763e46f09d61</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | Soda PDF Desktop PDF File Parsing Memory Corruption Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Soda PDF Desktop. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of PDF files. The issue results from the lack of proper validation of user-supplied data, which can result in a memory corruption condition. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-31995.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136423 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136423</link>
-    <guid isPermaLink="false">e6afd48fea3573679f74f18bfb3fd804</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | Soda PDF Desktop PDF File Parsing Out-Of-Bounds Write Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Soda PDF Desktop. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of PDF files. The issue results from the lack of proper validation of user-supplied data, which can result in a write past the end of an allocated buffer. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-31960.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136424 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136424</link>
-    <guid isPermaLink="false">7b6d24debe41d493bb3ebc38e145e389</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | Soda PDF Desktop PDF File Parsing Memory Corruption Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Soda PDF Desktop. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the parsing of PDF files. The issue results from the lack of proper validation of user-supplied data, which can result in a memory corruption condition. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-31961.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136425 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136425</link>
-    <guid isPermaLink="false">3611fa1e86aa71f789e66a15037ae93e</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | Soda PDF Desktop App Object Use-After-Free Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of Soda PDF Desktop. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the handling of App objects. The issue results from the lack of validating the existence of an object prior to performing operations on the object. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-31959.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136426 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136426</link>
-    <guid isPermaLink="false">2a24bee65872fc3831f041ec0d76ebf4</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | PyTorch Foundation PyTorch PT2 File Parsing Code Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation.
-
-The specific flaw exists within the parsing of PT2 files. The issue results from the lack of proper validation of a user-supplied string before using it to execute Python code. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-32602.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136427 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136427</link>
-    <guid isPermaLink="false">d014a958d791da4ef9b0aaaaaf7b266c</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | PyTorch Foundation PyTorch AOTIModelPackageLoader Command Injection Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation.
-
-The specific flaw exists within the AOTIModelPackageLoader. The issue results from the lack of proper validation of a user-supplied string before using it to execute a system call. An attacker can leverage this vulnerability to execute code in the context of the current user. Was ZDI-CAN-32262.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136428 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136428</link>
-    <guid isPermaLink="false">ca4c1c6f56b98ef64f2d65ef827f70d9</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | PyTorch Foundation PyTorch load_compiled_function Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch Foundation PyTorch. User interaction is required to exploit this vulnerability in that the target must open a malicious file.
-
-The specific flaw exists within the load_compiled_function function. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-32603.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136429 - NVD - CVSS Score v3.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136429</link>
-    <guid isPermaLink="false">61f80d3668f12f0a4a33fc94ed3a7edd</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.0 | PyTorch Foundation PyTorch PT2 File Parsing Exposed Dangerous Method Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch Foundation PyTorch. User interaction is required to exploit this vulnerability in that the target must open a malicious file.
-
-The specific flaw exists within the parsing of PT2 archive files. The issue results from an exposed dangerous function. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-32653.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136430 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136430</link>
-    <guid isPermaLink="false">d0890c1fb8b58382f8dfe3014514e801</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | PyTorch Foundation PyTorch AOTIModelPackageLoader  Directory Traversal Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch Foundation PyTorch. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the AOTInductor model package loader. The issue results from the lack of proper validation of a user-supplied path prior to using it in file operations. An attacker can leverage this vulnerability to execute code in the context of the current user. Was ZDI-CAN-33055.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136431 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136431</link>
-    <guid isPermaLink="false">8a2fe9c9dd7b201a6c36fa548c023bd8</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | PyTorch Foundation PyTorch load_state_dict_from_url Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch Foundation PyTorch. User interaction is required to exploit this vulnerability in that the target must visit a malicious page or open a malicious file.
-
-The specific flaw exists within the load_state_dict_from_url function. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-32601.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136432 - NVD - CVSS Score v3.0: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136432</link>
-    <guid isPermaLink="false">ba0557154c6e327706225a0b70741750</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.0: 7.8 | PyTorch Foundation PyTorch FileSystemReader Deserialization of Untrusted Data Remote Code Execution Vulnerability. This vulnerability allows remote attackers to execute arbitrary code on affected installations of PyTorch. Interaction with this library is required to exploit this vulnerability but attack vectors may vary depending on the implementation.
-
-The specific flaw exists within the FileSystemReader class. The issue results from the lack of proper validation of user-supplied data, which can result in deserialization of untrusted data. An attacker can leverage this vulnerability to execute code in the context of the current process. Was ZDI-CAN-32600.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 24 Nov 2026 21:01:19 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-136433 - NVD - CVSS Score v3.0: 7.8</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136433</link>
@@ -393,6 +257,120 @@ This issue affects Apache Jena Fuseki through 6.2.0.
 
 
 Users are recommended to upgrade to version 6.3.0, which fixes the issue.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-112732 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-112732</link>
+    <guid isPermaLink="false">0046e539a050096e34737f394287d462</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 9.8 | Double free in Microsoft Office Visio allows an unauthorized attacker to execute code over a network.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123215 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123215</link>
+    <guid isPermaLink="false">d955bf45ce4f45baf9788986b7a5342c</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.3 | Copeland XWEB Pro contains a missing authentication vulnerability. Fixed in 1.16.1.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123216 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123216</link>
+    <guid isPermaLink="false">74c6e251f478e85600c3b806ea6ce632</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | Copeland XWEB Pro contains an OS command injection vulnerability that allows a remote, authenticated attacker to execute arbitrary commands as the root user. Fixed in 1.16.1.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123217 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123217</link>
+    <guid isPermaLink="false">284a08edfb26efb48842aa2dda8758c0</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.3 | Copeland XWEB Pro allows a remote, authenticated attacker to inject additional arguments into the wireless interface configuration command. Impact is limited to modification of the wireless interface state. Fixed in 1.16.1.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123340 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123340</link>
+    <guid isPermaLink="false">9c652b8f6c10c1babf0cd34204416d33</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | Copeland XWEB Pro contains an OS command injection vulnerability that allows a remote, authenticated attacker to execute arbitrary commands as the root user. Fixed in 1.16.1.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-126695 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126695</link>
+    <guid isPermaLink="false">0b2b0e45977bfada8081fff8a7c19092</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | Use of hard-coded password vulnerability in Tibco Control Plane and Tibco Control Tower.
+
+This issue affects Control Plane: 1.22.0; Control Tower: 1.22.0.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135046 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135046</link>
+    <guid isPermaLink="false">974cb8e9bf29f2faf7b7ee076dab1585</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 8.8 | Cross-Site Request Forgery (CSRF) vulnerability in Rymera Web Co Store Exporter woocommerce-exporter allows Cross Site Request Forgery.This issue affects Store Exporter: from n/a through 2.8.2.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135414 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135414</link>
+    <guid isPermaLink="false">f03340123654d2e98ddbc21f9c8bed6b</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | Server-side request forgery in Amazon OpenSearch Service service software before R20260720 might allow an authenticated user with permission to manage snapshots to make the service send requests to network destinations of their choosing via the snapshot repository endpoint setting. This issue is addressed in service software R20260720. Customers should update their domains to R20260720 or later.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135799 - NVD - CVSS Score v4.0: 2.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135799</link>
+    <guid isPermaLink="false">b9a9f9563984019b1656ef2abe5e99e3</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.0 | A vulnerability was detected in flowable flowable-engine 8.0.0. This impacts the function createElContext/importFunctions of the file modules/flowable-engine/src/main/java/org/flowable/engine/impl/scripting/JuelScriptEngine.java of the component JuelScriptEngine. The manipulation results in code injection. It is possible to launch the attack remotely. The exploit is now public and may be used. The patch is identified as 51a9c65bae4a43dfb952f433dcfd2ad8f5eac36a. A patch should be applied to remediate this issue.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135800 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135800</link>
+    <guid isPermaLink="false">db1c631f89f5639c71292bf9c985bee6</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | A flaw has been found in hiyouga LLaMA-Factory up to 0.9.5. Affected is the function save_args/load_args of the file src/llamafactory/webui/runner.py of the component WebUI. This manipulation of the argument config_path causes path traversal. The attack can be initiated remotely. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136328 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136328</link>
+    <guid isPermaLink="false">a2d4c9c7547f9ccee6d7e390f9de4df2</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.8 | A flaw was found in the file-psd plugin in GIMP. When processing a specially crafted PSD (Photoshop Document) image file in LAB color mode, the plugin does not properly validate that a fourth channel is present when the transparency flag is set. This mismatch causes the merged-image path to allocate buffers for three components while performing color conversion with four-component formats, resulting in a heap-based buffer overflow. This issue can result in an application crash, leading to a denial of service, or potentially allow for arbitrary code execution.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136452 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136452</link>
+    <guid isPermaLink="false">6cc33cc3675cf485cbbe070ceafa9658</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.3 | browser-use before 1.0.0 contains a URL parser differential vulnerability in SecurityWatchdog that allows attackers to bypass allowed_domains, prohibited_domains, and block_ip_addresses checks by crafting a URL with a backslash before the allowed host, exploiting the mismatch between urllib.parse hostname extraction and Chromium's WHATWG-style URL parsing. Attackers can influence an LLM-controlled navigate action, such as through prompt injection, to send requests to loopback or private addresses or arbitrary external hosts before the browser redirects to about:blank, enabling SSRF and persistent state changes on the target server.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136453 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136453</link>
+    <guid isPermaLink="false">f29ba1f2c6a63169c960b849aee91a41</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.1 | browser-use before 1.0.0 contains an allowlist bypass vulnerability in the SecurityWatchdog's _is_url_match function that allows attackers to bypass domain restrictions by exploiting a raw-string startswith() comparison instead of parsed hostname validation. Attackers can craft URLs using userinfo injection or domain prefix confusion (e.g..com@attacker.com or .com.attacker.com) to redirect an LLM-controlled navigation to an arbitrary host, exfiltrating sensitive data such as secrets embedded in the URL to an attacker-controlled endpoint.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136455 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136455</link>
+    <guid isPermaLink="false">30e03358e8f128bdb2c7c73d6661097c</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | borg-ui before 2.4.1 contains a privilege escalation vulnerability that allows a repository-scoped operator to escalate to full administrator by exploiting an unrestricted source_directories field in the backup-plan API that lacks path allow-listing. Attackers can configure a backup plan to archive the application's data directory, download the resulting archive to extract the static HS256 .secret_key, and use it to forge a JWT with sub&quot;:&quot;admin&quot; to access admin-only endpoints like GET /api/auth/users, achieving full application takeover without admin credentials, XSS, or CSRF.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
