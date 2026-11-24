@@ -5,31 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 07:02:42 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-135721 - NVD - CVSS Score v4.0: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135721</link>
-    <guid isPermaLink="false">51561159d15daf1b8ac0eaae1b4ff38d</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.8 | FFmpeg before 9.1 contains an infinite loop vulnerability in ff_rtp_send_vc2hq() in libavformat/rtpenc_vc2hq.c that accepts a Dirac next parse offset of zero. Attackers can supply crafted Dirac/VC-2 video remuxed to the RTP muxer, causing the parsing pointer to never advance and consume CPU indefinitely.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135722 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135722</link>
-    <guid isPermaLink="false">c0d295c8dcd81e8c01dc3d869f654603</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | FFmpeg before 9.1 contains a heap-based buffer overflow vulnerability in peak_init_writer() and wav_write_packet() in libavformat/wavenc.c that allows attackers to corrupt heap memory by supplying audio with zero channels. Attackers can provide a crafted PCM stream declaring no channels for WAV output with peak envelope enabled, causing out-of-bounds writes past peak_maxpos and peak_maxneg arrays, crashes, and potential code execution.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135723 - NVD - CVSS Score v4.0: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135723</link>
-    <guid isPermaLink="false">745565cb388abf3689577ad82f9574ee</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.3 | FFmpeg before 9.1 contains a double free vulnerability in the fill_marker() function of libavformat/imf_cpl.c that frees a Marker label without clearing the pointer when default scope allocation fails. Attackers can supply a crafted Composition Playlist with a Marker Label lacking a scope attribute, triggering a second free in imf_marker_free() under memory pressure and causing memory corruption or a crash.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 24 Nov 2026 08:02:23 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-135724 - NVD - CVSS Score v4.0: 5.7</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135724</link>
@@ -323,6 +299,33 @@
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135202</link>
     <guid isPermaLink="false">dd821ae10a68664feb2d1e85a4ab8cae</guid>
     <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 9.8 | Several plugins for WordPress published by WP connect (Orders Sync to Airtable for WooCommerce, Add-On for Contact Form 7 to Notion, WP Sync for Notion – Notion to WordPress, Add-On for Contact Form 7 to Airtable, Add-on Brevo for Gravity Forms, and Air WP Sync – Airtable to WordPress) contain embedded malicious code (a backdoor) in the versions listed. The affected releases unconditionally load a backdoor module (includes/airwp-online.php) that runs on every request via the 'init' hook and on a half-hourly WP-Cron event, sends site information (site URL, PHP, WordPress and OS versions, and the server user) to a remote command-and-control server at tascredit-pay.com with TLS certificate verification disabled, and executes the PHP code returned by that server via eval(). The module also accepts queued commands that run shell commands, read, write and delete arbitrary files, query arbitrary database tables, dump the users table including password hashes, drop a webshell into the uploads directory, and install persistent hourly code execution. This makes it possible for unauthenticated attackers in control of the remote server, or able to intercept its traffic, to execute arbitrary code on the server and fully compromise affected sites. All affected plugins have been closed on WordPress.org and no patched versions are available; we strongly recommend uninstalling them and running a complete malware scan.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120932 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120932</link>
+    <guid isPermaLink="false">d218a30e9cbcad3c51b40bf48a893b21</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | A format string vulnerability has been reported in the Internal Backup of ADM. User-controlled input from the source_folders parameter is passed by internalbackup.cgi to a shared string-copy routine in libbackup.so.0.0 and used directly as the format-string argument to snprintf() without corresponding variadic arguments. This may allow an authenticated attacker to disclose process memory addresses or trigger unintended memory writes that terminate the affected CGI process.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120951 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120951</link>
+    <guid isPermaLink="false">527ededaeca7cdca0584d874bc23a4c4</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | An externally-controlled format string vulnerability exists in the authenticated upload_wireguard action of settings/vpnupload.cgi in the ADM. The CGI takes an attacker-controlled WireGuard profile name, inserts it into a JSON object, serializes it, and passes the resulting formatted string directly to printf as the format argument without validation or escaping. An authenticated remote attacker can exploit this vulnerability by sending format string specifiers, or leverage variadic read/write primitives within the non-PIE, non-Canary root CGI to potentially achieve arbitrary remote code execution with root privileges.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134893 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134893</link>
+    <guid isPermaLink="false">7e9ef0ee26ebe2605cab1cf175a78a94</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | An externally controlled format string vulnerability in the Snapshot CGI components of ADM allows an authenticated administrator to cause repeatable premature termination of affected privileged CGI requests by supplying crafted input.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
