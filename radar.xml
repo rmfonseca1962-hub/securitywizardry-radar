@@ -5,392 +5,324 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 14:01:56 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 24 Nov 2026 15:02:22 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-133765 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133765</link>
-    <guid isPermaLink="false">78a856aacf335dbb6fd2d092fc26e6d4</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.3 | The sandbox checks that a template may call toString() on an object before converting it to a string. Since Twig 3.23.0, assignments like x = obj, and the destructuring forms [a] = list and {a} = obj, evaluate to the value that they assign. The sandbox didn't check that value, so a sandboxed template could call a denied toString() method:
-
-{{ (x = obj) }}
-{{ ({secret: s} = obj)|join }}
-
-No tag needs to be allowed.
-
-The sandbox now checks the result of assignments like the result of filters and functions. {% do x = obj %} and {% if (x = obj) %} still work, since they don't convert the value to a string.</description>
+    <title>CVE-2026-135589 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135589</link>
+    <guid isPermaLink="false">d7216d7bcf58ccc5949badde7bdab96d</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Race condition in the WebExtensions component in Firefox for Android. This vulnerability was fixed in Firefox 161.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133766 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133766</link>
-    <guid isPermaLink="false">1b03ea7844b6c98dba26cbce5a3a1810</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.3 | Since Twig 3.28.0, the sandbox skips the toString() check of an argument whose PHP parameter can't hold a string, like an int. A spread argument was mapped to a single parameter, although it fills every parameter from its position on. A sandboxed template could therefore call a denied toString() method:
-
-{{ tag(...[1, obj]) }}
-
-Here, the first parameter of tag() is an int, and a later one accepts strings. Applications are affected when they allow such a function, filter or test in the sandbox. No built-in callable is affected.
-
-A spread argument is now checked unless every parameter that it can fill has a safe type.</description>
+    <title>CVE-2026-135590 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135590</link>
+    <guid isPermaLink="false">be8743665aa4c7d99fc2d52f527b8f59</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Use-after-free in the Storage: Cache API component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133767 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133767</link>
-    <guid isPermaLink="false">54d818ca6aad51a3f775cd27c0a95e47</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.3 | When the parent of an embed tag was an expression other than a string or a variable, the sandbox didn't see that expression. The functions, filters and tests of the expression weren't checked against the policy, and neither were its conversions to strings. A sandboxed template allowed to use embed could therefore call any function, filter or test, and any __toString() method:
-
-{% embed 'leak_' ~ app_secret() %}{% endembed %}
-
-Method calls and property reads were not affected, since they're checked at runtime.
-
-The sandbox now checks the parent expression of embed like any other expression of the template.</description>
+    <title>CVE-2026-135591 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135591</link>
+    <guid isPermaLink="false">6b62e0f979df0ded3ec602e9e69a375c</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Incorrect boundary conditions in the Widget: Gtk component. This vulnerability was fixed in Firefox 161.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133768 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133768</link>
-    <guid isPermaLink="false">4a56f4dd1a95eb53cf1f95c02f133785</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.3 | The join filter converted a value that isn't iterable with (array) $value. For an object, that gives every property, including the private and protected ones. A sandboxed template allowed to use join could therefore print properties that the policy denies, and that templates can't read otherwise:
-
-{{ user|join(',') }}
-
-A value that isn't iterable is now joined as a single item. A Stringable object prints its checked string, and other objects throw, as with the first and last filters.</description>
+    <title>CVE-2026-135592 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135592</link>
+    <guid isPermaLink="false">b63b35bfbd5423e677bf43217aeeeb7f</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Spoofing issue in the Site Permissions component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133769 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133769</link>
-    <guid isPermaLink="false">6513b5bd00dab6c815f9f9dc94342290</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.3 | Cva::apply() converted the values of variants, default variants and compound variants with (array). These values come from the arguments of html_cva(). A sandboxed template could therefore pass any object of its context, and print the private and protected properties of that object:
-
-{{ html_cva('base', {c: {p: user}}).apply({c: 'p'}) }}
-
-Variant maps that are ArrayAccess objects were also read with a key that the template chooses, without the property check of the sandbox. The template then printed the offsets that the object returned.
-
-Applications are affected when the sandbox allows the html_cva function and the apply method of Twig\Extra\Html\Cva.
-
-A value that isn't an array is now treated as a single item, so objects are dropped and never match a variant. Variant maps are also only used when they're arrays.</description>
+    <title>CVE-2026-135593 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135593</link>
+    <guid isPermaLink="false">027c06d7e2aca044d87ad84c9a81d985</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Incorrect boundary conditions in the Widget component. This vulnerability was fixed in Firefox 161.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133770 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133770</link>
-    <guid isPermaLink="false">9b6800684133112f3e70ef2db6f80d64</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | The sandbox allows every method of Twig\Markup objects, including their public constructor. A sandboxed template can therefore call __construct() on any Markup object that it reaches, and replace its content:
-
-{% do banner.__construct('&lt;script&gt;alert(1)&lt;/script&gt;', 'UTF-8') %}
-
-A template gains nothing by rewriting its own output. The impact is on the Markup objects that come from the application and are also rendered elsewhere, like a global in a long-running worker. Their new content then ends up in trusted pages that aren't sandboxed.
-
-The sandbox no longer allows calling the constructor of Markup objects.</description>
+    <title>CVE-2026-135594 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135594</link>
+    <guid isPermaLink="false">9be436e3386b1f971ea39a60da1b1af9</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Spoofing issue in the WebExtensions component in Firefox for Android. This vulnerability was fixed in Firefox 161.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133771 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133771</link>
-    <guid isPermaLink="false">e1965ce3fcd3e667a7931b3f5e322295</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.3 | The escaper considered x.attr, x['key'] and x.method() safe whenever {% import ... as x %} appeared anywhere in the template. Macro calls haven't needed this rule since Twig 3.0. It only matched ordinary variables that have the name of an alias imported in another block or macro, and printed them without escaping:
-
-{% block header %}{% import _self as item %}{{ item.hello() }}{% endblock %}
-{% block content %}{% for item in items %}{{ item.body }}{% endfor %}{% endblock %}
-
-Here, item.body is printed raw. This leads to XSS when the value comes from an attacker. The same happens with an import in a macro and an argument of the same name in another macro. It also happens with a template-level import placed after the block that uses the name.
-
-The rule is removed. Macro calls through an alias are still considered safe.</description>
+    <title>CVE-2026-135595 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135595</link>
+    <guid isPermaLink="false">907be70ab648c237953e72fdf0348f2f</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Uninitialized memory in the Graphics: CanvasWebGL component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133772 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133772</link>
-    <guid isPermaLink="false">839e0a9e98c3af1b052792da8dc0c581</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.3 | The guard tag compiles only one of its branches, depending on whether a callable exists. The other branch was still parsed, though. The extends, use, macro and block tags in it registered their effects on the template. The sandbox doesn't see these tags, since that branch isn't compiled. A sandboxed template allowed to use guard could therefore extend a template, import blocks and define macros, while the policy doesn't allow these tags:
-
-{% guard filter upper %}{% else %}{% extends &quot;parent.html&quot; %}{% endguard %}
-
-The templates reached this way come from the loader of the sandbox, and they are sandboxed too.
-
-What the branch that isn't selected registers on the parser is now discarded.</description>
+    <title>CVE-2026-135596 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135596</link>
+    <guid isPermaLink="false">b5d1348595b28e89a392890b915dc81b</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Sandbox escape due to incorrect boundary conditions in the Graphics: WebRender component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133773 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133773</link>
-    <guid isPermaLink="false">7ed9f894f07b991e461520a5e59b5ad4</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.3 | The html_to_markdown filter of twig/markdown-extra keeps an HtmlConverter for each distinct mapping of options it receives. They're kept in a static array, with no size limit and no eviction. The options are an argument of the filter. A template that passes options taken from the input, or a sandboxed template, can therefore make this cache grow without limit. The cache outlives the environment, so it fills the memory of long-running workers.
-
-The cache now keeps at most 100 converters, like the formatter caches of IntlExtension.</description>
+    <title>CVE-2026-135597 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135597</link>
+    <guid isPermaLink="false">c3769d3b743a2b211a24c40bb524c8c9</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Sandbox escape due to use-after-free in the DOM: Navigation component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134125 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134125</link>
-    <guid isPermaLink="false">b59fd1aa7257fd829cce87348130c452</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in hupe13 Extension for Leaflet Map extensions-leaflet-map allows Stored XSS.This issue affects Extension for Leaflet Map: from n/a through 6.1.3.</description>
+    <title>CVE-2026-135598 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135598</link>
+    <guid isPermaLink="false">3e885118cde90d359919bc870b208e3b</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Mitigation bypass in the Networking: HTTP component. This vulnerability was fixed in Firefox 161.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134467 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134467</link>
-    <guid isPermaLink="false">ec53b63fefd4ec0ce8b2aa07d0585c45</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in HivePress HivePress hivepress allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects HivePress: from n/a through 1.8.2.</description>
+    <title>CVE-2026-135599 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135599</link>
+    <guid isPermaLink="false">84dd35be84341684881c56c30ac53a08</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Sandbox escape due to use-after-free in the Widget: Gtk component. This vulnerability was fixed in Firefox 161.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134468 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134468</link>
-    <guid isPermaLink="false">e24fb5c743f9b2e20a55cfcd4ad922ac</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 4.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in HivePress HivePress hivepress allows Code Injection.This issue affects HivePress: from n/a through 1.8.2.</description>
+    <title>CVE-2026-135600 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135600</link>
+    <guid isPermaLink="false">74599a15c93b326ac6411b302c6aa004</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Use-after-free in the JavaScript Engine component. This vulnerability was fixed in Firefox 161.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134482 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134482</link>
-    <guid isPermaLink="false">1b57d5e1422439a346396e0be5ceff9c</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in VillaTheme Thank You Page Customizer for WooCommerce woo-thank-you-page-customizer allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Thank You Page Customizer for WooCommerce: from n/a through 1.2.5.</description>
+    <title>CVE-2026-135601 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135601</link>
+    <guid isPermaLink="false">c4ab9bc4d8b5ca9e28a5b18bc2ca45cf</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Other issue in the Enterprise Policies component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134485 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134485</link>
-    <guid isPermaLink="false">70360b266f885df46440ff9a18292c8c</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Mamunur Rashid Radius Booking — Booking Calendar for Appointments &amp;amp; Services radius-booking allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Radius Booking — Booking Calendar for Appointments &amp;amp; Services: from n/a through 1.0.22.</description>
+    <title>CVE-2026-135602 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135602</link>
+    <guid isPermaLink="false">acc651ff9116e688c9fdfce02c10e005</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Other issue in the Audio/Video: GMP component. This vulnerability was fixed in Firefox 161.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134707 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134707</link>
-    <guid isPermaLink="false">5cf176df873a6f9a7f6426956837320f</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WP Speedo Team Members wps-team allows Stored XSS.This issue affects Team Members: from n/a through 4.2.2.</description>
+    <title>CVE-2026-135603 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135603</link>
+    <guid isPermaLink="false">4169d851b68ff89f8ad17ece5f9a5717</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Other issue in the Internationalization component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134709 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134709</link>
-    <guid isPermaLink="false">9f282a26f8706235d9e6d5d90db0471f</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Mamunur Rashid Radius Booking — Booking Calendar for Appointments &amp;amp; Services radius-booking allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Radius Booking — Booking Calendar for Appointments &amp;amp; Services: from n/a through 1.0.22.</description>
+    <title>CVE-2026-135604 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135604</link>
+    <guid isPermaLink="false">ebbf5d97037d1774106ca80eff07d427</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Spoofing issue in the Site Identity component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134954 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134954</link>
-    <guid isPermaLink="false">d9a6eb525ec5c584ff9824f78abf6f6b</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in StaxWP Visibility Logic for Elementor visibility-logic-elementor allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Visibility Logic for Elementor: from n/a through 2.5.3.</description>
+    <title>CVE-2026-135605 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135605</link>
+    <guid isPermaLink="false">a4d82988962b02629de51bb59d55e815</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Mitigation bypass in the Enterprise Policies component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134962 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134962</link>
-    <guid isPermaLink="false">7f5563ddba9d69198d674b7c633a9271</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.1 | Missing Authorization vulnerability in Slim &amp; Dapper Theater for WordPress theatre allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Theater for WordPress: from n/a through 0.19.1.</description>
+    <title>CVE-2026-135606 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135606</link>
+    <guid isPermaLink="false">0c145a146206275c50d414e563549b60</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Cryptographic issue in the Security: PSM component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134996 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134996</link>
-    <guid isPermaLink="false">0d02323b38087232f336f1bb057d1ede</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in YITH YITH WooCommerce Wishlist yith-woocommerce-wishlist allows Stored XSS.This issue affects YITH WooCommerce Wishlist: from n/a through 4.20.0.</description>
+    <title>CVE-2026-135607 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135607</link>
+    <guid isPermaLink="false">0127da0423eb40c8312bf6efd21d6c62</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Other issue in the Graphics: WebGPU component. This vulnerability was fixed in Firefox 161.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134998 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134998</link>
-    <guid isPermaLink="false">a1af9ead3dea8d4ce75277df770e9c48</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in Themefic Ultimate Addons for Contact Form 7 ultimate-addons-for-contact-form-7 allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Ultimate Addons for Contact Form 7: from n/a through 3.5.59.</description>
+    <title>CVE-2026-135608 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135608</link>
+    <guid isPermaLink="false">abc60235aa8be4ba063579edae40893b</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Frame poisoning in the Layout component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135015 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135015</link>
-    <guid isPermaLink="false">0d4a9cb9b2b142b96cb113d96950fd2b</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Themefic BEAF beaf-before-and-after-gallery allows Stored XSS.This issue affects BEAF: from n/a through 4.7.22.</description>
+    <title>CVE-2026-135609 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135609</link>
+    <guid isPermaLink="false">c5722a4aa46ee0f425ebe88f415afa5f</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Frame poisoning in the DOM: Core &amp; HTML component. This vulnerability was fixed in Firefox 161 and Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135020 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135020</link>
-    <guid isPermaLink="false">5f07a170ef604da045b47fdc4ab9e178</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Themefic Tourfic tourfic allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Tourfic: from n/a through 3.0.2.</description>
+    <title>CVE-2026-135610 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135610</link>
+    <guid isPermaLink="false">fd402ce0137bcb74cb99c6c833aa7b12</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Invalid pointer in the Audio/Video: Playback component. This vulnerability was fixed in Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135021 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135021</link>
-    <guid isPermaLink="false">444df75b4a25e60e9bf38171ea3e3024</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Themefic Tourfic tourfic allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Tourfic: from n/a through 3.0.2.</description>
+    <title>CVE-2026-135611 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135611</link>
+    <guid isPermaLink="false">fb067b41ca69e06827339eef948f2592</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Privilege escalation in the Internationalization component. This vulnerability was fixed in Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135023 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135023</link>
-    <guid isPermaLink="false">958c159477ba4d3825981436674da0af</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 4.3 | Missing Authorization vulnerability in Themefic Tourfic tourfic allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Tourfic: from n/a through 3.0.2.</description>
+    <title>CVE-2026-135612 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135612</link>
+    <guid isPermaLink="false">2a5f99c4d708c3cf14de1916b2d5d108</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Privilege escalation in the Messaging System component. This vulnerability was fixed in Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135026 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135026</link>
-    <guid isPermaLink="false">b08ecbf7269b14a6956a0404c8579a87</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Themefic Tourfic tourfic allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Tourfic: from n/a through 3.0.2.</description>
+    <title>CVE-2026-135613 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135613</link>
+    <guid isPermaLink="false">e6ca32e77b8ba3b4a902ee6725770c13</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS: não informado | Mitigation bypass in the WebExtensions component. This vulnerability was fixed in Firefox ESR 153.8.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135041 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135041</link>
-    <guid isPermaLink="false">18562814b949ca5ea89cbcc6fe6446a7</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Themefic Hydra Booking hydra-booking allows Code Injection.This issue affects Hydra Booking: from n/a through 1.2.11.</description>
+    <title>CVE-2026-136152 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136152</link>
+    <guid isPermaLink="false">092b91b4cc1c48347694697028ef0398</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | Prevent Direct Access – Protect WordPress Files plugin before 2.8.9.2 contains an information disclosure vulnerability that allows unauthenticated attackers to obtain protected file names and paths by requesting the dynamically generated robots.txt file, which appends Disallow rules containing attachment page URLs and direct _pda/ directory file paths for all protected media. Attackers can send an unauthenticated HTTP request to robots.txt to enumerate original file names, upload directory structures, and attachment slugs, undermining the plugin's file protection and potentially enabling direct file access if server-level restrictions are misconfigured or absent.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135043 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135043</link>
-    <guid isPermaLink="false">5d6e32be84ea69e3ef3cad98f49414b2</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Insertion of Sensitive Information Into Sent Data vulnerability in Themefic Hydra Booking hydra-booking allows Retrieve Embedded Sensitive Data.This issue affects Hydra Booking: from n/a through 1.2.11.</description>
+    <title>CVE-2026-65135 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65135</link>
+    <guid isPermaLink="false">bd053075b7a7501e2741c0f877de3036</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 9.8 | NVIDIA Video Codec SDK for Linux contains a vulnerability where a user may cause a heap-based buffer overflow issue. A successful exploit of this vulnerability may lead to code execution, data tampering, and denial of service.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135044 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135044</link>
-    <guid isPermaLink="false">9f827a00b1ca7d531d0cbb927c806577</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Themefic Hydra Booking hydra-booking allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Hydra Booking: from n/a through 1.2.11.</description>
+    <title>CVE-2026-65136 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65136</link>
+    <guid isPermaLink="false">11cf255c69d09e946943d6a7c4572b3f</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 8.8 | NVIDIA Jetson Linux for Linux contains a vulnerability where an attacker may cause an out of bounds write. A successful exploit of this vulnerability may lead to escalation of privileges and denial of service.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135842 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135842</link>
-    <guid isPermaLink="false">63a62e86f7ea9187b2388c6ded896bc8</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Themefic Ultra Addons for WPForms ultra-addons-for-wpforms allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Ultra Addons for WPForms: from n/a through 1.1.2.</description>
+    <title>CVE-2026-65137 - NVD - CVSS Score v3.1: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65137</link>
+    <guid isPermaLink="false">eecefe37e2759ecd2beda184d688bc0f</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.1 | NVIDIA Jetson Linux for Linux contains a vulnerability where a local attacker may cause a NULL pointer dereference issue. A successful exploit of this vulnerability may lead to denial of service and data tampering.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135891 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135891</link>
-    <guid isPermaLink="false">eaa4b7771a7a19a5141759cf7a600f69</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Qode Interactive Qi Blocks qi-blocks allows Stored XSS.This issue affects Qi Blocks: from n/a through 1.5.4.</description>
+    <title>CVE-2026-65154 - NVD - CVSS Score v3.1: 7.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65154</link>
+    <guid isPermaLink="false">ba356ec68744705b1651c543167b2a54</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.8 | NVIDIA Open GPU Kernel Module for Linux contains a vulnerability where a user may cause a use-after-free issue. A successful exploit of this vulnerability may lead to code execution, escalation of privileges, data tampering, denial of service, and information disclosure.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136120 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136120</link>
-    <guid isPermaLink="false">1070d21824265b4d15106c263aa9fb55</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | Ziit 1.3.2 contains a cross-site request forgery vulnerability in the /api/auth/epilogue/callback handler that accepts requests lacking the OAuth state parameter. Attackers can lure a signed-in victim to a cross-site page that completes the link flow with the attacker's Epilogue authorization code, letting the attacker sign in as the victim.</description>
+    <title>CVE-2026-65155 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65155</link>
+    <guid isPermaLink="false">50c201a0fb1b19acb43f34c0faf5883e</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.5 | NVIDIA CUDA Video Codec SDK (CUVID) for Jetson Linux contains a vulnerability where an attacker may cause a loop with an unreachable exit condition. Successful exploitation may lead to denial of service.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136123 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136123</link>
-    <guid isPermaLink="false">f21df48ee4d28703a1032089bc72c0a5</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | Friendica through 2026.05-1 contains an improper validation vulnerability in APContact::compactProfile() that allows remote actors to overwrite a local user's stored inbox and public key by declaring that user's profile URL as their actor id. Attackers can then sign ActivityPub activities that HTTPSignature::fetchKey() verifies against the injected publicKeyPem, impersonating the local user on the instance.</description>
+    <title>CVE-2026-65156 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65156</link>
+    <guid isPermaLink="false">c2e49c07f70e45ee4a7483745d7a529c</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.5 | NVIDIA CUDA Video Codec SDK for Jetson Linux contains a vulnerability where an attacker may cause an infinite loop. A successful exploit of this vulnerability may lead to denial of service.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136124 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136124</link>
-    <guid isPermaLink="false">ce031eaaab9bab1d495aa5a68fd4feaa</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.0 | ffmate before 2.1.0 contains an argument injection vulnerability in wildcardReplacer that allows attackers to inject ffmpeg or script arguments via crafted file names. Attackers who can create files in a watchfolder can break out of quoting to add network inputs or output paths that overwrite files writable by ffmate.</description>
+    <title>CVE-2026-65157 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65157</link>
+    <guid isPermaLink="false">1ef12b1a7b25e38054f73ef26e3eea88</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.5 | NVIDIA Video Codec SDK for Linux contains a vulnerability where a user may cause an out of bounds read. A successful exploit of this vulnerability may lead to denial of service.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136126 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136126</link>
-    <guid isPermaLink="false">b813dafef7e7daf13cd3b3d78d8a293c</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.2 | c-icap-server through 0.5.15 and 0.6.5 contains an out-of-bounds write in process_encapsulated() that allows unauthenticated attackers to corrupt heap memory by sending six Encapsulated entities. Attackers can send a single ICAP request whose sixth entity overwrites trash_entities[0], triggering use-after-free and double free in ci_request_destroy() during teardown.</description>
+    <title>CVE-2026-65158 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65158</link>
+    <guid isPermaLink="false">28cbe6b1259ad8880b0bcb9b1ccfd9c1</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.5 | NVIDIA Video Codec SDK for Linux contains a vulnerability where a user may cause a NULL pointer dereference issue. A successful exploit of this vulnerability may lead to denial of service.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136128 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136128</link>
-    <guid isPermaLink="false">a8a428b16e0ca04f0d1935fea2252109</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | WPC Linked Variation plugin for WordPress, all versions before 4.6.1, contain a stored cross-site scripting vulnerability that allows authenticated attackers with Contributor-level access to inject arbitrary HTML attributes by submitting an unvalidated wpclv_link[source] value that is echoed into an attribute-name position within a select element on the edit screen. Attackers can craft a source value containing onfocus and autofocus attributes to execute arbitrary JavaScript in the wp-admin session of an administrator or editor who views the edit screen, enabling privilege escalation from Contributor to Administrator with no user interaction required.</description>
+    <title>CVE-2026-65159 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65159</link>
+    <guid isPermaLink="false">e4ae67b5cf9800060c9419439e90ea56</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.5 | NVIDIA Video Codec SDK for Linux contains a vulnerability where a user may cause an out-of-bounds write issue. A successful exploit of this vulnerability may lead to denial of service.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-14569 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-14569</link>
-    <guid isPermaLink="false">145f9c6f994812e6481b5f33bc0e6719</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | Use of externally-controlled format string vulnerability exists in RTU500 component of the logging function for TLS, PPP and CAM. Exploiting this vulnerability may result in sensitive memory disclosure and denial of service.</description>
+    <title>CVE-2026-65175 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-65175</link>
+    <guid isPermaLink="false">eaf58dd513a9c6ef974b7fdf893319c1</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 9.8 | NVIDIA AIStore contains a vulnerability in storage-target node-control authorization where an unauthenticated attacker could access administrative functions through a target's public interface. A successful exploit might lead to information disclosure, data tampering, or denial of service.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-62270 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62270</link>
-    <guid isPermaLink="false">e404cdeb5c027fd7bb03ac649cf5899d</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.9 | Improper Validation of Specified Type of Input in ExAws.Dynamo.Encoder.encode/2 in ex_aws_dynamo allows an attacker who controls map data passed into a DynamoDB call to choose the raw stored DynamoDB AttributeValue.
-
-The encode/2 function in lib/ex_aws/dynamo/encoder.ex has one clause per DynamoDB type descriptor (&quot;S&quot;, &quot;N&quot;, &quot;B&quot;, &quot;BOOL&quot;, &quot;M&quot;, &quot;L&quot;, &quot;NS&quot;, &quot;SS&quot;, &quot;BS&quot;, &quot;NULL&quot;) that treats any map merely containing such a key as already encoded and returns it verbatim, bypassing the ExAws.Dynamo.Encodable protocol. The match is on the presence of the key alone, so no check is made that the value is well formed for the claimed type, and extra keys and arbitrary nested content survive untouched.
-
-An application that threads user-influenced map data (a decoded JSON body, a nested attribute, or an expression_attribute_values entry) into a Dynamo write or query therefore lets the user, rather than the application, decide the stored attribute's declared type, its bytes, and its structure. This type confusion breaks round-trip integrity and enables silent persistent data corruption, injection of attributes and raw binaries the schema never sanctioned, subversion of application authorization checks that trust the decoded type of a value, and a decoder crash on read-back that denies reads of the affected item to other users of the same table.
-
-This issue affects ex_aws_dynamo: from 2.0.0 before 4.3.0.</description>
+    <title>CVE-2026-77670 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77670</link>
+    <guid isPermaLink="false">dcb01e1fcf6a6b85c2f9a732d3072818</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | Improper access control of a file path in TXOne StellarProtect and Stellar Agent (Windows) allows a local attacker to write or overwrite arbitrary files with SYSTEM privileges. This issue affects StellarProtect: 3.3 and earlier; Stellar Agent (Windows): before 5.0.3056. *Note: Stellar Agent (Windows) is the new name for StellarProtect.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-62271 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62271</link>
-    <guid isPermaLink="false">45cb85c52f7869e148ebdbde82473714</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | Use of RSA Algorithm without OAEP vulnerability in ex-aws ex_aws_kms (ExAws.KMS module) causes callers who import external key material to wrap their secret KMS key material with the deprecated PKCS#1 v1.5 padding scheme by default.
-
-This vulnerability is associated with program file lib/ex_aws/kms.ex and program routine ExAws.KMS.get_parameters_for_import/3.
-
-ExAws.KMS.get_parameters_for_import/3 defaults its wrapping_algorithm argument to &quot;RSAES_PKCS1_V1_5&quot;. AWS KMS returns this value as the WrappingAlgorithm for the import operation, and it dictates the RSA padding scheme the caller uses to wrap (RSA-encrypt) their secret key material before calling ImportKeyMaterial. AWS KMS also supports the stronger RSAES_OAEP_SHA_1 and RSAES_OAEP_SHA_256 schemes. By defaulting to RSAES_PKCS1_V1_5, the library steers callers who do not explicitly override the argument toward the weakest of the three. PKCS#1 v1.5 encryption padding is susceptible to Bleichenbacher adaptive chosen-ciphertext (padding oracle) attacks, which can recover the wrapped plaintext without the private key given an oracle that reveals whether a decrypted value was validly padded. Because the unwrap happens inside AWS KMS, which does not expose a padding oracle, the practical exploitability is low and this is a defense-in-depth weakness. Callers can avoid the weak default by explicitly passing &quot;RSAES_OAEP_SHA_256&quot; (or &quot;RSAES_OAEP_SHA_1&quot;) as the wrapping algorithm.
-
-This issue affects ex_aws_kms: from 2.1.0 before 2.7.0.</description>
+    <title>CVE-2026-77671 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77671</link>
+    <guid isPermaLink="false">effbb62eb60ce3a800eb04cbce9bf7d2</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | Unverified configuration export destination path in TXOne StellarProtect and Stellar Agent (Windows) allows a local attacker to export the product configuration to an arbitrary directory with SYSTEM privileges. This issue affects StellarProtect: 3.3 and earlier; Stellar Agent (Windows): before 5.0.3056. *Note: Stellar Agent (Windows) is the new name for StellarProtect.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81577 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81577</link>
-    <guid isPermaLink="false">da2c20570e98e95329a562c2a9d55009</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in ITG Bilgisayar Teknolojileri Grubu Ltd. Şti. VSRM allows Path Traversal.
-
-This issue affects vSRM: from 14.08.1 before 14.08.3.</description>
+    <title>CVE-2026-77672 - NVD - CVSS Score v4.0: 8.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77672</link>
+    <guid isPermaLink="false">37ed5a9d16fb7f3b82ed8161d295999f</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.5 | Missing server-side authorization in the IPC interface of TXOne StellarProtect and Stellar Agent (Windows) allows a local attacker to issue privileged commands without credentials. This issue affects StellarProtect: 3.3 and earlier; Stellar Agent (Windows): before 5.0.3056. *Note: Stellar Agent (Windows) is the new name for StellarProtect.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-82216 - NVD - CVSS Score v3.1: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82216</link>
-    <guid isPermaLink="false">99b52566200bff63f09477999ab6c5ab</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 7.5 | Server-Side request forgery (SSRF) vulnerability in ITG Bilgisayar Teknolojileri Grubu Ltd. Şti. VSRM allows Server Side Request Forgery.
-
-This issue affects vSRM: from 14.08.1 before 14.08.3.</description>
+    <title>CVE-2026-77673 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-77673</link>
+    <guid isPermaLink="false">f21e41e4da4bb39b99027beb78f66164</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | Server-Side Request Forgery in the SSO SAML configuration feature of the TXOne StellarOne web console allows an authenticated administrator to issue server-side requests to arbitrary destinations, including internal services. This issue affects StellarOne: before 5.0.3232.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
