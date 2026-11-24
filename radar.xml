@@ -5,110 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Tue, 24 Nov 2026 10:02:58 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-105428 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105428</link>
-    <guid isPermaLink="false">ec9a86b512ee4fe4b5c0ac5ad5193650</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.3 | Binding to an unrestricted IP address in the netstack SOCKS5 proxy of the NetBird client (client/iface/netstack) in NetBird versions before 0.74.7 allows an unauthenticated attacker on the same network as the client to relay traffic through the client into its NetBird overlay network. When the client runs in netstack mode (NB_USE_NETSTACK_MODE=true), it starts a SOCKS5 proxy, without authentication, that is meant to bridge applications on the local host into the userspace WireGuard stack. The listener was bound to 0.0.0.0 instead of the loopback address, so any host that can reach the proxy port (1080 by default) can connect and reach peers and internal resources with the network position of the affected client. Netstack mode is not enabled by default. The issue is fixed in version 0.74.7, which binds the proxy to 127.0.0.1 by default.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-105430 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105430</link>
-    <guid isPermaLink="false">a6e7b048da958e7f744cb5a648979c8c</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.3 | Deserialization of untrusted data in the relay server handshake of NetBird versions 0.29.0 through 0.74.7 allows an unauthenticated remote attacker to reach the Go encoding/gob decoder with attacker-supplied bytes before any credential is checked, which can lead to denial of service of the relay server. The deprecated Hello handshake message was still accepted before authentication and its token was decoded with gob.NewDecoder (shared/relay/auth/hmac) before the HMAC signature was verified. The handshake buffer limits the input to 212 bytes and the pre-authentication phase to 10 seconds, so there is no impact on confidentiality or integrity and the impact on availability depends on a separate weakness in the gob decoder of the Go toolchain used to build the relay server, such as CVE-2024-34156. The Auth handshake, used by clients since version 0.29.1, does not use gob. The issue is fixed in version 0.75.0, which removes the Hello handshake and the gob-based token decoding.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-105431 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-105431</link>
-    <guid isPermaLink="false">80a9945360eedb9a64ee0ae5b94ffee4</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | A protection mechanism failure in the userspace firewall of the NetBird client (client/firewall/uspfilter) in NetBird versions 0.55.0 through 0.74.6 allows an attacker who controls an enrolled peer to bypass the access control rules of another peer by sending IP-fragmented packets. The packet filter returned an allow verdict for any IPv4 fragment, and for any IPv6 packet carrying a Fragment extension header, before evaluating the ACL rules. This applied to the leading fragment as well as to continuation fragments, so no part of a fragmented datagram was filtered and ports denied by policy could be reached. The userspace filter is the packet filter wherever the client does not program the kernel firewall, which includes the Android and iOS apps. The issue is fixed in version 0.74.7, in the Android app from version 0.6.0 and in the iOS app from version 0.3.3, which evaluate fragments against the same ACL rules as unfragmented packets.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-10084 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-10084</link>
-    <guid isPermaLink="false">c6dd2b6473c2c891c479dd6bfeface13</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.3 | An unauthenticated attacker can send an unsigned SAML single logout request to force users to log out of Grafana Enterprise instances configured for SAML single logout (improper signature verification).</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120934 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120934</link>
-    <guid isPermaLink="false">800bc039003982ce301dde752ddd0964</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.0 | An External Control of File Name or Path (Argument Injection) vulnerability in the settings/notification.cgi component of ADM allows authenticated remote administrators to create or truncate arbitrary files with root privileges via crafted request parameters. An authenticated administrator can truncate arbitrary critical files across the root filesystem, leading to system failure or Denial of Service (DoS).
-Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120935 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120935</link>
-    <guid isPermaLink="false">51c09b50043ce5587bf97beebcdcfe0f</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.0 | An argument injection vulnerability exists in the settings/vpn.cgi endpoint in the ADM. When processing a WireGuard profile, the internal command parser removes quotes and performs a quote-agnostic scan on arguments without properly sanitizing redirection operators. An authenticated administrator can supply a crafted parameter to cause the execution helper to open and truncate arbitrary files on the filesystem with root privileges, resulting in an arbitrary file truncation and denial-of-service (DoS) condition.
-Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120936 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120936</link>
-    <guid isPermaLink="false">c61c18d2268e465c94b92a3f418491fd</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | An arbitrary file creation and truncation vulnerability exists in the File Explorer of ADM. An authenticated low-privileged user can upload a file with crafted path components containing quote and redirection characters. When music.cgi processes the entry for audio playback operations, the unescaped path string breaks out of the expected argument context in the internal command parser. This causes the system execution helper to open the attacker-specified path with root privileges using O_TRUNC, allowing remote attackers to truncate or create arbitrary system files.
-Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120940 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120940</link>
-    <guid isPermaLink="false">a1310fec3ad56f4bcacdc54c58c28068</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.3 | A stack-based buffer overflow in the DHCP Server helper of ASUSTOR ADM allows an unauthenticated attacker on the local network to trigger stack memory corruption by sending a crafted DHCP hostname to a device with DHCP Server enabled. This may disrupt DHCP service.
-Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120946 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120946</link>
-    <guid isPermaLink="false">a04d90e1fc51d043e6c24886b6d6611d</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | An OS command injection vulnerability in ADM allows remote authenticated administrators to execute arbitrary commands as root. The set action in settings/ddns.cgi fails to sanitize configuration delimiters in user-supplied parameters before writing them into the DDNS configuration file, allowing an attacker to inject directives that execute arbitrary system commands upon service restart.
-Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120947 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120947</link>
-    <guid isPermaLink="false">51dc35b5d6d5ff15f00b566f8ed8d7b5</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | A potential stack-based buffer overflow exists in ADM Defender Firewall configuration handling. Before the fix, firewall policy processing used string operations without sufficient destination-size checks and did not consistently validate array bounds. Malformed or oversized configuration data may cause an out-of-bounds write and corrupt stack memory.
-Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-120948 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120948</link>
-    <guid isPermaLink="false">f1511150428db96b724e01303bf3d358</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | An OS command injection vulnerability in the PPPoE configuration of ADM allows an authenticated administrator to store shell syntax in the PPPoE account value. When the service loads the resulting configuration, the injected commands can execute with root privileges.
-Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-121016 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121016</link>
-    <guid isPermaLink="false">b34d0b3e9e860da23b151c18bcad6262</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | The affected products insufficiently restrict runtime-supplied visualization data, allowing local program execution on the engineering workstation, if a user is both logged in to a CODESYS Control runtime and operates a visualization. An unauthenticated remote attacker controlling a malicious runtime and tricking a user to trust it, or performing a man-in-the-middle attack on the communication between the CODESYS Control runtime and the engineering workstation, may cause arbitrary code execution on the engineering workstation.</description>
-    <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Tue, 24 Nov 2026 11:00:38 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-121017 - NVD - CVSS Score v4.0: 8.6</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-121017</link>
@@ -429,6 +326,131 @@ JsonCrawler::find() now bounds the total regex work of one call, and throws an e
 
 
 The resource URLs contain random identifiers that can't be guessed, so the attacker must obtain the exact URL of a resource first.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118878 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118878</link>
+    <guid isPermaLink="false">240f74fcf117d3293b5a614894b2dad2</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 5.5 | A logical flaw vulnerability exists in the ZTE Nubia RedMagic 9S Pro+. Successful exploitation of this vulnerability may compromise confidentiality.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118879 - NVD - CVSS Score v3.1: 3.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118879</link>
+    <guid isPermaLink="false">aa9754e177f1731c2fee050e9718de1c</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 3.3 | Z80 Ultra is affected by an information disclosure vulnerability in service interfaces related to application scenarios. Successful exploitation of this vulnerability may result in an impact on confidentiality.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118880 - NVD - CVSS Score v3.1: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118880</link>
+    <guid isPermaLink="false">330fc7f35a164172be2417684e5bc744</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 4.8 | Z80 Ultra product has an improper access control vulnerability in the game assistant module. Successful exploitation of this vulnerability may affect confidentiality and integrity.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-118890 - NVD - CVSS Score v3.1: 4.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-118890</link>
+    <guid isPermaLink="false">7eac1d6e1bdbbb4616a2596ccc4ee443</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 4.4 | Z80 Ultra product has an improper modification control vulnerability. Successful exploitation of this vulnerability may affect integrity and availability.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120937 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120937</link>
+    <guid isPermaLink="false">ed3b1878450505203b3b3d5d0b7501b0</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | A reflected cross-site scripting (XSS) vulnerability exists in the initialization component of ADM. When the NAS is uninitialized, the endpoint accepts an unauthenticated sid query parameter and inserts its URL-decoded value into an inline JavaScript string without proper JavaScript-context encoding. An unauthenticated remote attacker can craft a malicious URL that, when opened by a user, executes arbitrary JavaScript in the ADM management origin. Successful exploitation may allow manipulation of the setup page and execution of same-origin requests in the victim's browser. The vulnerability is limited to the first-run initialization state.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120938 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120938</link>
+    <guid isPermaLink="false">a58698b4582563f998a7fb6f2555faa6</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | Insufficient bounds checks in the Link Aggregation handler of ASUSTOR ADM allow an authenticated administrator to submit an excessive number of interface tokens. Crafted requests can corrupt memory and terminate the affected privileged CGI process.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120939 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120939</link>
+    <guid isPermaLink="false">8f0ae3018e25eea7e7f731bbb3fba2e9</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | A heap-based buffer overflow vulnerability in the Wi-Fi connection handler of ADM allows an authenticated administrator to corrupt heap memory and terminate the affected CGI request by supplying an oversized Wi-Fi pre-shared key.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-120949 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-120949</link>
+    <guid isPermaLink="false">a1f06214f58ccb547cfdf83d52440154</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.1 | An improper authorization vulnerability exists in the wallpaper component of ADM. An authenticated, low-privileged user can bypass shared-folder access controls by specifying an image path within a restricted share. The CGI processes the request with root privileges without enforcing the source share's access permissions, allowing the attacker to copy and retrieve images they are not authorized to access, resulting in unauthorized information disclosure.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-124828 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-124828</link>
+    <guid isPermaLink="false">76d9376fe1dad1d19a7f69edb8e6bd0e</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.1 | Authorization bypass using a user-controlled token (IDOR) on the GlobalEduca job portal. The GET endpoint ‘/attachments/{attachment_id}’ fails to verify whether the attachment belongs to the authenticated user. A user with a registered account can enumerate sequential identifiers and download attachments belonging to other candidates, including resumes containing personal data.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-134894 - NVD - CVSS Score v4.0: 7.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134894</link>
+    <guid isPermaLink="false">149ad686c08e8730585abc906e6269db</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 7.0 | An SQL injection vulnerability exists in the firewall management component of ADM Defender due to insufficient validation and improper handling of input data in SQLite queries. This vulnerability may allow an attacker with access to the affected functionality to manipulate database queries, potentially resulting in unauthorized access to or modification of firewall-related data.
+Affected products and versions include: from ADM 4.1.0 through ADM 4.3.3.RY62 as well as from ADM 5.0.0 through ADM 5.1.4.RM62.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135125 - NVD - CVSS Score v3.1: 6.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135125</link>
+    <guid isPermaLink="false">80ffa7d39816d9937b4f8cd706358c82</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v3.1: 6.8 | In Eclipse BaSyx Java Server SDK versions 2.0.0-milestone-10 to 2.0.0-milestone-16, the destination validation of the Operation Delegation feature, introduced to prevent server-side request forgery (CVE-2026-7412), can be bypassed through DNS rebinding.
+
+
+
+Before dispatching a delegated Operation invocation, the server resolves the host of the `invocationDelegation` qualifier URI and rejects loopback, private, link-local, multicast and cloud metadata addresses. The outbound HTTP client (Reactor Netty), however, performs its own, independent DNS lookup when opening the connection and does not use the validated addresses. An attacker who can create or update a Submodel Operation and controls the DNS records of the delegation host can answer the validation lookup with a public address and the connection lookup with an internal address. No authentication is required when the authorization feature is not enabled.
+
+
+
+Invoking the Operation then causes the BaSyx server to send HTTP POST requests to destinations the protection is meant to block, such as services in internal IT/OT networks, loopback-only interfaces, or cloud metadata endpoints. The server can be used to pivot into network segments that are not directly reachable by the attacker.
+
+
+
+Only deployments with the Operation Delegation feature enabled are affected. The feature is enabled by default.
+
+
+
+The issue is fixed in Eclipse BaSyx Java Server SDK 2.0.0-milestone-17.</description>
+    <category>NVD</category>
+    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-19881 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-19881</link>
+    <guid isPermaLink="false">70665554f43ff43e8e6d70cf3c263e3a</guid>
+    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.6 | Cross-site scripting in the conversation file-sharing feature of Unblu inc. Unblu Spark 7.0 through 7.57.10 and 8.0 before 8.41.1, on on-premises and cloud deployments, allows an unauthenticated remote attacker in the visitor role to execute arbitrary JavaScript in the browser of a user who opens a crafted link to a file the attacker uploaded, via a file type that the browser renders as active content, such as SVG.
+
+
+
+The JavaScript runs in the context and under the identity of that user's session.
+
+
+
+Exploitation requires the victim to open the crafted link.</description>
     <category>NVD</category>
     <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
   </item>
