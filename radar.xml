@@ -5,251 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Nov 2026 18:00:14 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-135228 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135228</link>
-    <guid isPermaLink="false">b912662096a4939eedd70155738b87fb</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | A vulnerability in the MongoDB integration package for the Laravel framework allows an unauthorized user to bypass mass assignment attribute protections. When an application uses attribute deny-lists to guard sensitive model fields, specially crafted request payloads containing database operator keys can circumvent these protections. An unauthorized user with network access to an affected application endpoint can modify guarded attributes, potentially leading to privilege escalation within the application</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135399 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135399</link>
-    <guid isPermaLink="false">8eae6eb3c1cd7db7a61263cda05dbfc5</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.8 | Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS, and project management. Prior to 111.42.10, RoleGuard authorizes requests using the role claim embedded in an access token instead of the user's current database role in packages/core/src/lib/core/context/request-context.ts through RequestContext.hasRoles. After an administrator demotes a user, an already-issued token can continue to pass role checks for up to the token's 24-hour default lifetime, including on DELETE /api/tenant and other RolesEnum.SUPER_ADMIN or ADMIN guarded routes, which can preserve tenant-destructive and billing privileges after revocation. This issue is fixed in version 111.42.10.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135400 - NVD - CVSS Score v3.1: 9.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135400</link>
-    <guid isPermaLink="false">f23be45fb2bc2e10ee9e24dd3335b238</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 9.8 | Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS, and project management. Prior to 111.44.3, per-request JWT validation in packages/core/src/lib/auth/strategies/jwt.strategy.ts accepts the result of UserService.getIfExists in packages/core/src/lib/user/user.service.ts without requiring User.isActive to be true and User.isArchived to be false. When a token contains an organizationId claim, the active and archived status check applies to the UserOrganization record rather than the User entity. After an administrator deactivates an account through PATCH /api/user/:id, an existing access token can continue to authenticate API requests at the account's previous privilege level until expiration, up to 24 hours by default. This issue is fixed in version 111.44.3.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135401 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135401</link>
-    <guid isPermaLink="false">010314b9975e44a83f09bca6c0d9ed53</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS, and project management. Prior to 111.42.9, OrganizationPermissionGuard in packages/core/src/lib/shared/guards/organization-permission.guard.ts checks allowManualTime, allowModifyTime, and allowDeleteTime only when the caller's role is EMPLOYEE and unconditionally authorizes other roles. A tenant administrator who grants ALLOW_MANUAL_TIME, ALLOW_MODIFY_TIME, or ALLOW_DELETE_TIME to MANAGER, DATA_ENTRY, VIEWER, or another non-employee role can therefore leave the organization-wide policy disabled while that role still creates, modifies, or deletes time records, undermining payroll and billing integrity. This issue is fixed in version 111.42.9.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135402 - NVD - CVSS Score v3.1: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135402</link>
-    <guid isPermaLink="false">dba90de7681a9f40084abf4c51c66375</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.6 | Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS, and project management. Prior to 111.42.13, POST /api/integration/github/webhook in packages/plugins/integration-github/src/lib/probot/probot.discovery.ts passes request bodies through ProbotDiscovery.receiveHook to probot.receive without verifying x-hub-signature-256 against the configured webhook secret. Because the route is public and uses the attacker-controlled installation.id to locate integrations, an unauthenticated remote attacker who knows or guesses an installation identifier can forge installation deletion events that remove a tenant's GitHub integration or forge issues events that insert fabricated issue data into the tenant's automation pipeline. This issue is fixed in version 111.42.13.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135403 - NVD - CVSS Score v3.1: 7.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135403</link>
-    <guid isPermaLink="false">575a17bf1f515356be96cf0c5bc61310</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 7.4 | Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS, and project management. Prior to 111.44.2, getTracker in packages/core/src/lib/throttler/throttler-behind-proxy.guard.ts accepts CF-Connecting-IP without verifying that a trusted Cloudflare edge supplied it; when CF-Connecting-IP is absent, app.set('trust proxy', true) can let an attacker-controlled X-Forwarded-For value determine req.ip. In deployments where a trusted intermediary does not overwrite these headers, or where the firewall permits direct API access, varying the applicable header on repeated POST /auth/login requests gives an unauthenticated remote attacker a distinct throttle bucket for each attempt, so the five-attempts-per-60-seconds limit does not trigger and no account lockout, CAPTCHA, or exponential backoff limits password guessing. This issue is fixed in version 111.44.2.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135404 - NVD - CVSS Score v3.1: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135404</link>
-    <guid isPermaLink="false">e6045a671f9a61fa2d21ed708ae9aa08</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 7.1 | Ever Gauzy is an open source business management platform for ERP, CRM, HRM, ATS, and project management. Prior to 111.42.11, singleton-scoped ExportService stores the per-request identifiers this.idCsv and this.idZip as BehaviorSubjects and keeps derived directory names in instance fields, while singleton-scoped ImportService stores per-request paths in this._dirname and this._extractPath. Concurrent requests by different tenant administrators to /export, /export/template, /export/filter, or /import can interleave while asynchronous file operations are in progress, allowing one tenant's export archive to be delivered, overwritten, or deleted by another operation, or causing one tenant's import to read another tenant's uploaded CSV data and persist it under the wrong tenant. This issue is fixed in version 111.42.11.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135897 - NVD - CVSS Score v4.0: 5.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135897</link>
-    <guid isPermaLink="false">25fcae2fc691131ad53f6cf34dc37186</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.7 | The MongoDB Rust driver's connection-string parser can include database password text and authentication property values in the error messages it returns when a connection string is malformed. The optional error-redaction feature does not fully remove this text. A party with read access to the application's logs or error output may obtain part or all of a database credential.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136267 - NVD - CVSS Score v4.0: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136267</link>
-    <guid isPermaLink="false">1b48d341512edb5cc3b4efef9fbf06c8</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.5 | Improper sanitization of mixed data and markup elements when processing content in Kiro Web before 2026-10-30, in combination with agents running specific models such as DeepSeek v3.2, GLM-5, MiniMax M2.1, MiniMax M2.5, or Qwen3-coder-next, may allow a remote unauthenticated actor to execute arbitrary commands in a subscriber's hosted development environment via crafted content being repeated back to the user by the agent.
-
-
-
-AWS has addressed this issue. No customer action is required.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136329 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136329</link>
-    <guid isPermaLink="false">93d0c08bf150bf7ce7c1ea08938d00e4</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 7.8 | A flaw was found in the file-gif-load plugin in GIMP. When processing a specially crafted JIF image file, a 32-bit integer overflow occurs during the pixel buffer size calculation, while the zlib output limit is computed separately without wrapping. This leads to an undersized heap allocation, resulting in a heap-based buffer overflow when the compressed image data is decompressed. This issue can result in an application crash, leading to a denial of service, or potentially allow for arbitrary code execution.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136696 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136696</link>
-    <guid isPermaLink="false">3d01ff2face8545b33f4ba2e0c667d5a</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was detected in Zhengzhou Weiwei Information Technology mayicms up to 5.8E. Affected by this vulnerability is an unknown functionality of the file /box.php?part=member. The manipulation of the argument userid results in sql injection. The attack can be launched remotely. The exploit is now public and may be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136834 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136834</link>
-    <guid isPermaLink="false">9f84d47dc69dcdeb3aa4d2b502462552</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Sandbox protection in Jenkins Pipeline: Groovy Plugin 4403.v471713a_cea_19 and earlier can be circumvented through interface field initializers, allowing attackers with permission to define and run sandboxed Pipelines to bypass the sandbox protection and execute arbitrary code in the context of the Jenkins controller JVM.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136835 - NVD - CVSS Score v3.1: 9.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136835</link>
-    <guid isPermaLink="false">4c097e216f6ba2a01ba36abd9e62978f</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 9.9 | Jenkins Script Security Plugin 1436.v1082791135e4 and earlier does not reject @Builder annotations whose builderStrategy member names an arbitrary class when the annotation is referred to using a partially qualified class name, allowing attackers with permission to define and run sandboxed scripts, including Pipelines, to execute code outside the sandbox if a suitable class is present on the classpath of the component that evaluates the script.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136836 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136836</link>
-    <guid isPermaLink="false">3987f6473b0a88b4f8dd4bf4bd088efc</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Gradle Plugin 2.21.1282.v024680ce00a_b_ and earlier does not configure its XML parser to prevent XML external entity (XXE) attacks when processing Maven extension configuration files from build workspaces.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136837 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136837</link>
-    <guid isPermaLink="false">1b0aefb012800eacadba9fbe82633a20</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Warnings Plugin 13.10251.va_452d3553728 through 13.10365.v85cd7a_c8110b_ (both inclusive) allows defining inline Groovy parsers whose Groovy scripts are compiled on the Jenkins controller without sandbox protection, allowing attackers able to define inline Groovy parsers to execute arbitrary code in the context of the Jenkins controller JVM.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136838 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136838</link>
-    <guid isPermaLink="false">9eeb348e75f133a81c0b520931931e20</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Subversion Plugin 1327.vc36e0019a_653 and earlier does not restrict URLs to HTTP or HTTPS schemes in the Sventon repository browser, allowing attackers with Item/Configure permission to determine the existence of paths on the Jenkins controller file system.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136839 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136839</link>
-    <guid isPermaLink="false">ce14ec5b7859d8bcf848e2a100f4d811</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Subversion Plugin 1327.vc36e0019a_653 and earlier does not restrict URLs to HTTP or HTTPS schemes in the Sventon2 repository browser, allowing attackers with Item/Configure permission to determine the existence of paths on the Jenkins controller file system.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136840 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136840</link>
-    <guid isPermaLink="false">017434b3c79b06384c7b38c03be7b607</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Configuration as Code Plugin 2134.ve13a_2fc90835 through 2147.v8a_8d38668c72 (both inclusive), except 2140.2142.v3836c98f1b_30, resolves variables, including references to files on the Jenkins controller file system, environment variables, system properties, and values from configured secret sources, in YAML documents submitted to its configuration validation endpoint, and returns resolved values in error responses, allowing attackers with Overall/SystemRead permission to read arbitrary files on the Jenkins controller file system, environment variables, system properties, and values from configured secret sources.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136841 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136841</link>
-    <guid isPermaLink="false">15800ccd5119e68f79db741a618c1d4f</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | A cross-site request forgery (CSRF) vulnerability in Jenkins Nested View Plugin 241.v178f0b_a_cd76a_ and earlier allows attackers to create views.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136842 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136842</link>
-    <guid isPermaLink="false">2f7001d9cfae305187bcb38da535fa10</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Performance Plugin 1024.ve69e11844523 and earlier does not limit URL schemes for the external report links it creates based on Taurus XML format performance reports, allowing the `javascript:` scheme, resulting in a stored cross-site scripting (XSS) vulnerability exploitable by attackers able to control these reports.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136843 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136843</link>
-    <guid isPermaLink="false">85e7873dac5b28897edf2727da99c36e</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | A cross-site request forgery (CSRF) vulnerability in Jenkins Spira Importer Plugin 4.0.0 and earlier allows attackers to have Jenkins connect to an attacker-specified URL.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136844 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136844</link>
-    <guid isPermaLink="false">c06407284246787cb000a4d878e3d9d9</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | A missing permission check in Jenkins Spira Importer Plugin 4.0.0 and earlier allows attackers with Overall/Read permission to have Jenkins connect to an attacker-specified URL.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136845 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136845</link>
-    <guid isPermaLink="false">e376a9aa45dd42bd349e03d6f9043300</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Pipeline DORA Metrics Plugin 40.vdfd2cb_f019d5 and earlier does not correctly perform permission checks in DoraApiAction#doOverview, allowing attackers with Overall/Read permission to view information about jobs they do not have Item/Read permission to.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136846 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136846</link>
-    <guid isPermaLink="false">9c97efd41d579f98b3b3144c752dbdce</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Pipeline DORA Metrics Plugin 40.vdfd2cb_f019d5 and earlier does not correctly perform permission checks in DoraApiAction#doTrends, allowing attackers with Overall/Read permission to view information about jobs they do not have Item/Read permission to.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136847 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136847</link>
-    <guid isPermaLink="false">407612d5c0d21020d5d7693435009dd6</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Pipeline DORA Metrics Plugin 40.vdfd2cb_f019d5 and earlier does not correctly perform permission checks in DoraApiAction#doExport, allowing attackers with Overall/Read permission to view information about jobs they do not have Item/Read permission to.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136848 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136848</link>
-    <guid isPermaLink="false">8d6c9c6430865270886c8a7ef9bd29d3</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Pipeline DORA Metrics Plugin 40.vdfd2cb_f019d5 and earlier does not correctly perform permission checks in DoraDashboardAction#getDeploymentFrequency, allowing attackers with Overall/Read permission to view information about jobs they do not have Item/Read permission to.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136849 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136849</link>
-    <guid isPermaLink="false">364769536edda9069bad1d0c306bfc2b</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Pipeline DORA Metrics Plugin 40.vdfd2cb_f019d5 and earlier does not correctly perform permission checks in DoraDashboardAction#getLeadTime, allowing attackers with Overall/Read permission to view information about jobs they do not have Item/Read permission to.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136850 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136850</link>
-    <guid isPermaLink="false">df477125b55f676d191ff1df93d43ca1</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Pipeline DORA Metrics Plugin 40.vdfd2cb_f019d5 and earlier does not correctly perform permission checks in DoraDashboardAction#getMttr, allowing attackers with Overall/Read permission to view information about jobs they do not have Item/Read permission to.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136851 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136851</link>
-    <guid isPermaLink="false">0d6e51c82966dc3fa546acf7ad89bdc3</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Jenkins Pipeline DORA Metrics Plugin 40.vdfd2cb_f019d5 and earlier does not correctly perform permission checks in DoraDashboardAction#getChangeFailureRate, allowing attackers with Overall/Read permission to view information about jobs they do not have Item/Read permission to.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136852 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136852</link>
-    <guid isPermaLink="false">3777d91f321c0fb66cad86dd9ea6b5f5</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 4.3 | Jenkins Pipeline DORA Metrics Plugin 40.vdfd2cb_f019d5 and earlier does not correctly perform permission checks in DoraDashboardAction#getSlowestStages, allowing attackers with Overall/Read permission to view information about jobs they do not have Item/Read permission to.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 25 Nov 2026 19:01:53 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-136853 - NVD - CVSS Score v3.1: 4.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136853</link>
@@ -327,6 +83,246 @@ AWS has addressed this issue. No customer action is required.</description>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73517</link>
     <guid isPermaLink="false">79332c5a027e11edb29e0067595cc668</guid>
     <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.7 | KubeSphere 4.0.0 through 4.1.3 contains a command injection vulnerability in the terminal v1alpha2 file download endpoint where the path query parameter is inserted via fmt.Sprintf into sh -c tar commands executed inside the target container, and the DownloadFile handler fails to perform its own pods/exec authorization check. Attackers with only pod get permission, including built-in read-only project-viewer, workspace-viewer and cluster-viewer roles, can supply shell metacharacters in the path parameter to execute arbitrary commands inside any viewable container without holding pod exec permission.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-110470 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110470</link>
+    <guid isPermaLink="false">6e832c517c5c8c66259479f36e61e1b0</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.3 | Stack-based buffer overflow in the mkevent helper in Checkmk &lt;2.5.0p21, &lt;2.4.0p42 and 2.3.0 (EOL) allows an attacker who controls the check output of a monitored host to crash mkevent, causing the notification to be lost, or to redirect the notification to an IPv4 address of their choice, if notifications are forwarded to the Event Console.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-123265 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123265</link>
+    <guid isPermaLink="false">3dcd80d7daecd1af715d8b8f9ad98c0a</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Rejected reason: this CVE was issued in error.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135135 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135135</link>
+    <guid isPermaLink="false">2af4506435e8fd48909821abcf331a4d</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Mongoid builds an incomplete automatic encryption schema for certain embedded document associations. As a result, values that the application declared as encrypted may be written to the database in cleartext, with no error or warning returned to the application. A party holding only basic read privileges on the affected collection, and no access to the encryption keys, may then obtain those values in readable form.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135138 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135138</link>
+    <guid isPermaLink="false">8d7075424b81904ac68dfe45e86d6714</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Mongoid does not consistently apply its read-only attribute protection when attribute names are supplied dynamically by the caller. In an application that forwards caller-supplied attribute names into a document update, a user with basic application privileges may change values held inside a field the model declared immutable. This may result in unintended modification of data the application treats as trusted, such as flags used for its own access decisions.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135139 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135139</link>
+    <guid isPermaLink="false">f222ac3ad177554ebe2751c7d958bc76</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Mongoid contains an incorrect authorization weakness in the handling of caller-supplied filters for bulk removal through a referenced association. Conditions already attached to the association can take precedence over the filter the caller supplied, so records the caller did not select may be removed. A user with basic privileges in an application built on the library may cause unintended removal of records belonging to the same parent record.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135140 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135140</link>
+    <guid isPermaLink="false">abbbb85c0dcbe29148d6908f54cc016f</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | Mongoid may omit a field from the client-side encryption settings it generates for a collection when that same field is also used as a reference to another record. The value is then stored in readable form instead of encrypted, and the application receives no indication that this has happened. A party with ordinary authenticated read access to the affected collection may be able to view data that was intended to be protected.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135141 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135141</link>
+    <guid isPermaLink="false">040967ffbcd88eeb93e4619a79f70174</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.6 | A logic flaw in the query-building layer of the Mongoid object-document mapper causes a model-level default restriction that is meant to return no records to be silently discarded when it is combined into a query. A user with basic application privileges who sends an ordinary request may read, change, or remove records that the restriction was intended to withhold.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135146 - NVD - CVSS Score v4.0: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135146</link>
+    <guid isPermaLink="false">9742a4c41749dfac8f5ea530a74f7693</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 9.1 | An improper certificate revocation check in the MongoDB Python Driver's optional TLS revocation-checking support allows an unauthenticated party that operates the network endpoint a client connects to, and that holds a revoked but still-dated certificate trusted by that client, to have the connection accepted. This may result in unintended disclosure of application credentials and other session data, and in the client treating responses from that endpoint as genuine.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135225 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135225</link>
+    <guid isPermaLink="false">9d0837147e3cf17dfd79ee5ff7f3d677</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.7 | An information exposure weakness in the connection string handling of the MongoDB Ruby Driver can place credential material from the application's own configuration into the text of a parsing error, where an existing redaction control does not apply. A party able to read the application's error output or logs may thereby obtain database credential text together with deployment coordinates. The condition arises entirely within the embedding application process and requires no database authentication.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135226 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135226</link>
+    <guid isPermaLink="false">2e9faf9f7701fb7b07c67387dc5d26d2</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.7 | A type-confusion weakness in the Extended JSON parsing component of BSON for Ruby allows a party who can supply parser input to influence how a serialized document is framed. Content placed in one value may be read back as additional or replacement document fields. An unauthenticated party supplying input to an application that parses untrusted Extended JSON and stores the result may cause unintended modification of stored data.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135227 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135227</link>
+    <guid isPermaLink="false">66b104c5f5e8baedd952fff9357196c4</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.3 | An improper restriction of dynamically determined object attributes in the object-document mapping library's association handling allows structured input supplied in place of a simple identifier value to be turned into an object that is treated as an already-stored record of a caller-chosen model class. In applications that pass unfiltered request data into the affected association handling, an unauthenticated party may cause unintended modification or removal of stored records, and may render an individual record unreadable through that association.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135898 - NVD - CVSS Score v4.0: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135898</link>
+    <guid isPermaLink="false">39715e971a4f899de28586ac8ca193b3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.8 | An out-of-bounds read in the native C BSON decoding extension of the MongoDB Python Driver may allow an unauthenticated party who can supply crafted BSON data to the decoder to cause the application process to terminate. In some configurations, nearby process memory may be included in error messages, which may result in limited unintended disclosure of data.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136697 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136697</link>
+    <guid isPermaLink="false">ef81e4a199008995c695b49441c28459</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | A flaw has been found in LibrePhotos up to 1.2.1. Affected by this issue is the function write_metadata of the file apps/backend/api/metadata/writer.py of the component ExifTool Metadata Write-Back. This manipulation of the argument person_name causes argument injection. The attack may be initiated remotely. Upgrading to version 1.3.0 can resolve this issue. Patch name: f83dafca9f1a6dd0441b7e4d5c13992896a7d76f. Upgrading the affected component is advised.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136721 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136721</link>
+    <guid isPermaLink="false">d9ac846d680937ce0fad466d1eb9f748</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was determined in coleifer peewee up to 4.5.3. This affects the function _print_table of the file pwiz.py of the component File Import Handler. This manipulation causes code injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The reported GitHub issue was closed with the reason &quot;completed&quot;. However, it was not possible to determine the PR or commit which could have fixed this issue.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136722 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136722</link>
+    <guid isPermaLink="false">aca05eb68017831846222b344b1084ee</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was identified in Zhengzhou Weiwei Information Technology mayicms up to 5.8E. This vulnerability affects unknown code of the file member.php. Such manipulation of the argument code leads to sql injection. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81405 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81405</link>
+    <guid isPermaLink="false">e3f312659eccfc6dd436e3c77eb23cc8</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Nmap before 7.992 contains an uncontrolled resource consumption vulnerability in the Comm.ReceivePacket function of the NSE rpc.lua library, which buffers ONC-RPC record fragments using the server-declared fragment length without an upper bound. A malicious RPC service on a scanned host can declare fragments of up to roughly 2.1GB, and up to 400 fragments per call, causing the Nmap process to exhaust memory; the read path is reached by rpcinfo.nse during version detection (-sV) and is shared by the NFS, rusers and NetWorker scripts.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81406 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81406</link>
+    <guid isPermaLink="false">9a8fad5152e160f90945cd76788531b8</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Nmap before 7.992 contains an uncontrolled resource consumption vulnerability in the read_db2_packet function of the db2-das-info.nse script, which trusts an unmasked 32-bit length field supplied by the server. A malicious DB2 Administration Server on a scanned host can declare a packet length of up to roughly 4.29GB, causing the script to buffer that much data and the Nmap process to exhaust memory; the script runs during version detection (-sV).</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81407 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81407</link>
+    <guid isPermaLink="false">3f1b07b98423181988c9563e9990074c</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains a hardcoded cryptographic key vulnerability in the DHCAST128 login of the NSE afp.lua library, which uses a fixed, publicly known Diffie-Hellman private exponent. A passive observer of the network traffic between Nmap and an Apple Filing Protocol server can compute the shared secret from the hardcoded exponent and the server's public value and decrypt the password supplied to scripts such as afp-showmount.nse and afp-brute.nse through the afp.username and afp.password arguments, without man-in-the-middle access or cryptanalysis.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81408 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81408</link>
+    <guid isPermaLink="false">5c37d338ea9bda8442925ee89d73676e</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Nmap before 7.992 contains a loop with an unreachable exit condition in the parameter-list parsing of the NSE drda.lua library, which keeps growing its parameter list while processing a malicious DRDA response. A malicious DRDA service on a scanned host can make the loop consume memory without bound on 64-bit builds, exhausting the Nmap process and discarding NSE results for every other host in the same scan batch without reporting an error; the library is reached by service probes during version detection (-sV).</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81409 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81409</link>
+    <guid isPermaLink="false">456cb8a614b5303807998803c0d836df</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | Nmap before 7.992 contains a server-side request forgery vulnerability in the http-cisco-anyconnect.nse script and the anyconnect.lua library, whose redirect handler follows a server-supplied redirect target without checking that it stays on the scanned host. A malicious web server on a scanned host can redirect Nmap to an arbitrary host and port, including internal and loopback addresses the attacker cannot reach directly, making Nmap send a HEAD request followed by a POST request there; response content is not returned to the attacker. The script runs in the default script category (-sC, -A).</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81410 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81410</link>
+    <guid isPermaLink="false">9b8e42780c5aee1ab3d217fa85adffbc</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.1 | Nmap before 7.992 contains a server-side request forgery vulnerability in the broadcast-upnp-info.nse script and the upnp.lua library, which fetch the device description from the LOCATION URL in a UPnP response without checking that it points to the responding host. An attacker on the local network who answers the script's discovery broadcast can supply a LOCATION URL for an arbitrary host, port and path, including internal and loopback addresses, making Nmap send a GET request there; response content is not returned to the attacker.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81411 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81411</link>
+    <guid isPermaLink="false">fa7bcf4257ffa7f05d048bdf59c1bcae</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Nmap before 7.992 contains an infinite loop vulnerability in the ConfCreateResponse GCC block parser of the NSE rdp.lua library, which does not check that each block advances the read position. A malicious RDP server on a scanned host can include a single malformed zero-length block in an otherwise valid handshake, causing a permanent 100% CPU hang of the Nmap process that the script-timeout option does not interrupt; the library is used by rdp-enum-encryption.nse in the default script category (-sC, -A).</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81412 - NVD - CVSS Score v4.0: 7.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81412</link>
+    <guid isPermaLink="false">9342e95b370e1205b271a6bbbea2a239</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Nmap before 7.992 contains an excessive memory allocation vulnerability in the unmarshall_array function of the NSE msrpctypes.lua library, which trusts the entry count declared by the server. A malicious SMB server on a scanned host can declare an EntriesRead value of 0xFFFFFFFF with an empty buffer, causing a prolonged CPU spin and exhausting the memory of the Nmap process; the library is used by smb-enum-shares.nse in the default script category (-sC, -A).</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81413 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81413</link>
+    <guid isPermaLink="false">a9a49c72905784c2c5aac9e23bc61ea4</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains an uncontrolled resource consumption vulnerability in the inline AXFR response reader of the dns-zone-transfer.nse script, which reads the zone transfer response without a size limit. A malicious DNS server on a scanned host can stream unbounded data over TCP port 53 after the AXFR request, causing the memory of the Nmap process to grow at the attacker's send rate until it is exhausted.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81414 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81414</link>
+    <guid isPermaLink="false">031a87c7b3062a8ee5fefb85524de799</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains an uncontrolled resource consumption vulnerability in the sendPacketsTCP function of the NSE dns.lua library, which reads a DNS-over-TCP response without a size limit and builds it by repeated string concatenation. A malicious DNS server on a scanned host can stream unbounded data in response to the initial SOA lookup made by dns-zone-transfer.nse, before any AXFR request is sent, causing unbounded memory growth and quadratic CPU cost in the Nmap process.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81415 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81415</link>
+    <guid isPermaLink="false">46287660ffa5598e4dc3b6359695b4be</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains an infinite loop vulnerability in the negotiate_tn3270 function of the NSE tn3270.lua library, whose device-type search loop does not advance when the server sends a protocol-conformant DEVICETYPE IS response without an LU suffix. A TN3270E server on a scanned host, including a non-malicious one that sends such a response, causes a permanent 100% CPU hang of the Nmap process when tn3270-screen.nse runs, which the script-timeout option does not interrupt.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81416 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81416</link>
+    <guid isPermaLink="false">7023dc46f1461d45f540fa28971cfee8</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains an infinite loop vulnerability in the process_write function of the NSE tn3270.lua library, whose write loop does not advance when it processes a malformed Repeat to Address (RA) order. A malicious TN3270 server on a scanned host can embed a single 6-byte malformed RA order in an ordinary screen-write data stream after a normal negotiation, causing a permanent 100% CPU hang of the Nmap process when tn3270-screen.nse runs, which the script-timeout option does not interrupt.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81417 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81417</link>
+    <guid isPermaLink="false">e739bc4756af09ee91539882d43b6983</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains an infinite loop vulnerability in the dispatcher of the NSE tftp.lua library, which removes completed coroutines but not ones that ended in an error, leaving a zero-yield spin. A malicious TFTP exchange reached by snmp-ios-config.nse after an SNMP write sequence can leave a dead coroutine that freezes the entire Nmap invocation, before port scanning begins for any target in the run; the hang is prevented when the script-timeout option is set.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81418 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81418</link>
+    <guid isPermaLink="false">5f062c49078cf3c0c16765e14a8154cb</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.9 | Nmap before 7.992 contains an uncontrolled resource consumption vulnerability in the TLV.AUTH parser of the NSE eigrp.lua library, whose length arithmetic cancels out the running read position. An attacker on the same layer 2 segment can send a single crafted EIGRP Update of roughly 36 bytes over unauthenticated multicast, causing unbounded table growth that exhausts the memory of the Nmap process when broadcast-eigrp-discovery.nse is running.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-81419 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81419</link>
+    <guid isPermaLink="false">127373b4cc73b0b185742fe51ae9c95c</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.9 | Nmap before 7.992 contains an infinite loop vulnerability in the LSUpdate.parse function of the NSE ospf.lua library, which does not advance when it reads an LSA header with a zero length. An attacker on the same layer 2 segment can send a single spoofed, unauthenticated OSPF LS Update packet, causing a permanent 100% CPU hang of the Nmap process as soon as broadcast-ospf2-discover.nse captures it.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
