@@ -5,183 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Nov 2026 13:00:37 +0000</lastBuildDate>
-  <item>
-    <title>CVE-2026-130478 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130478</link>
-    <guid isPermaLink="false">3d2d040b14398717e67a07ddceaefc44</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.1 | Joomla Extension - onlinecommunityhub.nl - Unrestricted write of downloaded remote files into a public folder in ochResponsiveImages extension 1.0.0-4.2.0 - With &quot;Include Remote Images&quot; enabled, the plugin wrote downloaded remote files into the public image cache folder without verifying that the URL and the content were an image. Fixed in 4.2.1, which only stores JPEG, PNG, WebP and AVIF images.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-130479 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130479</link>
-    <guid isPermaLink="false">6b81c20b6ad3ab0bfe654d8c54951017</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | Joomla Extension - onlinecommunityhub.nl - Server-side request forgery via image check bypass in ochOpenGraph extension 1.0.0-3.1.0 - The image check meant to prevent server-side requests to internal addresses could be bypassed through a redirect, an internal IPv6 address or a remote image URL containing the site address, allowing content authors to make the server send requests to internal systems. Fixed in 3.1.1.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133333 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133333</link>
-    <guid isPermaLink="false">61816d27b896c1ddf7db9884c1139e76</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.2 | Joomla Extension - virtuemart.net - Unpaid order confirmation via PayPal Checkout order completion task in VirtueMart extension 4.0.0-4.8.8 - The ordercompleted task of the bundled PayPal Checkout payment plugin set the order held in the current checkout session to the configured success status without verifying a PayPal capture or authorization. A shopper, including a guest, could therefore mark their own unpaid order as confirmed and paid. Fixed in 4.8.10.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133334 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133334</link>
-    <guid isPermaLink="false">186b9e40545e85d3894e9de7d31a7146</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.2 | Joomla Extension - virtuemart.net - Cross-product paid file download in Download Simple plugin in VirtueMart extension 4.0.0-4.8.0 - The bundled iStraxx Download Simple plugin verified the order secret of a download link against the order item, but not that the requested media belonged to that item. Anyone holding one valid download link could download other files offered for sale. Fixed in 4.8.2.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133335 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133335</link>
-    <guid isPermaLink="false">50695feb9b320e919799accac1e28a39</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 9.2 | Joomla Extension - virtuemart.net - Unauthenticated local file inclusion leading to remote code execution via controller fallback in VirtueMart extension 4.0.0-4.8.7 - The main controller of the component fell back to including a controller file derived from the request without filtering the name, allowing path traversal to arbitrary local PHP files. Depending on the server setup, for example an available pearcmd.php, this could be used to execute code. The issue has been exploited in the wild. Fixed in 4.8.8.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133737 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133737</link>
-    <guid isPermaLink="false">8a5ca5d369f405a91451cdbcc6b00099</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | A Cross-Site Scripting (XSS) vulnerability reflected in the usuario[nombre] parameter of the actualizar_cuenta function in the functions.php endpoint. The application does not properly sanitise the received content, meaning that an authenticated user can inject JavaScript code which is reflected in the web interface and in the JSON responses. If another user views the affected content, the code may be executed within the context of their browser.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133738 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133738</link>
-    <guid isPermaLink="false">1a88aef8f3bb3fc3eeaf1a9c24ce2887</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.2 | Vulnerability involving the exposure of sensitive information in the ver_usuarios endpoint. The JSON response includes data that is not required for the query and which should remain restricted, such as Argon2id password hashes, TOTP secrets, internal configuration flags, email addresses, telephone numbers and dates of last access. An authenticated user querying this resource can access this confidential information, which is sent directly to the web client.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-133739 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133739</link>
-    <guid isPermaLink="false">05d77acfe0156014ddf0428b64fee378</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | Error-based SQL injection vulnerability in the text parameter of the ver_usuarios endpoint. The SQL query is constructed from user-controlled data without proper validation or parameterisation. An authenticated user could submit a specially crafted input that triggers visible SQL errors in the response, including SQLSTATE[42S22] messages and references to columns in the query.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135042 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135042</link>
-    <guid isPermaLink="false">e92f8934e7dc1e165c9d4807145dde12</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Themefic Hydra Booking hydra-booking allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Hydra Booking: from n/a through 1.2.11.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135922 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135922</link>
-    <guid isPermaLink="false">7c65dd01ac8d9c48103a956bcbae5298</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in WPTasty AWP Classifieds another-wordpress-classifieds-plugin allows Code Injection.This issue affects AWP Classifieds: from n/a through 4.4.10.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135929 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135929</link>
-    <guid isPermaLink="false">c89cac77a98b4b3d3a7ab5948397e1ad</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Qode Interactive Qi Addons For Elementor qi-addons-for-elementor allows Stored XSS.This issue affects Qi Addons For Elementor: from n/a through 1.11.2.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135931 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135931</link>
-    <guid isPermaLink="false">c30b2db85e4bde2ac8afd2f469688b84</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Cozmoslabs TranslatePress translatepress-multilingual allows Code Injection.This issue affects TranslatePress: from n/a through 3.4.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135932 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135932</link>
-    <guid isPermaLink="false">a64919c828e1e13b670ea471d9994ef3</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.8 | Cross-Site Request Forgery (CSRF) vulnerability in WP ManageNinja LLC FluentBoards fluent-boards allows Cross Site Request Forgery.This issue affects FluentBoards: from n/a through 2.3.0.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135936 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135936</link>
-    <guid isPermaLink="false">0b1a98a5fea99c42483aaaf8ecafa3a2</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Groundhogg Groundhogg groundhogg allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Groundhogg: from n/a through 4.11.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135937 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135937</link>
-    <guid isPermaLink="false">d5a753a374bae3fab04a4a5b67042023</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.8 | Cross-Site Request Forgery (CSRF) vulnerability in Groundhogg Groundhogg groundhogg allows Cross Site Request Forgery.This issue affects Groundhogg: from n/a through 4.11.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135938 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135938</link>
-    <guid isPermaLink="false">c8e5d934ecef0cd42dcda2dd64bfda8c</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Liquid Web / StellarWP Gutenberg Blocks by Kadence Blocks kadence-blocks allows Stored XSS.This issue affects Gutenberg Blocks by Kadence Blocks: from n/a through 3.9.1.2.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135952 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135952</link>
-    <guid isPermaLink="false">94e4e98a56a5a844e0680873a88e65a9</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WS Form WS Form LITE ws-form allows Stored XSS.This issue affects WS Form LITE: from n/a through 1.12.19.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-135959 - NVD - CVSS Score v3.1: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135959</link>
-    <guid isPermaLink="false">7b2c528844ea5d400e18b9b8567a1f1a</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.8 | Cross-Site Request Forgery (CSRF) vulnerability in Paul Shield Security wp-simple-firewall allows Cross Site Request Forgery.This issue affects Shield Security: from n/a through 22.3.4.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-27431 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-27431</link>
-    <guid isPermaLink="false">a708a70daed55b9789ff7b6f931f2da3</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in WPTasty AWP Classifieds another-wordpress-classifieds-plugin allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects AWP Classifieds: from n/a through 4.4.10.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-28000 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-28000</link>
-    <guid isPermaLink="false">c5333c04149877feef5bbe36c9e40764</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in WPTasty AWP Classifieds another-wordpress-classifieds-plugin allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects AWP Classifieds: from n/a through 4.4.10.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-71501 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71501</link>
-    <guid isPermaLink="false">f6d71b168e6f50b116d407beb7d3952e</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Apache JSPWiki.
-
-
-
-This issue affects Apache JSPWiki: through 2.12.4.
-
-
-
-Users are recommended to upgrade to version 2.12.5, which fixes the issue.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
+    <lastBuildDate>Wed, 25 Nov 2026 14:02:46 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-71902 - NVD - CVSS: não informado</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71902</link>
@@ -365,6 +189,217 @@ Users are recommended to upgrade to version 3.0.1 which fixes this issue.</descr
     <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.1 | Authorization bypass through User-Controlled key vulnerability in İdeal Data Finansal Teknolojiler A.Ş. IDeal WEB allows Accessing Functionality Not Properly Constrained by ACLs.
 
 This issue affects iDeal WEB: before v1.82.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2024-7430 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2024-7430</link>
+    <guid isPermaLink="false">502029e9b5968ba5084251036a1f7917</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.4 | Application Performance Management 9.60 patch versions before IP4 are affected. This issue seems to be present throughout the application, as several endpoints or functionalities that are restricted to Admin users can be directly accessed by Regular users. The authorization method of the application can be bypassed allowing users to perform unauthorized actions to their role. The application supports different levels of access. The application performs authorization checks to keep users from accessing functionality outside of their role such as create, verify, and/or repair. 
+
+
+
+
+This authorization method can be bypassed. During VA testing, it was found that under the User Reports inside the Applications menu, it is possible to  create links and different reports. However, the creation of custom links, Excel reports, and service reports are restricted to admin users. Hence, it is possible for regular users with the least privileges to directly access these 
+
+pages and the application allows them to further use these restricted functionalities.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2024-7431 - NVD - CVSS Score v4.0: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2024-7431</link>
+    <guid isPermaLink="false">9a9114d4bc9eb2cb4ec6f743edab5d28</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.4 | In Application Performance Management versions before 9.60 IP4, The application is vulnerable to cross-site scripting wherein the application does not properly validate the input parameters, allowing scripts to be injected and then executed in the context of a user’s browser. This can lead to the attacker stealing sensitive information, impersonating users, or performing actions on their behalf.  Also, the application may also be vulnerable to the below attacks:
+
+• Link Injection – This occurs when an attacker inserts a malicious link into a webpage, often in a way that makes it appear legitimate. When user clicks on the link, they may be directed to a harmful website or prompted to download malicious files.
+
+
+
+• Frame Injection – This attack involved embedding a webpage within an invisible frame on another site, User interacts with what appears to be a legitimate site, but their actions are performed on the malicious page, potentially leading to unintended actions or data theft.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125634 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125634</link>
+    <guid isPermaLink="false">71b992b31c2a7e0bfa28430b9ca93541</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | A NULL pointer dereference has been found in the acl_check_dns_host_name() and acl_validate_spn_value() functions in source4/dsdb/samdb/ldb_modules/acl.c of the Active Directory domain controller ACL module in the Samba package. The checks read the account name after a request that removes it, and they do not test that the value is present. A low-privileged network attacker or user who can update the DNS host name or service principal name of their own computer account can include a removal of sAMAccountName in that same LDAP modify. The directory process crashes. Repeating the modify keeps the directory service unavailable.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-125812 - NVD - CVSS Score v3.1: 9.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125812</link>
+    <guid isPermaLink="false">be10675321b76c5513b6dbd5e8b1152d</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 9.8 | Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal') vulnerability in WP Media WP Rocket wp-rocket allows Path Traversal.This issue affects WP Rocket: from n/a before 3.24.2.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-129968 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129968</link>
+    <guid isPermaLink="false">42b651325a797871dc6dc6a67db24df4</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 9.3 | LiteSpeed Cache Plugin for Prestashop does not verify authenticity of &quot;pd&quot; parameter and uses it to render a template without checking that it is a real .tpl file. An unauthenticated attacker can send specially crafted requests to a store that cause the server to process attacker-suplied content, potentially giving the attacker full control of the store and access to customer and payment data.
+
+
+This issue was fixed in version 1.6.2.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-135888 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135888</link>
+    <guid isPermaLink="false">89ecb65bb0ae14a39f184b0cafd3fcf4</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 9.2 | Directory traversal vulnerability in the custom-homepage asset endpoint (/__api__/custom/home/) 
+allows remote attackers to read arbitrary files readable by the Package Manager service account via a filesystem path appended to the request URI in Posit Software, PBC Posit Package Manager: 
+
+
+
+
+
+  *  before 2025.09.6,
+  *  2025.12.x before 2025.12.4
+  *  2026.04.x before 2026.04.4
+  *  2026.05.x before 2026.05.2
+  *  2026.06.x before 2026.06.2
+  *  2026.08.x before 2026.08.2
+  *  2026.09.x before 2026.09.2
+  *  2026.10.x before 2026.10.2
+  *  2026.11.x before 2026.11.2
+
+
+
+
+
+
+
+
+NOTE: In the default configuration, where Server.LandingPage is unset, request paths are resolved from the filesystem root, so no directory-traversal sequences are required and exploitation is not detected by scanners that test only for ../ sequences.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136692 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136692</link>
+    <guid isPermaLink="false">f10fd5f392b6b0938a234fe995e7acbc</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was identified in dayrui XunRuiCMS up to 4.7.4. The impacted element is the function down of the file dayrui/Fcms/Library/Api.php of the component Attachment Download API. Such manipulation of the argument ID leads to unrestricted upload. The attack may be performed from remote. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136693 - NVD - CVSS Score v4.0: 5.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136693</link>
+    <guid isPermaLink="false">f9ec623ff63f7e592803990bfa9bdae3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.7 | A security flaw has been discovered in NASA Core Flight System Limit Checker up to 7.0.1. This affects the function LC_WPOffsetValid of the file fsw/src/lc_watch.c of the component Watchpoint Processing. Performing a manipulation results in integer overflow. It is possible to initiate the attack remotely. The exploit has been released to the public and may be used for attacks. The pull request to fix this issue awaits acceptance.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-136703 - NVD - CVSS Score v3.1: 4.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136703</link>
+    <guid isPermaLink="false">a494f4f50f333162051fecd91e02dc25</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 4.3 | A flaw was found in the Admin REST API v2 of Keycloak. This component is used by administrators to manage realm configurations, including clients. The issue occurs because the API processes a client update (PUT) request and performs payload validation before verifying if the caller has the required permissions to view or manage that specific client. By sending a request with a mismatched client ID in the body, an authenticated user without any administrative privileges can distinguish between existing and non-existing clients based on whether the server returns a 400 Bad Request or a 403 Forbidden error.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80286 - NVD - CVSS Score v3.1: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80286</link>
+    <guid isPermaLink="false">4ca76a96bfbaef26fd0b59df3f53fa20</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 7.3 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an External Control of File Name or Path vulnerability. A low privileged local attacker could potentially exploit this vulnerability, leading to unauthorized file access, modification, potentially compromising confidentiality and integrity.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80287 - NVD - CVSS Score v3.1: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80287</link>
+    <guid isPermaLink="false">048e7fdf719990de21cea0aacb51e3cf</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.4 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a Missing Authentication for Critical Function vulnerability. An attacker with local access could potentially exploit this vulnerability, leading to unauthorized access to system resources, disclosure of sensitive information, modification of protected configurations, and execution of privileged operations.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80288 - NVD - CVSS Score v3.1: 6.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80288</link>
+    <guid isPermaLink="false">98b70433378dc210d1d854a226923b0b</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.7 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an Improper Input Validation vulnerability. An attacker with local access could potentially exploit this vulnerability, leading to unauthorized access to sensitive information and privileged functionality.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80290 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80290</link>
+    <guid isPermaLink="false">1d7f85964b27363824520315a8602236</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a Race Condition vulnerability. A low privileged local attacker could potentially exploit this vulnerability, leading to unauthorized modification of data or service disruption.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80291 - NVD - CVSS Score v3.1: 8.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80291</link>
+    <guid isPermaLink="false">db77fbd80e379dbb739d311ffde71b7c</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.4 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a Missing Authentication for Critical Function vulnerability. A local attacker could potentially exploit this vulnerability, leading to unauthorized access to sensitive data, modification of critical resources, and disruption of appliance functionality.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80292 - NVD - CVSS Score v3.1: 2.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80292</link>
+    <guid isPermaLink="false">82999160be551ad048375196025946a9</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 2.5 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a Time-of-check Time-of-use (TOCTOU) Race Condition vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to session theft.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80293 - NVD - CVSS Score v3.1: 6.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80293</link>
+    <guid isPermaLink="false">7491cbb65cb5a406195b670547d6d475</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.1 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an Argument Injection vulnerability. A low privileged local attacker could potentially exploit this vulnerability, leading to disclosure of sensitive information and limited integrity impact.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80294 - NVD - CVSS Score v3.1: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80294</link>
+    <guid isPermaLink="false">b1f8deb4d06e1ea22f75e67631dc0e46</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.5 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an Improper Restriction of XML External Entity Reference vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to command execution.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80295 - NVD - CVSS Score v3.1: 3.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80295</link>
+    <guid isPermaLink="false">32410d3ff31351b1edb4dc16eabe6c64</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 3.6 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a TOCTOU Race Condition vulnerability. A low privileged local attacker could potentially exploit this vulnerability, leading to limited integrity impact and service instability.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80296 - NVD - CVSS Score v3.1: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80296</link>
+    <guid isPermaLink="false">c5e9c51e48a6673fc934ac0a71257e38</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 7.3 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a Path Traversal vulnerability. A low privileged local attacker could potentially exploit this vulnerability, leading to unauthorized file access, modification, or disruption of system operations.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-80297 - NVD - CVSS Score v3.1: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80297</link>
+    <guid isPermaLink="false">2d974629931d29903806c3b0fc7b7e48</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 7.3 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a Path Traversal vulnerability. A low privileged local attacker could potentially exploit this vulnerability, leading to unauthorized file access, modification, or disruption of system operations.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-97180 - NVD - CVSS Score v4.0: 9.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97180</link>
+    <guid isPermaLink="false">9d647808f18f48baf60160ec315148a0</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 9.4 | ASSA ABLOY Seawing SC-1000 WebConfig is vulnerable to remote command injection via HTTP request. Due to the lack of input sanitization, a privileged attacker can inject shell metacharacters in the server parameter, resulting in arbitrary command execution as the root user on the operating system.
+
+
+This issue was fixed in version 1.5.14.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
