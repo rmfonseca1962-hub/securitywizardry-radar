@@ -5,7 +5,7 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Nov 2026 01:00:55 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 02:01:40 +0000</lastBuildDate>
   <item>
     <title>CVE-2026-133459 - NVD - CVSS Score v4.0: 5.3</title>
     <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133459</link>
@@ -102,84 +102,93 @@ This vulnerability was reported independently twice: by NVIDIA Project Vanessa o
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132723 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132723</link>
-    <guid isPermaLink="false">a914001e061fc9e1ff0e4ca0fb2b36f8</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | Missing Authorization vulnerability in Wikimedia Foundation MediaWiki - GrowthExperiments Extension. This vulnerability is associated with program files includes/Api/ApiInvalidateImageRecommendation.php. This issue affects MediaWiki - GrowthExperiments Extension: 1.43, 1.45, 1.46, 1.47.</description>
+    <title>CVE-2026-122093 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122093</link>
+    <guid isPermaLink="false">4b14bb97469dd8c4376eb5f3b88846f6</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Strong::Random versions through 0.96 for Perl allow every later rand output to be predicted from three earlier ones.
+
+The generator keeps its state in a single number. Each call multiplies the state by a factor derived from it, and the returned digits encode that factor, so three consecutive outputs determine the state however the generator was seeded. Outputs are also biased: the first digit after the decimal point is never zero, so rand(256) never returns 1 to 24.
+
+An attacker who sees three consecutive outputs can predict the tokens, passwords or key bytes that the same object later issues to other users.</description>
     <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132724 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132724</link>
-    <guid isPermaLink="false">1cf84a78b230571629aaf8a97d76b454</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 8.7 | Vulnerability in Wikimedia Foundation MediaWiki - EasyTimeline Extension. This vulnerability is associated with program files scripts/EasyTimeline.pl. This issue affects MediaWiki - EasyTimeline Extension: 1.43, 1.45, 1.46, 1.47.</description>
+    <title>CVE-2026-132255 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132255</link>
+    <guid isPermaLink="false">931a5bbf9419939c6a360247dfd5fbb7</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. From 0.3.4 before 0.11.0, LLM and other dynamically priced blocks run without charge when a priced input is left at its schema default. An account with a credit balance of zero can make unlimited language-model, code-generation, and image-generation calls at the operator's expense while the platform records the usage at zero cost. This issue is fixed in version 0.11.0.</description>
     <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132725 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132725</link>
-    <guid isPermaLink="false">8d8cf245fde9b916cd726104d9565f6c</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | URL Redirection to Untrusted Site ('Open Redirect') vulnerability in Wikimedia Foundation MediaWiki - OAuth Extension. This vulnerability is associated with program files src/Frontend/SpecialPages/SpecialMWOAuth.php. This issue affects MediaWiki - OAuth Extension: 1.43, 1.45, 1.46, 1.47.</description>
+    <title>CVE-2026-132256 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132256</link>
+    <guid isPermaLink="false">a8dce0a7480804860a80e63658d4eab9</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.10.0, the format Jinja filter in TextFormatter accepts an unbounded width. An authenticated user who can author or run a workflow, or supply its input, can trigger a single synchronous multi-gigabyte allocation that exhausts the executor worker's memory and degrades or denies execution for other users. There is no confidentiality or integrity impact. This issue is fixed in version 0.10.0.</description>
     <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132726 - NVD - CVSS Score v4.0: 9.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132726</link>
-    <guid isPermaLink="false">4909f27474f9858e49016da37008d357</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 9.2 | Deserialization of Untrusted Data vulnerability in Wikimedia Foundation MediaWiki - Echo Extension. This vulnerability is associated with program files includes/Model/Event.php. This issue affects MediaWiki - Echo Extension: from 1.43.0 before 1.43.12, from 1.45.0 before 1.45.7, from 1.46.0 before 1.46.3, 1.47.</description>
+    <title>CVE-2026-132260 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132260</link>
+    <guid isPermaLink="false">900c592b4b11c027a69b9c1ca18fdb16</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. From 0.4.2 before 0.11.0, the E2B code-execution blocks ExecuteCodeBlock, InstantiateCodeSandboxBlock, and ClaudeCodeBlock can leave sandboxes running on the operator's shared E2B credential for up to the sandbox's full timeout, while users are billed only for the block's run time. Any user with a positive credit balance can keep sandboxes running for up to 24 hours on a Pro plan for a flat 1 credit, and each run adds another sandbox. This issue is fixed in version 0.11.0.</description>
     <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132727 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132727</link>
-    <guid isPermaLink="false">eae06e940298dad1c6c247a9a5163fdc</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.3 | Cross-Site Request Forgery (CSRF) vulnerability in Wikimedia Foundation MediaWiki - SecurePoll Extension. This vulnerability is associated with program files i18n/en.json, i18n/qqq.json, includes/Ballots/BallotStatus.php, includes/Pages/VotePage.php. This issue affects MediaWiki - SecurePoll Extension: 1.43, 1.45, 1.46, 1.47.</description>
+    <title>CVE-2026-132271 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132271</link>
+    <guid isPermaLink="false">2f9ac3fea842a0b41f40db8644261c85</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.11.0, template rendering is not bounded in size or time. Any signed-up user who can reach a block that takes a format string, such as Fill Text Template or Agent Output, through POST /api/blocks/{id}/execute or the external API's block-execute route, can make the REST API process allocate without bound with one request of a few dozen bytes. This can stop the process from answering any request, including its health check. There is no data read or change impact. This issue is fixed in version 0.11.0.</description>
     <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132728 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132728</link>
-    <guid isPermaLink="false">3f5b4a2f9af5c504af8a5c117abf1acb</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.1 | Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Wikimedia Foundation MediaWiki - AbuseFilter Extension. This vulnerability is associated with program files includes/Special/SpecialAbuseFilter.php, includes/View/AbuseFilterViewTestBatch.php. This issue affects MediaWiki - AbuseFilter Extension: from 1.43.0 before 1.43.12, from 1.45.0 before 1.45.7, from 1.46.0 before 1.46.3, 1.47.</description>
+    <title>CVE-2026-133461 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133461</link>
+    <guid isPermaLink="false">555e1133d4df1be2e15ab39c0310a1bc</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.10.0, the OAuth authorize endpoint redirects to unvalidated error redirect targets. An attacker can craft a link on the platform's own domain that redirects a signed-in user to an attacker-controlled site, which can present a lookalike consent or sign-in page to harvest credentials. This issue is fixed in version 0.10.0.</description>
     <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132729 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132729</link>
-    <guid isPermaLink="false">e8aef055722db1562abf7fb113f99366</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 2.1 | Improper Neutralization of Special Elements in Output Used by a Downstream Component ('Injection') vulnerability in Wikimedia Foundation MediaWiki - Score Extension. This vulnerability is associated with program files includes/Score.php. This issue affects MediaWiki - Score Extension: 1.43, 1.45, 1.46, 1.47.</description>
+    <title>CVE-2026-134875 - NVD - CVSS Score v4.0: 4.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134875</link>
+    <guid isPermaLink="false">189d357d9bf6b90a38e3c6c7bd9996b2</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 4.9 | An unencrypted RSA private key for a default HTTPS certificate is included in GeoVision GV-EBD4700 firmware V1.11 (A02-GV-EBD4700_V1.11_2026_10_13.zip) at /program/www/ssl_cert.pem and copied to /config/ssl_cert.pem during initialization. When HTTPS is enabled using the default certificate, a network on-path attacker who obtains the firmware image can use the exposed private key to present an identical certificate and intercept HTTPS traffic. HTTPS is disabled by default .
+
+
+  *  
+
+Only impacts deployments where an administrator enables HTTPS and retains the default certificate. Because the private key is publicly distributed in the firmware image, an on-path attacker can impersonate the device with an identical certificate fingerprint, bypassing fingerprint checks and stored certificate exceptions (potentially capturing credentials if a user clicks through the expired-certificate warning).</description>
     <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132730 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132730</link>
-    <guid isPermaLink="false">a92d743a0960b4c8d3f1b9f223b98bcb</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 6.9 | Improper Access Control vulnerability in Wikimedia Foundation MediaWiki. This vulnerability is associated with program files includes/Specials/SpecialUserRights.php. This issue affects MediaWiki: from 1.43.0 before 1.43.12, from 1.45.0 before 1.45.7, from 1.46.0 before 1.46.3, 1.47.</description>
+    <title>CVE-2026-136146 - NVD - CVSS Score v4.0: 1.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136146</link>
+    <guid isPermaLink="false">e50b44772913a62d9214c90def7fb616</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 1.9 | A security flaw has been discovered in vanna-ai vanna 2.0.0/2.0.1/2.0.2. Affected by this vulnerability is the function _load_index of the file src/vanna/integrations/faiss/agent_memory.py of the component FAISS AgentMemory Integration. Performing a manipulation results in deserialization. The attack needs to be approached locally. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132731 - NVD - CVSS Score v4.0: 4.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132731</link>
-    <guid isPermaLink="false">1f7e6edfaebc38381604bd9d57b77902</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 4.6 | Missing Authorization vulnerability in Wikimedia Foundation MediaWiki - GuidedTour Extension. This vulnerability is associated with program files modules/ext.guidedTour.lib.internal.js. This issue affects MediaWiki - GuidedTour Extension: 1.45, 1.46, 1.47.</description>
+    <title>CVE-2026-136147 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136147</link>
+    <guid isPermaLink="false">5e61b644a5f18a2fc2820eddce1ed0d3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.1 | A weakness has been identified in DWS Antik Browser 1.17.0. Affected by this issue is some unknown functionality of the file src/server/index.ts of the component Local API Server. Executing a manipulation can lead to origin validation error. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
     <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132732 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132732</link>
-    <guid isPermaLink="false">6e7e87e04a08a4d3235d5c1ed83fbda0</guid>
-    <description>Tuesday 24 November 2026 | NVD | CVSS Score v4.0: 5.3 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Wikimedia Foundation MediaWiki - Math Extension. This vulnerability is associated with program files extension.json, modules/ext.math.popup.js. This issue affects MediaWiki - Math Extension: 1.43, 1.45, 1.46, 1.47.</description>
+    <title>CVE-2026-136444 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136444</link>
+    <guid isPermaLink="false">a64c6694b857fe1157518e007d8e8222</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was detected in JaguarJack catch-admin up to 5.4.1. The affected element is the function Store/Update of the file modules/User/Http/Controllers/UserController.php of the component User Management. Performing a manipulation results in dynamically-determined object attributes. It is possible to initiate the attack remotely. The exploit is now public and may be used. The patch is named 3ae60d57ea6840bb33456596ad799b0a39ca94a2. Applying a patch is the recommended action to fix this issue.</description>
     <category>NVD</category>
-    <pubDate>Tue, 24 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
     <title>CVE-2026-132733 - NVD - CVSS Score v4.0: 5.1</title>
