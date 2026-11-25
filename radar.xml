@@ -5,333 +5,324 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Nov 2026 04:01:24 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 05:02:52 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-122093 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-122093</link>
-    <guid isPermaLink="false">4b14bb97469dd8c4376eb5f3b88846f6</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Strong::Random versions through 0.96 for Perl allow every later rand output to be predicted from three earlier ones.
-
-The generator keeps its state in a single number. Each call multiplies the state by a factor derived from it, and the returned digits encode that factor, so three consecutive outputs determine the state however the generator was seeded. Outputs are also biased: the first digit after the decimal point is never zero, so rand(256) never returns 1 to 24.
-
-An attacker who sees three consecutive outputs can predict the tokens, passwords or key bytes that the same object later issues to other users.</description>
+    <title>CVE-2026-134336 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134336</link>
+    <guid isPermaLink="false">d99620519506fd8c956a4b7415629caf</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | Webmin through 2.670 contains a stored cross-site scripting vulnerability that allows unauthenticated attackers to inject scripts by submitting malicious failed-login usernames. Attackers can repeatedly submit crafted usernames until blocked, executing script in administrator sessions viewing edit_blocked.cgi in Webmin or Usermin.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132255 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132255</link>
-    <guid isPermaLink="false">931a5bbf9419939c6a360247dfd5fbb7</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. From 0.3.4 before 0.11.0, LLM and other dynamically priced blocks run without charge when a priced input is left at its schema default. An account with a credit balance of zero can make unlimited language-model, code-generation, and image-generation calls at the operator's expense while the platform records the usage at zero cost. This issue is fixed in version 0.11.0.</description>
+    <title>CVE-2026-134340 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134340</link>
+    <guid isPermaLink="false">eb28e366a2ff0aa5470d6ddc6d0f51ef</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in the Servers Index module that allows unauthenticated adjacent attackers to inject scripts via the realhost field of UDP discovery replies. Attackers on the same broadcast domain can answer discovery scans with HTML or JavaScript stored by find_servers() and rendered unescaped by edit_serv.cgi, executing in Webmin user sessions.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132256 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132256</link>
-    <guid isPermaLink="false">a8dce0a7480804860a80e63658d4eab9</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.10.0, the format Jinja filter in TextFormatter accepts an unbounded width. An authenticated user who can author or run a workflow, or supply its input, can trigger a single synchronous multi-gigabyte allocation that exhausts the executor worker's memory and degrades or denies execution for other users. There is no confidentiality or integrity impact. This issue is fixed in version 0.10.0.</description>
+    <title>CVE-2026-134365 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134365</link>
+    <guid isPermaLink="false">1c04a84b1335760f7f53604fec589f9b</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.3 | Webmin through 2.670 contains a cross-site scripting vulnerability that allows on-path network attackers to inject script by tampering with plaintext HTTP search results rendered unescaped. Attackers who intercept rpmfind.net or Google responses can inject autofocus/onfocus payloads that execute in a logged-in user's browser within the Webmin origin.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132260 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132260</link>
-    <guid isPermaLink="false">900c592b4b11c027a69b9c1ca18fdb16</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. From 0.4.2 before 0.11.0, the E2B code-execution blocks ExecuteCodeBlock, InstantiateCodeSandboxBlock, and ClaudeCodeBlock can leave sandboxes running on the operator's shared E2B credential for up to the sandbox's full timeout, while users are billed only for the block's run time. Any user with a positive credit balance can keep sandboxes running for up to 24 hours on a Pro plan for a flat 1 credit, and each run adds another sandbox. This issue is fixed in version 0.11.0.</description>
+    <title>CVE-2026-134368 - NVD - CVSS Score v4.0: 2.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134368</link>
+    <guid isPermaLink="false">ce610862688a56067198bcec88280260</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.4 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in lpadmin/list_jobs.cgi that allows local users or network IPP clients to inject script via CUPS print-job titles. Attackers can submit a print job with a crafted title, for example using lp -t, to execute script in a Printer Administration user's Webmin session.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-132271 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-132271</link>
-    <guid isPermaLink="false">2f9ac3fea842a0b41f40db8644261c85</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.11.0, template rendering is not bounded in size or time. Any signed-up user who can reach a block that takes a format string, such as Fill Text Template or Agent Output, through POST /api/blocks/{id}/execute or the external API's block-execute route, can make the REST API process allocate without bound with one request of a few dozen bytes. This can stop the process from answering any request, including its health check. There is no data read or change impact. This issue is fixed in version 0.11.0.</description>
+    <title>CVE-2026-134437 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134437</link>
+    <guid isPermaLink="false">89af17c7c3e00e3692f7560f063377d6</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in ldap-server/edit_browser.cgi that allows attackers with write access to LDAP entry attributes to inject script by storing markup in attribute values. When an administrator browses the entry in the LDAP Server directory browser, the unencoded script runs in the Webmin origin, letting attackers act with the administrator's session.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-133461 - NVD - CVSS Score v4.0: 5.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-133461</link>
-    <guid isPermaLink="false">555e1133d4df1be2e15ab39c0310a1bc</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | AutoGPT is a workflow automation platform for creating, deploying, and managing continuous artificial intelligence agents. Prior to 0.10.0, the OAuth authorize endpoint redirects to unvalidated error redirect targets. An attacker can craft a link on the platform's own domain that redirects a signed-in user to an attacker-controlled site, which can present a lookalike consent or sign-in page to harvest credentials. This issue is fixed in version 0.10.0.</description>
+    <title>CVE-2026-134438 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134438</link>
+    <guid isPermaLink="false">2f1f72d56222e126bfa6e54936f91acd</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.7 | Webmin through 2.670 contains an insecure download vulnerability in webmin/upgrade.cgi, cluster-webmin/upgrade.cgi and cluster-usermin/upgrade.cgi that fetches upgrade packages over plaintext HTTP with GnuPG signature verification disabled by default. On-path network attackers can substitute a malicious RPM, Debian or tar.gz package during a default upgrade to execute code as root on the Webmin host and managed cluster servers.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-134875 - NVD - CVSS Score v4.0: 4.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134875</link>
-    <guid isPermaLink="false">189d357d9bf6b90a38e3c6c7bd9996b2</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 4.9 | An unencrypted RSA private key for a default HTTPS certificate is included in GeoVision GV-EBD4700 firmware V1.11 (A02-GV-EBD4700_V1.11_2026_10_13.zip) at /program/www/ssl_cert.pem and copied to /config/ssl_cert.pem during initialization. When HTTPS is enabled using the default certificate, a network on-path attacker who obtains the firmware image can use the exposed private key to present an identical certificate and intercept HTTPS traffic. HTTPS is disabled by default .
-
-
-  *  
-
-Only impacts deployments where an administrator enables HTTPS and retains the default certificate. Because the private key is publicly distributed in the firmware image, an on-path attacker can impersonate the device with an identical certificate fingerprint, bypassing fingerprint checks and stored certificate exceptions (potentially capturing credentials if a user clicks through the expired-certificate warning).</description>
+    <title>CVE-2026-134439 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134439</link>
+    <guid isPermaLink="false">6c0d4242556d5139b92240ddf652cb5e</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | Webmin through 2.670 contains a stored cross-site scripting vulnerability that allows attackers to inject scripts by supplying values from managed hosts that cluster modules render unescaped. Attackers who can edit a Servers Index description, control a managed host, or intercept its RPC link can inject server descriptions, versions, user/group names, or package fields to execute JavaScript in the central administrator's session.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136146 - NVD - CVSS Score v4.0: 1.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136146</link>
-    <guid isPermaLink="false">e50b44772913a62d9214c90def7fb616</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 1.9 | A security flaw has been discovered in vanna-ai vanna 2.0.0/2.0.1/2.0.2. Affected by this vulnerability is the function _load_index of the file src/vanna/integrations/faiss/agent_memory.py of the component FAISS AgentMemory Integration. Performing a manipulation results in deserialization. The attack needs to be approached locally. The exploit has been released to the public and may be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-134440 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134440</link>
+    <guid isPermaLink="false">7c4a0f898c984a695ff8d09dc8b35cfb</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.3 | Webmin through 2.670 contains a Perl code injection vulnerability in cluster-useradmin/sync.cgi that allows attackers to run code by placing single quotes in home directory paths. Attackers with root on one managed host can craft a home path that breaks out of remote_eval() string literals during Sync, executing Perl as root on other managed hosts.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136147 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136147</link>
-    <guid isPermaLink="false">5e61b644a5f18a2fc2820eddce1ed0d3</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.1 | A weakness has been identified in DWS Antik Browser 1.17.0. Affected by this issue is some unknown functionality of the file src/server/index.ts of the component Local API Server. Executing a manipulation can lead to origin validation error. The attack may be launched remotely. The exploit has been made available to the public and could be used for attacks. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2026-134441 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134441</link>
+    <guid isPermaLink="false">6d098402cf3875fb5a8836c9f9c90d75</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in the Upload and Download module that allows attackers to inject script via unescaped HTTP status lines from background downloads. Attackers controlling a download server can return a malicious status line stored by updown/download.pl and printed unescaped by updown/index.cgi, executing script in a higher-privileged user's session.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136444 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136444</link>
-    <guid isPermaLink="false">a64c6694b857fe1157518e007d8e8222</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was detected in JaguarJack catch-admin up to 5.4.1. The affected element is the function Store/Update of the file modules/User/Http/Controllers/UserController.php of the component User Management. Performing a manipulation results in dynamically-determined object attributes. It is possible to initiate the attack remotely. The exploit is now public and may be used. The patch is named 3ae60d57ea6840bb33456596ad799b0a39ca94a2. Applying a patch is the recommended action to fix this issue.</description>
+    <title>CVE-2026-134442 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134442</link>
+    <guid isPermaLink="false">9680e582cb797dec5fdd41d42a0e863e</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in ldap-client/popup_browser.cgi that allows attackers to inject markup by storing it in LDAP attribute values printed without HTML encoding. Attackers with write access to an LDAP directory entry, needing no Webmin account, can execute scripts in the Webmin origin when an administrator browses that entry.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-126536 - NVD - CVSS Score v4.0: 7.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-126536</link>
-    <guid isPermaLink="false">1dd8309406f0a04f5a2490381dab2aa6</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.0 | Akaunting 3.3.0 contains a stored cross-site scripting vulnerability in the XLSX tax-import workflow. An authenticated Manager can import HTML in a tax name and associate the tax with an item. When an Administrator attempts to disable that tax, Akaunting renders the original stored name in an error notification through Vue v-html, causing attacker-controlled markup to execute within the browser of another authenticated user.</description>
+    <title>CVE-2026-134444 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134444</link>
+    <guid isPermaLink="false">2048d29dd21d3fc649370cf37515a0cb</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.3 | Webmin through 2.670 contains a cleartext transmission vulnerability in connect_ldap_db in ldap-server/ldap-server-lib.pl that sends the LDAP root DN password unencrypted when encryption is set to Detect automatically. Passive network attackers observing traffic between Webmin and a remote LDAP server can capture directory root credentials because the connection loop always reaches a plaintext bind attempt.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135768 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135768</link>
-    <guid isPermaLink="false">55bfb8e6085bb11f2cbee56979c6ceb6</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.8 | A flaw was found in the keycloak-services component of Keycloak, which is used for managing authentication and authorization flows. The issue occurs when a client policy is configured to enforce a high-assurance authentication flow requiring OTP. Due to improper validation of existing sessions, a lower-assurance password-only SSO session can be incorrectly accepted if the request does not explicitly demand a specific assurance level. This allows an attacker with access to a user's password or session to bypass the second factor and obtain tokens claiming a higher level of security.</description>
+    <title>CVE-2026-134445 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134445</link>
+    <guid isPermaLink="false">2fb5a91729c069b7481ef41fc7959bc3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.3 | Webmin through 2.670 contains a cross-site scripting vulnerability in status/edit_mon.cgi that allows attackers to inject scripts through unescaped monitor status descriptions. Malicious HTTP or FTPS server operators, on-path attackers, or local users creating crafted filenames in wildcard-monitored directories can execute JavaScript in a Webmin user's session.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136445 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136445</link>
-    <guid isPermaLink="false">8af4d36351d4ee6e69dc0f930bc2bbf5</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.1 | A flaw has been found in JaguarJack catch-admin up to 5.4.1. The impacted element is the function store of the file modules/Permissions/Http/Controllers/RolesController.php. Executing a manipulation can lead to dynamically-determined object attributes. It is possible to launch the attack remotely. The exploit has been published and may be used. This patch is called 3ae60d57ea6840bb33456596ad799b0a39ca94a2. It is best practice to apply a patch to resolve this issue.</description>
+    <title>CVE-2026-134446 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134446</link>
+    <guid isPermaLink="false">b58cc885984a23d3b6823d5d312feed1</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | Webmin through 2.670 contains a weak random password generation vulnerability in generate_random_password() that allows attackers to predict generated account passwords because seed_random() effectively seeds Perl rand() with only time XOR process ID. When the non-default random_password option is enabled and administrators keep the pre-filled password in edit_user.cgi, attackers can enumerate time and PID seeds to recover passwords and authenticate as new accounts.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-125734 - NVD - CVSS Score v3.1: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-125734</link>
-    <guid isPermaLink="false">655fb7ec8ddadf8054c855237afe41fa</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.5 | A flaw was found in GStreamer gst-plugins-bad mxfdemux handling of MXF Index Table Segment data. Crafted index metadata can lead to an out-of-range lookup during a seek and terminate the media process. A Fedora 43 test reproduced an assertion-triggered abort. The upstream advisory also notes possible information disclosure, but an attacker-visible leak has not been demonstrated.</description>
+    <title>CVE-2026-134447 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134447</link>
+    <guid isPermaLink="false">94de77a0c87321d245db5833479673ca</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in postfix/view_mailq.cgi and sendmail/view_mailq.cgi that allows unauthenticated attackers to inject script via unsanitized MIME attachment filenames. Attackers can send a message with a crafted Content-Disposition or Content-Type filename that remains queued, executing script in the Webmin session of users viewing it.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129832 - NVD - CVSS Score v3.1: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129832</link>
-    <guid isPermaLink="false">7239079967cf6fa7157720eb77704e3e</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.5 | A flaw was found in rsyslog. When process identification (PID) rewriting is enabled in the imuxsock module, a local attacker with access to the logging socket can send a crafted log message with an empty tag. This triggers an invalid memory write, causing the logging service to crash and resulting in a Denial of Service (DoS).</description>
+    <title>CVE-2026-134462 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134462</link>
+    <guid isPermaLink="false">4e87ae716e98b6b910001d403612d67e</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.3 | Webmin through 2.670 contains a cross-site scripting vulnerability in mount/nfs_export.cgi that allows malicious NFS servers to inject scripts through unescaped export paths. Attackers controlling or spoofing an NFS server's mountd replies can return crafted export paths that execute JavaScript in the session of a Webmin user browsing exports.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-129839 - NVD - CVSS Score v3.1: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-129839</link>
-    <guid isPermaLink="false">616d636562c890949eaa6792892e679a</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.3 | A flaw was found in rsyslog. When processing log entries using certain JSON (JavaScript Object Notation) formatting templates, the service fails to properly escape input composed entirely of quotation marks or backslashes. An attacker who can supply logged input can exploit this issue to generate malformed JSON output, which may cause downstream log ingestion systems and parsers to reject log records.</description>
+    <title>CVE-2026-134463 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134463</link>
+    <guid isPermaLink="false">e9bc6980a57109acd153b0700c7e3be8</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.3 | Webmin through 2.670 contains an improper certificate validation vulnerability in switch_smtp_to_ssl in mailboxes/boxes-lib.pl and status/smtp-monitor.pl, which calls Net::SSLeay::connect without certificate verification or a hostname check. Man-in-the-middle attackers can present any certificate when SMTP with SSL or STARTTLS is configured to capture SMTP AUTH credentials and message content.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135328 - NVD - CVSS Score v3.1: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135328</link>
-    <guid isPermaLink="false">de6958b911633f0261f3f6249735ca26</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.8 | A flaw was found in kubevirt Containerized Data Importer (CDI). The CDI clone controller derives the CommonName of a CDI-CA-signed upload client certificate from the tenant-settable cdi.kubevirt.io/uploadClientName PVC annotation without validation, and the upload server authenticates clients only by certificate CA chain and CommonName string match, with no namespace or PVC binding. A namespace user can obtain a valid client certificate and write arbitrary data into any upload-ready PVC in any namespace whose upload Service is reachable from the cluster network, resulting in cross-namespace integrity impact on disk images used by virtual machines.</description>
+    <title>CVE-2026-134627 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134627</link>
+    <guid isPermaLink="false">bd13ac962f58872c95dfea4fe1f4563e</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.1 | Webmin through 2.670 contains a stored cross-site scripting vulnerability that allows local users or directory writers to inject script by placing markup in user names, group names or GECOS fields. Attackers can set GECOS via chfn or modify LDAP, NIS or SSSD entries so unescaped values in my_user_chooser.cgi, my_group_chooser.cgi, user_chooser.cgi and group_chooser.cgi execute in a Webmin user's browser.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135813 - NVD - CVSS Score v3.1: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135813</link>
-    <guid isPermaLink="false">eadde21225c06cedd85fecf2bcb697e9</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.0 | A flaw was found in Red Hat Enterprise Linux's qemu-kvm virtualization software. A privileged user inside a guest virtual machine could use this flaw to make the host QEMU process copy parts of its own memory into the guest's memory, where the attacker could read it. Successful exploitation could allow an attacker to view portions of the host QEMU process memory from within a guest, potentially exposing sensitive information that could aid in further attacks. The highest threat from this vulnerability is to confidentiality.</description>
+    <title>CVE-2026-134628 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134628</link>
+    <guid isPermaLink="false">fbdf536db5d0428696908208663355fa</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 4.8 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in the Disk Quotas module that allows directory administrators to inject markup via NSS user names. Attackers who can create or rename LDAP, NIS or SSSD identities owning blocks on XFS quota filesystems can execute script in the browser of administrators viewing quota/list_users.cgi.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136446 - NVD - CVSS Score v4.0: 2.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136446</link>
-    <guid isPermaLink="false">964b328b4716115539a403245064f658</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.0 | A vulnerability has been found in JaguarJack catch-admin up to 5.4.1. This affects the function update of the file modules/Permissions/Http/Controllers/RolesController.php. The manipulation leads to dynamically-determined object attributes. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of the patch is 3ae60d57ea6840bb33456596ad799b0a39ca94a2. It is recommended to apply a patch to fix this issue.</description>
+    <title>CVE-2026-134629 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134629</link>
+    <guid isPermaLink="false">3912a2e1d0604c86d5b766e4352da807</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.3 | Webmin through 2.670 contains a cross-site scripting vulnerability in mysql/index.cgi that renders MySQL connection error text and server version strings without escaping. Malicious MySQL server operators or on-path attackers on plaintext connections can return markup in error packets or version strings to execute JavaScript in Webmin user sessions.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136447 - NVD - CVSS Score v4.0: 1.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136447</link>
-    <guid isPermaLink="false">374974607199337367d941d65602e320</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 1.9 | A vulnerability was found in browser-use 0.13.13/0.13.14. This impacts the function load_and_migrate_config of the file browser_use/config.py of the component SecurityWatchdog. The manipulation results in improper authorization. The attack requires a local approach. The exploit has been made public and could be used.</description>
+    <title>CVE-2026-134630 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134630</link>
+    <guid isPermaLink="false">f267ae34adbee7ec55d30a2be2df0539</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.7 | Webmin through 2.670 contains a remote code execution vulnerability in the Perl Modules (cpan) module, which downloads CPAN indexes and module archives over plaintext HTTP without checksum or signature verification. On-path network attackers can answer the outbound fetch while an administrator installs a CPAN module, supplying a malicious Makefile.PL that cpan/download.cgi runs as root before confirmation.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136448 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136448</link>
-    <guid isPermaLink="false">992c2017f5c9d2d55164a63bfca89a5e</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was identified in nliautaud pico-content-editor up to 02d5ad6c820c5050c542ab9505819b5e0a0ba1af. Affected by this vulnerability is the function Uploads::saveFile/Auth::init of the file src/Uploads.php of the component Authorization Subsystem. Such manipulation of the argument PicoContentEditorUpload leads to unrestricted upload. The attack may be launched remotely. The exploit is publicly available and might be used. This product operates on a rolling release basis, ensuring continuous delivery. Consequently, there are no version details for either affected or updated releases. The vendor was contacted early about this disclosure but did not respond in any way. This vulnerability only affects products that are no longer supported by the maintainer.</description>
+    <title>CVE-2026-134631 - NVD - CVSS Score v4.0: 4.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134631</link>
+    <guid isPermaLink="false">f410922de2061ba3e7d89e251ccedba1</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 4.8 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in ldap-useradmin/edit_user.cgi that allows attackers to inject markup through the LDAP sambaAcctFlags and sambaBadPasswordCount attributes, which are rendered without HTML encoding. Attackers with LDAP write access to these attributes can store malicious scripts that execute in a Webmin administrator's browser when the user entry is opened in the editor.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136451 - NVD - CVSS Score v3.1: 6.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136451</link>
-    <guid isPermaLink="false">b99aacf5b7283dc1f6ce7334a2ec2e67</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 6.8 | A flaw was found in the Keycloak Operator. Deterministic hashes derived from Kubernetes Secrets are published in generated StatefulSet metadata and in KeycloakOIDCClient status. A user with read access to those resources may be able to recover a low-entropy credential referenced by a Secret, even when Kubernetes RBAC denies the user access to the Secret itself.</description>
+    <title>CVE-2026-134632 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134632</link>
+    <guid isPermaLink="false">7d854b830eb6ea0201150086a6a0bae9</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Webmin through 2.670 contains an improper certificate validation vulnerability that allows man-in-the-middle attackers to capture credentials because servers/save_serv.cgi skips the selected SSL certificate check. When fast RPC is set to Automatic, attackers intercepting the /fastrpc.cgi probe can obtain the remote Webmin username and password sent via HTTP Basic Authorization.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136615 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136615</link>
-    <guid isPermaLink="false">1d71a7ab959e4687e834767fbf072c7e</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | league/commonmark 2.6.0 before 2.10.8 contains a denial of service vulnerability in DelimiterStack::push() that miscounts delimiter runs against the max_delimiters_per_line budget. Attackers submitting Markdown with two long emphasis character runs can produce deeply nested strong elements, causing quadratic rendering time and CPU exhaustion.</description>
+    <title>CVE-2026-134633 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134633</link>
+    <guid isPermaLink="false">8619148a09db2994c867d378444457d7</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.3 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in init/mass_systemd.cgi that prints unescaped journalctl output when a systemd service fails to start. Attackers can inject script into the journal via logger or sshd invalid user names, executing it in an administrator's Webmin session.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136616 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136616</link>
-    <guid isPermaLink="false">e9e62a018e9a0509e3854674cc5ad830</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.3 | COVESA Open1722 before 0.9.8 contains an out-of-bounds read vulnerability in Avtp_Vss_CalcVssPathLength in src/avtp/acf/custom/Vss.c, which reads the INTEROP path-length prefix without checking the declared ACF message length. Attackers can send header-only 12-byte INTEROP-mode VSS frames to trigger reads past the buffer, or prefix values 0xFFFE and 0xFFFF that wrap uint16 lengths and cause Avtp_Vss_SetVssData to overwrite the path area.</description>
+    <title>CVE-2026-134634 - NVD - CVSS Score v4.0: 6.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134634</link>
+    <guid isPermaLink="false">5493418dde39f79730797f9500fcdaf2</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Webmin through 2.670 contains an improper certificate validation vulnerability in servers/link.cgi that accepts self-signed certificates for linked servers even when certificate checking is enabled. Man-in-the-middle attackers presenting a self-signed certificate with the correct hostname can capture stored HTTP Basic credentials for the remote Webmin and inject HTML into the local Webmin origin.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136617 - NVD - CVSS Score v4.0: 6.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136617</link>
-    <guid isPermaLink="false">2de25e83f15050b1e7b909af01976939</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | Shopify async-memcached before 0.11.0 contains a command injection vulnerability in Client::validate_meta_flags that allows attackers to inject extra memcached meta protocol tokens via whitespace in flags. Attackers controlling part of a meta flag can add quiet, opaque, mode or size override tokens to alter operations and desynchronize responses on shared connections.</description>
+    <title>CVE-2026-134635 - NVD - CVSS Score v4.0: 7.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134635</link>
+    <guid isPermaLink="false">1ea8eb57bab791b51c2127a37e00943d</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.3 | Webmin through 2.670 contains an OS command injection vulnerability in ldap-client/check.cgi that allows LDAP directory writers to execute commands via unquoted uid values. Attackers can create a posixAccount entry with shell metacharacters in its uid, executing commands as root when an administrator runs Check Configuration.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136618 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136618</link>
-    <guid isPermaLink="false">9eb42c973d57d561b3cfaf729556319a</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | Karakeep before 0.35.0 contains an improper access control vulnerability in ManualList.mergeInto that allows list owners to retain collaborator bookmarks by merging shared lists without ownership checks. Owners invoking the lists.merge tRPC procedure create rows not tied to collaborator membership, preserving read access to collaborator bookmarks and assets after the collaborator's access is revoked.</description>
+    <title>CVE-2026-134636 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134636</link>
+    <guid isPermaLink="false">4a19144551a346f73a23462cde2510b3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | Webmin through 2.670 contains a weak randomness vulnerability that allows attackers to predict TOTP two-factor secrets generated by generate_base32_secret() using a time and PID seeded rand(). Attackers who know a user's password and estimate enrollment time can enumerate candidate seeds, reproduce the secret, and bypass the second authentication factor.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136619 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136619</link>
-    <guid isPermaLink="false">32e65b5667ad31ab9e44516ffc9d8791</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | Karakeep before 0.35.0 contains an information disclosure vulnerability that allows shared-list collaborators to learn other users' private favourited and archived bookmark state through filter queries. Viewer or editor collaborators can call bookmarks.getBookmarks on a shared list with favourited or archived set to true, inferring owners' private flags from which bookmarks buildCommonFilters returns.</description>
+    <title>CVE-2026-134637 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134637</link>
+    <guid isPermaLink="false">3f42a6cc936f224866faf6dbe2908593</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.3 | Webmin through 2.670 contains a STARTTLS downgrade vulnerability in send_mail in mailboxes/boxes-lib.pl that continues over plaintext when STARTTLS is rejected. Man-in-the-middle attackers can strip or reject STARTTLS to capture configured SMTP AUTH credentials, crackable CRAM-MD5 exchanges, and the content of sent mail.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136620 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136620</link>
-    <guid isPermaLink="false">92d3772c3d6167ad5c93996cd0e86184</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.9 | pain001-mcp 0.0.72 before 0.0.80 contains a path traversal vulnerability in the commit_payment_batch MCP tool that allows attackers to write files outside any output directory via output_file_path. Attackers can stage a batch, reuse the self-issued confirmation_token, and supply absolute, dot-dot, or symlinked paths to create or overwrite server-writable files with generated XML.</description>
+    <title>CVE-2026-134638 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134638</link>
+    <guid isPermaLink="false">e7089b7e7341b7cdf663bb1b9f34249e</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.7 | Webmin through 2.670 contains a missing integrity verification vulnerability in usermin/upgrade.cgi that downloads Usermin upgrade packages over plaintext HTTP without signature or digest checks. On-path network attackers or DNS spoofers can supply a malicious RPM, Debian, or tar.gz package whose maintainer scripts or setup.sh execute as root during upgrade.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136621 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136621</link>
-    <guid isPermaLink="false">ae3b40942a5e7236f3cd3bf46f4ba34b</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.9 | LTplus-AG ifc-lite @ifc-lite/export before 4.13.1 and ifc-lite-export before 27.0.0 contain a STEP record injection vulnerability in the mutation writer via unescaped typed-value type names. Attackers controlling the mutations payload can place parentheses, semicolons, and newlines in typed.type to append arbitrary entity records to exported IFC files, bypassing the class-name guard.</description>
+    <title>CVE-2026-134639 - NVD - CVSS Score v4.0: 9.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134639</link>
+    <guid isPermaLink="false">89bfd2b75e5f49373513fd167e3b357a</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 9.2 | Webmin through 2.670 contains an insecure default configuration in its Windows setup.bat script that provisions an administrator account with the credentials admin/admin and SSL disabled. Unauthenticated network attackers can log in over plain HTTP on port 10000 with these unchanged credentials to gain full Webmin administrative access.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136622 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136622</link>
-    <guid isPermaLink="false">50fa4582f51b21014ccd4b950204662d</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.9 | WeKan before 12.78 contains an information disclosure vulnerability in Exporter.buildStream() that lets attackers retrieve checklists from other boards by supplying a checklistId export scope. Users able to export any board, or unauthenticated users via a public board, can read private checklists, their items and creator usernames even when anonymization is enabled.</description>
+    <title>CVE-2026-134640 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134640</link>
+    <guid isPermaLink="false">102e5b6f944d26c8b3852030a204cba2</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.3 | Webmin through 2.670 contains an improper certificate validation vulnerability in imap_login in mailboxes/folders-lib.pl that skips certificate verification and hostname checks for IMAP SSL connections. Man-in-the-middle attackers can present any certificate to capture IMAP credentials sent by the System and Server Status IMAP monitor and spoof monitor results.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136623 - NVD - CVSS Score v4.0: 6.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136623</link>
-    <guid isPermaLink="false">16bfe5d40d272449d25bbad622973b5f</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.9 | WeKan before 12.78 contains an access control bypass in Exporter.buildCsvStream() that ignores the Disable all export and Anonymize export users settings. Board readers or unauthenticated users of public boards can request the CSV export endpoint to export all cards and reveal real usernames in member, assignee, and mention fields.</description>
+    <title>CVE-2026-134641 - NVD - CVSS Score v4.0: 2.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134641</link>
+    <guid isPermaLink="false">a62ad859ab4c628a2378fc9395257bd8</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.4 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in minecraft/save_backup.cgi that allows local attackers with write access to the Minecraft server directory to inject script via unescaped world directory names. Attackers can create a world directory containing HTML or script that executes in a Webmin user's session when they run Backup Now.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136624 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136624</link>
-    <guid isPermaLink="false">ad0cac53bb42e20cf6b7adeea739ce68</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | lightNVR before 0.44.3 contains an authorization bypass vulnerability in go2rtc_proxy_authorize_request() that allows authenticated users to access restricted cameras by exploiting inconsistent src parameter parsing. Attackers can percent-encode a second src parameter name or exceed the 255-byte truncation so go2rtc resolves a different camera, obtaining unauthorized snapshots and HLS live streams.</description>
+    <title>CVE-2026-134642 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134642</link>
+    <guid isPermaLink="false">dda14f83d7b70b849a49d9b16a80b87e</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.7 | Webmin through 2.670 contains a missing authentication vulnerability in fastrpc.cgi that allows unauthenticated network peers to connect to tcpwrite and tcpread file-transfer listeners without session checks. Attackers can race to connect to the predictable transfer port during cluster operations to steal transferred files or replace staged packages, achieving root code execution.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136625 - NVD - CVSS Score v4.0: 5.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136625</link>
-    <guid isPermaLink="false">657acb63c442ef4b2b98acb83220142d</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.2 | ai-memory 2.6.0 before 3.3.2 contains a symlink following vulnerability in the ai-memory-wikisync companion that allows local attackers to overwrite arbitrary files by planting symlinks at predictable temporary names. Attackers can place a .wikisync-tmp-&lt;page&gt;.md symlink in a shared destination so atomic_write() truncates and overwrites its target with the victim's privileges.</description>
+    <title>CVE-2026-134643 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134643</link>
+    <guid isPermaLink="false">90b13acc0521e90253470dec28ed5ecc</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.3 | Webmin through 2.670 contains an authentication bypass vulnerability in password_change.cgi that allows unauthenticated attackers to change passwords for accounts with empty stored hashes. When passwd_mode is 2, attackers can POST user, old, new1 and new2 with any old value to set a known password and gain access.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136626 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136626</link>
-    <guid isPermaLink="false">08cc63bff0ea9d29b2d4359bab6a99a3</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.8 | SRS 4.0.0 before 6.0.194, 7.0.0 before 7.0.214, and 8.0.0 before 8.0.73 contains a heap-based buffer overflow in SrsRtcpCommon::decode and SrsRtcpTWCC::decode that lets remote WebRTC peers write past the fixed 1500-byte payload_ array. Unauthenticated attackers opening a WHIP or WHEP session can send oversized BYE, APP, unknown-type or TWCC RTCP packets to overwrite up to 64 KB of heap memory, crashing the server.</description>
+    <title>CVE-2026-134644 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134644</link>
+    <guid isPermaLink="false">c937d247f71a325ee421ebb74467f478</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.3 | Webmin through 2.670 contains a path traversal vulnerability in minecraft/minecraft-lib.pl that allows unauthenticated game players to overwrite arbitrary files as root via crafted chat messages. Attackers can send chat messages mimicking logged in lines so the root check_playtime_limits cron job rewrites attacker-chosen files, destroying their contents.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136627 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136627</link>
-    <guid isPermaLink="false">57f7c0c4055c135413c6f908788e21a2</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.7 | SRS 4.0.0 before 6.0.194, 7.0.0 before 7.0.214, and 8.0.0 before 8.0.73 contains a reachable assertion in RTCP decoding that lets remote WebRTC peers crash the server. Attackers opening an unauthenticated WHIP or WHEP session can send an 8-byte RTCP packet with undersized length, triggering srs_assert aborts that stop every stream.</description>
+    <title>CVE-2026-134645 - NVD - CVSS Score v4.0: 2.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134645</link>
+    <guid isPermaLink="false">19c8d92f935441f175b8ed300cbac3df</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.4 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in proc/trace.cgi that allows local unprivileged OS users to inject markup via unescaped process arguments and system call parameters. Attackers can craft process command lines or file names passed to open so that script executes in a Webmin user's session when they trace the process.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136628 - NVD - CVSS Score v4.0: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136628</link>
-    <guid isPermaLink="false">a75fa83e3b773077599640e1ab36a329</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.6 | Wails before 2.17.1 on Linux contains an origin validation error in the sendMessageToBackend WebKitGTK handler that allows child-frame scripts to invoke the privileged IPC channel. Attackers controlling content loaded in an iframe can post messages that pass the top-level URI origin check and call bound Go methods and Wails runtime operations.</description>
+    <title>CVE-2026-134646 - NVD - CVSS Score v4.0: 8.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134646</link>
+    <guid isPermaLink="false">d6abeb3a66297a3f4958c75d12a43981</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.3 | Webmin through 2.670 contains a cleartext transmission vulnerability in the SMTP service monitor that never issues STARTTLS because get_smtp_status tests an undefined $ssl variable. Passive network attackers can capture AUTH PLAIN credentials sent in plaintext each time a STARTTLS-configured monitor runs, without needing a Webmin login.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136629 - NVD - CVSS Score v4.0: 8.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136629</link>
-    <guid isPermaLink="false">1f5af0c3cf041ac7c15a8e226e23f2d3</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.5 | Nektos act 0.2.92 before 0.2.95 contains an argument injection vulnerability in readProjectArgsFile and projectFlag that allows malicious repositories to bypass the untrusted project .actrc flag allowlist. Attackers can commit a crafted .actrc smuggling disallowed flags like -P self-hosted or --privileged to run workflow steps on the developer's host.</description>
+    <title>CVE-2026-134647 - NVD - CVSS Score v4.0: 7.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134647</link>
+    <guid isPermaLink="false">fe3181f82c2b43320348497a3ed8a7d3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.7 | Webmin through 2.670 contains a cleartext transmission vulnerability in web-lib-funcs.pl and fastrpc.cgi that sends cluster RPC traffic over raw TCP despite SSL configuration. Network-positioned attackers can read the session ID and remote_eval payloads or alter calls in transit to execute code as root on managed servers.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136630 - NVD - CVSS Score v4.0: 7.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136630</link>
-    <guid isPermaLink="false">81d12a14ca1d40ba14cd6ff9f65a5235</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.7 | Electerm before 5.9.0 contains an origin validation vulnerability in the MCP Server widget that allows remote attackers to execute commands by bypassing Host and Origin checks through DNS rebinding. Attackers can lure users to a page that rebinds to 127.0.0.1 and calls unauthenticated MCP tools on port 30837 to run OS commands locally and on open SSH sessions.</description>
+    <title>CVE-2026-134648 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134648</link>
+    <guid isPermaLink="false">5698d4d8b3d90ac6ef0cd12b6f80eeb5</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.3 | Webmin through 2.670 contains a header directive injection vulnerability in sendmail/autoreply.pl that allows unauthenticated mail senders to inject autoreply directives by placing them in inbound subject, from, date, or body fields. Attackers can inject Reply-Tracking to delete files at chosen paths, Autoreply-File to exfiltrate files readable by the delivery user, or arbitrary reply headers including To.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136631 - NVD - CVSS Score v4.0: 7.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136631</link>
-    <guid isPermaLink="false">807a00ec686bc13bb5683aeebc6aeed2</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.6 | Mastodon 4.7.4 and 4.8.0-alpha.3 before 5.0.0-beta.1 contains an authentication bypass vulnerability in authenticate_with_sign_in_token that allows authenticated local users to rebind pending login attempts to other accounts. Attackers can submit sign_in_token_resend with a victim's user[email] parameter, then guess the unthrottled 6-character token to sign in as inactive accounts lacking two-factor authentication.</description>
+    <title>CVE-2026-134649 - NVD - CVSS Score v4.0: 1.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134649</link>
+    <guid isPermaLink="false">df24589fc801ffe5732045a1e54d91a3</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 1.0 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in logrotate/force.cgi that prints logrotate -f diagnostic output without HTML escaping. Local OS users can create files with script-laden names in wildcard-rotated log directories, executing script in the Webmin session when Force Log Rotation is clicked.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136632 - NVD - CVSS Score v4.0: 7.2</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136632</link>
-    <guid isPermaLink="false">357d2992ce6499772b949d3b005996b0</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.2 | OpenProject 17.2.0 before 17.5.2, 17.6.0 before 17.6.1, 17.7.0 before 17.7.3, 17.8.0 before 17.8.2, and 17.9.0 before 17.9.7 contains an externally controlled method selection vulnerability in InplaceEditFieldsController via the unvalidated attribute parameter. Users who can view a project can request the inplace_edit_fields reset route with attribute destroy to delete projects and subprojects, or invoke other methods exposing restricted data.</description>
+    <title>CVE-2026-134650 - NVD - CVSS Score v4.0: 2.0</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-134650</link>
+    <guid isPermaLink="false">4dc820b195ffc615e0e05320dbab541b</guid>
+    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.0 | Webmin through 2.670 contains a stored cross-site scripting vulnerability in useradmin/edit_user.cgi that displays home directory paths without HTML escaping to users with the autohome ACL. A Webmin user with broader Users and Groups rights can store a home path containing script via save_user.cgi, executing it in a restricted sub-administrator's Webmin session.</description>
     <category>NVD</category>
     <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
   </item>
