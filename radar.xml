@@ -5,326 +5,326 @@
     <link>https://www.securitywizardry.com/the-radar-page/alert-details</link>
     <description>Alertas de vulnerabilidade (CVSS) - fonte NVD (fallback quando o SecurityWizardry está bloqueado) - RMFconsultoria</description>
     <language>en</language>
-    <lastBuildDate>Wed, 25 Nov 2026 19:01:53 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 19:00:33 +0000</lastBuildDate>
   <item>
-    <title>CVE-2026-136853 - NVD - CVSS Score v3.1: 4.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136853</link>
-    <guid isPermaLink="false">4ddd480c415b84d1222d224beaaa13bb</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 4.3 | Jenkins Pipeline DORA Metrics Plugin 40.vdfd2cb_f019d5 and earlier does not correctly perform permission checks in DoraDashboardAction#getMostFailingStages, allowing attackers with Overall/Read permission to view information about jobs they do not have Item/Read permission to.</description>
+    <title>CVE-2026-137550 - NVD - CVSS Score v4.0: 9.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137550</link>
+    <guid isPermaLink="false">6a4fa6fc76ad3fd560f128b13b1039b6</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 9.3 | Frappe Framework before 15.122.0 and 16.x before 16.50.0 contains a missing authorization vulnerability in Document.update() that fails to validate whether the caller is permitted to submit or modify the target document. Attackers can invoke document update operations to submit or alter documents they are not authorized to change.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136854 - NVD - CVSS Score v3.1: 5.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136854</link>
-    <guid isPermaLink="false">a973c74d7a7db39365ae5d361afaf8a8</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v3.1: 5.4 | Jenkins Rich Text Publisher Plugin 1.5 and earlier does not escape job names in error messages rendered by the Rich Text Portlet, resulting in a stored cross-site scripting (XSS) vulnerability exploitable by attackers with View/Configure permission.</description>
+    <title>CVE-2026-137551 - NVD - CVSS Score v4.0: 8.6</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137551</link>
+    <guid isPermaLink="false">d534b80f30cc26606b86a12a06eb42f7</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 8.6 | Frappe Framework before 15.121.2 and 16.x before 16.36.0 exposes functions imported into module-path-hooked modules as Jinja globals, making them callable from sandboxed templates. Authenticated users who can author rendered templates, such as Print Formats, can invoke these functions by name to achieve server-side code execution that bypasses the Jinja sandbox.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-62151 - NVD - CVSS Score v4.0: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62151</link>
-    <guid isPermaLink="false">85df11b0bf44967f3eef1b6d5136ac8f</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.8 | mysql_fdw builds string literals for queries sent to the remote MySQL server with an escaping routine that is not character-set aware. When the connection uses a multi-byte character set such as GBK, SJIS or Big5 and MySQL's default backslash escaping is in effect, a crafted value whose trailing byte is 0x5C absorbs the escaping backslash and leaves the following quote unescaped. The routine handles every pushed-down string constant, including ordinary WHERE-clause literals, so an authenticated user with only SELECT on a foreign table can break out of the literal and run arbitrary SQL on the remote MySQL server with the credentials of the user mapping. The issue is fixed in mysql_fdw 2.10.0. From mysql_fdw 2.10.0, mysql_fdw forces NO_BACKSLASH_ESCAPES into the session sql_mode and escapes string literals by doubling single quotes.</description>
+    <title>CVE-2026-137552 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137552</link>
+    <guid isPermaLink="false">40e18f3f733f8939e04f3ffea8fb51b4</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 8.7 | Frappe Framework before 15.121.1 and 16.x before 16.35.0 accepts an undocumented OAuth2 Resource Owner Password Credentials (password) grant at its token endpoint, which does not enforce two-factor authentication or forced password resets. An attacker with a user's valid credentials can use this grant to obtain a full-access OAuth token, bypassing 2FA.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-62152 - NVD - CVSS Score v4.0: 5.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62152</link>
-    <guid isPermaLink="false">1ead9dea4efd2c952155fa9e57ca0507</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.8 | mysql_fdw accepts several security-sensitive connection options from roles that are not superusers. A role with USAGE on the mysql_fdw foreign data wrapper can set init_command, which runs arbitrary SQL on the remote MySQL server at every connection, including connections made with other users' mappings on a shared foreign server. The same role can set mysql_default_file, ssl_key, ssl_cert, ssl_ca and ssl_capath, which name files read from the PostgreSQL server host, allowing server-side file reads and connection redirection. The issue is fixed in mysql_fdw 2.10.0. From mysql_fdw 2.10.0, only superusers can set init_command, mysql_default_file, ssl_key, ssl_cert, ssl_ca and ssl_capath.</description>
+    <title>CVE-2026-137553 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137553</link>
+    <guid isPermaLink="false">81c7285773db43804d25fd8dc3668116</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 8.2 | Frappe Framework before 15.120.0 and 16.x before 16.33.0 contains a blind SQL injection vulnerability in the handling of the X-Frappe-Request-Id HTTP header when monitoring is enabled. Remote unauthenticated attackers can send crafted header values to infer database contents through blind SQL injection techniques.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-62153 - NVD - CVSS Score v4.0: 6.4</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62153</link>
-    <guid isPermaLink="false">ce29ae0383b2d4cc1d03819a99cc6ddc</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.4 | mysql_fdw inserts several values into statements sent to the remote MySQL server without escaping them: the dbname and table_name options in ANALYZE, the remote schema name and the LIMIT TO and EXCEPT table names in IMPORT FOREIGN SCHEMA, and the sql_mode option in the SET sql_mode command. A user who can create or alter foreign tables or foreign servers, or run IMPORT FOREIGN SCHEMA, can break out of the string literal and run arbitrary SQL on the remote MySQL server with the credentials of the user mapping. The issue is fixed in mysql_fdw 2.10.0. From mysql_fdw 2.10.0, mysql_fdw escapes these names and accepts only letters, digits, underscores and commas in sql_mode.</description>
+    <title>CVE-2026-137555 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137555</link>
+    <guid isPermaLink="false">0cdb0160674ff1af4fc2c1e45af168ae</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 5.1 | Frappe Framework before 15.119.0 and 16.x before 16.32.0 does not neutralize spreadsheet formula elements in user-supplied data included in CSV and XLSX exports, resulting in stored formula injection. Authenticated attackers can store crafted values that are interpreted as formulas when another user opens the exported file in a spreadsheet application.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-62154 - NVD - CVSS Score v4.0: 7.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62154</link>
-    <guid isPermaLink="false">6c2af104ff22ecedbd24c2d638f8521f</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.5 | During IMPORT FOREIGN SCHEMA, mysql_fdw copies column metadata returned by the remote MySQL server into the CREATE FOREIGN TABLE statements it runs locally without quoting it. The COLUMN_DEFAULT value is placed directly in the DEFAULT clause, and the name of the generated ENUM type is inserted unquoted. A malicious or compromised MySQL server, or an attacker who can tamper with the connection, can return crafted information_schema metadata and run arbitrary SQL in the local PostgreSQL session of the user who runs IMPORT FOREIGN SCHEMA. The issue is fixed in mysql_fdw 2.10.0. From mysql_fdw 2.10.0, mysql_fdw quotes these values before building the statements.</description>
+    <title>CVE-2026-137556 - NVD - CVSS Score v4.0: 8.7</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137556</link>
+    <guid isPermaLink="false">5a877daca577dd18a8518bc05b56ef5e</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 8.7 | Dockhand before 1.0.57 contains a path traversal vulnerability in validateStackPath, which omits the isProtectedPath() check and permits writes to protected system directories. Authenticated users with stacks:edit permission can send a crafted composePath to PUT /api/stacks/[name]/compose to write arbitrary files, such as cron payloads, achieving remote code execution as root.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-62155 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62155</link>
-    <guid isPermaLink="false">33f9a68a60e8c0273df89aa39c04f08c</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | mongo_fdw builds the mongodb:// connection URI by inserting option values without percent-encoding them, so URI metacharacters (@ : / ? # &amp; =) in a value are parsed as part of the URI structure. A role that is not a superuser but has USAGE on a foreign server can set the username and password options in its own user mapping. An @ or other metacharacter in those values can point the connection at a host the attacker controls, allowing connection redirection, credential capture and man-in-the-middle attacks. Server-level options such as the address, database and replica set can be injected the same way. The issue is fixed in mongo_fdw 5.6.0. From mongo_fdw 5.6.0, mongo_fdw builds the URI with the libmongoc URI API, which encodes credentials, and rejects URI metacharacters in the other option values.</description>
+    <title>CVE-2026-137557 - NVD - CVSS Score v4.0: 5.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137557</link>
+    <guid isPermaLink="false">ef342a4bc7169335e9f39dc63352fa02</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 5.1 | SunEditor from 3.0.0 before 3.4.3 contains a stored cross-site scripting vulnerability in the codeBlock plugin that allows attackers to inject script via entity-encoded pre language class values. Attackers can store content whose language- class decodes to HTML written via innerHTML into the hover button, executing script when victims hover over the block.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-62156 - NVD - CVSS Score v4.0: 6.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62156</link>
-    <guid isPermaLink="false">05e831f1df2d7eb4d068d57adefb3df4</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.5 | hdfs_fdw builds string literals for IN and = ANY(array) clauses pushed down to the remote Hive or Spark server without escaping single quotes. An authenticated user with only SELECT on a foreign table can supply a crafted array value that breaks out of the literal and changes the HiveQL query, which then runs on the remote server with the foreign server's credentials. The same release fixes two lower-severity issues: the JDBC connection string, including the trustStorePassword value, was written to logs, and credentials stayed in memory in cleartext after the connection was established. The issue is fixed in hdfs_fdw 2.4.0. From hdfs_fdw 2.4.0, hdfs_fdw escapes single quotes in these literals, masks trustStorePassword in logs and clears credentials from memory after connecting.</description>
+    <title>CVE-2026-137558 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137558</link>
+    <guid isPermaLink="false">0875f5b2a7ba58daae7aa897eb889386</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 6.3 | web-token jwt-framework and jwt-library before 3.4.13, 4.0.0 before 4.0.9, 4.1.0 before 4.1.11, and 4.2.0 before 4.2.6 contain a decryption oracle in RSACrypt::decryptWithRSAOAEP(), which accepts a JWE Encrypted Key made of multiple RSA blocks instead of a single RSAES-OAEP ciphertext. Attackers holding the recipient's public key can embed a captured encrypted key among crafted blocks and, using an accepted AES-CBC-HMAC algorithm and a decryption success signal, recover its CEK byte by byte to decrypt the captured JWE.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-62157 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-62157</link>
-    <guid isPermaLink="false">3a8b2720f998a3784a80dd46253d835c</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | mongo_fdw converts _id values to 12-byte MongoDB ObjectIds with libbson functions that read a fixed number of bytes without checking the input length: 12 bytes for a bytea _id, and 24 characters for name-typed values and $oid fields in JSON. A shorter value causes a read past the end of the input, which can crash the PostgreSQL backend or include adjacent memory in the query sent to MongoDB. Any user who can supply an _id value or predicate on a foreign table can trigger it. The issue is fixed in mongo_fdw 5.6.0. From mongo_fdw 5.6.0, mongo_fdw accepts only valid 24-character hexadecimal ObjectIds and 12-byte bytea values.</description>
+    <title>CVE-2026-137559 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137559</link>
+    <guid isPermaLink="false">bb636bca19bfaafaaa58fb3aea81203a</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 8.2 | web-token jwt-framework and jwt-library before 3.4.13, 4.0.x before 4.0.9, 4.1.x before 4.1.11, and 4.2.x before 4.2.6 allow CPU exhaustion because, on PHP without GMP, AbstractECDH falls back to pure PHP curve code that converts unbounded ECDH-ES epk x and y coordinates to big integers before any length check. Unauthenticated attackers who know only the recipient key's curve can send small JWEs with oversized epk coordinates, keeping workers busy for seconds to minutes per token.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-73517 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-73517</link>
-    <guid isPermaLink="false">79332c5a027e11edb29e0067595cc668</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.7 | KubeSphere 4.0.0 through 4.1.3 contains a command injection vulnerability in the terminal v1alpha2 file download endpoint where the path query parameter is inserted via fmt.Sprintf into sh -c tar commands executed inside the target container, and the DownloadFile handler fails to perform its own pods/exec authorization check. Attackers with only pod get permission, including built-in read-only project-viewer, workspace-viewer and cluster-viewer roles, can supply shell metacharacters in the path parameter to execute arbitrary commands inside any viewable container without holding pod exec permission.</description>
+    <title>CVE-2026-137560 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137560</link>
+    <guid isPermaLink="false">8f907087e6d82b6e3cb0b233ec1fde0d</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 8.2 | Web-token jwt-framework and jwt-library before 3.4.13, 4.0.x before 4.0.9, 4.1.x before 4.1.11, and 4.2.x before 4.2.6 contain a denial of service vulnerability in RSAKey, which accepts RSA keys with a modulus and public exponent of unbounded length. Remote attackers can supply a crafted key, such as in the jwk header of a DPoP proof, to force seconds of CPU per PS256/PS384/PS512 verification or RSA encryption, or per any RSA operation when GMP is unavailable.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-110470 - NVD - CVSS Score v4.0: 2.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-110470</link>
-    <guid isPermaLink="false">6e832c517c5c8c66259479f36e61e1b0</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.3 | Stack-based buffer overflow in the mkevent helper in Checkmk &lt;2.5.0p21, &lt;2.4.0p42 and 2.3.0 (EOL) allows an attacker who controls the check output of a monitored host to crash mkevent, causing the notification to be lost, or to redirect the notification to an IPv4 address of their choice, if notifications are forwarded to the Event Console.</description>
+    <title>CVE-2026-137561 - NVD - CVSS Score v4.0: 2.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137561</link>
+    <guid isPermaLink="false">212bf5a92ea8e870a6cc2e6b7886ae8d</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 2.3 | Web-Token jwt-framework and jwt-library before 3.4.13, 4.0.0 before 4.0.9, 4.1.0 before 4.1.11, and 4.2.0 before 4.2.6, and jwt-encryption through 3.2.10, contain a token malleability flaw because JWEDecrypter does not reject a non-empty JWE Encrypted Key with the dir, ECDH-ES and ECDH-SS algorithms, which the authentication tag does not cover. Attackers holding one token can fill the Encrypted Key with arbitrary bytes to derive unlimited distinct token strings that still decrypt, bypassing replay caches, single-use registries or revocation deny-lists keyed on the token string.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-123265 - NVD - CVSS: não informado</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-123265</link>
-    <guid isPermaLink="false">3dcd80d7daecd1af715d8b8f9ad98c0a</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS: não informado | Rejected reason: this CVE was issued in error.</description>
+    <title>CVE-2026-137562 - NVD - CVSS Score v4.0: 6.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137562</link>
+    <guid isPermaLink="false">30180c6fffe80084931b9e188616f289</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 6.3 | web-token jwt-framework before 3.4.13, 4.0.0 before 4.0.9, 4.1.0 before 4.1.11, and 4.2.0 before 4.2.6 does not check oct key length in the AESKW, AESGCMKW, and experimental AESCTR and chacha20-poly1305 key encryption algorithms, so OpenSSL zero-pads short or empty keys. When an application uses an empty key, anyone can unwrap content encryption keys under the all-zero key to read issued tokens and forge accepted ones.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135135 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135135</link>
-    <guid isPermaLink="false">2af4506435e8fd48909821abcf331a4d</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Mongoid builds an incomplete automatic encryption schema for certain embedded document associations. As a result, values that the application declared as encrypted may be written to the database in cleartext, with no error or warning returned to the application. A party holding only basic read privileges on the affected collection, and no access to the encryption keys, may then obtain those values in readable form.</description>
+    <title>CVE-2026-137563 - NVD - CVSS Score v4.0: 5.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137563</link>
+    <guid isPermaLink="false">47da72b0589c624a81e6e33a4923c6e4</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 5.9 | web-token jwt-framework from 4.2.1 before 4.2.6 contains an information disclosure vulnerability that exposes decryption keys in exception stack traces when JWE tokens are rejected. Attackers can submit crafted JWE tokens so JWELoader and JWEDecrypter record dir, AES key wrapping, PBES2-derived or content encryption keys in logged trace arguments readable by others.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135138 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135138</link>
-    <guid isPermaLink="false">8d7075424b81904ac68dfe45e86d6714</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Mongoid does not consistently apply its read-only attribute protection when attribute names are supplied dynamically by the caller. In an application that forwards caller-supplied attribute names into a document update, a user with basic application privileges may change values held inside a field the model declared immutable. This may result in unintended modification of data the application treats as trusted, such as flags used for its own access decisions.</description>
+    <title>CVE-2026-137564 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137564</link>
+    <guid isPermaLink="false">69f773f5e13729a5e7512462b19caaf4</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 8.2 | web-token jwt-framework and jwt-library before 3.4.13, 4.0.x before 4.0.9, 4.1.x before 4.1.11, and 4.2.x before 4.2.6 (and jwt-encryption through 3.2.10) do not check the key length in JWEBuilder and JWEDecrypter for direct (dir) encryption, so undersized keys are zero-padded. Anyone holding a token issued with a half-size AES-CBC-HMAC key can decrypt it, and an empty key also allows forging tokens the decrypter accepts.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135139 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135139</link>
-    <guid isPermaLink="false">f222ac3ad177554ebe2751c7d958bc76</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Mongoid contains an incorrect authorization weakness in the handling of caller-supplied filters for bulk removal through a referenced association. Conditions already attached to the association can take precedence over the filter the caller supplied, so records the caller did not select may be removed. A user with basic privileges in an application built on the library may cause unintended removal of records belonging to the same parent record.</description>
+    <title>CVE-2026-137579 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137579</link>
+    <guid isPermaLink="false">92d307fa5e40bfd4ad4c30938c5a29f1</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 8.2 | Web-token jwt-framework and jwt-library before 3.4.13, 4.0.x before 4.0.9, 4.1.x before 4.1.11, and 4.2.x before 4.2.6, and jwt-core through 3.2.10, perform unblinded RSA private key operations in RSAKey::exponentiate(), so CRT recombination time reveals whether a decrypted RSA-OAEP, RSA-OAEP-256, or RSA1_5 value is below the prime q. Attackers who can submit JWEs can time rejections of crafted tokens to binary search q, factor the modulus, and decrypt all JWEs encrypted to that key.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135140 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135140</link>
-    <guid isPermaLink="false">abbbb85c0dcbe29148d6908f54cc016f</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | Mongoid may omit a field from the client-side encryption settings it generates for a collection when that same field is also used as a reference to another record. The value is then stored in readable form instead of encrypted, and the application receives no indication that this has happened. A party with ordinary authenticated read access to the affected collection may be able to view data that was intended to be protected.</description>
+    <title>CVE-2026-137580 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137580</link>
+    <guid isPermaLink="false">44a9af76f8a92774baacc441fdc3a07b</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 8.2 | web-token jwt-framework and jwt-library before 3.4.13, 4.0.x before 4.0.9, 4.1.x before 4.1.11, and 4.2.x before 4.2.6 parse JSON General serialized JWS tokens in quadratic time because JSONGeneralSerializer::unserialize() adds each signature via JWS::addSignature(), which clones the token. Unauthenticated remote attackers can send large tokens holding thousands of empty signatures to exhaust CPU and occupy PHP workers without any valid key or token.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135141 - NVD - CVSS Score v4.0: 8.6</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135141</link>
-    <guid isPermaLink="false">040967ffbcd88eeb93e4619a79f70174</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.6 | A logic flaw in the query-building layer of the Mongoid object-document mapper causes a model-level default restriction that is meant to return no records to be silently discarded when it is combined into a query. A user with basic application privileges who sends an ordinary request may read, change, or remove records that the restriction was intended to withhold.</description>
+    <title>CVE-2026-137581 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137581</link>
+    <guid isPermaLink="false">d6c90c9d825e981b7752c912cb282750</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 8.2 | web-token jwt-framework and jwt-library before 3.4.13, 4.0.x before 4.0.9, 4.1.x before 4.1.11, and 4.2.x before 4.2.6, and jwt-encryption and jwt-signature through 3.2.10, contain a denial of service vulnerability because the JWS and JWE serializers pass attacker-controlled tokens and protected headers to json_decode() without bounds before verification. Unauthenticated attackers can submit large tokens with colliding header member names or deeply nested arrays to cause quadratic decoding time or fatal memory exhaustion.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135146 - NVD - CVSS Score v4.0: 9.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135146</link>
-    <guid isPermaLink="false">9742a4c41749dfac8f5ea530a74f7693</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 9.1 | An improper certificate revocation check in the MongoDB Python Driver's optional TLS revocation-checking support allows an unauthenticated party that operates the network endpoint a client connects to, and that holds a revoked but still-dated certificate trusted by that client, to have the connection accepted. This may result in unintended disclosure of application credentials and other session data, and in the client treating responses from that endpoint as genuine.</description>
+    <title>CVE-2026-137582 - NVD - CVSS Score v4.0: 8.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137582</link>
+    <guid isPermaLink="false">94bb16e3860169a48b5302c33426dd02</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 8.2 | web-token jwt-framework before 3.4.13, 4.0.x before 4.0.9, 4.1.x before 4.1.11, and 4.2.x before 4.2.6 allows denial of service because JWELoader and JWSLoader try every recipient or signature of a JSON General serialized token without limiting their number. Unauthenticated attackers can send a small JWE with many empty recipients inheriting a maximal PBES2 p2c value, forcing repeated key derivations that exhaust worker CPU.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135225 - NVD - CVSS Score v4.0: 5.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135225</link>
-    <guid isPermaLink="false">9d0837147e3cf17dfd79ee5ff7f3d677</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.7 | An information exposure weakness in the connection string handling of the MongoDB Ruby Driver can place credential material from the application's own configuration into the text of a parsing error, where an existing redaction control does not apply. A party able to read the application's error output or logs may thereby obtain database credential text together with deployment coordinates. The condition arises entirely within the embedding application process and requires no database authentication.</description>
+    <title>CVE-2026-76075 - NVD - CVSS Score v3.1: 8.8</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-76075</link>
+    <guid isPermaLink="false">ee10d0f96ea5acb2ba78421fa6f8f09d</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 8.8 | The Warehouse Cargo theme for WordPress is vulnerable to Arbitrary File Upload in versions up to, and including, 2.7.4 via the warehouse_cargo_install_and_activate_plugin() AJAX handler. The handler is registered on wp_ajax_ but performs no nonce verification and no capability check, allowing any authenticated user to supply an attacker-controlled URL that the server fetches, writes into wp-content/plugins/ with file_put_contents(), extracts with unzip_file() (which does not filter file extensions), and then activates via activate_plugin(). This makes it possible for authenticated attackers, with Subscriber-level access and above, to upload arbitrary files on the affected site's server which makes remote code execution possible.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135226 - NVD - CVSS Score v4.0: 8.7</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135226</link>
-    <guid isPermaLink="false">2e9faf9f7701fb7b07c67387dc5d26d2</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.7 | A type-confusion weakness in the Extended JSON parsing component of BSON for Ruby allows a party who can supply parser input to influence how a serialized document is framed. Content placed in one value may be read back as additional or replacement document fields. An unauthenticated party supplying input to an application that parses untrusted Extended JSON and stores the result may cause unintended modification of stored data.</description>
+    <title>CVE-2026-85412 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85412</link>
+    <guid isPermaLink="false">f7fb27eb6919edb659be70ad01e68ddd</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Easy Form Builder by WhiteStudio – Drag &amp; Drop Form Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'address' parameter in all versions up to, and including, 4.2.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. A valid nonce required for form submission can be freely obtained by any unauthenticated visitor via the publicly accessible REST route 'Emsfb/v1/nonce/refresh', which is registered with no permission check, enabling the full attack chain without any credentials.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135227 - NVD - CVSS Score v4.0: 8.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135227</link>
-    <guid isPermaLink="false">66b104c5f5e8baedd952fff9357196c4</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.3 | An improper restriction of dynamically determined object attributes in the object-document mapping library's association handling allows structured input supplied in place of a simple identifier value to be turned into an object that is treated as an already-stored record of a caller-chosen model class. In applications that pass unfiltered request data into the affected association handling, an unauthenticated party may cause unintended modification or removal of stored records, and may render an individual record unreadable through that association.</description>
+    <title>CVE-2026-85416 - NVD - CVSS Score v3.1: 7.2</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-85416</link>
+    <guid isPermaLink="false">2022c242b18712e3e031d3dead4108bc</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 7.2 | The Lenix Leads Collector plugin for WordPress is vulnerable to Stored Cross-Site Scripting via Form Field Name in all versions up to, and including, 2.0.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This is exploitable because the plugin's CF7 integration accepts and stores any extra field name not defined in the CF7 form — including HTML/JS payloads — submitted by an unauthenticated user via a public CF7 form submission, with the raw field name later echoed unescaped in two separate admin-side sinks.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-135898 - NVD - CVSS Score v4.0: 8.8</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135898</link>
-    <guid isPermaLink="false">39715e971a4f899de28586ac8ca193b3</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 8.8 | An out-of-bounds read in the native C BSON decoding extension of the MongoDB Python Driver may allow an unauthenticated party who can supply crafted BSON data to the decoder to cause the application process to terminate. In some configurations, nearby process memory may be included in error messages, which may result in limited unintended disclosure of data.</description>
+    <title>CVE-2026-90962 - NVD - CVSS Score v3.1: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-90962</link>
+    <guid isPermaLink="false">1a23a9abf9079153f657172cda8cd9bf</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 5.3 | The WebP Express plugin for WordPress is vulnerable to Authorization Bypass via Malformed Bcrypt Salt in all versions up to, and including, 0.25.15. This is due to insufficient validation of the attacker-supplied `salt` POST parameter in the `runAccessChecks()` function, which passes the unvalidated salt directly to PHP's `crypt()` — causing it to return an empty string when the salt contains characters outside the valid bcrypt alphabet `[./0-9A-Za-z]` — and then loosely compares the resulting empty string against the attacker-controlled `api-key-crypted` POST parameter using `==`, allowing an empty submission to match and satisfy the check. This makes it possible for unauthenticated attackers to bypass the web service API-key authentication check and upload arbitrary image files to the cloud-conversion endpoint, where they persist at a predictable, publicly reachable path under `wp-content/webp-express/webp-images/wpc/`. The 'Require api-key to be crypted in transfer?' whitelist setting does not mitigate this bypass, as it only gates the plaintext API-key comparison branch and has no effect on the crypted-key branch containing the vulnerable logic.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136697 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136697</link>
-    <guid isPermaLink="false">ef81e4a199008995c695b49441c28459</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | A flaw has been found in LibrePhotos up to 1.2.1. Affected by this issue is the function write_metadata of the file apps/backend/api/metadata/writer.py of the component ExifTool Metadata Write-Back. This manipulation of the argument person_name causes argument injection. The attack may be initiated remotely. Upgrading to version 1.3.0 can resolve this issue. Patch name: f83dafca9f1a6dd0441b7e4d5c13992896a7d76f. Upgrading the affected component is advised.</description>
+    <title>CVE-2026-92251 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-92251</link>
+    <guid isPermaLink="false">362a50e0c6fef8dba917bd554ee7abb2</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 7.5 | The ZarinPal Payment Gateway for WooCommerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 5.1.1 via the `Return_from_ZarinPal_Gateway()` handler registered on the `woocommerce_api_wc_zpal` (`?wc-api=wc_zpal`) endpoint. The handler accepts a `wc_order` parameter from the query string, loads the corresponding WooCommerce order without any authentication, nonce, session, capability, or ownership check, and — when the order is paid — issues a 302 redirect to `get_return_url($order)`, whose `Location` header embeds the order's secret `order_key`. This makes it possible for unauthenticated attackers to harvest order keys for arbitrary orders (regardless of payment method) and then use those keys against the WooCommerce order-received, order-pay and download endpoints to read the associated customer's PII, including billing name, street address, phone number, email, purchased items, and totals.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136721 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136721</link>
-    <guid isPermaLink="false">d9ac846d680937ce0fad466d1eb9f748</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability was determined in coleifer peewee up to 4.5.3. This affects the function _print_table of the file pwiz.py of the component File Import Handler. This manipulation causes code injection. Remote exploitation of the attack is possible. The exploit has been publicly disclosed and may be utilized. The reported GitHub issue was closed with the reason &quot;completed&quot;. However, it was not possible to determine the PR or commit which could have fixed this issue.</description>
+    <title>CVE-2026-97345 - NVD - CVSS Score v3.1: 7.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-97345</link>
+    <guid isPermaLink="false">5019a02a5cce000431ad813ca8815db3</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 7.5 | The SumUp Payment Gateway For WooCommerce plugin for WordPress is vulnerable to Insecure Direct Object Reference in versions up to, and including, 2.17.1 via the 'sumup-validate-order' query parameter handled by the check_redirect_flow() / resolve_payment_redirect_validation() functions. The template_redirect handler accepts an arbitrary numeric order ID from an unauthenticated GET request and, without any ownership or capability check, loads the corresponding WooCommerce order and issues a 302 redirect whose Location header is built by get_return_url(), disclosing the target order's secret order_key. This makes it possible for unauthenticated attackers to enumerate order IDs, harvest each order's WooCommerce order_key, and use those keys against the plugin's create_checkout endpoint and WooCommerce's own order-received/order-pay pages to read customer PII (name, email, phone, billing address, order total) for any order in the store.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-136722 - NVD - CVSS Score v4.0: 5.5</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-136722</link>
-    <guid isPermaLink="false">aca05eb68017831846222b344b1084ee</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was identified in Zhengzhou Weiwei Information Technology mayicms up to 5.8E. This vulnerability affects unknown code of the file member.php. Such manipulation of the argument code leads to sql injection. The attack can be executed remotely. The exploit is publicly available and might be used. The vendor was contacted early about this disclosure but did not respond in any way.</description>
+    <title>CVE-2025-8209 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2025-8209</link>
+    <guid isPermaLink="false">255641e038756cd97ca39dfc23c5d169</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 6.4 | The Ultimate Bootstrap Elements for Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via multiple widgets in all versions up to, and including, 1.5.3 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81405 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81405</link>
-    <guid isPermaLink="false">e3f312659eccfc6dd436e3c77eb23cc8</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Nmap before 7.992 contains an uncontrolled resource consumption vulnerability in the Comm.ReceivePacket function of the NSE rpc.lua library, which buffers ONC-RPC record fragments using the server-declared fragment length without an upper bound. A malicious RPC service on a scanned host can declare fragments of up to roughly 2.1GB, and up to 400 fragments per call, causing the Nmap process to exhaust memory; the read path is reached by rpcinfo.nse during version detection (-sV) and is shared by the NFS, rusers and NetWorker scripts.</description>
+    <title>CVE-2026-102001 - NVD - CVSS Score v3.1: 6.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-102001</link>
+    <guid isPermaLink="false">677805ba03780a29836a921687c8e2c1</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 6.4 | The wpForo Forum plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'nickname / display_name (via WP core profile form); thread[body] carries the [quote data-userid=..] trigger' parameter in all versions up to, and including, 3.2.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. Exploitation requires that the site administrator has disabled the profiles.mention_nicknames setting (which is off by default), causing apply_quotes() to use display_name rather than a sanitized nickname when building the data-mention attribute.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81406 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81406</link>
-    <guid isPermaLink="false">9a8fad5152e160f90945cd76788531b8</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Nmap before 7.992 contains an uncontrolled resource consumption vulnerability in the read_db2_packet function of the db2-das-info.nse script, which trusts an unmasked 32-bit length field supplied by the server. A malicious DB2 Administration Server on a scanned host can declare a packet length of up to roughly 4.29GB, causing the script to buffer that much data and the Nmap process to exhaust memory; the script runs during version detection (-sV).</description>
+    <title>CVE-2026-135205 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135205</link>
+    <guid isPermaLink="false">be097a58ff33ccf77367eb600a9c12e2</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 7.4 | @fastify/middie is the plugin that adds Express-style middleware support to the Fastify web framework. In versions 9.3.6 through 9.3.9, a route or mount path written without a leading slash inside a plugin registered under a prefix is handled inconsistently: the middleware is mounted with a separating slash after the prefix, while the route is concatenated directly onto the prefix, so a request to the concatenated path reaches the route handler without running the middleware mounted for it. An attacker can use this to bypass authentication or other middleware-based access controls on the affected routes. The issue is fixed in @fastify/middie 9.3.10, and users should upgrade to 9.3.10 or later. As a workaround, begin all route and mount paths with a slash, or enforce authentication in a Fastify hook such as preHandler that runs after the router resolves the request.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81407 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81407</link>
-    <guid isPermaLink="false">3f1b07b98423181988c9563e9990074c</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains a hardcoded cryptographic key vulnerability in the DHCAST128 login of the NSE afp.lua library, which uses a fixed, publicly known Diffie-Hellman private exponent. A passive observer of the network traffic between Nmap and an Apple Filing Protocol server can compute the shared secret from the hardcoded exponent and the server's public value and decrypt the password supplied to scripts such as afp-showmount.nse and afp-brute.nse through the afp.username and afp.password arguments, without man-in-the-middle access or cryptanalysis.</description>
+    <title>CVE-2026-135230 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135230</link>
+    <guid isPermaLink="false">6d6f10bf75395f403bb56e472b548ee9</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 7.4 | @fastify/express is the plugin that lets an application run Express middleware and Express applications inside the Fastify web framework. In versions from 4.0.3 before 4.0.14, the plugin decodes certain percent-encoded characters in the request path that Express would otherwise keep encoded, including the Unicode line separator and paragraph separator characters, and leaves them raw. A JavaScript regular expression treats those two characters as line terminators, so a regular-expression mount path that relies on the dot metacharacter fails to match a request containing them while Fastify's own router still routes the request to its handler, and the middleware mounted on that regular-expression path is therefore skipped. An attacker can use this to bypass authentication or other middleware-based access controls on routes guarded by a regular-expression mount; string mount paths are not affected. The issue is fixed in @fastify/express 4.0.14, and users should upgrade to 4.0.14 or later. As a workaround, use string mount paths, avoid the dot metacharacter in regular-expression mounts by using a character class or the dotAll flag, or enforce authentication in a Fastify hook such as preHandler that runs after the router resolves the request.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81408 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81408</link>
-    <guid isPermaLink="false">5c37d338ea9bda8442925ee89d73676e</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Nmap before 7.992 contains a loop with an unreachable exit condition in the parameter-list parsing of the NSE drda.lua library, which keeps growing its parameter list while processing a malicious DRDA response. A malicious DRDA service on a scanned host can make the loop consume memory without bound on 64-bit builds, exhausting the Nmap process and discarding NSE results for every other host in the same scan batch without reporting an error; the library is reached by service probes during version detection (-sV).</description>
+    <title>CVE-2026-135264 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135264</link>
+    <guid isPermaLink="false">63a5a3a0c39ca52d08c04d0f09025c5f</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 7.4 | @fastify/express is the plugin that lets an application run Express middleware and Express applications inside the Fastify web framework. In versions from 4.0.7 before 4.0.14, when middleware is mounted on a nested array of mount paths the plugin rewrites only the top level of the array, so paths inside a nested array are not adjusted for a plugin registered under a prefix and the middleware never runs for them, a nested regular-expression mount keeps its global or sticky flag and is matched statefully so it is skipped on alternating requests, a nested regular expression is not matched case-insensitively when case sensitivity is disabled, and nested dynamic paths are not covered by the earlier empty-segment check. An attacker can use any of these to bypass authentication or other middleware-based access controls on the affected routes. The issue is fixed in @fastify/express 4.0.14, and users should upgrade to 4.0.14 or later. As a workaround, flatten mount path arrays before passing them to the plugin, or enforce authentication in a Fastify hook such as preHandler that runs after the router resolves the request.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81409 - NVD - CVSS Score v4.0: 5.3</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81409</link>
-    <guid isPermaLink="false">456cb8a614b5303807998803c0d836df</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.3 | Nmap before 7.992 contains a server-side request forgery vulnerability in the http-cisco-anyconnect.nse script and the anyconnect.lua library, whose redirect handler follows a server-supplied redirect target without checking that it stays on the scanned host. A malicious web server on a scanned host can redirect Nmap to an arbitrary host and port, including internal and loopback addresses the attacker cannot reach directly, making Nmap send a HEAD request followed by a POST request there; response content is not returned to the attacker. The script runs in the default script category (-sC, -A).</description>
+    <title>CVE-2026-135270 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135270</link>
+    <guid isPermaLink="false">2cb49163b2fab96dedaf709338531865</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 7.4 | @fastify/express is the plugin that lets an application run Express middleware and Express applications inside the Fastify web framework. In versions from 4.0.5 before 4.0.14, a mount path that begins with an Express 5 optional leading segment written as a group is treated as relative and has a slash prepended when it is joined to the plugin prefix, which changes what the pattern matches so the middleware ends up mounted on a path that no longer corresponds to the real request paths. The middleware therefore never runs for requests that match the intended routes, while the Fastify routes still resolve to their handlers. An attacker can use this to bypass authentication or other middleware-based access controls on the affected routes. The issue is fixed in @fastify/express 4.0.14, and users should upgrade to 4.0.14 or later. As a workaround, mount the middleware on each path spelling explicitly, or enforce authentication in a Fastify hook such as preHandler that runs after the router resolves the request.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81410 - NVD - CVSS Score v4.0: 2.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81410</link>
-    <guid isPermaLink="false">9b8e42780c5aee1ab3d217fa85adffbc</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 2.1 | Nmap before 7.992 contains a server-side request forgery vulnerability in the broadcast-upnp-info.nse script and the upnp.lua library, which fetch the device description from the LOCATION URL in a UPnP response without checking that it points to the responding host. An attacker on the local network who answers the script's discovery broadcast can supply a LOCATION URL for an arbitrary host, port and path, including internal and loopback addresses, making Nmap send a GET request there; response content is not returned to the attacker.</description>
+    <title>CVE-2026-135279 - NVD - CVSS Score v3.1: 9.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135279</link>
+    <guid isPermaLink="false">27631f026e5617724cfc63685da88cbe</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 9.1 | @fastify/express is the plugin that lets an application run Express middleware and Express applications inside the Fastify web framework. In versions before 4.0.14, a request with an empty dynamic route parameter reaches a Fastify route handler while middleware mounted for that path inside an Express Router or sub-application is skipped, because Fastify's router accepts an empty value where Express requires a non-empty one, and an unanchored regular-expression mount passed to the plugin is bypassed the same way. An earlier fix covered only the mount paths passed to the plugin directly, not middleware mounted inside a routed Express application. An attacker can use this to bypass authentication or other middleware-based access controls on the affected routes, with the practical impact depending on what the empty value selects in the application. The issue is fixed in @fastify/express 4.0.14, and users should upgrade to 4.0.14 or later. As a workaround, enforce authentication in a Fastify hook such as preHandler that runs after routing, mount the middleware on a static parent path, or require non-empty values in the route params schema.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81411 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81411</link>
-    <guid isPermaLink="false">fa7bcf4257ffa7f05d048bdf59c1bcae</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Nmap before 7.992 contains an infinite loop vulnerability in the ConfCreateResponse GCC block parser of the NSE rdp.lua library, which does not check that each block advances the read position. A malicious RDP server on a scanned host can include a single malformed zero-length block in an otherwise valid handshake, causing a permanent 100% CPU hang of the Nmap process that the script-timeout option does not interrupt; the library is used by rdp-enum-encryption.nse in the default script category (-sC, -A).</description>
+    <title>CVE-2026-135280 - NVD - CVSS Score v3.1: 7.4</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-135280</link>
+    <guid isPermaLink="false">978446019b0ae028e7edeb1b74335a1d</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v3.1: 7.4 | @fastify/express is the plugin that lets an application run Express middleware and Express applications inside the Fastify web framework. In versions before 4.0.14, when an application enables case-insensitive routing, middleware mounted on a path can still be skipped in two cases: a string mount path or plugin prefix containing a Unicode character whose case folding differs from a plain lowercase conversion fails to match the lowercased request path, and a matcher that stays case-sensitive inside an Express Router or application, such as a regular expression without the ignore-case flag or an explicitly case-sensitive router, only matches its own casing. In both cases a request reaches the Fastify route handler while the path-scoped middleware does not run. An attacker can use this to bypass authentication or other middleware-based access controls on the affected routes, and only applications that enable case-insensitive routing are affected. The issue is fixed in @fastify/express 4.0.14, and users should upgrade to 4.0.14 or later. As a workaround, enforce authentication in a Fastify hook such as preHandler that runs after routing, avoid such Unicode characters in mount paths, and match case-insensitively inside Express routers and applications.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81412 - NVD - CVSS Score v4.0: 7.1</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81412</link>
-    <guid isPermaLink="false">9342e95b370e1205b271a6bbbea2a239</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 7.1 | Nmap before 7.992 contains an excessive memory allocation vulnerability in the unmarshall_array function of the NSE msrpctypes.lua library, which trusts the entry count declared by the server. A malicious SMB server on a scanned host can declare an EntriesRead value of 0xFFFFFFFF with an empty buffer, causing a prolonged CPU spin and exhausting the memory of the Nmap process; the library is used by smb-enum-shares.nse in the default script category (-sC, -A).</description>
+    <title>CVE-2026-137407 - NVD - CVSS Score v4.0: 5.3</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137407</link>
+    <guid isPermaLink="false">ddb473af3abc31e1fe312e908cad0562</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 5.3 | A security vulnerability has been detected in Max Foundry Media Library Folders Plugin up to 8.4.3 on WordPress. Affected by this issue is the function mlfp_toggle_file_access of the file media-library-plus.php of the component Block Direct Access. Such manipulation of the argument file_id leads to missing authorization. The attack can be executed remotely. Upgrading to version 8.4.4 can resolve this issue. You should upgrade the affected component.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81413 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81413</link>
-    <guid isPermaLink="false">a9a49c72905784c2c5aac9e23bc61ea4</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains an uncontrolled resource consumption vulnerability in the inline AXFR response reader of the dns-zone-transfer.nse script, which reads the zone transfer response without a size limit. A malicious DNS server on a scanned host can stream unbounded data over TCP port 53 after the AXFR request, causing the memory of the Nmap process to grow at the attacker's send rate until it is exhausted.</description>
+    <title>CVE-2026-137409 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137409</link>
+    <guid isPermaLink="false">51310293d64beb7dba5dbf7764160ee1</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 5.5 | A flaw has been found in chuckfairy node-webcam up to 0.8.2. This vulnerability affects the function generateSh of the file src/webcams/FSWebcam.js of the component FSWebcam. Executing a manipulation can lead to os command injection. The attack may be performed from remote. The exploit has been published and may be used. The project was informed of the problem early through an issue report but has not responded yet.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81414 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81414</link>
-    <guid isPermaLink="false">031a87c7b3062a8ee5fefb85524de799</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains an uncontrolled resource consumption vulnerability in the sendPacketsTCP function of the NSE dns.lua library, which reads a DNS-over-TCP response without a size limit and builds it by repeated string concatenation. A malicious DNS server on a scanned host can stream unbounded data in response to the initial SOA lookup made by dns-zone-transfer.nse, before any AXFR request is sent, causing unbounded memory growth and quadratic CPU cost in the Nmap process.</description>
+    <title>CVE-2026-137410 - NVD - CVSS Score v4.0: 2.1</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137410</link>
+    <guid isPermaLink="false">5d3458100c983e6b37fbc189df55aaae</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 2.1 | A vulnerability has been found in liuwy-project zhglxt up to 3fd4ad44458f87bdad0afa997ba29706488fa1ff. This issue affects the function markdownUploadFile of the file zhglxt-web/src/main/java/com/zhglxt/web/controller/common/CommonController.java. The manipulation of the argument editormd-image-file leads to unrestricted upload. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. This product is using a rolling release to provide continious delivery. Therefore, no version details for affected nor updated releases are available.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81415 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81415</link>
-    <guid isPermaLink="false">46287660ffa5598e4dc3b6359695b4be</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains an infinite loop vulnerability in the negotiate_tn3270 function of the NSE tn3270.lua library, whose device-type search loop does not advance when the server sends a protocol-conformant DEVICETYPE IS response without an LU suffix. A TN3270E server on a scanned host, including a non-malicious one that sends such a response, causes a permanent 100% CPU hang of the Nmap process when tn3270-screen.nse runs, which the script-timeout option does not interrupt.</description>
+    <title>CVE-2026-137411 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137411</link>
+    <guid isPermaLink="false">b1c646c3bcd7c5d786b4ed4e53315341</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was found in projectworlds Online Jewellery Shopping System 1.0. Impacted is the function searchItem of the file application/models/dashbord_model.php of the component Dashbord Search. The manipulation of the argument q results in sql injection. It is possible to launch the attack remotely. The exploit has been made public and could be used.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81416 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81416</link>
-    <guid isPermaLink="false">7023dc46f1461d45f540fa28971cfee8</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains an infinite loop vulnerability in the process_write function of the NSE tn3270.lua library, whose write loop does not advance when it processes a malformed Repeat to Address (RA) order. A malicious TN3270 server on a scanned host can embed a single 6-byte malformed RA order in an ordinary screen-write data stream after a normal negotiation, causing a permanent 100% CPU hang of the Nmap process when tn3270-screen.nse runs, which the script-timeout option does not interrupt.</description>
+    <title>CVE-2026-137412 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137412</link>
+    <guid isPermaLink="false">dba5e822dd6d7ed8517f4a7acd590119</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was determined in projectworlds Online Jewellery Shopping System 1.0. The affected element is the function Dashbord_model.searchAdvance of the file /jewllary-shop/application/models/dashbord_model.php of the component Advanced Search. This manipulation of the argument from/to causes sql injection. The attack can be initiated remotely. The exploit has been publicly disclosed and may be utilized.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81417 - NVD - CVSS Score v4.0: 6.0</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81417</link>
-    <guid isPermaLink="false">e739bc4756af09ee91539882d43b6983</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 6.0 | Nmap before 7.992 contains an infinite loop vulnerability in the dispatcher of the NSE tftp.lua library, which removes completed coroutines but not ones that ended in an error, leaving a zero-yield spin. A malicious TFTP exchange reached by snmp-ios-config.nse after an SNMP write sequence can leave a dead coroutine that freezes the entire Nmap invocation, before port scanning begins for any target in the run; the hang is prevented when the script-timeout option is set.</description>
+    <title>CVE-2026-137414 - NVD - CVSS Score v4.0: 5.5</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137414</link>
+    <guid isPermaLink="false">49d8a8c0395ed58f2d4e16d81a0f3313</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 5.5 | A vulnerability was identified in itsourcecode Event Management System 1.0. The impacted element is an unknown function of the file view_event.php. Such manipulation of the argument ID leads to sql injection. The attack can be launched remotely. The exploit is publicly available and might be used.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81418 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81418</link>
-    <guid isPermaLink="false">5f062c49078cf3c0c16765e14a8154cb</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.9 | Nmap before 7.992 contains an uncontrolled resource consumption vulnerability in the TLV.AUTH parser of the NSE eigrp.lua library, whose length arithmetic cancels out the running read position. An attacker on the same layer 2 segment can send a single crafted EIGRP Update of roughly 36 bytes over unauthenticated multicast, causing unbounded table growth that exhausts the memory of the Nmap process when broadcast-eigrp-discovery.nse is running.</description>
+    <title>CVE-2026-137415 - NVD - CVSS Score v4.0: 6.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137415</link>
+    <guid isPermaLink="false">1a9b0cf131f0abac7b94b4b3981b648f</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 6.9 | A security flaw has been discovered in Tencent RapidJSON up to 1.1.0. This affects the function Writer::WriteString in the library include/rapidjson/writer.h. Performing a manipulation of the argument length results in integer overflow. The attack may be initiated remotely. The patch is named 297637bc0a0f00dc504dbc1a47ebdaa577f8ae19. To fix this issue, it is recommended to deploy a patch.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   <item>
-    <title>CVE-2026-81419 - NVD - CVSS Score v4.0: 5.9</title>
-    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-81419</link>
-    <guid isPermaLink="false">127373b4cc73b0b185742fe51ae9c95c</guid>
-    <description>Wednesday 25 November 2026 | NVD | CVSS Score v4.0: 5.9 | Nmap before 7.992 contains an infinite loop vulnerability in the LSUpdate.parse function of the NSE ospf.lua library, which does not advance when it reads an LSA header with a zero length. An attacker on the same layer 2 segment can send a single spoofed, unauthenticated OSPF LS Update packet, causing a permanent 100% CPU hang of the Nmap process as soon as broadcast-ospf2-discover.nse captures it.</description>
+    <title>CVE-2026-137416 - NVD - CVSS Score v4.0: 0.9</title>
+    <link>https://nvd.nist.gov/vuln/detail/CVE-2026-137416</link>
+    <guid isPermaLink="false">d40ac3e6447437d45eb216a89de66a90</guid>
+    <description>Thursday 26 November 2026 | NVD | CVSS Score v4.0: 0.9 | A weakness has been identified in sgl-project SpecForge 0.2.0. This impacts the function Eagle3DraftModel.load_embedding of the file specforge/modeling/draft/base.py of the component Draft Embedding Loader. Executing a manipulation can lead to path traversal. The attack can only be executed locally. The exploit has been made available to the public and could be used for attacks. This patch is called d8a0d78e071199563ef19d9171052096dec89f71. It is advisable to implement a patch to correct this issue.</description>
     <category>NVD</category>
-    <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
   </item>
   </channel>
 </rss>
